@@ -9,8 +9,8 @@
    * [Cloudmesh Comet](cloudmesh_comet.md)
 * [Languages](languages.md)
    * [Python](python.md)
-* Writing
+* [Writing](writing.md)
    * [LaTeX](latex.md)
 * [Operating System](operating_system.md)
-  * [Linux](linux.md)
+   * [Linux](linux.md)
 
