@@ -11,5 +11,6 @@
 * [Languages](languages.md)
    * [Python](python.md)
 * Writing
-  * [LaTeX](latex.md)
+   * [LaTeX](latex.md)
+* Operating System
 
