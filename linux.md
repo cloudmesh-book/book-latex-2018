@@ -1,6 +1,5 @@
 # Linux
 
-TODO: create tables just as in File commands
 
 ## File commands
 
@@ -40,19 +39,20 @@ man command
 ## 
 ## Keyboard Shortcuts
 
-Enter – Run the command
-Up Arrow – Show the previous command
+| Enter    | Run the command                                        |
+| Up Arrow | Show the previous command                              |
+| Ctrl + Z | Stops the current command                              |
+|          | resume with fg in the foreground                       |
+|          | resume with bg in the background                       |
+| Ctrl + C | Halts the current command                              |
+| Ctrl + L | Clear the screen                                       |
+| Ctrl + A | Return to the start of the command you're typing       |
+| Ctrl + E | Go to the end of the command you're typing             |
+| Ctrl + K | Cut everything after the cursor to a special clipboard |
+| Ctrl + Y | Paste from the special clipboard                       |
+| Ctrl + D | Log out of current session, similar to exit            |
 
-Ctrl + Z – Stops the current command, resume with fg in the foreground or bg in the background
-Ctrl + C – Halts the current command, cancel the current operation and/or start with a fresh new line
-Ctrl + L – Clear the screen
 
-
-
-Ctrl + A – Return to the start of the command you're typing
-Ctrl + E – Go to the end of the command you're typing
-Ctrl + K – Cut everything after the cursor to a special clipboard
-Ctrl + Y – Paste from the special clipboard that Ctrl + U and Ctrl + K save their data to
-
-Ctrl + D – Log out of current session, similar to exit
-
+## Assignments
+1. Create tables just as in File commands in this document and check back into github. Remove this taks from assignment once done.
+2. Familiarize yourself with the commands
