@@ -10,5 +10,6 @@
 * [Cloudmesh Comet](cloudmesh_comet.md)
 * [LaTeX](latex.md)
 * [Languages](languages.md)
-  * [Python](python.md)
+   * [Python](python.md)
+* Writing
 
