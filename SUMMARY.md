@@ -2,5 +2,5 @@
 
 * [Introduction](README.md)
 * [Python](python.md)
-* Contributing
+* [Contributing](contributing.md)
 
