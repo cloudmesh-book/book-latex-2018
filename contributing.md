@@ -1,5 +1,9 @@
 # Contributing
 
+git clone https://github.com/cloudmesh/book.git
+
+Note: gitbook editor does not work with ssh based clone
+
 * https://tomjn.com/2014/06/25/gitbooks-github/
 
 Gitbook Editor
