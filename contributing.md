@@ -5,7 +5,10 @@ Contributing content to this book is easy. First you have to clone the directory
     cd ~/github/cloudmesh
     git clone https://github.com/cloudmesh/book.git
 
-**Note:** *gitbook editor does not work with ssh based clone, so please use the https link as specified above*
+
+> **Note:** *gitbook editor does not work with ssh based clone, so please use the https link as specified above*
+
+
 
 Next we recommend that you download the ```Gitbook Editor``` for your OS from 
 
@@ -17,7 +20,7 @@ Open the editor and open the directory
 
     ~/github/cloudmesh/book
     
-You will now see the book in the editor and you can easily edit the contents.
+You will now see the book in the editor and you can edit the contents.
     
 
 To generate the PDF or epub use the commands
@@ -26,4 +29,4 @@ To generate the PDF or epub use the commands
     
 Than open the create document with 
 
-    ??
+    ???
