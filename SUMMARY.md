@@ -8,4 +8,5 @@
 * [Python](python.md)
 * [Linux](linux.md)
 * cloudmesh
+* cloudmesh client
 
