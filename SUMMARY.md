@@ -1,6 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-* Linux
+* [Linux](linux.md)
 * python
 
