@@ -20,7 +20,7 @@ Open the editor and open the directory
 You will now see the book in the editor and you can easily edit the contents.
     
 
-To generate the PDF or ePub use teh commands
+To generate the PDF or epub use the commands
 
     ???
     
