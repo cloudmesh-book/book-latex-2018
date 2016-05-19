@@ -5,7 +5,7 @@ Contributing content to this book is easy. First you have to clone the directory
     cd ~/github/cloudmesh
     git clone https://github.com/cloudmesh/book.git
 
-*Note: gitbook editor does not work with ssh based clone, so please use the https link as specified above
+**Note:** *gitbook editor does not work with ssh based clone, so please use the https link as specified above*
 
 Next we recommend that you download the ```Gitbook Editor``` for your OS from 
 
