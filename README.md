@@ -1,4 +1,1 @@
-# About
-
-about this book
 
