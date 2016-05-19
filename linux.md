@@ -1,5 +1,7 @@
 # Linux
 
+TODO: create tables just as in File commands
+
 ## File commands
 
 | Command         | Description                       |
@@ -17,6 +19,11 @@
 | head -5 *a*     | Display first 5 lines of file *a* |
 | tail -5 *a*     | Display last 5 lines of file *a*  |
 
+##Command Pipes and Repeats
+
+command | less – Allows the scrolling of the bash command window using Shift + Up Arrow and Shift + Down Arrow
+!! – Repeats the last command
+command  !$ – Repeats the last argument of the previous command
 
 ## Search commands
 
@@ -25,3 +32,27 @@
 | fgrep   |  |
 | grep -R "xyz" .   |  |
 | find . -name "*.py" | |
+
+## Help
+
+man command
+
+## 
+## Keyboard Shortcuts
+
+Enter – Run the command
+Up Arrow – Show the previous command
+
+Ctrl + Z – Stops the current command, resume with fg in the foreground or bg in the background
+Ctrl + C – Halts the current command, cancel the current operation and/or start with a fresh new line
+Ctrl + L – Clear the screen
+
+
+
+Ctrl + A – Return to the start of the command you're typing
+Ctrl + E – Go to the end of the command you're typing
+Ctrl + K – Cut everything after the cursor to a special clipboard
+Ctrl + Y – Paste from the special clipboard that Ctrl + U and Ctrl + K save their data to
+
+Ctrl + D – Log out of current session, similar to exit
+
