@@ -30,3 +30,24 @@ To generate the PDF or epub use the commands
 Than open the create document with 
 
     ???
+    
+## OSX
+
+Install calibre from:
+https://calibre-ebook.com/download_osx
+
+    ln -s /Applications/calibre.app/Contents/MacOS/ebook-convert /usr/local/bin
+
+Install the gitbook client
+
+    npm install -g gitbook-cli
+    gitbook help
+    gitbook build .
+    gitbook install
+
+Create the PDF file and view it
+
+    gitbook pdf .
+    open book.pdf 
+  
+
