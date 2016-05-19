@@ -1,7 +1,5 @@
 # LaTeX
 
-# LaTeX
-
 
 ## References
 
