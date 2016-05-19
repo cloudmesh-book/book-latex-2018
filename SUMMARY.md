@@ -11,4 +11,5 @@
 * [LaTeX](latex.md)
 * [Python](python.md)
 * [Languages](languages.md)
+   * Python
 
