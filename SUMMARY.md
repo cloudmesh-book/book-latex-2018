@@ -8,5 +8,5 @@
 * cloudmesh
 * cloudmesh client
 * [Python](python.md)
-* LaTeX
+* [LaTeX](latex.md)
 
