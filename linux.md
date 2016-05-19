@@ -18,28 +18,24 @@
 | head -5 *a*     | Display first 5 lines of file *a* |
 | tail -5 *a*     | Display last 5 lines of file *a*  |
 
-##Command Pipes and Repeats
-
-command | less – Allows the scrolling of the bash command window using Shift + Up Arrow and Shift + Down Arrow
-!! – Repeats the last command
-command  !$ – Repeats the last argument of the previous command
-
 ## Search commands
 
 | Command | Description |
 | ---- | ------ |
-| fgrep   |  |
-| grep -R "xyz" .   |  |
-| find . -name "*.py" | |
+| fgrep   |  TBD |
+| grep -R "xyz" .   | TBD |
+| find . -name "*.py" | TBD |
 
 ## Help
-
-man command
+| Command | Description |
+| -- |-- |
+| man *command* | manual page for the *command* |
 
 ## 
 ## Keyboard Shortcuts
 
-| Enter    | Run the command                                        |
+| Keys    | Description                                        |
+| ---------| ------ |
 | Up Arrow | Show the previous command                              |
 | Ctrl + Z | Stops the current command                              |
 |          | resume with fg in the foreground                       |
@@ -54,5 +50,5 @@ man command
 
 
 ## Assignments
-1. Create tables just as in File commands in this document and check back into github. Remove this taks from assignment once done.
-2. Familiarize yourself with the commands
+1. Familiarize yourself with the commands
+2. Find more commands that you find useful and add them to this page. 
