@@ -5,7 +5,7 @@
 * [Preface](preface.md)
 * [Contributing](contributing.md)
 * [Linux](linux.md)
-* cloudmesh
+* [cloudmesh](cloudmesh.md)
 * cloudmesh client
 * [Python](python.md)
 * [LaTeX](latex.md)
