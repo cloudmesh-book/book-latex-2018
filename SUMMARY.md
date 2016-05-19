@@ -12,5 +12,5 @@
    * [Python](python.md)
 * Writing
    * [LaTeX](latex.md)
-* Operating System
+* [Operating System](operating_system.md)
 
