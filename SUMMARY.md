@@ -1,5 +1,5 @@
 # Summary
 
 * [Introduction](README.md)
-   * python
+   * [python](linux.md)
 
