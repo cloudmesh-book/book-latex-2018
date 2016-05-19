@@ -9,5 +9,5 @@
 * [cloudmesh client](cloudmesh_client.md)
 * [Python](python.md)
 * [LaTeX](latex.md)
-* Cloudmesh Comet
+* [Cloudmesh Comet](cloudmesh_comet.md)
 
