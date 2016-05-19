@@ -10,4 +10,5 @@
 * cloudmesh client
 * [Python](python.md)
 * [Basic Tools](basic_tools.md)
+   * Python
 
