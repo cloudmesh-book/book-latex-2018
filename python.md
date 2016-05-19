@@ -1,3 +1,5 @@
 # Python
 
-tbd
+## Dynamic classes
+
+* https://github.com/cloudmesh/cmd4
