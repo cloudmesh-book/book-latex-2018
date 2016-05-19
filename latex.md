@@ -15,8 +15,7 @@ instalation for OSX is available at:
 However, if you have older versions on your systems you may have to
 first completely uninstall them.
 
-Introduction
-------------
+## Introduction
 
 Mastering a text processing system is an essential part of a researchers
 life. Not knowing how to use a text processing system can slow down the
@@ -68,8 +67,7 @@ On OSX the best PDF viewer for LaTeX is skim:
 
 -   <http://skim-app.sourceforge.net/>
 
-Generating Images
------------------
+## Generating Images
 
 To produce high quality images the programs PowerPoint and omnigraffle
 on OSX are recommended. When using powerpoint please keep the image
