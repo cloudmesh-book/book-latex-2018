@@ -4,7 +4,6 @@
 * [ToDo](links.md)
 * [Preface](preface.md)
 * [Contributing](contributing.md)
-* [Linux](linux.md)
 * [Cloudmesh](cloudmesh.md)
    * [Cloudmesh Client](cloudmesh_client.md)
    * [Cloudmesh Comet](cloudmesh_comet.md)
@@ -13,4 +12,5 @@
 * Writing
    * [LaTeX](latex.md)
 * [Operating System](operating_system.md)
+  * [Linux](linux.md)
 
