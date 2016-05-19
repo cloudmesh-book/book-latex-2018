@@ -91,17 +91,13 @@ However when using skim in conjunction with imacs and latexmk your PDF view will
 
 ### LyX
 
-I have made very good experiences with Lyx, however it is not widespread
-and you must assure that the team you work with uses it consistently and
-that you all use the same version.
+I have made very good experiences with Lyx, however it is not widespread and you must assure that the team you work with uses it consistently and that you all use the same version.
 
 Using the ACM templates
 
-\*
 <http://jack-kelly.com/getting_latex_and_lyx_to_use_acm_sig_class_file> \*<https://wiki.lyx.org/Examples/AcmSiggraph>
 
-How to edit Bibliographies?
----------------------------
+## How to edit Bibliographies?
 
 It is a waste of your time to edit bibliographies with the bibitem
 environment. There are several preformated styles available. It includes
@@ -119,19 +115,15 @@ Than you have to run latex and bibtex in the following order:
     latex  file
     latex  file
 
-The reason for the multiple execution of the latex program is to update
-all crossreferences correctly. In case you are not interested in
-updating the library every time in the writing progress just postpone it
-till the end. Missing citations are viewed as [?].
+The reason for the multiple execution of the latex program is to update all cross-references correctly. In case you are not interested in updating the library every time in the writing progress just postpone it till the end. Missing citations are viewed as [?].
 
 Two programs stand out when manageing bibliographies: emacs and jabref:
 
 -   <http://www.jabref.org/>
 
-How to produce Slides?
-----------------------
+## How to produce Slides?
 
-Slides are best produced with teh seminar package:
+Slides are best produced with the seminar package:
 
     \documentclass{seminar}
 
