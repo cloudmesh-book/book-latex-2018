@@ -20,8 +20,10 @@ Open the editor and open the directory
 You will now see the book in the editor and you can easily edit the contents.
     
 
-We already set up a sample and modified .gitignore based on the tip from 
+To generate the PDF or ePub use teh commands
 
-* https://tomjn.com/2014/06/25/gitbooks-github/
+    ???
+    
+Than open the create document with 
 
-
+    ??
