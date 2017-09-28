@@ -1,0 +1,529 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,fleqn]{book} % Default font size and left-justified equations
+
+\usepackage{parskip}
+\usepackage{comment}
+\usepackage{longtable}
+\parindent 0pt
+\setlength{\parskip}{6pt}
+\usepackage{graphicx}
+
+\graphicspath{{./notebooks/facedetection_files/}{images/}}
+
+%----------------------------------------------------------------------------------------
+% remove pandoc commands
+%----------------------------------------------------------------------------------------
+\newcommand{\tightlist}{}
+\newenvironment{Shaded}{}{}
+\newenvironment{Highlighting}{}{}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+\newcommand{\ImportTok}[1]{{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+\newcommand{\BuiltInTok}[1]{{#1}}
+\newcommand{\ExtensionTok}[1]{{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+\newcommand{\RegionMarkerTok}[1]{{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\NormalTok}[1]{{#1}}
+
+%----------------------------------------------------------------------------------------
+
+\input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begingroup
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+\node[inner sep=0pt] (background) at (current page.center) {\includegraphics[width=\paperwidth]{background}};
+\draw (current page.center) node [fill=ocre!30!white,fill
+opacity=0.6,text opacity=1,inner
+sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering
+    Big Data Applications and Analytics\\[15pt] % Book title
+{\Large Theory and Practice}\\[20pt] % Subtitle
+{\huge Gregor von Laszewski}}}; % Author name
+\end{tikzpicture}
+\vfill
+\endgroup
+
+%----------------------------------------------------------------------------------------
+%	COPYRIGHT PAGE
+%----------------------------------------------------------------------------------------
+
+\newpage
+~\vfill
+\thispagestyle{empty}
+
+\noindent Copyright \copyright\ 2017 Gregor von Laszewski\\ % Copyright notice
+
+\noindent \textsc{Indiana University}\\ % Publisher
+
+\noindent \textsc{https://github.com/cloudmesh/classes}\\ % URL
+
+\noindent Licensed under the Creative Commons
+Attribution-NonCommercial 3.0 Unported License (the ``License''). You
+may not use this file except in compliance with the License. You may
+obtain a copy of the License at
+\url{http://creativecommons.org/licenses/by-nc/3.0}. Unless required
+by applicable law or agreed to in writing, software distributed under
+the License is distributed on an \textsc{``as is'' basis, without
+  warranties or conditions of any kind}, either express or
+implied. See the License for the specific language governing
+permissions and limitations under the License.\\ % License information
+
+\noindent \textit{First printing, March 2017} % Printing/edition date
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+%\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
+
+\chapterimage{chapter_head_1.pdf} % Table of contents heading image
+
+\pagestyle{empty} % No headers
+
+\tableofcontents % Print the table of contents itself
+
+\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
+
+\pagestyle{fancy} % Print headers again
+
+
+%----------------------------------------------------------------------------------------
+%	PART
+%----------------------------------------------------------------------------------------
+
+\part{Notebooks}
+
+\input{notebooks/facedetection.tex}
+\input{notebooks/scikit-learn-k-means.tex}
+\input{notebooks/fingerprint_matching.tex}
+
+
+%----------------------------------------------------------------------------------------
+%	PART
+%----------------------------------------------------------------------------------------
+
+\part{Preface}
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER
+%----------------------------------------------------------------------------------------
+
+\chapterimage{chapter_head_2.pdf} % Chapter heading image
+
+\chapter{Introduction}
+
+
+\input{chapter/intro/about}
+\input{chapter/intro/disclaimer}
+\input{chapter/intro/preface}
+
+%----------------------------------------------------------------------------------------
+%	PART
+%----------------------------------------------------------------------------------------
+
+\part{I523}
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER
+%----------------------------------------------------------------------------------------
+
+\input{chapter/intro/fall2017}
+
+
+\chapter{Overview}
+
+\input{chapter/intro/overview}
+
+\input{chapter/intro/organization}
+\input{chapter/intro/git}
+\input{chapter/intro/project}
+\input{chapter/intro/assignments}
+
+
+
+\chapter{Theory}
+
+\input{chapter/theory/introduction}
+\input{chapter/theory/overview}
+
+\input{chapter/theory/health}
+\input{chapter/theory/lifestyle}
+\input{chapter/theory/physics}
+\input{chapter/theory/python-tech}
+\input{chapter/theory/python}
+\input{chapter/theory/radar}
+\input{chapter/theory/sensor}
+\input{chapter/theory/sport}
+\input{chapter/theory/technology}
+\input{chapter/theory/usecases}
+\input{chapter/theory/web}
+
+%\input{chapter/theory/cloud}
+%\input{chapter/theory/clustering}
+
+
+
+%----------------------------------------------------------------------------------------
+%	PART
+%----------------------------------------------------------------------------------------
+
+\part{Python}
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 1
+%----------------------------------------------------------------------------------------
+
+\chapterimage{chapter_head_2.pdf} % Chapter heading image
+
+\chapter{Introduction}
+
+\input{chapter/prg/python-intro}
+
+\chapter{Install}
+
+\input{chapter/prg/python-install}
+
+\chapter{Language}
+
+\input{chapter/prg/python}
+
+\chapter{Cloudmesh Command Shell}
+
+\input{chapter/python-cmd5}
+
+\input{chapter/lesson/code}
+
+%----------------------------------------------------------------------------------------
+%	LINUX
+%----------------------------------------------------------------------------------------
+
+\part{Linux}
+
+\input{chapter/lesson/linux}
+\input{chapter/lesson/virtualbox}
+
+
+%----------------------------------------------------------------------------------------
+%	PART
+%----------------------------------------------------------------------------------------
+
+\part{IoT}
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 1
+%----------------------------------------------------------------------------------------
+
+\chapterimage{chapter_head_2.pdf} % Chapter heading image
+
+\input{chapter/lesson/iot/introduction}
+\input{chapter/lesson/iot/hardware}
+\input{chapter/lesson/iot/projects}
+\input{chapter/lesson/iot/esp8266}
+\input{chapter/lesson/iot/pi}
+\input{chapter/lesson/iot/dexter}
+\input{chapter/lesson/iot/grovepi}
+\input{chapter/lesson/iot/sensors}
+\input{chapter/lesson/iot/vnc}
+\input{chapter/lesson/iot/turtle}
+\input{chapter/lesson/iot/tools}
+
+%----------------------------------------------------------------------------------------
+%	COMMENT
+%----------------------------------------------------------------------------------------
+
+
+\begin{comment}
+
+\part{Book Format}
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 1
+%----------------------------------------------------------------------------------------
+
+\chapterimage{chapter_head_2.pdf} % Chapter heading image
+
+\chapter{LISTS}
+
+\section{Paragraphs of Text}\index{Paragraphs of Text}
+
+\lipsum[1-7] % Dummy text
+
+%------------------------------------------------
+
+\section{Citation}\index{Citation}
+
+This statement requires citation \cite{article_key}; this one is more specific \cite[162]{book_key}.
+
+%------------------------------------------------
+
+\section{Lists}\index{Lists}
+
+Lists are useful to present information in a concise and/or ordered way\footnote{Footnote example...}.
+
+\subsection{Numbered List}\index{Lists!Numbered List}
+
+\begin{enumerate}
+\item The first item
+\item The second item
+\item The third item
+\end{enumerate}
+
+\subsection{Bullet Points}\index{Lists!Bullet Points}
+
+\begin{itemize}
+\item The first item
+\item The second item
+\item The third item
+\end{itemize}
+
+\subsection{Descriptions and Definitions}\index{Lists!Descriptions and Definitions}
+
+\begin{description}
+\item[Name] Description
+\item[Word] Definition
+\item[Comment] Elaboration
+\end{description}
+
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 2
+%----------------------------------------------------------------------------------------
+
+
+\section{Theorems}\index{Theorems}
+
+This is an example of theorems.
+
+\subsection{Several equations}\index{Theorems!Several Equations}
+This is a theorem consisting of several equations.
+
+\begin{theorem}[Name of the theorem]
+In $E=\mathbb{R}^n$ all norms are equivalent. It has the properties:
+\begin{align}
+& \big| ||\mathbf{x}|| - ||\mathbf{y}|| \big|\leq || \mathbf{x}- \mathbf{y}||\\
+&  ||\sum_{i=1}^n\mathbf{x}_i||\leq \sum_{i=1}^n||\mathbf{x}_i||\quad\text{where $n$ is a finite integer}
+\end{align}
+\end{theorem}
+
+\subsection{Single Line}\index{Theorems!Single Line}
+This is a theorem consisting of just one line.
+
+\begin{theorem}
+A set $\mathcal{D}(G)$ in dense in $L^2(G)$, $|\cdot|_0$. 
+\end{theorem}
+
+%------------------------------------------------
+
+\section{Definitions}\index{Definitions}
+
+This is an example of a definition. A definition could be mathematical or it could define a concept.
+
+\begin{definition}[Definition name]
+Given a vector space $E$, a norm on $E$ is an application, denoted $||\cdot||$, $E$ in $\mathbb{R}^+=[0,+\infty[$ such that:
+\begin{align}
+& ||\mathbf{x}||=0\ \Rightarrow\ \mathbf{x}=\mathbf{0}\\
+& ||\lambda \mathbf{x}||=|\lambda|\cdot ||\mathbf{x}||\\
+& ||\mathbf{x}+\mathbf{y}||\leq ||\mathbf{x}||+||\mathbf{y}||
+\end{align}
+\end{definition}
+
+%------------------------------------------------
+
+\section{Notations}\index{Notations}
+
+\begin{notation}
+Given an open subset $G$ of $\mathbb{R}^n$, the set of functions $\varphi$ are:
+\begin{enumerate}
+\item Bounded support $G$;
+\item Infinitely differentiable;
+\end{enumerate}
+a vector space is denoted by $\mathcal{D}(G)$. 
+\end{notation}
+
+%------------------------------------------------
+
+\section{Remarks}\index{Remarks}
+
+This is an example of a remark.
+
+\begin{remark}
+The concepts presented here are now in conventional employment in mathematics. Vector spaces are taken over the field $\mathbb{K}=\mathbb{R}$, however, established properties are easily extended to $\mathbb{K}=\mathbb{C}$.
+\end{remark}
+
+%------------------------------------------------
+
+\section{Corollaries}\index{Corollaries}
+
+This is an example of a corollary.
+
+\begin{corollary}[Corollary name]
+The concepts presented here are now in conventional employment in mathematics. Vector spaces are taken over the field $\mathbb{K}=\mathbb{R}$, however, established properties are easily extended to $\mathbb{K}=\mathbb{C}$.
+\end{corollary}
+
+%------------------------------------------------
+
+\section{Propositions}\index{Propositions}
+
+This is an example of propositions.
+
+\subsection{Several equations}\index{Propositions!Several Equations}
+
+\begin{proposition}[Proposition name]
+It has the properties:
+\begin{align}
+& \big| ||\mathbf{x}|| - ||\mathbf{y}|| \big|\leq || \mathbf{x}- \mathbf{y}||\\
+&  ||\sum_{i=1}^n\mathbf{x}_i||\leq \sum_{i=1}^n||\mathbf{x}_i||\quad\text{where $n$ is a finite integer}
+\end{align}
+\end{proposition}
+
+\subsection{Single Line}\index{Propositions!Single Line}
+
+\begin{proposition} 
+Let $f,g\in L^2(G)$; if $\forall \varphi\in\mathcal{D}(G)$, $(f,\varphi)_0=(g,\varphi)_0$ then $f = g$. 
+\end{proposition}
+
+%------------------------------------------------
+
+\section{Examples}\index{Examples}
+
+This is an example of examples.
+
+\subsection{Equation and Text}\index{Examples!Equation and Text}
+
+\begin{example}
+Let $G=\{x\in\mathbb{R}^2:|x|<3\}$ and denoted by: $x^0=(1,1)$; consider the function:
+\begin{equation}
+f(x)=\left\{\begin{aligned} & \mathrm{e}^{|x|} & & \text{si $|x-x^0|\leq 1/2$}\\
+& 0 & & \text{si $|x-x^0|> 1/2$}\end{aligned}\right.
+\end{equation}
+The function $f$ has bounded support, we can take $A=\{x\in\mathbb{R}^2:|x-x^0|\leq 1/2+\epsilon\}$ for all $\epsilon\in\intoo{0}{5/2-\sqrt{2}}$.
+\end{example}
+
+\subsection{Paragraph of Text}\index{Examples!Paragraph of Text}
+
+\begin{example}[Example name]
+\lipsum[2]
+\end{example}
+
+%------------------------------------------------
+
+\section{Exercises}\index{Exercises}
+
+This is an example of an exercise.
+
+\begin{exercise}
+This is a good place to ask a question to test learning progress or further cement ideas into students' minds.
+\end{exercise}
+
+%------------------------------------------------
+
+\section{Problems}\index{Problems}
+
+\begin{problem}
+What is the average airspeed velocity of an unladen swallow?
+\end{problem}
+
+%------------------------------------------------
+
+\section{Vocabulary}\index{Vocabulary}
+
+Define a word to improve a students' vocabulary.
+
+\begin{vocabulary}[Word]
+Definition of word.
+\end{vocabulary}
+
+\section{Table}\index{Table}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l l l}
+\toprule
+\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
+\midrule
+Treatment 1 & 0.0003262 & 0.562 \\
+Treatment 2 & 0.0015681 & 0.910 \\
+Treatment 3 & 0.0009271 & 0.296 \\
+\bottomrule
+\end{tabular}
+\caption{Table caption}
+\end{table}
+
+%------------------------------------------------
+
+\section{Figure}\index{Figure}
+
+\begin{figure}[h]
+\centering\includegraphics[scale=0.5]{placeholder}
+\caption{Figure caption}
+\end{figure}
+\end{comment}
+
+
+%----------------------------------------------------------------------------------------
+%	Appendix
+%----------------------------------------------------------------------------------------
+
+\part{Appendix}
+
+
+\chapter*{Bibliography}
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Bibliography}}
+
+%------------------------------------------------
+
+\section*{Articles}
+\addcontentsline{toc}{section}{Articles}
+\printbibliography[heading=bibempty,type=article]
+
+%------------------------------------------------
+
+\section*{Books}
+\addcontentsline{toc}{section}{Books}
+\printbibliography[heading=bibempty,type=book]
+
+%----------------------------------------------------------------------------------------
+%	INDEX
+%----------------------------------------------------------------------------------------
+
+\cleardoublepage
+\phantomsection
+\setlength{\columnsep}{0.75cm}
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}}
+\printindex
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
