@@ -40,6 +40,7 @@ clean:
 	rm -f *.ptc
 	rm -f *.run.xml
 	rm -f *.toc
+	rm -f *.log
 
 view:
 	open $(FILE).pdf
