@@ -1,0 +1,253 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,fleqn]{book} % Default font size and left-justified equations
+
+\input{book-format}
+
+
+%----------------------------------------------------------------------------------------
+%	PART
+%----------------------------------------------------------------------------------------
+
+\part{Preface}
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER
+%----------------------------------------------------------------------------------------
+
+\chapterimage{chapter_head_2.pdf} % Chapter heading image
+
+\chapter{Introduction}
+
+
+\input{chapter/intro/about}
+\input{chapter/intro/disclaimer}
+\input{chapter/intro/preface}
+
+%----------------------------------------------------------------------------------------
+%	PART
+%----------------------------------------------------------------------------------------
+
+\part{Documenting Scientific Research}
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 1
+%----------------------------------------------------------------------------------------
+
+\chapterimage{chapter_head_2.pdf} % Chapter heading image
+
+\chapter{Documenting Scientific Research}
+\input{chapter/lesson/doc/report-book}
+% \input{chapter/lesson/doc/report}
+
+\chapter{Introduction to \LaTeX}
+
+\input{chapter/lesson/doc/latex}
+\input{chapter/lesson/doc/bibtex}
+
+\chapter{Editors}
+\input{chapter/lesson/doc/emacs}
+
+\chapter{Other Formats}
+\input{chapter/lesson/doc/rst}
+\input{chapter/lesson/doc/markdown}
+\input{chapter/lesson/doc/type}
+
+
+
+%----------------------------------------------------------------------------------------
+%	PART
+%----------------------------------------------------------------------------------------
+
+\part{I523}
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER
+%----------------------------------------------------------------------------------------
+
+\input{chapter/intro/fall2017}
+
+
+\chapter{Overview}
+
+\input{chapter/intro/overview}
+
+\input{chapter/intro/organization}
+\input{chapter/intro/git}
+\input{chapter/intro/project}
+\input{chapter/intro/assignments}
+
+
+
+\chapter{Theory}
+
+\input{chapter/theory/introduction}
+\input{chapter/theory/overview}
+
+\input{chapter/theory/health}
+\input{chapter/theory/lifestyle}
+\input{chapter/theory/physics}
+\input{chapter/theory/python-tech}
+\input{chapter/theory/python}
+\input{chapter/theory/radar}
+\input{chapter/theory/sensor}
+\input{chapter/theory/sport}
+\input{chapter/theory/technology}
+\input{chapter/theory/usecases}
+\input{chapter/theory/web}
+
+%\input{chapter/theory/cloud}
+%\input{chapter/theory/clustering}
+
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	PART
+%----------------------------------------------------------------------------------------
+
+\part{Python}
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 1
+%----------------------------------------------------------------------------------------
+
+\chapterimage{chapter_head_2.pdf} % Chapter heading image
+
+\chapter{Introduction}
+
+\input{chapter/prg/python-intro}
+
+\chapter{Install}
+
+\input{chapter/prg/python-install}
+
+\chapter{Language}
+
+\input{chapter/prg/python}
+
+\chapter{Cloudmesh Command Shell}
+
+\input{chapter/python-cmd5}
+
+\input{chapter/lesson/code}
+
+
+%----------------------------------------------------------------------------------------
+%	PART
+%----------------------------------------------------------------------------------------
+
+\part{Python Notebooks}
+
+\input{notebooks/facedetection.tex}
+\input{notebooks/scikit-learn-k-means.tex}
+\input{notebooks/fingerprint_matching.tex}
+
+
+%----------------------------------------------------------------------------------------
+%	LINUX
+%----------------------------------------------------------------------------------------
+
+\part{Linux}
+
+\input{chapter/lesson/linux}
+\input{chapter/lesson/virtualbox}
+
+
+%----------------------------------------------------------------------------------------
+%	PART
+%----------------------------------------------------------------------------------------
+
+\part{IoT}
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 1
+%----------------------------------------------------------------------------------------
+
+\chapterimage{chapter_head_2.pdf} % Chapter heading image
+
+\input{chapter/lesson/iot/introduction}
+\input{chapter/lesson/iot/hardware}
+\input{chapter/lesson/iot/projects}
+\input{chapter/lesson/iot/esp8266}
+\input{chapter/lesson/iot/pi}
+\input{chapter/lesson/iot/dexter}
+\input{chapter/lesson/iot/grovepi}
+\input{chapter/lesson/iot/sensors}
+\input{chapter/lesson/iot/vnc}
+\input{chapter/lesson/iot/turtle}
+\input{chapter/lesson/iot/tools}
+
+
+%----------------------------------------------------------------------------------------
+%	CLOUD
+%----------------------------------------------------------------------------------------
+
+\part{i5xx Cloud}
+
+\chapterimage{chapter_head_2.pdf} % Chapter heading image
+
+\chapter{Cloud}
+
+\chapter{Fundamentals}
+
+\input{chapter/cloud/fundamentals}
+
+\chapter{Participation}
+
+\input{chapter/cloud/participation/index}
+
+\chapter{Assignment}
+
+\input{chapter/cloud/assignment/index}
+
+\chapter{Evaluation}
+
+\input{chapter/cloud/evaluation/index}
+
+
+%----------------------------------------------------------------------------------------
+%	FORMAT
+%----------------------------------------------------------------------------------------
+
+\input{format}
+
+%----------------------------------------------------------------------------------------
+%	Appendix
+%----------------------------------------------------------------------------------------
+
+\part{Appendix}
+
+
+\chapter*{Bibliography}
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Bibliography}}
+
+%------------------------------------------------
+
+\section*{Articles}
+\addcontentsline{toc}{section}{Articles}
+\printbibliography[heading=bibempty,type=article]
+
+%------------------------------------------------
+
+\section*{Books}
+\addcontentsline{toc}{section}{Books}
+\printbibliography[heading=bibempty,type=book]
+
+%----------------------------------------------------------------------------------------
+%	INDEX
+%----------------------------------------------------------------------------------------
+
+\cleardoublepage
+\phantomsection
+\setlength{\columnsep}{0.75cm}
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}}
+\printindex
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

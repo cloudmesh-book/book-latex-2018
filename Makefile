@@ -1,21 +1,31 @@
+.PHONY: book images
+
+FILE=vonLaszewski-bigdata
+#FLAGS=-interaction nonstopmode -halt-on-error -file-line-error
+FLAGS=-interaction nonstopmode  -file-line-error
 
 all:
-	pdflatex main
-	makeindex main.idx -s StyleInd.ist
-	biber main
-	pdflatex main x 2
+	pdflatex $(FLAGS) $(FILE)
+	makeindex $(FILE).idx -s StyleInd.ist
+	biber $(FILE)
+	pdflatex $(FLAGS)  $(FILE) x 2
+	pdflatex $(FLAGS)  $(FILE) x 2
 
-theory:
+book:
 	python book.py
+
+
+images:
+	cp -r ~/github/cloudmesh/classes/docs/source/images/ images
 
 fetch:
 	cd chapter; make
 
 old:
-	pdflatex main
-	makeindex main.idx -s StyleInd.ist
-	biber main
-	pdflatex main x 2
+	pdflatex $(FILE)
+	makeindex $(FILE).idx -s StyleInd.ist
+	biber $(FILE)
+	pdflatex $(FILE) x 2
 
 clean:
 	rm -f *.aux
@@ -32,4 +42,4 @@ clean:
 	rm -f *.toc
 
 view:
-	open main.pdf
+	open $(FILE).pdf
