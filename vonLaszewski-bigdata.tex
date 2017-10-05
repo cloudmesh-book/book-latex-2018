@@ -3,7 +3,13 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass[11pt,fleqn]{book} % Default font size and left-justified equations
-
+\hfuzz=100pt 
+\hbadness=100000
+\usepackage{silence}
+\WarningsOff
+% does not work
+%\WarningFilter{latex}{Overfull}
+%\WarningFilter{latex}{Underfull}
 
 \input{book-format}
 

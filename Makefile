@@ -28,7 +28,6 @@ old:
 
 clean:
 	rm -f *.aux
-	rm -f *.ist
 	rm -f *.bbl
 	rm -f *.bcf
 	rm -f *.blg
