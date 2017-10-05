@@ -14,7 +14,6 @@ all:
 book:
 	python book.py
 
-
 images:
 	cp -r ~/github/cloudmesh/classes/docs/source/images/ images
 
@@ -44,3 +43,9 @@ clean:
 
 view:
 	open $(FILE).pdf
+
+publish:
+	cp $(FILE).pdf ~/github/laszewsk/papers/
+	cd ~/github/laszewsk/papers; git add $(FILE).pdf; git commit -m "update $(FILE)"; git push
+	cp $(FILE).pdf ~/github/laszewsk/laszewski.github.io/papers/$(FILE).pdf
+	cd ~/github/laszewsk/laszewski.github.io/papers; git add $(FILE).pdf; git commit -m "update $(FILE)"; git push
