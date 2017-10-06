@@ -15,13 +15,12 @@
 
 
 \newcommand{\video}[3]{%
-{\em \href{#3}{\includegraphics[width=1cm]{images/video.png} #2 (#1)}}    \index{Video!#2 (#1)}
+{\em \hfill #2 (#1) \href{#3}{\includegraphics[width=1cm]{images/video.png} }}    \index{Video!#2 (#1)}
 }
 
 \newcommand{\slides}[3]{%
-  {\em \href{#3}{\includegraphics[width=1cm]{images/slide.png} #1}} \index{Slides!#1 (#2)}
+  {\em  \hfill #2 (#1) \href{#3}{\includegraphics[width=1cm]{images/slide.png}}} \index{Slides!#1 (#2)}
 }
-
 
 
 \input{book-format}
@@ -85,7 +84,7 @@
 \part{Big Data Applications}
 
 \input{chapter/theory/introduction}
-%\input{chapter/theory/overview}
+\input{chapter/theory/overview}
 \input{chapter/theory/health}
 \input{chapter/theory/lifestyle}
 \input{chapter/theory/physics}
