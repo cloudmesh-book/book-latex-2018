@@ -160,7 +160,7 @@ If you want to use this service, please do and be aware of the following:
   will not be able to add you to our site license.  You are also
   required to use your IU passphrase as your ShareLaTeX password.
   Once you have registered, send an email to
-  \verb|soichelp@indiana.edu} asking to have your sharelatex account 
+  \verb|soichelp@indiana.edu| asking to have your sharelatex account 
   added to the IU license.  
 
 \item
@@ -806,7 +806,7 @@ It may come as a surprise to many that one can actually write simple
 LaTeX documents also in markdown Syntax or mix section written in
 markdown while others are written in LaTeX. To do so all you ahve to
 do is place the markdown text in a separate file. Let us call the file 
-content.rst which has the following lines included in it:
+\verb|content.md| which has the following lines included in it:
 
 \begin{verbatim}
 # Section
@@ -833,7 +833,7 @@ this. We assume the file is called markdown.tex for our example.
 \begin{document}
 \immediate\write18{pandoc content.md -o content.tex}
 
-\input{markdown-latex}
+\input{content}
 
 \end{document}
 \end{verbatim}
@@ -854,6 +854,36 @@ work in semi WYSIWYG mode and do fairly straight forward
 edition. Naturally the same can be done in RST. Naturally the most
 elementary features are supported. For more sophisticated features,
 please use LaTeX directly.
+
+
+\subsection{Including RST into LaTeX}
+
+content.rst:
+
+\begin{verbatim}
+Section
+-------
+
+* item a
+* item b
+\end{verbatim}
+
+sample.tex:
+
+\begin{verbatim}
+\documentclass{article}
+
+\include{graphicx}
+\newcommand{\tightlist}{}
+
+\begin{document}
+\immediate\write18{pandoc content.rst -o content.tex}
+
+\input{content}
+
+\end{document}
+\end{verbatim}
+
 
 \subsection{pyCharm}
 
