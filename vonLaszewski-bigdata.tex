@@ -13,28 +13,16 @@
 \usepackage{marginnote}
 %\usepackage[top=1.5cm, bottom=1.5cm, outer=5cm, inner=2cm, heightrounded, marginparwidth=2.5cm, marginparsep=2cm]{geometry}
 
+
 \newcommand{\video}[3]{%
-  \marginnote{
-\vspace{-6pt} {\tiny
-    \href{#3}{\includegraphics[width=1cm]{images/video.png}\\
-      #1\\ \vspace{-6pt}#2}}%
-    \index{Video!#2 (#1)}
-  }
+{\em \href{#3}{\includegraphics[width=1cm]{images/video.png} #2 (#1)}}    \index{Video!#2 (#1)}
 }
 
 \newcommand{\slides}[3]{%
-  \marginnote{{\tiny
-    \href{#3}{\includegraphics[width=1cm]{images/slide.png}\\
-      #1}}%
-    \index{Slides!#1 (#2)}
-  }
+  {\em \href{#3}{\includegraphics[width=1cm]{images/slide.png} #1}} \index{Slides!#1 (#2)}
 }
 
-%\newcommand{\slides}[3]{%
-%\href{#3}{\includegraphics[height=1cm]{images/slide.png}\newline
-%  {\tiny #1}}%
-%\index{Slides!#1 (#2)}
-%}
+
 
 \input{book-format}
 
@@ -96,8 +84,7 @@
 
 \part{Big Data Applications}
 
-
-%\input{chapter/theory/introduction}
+\input{chapter/theory/introduction}
 %\input{chapter/theory/overview}
 \input{chapter/theory/health}
 \input{chapter/theory/lifestyle}
@@ -110,7 +97,6 @@
 %\input{chapter/theory/technology}
 \input{chapter/theory/usecases}
 \input{chapter/theory/web}
-
 %\input{chapter/theory/cloud}
 %\input{chapter/theory/clustering}
 
