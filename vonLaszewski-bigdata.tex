@@ -10,7 +10,8 @@
 % does not work
 %\WarningFilter{latex}{Overfull}
 %\WarningFilter{latex}{Underfull}
-\usepackage{marginnote}
+%\usepackage{marginnote}
+\usepackage{currfile}
 %\usepackage[top=1.5cm, bottom=1.5cm, outer=5cm, inner=2cm, heightrounded, marginparwidth=2.5cm, marginparsep=2cm]{geometry}
 
 
@@ -23,7 +24,7 @@
 }
 
 
-\input{book-format}
+\input{format/book-format}
 
 
 \chapterimage{water.png} % Chapter heading image
@@ -245,12 +246,14 @@
 
 %\input{format}
 
-\begin{comment}
+
 %----------------------------------------------------------------------------------------
 %	Appendix
 %----------------------------------------------------------------------------------------
 
 \part{Appendix}
+
+\begin{comment}
 
 \cite{book_key}
 \cite{article_key}

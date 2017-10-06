@@ -6,7 +6,7 @@ FLAGS=-interaction nonstopmode  -file-line-error
 
 all:
 	pdflatex $(FLAGS) $(FILE)
-	makeindex $(FILE).idx -s StyleInd.ist
+	makeindex $(FILE).idx -s format/StyleInd.ist
 	biber $(FILE)
 	pdflatex $(FLAGS)  $(FILE) x 2
 	pdflatex $(FLAGS)  $(FILE) x 2
