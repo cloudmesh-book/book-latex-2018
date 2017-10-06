@@ -15,12 +15,12 @@
 %\usepackage[top=1.5cm, bottom=1.5cm, outer=5cm, inner=2cm, heightrounded, marginparwidth=2.5cm, marginparsep=2cm]{geometry}
 
 
-\newcommand{\video}[3]{%
-{\em \hfill #2 (#1) \href{#3}{\includegraphics[width=1cm]{images/video.png} }}    \index{Video!#2 (#1)}
+\newcommand{\video}[4]{%
+{\em \hfill #3 (#2) \href{#4}{\includegraphics[width=1cm]{images/video.png} }}    \index{Video!#1!#3 (#2)}
 }
 
-\newcommand{\slides}[3]{%
-  {\em  \hfill #2 (#1) \href{#3}{\includegraphics[width=1cm]{images/slide.png}}} \index{Slides!#1 (#2)}
+\newcommand{\slides}[4]{%
+  {\em  \hfill #3 (#2) \href{#3}{\includegraphics[width=1cm]{images/slide.png}}} \index{Slides!#1!#2 (#3)}
 }
 
 
@@ -89,17 +89,25 @@
 \input{chapter/theory/health}
 \input{chapter/theory/lifestyle}
 \input{chapter/theory/physics}
-%\input{chapter/theory/python-tech}
-%\input{chapter/theory/python}
 \input{chapter/theory/radar}
 \input{chapter/theory/sensor}
 \input{chapter/theory/sport}
-%\input{chapter/theory/technology}
 \input{chapter/theory/usecases}
 \input{chapter/theory/web}
-%\input{chapter/theory/cloud}
-%\input{chapter/theory/clustering}
+\input{chapter/theory/clustering}
 
+
+%----------------------------------------------------------------------------------------
+%	PART
+%----------------------------------------------------------------------------------------
+
+\part{Technology}
+
+
+\input{chapter/theory/cloud}
+%\input{chapter/theory/technology}
+%\input{chapter/theory/python-tech}
+%\input{chapter/theory/python}
 
 
 \begin{comment}
