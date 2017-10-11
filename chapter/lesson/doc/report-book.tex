@@ -1,8 +1,7 @@
-\begin{fileremark}
-\url{chapter/doc/report-book.tex}
-\end{fileremark}
+\FILENAME
 
 \section{Writing a Scientific Article or Conference Paper}
+\index{Writing}
 
 An important part of any scientific research is to document it. This is
 often done through scientific conferences or journal articles. Hence it
@@ -17,7 +16,8 @@ with bibliography management. Instead of Word helping the student it
 provided the illusion to be easier than LaTeX but when adding up the
 time spend on the paper we found that LaTeX actually saved time. This
 has been especially true with the advent of collaborative editing
-services such as sharelatex \cite{??} and overleaf \cite{??}.
+services such as sharelatex \cite{www-sharelatex} and overleaf
+\cite{www-overleaf}. 
 
 In this section we provide you with a professional template that is used
 for either system based on the ACM standard that you can use to write
@@ -60,21 +60,12 @@ not follow the established publication guidlines.
 
 The template we are providing is available from:
 
-\begin{itemize}
-\tightlist
-\item
-  \url{https://github.com/cloudmesh/classes/tree/master/docs/source/format/report}
-\end{itemize}
+\URL{https://github.com/cloudmesh/classes/tree/master/docs/source/format/report}
 
 Convenient compressed files are available at
 
-\begin{itemize}
-\tightlist
-\item
-  \url{https://github.com/cloudmesh/classes/tree/master/docs/source/format/report.tar.gz}
-\item
-  \url{https://github.com/cloudmesh/classes/tree/master/docs/source/format/report.zip}
-\end{itemize}
+\URL{https://github.com/cloudmesh/classes/tree/master/docs/source/format/report.tar.gz}
+\URL{https://github.com/cloudmesh/classes/tree/master/docs/source/format/report.zip}
 
 You will find in it a modified ACM proceedings templates for Word and
 for LaTeX that has an identification box removed on the lower left hand
@@ -189,7 +180,8 @@ For deadlines the following will get you in trouble:
   the package for submission in minutes rather than hours by hand.
 \end{enumerate}
 
-\subsection{Paper Checklist}\label{paper-checklist}
+\subsection{Paper and Report Checklist}\label{paper-checklist}
+\index{Writing!Checklist}
 
 In this section we summarize a number of checks that you may perform to
 make sure your paper is properly formatted and in excellent shape.
@@ -198,102 +190,156 @@ should add here, let us know.
 
 \begin{itemize}[label=$\Box$]
 
-\item
-  Have you written the report in the specified format?
-\item
-  Have you included an acknowledgement section?
-\item
-  Have you included the paper in the submission system (In our class it
-  is git)?
-\item
-  Have you specified proper identification in the submission system.
-  THis is typically a form or ASCII text that needs to be filled out (In
-  our case it is a README.md file that includes a homework ID, names of
-  the authors, and e-mails)?
-\item
-  Have you included all images in native and PDF format in the
-  submission system?
-\item
-  Have you added the bibliography file that you managed (In our case
-  jabref to make it simple for you)?
-\item
-  In case you used word have you also provided the jabref?
-\item
-  In case of a class and if you do a multi-author paper, have you added
-  an appendix describing who did what in the paper?
-\item
-  Have you spellchecked the paper?
-\item
-  Are you using \textbf{a} and \textbf{the} properly?
-\item
-  Have you made sure you do not plagiarize?
-\item
-  Is the title properly capitalized?
-\item
-  Have you not used phrases such as shown in the Figure below, but
+\item Have you written the report in the specified format?
+
+\item Have you included an acknowledgement section?
+
+\item Have you included the paper in the submission system (In our
+  case git). This includes all images, bibliography files and other
+  material that is needed to build the paper from scratch?
+
+\item Have you added the bibliography file that you managed (In our
+  case jabref to make it simple for you)?
+
+\item Have you specified proper identification in the submission
+  system for your submission.  This is typically a form or ASCII text
+  that needs to be filled out and follows a very particular format.
+  In our case it is a README.md file that ncludes a homework ID, names
+  of the authors, and e-mails)?
+
+\item In case you used word have you also provided the jabref?
+
+\item In case of a class and if you do a multi-author paper, have you
+  added a work-breakdown section in the appendix describing who did
+  what in the paper?
+
+\item IN case you have an appenix it is included fater the bibliography
+
+\item Have you spellchecked the paper?
+
+\item Have you grammar chacked the paper?
+
+\item Are you using \textbf{a} and \textbf{the} properly?
+
+\item Have you made sure you do not plagiarize?
+
+\item Is the title properly capitalized?
+
+\item Have you not used phrases such as shown in the Figure below, but
   instead used as shown in Figure 3 when referring to the 3rd figure?
-\item
-  Have you capitalized ``Figure 3'', ``Table 1'', \ldots{} ?
-\item
-  Have you removed any figure that is not referred explicitly in the
-  text (As shown in Figure ..)
-\item
-  Are the figure captions bellow the figures and not on top. (Do not
-  include the titles of the figures in the figure itself but instead use
-  the caption or that information?
-\item
-  When using tables have you put the table caption on top?
-\item
-  Make the figures large enough so we can read the details. If needed
-  make the figure over two columns?
-\item
-  Do not worry about the figure placement if they are at a different
-  location than you think. Figures are allowed to float. If you want you
-  can place all figures at the end of the report?
-\item
-  Are all figures and tables at the end?
-\item
-  In case you copied a figure from another paper you need to ask for
-  copyright permission. IN case of a class paper you \textbf{must}
-  include a reference to the original in the caption.
-\item
-  Do not use the word ``I'' instead use we even if you are the sole
-  author?
-\item
-  Do not use the phrase ``In this paper/report we show'' instead use
-  ``We show''. It is not important if this is a paper or a report and
-  does not need to be mentioned.
-\item
-  Do not artificially inflate your paper if you are bellow the page
-  limit and have nothing to say anymore.
-\item
-  If your paper limit is 12 pages but you want to hand in 120 pages,
-  please check first ;-)
-\item
-  Do not use the characters \& \# \% in the paper if you use LaTeX. If
-  you use them you probably need a in front of them.
-\item
-  If you want to say and do not use \& but use the word and.
-\item
-  Latex uses double single open quotes and double single closed quotes
-  for quotes. Have you made sure you replaced them?
-\item
-  Pasting and copying from the Web often results in non ascii characters
-  to be used in your text, please remove them and replace accordingly.
+  Numbers in LaTeX are done with \verb|\label{}| after captions and
+  \verb|\ref{}| in the text (See examples in the LaTeX section). In
+  word you must use relative numbering.
+
+\item Have you capitalized ``Figure 3'', ``Table 1''?
+
+\item Have you removed any figure that is not referred explicitly in
+  the text. E. ech figure needs a text such as  {\em As shown in
+    Figure ..} or similar.
+
+\item Are the figure captions bellow the figures and not on top. (Do
+  not include the titles of the figures in the figure itself but
+  instead use the caption or that information?
+
+\item When using tables have you put the table caption above the table?
+
+\item When using image have you put the table caption bellow the image?
+
+\item Make the figures large enough so we can read the details. If
+  needed make the figure over two columns? 
+
+\item Do not worry about the figure placement if they are at a
+  different location than you think. Figures are allowed to float. In
+  many submissions you may have to place all figures at the end of the
+  paper so you can focus on content rather than placing figures. In
+  addition it will help you to refer to the figures by index.
+
+\item Are all figures and tables at the end?
+
+\item In case you copied a figure from another paper you need to ask
+  for copyright permission. In case of a class paper you \textbf{must}
+  include a reference to the original at the end of the figure caption.
+
+\item Do not use the word ``I'' instead use ``we'' even if you are the
+  sole author.
+
+\item Do not use the phrase ``In this paper/report we show'' instead
+  use ``We show''. It is not important if this is a paper or a report
+  and does not need to be mentioned.
+
+\item Do not artificially inflate your paper if you are bellow the
+  page limit and have nothing to say anymore.
+
+\item If your paper limit is 12 pages but you want to hand in 120
+  pages, please check first ;-) If your page limoit is 2 pages but you
+  hand in 4 thats is no issue.
+
+\item Do not use the characters \& \# \% \_  in the paper if you use
+  LaTeX. If you use them you probably need a bakslash in front of them.
+
+\item Latex uses double single open quotes and double single closed
+  quotes for quotes. Have you made sure you replaced them?
+
+  When using quotes in LaTeX, do not use the double quote but instead
+  use two single quotes such as \verb|``This is a quote''|. THis will
+  place the proper quotes in the text. To only use the quotes when you
+  literraly quote from other papers. Never use a quote to emphasize a
+  thext. For that you use \verb|{\em this is emphasize}| resulting in
+  {\em This is emphasized}.
+
+\item If you want to say and do not use \& but use the word {\em
+    and}. If you need tou use it be reminded to write it as \verb|\&|
+
+
+\item Pasting and copying from the Web often results in non ascii
+  characters to be used in your text, please remove them and replace
+  accordingly. This includes some form of -- that you may see showing
+  up as fi in pdf
+
+\item Is your Abstract not a proposal? Abstracts are no proposals, e.g
+  This paper intends to show .... If the paper intends to show you are
+  still in the draft phase of the paper. However, if you say We sow
+  ... That would be good. Let us just assume you intended to show
+  something but did not achieve then you can say We intended to show
+  this but we showed it was not possible. As you can see not only the
+  intention is communicated, but the result. If you just focuss on the
+  intent that's just a proposal and is not a proper abstract.
+
+\item Are you not using the word paper in your writeup?  Abstracts and
+  the entire paper should not have the word paper in it.
+
+\item If your paper is an introduction or overview paper, please do
+  not assume the reader to be an expert. Provide enough material for
+  the paper to be useful for an introduction into the topic. 
+
+\item Are you refernces correct? References to a paper are no
+  afterthought, they should be properly cited. Use jabref and make
+  sure the citation type of the refernce is correct and fill out as
+  many fields as you can. Some jouranls and conferences have for
+  example special requirements that go beyond the requirements of for
+  example jabref. One example is that maky conferences require you
+  that wne you cite papers form another conference to augment the
+  conferences not only with the location where the conference took
+  place, but also with the dates the conference took
+  place. Unfortunately, this is information that is often only
+  avalable through additional google quesies and many refernce entries
+  you find in the internet do not have this information readily
+  available.
+
 \end{itemize}
 
 In case of a class
 
 \begin{itemize}[label=$\Box$] 
 
-\item
-  Check in your current work of the paper on a weekly basis to show
-  consistent progress.
-\item
-  Please use the dedicated report format for class. It may not be the
-  ACM or IEEE format, but may have some additions that make management
-  of bibliographies easier. Do follow our instructions for
+\item Check in your current work of the paper on a weekly basis to
+  show consistent progress.
+
+\item Please use the dedicated report format for class. It may not be
+  the ACM or IEEE format, but may have some additions that make
+  management of bibliographies easier. Do follow our instructions for
   bibliographies.
+
 \end{itemize}
 
 In case you are allowed to use word in class, such as the one we teach
@@ -301,27 +347,23 @@ at IU, the following applies in addition:
 
 \begin{itemize}[label=$\Box$] 
 
-\item
-  Are you managing your references in jabref and endnote (we need both)
-\item
-  Are you using the right template we have a special 2 column template
-  for the class that is a modified version from the 2 column ACM
-  template
-\item
-  Are you using build in numbered section management? MSWord has
+\item Are you managing your references in jabref and endnote (we need
+  both)
+\item Are you using the right template we have a special 2 column
+  template for the class that is a modified version from the 2 column
+  ACM template
+\item Are you using build in numbered section management? MSWord has
   Sections that must be used
-\item
-  Are you using real bulleted lists in Word and not just a ``*'' or a
-  ``-''?
-\item
-  Have you carelessly pasted and copied into the document without using
-  proper formats. E.g. in MSWord this is a problem. You need to fix the
-  format and use the build in format. Not that if you paste wrong you
-  effect the format styles.
-\item
-  Have you created not only a docx document but also the PDF.
-\item
-  Make sure you use .docx and not .doc
+\item Are you using real bulleted lists in Word and not just a ``*''
+  or a ``-''?
+\item Have you carelessly pasted and copied into the document without
+  using proper formats. E.g. in MSWord this is a problem. You need to
+  fix the format and use the build in format. Not that if you paste
+  wrong you effect the format styles.
+\item Have you created not only a docx document but also the PDF.
+
+\item Make sure you use .docx and not .doc
+
 \end{itemize}
 
 If you observe something missing let us know.
@@ -331,7 +373,7 @@ If you observe something missing let us know.
 An example report in PDF format is available:
 
 \begin{itemize}
-\tightlist
+
 \item
   \href{https://github.com/cloudmesh/classes/blob/master/docs/source/format/report/latex/report.pdf}{report.pdf}
 \end{itemize}
@@ -351,11 +393,7 @@ the LaTeX lesson.
 For the class we will manage all papers via github.com. You will be
 added to our github at
 
-\begin{itemize}
-\tightlist
-\item
-  \url{https://github.com/bigdata-i523}
-\end{itemize}
+\URL{https://github.com/bigdata-i523}
 
 and assigned an hid (homework index directory) directory with a unique
 hid number for you. In addition, once you decide for a project, you will
@@ -369,11 +407,7 @@ in it, that \textbf{must} follow a specific format. The good news is
 that we have developed an easy template that with common sense you can
 modify easily. The template is located at
 
-\begin{itemize}
-\tightlist
-\item
-  \url{https://raw.githubusercontent.com/bigdata-i523/sample-hid000/master/README.md}
-\end{itemize}
+\URL{https://raw.githubusercontent.com/bigdata-i523/sample-hid000/master/README.md}
 
 As the format may have been updated over time it does not hurt to
 revisit it and compare with your README.md and make corrections. It is
@@ -388,37 +422,37 @@ information.
 Simple rules:
 
 \begin{itemize}
-\tightlist
+
 \item
   replace the hid nimber with your hid number.
-\item
-  naturally if you see sample- in the directory name you need to delete
-  that as your directory name does not have sample- in it.
-\item
-  do not ignore where the author is to be placed, it is in a list
+\item naturally if you see sample- in the directory name you need to
+
+  delete that as your directory name does not have sample- in it.
+\item do not ignore where the author is to be placed, it is in a list
+
   starting with a -
-\item
-  there is always a space after a -
-\item
-  do not introduce empty lines
-\item
-  do not use TAB and make sure your editor does not bay accident
+\item there is always a space after a -
+
+\item do not introduce empty lines
+
+\item do not use TAB and make sure your editor does not bay accident
+
   automatically creates tabs. This is probably the most frequent error
   we see.
-\item
-  do not use any : \& \_ in the attribute text including titles
-\item
-  an object defined in the README.md must have on a single type field.
-  for example in the project section. Make sure you select only one type
-  and delete the other
-\item
-  in case you have long paragraphs you can use the \textgreater{} after
-  the abstract
-\item
-  Once you understood how the README.md works, please delete the comment
-  section.
-\item
-  Add a chapter topic that your paper belongs to
+\item do not use any : \& \_ in the attribute text including titles
+
+\item an object defined in the README.md must have on a single type
+
+  field.  for example in the project section. Make sure you select
+  only one type and delete the other
+\item in case you have long paragraphs you can use the \textgreater{}
+
+  after the abstract
+\item Once you understood how the README.md works, please delete the
+
+  comment section.
+\item Add a chapter topic that your paper belongs to
+
 \end{itemize}
 
 \subsection{Exercise}\label{exercise}
