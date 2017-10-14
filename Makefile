@@ -4,6 +4,17 @@ FILE=vonLaszewski-bigdata
 #FLAGS=-interaction nonstopmode -halt-on-error -file-line-error
 FLAGS=-interaction nonstopmode  -file-line-error
 
+
+single:
+	latexmk -pvc -view=pdf single
+
+s:
+	pdflatex $(FLAGS) single
+
+
+fast:
+	pdflatex $(FLAGS) $(FILE)
+
 all:
 	pdflatex $(FLAGS) $(FILE)
 	makeindex $(FILE).idx -s format/StyleInd.ist

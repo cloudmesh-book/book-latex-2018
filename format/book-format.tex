@@ -1,13 +1,11 @@
-\usepackage{fancyvrb}
+
 \usepackage{parskip}
 \usepackage{comment}
 \usepackage{longtable}
 \parindent 0pt
 \setlength{\parskip}{6pt}
-\usepackage{graphicx}
 \usepackage{amsmath}
 
-\graphicspath{{./notebooks/facedetection_files/}{images/}}
 
 %----------------------------------------------------------------------------------------
 % remove pandoc commands
@@ -120,4 +118,25 @@ permissions and limitations under the License.\\ % License information
 \pagestyle{fancy} % Print headers again
 
 
+
+\newcommand{\FILENAME}{\begin{fileremark}\currfiledir
+    \currfilename\end{fileremark}}
+\newcommand{\CHANGE}{\begin{changeremark}THIS WILL CHANGE
+    \currfilename\end{changeremark}}
+
+
+
+\newcommand{\URL}[1]{
+\begin{itemize}
+\item  \url{#1}
+\end{itemize}
+}
+
+\newcommand{\video}[4]{%
+{\em \hfill #3 (#2) \href{#4}{\includegraphics[width=1cm]{images/video.png} }}    \index{Video!#1!#3 (#2)}
+}
+
+\newcommand{\slides}[4]{%
+  {\em  \hfill #3 (#2) \href{#3}{\includegraphics[width=1cm]{images/slide.png}}} \index{Slides!#1!#2 (#3)}
+}
 

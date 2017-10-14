@@ -16,7 +16,11 @@
 \usepackage{currfile}
 %\usepackage[top=1.5cm, bottom=1.5cm, outer=5cm, inner=2cm, heightrounded, marginparwidth=2.5cm, marginparsep=2cm]{geometry}
 
-\newcommand{\FILENAME}{\begin{fileremark}\currfiledir \currfilename\end{fileremark}}
+\newcommand{\FILENAME}{\begin{fileremark}\currfiledir
+    \currfilename\end{fileremark}}
+\newcommand{\CHANGE}{\begin{changeremark}THIS WILL CHANGE
+    \currfilename\end{changeremark}}
+
 
 
 \newcommand{\URL}[1]{
@@ -36,8 +40,18 @@
 
 \input{format/book-format}
 
-
 \chapterimage{water.png} % Chapter heading image
+
+\part{IoT}
+
+\chapterimage{sentient.jpeg} % Chapter heading image
+
+\chapter{Sentient Architecture}
+
+\include{chapter/art/sentient}
+
+
+
 
 %----------------------------------------------------------------------------------------
 %	PART
@@ -54,6 +68,11 @@
 \chapter{Introduction}
 
 \include{chapter/preface/about}
+
+\include{chapter/courses/proposal}
+\include{chapter/courses/e516}
+\include{chapter/courses/e616}
+
 
 %----------------------------------------------------------------------------------------
 %	PART
