@@ -1,4 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Modified from 
+% by Gregor von Laszewski
+%
 % The Legrand Orange Book
 % Structural Definitions File
 % Version 2.0 (9/2/15)
@@ -20,6 +23,14 @@
 %----------------------------------------------------------------------------------------
 
 \usepackage[top=3cm,bottom=3cm,left=3cm,right=3cm,headsep=10pt,a4paper]{geometry} % Page margins
+
+\usepackage{tipa}
+\usepackage{parskip}
+\usepackage{comment}
+\usepackage{longtable}
+\parindent 0pt
+\setlength{\parskip}{6pt}
+
 
 \usepackage{graphicx} % Required for including pictures
 \graphicspath{{images/}} % Specifies the directory where pictures are stored
@@ -514,7 +525,7 @@ innerbottommargin=5pt]{cBox}
             linkcolor=red,
             urlcolor=blue,
             citecolor=blue]{hyperref}
-\hypersetup{hidelinks,backref=true,pagebackref=true,hyperindex=true,colorlinks=false,breaklinks=true,urlcolor= ocre,bookmarks=true,bookmarksopen=false,pdftitle={Title},pdfauthor={Author}}
+\hypersetup{hidelinks,backref=true,pagebackref=true,hyperindex=true,colorlinks=true,breaklinks=true,urlcolor=blue,bookmarks=true,bookmarksopen=false,pdftitle={Title},pdfauthor={Author}}
 \usepackage{bookmark}
 \bookmarksetup{
 open,
