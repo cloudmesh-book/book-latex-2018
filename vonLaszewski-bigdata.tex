@@ -4,6 +4,7 @@
 
 \documentclass[11pt,fleqn]{book} 
 
+\usepackage{tipa}
 
 \hfuzz=100pt 
 \hbadness=100000
@@ -16,131 +17,20 @@
 \usepackage{currfile}
 %\usepackage[top=1.5cm, bottom=1.5cm, outer=5cm, inner=2cm, heightrounded, marginparwidth=2.5cm, marginparsep=2cm]{geometry}
 
-\newcommand{\FILENAME}{\begin{fileremark}\currfiledir
-    \currfilename\end{fileremark}}
-\newcommand{\CHANGE}{\begin{changeremark}THIS WILL CHANGE
-    \currfilename\end{changeremark}}
-
-
-
-\newcommand{\URL}[1]{
-\begin{itemize}
-\item  \url{#1}
-\end{itemize}
-}
-
-\newcommand{\video}[4]{%
-{\em \hfill #3 (#2) \href{#4}{\includegraphics[width=1cm]{images/video.png} }}    \index{Video!#1!#3 (#2)}
-}
-
-\newcommand{\slides}[4]{%
-  {\em  \hfill #3 (#2) \href{#3}{\includegraphics[width=1cm]{images/slide.png}}} \index{Slides!#1!#2 (#3)}
-}
-
-
 \input{format/book-format}
 
 \chapterimage{water.png} % Chapter heading image
 
-\part{IoT}
 
-\chapterimage{sentient.jpeg} % Chapter heading image
-
-\chapter{Sentient Architecture}
-
-\include{chapter/art/sentient}
-
-
-
-
-%----------------------------------------------------------------------------------------
-%	PART
-%----------------------------------------------------------------------------------------
-
-\part{Preface}
-
-%----------------------------------------------------------------------------------------
-%	CHAPTER
-%----------------------------------------------------------------------------------------
-
-\chapterimage{water.png} % Chapter heading image
-
-\chapter{Introduction}
-
-\include{chapter/preface/about}
-\include{chapter/courses/proposal}
-\include{chapter/courses/e516}
-\include{chapter/courses/e616}
+\include{part-intro}
+\include{part-doc}
+\include{part-application}
+\include{part-dev}
+%\include{part-iot}
+%\include{sentient}
+\include{part-python}
 
 
-%----------------------------------------------------------------------------------------
-%	PART
-%----------------------------------------------------------------------------------------
-
-\part{Documenting Scientific Research}
-
-%----------------------------------------------------------------------------------------
-%	CHAPTER 1
-%----------------------------------------------------------------------------------------
-
-\chapterimage{writing.png} % Chapter heading image
-
-\chapter{Documenting Scientific Research}
-
-\include{chapter/lesson/doc/plagiarism}
-
-\include{chapter/lesson/doc/report-book}
-% \include{chapter/lesson/doc/report}
-
-
-
-\chapter{Introduction to \LaTeX}
-
-\include{chapter/lesson/doc/latex}
-
-\chapter{Managing Bibliographies}
-
-\include{chapter/lesson/doc/bibtex}
-
-\chapter{Editors}
-\include{chapter/lesson/doc/emacs}
-
-\chapter{Other Formats}
-\include{chapter/lesson/doc/rst}
-\include{chapter/lesson/doc/markdown}
-\include{chapter/lesson/doc/type}
-
-
-%----------------------------------------------------------------------------------------
-%	PART
-%----------------------------------------------------------------------------------------
-
-\part{Big Data Applications}
-
-\include{chapter/theory/introduction}
-\include{chapter/theory/overview}
-\include{chapter/theory/health}
-\include{chapter/theory/lifestyle}
-\include{chapter/theory/physics}
-\include{chapter/theory/radar}
-\include{chapter/theory/sensor}
-\include{chapter/theory/sport}
-\include{chapter/theory/usecases}
-\include{chapter/theory/web}
-\include{chapter/theory/clustering}
-
-
-%----------------------------------------------------------------------------------------
-%	PART
-%----------------------------------------------------------------------------------------
-
-\part{Developmet}
-
-
-\include{chapter/theory/cloud}
-%\include{chapter/theory/technology}
-%\include{chapter/theory/python-tech}
-%\include{chapter/theory/python}
 
 
 
@@ -156,51 +46,20 @@
 %	CHAPTER
 %----------------------------------------------------------------------------------------
 
-\include{chapter/intro/fall2017}
+\include{section/intro/fall2017}
 
 
 \chapter{Overview}
 
-\include{chapter/intro/overview}
+\include{section/intro/overview}
 
-\include{chapter/intro/organization}
-\include{chapter/intro/git}
-\include{chapter/intro/project}
-\include{chapter/intro/assignments}
+\include{section/intro/organization}
+\include{section/intro/git}
+\include{section/intro/project}
+\include{section/intro/assignments}
 
 \end{comment}
 
-%----------------------------------------------------------------------------------------
-%	PART
-%----------------------------------------------------------------------------------------
-
-\part{Python}
-
-%----------------------------------------------------------------------------------------
-%	CHAPTER 1
-%----------------------------------------------------------------------------------------
-
-\chapterimage{chapter_head_2.png} % Chapter heading image
-
-\chapter{Introduction}
-
-\include{chapter/prg/python-intro}
-
-\chapter{Install}
-
-\include{chapter/prg/python-install}
-
-\include{chapter/prg/python-interactive}
-
-\chapter{Language}
-
-\include{chapter/prg/python}
-
-\chapter{Cloudmesh Command Shell}
-
-\include{chapter/python-cmd5}
-
-\include{chapter/lesson/code}
 
 
 \begin{comment}
@@ -222,33 +81,9 @@
 
 \part{Linux}
 
-\include{chapter/lesson/linux}
-\include{chapter/lesson/virtualbox}
+\include{section/linux}
+\include{section/virtualbox}
 
-
-%----------------------------------------------------------------------------------------
-%	PART
-%----------------------------------------------------------------------------------------
-
-\part{IoT}
-
-%----------------------------------------------------------------------------------------
-%	CHAPTER 1
-%----------------------------------------------------------------------------------------
-
-\chapterimage{chapter_head_2.png} % Chapter heading image
-
-\include{chapter/lesson/iot/introduction}
-\include{chapter/lesson/iot/hardware}
-\include{chapter/lesson/iot/projects}
-\include{chapter/lesson/iot/esp8266}
-\include{chapter/lesson/iot/pi}
-\include{chapter/lesson/iot/dexter}
-\include{chapter/lesson/iot/grovepi}
-\include{chapter/lesson/iot/sensors}
-\include{chapter/lesson/iot/vnc}
-\include{chapter/lesson/iot/turtle}
-\include{chapter/lesson/iot/tools}
 
 
 %----------------------------------------------------------------------------------------
@@ -263,19 +98,19 @@
 
 \chapter{Fundamentals}
 
-\include{chapter/cloud/fundamentals}
+\include{section/cloud/fundamentals}
 
 \chapter{Participation}
 
-\include{chapter/cloud/participation/index}
+\include{section/cloud/participation/index}
 
 \chapter{Assignment}
 
-\include{chapter/cloud/assignment/index}
+\include{section/cloud/assignment/index}
 
 \chapter{Evaluation}
 
-\include{chapter/cloud/evaluation/index}
+\include{section/cloud/evaluation/index}
 
 
 \end{comment}
@@ -287,7 +122,7 @@
 
 \part{Technologies}
 
-\include{chapter/i524/technologies}
+\include{section/i524/technologies}
 %----------------------------------------------------------------------------------------
 %	FORMAT
 %----------------------------------------------------------------------------------------

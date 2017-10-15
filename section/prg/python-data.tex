@@ -1,0 +1,150 @@
+\FILENAME
+
+\chapter{Data Formats}
+
+Obviously when dealing with big data we may not only be dealing with
+data in one format but in many different formats. It is important that
+you will be able to master such formats and simlessly integerat in
+your analysis. Thus we provide some simple examples on which different
+data formats exist and how to use them.
+
+\section{Pickle}
+
+Python pickle allows you to save data in a python native format into a file
+that can later be read in by other programs. However, the data format
+may not be portable among different python versions thus the format is
+often not suitable to store information. INstead we recommend for
+standrad data to use either json or yaml.
+
+\begin{verbatim}
+import pickle
+
+flavor = { "small": 100, 
+           "medium": 1000,
+           "large": 10000 }
+
+pickle.dump( flavor, open( "data.p", "wb" ) )
+
+\end{verbatim}
+
+To read it back in use
+
+\begin{verbatim}
+flavor = pickle.load( open( "data.p", "rb" ) )
+\end{verbatim}
+
+\section{Text Files}
+
+\begin{verbatim}
+content = open(“filename.txt”, “r”).read() 
+\end{verbatim}
+
+\begin{verbatim}
+with open('filename.txt','r') as file:
+    output = file.read()
+\end{verbatim}
+
+To split up the files into an array you can do
+
+\begin{verbatim}
+with open('filename.txt','r') as file:
+    lines = file.read().splitlines()
+\end{verbatim}
+
+
+In case the file is too big you will want to read the file line by
+line:
+
+\begin{verbatim}
+lines = open('filename.txt','r').readlines()
+\end{verbatim}
+
+
+\section{CSV Files}
+
+\begin{verbatim}
+import csv
+with open(‘data.csv’, ‘rb’) as f:
+   contents = csv.reader(f)
+for row in content:
+    print row
+\end{verbatim}
+
+using pandas
+
+\begin{verbatim}
+import pandas as pd
+df = pd.read_csv("example.csv") 
+\end{verbatim}
+
+\section{Excel spread sheets}
+
+\begin{verbatim}
+import pandas as pd
+filename = 'data.xlsx'
+data = pd.ExcelFile(file)
+df = data.parse('Sheet1')
+\end{verbatim}
+
+\section{YAML}
+
+\begin{verbatim}
+import yaml
+with open('data.yaml', 'r') as f:
+    content = yaml.load(f)
+\end{verbatim}
+
+\section{JSON}
+
+\begin{verbatim}
+import json
+with open('strings.json') as f:
+    content = json.load(f)
+\end{verbatim}
+
+\section{XML}
+
+Please contribute a section.
+
+\section{RDF}
+
+\begin{verbatim}
+from rdflib.graph import Graph
+g = Graph()
+g.parse("filename.rdf", format="format")
+for entry in g:
+   print(entry)
+\end{verbatim}
+
+\section{PDF}
+
+The Portable Document Format (PDF) has been made available by Adobe
+Inc. royalty free. This has enabled PDF to become a world wide adopted
+format that also has been standardized in 2008 (ISO/IEC 32000-1:2008,
+\url{https://www.iso.org/standard/51502.html}).  A lot of research is
+published in papers making PDF one of the defacto standards for
+publishing. However, PDF is difficult to parse and is focused on high
+quality pint putput instead of data representation. Nevertheless,
+tools to manipulate PDF exist:
+
+\begin{description}
+\item[PDFMiner] \url{https://pypi.python.org/pypi/pdfminer/} allows
+  the simple translation of PDF into text that than can be further
+  mined. The manual page helps to demonstrate some examples
+  \url{http://euske.github.io/pdfminer/index.html}.
+
+\item[pdf-parser.py]
+  \url{https://blog.didierstevens.com/programs/pdf-tools/} parses pdf
+  documents and identifies some structural elements that can than be
+  further processed.
+
+\end{description}
+
+If you know about other tools, let us know.
+
+
+\section{HTML}
+
+Beautiful soup
+
+please contribute a section
