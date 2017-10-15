@@ -1,0 +1,255 @@
+\FILENAME
+
+\section{Linux Shell}\label{linux-shell}
+
+There are many good tutorials out there that explain why one needs a
+linux shell and not just a GUI. Randomly we picked the firts one that
+came up with a google query (This is not an endorsement for the material
+we point to, but could be a worth while read for someone that has no
+experience in Shell programming:
+
+\begin{itemize}
+\tightlist
+\item
+  \url{http://linuxcommand.org/lc3_learning_the_shell.php}
+\end{itemize}
+
+Certainly you are welcome to use other resources that may suite you
+best. We will however summarize in table form a number of useful
+commands that you may als find in a link to a RefCard.
+
+\begin{itemize}
+\tightlist
+\item
+  \url{http://www.cheat-sheets.org/\#Linux}
+\end{itemize}
+
+\subsection{File commands}\label{file-commands}
+
+Find included a number of commands related to file manipulation.
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+\begin{minipage}[b]{0.26\columnwidth}\raggedright\strut
+Command\strut
+\end{minipage} & \begin{minipage}[b]{0.50\columnwidth}\raggedright\strut
+Description\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
+ls\strut
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\raggedright\strut
+Directory listing\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
+ls -lisa\strut
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\raggedright\strut
+list details\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
+cd \emph{dirname}\strut
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\raggedright\strut
+Change directory to \emph{dirname}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
+mkdir \emph{dirname}\strut
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\raggedright\strut
+create the directory\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
+pwd\strut
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\raggedright\strut
+print working directory\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
+rm \emph{file}\strut
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\raggedright\strut
+remove the file\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
+cp \emph{a} \emph{b}\strut
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\raggedright\strut
+copy file \emph{a} to \emph{b}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
+mv \emph{a} \emph{b}\strut
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\raggedright\strut
+move/rename file \emph{a} to \emph{b}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
+cat \emph{a}\strut
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\raggedright\strut
+print content of file\emph{a}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
+less \emph{a}\strut
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\raggedright\strut
+print paged content of file \emph{a}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
+head -5 \emph{a}\strut
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\raggedright\strut
+Display first 5 lines of file \emph{a}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.26\columnwidth}\raggedright\strut
+tail -5 \emph{a}\strut
+\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\raggedright\strut
+Display last 5 lines of file \emph{a}\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\subsection{Search commands}\label{search-commands}
+
+Find included a number of commands related to seraching.
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+\begin{minipage}[b]{0.46\columnwidth}\raggedright\strut
+Command\strut
+\end{minipage} & \begin{minipage}[b]{0.21\columnwidth}\raggedright\strut
+Description\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.46\columnwidth}\raggedright\strut
+fgrep\strut
+\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\raggedright\strut
+TBD\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.46\columnwidth}\raggedright\strut
+grep -R ``xyz'' .\strut
+\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\raggedright\strut
+TBD\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.48\columnwidth}\raggedright\strut
+find . -name ``*.py'' \textbar{} TBD \textbar{}\strut
+\end{minipage} & \begin{minipage}[t]{0.48\columnwidth}\raggedright\strut
+\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\subsection{Help}\label{help}
+
+Find included a number of commands related to manual pages.
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+\begin{minipage}[b]{0.24\columnwidth}\raggedright\strut
+Command\strut
+\end{minipage} & \begin{minipage}[b]{0.44\columnwidth}\raggedright\strut
+Description\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+man \emph{command}\strut
+\end{minipage} & \begin{minipage}[t]{0.44\columnwidth}\raggedright\strut
+manual page for the \emph{command}\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\subsection{Keyboard Shortcuts}\label{keyboard-shortcuts}
+
+These shortcuts will come in handy. Note that many overlap with emacs
+short cuts.
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+\begin{minipage}[b]{0.17\columnwidth}\raggedright\strut
+Keys\strut
+\end{minipage} & \begin{minipage}[b]{0.77\columnwidth}\raggedright\strut
+Description\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+Up Arrow\strut
+\end{minipage} & \begin{minipage}[t]{0.77\columnwidth}\raggedright\strut
+Show the previous command\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+Ctrl + z\strut
+\end{minipage} & \begin{minipage}[t]{0.77\columnwidth}\raggedright\strut
+Stops the current command\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.48\columnwidth}\raggedright\strut
+\strut
+\end{minipage} & \begin{minipage}[t]{0.48\columnwidth}\raggedright\strut
+resume with fg in the foreground\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.48\columnwidth}\raggedright\strut
+\strut
+\end{minipage} & \begin{minipage}[t]{0.48\columnwidth}\raggedright\strut
+resume with bg in the background\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+Ctrl + c\strut
+\end{minipage} & \begin{minipage}[t]{0.77\columnwidth}\raggedright\strut
+Halts the current command\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+Ctrl + l\strut
+\end{minipage} & \begin{minipage}[t]{0.77\columnwidth}\raggedright\strut
+Clear the screen\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+Ctrl + a\strut
+\end{minipage} & \begin{minipage}[t]{0.77\columnwidth}\raggedright\strut
+Return to the start of the command you're typing\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+Ctrl + e\strut
+\end{minipage} & \begin{minipage}[t]{0.77\columnwidth}\raggedright\strut
+Go to the end of the command you're typing\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+Ctrl + k\strut
+\end{minipage} & \begin{minipage}[t]{0.77\columnwidth}\raggedright\strut
+Cut everything after the cursor to a special clipboard\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+Ctrl + y\strut
+\end{minipage} & \begin{minipage}[t]{0.77\columnwidth}\raggedright\strut
+Paste from the special clipboard\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+Ctrl + d\strut
+\end{minipage} & \begin{minipage}[t]{0.77\columnwidth}\raggedright\strut
+Log out of current session, similar to exit\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\subsection{.bashrc and .bash\_profile}\label{bashrc-and-.bash_profile}
+
+Usage of a particular command and all the attributes associated with it,
+use `man' command. Avoid using `rm -r' command to delete files
+recursively. A good way to avoid accidental deletion is to include the
+following in your .bash\_profile file:
+
+\begin{verbatim}
+alias e=open_emacs
+alias rm='rm -i'
+alias mv='mv -i' 
+alias h='history'
+\end{verbatim}
+
+More Information
+
+\url{https://cloudmesh.github.io/classes/lesson/linux/refcards.html}
+
+\subsection{Exercise}\label{exercise}
+
+\begin{description}
+\item[Linux.1:]
+Familiarize yourself with the commands
+\item[Linux.2:]
+Find more commands that you find useful and add them to this page.
+\item[Linux.3:]
+Use the sort command to sort all lines of a file while removing
+duplicates.
+\end{description}

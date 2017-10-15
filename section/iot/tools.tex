@@ -1,0 +1,249 @@
+\FILENAME
+
+\section{Tools}\label{tools}
+
+\begin{itemize}
+\item
+  \textbf{Terminal}: On OSX, when you navigate to the search
+  magnification glass, you can type in \emph{terminal} to start it. A
+  terminal allows you to execute a number of commands to interact with
+  the computer from a commandline interface, e.g.~the terminal.
+\item
+  \href{https://linuxconfig.org/bash-scripting-tutorial}{Bash} it the
+  command language used in terminal.
+\item
+  \href{https://cloudmesh.github.io/classes/lesson/prg/pyenv.html?highlight=xcode\#install-pyenv-on-osxhttps://cloudmesh.github.io/classes/lesson/prg/pyenv.html?highlight=xcode\#install-pyenv-on-osx}{Pyenv}
+  allows to manage multiple versions of python easily.
+  \href{https://github.com/pyenv/pyenv\#how-it-works}{Pyenv link}
+\item
+  \href{https://cloudmesh.github.io/classes/lesson/prg/pyenv.html?highlight=xcode\#install-pyenv-on-osxhttps://cloudmesh.github.io/classes/lesson/prg/pyenv.html?highlight=xcode\#install-pyenv-on-osx}{XCode}
+  is an integrated development environment for macOS containing a suite
+  of software development tools developed by Apple for developing
+  software for macOS, iOS, watchOS and tvOS.
+\item
+  \href{https://brew.sh}{Homebrew} is a \emph{package manager} for OS X
+  which lets the user \emph{install software} from \emph{UNIX} and
+  \emph{open source software} that is not included in OSX.
+\item
+  \href{https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=mac\&code=PCC}{pyCharm}:
+  is an Integrated Development Environment for Python.
+\item
+  \emph{Matplotlib}: Matplotlib is a libarry that allows us to create
+  nice graphs in python. As we typically install python with virtualenv,
+  we need to configure matplotlib properly to use it. The easiest way to
+  do this is to execute the following commands. After you run them you
+  can use matplotlib.
+
+\begin{verbatim}
+$ pip install numpy
+$ pip install matplotlib
+$ echo "backend : TkAgg" > ~/.matplotlib/matplotlibrc
+\end{verbatim}
+\item
+  \href{https://macdown.uranusjr.com/}{Macdown} a macdown editor for OSX
+\item
+  \href{https://blog.ghost.org/markdown/}{Markdown} (from Markdown)
+\item
+  \href{http://oracc.museum.upenn.edu/doc/help/usingemacs/aquamacs/}{AquaEmacs}
+  (from Aquaemacs)
+\item
+  \href{http://marvelmind.com/}{Marvelmind} (from Marvelmind if you have
+  marvelmind positioning sensors which are optional)
+\item
+  \href{https://www.arduino.cc/en/guide/macOSX}{Arduino} (from Arduino
+  if you like to use their interface to access the esp8266 boards)
+\item
+  \href{https://computers.tutsplus.com/tutorials/40-terminal-tips-and-tricks-you-never-thought-you-needed--mac-51192}{40
+  OSX Terminal Tricks}
+\end{itemize}
+
+\subsection{Markdown}\label{markdown}
+
+MarkDown is a format convention that produces nicely formated text with
+simple ASCII text. Markdown has very good support for editors that
+render the final output in a view window next to the editor pane. Two
+such editors are
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://macdown.uranusjr.com/}{Macdown}: MacDown provides a nice
+  integrated editor that works well.
+\item
+  \href{https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=mac\&code=PCC}{pyCharm}:
+  We have successfully used Vladimir Schhneiders
+  \href{https://plugins.jetbrains.com/plugin/7896-markdown-navigator}{Markdown
+  Navigator plugin}. Once installes you click on a .md file pycharm will
+  automatically ask to install the plugins from Markdown for you.
+\end{itemize}
+
+A detailed set of syntax rules can be found at: \textbf{BUG: LINK TO
+MARKDOWN SYNTAX MISSING}
+
+The following are some basic examples
+
+\begin{itemize}
+\tightlist
+\item
+  To \emph{empazise} a text you use \texttt{*empasize*}
+\item
+  To make text \textbf{bold} use \texttt{**bold**}
+\item
+  To make text \textbf{\emph{bold-and-emphasize}} use
+  \texttt{***bold-and-emphasize***}
+\item
+  To create a hyperlink use \texttt{{[}Google{]}(https://google.com)}
+  which will result in \href{https://google.com}{Google}
+\item
+  To include an image use \texttt{!{[}Bracketed\ Text{]}(link)}
+\end{itemize}
+
+A list can be created by item starting with ``*``, a''-``, or a''+" or a
+number
+
+\begin{verbatim}
+1. one
+2. two
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  one
+\item
+  two
+
+\begin{verbatim}
+* one
+* two
+\end{verbatim}
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  one
+\item
+  two
+\end{itemize}
+
+If you need to indent items underneath already bulleted items, precede
+the indent items with four spaces and they will be nested under the item
+above them.
+
+To qoute textc precede it with a ``\textgreater{}''.
+
+\begin{verbatim}
+> Quote
+\end{verbatim}
+
+\begin{quote}
+Quote
+\end{quote}
+
+Other syntax options can be found in the Format drop-down at the top of
+the screen between View and Plug-ins of macdown.
+
+\subsection{Aquamacs}\label{aquamacs}
+
+There are many different versions of emacs available on OSX. Aquamacs is
+often used as it integrates nicely with the OSX GUI interface.
+
+\begin{itemize}
+\tightlist
+\item
+  \href{http://aquamacs.org/download.shtml}{AquaEmacs}
+\end{itemize}
+
+\emph{Aquamacs} is a program for Mac devices which allows the user to
+edit text, HTML, LaTeX, C++, Java, Python, R, Perl, Ruby, PHP, and more.
+Aquaemacs integrates well with OSX and provides many functions through a
+menu. You will mostly be using the File, Edit, menus or toolbar icons.
+
+Emacs provides convenient keyboard shortcuts, most of which are
+combinations with the Control or Meta key (The Meta key is the ESC key).
+If you accidentally end up doing something wrong simply press
+\texttt{CTRL-g} to get out without issue. Other Keyboard Shortcuts
+include:
+
+\begin{itemize}
+\item
+  \texttt{CTRL-x\ u} or File\textgreater{}Undo will cancel any command
+  that you did not want done. (CHECK)
+\item
+  \texttt{ESC-g} will cancel any command you are in the middle of.
+\item
+  You can break paragraph lines with \texttt{Ctrl-x\ w}, where
+  \texttt{w} will wrap text around word boundaries.
+\item
+  To delete text to the end of the current word, press \texttt{ESC-d}.
+\item
+  to delete the whole line from the position of the cursor to the end,
+  press \texttt{CTRL-k}.
+\end{itemize}
+
+\subsection{Bash}\label{bash}
+
+Bash is preinstalled in OSX. A \emph{bash} script contains
+\emph{commands} in plain text. In order to create a bash script please
+decide for a convenient name. Ltes assume we name our script
+\emph{myscript}. Than you can create and edit such a script with
+
+\begin{verbatim}
+$ touch myscript.sh
+$ emacs myscripts.sh
+\end{verbatim}
+
+Next you need to add the following line to the top ogf the script:
+
+\begin{verbatim}
+!# /bin/bash
+\end{verbatim}
+
+To demonstrate how to continue writing a script we will be using the
+bash \texttt{echo} command that allows you to print text. Lets make the
+second line
+
+\begin{verbatim}
+echo "Hello World"
+\end{verbatim}
+
+You can now save and start executing your script. Click ``File'' and
+then ``Save''. Open Terminal and type in \texttt{cd} followed by the
+name of the folder you put the document in. Now we need to execute the
+script.
+
+\emph{Executing} a Bash script is rather easy. In order to execute a
+script, we need to first execute the \emph{permission set}. In order to
+give Terminal permission to read/execute a Bash script, you have to type
+
+\begin{verbatim}
+chmod u+x myscript.sh
+\end{verbatim}
+
+After the script has been granted permission to be executed, you can
+test it by typing
+
+\begin{verbatim}
+./myscript.sh
+\end{verbatim}
+
+into the terminal. You will see it prints
+
+\begin{verbatim}
+Hello World
+\end{verbatim}
+
+\subsection{Arduino}\label{arduino}
+
+This instalation is optional. In the event that there is a TTY error,
+you will need to install Arduino, since your Mac may be missing some
+drivers that are included in Arduino. Simply go to
+\href{https://www.arduino.cc/en/guide/macOSX}{Arduino} and follow the
+instalation instructions.
+
+\subsection{OSX Terminal}\label{osx-terminal}
+
+\href{https://learn.sparkfun.com/tutorials/terminal-basics/coolterm-windows-mac-linux}{CoolTerm}
+
+download \url{http://freeware.the-meiers.org/CoolTermMac.zip}
