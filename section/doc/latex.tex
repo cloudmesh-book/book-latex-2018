@@ -986,3 +986,40 @@ author= {{National Institute of Health}},
   This is the easiest solution and beats in many cases MSWord as you can
   focus on writing and not on formatting.
 \end{itemize}
+
+\subsection{Colorful Output}
+
+Instead of using pdflatex, you can also install \verb|pydflatex| that
+provides a convenient wrapper and colorizes the output while
+eliminating a lot of warnings that you may initially not want to deal
+with. To install it please use:
+
+\begin{verbatim}
+pip install blessings
+pip install -e "git+https://github.com/olivierverdier/pydflatex#egg=pydflatex"
+\end{verbatim}
+
+You can see the manula page with 
+
+\begin{verbatim}
+pydflatex --help
+
+usage: usage: pydflatex [options] texfile1
+
+Compile a tex file with pdflatex and make the auxiliary files invisible. Note
+that the '.tex' extension may be omitted
+
+positional arguments:
+  tex path            path to tex file
+
+optional arguments:
+  -h, --help          show this help message and exit
+  -o, --open          view the pdf file(s) in a pdf viewer.
+  -k, --continue      continue on error
+  -w, --with-warning  do not suppress common warnings
+  -v, --verbose       Verbose output for debugging
+  -p, --plain         No coloured output
+  -x, --xetex         Use XeLaTeX engine
+  -l, --log-parsing   Only parse log
+  -t, --typesetting   Only typeset
+\end{verbatim}

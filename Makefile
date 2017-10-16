@@ -22,6 +22,14 @@ all:
 	pdflatex $(FLAGS)  $(FILE) x 2
 	pdflatex $(FLAGS)  $(FILE) x 2
 
+simple:
+	pdflatex $(FLAGS) $(FILE)
+#|fgrep -v "Underfull" |fgrep -v "Overfull" | fgrep -v "undefined on input"
+#	makeindex $(FILE).idx -s format/StyleInd.ist
+#	biber $(FILE)
+#	pdflatex $(FLAGS)  $(FILE) x 2
+#	pdflatex $(FLAGS)  $(FILE) x 2
+
 book:
 	python book.py
 
