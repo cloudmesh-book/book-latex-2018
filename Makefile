@@ -2,33 +2,42 @@
 
 FILE=vonLaszewski-bigdata
 #FLAGS=-interaction nonstopmode -halt-on-error -file-line-error
-FLAGS=-interaction nonstopmode  -file-line-error
+#FLAGS=-interaction nonstopmode  -file-line-error
 
+LATEX=pydflatex
 
 single:
 	latexmk -pvc -view=pdf single
 
 s:
-	pdflatex $(FLAGS) single
+	$(LATEX) $(FLAGS) single
 
 
 fast:
-	pdflatex $(FLAGS) $(FILE)
+	$(LATEX) $(FLAGS) $(FILE)
 
 all:
-	pdflatex $(FLAGS) $(FILE)
+	$(LATEX) $(FLAGS) $(FILE)
 	makeindex $(FILE).idx -s format/StyleInd.ist
 	biber $(FILE)
-	pdflatex $(FLAGS)  $(FILE) x 2
-	pdflatex $(FLAGS)  $(FILE) x 2
+	$(LATEX) $(FLAGS)  $(FILE) 
+	$(LATEX) $(FLAGS)  $(FILE) 
+
+
+all2:
+	$(LATEX) $(FLAGS) $(FILE)
+	makeindex $(FILE).idx -s format/StyleInd.ist
+	biber $(FILE)
+	$(LATEX) $(FLAGS)  $(FILE) x 2
+	$(LATEX) $(FLAGS)  $(FILE) x 2
 
 simple:
-	pdflatex $(FLAGS) $(FILE)
+	$(LATEX) $(FLAGS) $(FILE)
 #|fgrep -v "Underfull" |fgrep -v "Overfull" | fgrep -v "undefined on input"
 #	makeindex $(FILE).idx -s format/StyleInd.ist
 #	biber $(FILE)
-#	pdflatex $(FLAGS)  $(FILE) x 2
-#	pdflatex $(FLAGS)  $(FILE) x 2
+#	$(LATEX) $(FLAGS)  $(FILE) x 2
+#	$(LATEX) $(FLAGS)  $(FILE) x 2
 
 book:
 	python book.py
@@ -40,10 +49,10 @@ fetch:
 	cd chapter; make
 
 old:
-	pdflatex $(FILE)
+	$(LATEX) $(FILE)
 	makeindex $(FILE).idx -s StyleInd.ist
 	biber $(FILE)
-	pdflatex $(FILE) x 2
+	$(LATEX) $(FILE) x 2
 
 clean:
 	rm -f *.aux
