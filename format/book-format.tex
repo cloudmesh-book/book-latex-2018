@@ -1,12 +1,4 @@
 
-\usepackage{parskip}
-\usepackage{comment}
-\usepackage{longtable}
-\parindent 0pt
-\setlength{\parskip}{6pt}
-\usepackage{amsmath}
-
-
 %----------------------------------------------------------------------------------------
 % remove pandoc commands
 %----------------------------------------------------------------------------------------
@@ -123,7 +115,8 @@ permissions and limitations under the License.\\ % License information
     \currfilename\end{fileremark}}
 \newcommand{\CHANGE}{\begin{changeremark}THIS WILL CHANGE
     \currfilename\end{changeremark}}
-
+\newcommand{\TODO}[1]{\todo[inline]{#1}}
+\newcommand{\DONE}[1]{DONE: \todo[inline,color=green!30]{#1}}
 
 
 \newcommand{\URL}[1]{
@@ -140,3 +133,4 @@ permissions and limitations under the License.\\ % License information
   {\em  \hfill #3 (#2) \href{#3}{\includegraphics[width=1cm]{images/slide.png}}} \index{Slides!#1!#2 (#3)}
 }
 
+\DefineVerbatimEnvironment{verbatim}{Verbatim}{xleftmargin=.5in}
