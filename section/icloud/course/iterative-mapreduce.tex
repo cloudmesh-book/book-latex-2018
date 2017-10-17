@@ -1,9 +1,8 @@
-\section{How to Run Iterative MapReduce
-(PaaS)}
+\chapter{How to Run Iterative MapReduce (PaaS)}
 
   12 Video lectures (1 hour 37 minutes 32 seconds)
 
-\subsection{MapReduce Refresher}
+\section{MapReduce Refresher}
 
 A review covers cloud computing levels, MapReduce, the course structure,
 etc. This is followed by a look at Google and their initial offering,
@@ -12,7 +11,7 @@ considerably over the course of a single decade.
 
 \video{Cloud}{9:00}{MapReduce Refresher}{https://www.youtube.com/watch?v=0TRTdzgC_N0}
 
-\subsection{Google Search Engine 1}
+\section{Google Search Engine 1}
 
 The Google web server relies on index and doc servers. Index servers
 allow the search engine to not have to depend on manually checking every
@@ -28,7 +27,7 @@ queries.
   \href{https://drive.google.com/open?id=0B88HKpainTSfYWZ0dDlrNThkVms}{PDF
   (Page 15-20)}
 
-\subsection{Google Search Engine 2}
+\section{Google Search Engine 2}
 
 Cache servers greatly enhance the performance of search engines.
 However, this duplication of queries can lead to higher latency.
@@ -47,7 +46,7 @@ initial Google proposal paper follows.
   \href{https://drive.google.com/open?id=0B88HKpainTSfYWZ0dDlrNThkVms}{PDF
   (Page 21-26)}
 
-\subsection{Hadoop PageRank}
+\section{Hadoop PageRank}
 
 PageRank algorithm in Google ranks a webpage's popularity and relevance.
 The PageRank calculation formula is examined. After this comes an
@@ -60,7 +59,7 @@ its application.
   \href{https://drive.google.com/open?id=0B88HKpainTSfWFpEZGxqSWRTYms}{PDF
   (Page 1-9)}
 
-\subsection{Discussions \& ParallelThinking}
+\section{Discussions and ParallelThinking}
 
 Four types of MapReduce: pleasingly parallel, classic, iterative, and
 loosely synchronous. A diagram shows the flow of data in MapReduce.
@@ -74,13 +73,13 @@ a list of related reading. Seven important questions are asked
 concerning parallel computing. 13 `Dwarves' are different methods of
 parallel computing, including MapReduce.
 
-\video{Cloud}{11:12}{Discussions \& ParallelThinking}{https://www.youtube.com/watch?v=ISJp7TUzo1s}
+\video{Cloud}{11:12}{Discussions and ParallelThinking}{https://www.youtube.com/watch?v=ISJp7TUzo1s}
 
   Slide:
   \href{https://drive.google.com/open?id=0B88HKpainTSfWFpEZGxqSWRTYms}{PDF
   (Page 10-21)}
 
-\subsection{Hadoop Extensions}
+\section{Hadoop Extensions}
 
 A model of MapReduce shows its structure. Dryad is Microsoft's version
 of parallel processing. Twister is an iterative map-reduce framework, as
@@ -89,7 +88,7 @@ capabilities is included.
 
 \video{Cloud}{5:37}{Hadoop Extensions}{https://www.youtube.com/watch?v=gS7TImRZZ1g}
 
-\subsection{Iterative MapReduce Models}
+\section{Iterative MapReduce Models}
 
 An introduction to the idea of iterative MapReduce. An overview of other
 MapReduce models follows. Map Only model has parallel map tasks with no
@@ -104,7 +103,7 @@ communication of scientific applications.
   \href{https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms}{PDF
   (Page 1-3)}
 
-\subsection{Parallel Processes}
+\section{Parallel Processes}
 
 CPU performance increases according to Moore's Law can no longer keep up
 with the high volume of data being generated. Multi-core architecture is
@@ -123,7 +122,7 @@ features and programming languages.
   \href{https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms}{PDF
   (Page 4-9)}
 
-\subsection{Static and Variable Data}
+\section{Static and Variable Data}
 
 Iterative MapReduce was introduced to support high performance systems.
 It runs iterations of the map/reduce cycles. Data mining algorithms like
@@ -152,7 +151,7 @@ failed iterations. A list of Twister APIs is given.
   \href{https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms}{PDF
   (Page 10-23)}
 
-\subsection{MapReduce Model Comparison}
+\section{MapReduce Model Comparison}
 
 This video showcases examples of work done comparing Twister results
 with Hadoop, MPI and DryadLINQ. The first is Map Only with CAP3 DNA
@@ -168,7 +167,7 @@ or is close to the competition.
   \href{https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms}{PDF
   (Page 24-33)}
 
-\subsection{Twister K-means}
+\section{Twister K-means}
 
 Twister is applied to K-means Clustering. K-means develops a set number
 of clusters by creating cluster centers (centroids) that encompass the
@@ -189,14 +188,14 @@ MPI.
   \href{https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms}{PDF
   (Page 34-42)}
 
-\subsection{Coding \& Iterative Alternatives}
+\section{Coding and Iterative Alternatives}
 
 A more detailed look is taken at the code used to run Twister K-means.
 MapReduce has many programs designed around its setup, including other
 iterative versions like Haloop, Pregel, and Spark. Twister can extend
 the use of traditional MapReduce to more complex applications.
 
-\video{Cloud}{5:14}{Coding \& Iterative Alternatives}{https://www.youtube.com/watch?v=QTCpiwnwjvo}
+\video{Cloud}{5:14}{Coding and Iterative Alternatives}{https://www.youtube.com/watch?v=QTCpiwnwjvo}
 
   Slide:
   \href{https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms}{PDF

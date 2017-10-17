@@ -1,8 +1,8 @@
-\section{How to Run MapReduce (PaaS)}
+\chapter{How to Run MapReduce (PaaS)}
 
   15 Video lectures (1 hour 58 minutes 4 seconds)
 
-\subsection{Apache Data Analysis OpenStack}
+\section{Apache Data Analysis OpenStack}
 
 The buildup of Big Data has seen the development of new data storage
 systems like MapReduce and Hadoop. Apache's Big Data Stack houses a host
@@ -18,7 +18,7 @@ in-memory support of tasks, data flow separation, and portability.
   Slide:
   \href{https://drive.google.com/open?id=0B88HKpainTSfMnpCelpNQUpNdVE}{PDF}
 
-\subsection{MapReduce}
+\section{MapReduce}
 
 MapReduce was designed by Google to address the problem of large-scale
 data processing. A breakdown of basic MapReduce terms and functions
@@ -32,7 +32,7 @@ basic process of MapReduce is shown.
   \href{https://drive.google.com/open?id=0B88HKpainTSfMnpCelpNQUpNdVE}{PDF
   (Page 6-14)}
 
-\subsection{Hadoop Framework}
+\section{Hadoop Framework}
 
 Hadoop is an open source version of MapReduce designed for broad
 application in terms of code and settings. Storage is done in the Hadoop
@@ -46,7 +46,7 @@ intertwined programs are then explored more fully.
   \href{https://drive.google.com/open?id=0B88HKpainTSfMnpCelpNQUpNdVE}{PDF
   (Page 15-23)}
 
-\subsection{Hadoop Tasks}
+\section{Hadoop Tasks}
 
 The Map stage of MapReduce is shown in greater detail. This process
 starts with Hadoop Distributed File System, which handles the input
@@ -64,7 +64,7 @@ in MapReduce.
   \href{https://drive.google.com/open?id=0B88HKpainTSfMnpCelpNQUpNdVE}{PDF
   (Page 24-35)}
 
-\subsection{Fault Tolerance}
+\section{Fault Tolerance}
 
 Fault tolerance is a natural benefit of MapReduce. The master node pings
 worker nodes regularly to verify they are working, and acts accordingly
@@ -79,7 +79,7 @@ discussion of class assignments.
   \href{https://drive.google.com/open?id=0B88HKpainTSfMnpCelpNQUpNdVE}{PDF
   (Page 36-41)}
 
-\subsection{Programming on a ComputerCluster}
+\section{Programming on a ComputerCluster}
 
 Hadoop is now a large part of Yahoo!'s system setup, as well as handling
 a tremendous variety of data in other areas like medicine and business.
@@ -93,7 +93,7 @@ and machine failures.
   \href{https://drive.google.com/open?id=0B88HKpainTSfd3hkTG4yY2FYUVE}{PDF
   (Page 1-7)}
 
-\subsection{How Hadoop Runs on a MapReduceJob}
+\section{How Hadoop Runs on a MapReduceJob}
 
 A detailed diagram of the MapReduce job framework is given. This
 includes task status updates, shuffling, and writing data to nodes.
@@ -108,7 +108,7 @@ given at the end.
   \href{https://drive.google.com/open?id=0B88HKpainTSfd3hkTG4yY2FYUVE}{PDF
   (Page 8-15)}
 
-\subsection{Literature Review}
+\section{Literature Review}
 
 This video deals primarily with scientific papers written on the topic
 of MapReduce and related programs. There is a certain criteria for
@@ -122,7 +122,7 @@ is followed by MapReduce and BigTable.
   \href{https://drive.google.com/open?id=0B88HKpainTSfd3hkTG4yY2FYUVE}{PDF
   (Page 16-27)}
 
-\subsection{Introduction to BLAST}
+\section{Introduction to BLAST}
 
 There are four types of programming model communication patterns:
 embarrassingly parallel (only map), classic map/reduce, iterative
@@ -137,7 +137,7 @@ Hospital. BLAST uses scores to find similar sequences in databases.
   \href{https://drive.google.com/open?id=0B88HKpainTSfdnFvY1V3dlFTRlE}{PDF
   (Page 1-12)}
 
-\subsection{BLAST Parallelization}
+\section{BLAST Parallelization}
 
 The role of master and worker nodes in BLAST multi-thread usage is
 discussed. BLAST can be parallelized in several ways: multi-thread,
@@ -151,7 +151,7 @@ about articles featuring BLAST is provided at the end.
   \href{https://drive.google.com/open?id=0B88HKpainTSfdnFvY1V3dlFTRlE}{PDF
   (Page 13-19)}
 
-\subsection{SIMD vs MIMD;SPMD vs MPMD}
+\section{SIMD vs MIMD;SPMD vs MPMD}
 
 Four types of parallel models: SISD (traditional PCs), SIMD (GPUs), MISD
 (shuttle flight control computer), MIMD (distributed systems).
@@ -164,7 +164,7 @@ types of SIMD. SPMD and MPMD are two other types of model.
 
 \video{Cloud}{9:42}{SIMD vs MIMD;SPMD vs MPMD}{https://www.youtube.com/watch?v=zHQiR56Zmtc}
 
-\subsection{Data Locality}
+\section{Data Locality}
 
 A brief review is given of previous topics. As opposed to MPI and HPC,
 MapReduce brings the computation to the data, rather than vice-versa.
@@ -180,7 +180,7 @@ available slots in terms of best local composition, not global.
   \href{https://drive.google.com/open?id=0B88HKpainTSfT28zLTdKYWhGdGM}{PDF
   (Page 10-16)}
 
-\subsection{Optimal Data Locality}
+\section{Optimal Data Locality}
 
 Global data optimization can be achieved through a proposed algorithm
 given here. Task, slot, and cost are factors in this algorithm. Network
@@ -197,7 +197,7 @@ outperforming the others.
   \href{https://drive.google.com/open?id=0B88HKpainTSfT28zLTdKYWhGdGM}{PDF
   (Page 17-28)}
 
-\subsection{Task Granularity}
+\section{Task Granularity}
 
 Size of data blocks affects load balancing and overhead. Using Bag of
 Divisible Tasks method, tasks can be split into sub-tasks and
@@ -216,7 +216,7 @@ with either single or multiple jobs.
   \href{https://drive.google.com/open?id=0B88HKpainTSfT28zLTdKYWhGdGM}{PDF
   (Page 29-44)}
 
-\subsection{Resource Utilization and Speculative Execution}
+\section{Resource Utilization and Speculative Execution}
 
 Resource stealing involves appropriating cores that are kept in reserve
 on separate nodes and returning them when the computation is over.
