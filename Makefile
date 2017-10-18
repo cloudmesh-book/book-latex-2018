@@ -26,7 +26,7 @@ skim:
 
 s:
 	$(LATEX) $(FLAGS) single
-
+]
 
 fast:
 	$(LATEX) $(FLAGS) $(FILE)
