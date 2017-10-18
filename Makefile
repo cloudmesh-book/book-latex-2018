@@ -7,6 +7,7 @@ CLOUD=cloud
 
 DEFAULT=$(CLOUD)
 
+#LATEX=pdfflatex
 LATEX=pydflatex
 
 
@@ -26,7 +27,7 @@ skim:
 
 s:
 	$(LATEX) $(FLAGS) single
-]
+
 
 fast:
 	$(LATEX) $(FLAGS) $(FILE)
