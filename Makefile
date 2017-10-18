@@ -3,11 +3,26 @@
 FILE=vonLaszewski-bigdata
 #FLAGS=-interaction nonstopmode -halt-on-error -file-line-error
 #FLAGS=-interaction nonstopmode  -file-line-error
+CLOUD=cloud
+
+DEFAULT=$(CLOUD)
 
 LATEX=pydflatex
 
+
 single:
 	latexmk -pvc -view=pdf single
+
+cloud:
+	$(LATEX) $(FLAGS) $(CLOUD)
+	makeindex $(CLOUD).idx -s format/StyleInd.ist
+	biber $(CLOUD)
+	$(LATEX) $(FLAGS)  $(CLOUD) 
+	$(LATEX) $(FLAGS)  $(CLOUD)
+
+skim:
+	echo $(DEFAULT)
+	open -a /Applications/skim.app $(DEFAULT).pdf
 
 s:
 	$(LATEX) $(FLAGS) single
