@@ -7,6 +7,7 @@ CLOUD=cloud
 
 DEFAULT=$(CLOUD)
 
+#LATEX=pdfflatex
 LATEX=pydflatex
 
 
