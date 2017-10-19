@@ -14,6 +14,9 @@ LATEX=pydflatex
 single:
 	latexmk -pvc -view=pdf single
 
+plain:
+	latexmk -pvc -view=pdf plain
+
 cloud:
 	$(LATEX) $(FLAGS) $(CLOUD)
 	makeindex $(CLOUD).idx -s format/StyleInd.ist
