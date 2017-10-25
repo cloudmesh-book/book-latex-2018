@@ -38,14 +38,15 @@ following:
   \end{description}
 \end{itemize}
 
-Only one submission per group is required for Project 1. It is due time
-at 11:59 pm on Feburary 5.
+Only one submission per group is required for Project 1. 
+\iffalse
+It is due time at 11:59 pm on Feburary 5.
+\fi
 
 \setboolean{@twoside}{false}
 \includepdf[pages=-,pagecommand={},width=\textwidth]{section/icloud/assignment/files/project1.pdf}
 
 \slides{Assignments}{Project 0}{Input Data}{https://drive.google.com/open?id=0B88HKpainTSfcUlZX3BpV05TRDg}
-\end{itemize}
 
 \chapter{Project 2}\label{project-2}
 
@@ -97,10 +98,10 @@ You are required to turn in the following items in a zip file
   and value pairs you receive as input to a map task and what methods
   are responsible for producing these pairs? - Do you think this
   particular implementation will work if the input files are larger than
-  the default HDFS block size? Briefly explain why. {[}Hint: you can
+  the default HDFS block size? Briefly explain why. [Hint: you can
   test what will happen by concatenating the same input file multiple
   times to create a larger input file in the resources/blast\_input
-  folder{]} - If you wanted to extend this program such that all output
+  folder] - If you wanted to extend this program such that all output
   files will be concatenated into a single file, what key and value
   pairs would you need to emit from the map task? Also, how would you
   use these in the reduce that you would need to add?
