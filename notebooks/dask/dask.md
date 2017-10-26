@@ -55,7 +55,7 @@ To showcase some examples we need to create a small dataset. This set is availab
 
 **TODO: URL MISSING**
 
-```python
+```
 python prep.py
 ```
 
@@ -86,7 +86,7 @@ pip install graphviz
 
 THIS IS MORE SIMPLE IF YOU CLONE
 
-```python
+```
 # in directory dask-tutorial/
 # this takes a little while
 %run prep.py
@@ -109,7 +109,7 @@ but a simple example will demonstrate that you can achieve this while programmin
 functions and for-loops.
 
 
-```python
+```
 from dask import delayed
 
 @delayed
@@ -138,21 +138,21 @@ dask.bag = map, filter, toolz + parallel execution
 You can create a Bag from a Python sequence, from files, from data on S3, etc..
 
 
-```python
+```
 # each element is an integer
 import dask.bag as db
 b = db.from_sequence([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 ```
 
 
-```python
+```
 # each element is a text file of JSON lines
 import os
 b = db.read_text(os.path.join('data', 'accounts.*.json.gz'))
 ```
 
 
-```python
+```
 # Requires `s3fs` library
 # each element is a remote CSV text file
 b = db.read_text('s3://dask-data/nyc-taxi/2015/yellow_tripdata_2015-01.csv')
@@ -163,7 +163,7 @@ Bag objects hold the standard functional API found in projects like the Python s
 As with Array and DataFrame objects, operations on Bag objects create new bags. Call the .compute() method to trigger execution.
 
 
-```python
+```
 def is_even(n):
     return n % 2 == 0
 
@@ -173,7 +173,7 @@ c
 ```
 
 
-```python
+```
 # blocking form: wait for completion (which is very fast in this case)
 c.compute()
 ```
@@ -197,7 +197,7 @@ As we saw in Foundations, Dask allows you to simply construct graphs of tasks wi
 Here is a simple program for dask.distributed library:
 
 
-```python
+```
 from dask.distributed import Client
 client = Client('scheduler:port')
 
@@ -219,7 +219,7 @@ These behave like numpy arrays, but break a massive job into tasks that are then
 scheduler uses threading but you can also use multiprocessing or distributed or even serial processing (mainly for debugging). You can tell the dask array how to break the data into chunks for processing.
 
 
-```python
+```
 import dask.array as da
 f = h5py.File('myfile.hdf5')             
 x = da.from_array(f['/big-data'], chunks=(1000, 1000))
@@ -242,7 +242,7 @@ coordinate Pandas operations they usually exhibit similar performance characteri
 **TODO: make filename students.csv**
 
 
-```python
+```
 import pandas as pd                     
 df = pd.read_csv('Student_Name_ID_Email.csv')      
 d = df.groupby(df.HID).Serial_No.mean()
@@ -264,7 +264,7 @@ print(d)
     
 
 
-```python
+```
 import dask.dataframe as dd
 df = dd.read_csv('Student_Name_ID_Email.csv')
 dt = df.groupby(df.HID).Serial_No.mean().compute()
@@ -294,7 +294,7 @@ Efficient storage can dramatically improve performance, particularly when operat
 Decompressing text and parsing CSV files is expensive. One of the most effective strategies with medium data is to use a binary storage format like HDF5. 
 
 
-```python
+```
 # be sure to shut down other kernels running distributed clients
 from dask.distributed import Client
 client = Client()
@@ -303,7 +303,7 @@ client = Client()
 Create data if we don't have any
 
 
-```python
+```
 from prep import accounts_csvs
 accounts_csvs(3, 1000000, 500)
 ```
@@ -316,14 +316,14 @@ CSV and other text-based file formats are the most common storage for data from 
 
 
 
-```python
+```
 import os
 filename = os.path.join('data', 'accounts.*.csv')
 filename
 ```
 
 
-```python
+```
 import dask.dataframe as dd
 df_csv = dd.read_csv(filename)
 df_csv.head()
@@ -337,18 +337,18 @@ Pandas contains a specialized HDF5 format, HDFStore. The dd.DataFrame.to_hdf met
 
 
 
-```python
+```
 target = os.path.join('data', 'accounts.h5')
 target
 ```
 
 
-```python
+```
 %time df_csv.to_hdf(target, '/data')
 ```
 
 
-```python
+```
 df_hdf = dd.read_hdf(target, '/data')
 df_hdf.head()
 ```
