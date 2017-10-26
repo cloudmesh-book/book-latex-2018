@@ -1,5 +1,5 @@
 
-# 1. Dask Overview
+# Dask Overview
 
 Dask is a python-based parallel computing library for analytics. Parallel computing is a type of computation in which many calculations or the execution of processes are carried out simultaneously. Large problems can often be divided into smaller ones, which can then be solved concurrently.
 
@@ -92,7 +92,7 @@ THIS IS MORE SIMPLE IF YOU CLONE
 %run prep.py
 ```
 
-# 2. How Dask Works
+# How Dask Works
 
 As Python programmers, you probably already perform certain tricks to enable computation of larger-than-memory datasets, parallel execution or delayed/background execution. Perhaps with this phrasing, it is not clear what we mean (WHY THAN PHRASE IT SO THAT WE DO NOT KNOW WHAT IT MEANS?), but a few examples should make things clearer. The point of Dask is to make simple things easy and complex things possible! (THIS SEEMS ADVERTISEMENT, BUT NO CONCRETE INFOR OF WHAT IT MEANS)
 
@@ -123,7 +123,7 @@ def add(x, y):
 
 Here we have used the delayed annotation to show that we want these functions to operate lazily - to save the set of inputs and execute only on demand.
 
-# 3. Dask Bag mimics iterators, Toolz, and PySpark
+# Dask Bag mimics iterators, Toolz, and PySpark
 
 Dask-bag excels in processing data that can be represented as a sequence of arbitrary inputs. We'll refer to this as "messy" data, because it can contain complex nested structures, missing fields, mixtures of data types, etc. The functional programming style fits very nicely with standard Python iteration, such as can be found in the itertools module.
 
@@ -180,7 +180,7 @@ c.compute()
 
 For more details on Dask Bag check https://dask.pydata.org/en/latest/bag.html
 
-# 4. Concurrent Features by Dask
+# Concurrency Features
 
 Dask supports a real-time task framework that extends Python’s concurrent.futures interface. This interface is good 
 for arbitrary task scheduling, like dask.delayed, but is immediate rather than lazy, which provides some more flexibility 
@@ -212,7 +212,7 @@ summary.result()
 
 For more details on Concurrent Features by Dask check https://dask.pydata.org/en/latest/futures.html
 
-# 5. Dask Array 
+# Dask Array 
 
 Dask arrays implement a subset of the NumPy interface on large arrays using blocked algorithms and task scheduling.
 These behave like numpy arrays, but break a massive job into tasks that are then executed by a scheduler. The default 
@@ -228,7 +228,7 @@ x - x.mean(axis=1).compute()
 
 For more details on Dask Array check https://dask.pydata.org/en/latest/array.html
 
-# 6. Dask DataFrame
+# Dask DataFrame
 
 A Dask DataFrame is a large parallel dataframe composed of many smaller Pandas dataframes, split along the index. 
 These pandas dataframes may live on disk for larger-than-memory computing on a single machine, or on many different 
@@ -287,7 +287,7 @@ print (dt)
 
 For more details on Dask DataFrame check https://dask.pydata.org/en/latest/dataframe.html
 
-# 7. Dask DataFrame Storage
+# Dask DataFrame Storage
 
 Efficient storage can dramatically improve performance, particularly when operating repeatedly from disk.
 
