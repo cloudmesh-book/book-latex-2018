@@ -27,9 +27,11 @@ The layout of the tutorial will be as follows:
 
 a) Foundations: an explanation of what Dask is, how it works, and how to use lower-level primitives to set up computations.             
              Casual users may wish to skip this section, although we consider it useful knowledge for all users.
+             
 b) Distributed: information on running Dask on the distributed scheduler, which enables scale-up to distributed settings and  
              enhanced monitoring of task operations. The distributed scheduler is now generally the recommended engine for 
              executing task work, even on single workstations or laptops.
+             
 c) Collections: convenient abstractions giving a familiar feel to big data.
        bag: Python iterators with a functional paradigm, such as found in func/iter-tools and toolz - generalize 
             lists/generators to big data; this will seem very familiar to users of PySpark's RDD
@@ -40,18 +42,18 @@ c) Collections: convenient abstractions giving a familiar feel to big data.
 
  From the repo directory
 
+**TODO: URL MISSING**
 
 ```python
 python prep.py
 ```
 
-This will generate all the necessary files for the rest of the tutorials.
+This will generate all the necessary files for our examples. You will need the following libraries:
 
-You will need the following core libraries:
-
+**TODO: WE DO NOT DESCRIBE HOW WE USE CONDA WE USE PIP**
 
 ```python
-conda install numpy pandas h5py Pillow matplotlib scipy toolz pytables fastparquet
+WRONG: conda install numpy pandas h5py Pillow matplotlib scipy toolz pytables fastparquet
 
 ```
 
@@ -59,14 +61,14 @@ And a recently updated version of Dask
 
 
 ```python
-conda install dask distributed
+WRONG: conda install dask distributed
 ```
 
 The following is useful for task graph visualization:
 
 
 ```python
-conda install graphviz
+WRONG: conda install graphviz
 ```
 
 
@@ -82,9 +84,9 @@ As Python programmers, you probably already perform certain tricks to enable com
 
 Aside from the detailed introduction, we can summarize the basics of Dask as follows:
 
-    process data that doesn't fit into memory by breaking it into blocks and specifying task chains
-    parallelize execution of tasks across cores and even nodes of a cluster
-    move computation to the data rather than the other way around, to minimize communication overheads
+* process data that doesn't fit into memory by breaking it into blocks and specifying task chains
+* parallelize execution of tasks across cores and even nodes of a cluster
+* move computation to the data rather than the other way around, to minimize communication overheads
 
 All of this allows you to get the most out of your computation resources, but program in a way that is very familiar: for-loops to build basic tasks, Python iterators, and the Numpy (array) and Pandas (dataframe) functions for multi-dimensional or tabular data, respectively.
 
@@ -173,10 +175,10 @@ found in dask.distributed (which, despite its name, runs very well on a single m
 
 As we saw in Foundations, Dask allows you to simply construct graphs of tasks with dependencies. In fact, if you skip forward, you will find that graphs can also be created automatically for you using functional, Numpy or Pandas syntax on data collections. None of this would be very useful, if there weren't also a way to execute these graphs, in a parallel and memory-aware way. Dask comes with four available schedulers:
 
-    a) dask.threaded.get: a scheduler backed by a thread pool
-    b) dask.multiprocessing.get: a scheduler backed by a process pool
-    c) dask.async.get_sync: a synchronous scheduler, good for debugging
-    d) distributed.Client.get: a distributed scheduler for executing graphs on multiple machines.
+* `dask.threaded.get`: a scheduler backed by a thread pool
+* `dask.multiprocessing.get`: a scheduler backed by a process pool
+* `dask.async.get_sync`: a synchronous scheduler, good for debugging
+* `distributed.Client.get`: a distributed scheduler for executing graphs on multiple machines.
 
 Here is a simple program for dask.distributed library:
 
@@ -220,6 +222,10 @@ machines in a cluster. Dask.dataframe implements a commonly used subset of the P
 operations, reductions, grouping operations, joins, timeseries algorithms, and more. It copies the Pandas interface 
 for these operations exactly and so should be very familiar to Pandas users. Because Dask.dataframe operations merely 
 coordinate Pandas operations they usually exhibit similar performance characteristics as are found in Pandas. To run the following code, save 'Student_Name_ID_Email.csv' file in your machine.
+
+**TODO:USE FAKER TO CREATE THEM**
+
+**TODO: make filename students.csv**
 
 
 ```python
@@ -336,6 +342,8 @@ df_hdf.head()
 For more information of Dask DataFrame Storage, click http://dask.pydata.org/en/latest/dataframe-create.html
 
 # Useful Resources:
+
+**TODO: MAKE THEM CLICKABLE LINKS**
 
 1. https://dask.pydata.org/en/latest/
 2. http://matthewrocklin.com/blog/work/2017/10/16/streaming-dataframes-1
