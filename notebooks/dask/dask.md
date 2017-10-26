@@ -1,52 +1,65 @@
 
 # 1. Dask Overview
 
-Dask is a flexible parallel computing library for analytics. Parallel computing is a type of computation in which many calculations or the execution of processes are carried out simultaneously. Large problems can often be divided into smaller ones, which can then be solved at the same time.
+Dask is a python-based parallel computing library for analytics. Parallel computing is a type of computation in which many calculations or the execution of processes are carried out simultaneously. Large problems can often be divided into smaller ones, which can then be solved concurrently.
 
 Dask is composed of two components:
 
-1. Dynamic task scheduling optimized for computation. This is similar to Airflow, Luigi, Celery, or Make, 
-   but optimized for interactive computational workloads.
-2. “Big Data” collections like parallel arrays, dataframes, and lists that extend common interfaces like NumPy, 
-   Pandas, or Python iterators to larger-than-memory or distributed environments. These parallel collections run 
-   on top of the dynamic task schedulers.
+1. *Dynamic task scheduling optimized for computation.* This is similar to Airflow, Luigi, Celery, or Make, but optimized for interactive computational workloads.
+2. *Big Data collections* like parallel arrays, dataframes, and lists that extend common interfaces like NumPy, Pandas, or Python iterators to larger-than-memory or distributed environments. These parallel collections run on top of the dynamic task schedulers.
 
 
 Dask emphasizes the following virtues:
 
-1. Familiar: Provides parallelized NumPy array and Pandas DataFrame objects.
-2. Flexible: Provides a task scheduling interface for more custom workloads and integration with other projects.
-3. Native: Enables distributed computing in Pure Python with access to the PyData stack.
-4. Fast: Operates with low overhead, low latency, and minimal serialization necessary for fast numerical algorithms
-5. Scales up: Runs resiliently on clusters with 1000s of cores
-6. Scales down: Trivial to set up and run on a laptop in a single process
-7. Responsive: Designed with interactive computing in mind it provides rapid feedback and diagnostics to aid humans
+* *Familiar*: Provides parallelized NumPy array and Pandas DataFrame objects.
+* *Flexible*: Provides a task scheduling interface for more custom workloads and integration with other projects.
+* *Native*: Enables distributed computing in Pure Python with access to the PyData stack.
+* *Fast*: Operates with low overhead, low latency, and minimal serialization necessary for fast numerical algorithms
+* *Scales up*: Runs resiliently on clusters with 1000s of cores
+* *Scales down*: Trivial to set up and run on a laptop in a single process
+* *Responsive*: Designed with interactive computing in mind it provides rapid feedback and diagnostics to aid humans
 
 
-The layout of the tutorial will be as follows:
+The section is structured in a number of subsections addressing the following topics:
 
-a) Foundations: an explanation of what Dask is, how it works, and how to use lower-level primitives to set up computations.             
-             Casual users may wish to skip this section, although we consider it useful knowledge for all users.
+Foundations: 
+
+* an explanation of what Dask is, how it works, and how to use lower level primitives to set up computations. Casual users may wish to skip this section, although we consider it useful knowledge for all users.
              
-b) Distributed: information on running Dask on the distributed scheduler, which enables scale-up to distributed settings and  
-             enhanced monitoring of task operations. The distributed scheduler is now generally the recommended engine for 
-             executing task work, even on single workstations or laptops.
+Distributed Features: 
+
+* information on running Dask on the distributed scheduler, which enables scale-up to distributed settings and  enhanced monitoring of task operations. The distributed scheduler is now generally the recommended engine for executing task work, even on single workstations or laptops.
              
-c) Collections: convenient abstractions giving a familiar feel to big data.
-       bag: Python iterators with a functional paradigm, such as found in func/iter-tools and toolz - generalize 
-            lists/generators to big data; this will seem very familiar to users of PySpark's RDD
-     array: massive multi-dimensional numerical data, with Numpy functionality
-     dataframes: massive tabular data, with Pandas functionality
+Collections: 
 
-## Prepare artificial data
+* convenient abstractions giving a familiar feel to big data.
+       
+       
+Bags: 
 
- From the repo directory
+* Python iterators with a functional paradigm, such as found in func/iter-tools and toolz - generalize lists/generators to big data; this will seem very familiar to users of PySpark's RDD
+
+Array: 
+
+* massive multi-dimensional numerical data, with Numpy functionality
+
+Dataframe: 
+
+* massive tabular data, with Pandas functionality
+
+## Prepare example data
+
+To showcase some examples we need to create a small dataset. This set is available in the repository at the following URL:
+
+* TBD
 
 **TODO: URL MISSING**
 
 ```python
 python prep.py
 ```
+
+TODO: CALL IT generate-data.py
 
 This will generate all the necessary files for our examples. You will need the following libraries:
 
