@@ -61,29 +61,30 @@ python prep.py
 
 TODO: CALL IT generate-data.py
 
-This will generate all the necessary files for our examples. You will need the following libraries:
+This will generate our example data set. You will need the following libraries:
 
 **TODO: WE DO NOT DESCRIBE HOW WE USE CONDA WE USE PIP**
 
-```python
-WRONG: conda install numpy pandas h5py Pillow matplotlib scipy toolz pytables fastparquet
+CLONE THE DIR GO TO DIR HAVE requirements.txt
+
+simply do pip install -r requirements.txt
 
 ```
-
-And a recently updated version of Dask
-
-
-```python
-WRONG: conda install dask distributed
+pip install numpy 
+pip install pandas 
+pip install h5py 
+pip install Pillow 
+pip install matplotlib 
+pip install scipy 
+pip install toolz 
+pip install pytables 
+pip install fastparquet
+pip install dask 
+pip install distributed
+pip install graphviz
 ```
 
-The following is useful for task graph visualization:
-
-
-```python
-WRONG: conda install graphviz
-```
-
+THIS IS MORE SIMPLE IF YOU CLONE
 
 ```python
 # in directory dask-tutorial/
@@ -93,17 +94,17 @@ WRONG: conda install graphviz
 
 # 2. How Dask Works
 
-As Python programmers, you probably already perform certain tricks to enable computation of larger-than-memory datasets, parallel execution or delayed/background execution. Perhaps with this phrasing, it is not clear what we mean, but a few examples should make things clearer. The point of Dask is to make simple things easy and complex things possible!
+As Python programmers, you probably already perform certain tricks to enable computation of larger-than-memory datasets, parallel execution or delayed/background execution. Perhaps with this phrasing, it is not clear what we mean (WHY THAN PHRASE IT SO THAT WE DO NOT KNOW WHAT IT MEANS?), but a few examples should make things clearer. The point of Dask is to make simple things easy and complex things possible! (THIS SEEMS ADVERTISEMENT, BUT NO CONCRETE INFOR OF WHAT IT MEANS)
 
-Aside from the detailed introduction, we can summarize the basics of Dask as follows:
+Aside from the detailed introduction (CITATION MISSING?), we can summarize the basics of Dask as follows:
 
-* process data that doesn't fit into memory by breaking it into blocks and specifying task chains
+* process data that does not fit into memory by breaking it into blocks and specifying task chains
 * parallelize execution of tasks across cores and even nodes of a cluster
 * move computation to the data rather than the other way around, to minimize communication overheads
 
 All of this allows you to get the most out of your computation resources, but program in a way that is very familiar: for-loops to build basic tasks, Python iterators, and the Numpy (array) and Pandas (dataframe) functions for multi-dimensional or tabular data, respectively.
 
-Dask allows you to construct a prescription for the calculation you want to carry out. That may sound strange, 
+Dask allows you to construct a prescription for the calculation you want to carry out. That may sound strange, (WHY THAN WRITE IT IF IT IS STRANGE CAN WE NOT DESCRIBE IT IN A NON STRANGE WAY?)
 but a simple example will demonstrate that you can achieve this while programming with perfectly ordinary Python 
 functions and for-loops.
 
