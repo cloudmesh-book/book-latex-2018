@@ -1,11 +1,11 @@
-First Name,Last Name,Email Address,HID,Serial_No
-Monica,Chen,huiychen@indiana.edu,HID101,1
-Arif,Dianprakasa,arifdian@umail.iu.edu,HID102,2
-Gabriel,Jones,gabejone@indiana.edu,HID104,3
-Josh,Lipe-Melton,jlipemel@umail.iu.edu,HID105,4
-Qiaoyi,Liu,ql30@umail.iu.edu,HID106,5
-Juan,Ni,nijuan@umail.iu.edu,HID107,6
-Shiqi,Shen,shiqshen@umail.iu.edu,HID109,7
-Derek,Lewis,derlewis@iu.edu,HID111,8
-Arnav,Arnav,aarnav@iu.edu,HID201,9
-Himani,Bhatt,himbhatt@iu.edu,HID202,10
+First Name,Last Name,Email Address,ID,Serial_No
+M,C,email,101,1
+A,D,email,102,2
+G,J,email,104,3
+J,L,email,105,4
+Q,L,email,106,5
+J,N,email,107,6
+S,S,email,109,7
+D,L,email,111,8
+A,A,email,201,9
+H,B,email,202,10
