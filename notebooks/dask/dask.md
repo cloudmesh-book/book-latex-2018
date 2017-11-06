@@ -199,7 +199,7 @@ d = df.groupby(df.HID).Serial_No.mean()
 print(d)
 ```
 
-    HID
+    ID
     101     1
     102     2
     104     3
@@ -221,7 +221,7 @@ dt = df.groupby(df.HID).Serial_No.mean().compute()
 print (dt)
 ```
 
-    HID
+    ID
     101     1.0
     102     2.0
     104     3.0
