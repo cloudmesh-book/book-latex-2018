@@ -47,66 +47,20 @@ Dataframe:
 
 * massive tabular data, with Pandas functionality
 
-## Prepare example data
-
-To showcase some examples we need to create a small dataset. This set is available in the repository at the following URL:
-
-* TBD
-
-**TODO: URL MISSING**
-
-```
-python prep.py
-```
-
-TODO: CALL IT generate-data.py
-
-This will generate our example data set. You will need the following libraries:
-
-**TODO: WE DO NOT DESCRIBE HOW WE USE CONDA WE USE PIP**
-
-CLONE THE DIR GO TO DIR HAVE requirements.txt
-
-simply do pip install -r requirements.txt
-
-```
-pip install numpy 
-pip install pandas 
-pip install h5py 
-pip install Pillow 
-pip install matplotlib 
-pip install scipy 
-pip install toolz 
-pip install pytables 
-pip install fastparquet
-pip install dask 
-pip install distributed
-pip install graphviz
-```
-
-THIS IS MORE SIMPLE IF YOU CLONE
-
-```
-# in directory dask-tutorial/
-# this takes a little while
-%run prep.py
-```
 
 # How Dask Works
 
-As Python programmers, you probably already perform certain tricks to enable computation of larger-than-memory datasets, parallel execution or delayed/background execution. Perhaps with this phrasing, it is not clear what we mean (WHY THAN PHRASE IT SO THAT WE DO NOT KNOW WHAT IT MEANS?), but a few examples should make things clearer. The point of Dask is to make simple things easy and complex things possible! (THIS SEEMS ADVERTISEMENT, BUT NO CONCRETE INFOR OF WHAT IT MEANS)
+Dask is computation tool for larger-than-memory datasets, parallel execution or delayed/background execution. 
 
-Aside from the detailed introduction (CITATION MISSING?), we can summarize the basics of Dask as follows:
+We can summarize the basics of Dask as follows:
 
 * process data that does not fit into memory by breaking it into blocks and specifying task chains
 * parallelize execution of tasks across cores and even nodes of a cluster
 * move computation to the data rather than the other way around, to minimize communication overheads
 
-All of this allows you to get the most out of your computation resources, but program in a way that is very familiar: for-loops to build basic tasks, Python iterators, and the Numpy (array) and Pandas (dataframe) functions for multi-dimensional or tabular data, respectively.
+We use for-loops to build basic tasks, Python iterators, and the Numpy (array) and Pandas (dataframe) functions for multi-dimensional or tabular data, respectively.
 
-Dask allows you to construct a prescription for the calculation you want to carry out. That may sound strange, (WHY THAN WRITE IT IF IT IS STRANGE CAN WE NOT DESCRIBE IT IN A NON STRANGE WAY?)
-but a simple example will demonstrate that you can achieve this while programming with perfectly ordinary Python 
-functions and for-loops.
+Dask allows us to construct a prescription for the calculation we want to carry out. A module named Dask.delayed lets us parallelize custom code. It is useful whenever our problem doesn’t quite fit a high-level parallel object like dask.array or dask.dataframe but could still benefit from parallelism. Dask.delayed works by delaying our function evaluations and putting them into a dask graph. Here is a small example:
 
 
 ```
@@ -123,7 +77,7 @@ def add(x, y):
 
 Here we have used the delayed annotation to show that we want these functions to operate lazily - to save the set of inputs and execute only on demand.
 
-# Dask Bag mimics iterators, Toolz, and PySpark
+# Dask Bag 
 
 Dask-bag excels in processing data that can be represented as a sequence of arbitrary inputs. We'll refer to this as "messy" data, because it can contain complex nested structures, missing fields, mixtures of data types, etc. The functional programming style fits very nicely with standard Python iteration, such as can be found in the itertools module.
 
@@ -187,7 +141,7 @@ for arbitrary task scheduling, like dask.delayed, but is immediate rather than l
 in situations where the computations may evolve over time. These features depend on the second generation task scheduler 
 found in dask.distributed (which, despite its name, runs very well on a single machine).
 
-As we saw in Foundations, Dask allows you to simply construct graphs of tasks with dependencies. In fact, if you skip forward, you will find that graphs can also be created automatically for you using functional, Numpy or Pandas syntax on data collections. None of this would be very useful, if there weren't also a way to execute these graphs, in a parallel and memory-aware way. Dask comes with four available schedulers:
+Dask allows us to simply construct graphs of tasks with dependencies. We can find that graphs can also be created automatically for us using functional, Numpy or Pandas syntax on data collections. None of this would be very useful, if there weren't also a way to execute these graphs, in a parallel and memory-aware way. Dask comes with four available schedulers:
 
 * `dask.threaded.get`: a scheduler backed by a thread pool
 * `dask.multiprocessing.get`: a scheduler backed by a process pool
@@ -235,53 +189,49 @@ These pandas dataframes may live on disk for larger-than-memory computing on a s
 machines in a cluster. Dask.dataframe implements a commonly used subset of the Pandas interface including elementwise 
 operations, reductions, grouping operations, joins, timeseries algorithms, and more. It copies the Pandas interface 
 for these operations exactly and so should be very familiar to Pandas users. Because Dask.dataframe operations merely 
-coordinate Pandas operations they usually exhibit similar performance characteristics as are found in Pandas. To run the following code, save 'Student_Name_ID_Email.csv' file in your machine.
-
-**TODO:USE FAKER TO CREATE THEM**
-
-**TODO: make filename students.csv**
+coordinate Pandas operations they usually exhibit similar performance characteristics as are found in Pandas. To run the following code, save 'student.csv' file in your machine.
 
 
 ```
 import pandas as pd                     
-df = pd.read_csv('Student_Name_ID_Email.csv')      
+df = pd.read_csv('student.csv')      
 d = df.groupby(df.HID).Serial_No.mean()
 print(d)
 ```
 
     HID
-    HID101     1
-    HID102     2
-    HID104     3
-    HID105     4
-    HID106     5
-    HID107     6
-    HID109     7
-    HID111     8
-    HID201     9
-    HID202    10
+    101     1
+    102     2
+    104     3
+    105     4
+    106     5
+    107     6
+    109     7
+    111     8
+    201     9
+    202    10
     Name: Serial_No, dtype: int64
     
 
 
 ```
 import dask.dataframe as dd
-df = dd.read_csv('Student_Name_ID_Email.csv')
+df = dd.read_csv('student.csv')
 dt = df.groupby(df.HID).Serial_No.mean().compute()
 print (dt)
 ```
 
     HID
-    HID101     1.0
-    HID102     2.0
-    HID104     3.0
-    HID105     4.0
-    HID106     5.0
-    HID107     6.0
-    HID109     7.0
-    HID111     8.0
-    HID201     9.0
-    HID202    10.0
+    101     1.0
+    102     2.0
+    104     3.0
+    105     4.0
+    106     5.0
+    107     6.0
+    109     7.0
+    111     8.0
+    201     9.0
+    202    10.0
     Name: Serial_No, dtype: float64
     
 
