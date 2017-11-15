@@ -4,71 +4,11 @@
 
 \section{General}\label{general}
 
-\subsection{What is Chameleon?}\label{what-is-chameleon}
 
-Chameleon is an experimental testbed for Computer Science funded by the
-NSF FutureCloud program. Chameleon is built over two sites, University
-of Chicago and TACC, offering a total of over 550 nodes and 5 PB of
-space in twelve
-\href{https://www.chameleoncloud.org/about/hardware-description/}{Standard
-Cloud Unit (SCU) racks}. To effectively support Computer Science
-experiments Chameleon offers bare metal reconfigurability on most of the
-hardware. To provide easy access to educational users, three SCUs at
-TACC (a quarter of the testbed) are configured with OpenStack KVM. You
-can read more about
-Chameleon~\href{https://www.chameleoncloud.org/about/chameleon/}{here}.
-
-\subsection{What does CHI mean?}\label{what-does-chi-mean}
-
-CHI stands for Chameleon Infrastructure, and refers to the technology
-powering our bare-metal clouds: a combination of software components
-from OpenStack, Grid'5000, and our own~developments.
-
-\subsection{Who can use Chameleon?}\label{who-can-use-chameleon}
-
-Chameleon is broadly available to members of the US Computer Science
-research community and its international collaborators working in the
-open community on cloud research. ~By emphasizing ``open'' we mean that
-the expectation is that any research performed on Chameleon will result
-in publication in a broadly available journal or conference.~
 
 \subsection{What are the best practices for Chameleon
 usage?}\label{what-are-the-best-practices-for-chameleon-usage}
 
-In order to promote fairness to all users, we have~the following set of
-Best Practices for using Chameleon~bare metal partitions:
-
-\begin{itemize}
-\tightlist
-\item
-  ~Think Small for Development: If you are just developing or
-  prototyping a system, and not yet running experiments at scale, use
-  only as many nodes as you actually need (e.g., many projects can be
-  developed and tested on 3-4 nodes), and try to take short reservations
-  (e.g., for a work day or two when you actually develop). Always
-  release the reservation if you will not use the testbed for an
-  extended period of time (e.g., when you leave for the weekend or
-  holidays).~
-\item
-  Automation is your Friend: You can always snapshot your work/images
-  between sessions using the
-  \href{https://www.chameleoncloud.org/docs/user-guides/ironic/\#snapshotting_an_instance}{snapshotting
-  instructions}~to simplify the redeployment of your environment during
-  the next work session. You can also use scripting and environment
-  customization to make it easier to redeploy images. An additional
-  benefit of automation is that it makes it easier for you to reproduce
-  your work and eventually~share it~with colleagues within your lab and
-  other collaborators.
-\item
-  Think Big for Experimentation: Once you are ready to experiment you
-  will want to test your experimental setup on increasingly larger
-  scales. This is possible by taking an advance reservation for many
-  resources for a relatively short time. The more resources you need,
-  the more likely it is that you will need to run experiments at a less
-  attractive time (e.g., during the weekend) --- here's where automation
-  will also help. In justified cases, we will support reserving even the
-  whole bare metal testbed.
-\end{itemize}
 
 \subsection{Are there any limitations on Chameleon
 usage?}\label{are-there-any-limitations-on-chameleon-usage}
@@ -77,7 +17,6 @@ We have two types of limitations, introduced to promote fair resource
 usage to all:~
 
 \begin{itemize}
-\tightlist
 \item
   Allocation:~Chameleon projects are limited to a per-project allocation
   currently set to~20,000 service units for 6 months. Allocations can be
@@ -132,74 +71,6 @@ GENI Experimenter Portal upon successful login.
 
 \section{Project and Allocation
 Management}\label{project-and-allocation-management}
-
-\subsection{How do I apply for a Chameleon
-project?}\label{how-do-i-apply-for-a-chameleon-project}
-
-Project applications may be filled out
-\href{https://www.chameleoncloud.org/user/projects/new/}{here}. If you
-want to apply for a project you have to be
-\href{https://www.chameleoncloud.org/docs/getting-started/pi-eligibility/}{PI
-eligible}; if you fulfill the PI eligibility criteria but did not
-request PI eligibility when you applied for a Chameleon account you can
-request it by modifying options in your profile. An application for a
-project has to include a description of the research or education
-project to be performed using the testbed and the type of resources
-needed (see below). Each Chameleon project is awarded an allocation of
-service units for a specific amount of time.~Users can expect a project
-decision within one~business day.
-
-\subsection{Who is eligible to be Chameleon PI and how do I make sure
-that my PI status is reflected in my
-profile?}\label{who-is-eligible-to-be-chameleon-pi-and-how-do-i-make-sure-that-my-pi-status-is-reflected-in-my-profile}
-
-Chameleon PIs carry significant responsibility for the users on their
-projects; we therefore limit PI eligibility to individual from the
-following groups:
-
-\begin{itemize}
-\tightlist
-\item
-  Academic institutions: This eligibility criterion coves research
-  scientists or faculty members in those institutions
-\item
-  Federal agencies such as national labs, R\&D centers, and institutes:
-  Research staff employed by federal agencies or non-NSF Federally
-  Funded R\&D Centers (FFRDCs) are eligible to apply for an allocation.
-\item
-  Independent museums, observatories, libraries, research laboratories,
-  professional societies and similar organizations in the United States
-  that are directly associated with educational or research activities
-  are eligible.
-\item
-  International research institutions: to promote intellectual exchange
-  and federation with institutions abroad we support a limited number of
-  international PIs with ongoing, active collaborations with scientists
-  in the US.~
-\item
-  NSF Graduate Student Fellows: While in most cases, a graduate student
-  is ineligible to be PI of an allocation request, an exception is made
-  for NSF Graduate Student Fellows. Recipients of these NSF awards can
-  submit requests for Startup allocations as long as they include
-  supporting documentation (grant number or an award letter) as part of
-  the request submission.
-\item
-  State educational offices or organizations and local school districts
-  may submit allocation requests intended to broaden the impact,
-  accelerate the pace, and increase the effectiveness of improvements in
-  science, mathematics, and engineering education in both K-12 and
-  post-secondary levels. A teacher or educator at an accredited public
-  or private K-12 school is eligible to apply for an allocation as PI.
-\end{itemize}
-
-We do occasionally provide case-by-case exceptions to this guideline in
-well-justified cases.~
-
-If are eligible to be PI, in order to apply for a project ~you need to
-make sure that your Chameleon profile reflects your status. You can do
-so on the~\href{https://www.chameleoncloud.org/user/profile/edit}{Edit
-Account Profile page}. Simply check the ``Request PI Eligibility''
-checkbox and save you Account Profile.
 
 \subsection{My PI/Professor/Colleague already has a Chameleon Project.
 How do I get added as a user on the
@@ -289,57 +160,6 @@ As our understanding of user need grows we expect the Chameleon
 allocation model to evolve towards closer reflection of those needs in
 the form of more differentiated allocations that will allow us to give
 larger allocations to users for longer time.
-
-\subsection{What is the format of an allocation
-proposal?}\label{what-is-the-format-of-an-allocation-proposal}
-
-A Chameleon Allocation request consists of the following components:
-
-\begin{itemize}
-\tightlist
-\item
-  Project Title
-\item
-  Project abstract describing the proposed experiments including the
-  type of resources needed; this part is required and may be published
-  on Chameleon website (\textasciitilde{}200 words)
-\item
-  Supplemental details; this is an optional extension of the project
-  abstract, potentially including details that the PI does not wish to
-  publish such as e.g., sources of funding that support the proposed
-  research (500 words maximum)
-\end{itemize}
-
-\subsection{According to what criteria are project proposals
-reviewed?}\label{according-to-what-criteria-are-project-proposals-reviewed}
-
-Requests for projects and allocations are currently reviewed for merit
-by project operators with a future move towards review by independent
-review board composed of Chameleon Science Advisory Board members. The
-following criteria are used:
-
-\begin{itemize}
-\tightlist
-\item
-  PI eligibility
-\item
-  Relevance of the proposed experiment to cloud computing research;
-  scientific merit and significance of the proposed experiments
-\item
-  Demonstrated need for Chameleon resources, methodology appropriate to
-  the use of the Chameleon resource, justification of the requested
-  allocation
-\item
-  Success of prior or other existing allocations (for renewals) in terms
-  of published research results and new funding.
-\item
-  Technical feasibility (i.e, can the project succeed in the Chameleon
-  environment?)
-\item
-  Any funded support for the project (optional, but we want to make
-  certain that we give allocations to NSF CISE-supported cloud computing
-  research!).
-\end{itemize}
 
 \section{Account Management
 Troubleshooting}\label{account-management-troubleshooting}
