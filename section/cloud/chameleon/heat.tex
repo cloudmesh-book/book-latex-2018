@@ -1,3 +1,5 @@
+\FILENAME
+
 \chapter{HEAT}\label{complex-appliances}
 
 \section{What are complex~appliances?}\label{what-are-complexappliances}
@@ -67,9 +69,9 @@ to deploy such as OpenStack or MPI or even more advanced deployments
 such as efficient SR-IOV enabled MPI in KVM virtual machines. We also
 provide common building blocks for cluster architectures, such as an NFS
 share. Complex appliances are identified by a badge in their top-right
-corner representing a group of machines, as in the screenshot below:
+corner representing a group of machines, as shown in the screenshot:
 
-\includegraphics[width=\columnwidth]{images/chameleon/NFS.png}
+\includegraphics[width=0.5\columnwidth]{images/chameleon/NFS.png}
 
 \section{How do I deploy a complex
 appliance?}\label{how-do-i-deploy-a-complex-appliance}
@@ -251,6 +253,7 @@ Outputs are declared similarly to parameters: they each have a name, an
 optional~description, and a value. They allow to return information from
 the~stack to the user.
 
+\begin{footnotesize}
 \begin{verbatim}
 # This describes what is deployed by this template.
 description: NFS server and clients deployed with Heat on Chameleon
@@ -342,6 +345,7 @@ outputs:
     description: Private IP addresses of the NFS clients
     value: { get_attr: [nfs_clients, first_address] }
 \end{verbatim}
+\end{footnotesize}
 
 \section{Customizing an existing
 template}\label{customizing-an-existing-template}
@@ -380,6 +384,7 @@ it has four resources defined:
 The nfs\_client instance mounts the NFS directory shared by the
 nfs\_server instance, just like in our earlier example.
 
+\begin{footnotesize}
 \begin{verbatim}
 # This describes what is deployed by this template.
 description: NFS server and client deployed with Heat on Chameleon
@@ -452,6 +457,7 @@ parameters:
     constraints:
     - custom_constraint: blazar.reservation
 \end{verbatim}
+\end{footnotesize}
 
 Download this template from the
 \href{https://www.chameleoncloud.org/appliances/26/}{Hello World complex
@@ -463,6 +469,7 @@ new resource called another\_nfs\_client. Add the following text to your
 template inside the resources section.~Make sure to respect the level of
 indentation, which is important in YAML.
 
+\begin{footnotesize}
 \begin{verbatim}
   another_nfs_client:
     type: OS::Nova::Server
@@ -483,6 +490,7 @@ indentation, which is important in YAML.
           params:
             $nfs_server_ip: { get_attr: [nfs_server, first_address] }
 \end{verbatim}
+\end{footnotesize}
 
 Now, launch a new~stack~with this~template. Since the customized
 template is only on your computer and cannot be addressed by a URL, use
@@ -506,6 +514,7 @@ be created any~number of times.
 Remove the nfs\_client and another\_client resources from your
 customized template, and replace them with the following:
 
+\begin{footnotesize}
 \begin{verbatim}
   nfs_clients:
     type: OS::Heat::ResourceGroup
@@ -530,6 +539,7 @@ customized template, and replace them with the following:
               params:
                 $nfs_server_ip: { get_attr: [nfs_server, first_address] }
 \end{verbatim}
+\end{footnotesize}
 
 A resource group is configured with a properties field, containing the
 definition of the resource to launch (\texttt{resource\_def}) and the
@@ -549,12 +559,14 @@ NFS server. We define an outputs section, and one output with the name
 gathered using the \texttt{get\_attr} function which obtains the IP
 address of the server instance.
 
+\begin{footnotesize}
 \begin{verbatim}
 outputs:
   server_ip:
     description: Public IP address of the NFS server
     value: { get_attr: [nfs_server_floating_ip, ip] }
 \end{verbatim}
+\end{footnotesize}
 
 You can get outputs in the ``Overview'' tab of the Stack~Details page.
 If you want to use~the command line, install \texttt{python-heatclient}
@@ -566,21 +578,24 @@ Multiple outputs can be defined in the outputs section. Each of them
 needs to have a unique name. For example, we can add another output to
 list the private IPs assigned to client instances:
 
+\begin{footnotesize}
 \begin{verbatim}
   client_ips:
     description: Private IP addresses of the NFS clients
     value: { get_attr: [nfs_clients, first_address] }
 \end{verbatim}
+\end{footnotesize}
 
 The image below shows the resulting outputs as viewed from the web
 interface. Of course IP addresses will be specific to each deployment.
 
-\includegraphics[width=\columnwidth]{images/chameleon/Outputs.png}
+\includegraphics[width=0.5\columnwidth]{images/chameleon/Outputs.png}
 
 Finally, we can add a new parameter to replace the hardcoded number of
 client instances by a value passed to the template. Add the following
 text to the parameters section:
 
+\begin{footnotesize}
 \begin{verbatim}
   nfs_client_count:
     type: number
@@ -590,6 +605,7 @@ text to the parameters section:
       - range: { min: 1 }
         description: There must be at least one client.
 \end{verbatim}
+\end{footnotesize}
 
 Inside the resource group definition,
 change~\texttt{count:\ 2}~to~\texttt{count:\ \{\ get\_param:\ nfs\_client\_count\ \}}~to
@@ -638,18 +654,22 @@ access to all supported features:
 While not mandatory, it is good practice to describe what ~is deployed
 and configured by your template. It can be on a single line:
 
+\begin{footnotesize}
 \begin{verbatim}
 description: This describes what this Heat template deploys on Chameleon.
 \end{verbatim}
+\end{footnotesize}
 
 If a longer description is needed, you can provide multi-line text in
 YAML, for example:
 
+\begin{footnotesize}
 \begin{verbatim}
 description: >
   This describes what this Heat
   template deploys on Chameleon.
 \end{verbatim}
+\end{footnotesize}
 
 \subsection{Resources}\label{resources}
 
@@ -707,6 +727,7 @@ Outputs allow template to give information from the deployment to users.
 This can include usernames, passwords, IP addresses, hostnames, paths,
 etc. The outputs declaration is using the following format:
 
+\begin{footnotesize}
 \begin{verbatim}
 outputs:
   first_output_name:
@@ -716,6 +737,7 @@ outputs:
     description: Description of the second output
     value: second_output_value
 \end{verbatim}
+\end{footnotesize}
 
 Generally values will be calls to get\_attr, get\_param, or some other
 function to get information from parameters or resources deployed by the
@@ -734,7 +756,7 @@ Chameleon portal, go to the
 and click on the button in the top-right corner: ``Add an appliance''
 (you need to be logged in to see it).
 
-\includegraphics[width=\columnwidth]{images/chameleon/Add-an-appliance.png}
+{\centering \includegraphics[width=0.25\columnwidth]{images/chameleon/Add-an-appliance.png}}
 
 You will be prompted to enter a name, description, and documentation.
 Instead of providing appliance IDs, copy your template to the dedicated
@@ -808,6 +830,7 @@ The template below illustrates how it works. It launches a group of
 instances that will automatically populates their /etc/hosts file with
 IP and hostnames from other instances in the deployment.
 
+\begin{footnotesize}
 \begin{verbatim}
 heat_template_version: 2015-10-15
 
@@ -906,6 +929,7 @@ outputs:
   deployment_results:
     value: { get_attr: [export_hosts_sdg, hosts] }
 \end{verbatim}
+\end{footnotesize}
 
 There are two SoftwareConfig resources.
 
@@ -928,10 +952,12 @@ Finally, the instance ResourceGroup is configured so that each instance
 uses the following contextualization method instead of a user-data
 script:
 
+\begin{footnotesize}
 \begin{verbatim}
           user_data_format: SOFTWARE_CONFIG
           software_config_transport: POLL_SERVER_HEAT
 \end{verbatim}
+\end{footnotesize}
 
 You can follow the same template pattern to configure your own
 deployment requiring all-to-all information exchange.

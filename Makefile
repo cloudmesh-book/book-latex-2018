@@ -14,6 +14,9 @@ LATEX=pydflatex
 single:
 	latexmk -pvc -view=pdf single
 
+c:
+	latexmk -pvc -view=pdf chameleon
+
 plain:
 	latexmk -pvc -view=pdf plain
 
