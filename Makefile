@@ -12,7 +12,7 @@ LATEX=pydflatex
 
 
 single:
-	latexmk -pvc -view=pdf single
+	latexmk -shell-escape -pvc -view=pdf single
 
 c:
 	latexmk -pvc -view=pdf chameleon
