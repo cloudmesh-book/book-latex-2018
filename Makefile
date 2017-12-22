@@ -3,16 +3,18 @@
 FILE=vonLaszewski-bigdata
 #FLAGS=-interaction nonstopmode -halt-on-error -file-line-error
 #FLAGS=-interaction nonstopmode  -file-line-error
+FLAGS=-shell-escape
 CLOUD=cloud
 
 DEFAULT=$(CLOUD)
 
-#LATEX=pdfflatex
-LATEX=pydflatex
-
+LATEX=pdflatex
 
 single:
 	latexmk -shell-escape -pvc -view=pdf single
+
+g:
+	latexmk -shell-escape -pvc -view=pdf $(FILE)
 
 c:
 	latexmk -pvc -view=pdf chameleon

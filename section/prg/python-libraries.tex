@@ -432,7 +432,7 @@ bonus projects such as
 \item
   deploy run and document cloudmesh on ironpython
 \item
-  deploy run and document cloudmesh on anaconde, develop script to
+  deploy run and document cloudmesh on anaconda, develop script to
   generate a conda packge form github
 \item
   deploy run and document cloudmesh on canopy, develop script to
@@ -443,83 +443,6 @@ bonus projects such as
   other documentation that would be useful
 \end{itemize}
 
-\subsection{Autoenv: Directory-based
-Environments}\label{autoenv-directory-based-environments}
-
-\begin{description}
-\item[We do not recommend that you use autoenv. Instead we]
-recommend that you use pyenv.
-\end{description}
-
-Link:
-Autoenv \textless{}https://pypi.python.org/pypi/autoenv/0.2.0\textgreater{}
-
-If a directory contains a .env file, it will automatically be executed
-when you cd into it. It's easy to use and install.
-
-This is useful for
-
-\begin{itemize}
-\tightlist
-\item
-  auto-activating virtualenvs
-\item
-  project-specific environment variables
-\end{itemize}
-
-To use it add the ENV you created with virtualenv into .env file within
-your project directory:
-
-\begin{verbatim}
-$ echo "source ~/ENV/bin/activate" > yourproject/.env
-$ echo "echo 'whoa'" > yourproject/.env
-$ cd project
-whoa
-\end{verbatim}
-
-To install it on Mac OS X use Homebrew:
-
-\begin{verbatim}
-$ brew install autoenv
-$ echo "source $(brew --prefix autoenv)/activate.sh" >> ~/.bash_profile
-\end{verbatim}
-
-To install it using pip use:
-
-\begin{verbatim}
-$ pip install autoenv
-$ echo "source `which activate.sh`" >> ~/.bashrc
-\end{verbatim}
-
-To install it using git use:
-
-\begin{verbatim}
-$ git clone git://github.com/kennethreitz/autoenv.git ~/.autoenv
-$ echo 'source ~/.autoenv/activate.sh' >> ~/.bashrc
-\end{verbatim}
-
-Before sourcing activate.sh, you can set the following variables:
-
-\begin{itemize}
-\tightlist
-\item
-  `AUTOENV\_AUTH\_FILE`: Authorized env files, defaults to
-  \textasciitilde{}/.autoenv\_authorized
-\item
-  `AUTOENV\_ENV\_FILENAME`: Name of the .env file, defaults to .env
-\item
-  `AUTOENV\_LOWER\_FIRST`: Set this variable to flip the order of .env
-  files executed
-\end{itemize}
-
-Autoenv overrides cd. If you already do this, invoke autoenv\_init
-within your custom cd after sourcing activate.sh.
-
-\begin{description}
-\item[Autoenv can be disabled via unset cd if you experience I/O issues]
-with certain file systems, particularly those that are FUSE-based (such
-as smbnetfs).
-\end{description}
 
 \section{Resources}\label{resources}
 
@@ -535,7 +458,6 @@ Python wiki page contains a long list of
 for learning} as well. Additional resources include:
 
 \begin{itemize}
-\tightlist
 \item
   \url{https://virtualenvwrapper.readthedocs.io}
 \item
@@ -571,7 +493,6 @@ for learning} as well. Additional resources include:
 A very long list of useful information are also available from
 
 \begin{itemize}
-\tightlist
 \item
   \url{https://github.com/vinta/awesome-python}
 \item

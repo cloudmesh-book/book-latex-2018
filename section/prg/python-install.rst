@@ -266,16 +266,22 @@ pyenv activate ANA3
 Anaconda and Miniconda
 ----------------------
 
-.. warning:: We do not recommend that you use anaconda or miniconda as it may
-	     interfere with your default python interpreters and
-	     setup.
+Many people will give you a **wrong** advice while asking you to
+install anaconda or miniconda without going into details how to
+properly install it while not interfering with other python versions.
+Due to this reason we like to issue simply the following statement:
 
-Please note that beginners to pyton should always use anaconda or
-miniconda only afterthey have installed pyenv and use it. For this
-class neither anaconda nor miniconda is required. In fact we do not
-recommend it. We keep this section as we know that other classes at IU
-may use anaconda. We are not aware if these classes teach you the
-right way to install it, with *pyenv*.
+**We do not recommend that you use anaconda or miniconda as it may
+  interfere with your default python interpreters and setup.**
+
+This is justified as in the cloud we typically do not use anaconda as
+we want to keep our images as small as possible. Anaconda provides a
+set of preinstalled libraries for data scientist while not focussing
+on the size of the instalation or reproucability within containers or
+small virtual machines. Thus we have abstained from using anaconda nor
+miniconda in order for you net to fall in its trap of interfering with
+the system python install. To avoid all of this we recommend that you
+use anaconda with `pyenv`. 
 
 
 Miniconda

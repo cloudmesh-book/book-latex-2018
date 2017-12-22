@@ -1,4 +1,3 @@
-
 .. _python_intro:
 
 Introduction to Python
@@ -54,14 +53,9 @@ and is applied for web development, scientific computing, embedded
 applications, artificial intelligence, software development, and
 information security, to name a few.
 
-About the Tutorial
-------------------
-
-This tutorial introduces the reader informally to the basic concepts
-and features of the Python language and system. It helps to have a
-Python interpreter handy for hands-on experience, but all examples are
-self-contained, so the tutorial can be read off-line as well. At the
-end of this lesson you will be able to:
+The material presented here introduces the reader to the basic concepts
+and features of the Python language and system. After you have worked
+through the material you will be able to:
 
 - use Python
 - use the interactive Python interface
@@ -69,27 +63,29 @@ end of this lesson you will be able to:
 - write and run Python programs stored in a file
 - have an overview of the standard library
 - install Python libraries using `pyenv` or if it is not available `virtualenv`
-
-This tutorial does not attempt to be comprehensive and cover every
-single feature, or even every commonly used feature. Instead, it
-introduces many of Python's most noteworthy features, and will give
-you a good idea of the language's flavor and style. After reading it,
-you will be able to read and write Python modules and programs, and
-you will be ready to learn more about the various Python library
-modules.
+- understand that anacoda may interfere with your system if you did
+  not install it with pyenv
+  
+This material does not attempt to be comprehensive and cover every
+single feature of Python. Instead, we
+introduce many of Python's most noteworthy features, and will give
+you a good idea of the language's flavor and style. 
 
 .. _The Zen of Python: https://www.python.org/dev/peps/pep-0020/
 
-In order to conduct this lesson you need
+In order to master the content you need
 
-* A computer with Python 2.7.13 or 3.6.2
-* Familiarity with command line usage
+* A computer with Python 2.7.14 or 3.6.3 (older versions may work, but
+  are not supported by us as we want to stay up to date)
+* Familiarity with command terminal and command lines
 * A text editor such as `PyCharm
   <https://www.jetbrains.com/pycharm/>`_, emacs, vi or others. You
-  should identity which works best for you and set it up.
+  should identify which works best for you and set it up.
 
 Links
 -----
+
+Some helpful links are located at:
 
 * `Python <https://www.python.org/>`_
 * `Pip <https://pip.pypa.io/en/stable/>`_

@@ -1210,14 +1210,11 @@ install python. This includes
 * `IronPython <http://ironpython.net/>`_
 
 Typically they include not only the python compiler but also several
-useful packages. It is fine to use such environments for the class,
-but it should be noted that in both cases not every python library may
-be available for install in the given environment. For example if you
-need to use cloudmesh client, it may not be available as conda or
-Canopy package. This is also the case for many other cloud related and
-useful python libraries. Hence, we do recommend that if you are new to
-python to use the distribution form python.org, and use pip and
-virtualenv.
+additional packages. HOwever in many cases these packages are not
+appropriate for cloud computing and we recommend against using them if
+you can. Instead we recommend that you use `pyenv` to protect from
+sideffects that these systems will have on your sytem installed
+python.
 
 Additionally some python version have platform specific libraries or
 dependencies. For example coca libraries, .NET or other frameworks are
@@ -1234,55 +1231,21 @@ fashion. The homework assignment PRG1 has even a requirement to do so.
 
 In order to provide platform independence we have given in the class a
 "minimal" python version that we have tested with hundreds of
-students: python.org. If you use any other version, that is your
-decision. Additionally some students not only use python.org but have
-used iPython which is fine too. However this class is not only about
-python, but also about how to have your code run on any platform. The
-homework is designed so that you can identify a setup that works for
-you.
-
-However we have concerns if you for example wanted to use chameleon
-cloud which we require you to access with cloudmesh. cloudmesh is not
-available as conda, canopy, or other framework package. Cloudmesh
-client is available form pypi which is standard and should be
-supported by the frameworks. We have not tested cloudmesh on any other
-python version then python.org which is the open source community
-standard. None of the other versions are standard.
-
-In fact we had students over the summer using canopy on their machines
-and they got confused as they now had multiple python versions and did
-not know how to switch between them and activate the correct
-version. Certainly if you know how to do that, than feel free to use
-canopy, and if you want to use canopy all this is up to you. However
-the homework and project requires you to make your program portable to
-python.org. If you know how to do that even if you use canopy,
-anaconda, or any other python version that is fine. Graders will test
-your programs on a python.org installation and not canpoy, anaconda,
-ironpython while using virtualenv. It is obvious why. If you do not
-know that answer you may want to think about that every time they test
-a program they need to do a new virtualenv and run vanilla python in
-it. If we were to run two instals in the same system, this will not
-work as we do not know if one student will cause a side effect for
-another. Thus we as instructors do not just have to look at your code
-but code of hundreds of students with different setups. This is a non
-scalable solution as every time we test out code from a student we
-would have to wipe out the OS, install it new, install an new version
-of whatever python you have elected, become familiar with that version
-and so on and on. This is the reason why the open source community is
-using python.org. We follow best practices. Using other versions is
-not a community best practice, but may work for an individual.
+students: **python.org**. As this class is not about python, but about
+running python on any other paltform, we recommend to just sticking
+with a pyenv installed version of python.
 
 We have however in regards to using other python version additional
 bonus projects such as
 
-* deploy run and document cloudmesh on ironpython
+* deploy run and document cloudmesh on ironpython 
 * deploy run and document cloudmesh on anaconde, develop script to
   generate a conda packge form github
 * deploy run and document cloudmesh on canopy, develop script to
   generate a conda packge form github
-* deploy run and document cloudmesh on ironpython
 * other documentation that would be useful
-
+* run cloudmesh via docker containers
+  
 .. _python-resources:
 
 .. _autoenv_:

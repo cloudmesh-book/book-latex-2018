@@ -1,15 +1,25 @@
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------------
+%	DO NOT CHAMGE CONFIGURATION
+%
 \RequirePackage[hyphens]{url}
 \documentclass[11pt,fleqn]{book} 
 
-\newcommand{\TITLE}{Handbook of \\ Big Data Applications and
-  Analytics}
+\newcommand{\TITLE}{Clouds and Big Data}
 \newcommand{\SUBTITLE}{Theory and Practice}
-\newcommand{\AUTHOR}{Gregor von Laszewski}
+\newcommand{\AUTHOR}{Gregor von Laszewski\\Geoffrey C. Fox\\Judy Qui}
 \newcommand{\EMAIL}{laszewski@gmail.com}
 
+\input{format/book-format}
+\chapterimage{water.png} % Chapter heading image
+
+%
+%	END CONFIGURATION
+%--------------------------------------------------------------------------------------
+
+
+
+%--------------------------------------------------------------------------------------
+%	EXAMPE FOR INCLUDING FIGURES
 
 %\FIGURE{htb} 
 %    {1.0}
@@ -17,22 +27,48 @@
 %    {The Architecture of the Framework}
 %    {F:tas-arch} 
 
-\input{format/book-format}
+%
+%	END EXAMPLES
+%--------------------------------------------------------------------------------------
 
-\chapterimage{water.png} % Chapter heading image
-
-\include{part-container}
-
+\include{part-preface}
 
 \include{part-intro}
-\include{part-doc}
-\include{part-applications}
-\include{part-dev}
-%\include{part-iot}
-%\include{sentient}
+
+%\include{part-doc}
+ 
+%----------------------------------------------------------------------------------------
+%	LINUX
+%----------------------------------------------------------------------------------------
+
+\part{Linux}
+
+\include{section/linux}
+\include{section/git/github}
+%\include{section/git/git-techlist}
+\include{section/virtualbox}
+ 
+
 \include{part-python}
 
-\include{part-chameleon}
+\part{Python Notebooks}
+
+\include{notebooks/facedetection.tex}
+\include{notebooks/scikit-learn-k-means.tex}
+\include{notebooks/fingerprint_matching.tex}
+
+
+
+%\include{part-container}
+
+
+%\include{part-applications}
+%\include{part-dev}
+%\include{part-iot}
+%\include{sentient}
+
+
+%\include{part-chameleon}
 
 % \include{part-icloud}
 
@@ -44,7 +80,7 @@
 %	PART
 %----------------------------------------------------------------------------------------
 
-\part{I523}
+% \part{I523}
 
 %----------------------------------------------------------------------------------------
 %	CHAPTER
@@ -58,7 +94,7 @@
 %\include{section/intro/overview}
 
 %\include{section/intro/organization}
-%\include{section/intro/git}
+%
 %\include{section/intro/project}
 %\include{section/intro/assignments}
 
@@ -70,22 +106,8 @@
 %	PART
 %----------------------------------------------------------------------------------------
 
-\part{Python Notebooks}
 
-\include{notebooks/facedetection.tex}
-\include{notebooks/scikit-learn-k-means.tex}
-\include{notebooks/fingerprint_matching.tex}
 
-\end{comment}
-
-%----------------------------------------------------------------------------------------
-%	LINUX
-%----------------------------------------------------------------------------------------
-
-\part{Linux}
-
-\include{section/linux}
-\include{section/virtualbox}
 
 
 
@@ -95,7 +117,7 @@
 
 \part{Technologies}
 
-\include{section/i524/technologies}
+%\include{section/i524/technologies}
 
 %----------------------------------------------------------------------------------------
 %	FORMAT
@@ -142,6 +164,8 @@
 \setlength{\columnsep}{0.75cm}
 \addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}}
 \printindex
+
+\end{comment}
 
 %----------------------------------------------------------------------------------------
 
