@@ -8,7 +8,7 @@ CLOUD=cloud
 DEFAULT=$(CLOUD)
 
 #LATEX=pdfflatex
-LATEX=pydflatex
+LATEX=pydflatex -k
 
 
 single:
