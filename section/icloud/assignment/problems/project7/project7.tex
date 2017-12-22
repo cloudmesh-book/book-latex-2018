@@ -1,88 +1,45 @@
-\documentclass{article}
-\newtheorem{thm}{Theorem}
-\setlength{\oddsidemargin}{0.25in}
-\setlength{\textwidth}{6in}
-\setlength{\topmargin}{-0.25in}
-\setlength{\headheight}{0.3in}
-\setlength{\headsep}{0.2in}
-\setlength{\textheight}{9in}
-\setlength{\footskip}{0.1in}
-\usepackage{multirow}
-\usepackage{fullpage}
-\usepackage{graphicx}
-\usepackage{amsthm}
-\usepackage{amssymb}
-\usepackage{url}
-\usepackage{amsfonts}
-\usepackage{algpseudocode}
-\usepackage{mathtools}
+\section*{Harp PageRank}
+\subsection*{Goal}
+For this project you will implement PageRank on Harp framework.
 
-\usepackage{listings}
-\usepackage{color}
- 
-\definecolor{codegreen}{rgb}{0,0.6,0}
-\definecolor{codegray}{rgb}{0.5,0.5,0.5}
-\definecolor{codepurple}{rgb}{0.58,0,0.82}
-\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
- 
-\lstdefinestyle{mystyle}{
-    backgroundcolor=\color{backcolour},   
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple},
-    basicstyle=\footnotesize,
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,                 
-    numbers=left,                    
-    numbersep=5pt,                  
-    showspaces=false,                
-    showstringspaces=false,
-    showtabs=false,                  
-    tabsize=2
-}
- 
-\lstset{style=mystyle}
+\subsection*{Deliverables}
+Zip your source code and output as username\_harp-pagerank.zip. Please submit
+this file to the Canvas Assignments page.
 
-\begin{document}\title{Project 7: Harp PageRank\\ Cloud Computing\\ Spring 2017}         % Enter your title between curly braces
-\author{Professor Judy Qiu }        % Enter your name between curly braces
-\date{}
-%\date{\today}          % Enter your date or \today between curly braces
-\maketitle
-\makeatother     % `@' is restored as a "non-letter" character
-\pagestyle{plain}
-\section*{Goal}
-For this project you will implement PageRank on Harp\cite{Harp} framework.
-
-\section*{Deliverables}
-Zip your source code and output as username\_harp-pagerank.zip. Please submit this file to the Canvas Assignments page.
-
-\section*{Evaluation}
+\subsection*{Evaluation}
 The point total for this project is 6, where the distribution is as follows:
 \begin{itemize}
 \item Completeness of your code (5 points)
 \item Correct output (1 point)
 \end{itemize}
 
-\section*{Prerequisites}
-From now on, you don't need the old VM. To avoid any conflict and inconvenience, we have prepared a new VM (ubuntu 16.04) for you. The link will be posted on canvas. All necessary tools/libaries such Maven, JDK, Github, Hadoop 2.6.0, Harp are configured and ready for use. Intellij is installed as well. You can also use your own VM. But you will need to setup those tools/libraries by yourself. Some tutorials are available at the harp website\cite{Harp}. Here this instruction is based on the configurations in this new VM.
+\subsection*{Prerequisites}
+From now on, you don't need the old VM. To avoid any conflict and
+inconvenience, we have prepared a new VM (ubuntu 16.04) for you. The link will
+be posted on canvas. All necessary tools/libaries such Maven, JDK, Github,
+Hadoop 2.6.0, Harp are configured and ready for use. Intellij is installed as
+well. You can also use your own VM. But you will need to setup those
+tools/libraries by yourself. Some tutorials are available at the harp
+website. Here this instruction is based on the configurations in
+this new VM.
 
 \begin{figure}[!htbp]
-\includegraphics[width=6cm,height=8cm]{p8}
+\includegraphics[width=6cm,height=8cm]{section/icloud/assignment/problems/project7/p8}
 \centering
 \caption{Harp PageRank Architecture}
 \end{figure}
 
-\section*{HarpPageRank Implementation}
-Most of the code is completed for you and your task will be to perform the \textbf{Compute PR} step in the above diagram. The code for this can be found in \textbf{simplepagerank/PageRankMapper.java}
+\subsection*{HarpPageRank Implementation}
+Most of the code is completed for you and your task will be to perform the
+\textbf{Compute PR} step in the above diagram. The code for this can be found
+in \textbf{simplepagerank/PageRankMapper.java}
 
-\lstinputlisting[language=Java]{computePartialPR.java}
+\lstinputlisting[language=Java]{section/icloud/assignment/problems/project7/computePartialPR.java}
 
-\section*{Compilation and Running}
+\subsection*{Compilation and Running}
 \begin{itemize}
-\item To make the modification to the code, you can use Intellij IDE or linux terminal. The source code is located at 
+\item To make the modification to the code, you can use Intellij IDE or linux
+  terminal. The source code is located at 
 \begin{lstlisting}[language=bash]
 /home/cc/Documents/harp/harp-tutorial-app/src/main/java/edu/iu/simplepagerank
 \end{lstlisting}
@@ -97,10 +54,13 @@ $ mvn clean package
 $ $HADOOP_HOME/sbin/start-dfs.sh
 $ $HADOOP_HOME/sbin/start-yarn.sh
 \end{lstlisting}
+
 Then you can view the web UI at  localhost:50070 and localhost:8088
 
+\item We prepared the input dataset (input5K-2partitions) for you. Use the
+  following command to put it to hdfs. Please note there is a "dot" at the end
+    of the second command.
 
-\item We prepared the input dataset (input5K-2partitions) for you. Use the following command to put it to hdfs. Please note there is a "dot" at the end of the second command.
 \begin{lstlisting}[language=bash]
 $ cd $HARP_ROOT_DIR/data/tutorial/simplepagerank
 $ hdfs dfs -put input5K-2partitions .
@@ -110,6 +70,7 @@ $ hdfs dfs -put input5K-2partitions .
 $ cd $HARP_ROOT_DIR
 $ hadoop jar harp-tutorial-app/target/harp-tutorial-app-1.0-SNAPSHOT.jar edu.iu.simplepagerank.HarpPageRank input5K-2partitions output5k 5000 10
 \end{lstlisting}
+
 This will run PageRank against input2K-2partitions dataset. It has 5000 URLs in total. The program will run 2 parallel map tasks for 10 iterations.  If you want to launch N map tasks, you need to divide the dataset into N partitions.
 
 \item To get the output, perform the following commands to get the output to the Desktop. Then you can submit it to canvas.
@@ -117,6 +78,3 @@ This will run PageRank against input2K-2partitions dataset. It has 5000 URLs in 
 $ hdfs dfs -get output5k /home/cc/Desktop
 \end{lstlisting}
 \end{itemize}
-\bibliographystyle{unsrt} 
-\bibliography{pagerank} 
-\end{document}
