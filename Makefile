@@ -10,6 +10,10 @@ DEFAULT=$(CLOUD)
 
 LATEX=pdflatex
 
+#LATEX=pdfflatex
+#LATEX=pydflatex -k
+
+
 single:
 	latexmk -shell-escape -pvc -view=pdf single
 
