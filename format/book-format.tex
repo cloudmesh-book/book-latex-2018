@@ -1,0 +1,143 @@
+
+%----------------------------------------------------------------------------------------
+% remove pandoc commands
+%----------------------------------------------------------------------------------------
+\newcommand{\tightlist}{}
+\newenvironment{Shaded}{}{}
+\newenvironment{Highlighting}{}{}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+\newcommand{\ImportTok}[1]{{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+\newcommand{\BuiltInTok}[1]{{#1}}
+\newcommand{\ExtensionTok}[1]{{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+\newcommand{\RegionMarkerTok}[1]{{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\NormalTok}[1]{{#1}}
+
+%----------------------------------------------------------------------------------------
+
+\input{format/structure} % Insert the commands.tex file which contains the majority of the structure behind the template
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begingroup
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+\node[inner sep=0pt] (background) at (current page.center) {\includegraphics[width=\paperwidth]{background.png}};
+\draw (current page.center) node [fill=blue!2!white,fill
+opacity=0.9,text opacity=1,inner
+sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering
+    \TITLE \\[15pt] % Book title
+{\Large \SUBTITLE}\\[20pt] % Subtitle
+{\huge \AUTHOR \\ \Large \EMAIL }}}; % Author name
+\end{tikzpicture}
+\vfill
+\endgroup
+
+%----------------------------------------------------------------------------------------
+%	COPYRIGHT PAGE
+%----------------------------------------------------------------------------------------
+
+\newpage
+~\vfill
+\thispagestyle{empty}
+
+\noindent Copyright \copyright\ 2017 \AUTHOR \\
+
+\noindent \EMAIL \\ % Copyright notice
+
+% \noindent \textsc{Indiana University}\\ % Publisher
+
+\noindent \textsc{https://github.com/cloudmesh/classes}\\ % URL
+
+\begin{comment}
+\noindent Licensed under the Creative Commons
+Attribution-NonCommercial 3.0 Unported License (the ``License''). You
+may not use this file except in compliance with the License. You may
+obtain a copy of the License at
+\url{http://creativecommons.org/licenses/by-nc/3.0}. Unless required
+by applicable law or agreed to in writing, software distributed under
+the License is distributed on an \textsc{``as is'' basis, without
+  warranties or conditions of any kind}, either express or
+implied. See the License for the specific language governing
+permissions and limitations under the License.\\ % License information
+
+\end{comment}
+
+\noindent \textit{First printing, October 2017} % Printing/edition date
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+%\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
+
+\chapterimage{TOC.png} % Table of contents heading image
+
+\pagestyle{empty} % No headers
+
+\tableofcontents % Print the table of contents itself
+
+\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
+
+\pagestyle{fancy} % Print headers again
+
+
+
+\newcommand{\FILENAME}{\begin{fileremark}\currfiledir
+    \currfilename\end{fileremark}}
+\newcommand{\CHANGE}{\begin{changeremark}THIS WILL CHANGE
+    \currfilename\end{changeremark}}
+\newcommand{\TODO}[1]{\todo[inline]{#1}}
+\newcommand{\DONE}[1]{DONE: \todo[inline,color=green!30]{#1}}
+
+\newcommand{\FIGURE}[5]{
+\begin{figure}[#1] 
+  \centering 
+    \includegraphics[width=#2\columnwidth]{#3} 
+  \caption{#4}\label{#5} 
+\end{figure} 
+}
+
+\newcommand{\URL}[1]{
+\begin{itemize}
+\item  \url{#1}
+\end{itemize}
+}
+
+\newcommand{\video}[4]{%
+{\em \hfill #3 (#2) \href{#4}{\includegraphics[width=1cm]{images/video.png} }}    \index{Video!#1!#3 (#2)}
+}
+
+\newcommand{\slides}[4]{%
+  {\em  \hfill #3 (#2) \href{#4}{\includegraphics[width=1cm]{images/slide.png}}} \index{Slides!#1!#3 (#2)}
+}
+
+\DefineVerbatimEnvironment{verbatim}{Verbatim}{xleftmargin=.5in}

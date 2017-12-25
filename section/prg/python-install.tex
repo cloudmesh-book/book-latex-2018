@@ -1,0 +1,484 @@
+\FILENAME
+
+\section{Python Installation}\label{python-installation}
+
+Python is easy to install and very good instructions for most platforms
+can be found on the python.org Web page. We will be using Python 2.7.13
+and/or Python 3 in our activities.
+
+To manage python modules, it is useful to have
+\href{https://pypi.python.org/pypi/pip}{pip} package installation tool
+on your system.
+
+In the tutorial, we assume that you have a computer with python
+installed. However, we also recommend that for the class you use
+Python's virtualenv (see below) to isolate your development Python from
+the system installed Python.
+
+\subsection{Managing custom Python
+installs}\label{managing-custom-python-installs}
+
+Often you have your own computer and you do not like to change its
+environment to keep it in pristine condition. Python comes with mnay
+libraries that could for example conflict with libraries that you have
+installed. To avoid this it is bets to work in an isolated python we can
+use tools such as virtualenv, pyenv or pyvenv for 3.6.2. Which you use
+depends on you, but we highly recommend pyenv if you can.
+
+\subsubsection{Managing Multiple Python Versions with
+Pyenv}\label{managing-multiple-python-versions-with-pyenv}
+
+Python has several versions that are used by the community. This
+includes Python 2 and Python 3, but alls different management of the
+python libraries. As each OS may have their own version of python
+installed. It is not recommended that you modify that version. Instead
+you may want to create a localized python installation that you as a
+user can modify. To do that we recommend \emph{pyenv}. Pyenv allows
+users to switch between multiple versions of Python
+(\url{https://github.com/yyuu/pyenv}). To summarize:
+
+\begin{itemize}
+\tightlist
+\item
+  users to change the global Python version on a per-user basis;
+\item
+  users to enable support for per-project Python versions;
+\item
+  easy version changes without complex environment variable management;
+\item
+  to search installed commands across different python versions;
+\item
+  integrate with tox (\url{https://tox.readthedocs.io/}).
+\end{itemize}
+
+\paragraph{Instalation without pyenv}\label{instalation-without-pyenv}
+
+If you need to have more than one python version installed and do not
+want or can use pyenv, we recommend you download and install python
+2.7.13 and 3.6.2 from python.org
+(\url{https://www.python.org/downloads/})
+
+\paragraph{Disabeling wrong python installs on
+OSX}\label{disabeling-wrong-python-installs-on-osx}
+
+While working with students we have seen at times that they take other
+classes either at universities or online that teach them how to program
+in python. Unfortuanatley, although they seem to do that they often
+ignore to teach you how to properly install python. I just reachentl had
+a students that had installed python 7 times on his OSX machine, while
+another student had 3 different instalations, all of which confliced
+with each other as they were not set up properly.
+
+We recommend that you inspect if you have a files such as
+\textasciitilde{}/.bashrc or \textasciitilde{}/.bashrc\_profile in your
+ehome directory and identify if it activates various versions of python
+on your computer. If so you could try to deactivate them while
+outcommenting the various versions with the \# character at the
+beginning of the line, start a new terminal and see if the terminal
+shell still works. Than you can follow our instructions here while using
+an install on pyenv.
+
+\paragraph{Install pyenv on OSX from
+git}\label{install-pyenv-on-osx-from-git}
+
+This is our recommended way to install pyenv on OSX:
+
+\begin{verbatim}
+$ git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+$ git clone https://github.com/pyenv/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
+$ git clone https://github.com/yyuu/pyenv-virtualenvwrapper.git ~/.pyenv/plugins/pyenv-virtualenvwrapper
+$ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
+$ echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
+\end{verbatim}
+
+\paragraph{Instalation of Homebrew}\label{instalation-of-homebrew}
+
+Before installing anything on your computer make sure you have enough
+space. Use in the terminal the command:
+
+\begin{verbatim}
+$ df -h
+\end{verbatim}
+
+which gives your an overview of your file system. If you do not have
+enough space, please make sure you free up unused files from your drive.
+
+In many occasions it is beneficial to use readline as it provides nice
+editing features for the terminal and xz for completion. First, make
+sure you have xcode installed:
+
+\begin{verbatim}
+$ xcode-select --install
+\end{verbatim}
+
+Next install homebrew, pyenv, pyenv-virtualenv and pyenv-virtualwrapper.
+Additionally install readline and some compression tools:
+
+\begin{verbatim}
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew update
+brew install readline xz
+\end{verbatim}
+
+\paragraph{Install pyenv on OSX with
+Homebrew}\label{install-pyenv-on-osx-with-homebrew}
+
+We describe here a mechanism of installing pyenv with homebrew. Other
+mechanisms can be found on the pyenv documentation page
+(\url{https://github.com/yyuu/pyenv-installer}). You must have homebrew
+installed as discussed in the previous section.
+
+To install pyenv with homebrew execute in the terminal:
+
+\begin{verbatim}
+brew install pyenv pyenv-virtualenv pyenv-virtualenvwrapper
+\end{verbatim}
+
+\paragraph{Install pyenv on Ubuntu}\label{install-pyenv-on-ubuntu}
+
+The following steps will install pyenv in a new ubuntu 16.04
+distribution.
+
+Start up a terminal and execute in the terminal the following commands.
+We recommend that you do it one command at a time so you can observe if
+the command succeeds:
+
+\begin{verbatim}
+$ sudo apt-get update
+$ sudo apt-get install git python-pip make build-essential libssl-dev
+$ sudo apt-get install zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev
+$ sudo pip install virtualenvwrapper
+
+$ git clone https://github.com/yyuu/pyenv.git ~/.pyenv
+$ git clone https://github.com/pyenv/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv   
+$ git clone https://github.com/yyuu/pyenv-virtualenvwrapper.git ~/.pyenv/plugins/pyenv-virtualenvwrapper
+
+$ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+$ echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+\end{verbatim}
+
+Now that you have installed pyenv it is not yet activated in your
+current terminal. The easiest thing to do is to start a new terminal and
+typ in:
+
+\begin{verbatim}
+which pyenv
+\end{verbatim}
+
+If you see a response pyenv is installed and you can proceed with the
+next steps.
+
+\begin{description}
+\item[Please remember whenever you modify .bashrc or]
+.bash\_profile you need to start a new terminal.
+\end{description}
+
+\paragraph{Install Different Python
+Versions}\label{install-different-python-versions}
+
+Pyenv provides a large list of different python versions. To see the
+entire list please use the command:
+
+\begin{verbatim}
+$ pyenv install -l
+\end{verbatim}
+
+However, for us we only need to worry about python 2.7.13 and python
+3.6.2 (once 3.6.2 becomes available we will use that). You can now
+install different versions of python into your local environment with
+the following commands:
+
+\begin{verbatim}
+$ pyenv install 2.7.13
+$ pyenv install 3.6.2
+\end{verbatim}
+
+You can set the global python default version with:
+
+\begin{verbatim}
+$ pyenv global 2.7.13
+\end{verbatim}
+
+Type the following to determine which version you activated:
+
+\begin{verbatim}
+$ pyenv version
+\end{verbatim}
+
+Type the following to determine which versions you have available:
+
+\begin{verbatim}
+$ pyenv versions
+\end{verbatim}
+
+Associate a specific environment name with a certain python version, use
+the following commands:
+
+\begin{verbatim}
+$ pyenv virtualenv 2.7.13 ENV2
+$ pyenv virtualenv 3.6.2 ENV3
+\end{verbatim}
+
+In the example above, ENV2 would represent python 2.7.13 while ENV3
+would represent python 3.6.2. Often it is easier to type the alias
+rather than the explicit version.
+
+\paragraph{Set up the Shell}\label{set-up-the-shell}
+
+To make all work smoothly from your terminal, you can include the
+following in your .bashrc files:
+
+\begin{verbatim}
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+__pyenv_version_ps1() {
+  local ret=$?;
+  output=$(pyenv version-name)
+  if [[ ! -z $output ]]; then
+    echo -n "($output)"
+  fi
+  return $ret;
+}
+
+PS1="\$(__pyenv_version_ps1) ${PS1}"
+\end{verbatim}
+
+We recommend that you do this towards the end of your file.
+
+\paragraph{Switching Environments}\label{switching-environments}
+
+After setting up the different environments, switching between them is
+now easy. Simply use the following commands:
+
+\begin{verbatim}
+(2.7.13) $ pyenv activate ENV2
+(ENV2) $ pyenv activate ENV3
+(ENV3) $ pyenv activate ENV2
+(ENV2) $ pyenv deactivate ENV2
+(2.7.13) $ 
+\end{verbatim}
+
+To make it even easier, you can add the following lines to your
+.bash\_profile file:
+
+\begin{verbatim}
+alias ENV2="pyenv activate ENV2"
+alias ENV3="pyenv activate ENV3"
+\end{verbatim}
+
+If you start a new terminal, you can switch between the different
+versions of python simply by typing:
+
+\begin{verbatim}
+$ ENV2
+$ ENV3
+\end{verbatim}
+
+\subsection{Instalation without
+pyenv}\label{instalation-without-pyenv-1}
+
+If you need to have more than one python version installed and do not
+want or can use pyenv, we recommend you download and install python
+2.7.13 and 3.6.2 from python.org
+(\url{https://www.python.org/downloads/})
+
+\subsubsection{Make sure pip is up to
+date}\label{make-sure-pip-is-up-to-date}
+
+As you will want to install other packages, make sure pip is up to date:
+
+\begin{verbatim}
+pip install pip -U
+\end{verbatim}
+
+pyenv virtualenv anaconda3-4.3.1 ANA3 pyenv activate ANA3
+
+\subsection{Anaconda and Miniconda}\label{anaconda-and-miniconda}
+
+\begin{description}
+\item[We do not recommend that you use anaconda or miniconda as it may]
+interfere with your default python interpreters and setup.
+\end{description}
+
+Please note that beginners to pyton should always use anaconda or
+miniconda only afterthey have installed pyenv and use it. For this class
+neither anaconda nor miniconda is required. In fact we do not recommend
+it. We keep this section as we know that other classes at IU may use
+anaconda. We are not aware if these classes teach you the right way to
+install it, with \emph{pyenv}.
+
+\subsubsection{Miniconda}\label{miniconda}
+
+\begin{description}
+\item[This section about miniconda is experimental and has not]
+been tested. We are looking for contributors that help completing it. If
+you use anaconda or miniconda we recommend to manage it via pyenv.
+\end{description}
+
+To install mini conda you can use the following commands:
+
+\begin{verbatim}
+$ mkdir ana
+$ cd ana
+$ pyenv install miniconda3-latest
+$ pyenv local miniconda3-latest
+$ pyenv activate miniconda3-latest
+$ conda create -n ana anaconda
+\end{verbatim}
+
+To activate use:
+
+\begin{verbatim}
+$ source activate ana
+\end{verbatim}
+
+To deactivate use:
+
+\begin{verbatim}
+$ source deactivate
+\end{verbatim}
+
+To install cloudmesh cmd5 please use:
+
+\begin{verbatim}
+$ pip install cloudmesh.cmd5
+$ pip install cloudmesh.sys
+\end{verbatim}
+
+\subsubsection{Anaconda}\label{anaconda}
+
+\begin{description}
+\item[This section about anaconda is experimental and has not]
+been tested. We are looking for contributors that help completing it.
+\end{description}
+
+You can add anaconda to your pyenv with the following commands:
+
+\begin{verbatim}
+pyenv install anaconda3-4.3.1
+\end{verbatim}
+
+To switch more easily we recommend that you use the following in your
+.bash\_profile file:
+
+\begin{verbatim}
+alias ANA="pyenv activate anaconda3-4.3.1"
+\end{verbatim}
+
+Once you have done this you can easily switch to anaconda with the
+command:
+
+\begin{verbatim}
+$ ANA
+\end{verbatim}
+
+Terminology in annaconda could lead to confusion. Thus we like to point
+out that the version number of anaconda is unrelated to the python
+version. Furthermore, anaconda uses the term root not for the root user,
+but for the originating directory in which the anaconda program is
+installed.
+
+In case you like to build your own conda packages at a later time we
+recommend that you install the conda-build package:
+
+\begin{verbatim}
+$ conda install conda-build
+\end{verbatim}
+
+When executing:
+
+\begin{verbatim}
+pyenv versions
+\end{verbatim}
+
+you will see after the install completed the anaconda versions
+installed:
+
+\begin{verbatim}
+pyenv versions
+system
+2.7.13
+2.7.13/envs/ENV2
+3.6.2
+3.6.2/envs/ENV3
+ENV2 
+ENV3
+* anaconda3-4.3.1 (set by PYENV_VERSION environment variable)
+\end{verbatim}
+
+Let us now create virtualenv for anaconda:
+
+\begin{verbatim}
+$ pyenv virtualenv anaconda3-4.3.1 ANA
+\end{verbatim}
+
+To activate it you can now use:
+
+\begin{verbatim}
+$ pyenv ANA
+\end{verbatim}
+
+However, anaconda may modify your .bashrc or .bash\_profile files and ,
+may result in incompatibilities with other python versions. For this
+reason we recommend not to use it. If you find ways to get it to work
+reliably with other versions, please let us know and we update this
+tutorial.
+
+To install cloudmesh cmd5 please use:
+
+\begin{verbatim}
+$ pip install cloudmesh.cmd5
+$ pip install cloudmesh.sys
+\end{verbatim}
+
+\paragraph{Exercise}\label{exercise}
+
+\begin{description}
+\item[Epyenv.1:]
+Write installation instructions for an operating system of your choice
+and add to this documentation.
+\item[Epyenv.2:]
+Replicate the steps above, so you can type in ENV2 and ENV3 in your
+terminals to switch between python 2 and 3.
+\end{description}
+
+\subsubsection{virtualenv}\label{virtualenv}
+
+environment while using virtualenv,. Documentation about it can be found
+at:
+
+\begin{verbatim}
+* https://virtualenv.pypa.io
+\end{verbatim}
+
+The installation is simple once you have pip installed. If it is not
+installed you can say:
+
+\begin{verbatim}
+$ easy_install pip
+\end{verbatim}
+
+After that you can install the virtual env with:
+
+\begin{verbatim}
+$ pip install virtualenv
+\end{verbatim}
+
+To setup an isolated environment for example in the directory
+\textasciitilde{}/ENV please use:
+
+\begin{verbatim}
+$ virtualenv ~/ENV
+\end{verbatim}
+
+To activate it you can use the command:
+
+\begin{verbatim}
+$ source ~/ENV/bin/activate
+\end{verbatim}
+
+you can put this command in your .bashrc or .bash\_profile files so you
+do not forget to activate it. Instructions for this can be
+found in our lesson on Linux \textless{}bashrc\textgreater{}.

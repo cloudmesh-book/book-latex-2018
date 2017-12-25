@@ -1,3 +1,19 @@
+.#*
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.idx
+*.ilg
+*.ind
+*.ptc
+*.run.xml
+*.toc
+*.log
+*.fdb_latexmk
+*.fls
+*--
+.idea
 # Byte-compiled / optimized / DLL files
 /_book/
 __pycache__/

@@ -1,0 +1,542 @@
+
+\section{Database Access}\label{database-access}
+
+see:
+\url{https://www.tutorialspoint.com/python/python_database_access.htm}
+
+\section{Modules}\label{modules}
+
+Make sure you are no longer in the interactive interpreter. If you are
+you can type quit() and press Enter to exit.
+
+You can save your programs to files which the interpreter can then
+execute. This has the benefit of allowing you to track changes made to
+your programs and sharing them with other people.
+
+Start by opening a new file hello.py in the Python editor of your
+choice. If you don't have a preferred editor, we recommend
+\href{https://www.jetbrains.com/pycharm/}{PyCharm}.
+
+Now write this simple program and save it:
+
+\begin{verbatim}
+from __future__ import print_statement, division
+print("Hello world!")
+\end{verbatim}
+
+As a check, make sure the file contains the expected contents on the
+command line:
+
+\begin{verbatim}
+$ cat hello.py
+from __future__ import print_statement, division
+print("Hello world!")
+\end{verbatim}
+
+To execute your program pass the file as a parameter to the python
+command:
+
+\begin{verbatim}
+$ python hello.py
+Hello world!
+\end{verbatim}
+
+Files in which Python code is stored are called \textbf{module}s. You
+can execute a Python module form the command line like you just did, or
+you can import it in other Python code using the import statement.
+
+Let's write a more involved Python program that will receive as input
+the lengths of the three sides of a triangle, and will output whether
+they define a valid triangle. A triangle is valid if the length of each
+side is less than the sum of the lengths of the other two sides and
+greater than the difference of the lengths of the other two sides.:
+
+\begin{verbatim}
+"""Usage: check_triangle.py [-h] LENGTH WIDTH HEIGHT
+
+Check if a triangle is valid.
+
+Arguments:
+  LENGTH     The length of the triangle.
+  WIDTH      The width of the traingle.
+  HEIGHT     The height of the triangle.
+
+Options:
+-h --help
+"""
+from __future__ import print_function, division
+from docopt import docopt
+
+if __name__ == '__main__':
+  args = docopt(__doc__)
+  a, b, c = int(args['LENGTH']), int(args['WIDTH']), int(args['HEIGHT'])
+  valid_triangle = \
+      a < b + c and a > abs(b - c) and \
+      b < a + c and b > abs(a - c) and \
+      c < a + b and c > abs(a - b)
+  print('Triangle with sides %d, %d and %d is valid: %r' % (
+      a, b, c, valid_triangle
+  ))
+\end{verbatim}
+
+Assuming we save the program in a file called check\_triangle.py, we can
+run it like so:
+
+\begin{verbatim}
+$ python check_triangle.py 4 5 6
+Triangle with sides 4, 5 and 6 is valid: True
+\end{verbatim}
+
+Let break this down a bit.
+
+\begin{enumerate}
+\tightlist
+\item
+  We are importing the print\_function and division modules from Python
+  3 like we did earlier in this tutorial. It's a good idea to always
+  include these in your programs.
+\item
+  We've defined a boolean expression that tells us if the sides that
+  were input define a valid triangle. The result of the expression is
+  stored in the valid\_triangle variable. inside are true, and False
+  otherwise.
+\item
+  We've used the backslash symbol \textbackslash{} to format are code
+  nicely. The backslash simply indicates that the current line is being
+  continued on the next line.
+\item
+  When we run the program, we do the check if \_\_name\_\_ ==
+  '\_\_main\_\_'. \_\_name\_\_ is an internal Python variable that
+  allows us to tell whether the current file is being run from the
+  command line (value \_\_name\_\_), or is being imported by a module
+  (the value will be the name of the module). Thus, with this statement
+  we're just making sure the program is being run by the command line.
+\item
+  We are using the docopt module to handle command line arguments. The
+  advantage of using this module is that it generates a usage help
+  statement for the program and enforces command line arguments
+  automatically. All of this is done by parsing the docstring at the top
+  of the file.
+\item
+  In the print function, we are using
+  \href{https://docs.python.org/2/library/string.html\#format-string-syntax}{Python's
+  string formatting capabilities} to insert values into the string we
+  are displaying.
+\end{enumerate}
+
+\section{Installing Libraries}\label{installing-libraries}
+
+Often you may need functionality that is not present in Python's
+standard library. In this case you have two option:
+
+\begin{itemize}
+\tightlist
+\item
+  implement the features yourself
+\item
+  use a third-party library that has the desired features.
+\end{itemize}
+
+Often you can find a previous implementation of what you need. Since
+this is a common situation, there is a service supporting it: the
+\href{https://pypi.python.org/pypi}{Python Package Index} (or PyPi for
+short).
+
+Our task here is to install the \href{}{autopep8} tool from PyPi. This
+will allow us to illustrate the use if virtual environments using the
+pyenv or virtualenv command, and installing and uninstalling PyPi
+packages using pip.
+
+\section{Using pip to Install
+Packages}\label{using-pip-to-install-packages}
+
+Let's now look at another important tool for Python development: the
+Python Package Index, or PyPI for short. PyPI provides a large set of
+third-party python packages. If you want to do something in python,
+first check pypi, as odd are someone already ran into the problem and
+created a package solving it.
+
+In order to install package from PyPI, use the pip command. We can
+search for PyPI for packages:
+
+\begin{verbatim}
+$ pip search --trusted-host pypi.python.org autopep8 pylint
+\end{verbatim}
+
+It appears that the top two results are what we want so install them:
+
+\begin{verbatim}
+$ pip install --trusted-host pypi.python.org autopep8 pylint
+\end{verbatim}
+
+This will cause pip to download the packages from PyPI, extract them,
+check their dependencies and install those as needed, then install the
+requested packages.
+
+\begin{description}
+\item[You can skip `--trusted-host pypi.python.org' option if you have]
+patched urllib3 on Python 2.7.9.
+\end{description}
+
+\section{GUI}\label{gui}
+
+\subsection{GUIZero}\label{guizero}
+
+Install guizero with the following command:
+
+\begin{verbatim}
+sudo pip3 install guizero
+\end{verbatim}
+
+For a comprehensive tutorial on guizero,
+\href{https://lawsie.github.io/guizero/howto/}{click here}.
+
+\subsection{Kivy}\label{kivy}
+
+You can install Kivy on OSX as followes:
+
+\begin{verbatim}
+brew install pkg-config sdl2 sdl2_image sdl2_ttf sdl2_mixer gstreamer
+pip install -U Cython
+pip install kivy
+pip install pygame
+\end{verbatim}
+
+A hello world program for kivy is included in the cloudmesh.robot
+repository. Which you can fine here
+
+\begin{itemize}
+\tightlist
+\item
+  \url{https://github.com/cloudmesh/cloudmesh.robot/tree/master/projects/kivy}
+\end{itemize}
+
+To run the program, please download it or execute it in cloudmesh.robot
+as follows:
+
+\begin{verbatim}
+cd cloudmesh.robot/projects/kivy
+python swim.py
+\end{verbatim}
+
+To create stand alone packages with kivy, please see:
+
+\begin{verbatim}
+-  https://kivy.org/docs/guide/packaging-osx.html
+\end{verbatim}
+
+\section{Formatting and Checking Python
+Code}\label{formatting-and-checking-python-code}
+
+First, get the bad code:
+
+\begin{verbatim}
+$ wget --no-check-certificate http://git.io/pXqb -O bad_code_example.py
+\end{verbatim}
+
+Examine the code:
+
+\begin{verbatim}
+$ emacs bad_code_example.py
+\end{verbatim}
+
+As you can see, this is very dense and hard to read. Cleaning it up by
+hand would be a time-consuming and error-prone process. Luckily, this is
+a common problem so there exist a couple packages to help in this
+situation.
+
+\section{Using autopep8}\label{using-autopep8}
+
+We can now run the bad code through autopep8 to fix formatting problems:
+
+\begin{verbatim}
+$ autopep8 bad_code_example.py >code_example_autopep8.py
+\end{verbatim}
+
+Let us look at the result. This is considerably better than before. It
+is easy to tell what the example1 and example2 functions are doing.
+
+It is a good idea to develop a habit of using autopep8 in your
+python-development workflow. For instance: use autopep8 to check a file,
+and if it passes, make any changes in place using the -i flag:
+
+\begin{verbatim}
+$ autopep8 file.py    # check output to see of passes
+$ autopep8 -i file.py # update in place
+\end{verbatim}
+
+If you use pyCharm you have the ability to use a similar function while
+p;ressing on Inspect Code.
+
+\section{Further Learning}\label{further-learning}
+
+There is much more to python than what we have covered here:
+
+\begin{itemize}
+\tightlist
+\item
+  conditional expression (if, if...then,`if..elif..then`)
+\item
+  function definition(def)
+\item
+  class definition (class)
+\item
+  function positional arguments and keyword arguments
+\item
+  lambda expression
+\item
+  iterators
+\item
+  generators
+\item
+  loops
+\item
+  docopts
+\item
+  humanize
+\end{itemize}
+
+\section{Writing Python 3 Compatible
+Code}\label{writing-python-3-compatible-code}
+
+To write python 2 and 3 compatib;e code we recommend that you take a
+look at: \url{http://python-future.org/compatible_idioms.html}
+
+\section{Using Python on
+FutureSystems}\label{using-python-on-futuresystems}
+
+This is only important if you use Futuresystems resources.
+
+In order to use Python you must log into your FutureSystems account.
+Then at the shell prompt execute the following command:
+
+\begin{verbatim}
+$ module load python
+\end{verbatim}
+
+This will make the python and virtualenv commands available to you.
+
+The details of what the module load command does are described in the
+future lesson modules.
+
+\section{Ecosystem}\label{ecosystem}
+
+\subsection{pypi}\label{pypi}
+
+Link: \href{https://pypi.python.org/pypi}{pypi}
+
+The Python Package Index is a large repository of software for the
+Python programming language containing a large number of packages
+{[}link{]}. The nice think about pipy is that many packages can be
+installed with the program `pip'.
+
+To do so you have to locate the \textless{}package\_name\textgreater{}
+for example with the search function in pypi and say on the commandline:
+
+\begin{verbatim}
+pip install <package_name>
+\end{verbatim}
+
+where pagage\_name is the string name of the package. an example would
+be the package called cloudmesh\_client which you can install with:
+
+\begin{verbatim}
+pip install cloudmesh_client
+\end{verbatim}
+
+If all goes well the package will be installed.
+
+\subsection{Alternative Installations}\label{alternative-installations}
+
+The basic installation of python is provided by python.org. However
+others claim to have alternative environments that allow you to install
+python. This includes
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://store.enthought.com/downloads/\#default}{Canopy}
+\item
+  \href{https://www.continuum.io/downloads}{Anaconda}
+\item
+  \href{http://ironpython.net/}{IronPython}
+\end{itemize}
+
+Typically they include not only the python compiler but also several
+useful packages. It is fine to use such environments for the class, but
+it should be noted that in both cases not every python library may be
+available for install in the given environment. For example if you need
+to use cloudmesh client, it may not be available as conda or Canopy
+package. This is also the case for many other cloud related and useful
+python libraries. Hence, we do recommend that if you are new to python
+to use the distribution form python.org, and use pip and virtualenv.
+
+Additionally some python version have platform specific libraries or
+dependencies. For example coca libraries, .NET or other frameworks are
+examples. For the assignments and the projects such platform dependent
+libraries are not to be used.
+
+If however you can write a platform independent code that works on
+Linux, OSX and Windows while using the python.org version but develop it
+with any of the other tools that is just fine. However it is up to you
+to guarantee that this independence is maintained and implemented. You
+do have to write requirements.txt files that will install the necessary
+python libraries in a platform independent fashion. The homework
+assignment PRG1 has even a requirement to do so.
+
+In order to provide platform independence we have given in the class a
+``minimal'' python version that we have tested with hundreds of
+students: python.org. If you use any other version, that is your
+decision. Additionally some students not only use python.org but have
+used iPython which is fine too. However this class is not only about
+python, but also about how to have your code run on any platform. The
+homework is designed so that you can identify a setup that works for
+you.
+
+However we have concerns if you for example wanted to use chameleon
+cloud which we require you to access with cloudmesh. cloudmesh is not
+available as conda, canopy, or other framework package. Cloudmesh client
+is available form pypi which is standard and should be supported by the
+frameworks. We have not tested cloudmesh on any other python version
+then python.org which is the open source community standard. None of the
+other versions are standard.
+
+In fact we had students over the summer using canopy on their machines
+and they got confused as they now had multiple python versions and did
+not know how to switch between them and activate the correct version.
+Certainly if you know how to do that, than feel free to use canopy, and
+if you want to use canopy all this is up to you. However the homework
+and project requires you to make your program portable to python.org. If
+you know how to do that even if you use canopy, anaconda, or any other
+python version that is fine. Graders will test your programs on a
+python.org installation and not canpoy, anaconda, ironpython while using
+virtualenv. It is obvious why. If you do not know that answer you may
+want to think about that every time they test a program they need to do
+a new virtualenv and run vanilla python in it. If we were to run two
+instals in the same system, this will not work as we do not know if one
+student will cause a side effect for another. Thus we as instructors do
+not just have to look at your code but code of hundreds of students with
+different setups. This is a non scalable solution as every time we test
+out code from a student we would have to wipe out the OS, install it
+new, install an new version of whatever python you have elected, become
+familiar with that version and so on and on. This is the reason why the
+open source community is using python.org. We follow best practices.
+Using other versions is not a community best practice, but may work for
+an individual.
+
+We have however in regards to using other python version additional
+bonus projects such as
+
+\begin{itemize}
+\tightlist
+\item
+  deploy run and document cloudmesh on ironpython
+\item
+  deploy run and document cloudmesh on anaconda, develop script to
+  generate a conda packge form github
+\item
+  deploy run and document cloudmesh on canopy, develop script to
+  generate a conda packge form github
+\item
+  deploy run and document cloudmesh on ironpython
+\item
+  other documentation that would be useful
+\end{itemize}
+
+
+\section{Resources}\label{resources}
+
+If you are unfamiliar with programming in Python, we also refer you to
+some of the numerous online resources. You may wish to start with
+\href{https://www.learnpython.org}{Learn Python} or the book
+\href{http://learnpythonthehardway.org/book/}{Learn Python the Hard
+Way}. Other options include
+\href{http://www.tutorialspoint.com/python/}{Tutorials Point} or
+\href{http://www.codecademy.com/en/tracks/python}{Code Academy}, and the
+Python wiki page contains a long list of
+\href{https://wiki.python.org/moin/BeginnersGuide/Programmers}{references
+for learning} as well. Additional resources include:
+
+\begin{itemize}
+\item
+  \url{https://virtualenvwrapper.readthedocs.io}
+\item
+  \url{https://github.com/yyuu/pyenv}
+\item
+  \url{https://amaral.northwestern.edu/resources/guides/pyenv-tutorial}
+\item
+  \url{https://godjango.com/96-django-and-python-3-how-to-setup-pyenv-for-multiple-pythons/}
+\item
+  \url{https://www.accelebrate.com/blog/the-many-faces-of-python-and-how-to-manage-them/}
+\item
+  \url{http://ivory.idyll.org/articles/advanced-swc/}
+\item
+  \url{http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html}
+\item
+  \url{http://www.youtube.com/watch?v=0vJJlVBVTFg}
+\item
+  \url{http://www.korokithakis.net/tutorials/python/}
+\item
+  \url{http://www.afterhoursprogramming.com/tutorial/Python/Introduction/}
+\item
+  \url{http://www.greenteapress.com/thinkpython/thinkCSpy.pdf}
+\item
+  \url{https://docs.python.org/3.3/tutorial/modules.html}
+\item
+  \url{https://www.learnpython.org/en/Modules/_and/_Packages}
+\item
+  \url{https://docs.python.org/2/library/datetime.html}
+\item
+  \url{https://chrisalbon.com/python/strings/_to/_datetime.html}
+\end{itemize}
+
+A very long list of useful information are also available from
+
+\begin{itemize}
+\item
+  \url{https://github.com/vinta/awesome-python}
+\item
+  \url{https://github.com/rasbt/python_reference}
+\end{itemize}
+
+This list may be useful as it also contains links to data visualization
+and manipulation libraries, and AI tools and libraries. Please note that
+for this class you can reuse such libraries if not otherwise stated.
+
+\section{Jupyter Notebook Tutorials}\label{jupyter-notebook-tutorials}
+
+A Short Introduction to Jupyter Notebooks and NumPy To view the
+notebook, open this link in a background tab
+\textless{}\url{https://nbviewer.jupyter.org/}\textgreater{} and copy
+and paste the following link in the URL input area
+\textless{}\url{https://cloudmesh.github.io/classes/lesson/prg/Jupyter-NumPy-tutorial-I523-F2017.ipynb}\textgreater{}
+Then hit Go!
+
+\section{Exercises}\label{exercises}
+
+\begin{description}
+\item[EPython.1:]
+Write a python program called iterate.py that accepts an integer n from
+the command line. Pass this integer to a function called iterate.
+
+The iterate function should then iterate from 1 to n. If the ith number
+is a multiple of three, print ``multiple of 3'', if a multiple of 5
+print ``multiple of 5'', if a multiple of both print ``multiple of 3 and
+5'', else print the value.
+\item[EPython.2:]
+\begin{enumerate}
+\tightlist
+\item
+  Create a pyenv or virtualenv \textasciitilde{}/ENV
+\item
+  Modify your \textasciitilde{}/.bashrc shell file to activate your
+  environment upon login.
+\item
+  Install the docopt python package using pip
+\item
+  Write a program that uses docopt to define a commandline program.
+  Hint: modify the iterate program.
+\item
+  Demonstrate the program works and submit the code and output.
+\end{enumerate}
+\end{description}

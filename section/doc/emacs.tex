@@ -1,0 +1,177 @@
+\FILENAME
+
+\section{Basic Emacs}\label{basic-emacs}
+
+One of the most useful short manuals for emacs is the following refrence
+card. It takes some time to use this card efficiently, but the most
+important commands are written on it. Generations of students have
+litterally been just presented with this card and they learned emacs
+from it.
+
+\URL{https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf}
+
+
+There is naturally also additional material available and a great
+manual. You could also look at
+
+\URL{https://www.gnu.org/software/emacs/tour/}
+
+
+From the last page we have summarized the most useful and
+\textbf{simple} features. And present them here. One of the hidden gems
+of emacs is the ability to recreate replay able macros which we include
+here also. You ought to try it and you will find that for data science
+and the cleanup of data emacs (applied to smaller datasets) is a gem.
+
+Notation
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Key & Description\tabularnewline
+\midrule
+\endhead
+C & Control\tabularnewline
+M & Esc (meta character)\tabularnewline
+\bottomrule
+\end{longtable}
+
+In the event of an emergency\ldots{}
+
+Here's what to do if you've accidentally pressed a wrong key:
+
+If you executed a command and Emacs has modified your buffer, use C-/ to
+undo that change. If you pressed a prefix key (e.g. C-x) or you invoked
+a command which is now prompting you for input (e.g. Find file:
+\ldots{}), type C-g, repeatedly if necessary, to cancel. C-g also
+cancels a long-running operation if it appears that Emacs has frozen.
+
+Moving around in buffers can be done with cursor keys, or with the
+following key combinations:
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Key & Description\tabularnewline
+\midrule
+\endhead
+C-f & Forward one character\tabularnewline
+C-n & Next line\tabularnewline
+C-b & Back one character\tabularnewline
+C-p & Previous line\tabularnewline
+\bottomrule
+\end{longtable}
+
+Here are some ways to move around in larger increments:
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Key & Description\tabularnewline
+\midrule
+\endhead
+C-a & Beginning of line\tabularnewline
+M-f & Forward one word\tabularnewline
+M-a & Previous sentence\tabularnewline
+M-v & Previous screen\tabularnewline
+M-\textless{} & Beginning of buffer\tabularnewline
+C-e & End of line\tabularnewline
+M-b & Back one word\tabularnewline
+M-e & Next sentence\tabularnewline
+C-v & Next screen\tabularnewline
+M-\textgreater{} & End of buffer\tabularnewline
+\bottomrule
+\end{longtable}
+
+You can jump directly to a particular line number in a buffer:
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Key & Description\tabularnewline
+\midrule
+\endhead
+M-g g & Jump to specified line\tabularnewline
+\bottomrule
+\end{longtable}
+
+Searching is easy with the following commands
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Key & Description\tabularnewline
+\midrule
+\endhead
+C-s & Incremental search forward\tabularnewline
+C-r & Incremental search backward\tabularnewline
+\bottomrule
+\end{longtable}
+
+Replace
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Key & Description\tabularnewline
+\midrule
+\endhead
+M-\% & Query replace\tabularnewline
+\bottomrule
+\end{longtable}
+
+Killing (``cutting'') text
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Key & Description\tabularnewline
+\midrule
+\endhead
+C-k & Kill line\tabularnewline
+\bottomrule
+\end{longtable}
+
+Yanking
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Key & Description\tabularnewline
+\midrule
+\endhead
+C-y & Yanks last killed text\tabularnewline
+\bottomrule
+\end{longtable}
+
+Macros
+
+Keyboard Macros
+
+Keyboard macros are a way to remember a fixed sequence of keys for later
+repetition. They're handy for automating some boring editing tasks.
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Key & Description\tabularnewline
+\midrule
+\endhead
+M-x ( & Start recording macro\tabularnewline
+M-x ) & Stop recording macro\tabularnewline
+M-x e & Play back macro once\tabularnewline
+M-5 M-x-e & Play back macro 5 times\tabularnewline
+\bottomrule
+\end{longtable}
+
+Modes
+
+``Every buffer has an associated major mode, which alters certain
+behaviors, key bindings, and text display in that buffer. The idea is to
+customize the appearance and features available based on the contents of
+the buffer.'' modes are typically activated by ending such as .py,
+.java, .rst, \ldots{}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Key & Description\tabularnewline
+\midrule
+\endhead
+M-x python-mode & Mode for editing Python files\tabularnewline
+M-x auto-fill-mode & Wraps your lines automatically when they get longer
+than 70 characters.\tabularnewline
+M-x flyspell-mode & Highlights misspelled words as you
+type.\tabularnewline
+\bottomrule
+\end{longtable}

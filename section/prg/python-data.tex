@@ -1,0 +1,239 @@
+\FILENAME
+
+\chapter{Data Management}
+
+Obviously when dealing with big data we may not only be dealing with
+data in one format but in many different formats. It is important that
+you will be able to master such formats and simlessly integerat in
+your analysis. Thus we provide some simple examples on which different
+data formats exist and how to use them.
+
+\section{Formats}
+
+\subsection{Pickle}
+
+Python pickle allows you to save data in a python native format into a file
+that can later be read in by other programs. However, the data format
+may not be portable among different python versions thus the format is
+often not suitable to store information. INstead we recommend for
+standrad data to use either json or yaml.
+
+\begin{verbatim}
+import pickle
+
+flavor = { "small": 100, 
+           "medium": 1000,
+           "large": 10000 }
+
+pickle.dump( flavor, open( "data.p", "wb" ) )
+
+\end{verbatim}
+
+To read it back in use
+
+\begin{verbatim}
+flavor = pickle.load( open( "data.p", "rb" ) )
+\end{verbatim}
+
+\subsection{Text Files}
+
+\begin{verbatim}
+content = open(“filename.txt”, “r”).read() 
+\end{verbatim}
+
+\begin{verbatim}
+with open('filename.txt','r') as file:
+    output = file.read()
+\end{verbatim}
+
+To split up the files into an array you can do
+
+\begin{verbatim}
+with open('filename.txt','r') as file:
+    lines = file.read().splitlines()
+\end{verbatim}
+
+
+In case the file is too big you will want to read the file line by
+line:
+
+\begin{verbatim}
+lines = open('filename.txt','r').readlines()
+\end{verbatim}
+
+
+\subsection{CSV Files}
+
+\begin{verbatim}
+import csv
+with open(‘data.csv’, ‘rb’) as f:
+   contents = csv.reader(f)
+for row in content:
+    print row
+\end{verbatim}
+
+using pandas
+
+\begin{verbatim}
+import pandas as pd
+df = pd.read_csv("example.csv") 
+\end{verbatim}
+
+\subsection{Excel spread sheets}
+
+\begin{verbatim}
+import pandas as pd
+filename = 'data.xlsx'
+data = pd.ExcelFile(file)
+df = data.parse('Sheet1')
+\end{verbatim}
+
+\subsection{YAML}
+
+\begin{verbatim}
+import yaml
+with open('data.yaml', 'r') as f:
+    content = yaml.load(f)
+\end{verbatim}
+
+\subsection{JSON}
+
+\begin{verbatim}
+import json
+with open('strings.json') as f:
+    content = json.load(f)
+\end{verbatim}
+
+\subsection{XML}
+
+Please contribute a section.
+
+\subsection{RDF}
+
+\begin{verbatim}
+from rdflib.graph import Graph
+g = Graph()
+g.parse("filename.rdf", format="format")
+for entry in g:
+   print(entry)
+\end{verbatim}
+
+\subsection{PDF}
+
+The Portable Document Format (PDF) has been made available by Adobe
+Inc. royalty free. This has enabled PDF to become a world wide adopted
+format that also has been standardized in 2008 (ISO/IEC 32000-1:2008,
+\url{https://www.iso.org/standard/51502.html}).  A lot of research is
+published in papers making PDF one of the defacto standards for
+publishing. However, PDF is difficult to parse and is focused on high
+quality pint putput instead of data representation. Nevertheless,
+tools to manipulate PDF exist:
+
+\begin{description}
+\item[PDFMiner] \url{https://pypi.python.org/pypi/pdfminer/} allows
+  the simple translation of PDF into text that than can be further
+  mined. The manual page helps to demonstrate some examples
+  \url{http://euske.github.io/pdfminer/index.html}.
+
+\item[pdf-parser.py]
+  \url{https://blog.didierstevens.com/programs/pdf-tools/} parses pdf
+  documents and identifies some structural elements that can than be
+  further processed.
+
+\end{description}
+
+If you know about other tools, let us know.
+
+
+\subsection{HTML}
+
+Beautiful soup
+
+please contribute a section
+
+\subsection{ConfigParser}
+
+\URL{https://pymotw.com/2/ConfigParser/}
+
+\subsection{ConfigDict}
+
+\URL{https://github.com/cloudmesh/cloudmesh.common/blob/master/cloudmesh/common/ConfigDict.py}
+
+\section{Encryption}
+
+Often we need to protect the information stored in a file. This is
+achieved with encryption. There are many methods of supporting
+encryption and even if a file is encrypted it may be target to
+attacks. Thus it is not only important to encrypt data that you do not
+want others to se but also to make sure that the system on which the
+data is hosted is secure. This is especially important if we talk
+about big data having a potential large effect if it gets into the
+wrong hands. 
+
+To illustrate one type of encryption that is non trivial we have
+chosen to demonstrate how to encrypt a file with an ssh key. In case
+you have openssl installed on your system, this can be achieved as follows.
+
+
+\begin{verbatim}
+#! /bin/sh
+
+# Step 1. Creating a file with data
+echo "Big Data is the future." > file.txt
+
+# Step 2. Create the pem 
+openssl rsa -in ~/.ssh/id_rsa -pubout  > ~/.ssh/id_rsa.pub.pem
+
+# Step 3. look at the pem file to illustrate how it looks like (optional)
+cat ~/.ssh/id_rsa.pub.pem
+
+# Step 4. encrypt the file into secret.txt
+openssl rsautl -encrypt -pubin -inkey ~/.ssh/id_rsa.pub.pem -in file.txt -out secret.txt
+
+# Step 5. decrypt the file and print the contents to stdout
+openssl rsautl -decrypt -inkey ~/.ssh/id_rsa -in secret.txt
+\end{verbatim}
+
+Most important here are Step 4 that encrypts the file and Step 5 that
+decrypts the file. Using the Python os module it is straight forward
+to implement this. However, we are providing in cloudmesh a convenient
+class that makes the use in python very simple.
+
+\begin{verbatim}
+from cloudmesh.common.ssh.encrypt import EncryptFile
+
+e = EncryptFile('file.txt', 'secret.txt')
+e.encrypt()
+e.decrypt()
+\end{verbatim}
+
+In our class we initialize it with the locations of the file that is
+to be encrypted and decrypted. To initiate that action just call the
+methods \verb|encrypt| and \verb|decrypt|.
+
+
+\subsection{Exercise}
+
+\begin{description}
+
+\item[Encryption.1] Test out the shell script to replicate how this
+  example works
+
+\item[Encryption.2] Test out the cloudmesh encryption class
+
+\item[Encryption.3] What other encryption methods exist. Can you
+  provide an example and contribute to the section?
+
+\item[Encryption.4] What is the issue of encryption that make it
+  challenging for Big Data
+ 
+\item[Encryption.5] Given a test dataset with many files text files,
+  how long will it take to encrypt and decrypt them on various
+  machines. Write a benchmark that you test. Develop this benchmark as
+  a group, test out the time it takes to execute it on a variety of
+  platforms.
+
+
+
+
+\end{description}

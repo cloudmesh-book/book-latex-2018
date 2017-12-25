@@ -1,0 +1,94 @@
+%\documentclass{article}
+%usepackage{hyperref}
+%\usepackage{graphicx}
+%\usepackage{longtable}
+%\newcommand{\toprule}{}
+%\newcommand{\bottomrule}{}
+%\newcommand{\tightlist}{}
+
+%\begin{document}
+
+\chapterimage{images/chameleon/logo.png} % Chapter heading image
+
+\part{Chameleon}
+
+This section is entirely copied from the Chameleon Web page. However
+we have included where appropriate some updates. We like to mention
+that we do not want to plagiarize, but are asking chameleon for
+permission to redistribute this.
+
+Chameleon is an experimental testbed for Computer Science funded by the
+NSF FutureCloud program. Chameleon is built over two sites, University
+of Chicago and TACC, offering a total of over 550 nodes and 5 PB of
+space in twelve
+\href{https://www.chameleoncloud.org/about/hardware-description/}{Standard
+Cloud Unit (SCU) racks}. To effectively support Computer Science
+experiments Chameleon offers bare metal reconfigurability on most of the
+hardware. To provide easy access to educational users, three SCUs at
+TACC (a quarter of the testbed) are configured with OpenStack KVM. You
+can read more about
+Chameleon~\href{https://www.chameleoncloud.org/about/chameleon/}{here}.
+
+Chameleon is broadly available to members of the US Computer Science
+research community and its international collaborators working in the
+open community on cloud research. The expectation is that any research
+performed on Chameleon will result in publication in a broadly
+available journal or conference.
+
+In order to promote fairness to all users, we have~the following set of
+Best Practices for using Chameleon~bare metal partitions:
+
+\begin{description}
+\item
+  \item[Think Small for Development and class use:] If you are just developing or
+  prototyping a system, and not yet running experiments at scale, use
+  only as many nodes as you actually need (e.g., many projects can be
+  developed and tested on 3-4 nodes), and try to take short
+  reservations. Start with hours first and do not let your VMs
+  unnecessarily run for long unused periods. 
+\item
+  \item[Automate deployments:] You can always snapshot your work/images
+  between sessions using the
+  \href{https://www.chameleoncloud.org/docs/user-guides/ironic/\#snapshotting_an_instance}{snapshotting
+  instructions} to simplify the redeployment of your environment during
+  the next work session. You can also use scripting and environment
+  customization to make it easier to redeploy images. An additional
+  benefit of automation is that it makes it easier for you to reproduce
+  your work and eventually~share it~with colleagues within your lab and
+  other collaborators.
+\item [Think Big for Experimentation:] Once you are ready to experiment you
+  will want to test your experimental setup on increasingly larger
+  scales. This is possible by taking an advance reservation for many
+  resources for a relatively short time. The more resources you need,
+  the more likely it is that you will need to run experiments at a less
+  attractive time (e.g., during the weekend) --- here's where automation
+  will also help. In justified cases, we will support reserving even the
+  whole bare metal testbed.
+\end{description}
+
+\section{More Information}
+
+In any case please visit the Chameleon Web page as there is also more
+information about other topics that we may not care about. Furthermore
+we do not use Advanced Appliences, but use ansible instead as it is
+independent from OpenStack and can be used with other frameworks.
+
+If you prefer you can also go to the Chameleon Web site using the
+following links. However we have improved some of the documentation
+found in this document. We would like to get your feedback in case you
+find errors or like to contribute tho this documentation.
+
+The links to Chameleons Documentation 
+
+\input{section/cloud/chameleon/resources}
+
+
+\input{section/cloud/chameleon/hardware}
+\input{section/cloud/chameleon/start}
+\input{section/cloud/chameleon/user-guide}
+\input{section/cloud/chameleon/horizon}
+\input{section/cloud/chameleon/faq}
+\input{section/cloud/chameleon/baremetal}
+\input{section/cloud/chameleon/heat}
+
+%\end{document}

@@ -1,220 +1,130 @@
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------------
+%	DO NOT CHAMGE CONFIGURATION
+%
+\RequirePackage[hyphens]{url}
+\documentclass[11pt,fleqn]{book} 
 
-\documentclass[11pt,fleqn]{book} % Default font size and left-justified equations
+\newcommand{\TITLE}{Clouds and Big Data}
+\newcommand{\SUBTITLE}{Theory and Practice}
+\newcommand{\AUTHOR}{Gregor von Laszewski\\Geoffrey C. Fox\\Judy Qui}
+\newcommand{\EMAIL}{laszewski@gmail.com}
 
-\input{book-format}
+\input{format/book-format}
+\chapterimage{water.png} % Chapter heading image
 
-
-%----------------------------------------------------------------------------------------
-%	PART
-%----------------------------------------------------------------------------------------
-
-\part{Preface}
-
-%----------------------------------------------------------------------------------------
-%	CHAPTER
-%----------------------------------------------------------------------------------------
-
-\chapterimage{chapter_head_2.pdf} % Chapter heading image
-
-\chapter{Introduction}
-
-
-\input{chapter/intro/about}
-\input{chapter/intro/disclaimer}
-\input{chapter/intro/preface}
-
-%----------------------------------------------------------------------------------------
-%	PART
-%----------------------------------------------------------------------------------------
-
-\part{Documenting Scientific Research}
-
-%----------------------------------------------------------------------------------------
-%	CHAPTER 1
-%----------------------------------------------------------------------------------------
-
-\chapterimage{chapter_head_2.pdf} % Chapter heading image
-
-\chapter{Documenting Scientific Research}
-\input{chapter/lesson/doc/report-book}
-% \input{chapter/lesson/doc/report}
-
-\chapter{Introduction to \LaTeX}
-
-\input{chapter/lesson/doc/latex}
-\input{chapter/lesson/doc/bibtex}
-
-\chapter{Editors}
-\input{chapter/lesson/doc/emacs}
-
-\chapter{Other Formats}
-\input{chapter/lesson/doc/rst}
-\input{chapter/lesson/doc/markdown}
-\input{chapter/lesson/doc/type}
+%
+%	END CONFIGURATION
+%--------------------------------------------------------------------------------------
 
 
 
-%----------------------------------------------------------------------------------------
-%	PART
-%----------------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------------
+%	EXAMPE FOR INCLUDING FIGURES
 
-\part{I523}
+%\FIGURE{htb} 
+%    {1.0}
+%    {images/kubernetes.jpeg}
+%    {The Architecture of the Framework}
+%    {F:tas-arch} 
 
-%----------------------------------------------------------------------------------------
-%	CHAPTER
-%----------------------------------------------------------------------------------------
+%
+%	END EXAMPLES
+%--------------------------------------------------------------------------------------
 
-\input{chapter/intro/fall2017}
+\include{part-preface}
 
+\include{part-intro}
 
-\chapter{Overview}
-
-\input{chapter/intro/overview}
-
-\input{chapter/intro/organization}
-\input{chapter/intro/git}
-\input{chapter/intro/project}
-\input{chapter/intro/assignments}
-
-
-
-\chapter{Theory}
-
-\input{chapter/theory/introduction}
-\input{chapter/theory/overview}
-
-\input{chapter/theory/health}
-\input{chapter/theory/lifestyle}
-\input{chapter/theory/physics}
-\input{chapter/theory/python-tech}
-\input{chapter/theory/python}
-\input{chapter/theory/radar}
-\input{chapter/theory/sensor}
-\input{chapter/theory/sport}
-\input{chapter/theory/technology}
-\input{chapter/theory/usecases}
-\input{chapter/theory/web}
-
-%\input{chapter/theory/cloud}
-%\input{chapter/theory/clustering}
-
-
-
-
-
-
-%----------------------------------------------------------------------------------------
-%	PART
-%----------------------------------------------------------------------------------------
-
-\part{Python}
-
-%----------------------------------------------------------------------------------------
-%	CHAPTER 1
-%----------------------------------------------------------------------------------------
-
-\chapterimage{chapter_head_2.pdf} % Chapter heading image
-
-\chapter{Introduction}
-
-\input{chapter/prg/python-intro}
-
-\chapter{Install}
-
-\input{chapter/prg/python-install}
-
-\chapter{Language}
-
-\input{chapter/prg/python}
-
-\chapter{Cloudmesh Command Shell}
-
-\input{chapter/python-cmd5}
-
-\input{chapter/lesson/code}
-
-
-%----------------------------------------------------------------------------------------
-%	PART
-%----------------------------------------------------------------------------------------
-
-\part{Python Notebooks}
-
-\input{notebooks/facedetection.tex}
-\input{notebooks/scikit-learn-k-means.tex}
-\input{notebooks/fingerprint_matching.tex}
-
-
+%\include{part-doc}
+ 
 %----------------------------------------------------------------------------------------
 %	LINUX
 %----------------------------------------------------------------------------------------
 
 \part{Linux}
 
-\input{chapter/lesson/linux}
-\input{chapter/lesson/virtualbox}
+\include{section/linux}
+\include{section/git/github}
+%\include{section/git/git-techlist}
+\include{section/virtualbox}
+ 
+
+\include{part-python}
+
+\part{Python Notebooks}
+
+\include{notebooks/facedetection.tex}
+\include{notebooks/scikit-learn-k-means.tex}
+\include{notebooks/fingerprint_matching.tex}
+
+
+
+%\include{part-container}
+
+
+%\include{part-applications}
+%\include{part-dev}
+%\include{part-iot}
+%\include{sentient}
+
+
+%\include{part-chameleon}
+
+% \include{part-icloud}
+
+
+
 
 
 %----------------------------------------------------------------------------------------
 %	PART
 %----------------------------------------------------------------------------------------
 
-\part{IoT}
+% \part{I523}
 
 %----------------------------------------------------------------------------------------
-%	CHAPTER 1
+%	CHAPTER
 %----------------------------------------------------------------------------------------
 
-\chapterimage{chapter_head_2.pdf} % Chapter heading image
+%\include{section/intro/fall2017}
 
-\input{chapter/lesson/iot/introduction}
-\input{chapter/lesson/iot/hardware}
-\input{chapter/lesson/iot/projects}
-\input{chapter/lesson/iot/esp8266}
-\input{chapter/lesson/iot/pi}
-\input{chapter/lesson/iot/dexter}
-\input{chapter/lesson/iot/grovepi}
-\input{chapter/lesson/iot/sensors}
-\input{chapter/lesson/iot/vnc}
-\input{chapter/lesson/iot/turtle}
-\input{chapter/lesson/iot/tools}
+
+%\chapter{Overview}
+
+%\include{section/intro/overview}
+
+%\include{section/intro/organization}
+%
+%\include{section/intro/project}
+%\include{section/intro/assignments}
+
+
+
+\begin{comment}
+
+%----------------------------------------------------------------------------------------
+%	PART
+%----------------------------------------------------------------------------------------
+
+
+
+
 
 
 %----------------------------------------------------------------------------------------
-%	CLOUD
+%	PART
 %----------------------------------------------------------------------------------------
 
-\part{i5xx Cloud}
+\part{Technologies}
 
-\chapterimage{chapter_head_2.pdf} % Chapter heading image
-
-\chapter{Cloud}
-
-\chapter{Fundamentals}
-
-\input{chapter/cloud/fundamentals}
-
-\chapter{Participation}
-
-\input{chapter/cloud/participation/index}
-
-\chapter{Assignment}
-
-\input{chapter/cloud/assignment/index}
-
-\chapter{Evaluation}
-
-\input{chapter/cloud/evaluation/index}
-
+%\include{section/i524/technologies}
 
 %----------------------------------------------------------------------------------------
 %	FORMAT
 %----------------------------------------------------------------------------------------
 
-\input{format}
+%\include{format}
+
 
 %----------------------------------------------------------------------------------------
 %	Appendix
@@ -223,20 +133,27 @@
 \part{Appendix}
 
 
+%\cite{book_key}
+%\cite{article_key}
+
 \chapter*{Bibliography}
 \addcontentsline{toc}{chapter}{\textcolor{ocre}{Bibliography}}
 
 %------------------------------------------------
 
-\section*{Articles}
-\addcontentsline{toc}{section}{Articles}
-\printbibliography[heading=bibempty,type=article]
+%\section*{Articles}
+%\addcontentsline{toc}{section}{Articles}
+%\printbibliography[heading=bibempty,type=article]
 
 %------------------------------------------------
 
-\section*{Books}
-\addcontentsline{toc}{section}{Books}
-\printbibliography[heading=bibempty,type=book]
+%\section*{Books}
+%\addcontentsline{toc}{section}{Books}
+%\printbibliography[heading=bibempty,type=book]
+
+\section*{References}
+\printbibliography[heading=bibempty]
+
 
 %----------------------------------------------------------------------------------------
 %	INDEX
@@ -247,6 +164,8 @@
 \setlength{\columnsep}{0.75cm}
 \addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}}
 \printindex
+
+\end{comment}
 
 %----------------------------------------------------------------------------------------
 
