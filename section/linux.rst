@@ -1,9 +1,15 @@
 Linux Shell
 ===========
 
-There are many good tutorials out there that explain why one needs a
-linux shell and not just a GUI. Randomly we picked the firts one that
-came up with a google query (This is not an endorsement for the
+It is important to how to use a Linux command shell as the development
+of scalable applications often requires the execution and scripting of
+the commands. Graphical user interfaces may exist to services that
+allow deployment on large number of servers, but such applications
+need to be developed first. 
+
+There are many good tutorials that explain how to use the linux
+command shell. Randomly we picked the first one that
+came up with a google query. However, this is not an endorsement for the
 material we point to, but could be a worth while read for someone that
 has no experience in Shell programming:
 
@@ -15,6 +21,10 @@ commands that you may als find in a link to a RefCard.
 
 * http://www.cheat-sheets.org/#Linux
 
+For cloud computing it is essential that you have familiarity of the
+linux commandline and the terminal. Clicking 1000+ times in a GUI will
+not be efficient. We typically use `bash`  as the command interpreter
+on many systems. 
   
 
 File commands
@@ -129,7 +139,6 @@ following in your .bash_profile file::
   alias h='history'
 
 More Information
-
 
 https://cloudmesh.github.io/classes/lesson/linux/refcards.html 
 
