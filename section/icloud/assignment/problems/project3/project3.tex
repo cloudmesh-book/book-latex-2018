@@ -4,7 +4,10 @@
 By this point you should have gone over the sections concerning Hadoop Setup
 and a few Hadoop programs. Now you are going to blend these applications by
 implementing a parallel version of BLAST (Basic Local Alignment Search Tool:
-\url{http://blast.ncbi.nlm.nih.gov/Blast.cgi} ) using the programming
+
+\URL{http://blast.ncbi.nlm.nih.gov/Blast.cgi} 
+
+using the programming
 interfaces of the Hadoop MapReduce framework. Note that this application is
 written in "Map-Only" fashion, which means no reduce code is necessary.
 
@@ -54,15 +57,16 @@ The point total for this exercise is 3, where the distribution is as follows:
 \end{itemize}
 
 \subsection*{Introduction}   
+
 Hadoop-Blast is an advanced Hadoop program which helps BLAST, a bioinformatics
 application, to utilize the computing capability of Hadoop. This exercise shows
 the details of its implementation, and provides an example of how to handle
-similar approaches in other applications. 
+similar approaches in other applications.
 
 BLAST is one of the most widely used bioinformatics applications written in
 C++. The version we are using is v2.2.23, which houses new features and better
 performance. The database used in the following settings is a subset of a full
-8.5GB (nr) database; its full name is Non-redundant protein sequence database.
+8.5GB (nr) database; its full name is Non-redundant protein sequence database.
 Optionally, for more details on how to run the BLAST binary, please see Big
 Data for Science tutorial page for Blast Installation [NOT required for the
 assignment].

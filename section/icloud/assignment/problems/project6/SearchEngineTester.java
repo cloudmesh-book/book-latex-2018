@@ -22,7 +22,7 @@ public static void searchKeyword(String keyword) throws Exception {
         int freq = 0;
         String pageUri = null;
         float pageRank = 0;
- 
+
 	    // Write your codes for the main part of implementation here
         // Step 1: get the document ID of one page, as well as the keyword's frequency in that page
 		// Step 2: get the URI of the page from clueWeb09DataTable

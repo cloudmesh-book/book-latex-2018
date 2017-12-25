@@ -1,6 +1,6 @@
 /*file: DataAnalysis.java*/
 package cgl.hadoop.apps.runner;
- 
+ 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.conf.Configured;
 import org.apache.hadoop.filecache.DistributedCache;
@@ -14,12 +14,12 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat;
 import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
- 
+ 
 import cgl.hadoop.apps.DataFileInputFormat;
 import java.net.URI;
- 
+ 
 public class DataAnalysis extends Configured implements Tool {
- 
+ 
   public static String WORKING_DIR = "working_dir";
 	public static String OUTPUT_DIR = "out_dir";
 	public static String EXECUTABLE = "exec_name";
@@ -27,7 +27,7 @@ public class DataAnalysis extends Configured implements Tool {
 	public static String PARAMETERS = "params";
 	public static String DB_NAME = "nr";
 	public static String DB_ARCHIVE = "BlastDB.tar.gz";
- 
+ 
 /**
  * Launch the MapReduce computation.
  * This method first, remove any previous working directories and create a new one
@@ -45,22 +45,22 @@ public class DataAnalysis extends Configured implements Tool {
 	void launch(int numReduceTasks, String programDir,
 			String execName, String workingDir, String databaseArchive, String databaseName, 
 			String dataDir, String outputDir, String cmdArgs) throws Exception {
- 
+ 
 		Configuration conf = new Configuration();
 		Job job = new Job(conf, execName);
- 
+ 
 		// First get the file system handler, delete any previous files, add the
 		// files and write the data to it, then pass its name as a parameter to
 		// job
 		Path hdMainDir = new Path(outputDir);
 		FileSystem fs = FileSystem.get(conf);
 		fs.delete(hdMainDir, true);
- 
+ 
 		Path hdOutDir = new Path(hdMainDir, "out");
- 
+ 
 		// Starting the data analysis.
 		Configuration jc = job.getConfiguration();
- 
+ 
 		jc.set(WORKING_DIR, workingDir);
 		jc.set(EXECUTABLE, execName);
 		jc.set(PROGRAM_DIR, programDir); // this the name of the executable archive
@@ -69,17 +69,17 @@ public class DataAnalysis extends Configured implements Tool {
 		jc.set(PARAMETERS, cmdArgs);
 		jc.set(OUTPUT_DIR, outputDir);
 		
- 
+ 
 		long startTime = System.currentTimeMillis();
 		DistributedCache.addCacheArchive(new URI(programDir), jc);
 		System.out.println("Add Distributed Cache in "
 				+ (System.currentTimeMillis() - startTime) / 1000.0
 				+ " seconds");		
 		
- 
+ 
 		FileInputFormat.setInputPaths(job, dataDir);
 		FileOutputFormat.setOutputPath(job, hdOutDir);
- 
+ 
 		job.setJarByClass(DataAnalysis.class);
 		job.setMapperClass(RunnerMap.class);
 		job.setOutputKeyClass(IntWritable.class);
@@ -90,17 +90,17 @@ public class DataAnalysis extends Configured implements Tool {
 		job.setNumReduceTasks(numReduceTasks);
 		
 		startTime = System.currentTimeMillis();
- 
+ 
 		int exitStatus = job.waitForCompletion(true) ? 0 : 1;
 		System.out.println("Job Finished in "
 				+ (System.currentTimeMillis() - startTime) / 1000.0
 				+ " seconds");
 		//clean the cache
- 
+ 
 		
 		System.exit(exitStatus);
 	}
- 
+ 
 	public int run(String[] args) throws Exception {
 		if (args.length < 8) {
 			System.err.println("Usage: DataAnalysis <Executable and Database Archive on HDFS>
@@ -120,12 +120,12 @@ public class DataAnalysis extends Configured implements Tool {
 		String cmdArgs = args[7] ;
 		
 		int numReduceTasks = 0;// We don't need reduce here.
- 
+ 
 		launch(numReduceTasks, programDir, execName, workingDir , 
 			databaseArchive, databaseName,inputDir,	outputDir, cmdArgs);
 		return 0;
 	}
- 
+ 
 	public static void main(String[] argv) throws Exception {
 		int res = ToolRunner.run(new Configuration(), new DataAnalysis(), argv);
 		System.exit(res);
