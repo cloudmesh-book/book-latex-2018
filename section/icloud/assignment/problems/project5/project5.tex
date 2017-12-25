@@ -34,7 +34,7 @@ The point total for this exercise is 3, where the distribution is as follows:
 HBase FreqIndexBuilder is an advanced WordCount program which counts the number
 of occurrences of each word in a given text input dataset and also stores the
 related document name (identification number) as HBase inverted index records.
-These Inverted indices for text data are built for supporting efficient
+These Inverted indices for text data are built for supporting efficient
 searches in a huge set of text data.
 
 \subsection*{What is Inverted Index?}
@@ -73,7 +73,7 @@ This type of application is called ?Map-Only? parallel application.
 \subsubsection*{Mapper}
 A Mapper overrides the ``map'' function from the Class ``org.apache.hadoop.hbase.mapreduce.TableMapper\\
 \textless Text, LongWritable\textgreater'', which provides \textless key, value\textgreater pairs as the input. A Mapper implementation may output \textless key,value\textgreater pairs using the provided Context.
-\textless key, value\textgreater of this map function is \textless rowkey, content\textgreater,  where the key is the rowkey of an HBase record related to a specified URI, and the content is the stored text of that URI. Your Map task should output \textless word, \textless docId, frequency\textgreater\textgreater for each word in the content of text.
+\textless key, value\textgreater of this map function is \textless rowkey, content\textgreater, where the key is the rowkey of an HBase record related to a specified URI, and the content is the stored text of that URI. Your Map task should output \textless word, \textless docId, frequency\textgreater\textgreater for each word in the content of text.
 
 \subsubsection*{Pseudocode}
 \begin{lstlisting}[language=Java]

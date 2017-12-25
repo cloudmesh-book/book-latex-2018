@@ -1,11 +1,11 @@
 /*file: PageRankMap.java*/
 package indiana.cgl.hadoop.pagerank;
- 
+
 import java.io.BufferedWriter;
 /* see detail in source code */
  
 public class PageRankMap extends Mapper<LongWritable, Text, LongWritable, Text> {
- 
+
   //each map task handles one line within an adjacency matrix file
   // key: file offset
   // value: <sourceUrl PageRank#targetUrls>

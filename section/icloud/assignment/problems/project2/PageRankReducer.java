@@ -1,6 +1,6 @@
 /*file: PageRankReducer.java*/
 package indiana.cgl.hadoop.pagerank;
- 
+
 import java.io.BufferedWriter;
 /* see detail in source code */
  
