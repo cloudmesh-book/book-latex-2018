@@ -1,39 +1,12 @@
-\definecolor{codegreen}{rgb}{0,0.6,0}
-\definecolor{codegray}{rgb}{0.5,0.5,0.5}
-\definecolor{codepurple}{rgb}{0.58,0,0.82}
-\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
- 
-\lstdefinestyle{mystyle}{
-    backgroundcolor=\color{backcolour},   
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple},
-    basicstyle=\footnotesize,
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,                 
-    numbers=left,                    
-    numbersep=5pt,                  
-    showspaces=false,                
-    showstringspaces=false,
-    showtabs=false,                  
-    tabsize=2
-}
- 
-\lstset{style=mystyle}
-
 
 \section{Hadoop PageRank Cloud Computing}
-\section*{Goal}
  
 This assignment provides an illustration of PageRank algorithms and Hadoop. You
 will then blend these applications by implementing a parallel version of
 PageRank using the programming interfaces of the Hadoop MapReduce framework. 
 
 
-\section*{Deliverables}
+\subsection{Deliverables}
 You are required to turn in the following items in a zip file
 (username\_HadoopPageRank.zip) in this assignment: 
 
@@ -46,14 +19,14 @@ You are required to turn in the following items in a zip file
 
 \end{itemize}
 
-\section*{Evaluation}
+\subsection{Evaluation}
 The point total for this exercise is 10, where the distribution is as follows:
 \begin{itemize}
 \item Completeness of your code and output (7 points)
 \item Correctness of written report (3 points)
 \end{itemize}
 
-\section{What is PageRank?}
+\subsection{What is PageRank?}
 The web search engine is a typical distributed system on the Internet. It is
 designed to search for information on the World Wide Web. The search results
 are generally presented in a list of results and are often called hits.
@@ -83,7 +56,7 @@ and the directed edge means there is one link from the source webpage to the
 target webpage. The percentage on each vertex represents the rank value of each
 webpage.
 
-\subsection*{Notes}
+\subsection{Notes}
 
 You can implement a sequential PageRank that can run on desktops or laptops.
 But when processing larger input data, like web graphs containing more than a
@@ -94,7 +67,7 @@ become increasingly popular. In one published paper, the job execution engines
 that claim to support large-scale PageRank include: MPI, Hadoop, Dryad,
 Twister, Pregel. 
 
-\subsection*{Formula}
+\subsection{Formula}
 
 Equation~\ref{eq:pagerank} is the formula to calculate the rank value for each
 webpage. We will learn this formula by applying it to the case in
@@ -121,7 +94,7 @@ be any double value. After several iteration calculations, the rank values
 converge to the stationary distribution regardless of what their initial values
 are.
 
-\subsection*{Damping factor}
+\subsection{Damping factor}
 The PageRank theory holds that even an imaginary surfer who is randomly
 clicking on links will eventually stop clicking. The probability, at any step,
 that the person will continue is a damping factor d. Various studies have
@@ -133,7 +106,7 @@ Equation~\ref{eq:pagerankwithdf}. N refers to the total number of unique urls.
 PR(u) = \frac{1-d}{N} + d * \sum_{v \in Set} \frac{PR(V)}{L(v)}
 \end{equation}
 
-\section*{Hadoop PageRank DataFlow}
+\section{Hadoop PageRank DataFlow}
 In this exercise, we have provided a sketch code which contains three MapReduce
 jobs for you to implement:
 
@@ -179,7 +152,7 @@ any. "Hadoop - PageRank" in Figure~\ref{fig:hadoopdataflow} shows an example
 for the PageRank data processing.
 
 
-\section*{Code for Hadoop PageRank}
+\section{Code for Hadoop PageRank}
 
 You need to complete two files in the provided pacakge inside
 "indiana/cgl/hadoop/pagerank/": PageRankMap.java and PageRankReduce.java. Code
@@ -188,7 +161,7 @@ snapshots are shown below.
 \lstinputlisting[language=Java]{section/icloud/assignment/problems/project2/PageRankMap.java}
 \lstinputlisting[language=Java]{section/icloud/assignment/problems/project2/PageRankReducer.java}
 
-\section*{Edit}
+\subsection{Edit}
 The sketch code is stored within the provided VirtualBox image. Use Eclipse or
 linux text editor vi/vim to add your code.
 
@@ -198,7 +171,10 @@ $ vim src/indiana/cgl/hadoop/pagerank/PageRankMap.java
 $ vim src/indiana/cgl/hadoop/pagerank/PageRankReduce.java
 \end{lstlisting}
 
-\section*{Compile and run your code}
+% $ fix laout do not remove 
+
+\subsection{Compile and run your code}
+
 Use the one-click script compileAndExecHadoopPageRank.sh provided below.
 Standard error messages such as compile errors, execution errors, etc. will be
 redirected on the screen. Debug them based on the returned messages.
@@ -209,7 +185,7 @@ $ cd /root/MoocHomeworks/HadoopPageRank/
 $ ./compileAndExecHadoopPageRank.sh PageRankDataGenerator/pagerank5000g50.input.0 5000 1
 \end{lstlisting}
 
-\section*{View the result}
+\subsection{View the result}
 The result is generated as /root/hbaseMoocAntProject/output/project2.txt. 
 \begin{lstlisting}[language=bash]
 $ cd /root/MoocHomeworks/HadoopPageRank/
