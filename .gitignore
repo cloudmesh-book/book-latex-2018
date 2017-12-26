@@ -1,3 +1,12 @@
+# Lua
+*.markdown.*
+# LaTeX
+*.dvi
+*.out
+*.html
+_*
+*.synctex.*
+#
 .#*
 *.aux
 *.bbl
