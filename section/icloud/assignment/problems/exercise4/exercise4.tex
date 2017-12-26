@@ -1,4 +1,7 @@
 \section*{HBase WordCount}
+
+\TODO{Hyungro: fix hyperlinks, use exercise instead or project where
+  appropriate}
  
 Write an HBase WordCount program to count all unique terms' occurrences from
 the clueWeb09 dataset. Each row record of columnfamily "frequencies" is unique;
@@ -10,7 +13,7 @@ version we will supply to you.
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics {section/icloud/assignment/problems/project4/wordcounttablescheme}
+\includegraphics {section/icloud/assignment/problems/exercise4/wordcounttablescheme}
 \caption{WordCount table schema for storing unique term's occurrences}
 \label{fig:wordcounttablescheme}
 \end{figure}
@@ -52,19 +55,19 @@ We are using the ClueWeb09 dataset, which was created to support research on
 information retrieval and related human language technologies. It consists of
 about 1 billion webpages in ten languages that were collected in January and
 February 2009. The dataset is used by several tracks of the TREC
-conference (See~\hyperlink{link_project4}{Useful Links}). Since the ClueWeb09
+conference (See~\hyperlink{link_exercise4}{Useful Links}). Since the ClueWeb09
 dataset is composed of webpages crawled from the Internet, the uploaded table
 schemas are designed as shown in
 Figure 2.
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics {section/icloud/assignment/problems/project4/datatablescheme}
+\includegraphics {section/icloud/assignment/problems/exercise4/datatablescheme}
 \caption{Data table schema for storing the ClueWeb09 dataset}
 \label{fig:datatablescheme}
 \end{figure}
 
-So, while similar to Hadoop WordCount (See~\hyperlink{link_project4}{Useful
+So, while similar to Hadoop WordCount (See~\hyperlink{link_exercise4}{Useful
 Links}), the differences are that data is stored on HBase and URI is the
 "filename" that contains all
 the text content.
@@ -153,7 +156,7 @@ The main function has been provided as standard initialization, although you
 can modify it to suit your own style. Hint: the provided code is designed for
 using put operations in the reducer content.write() function. Before writing
 the codes, please read the HBase MapReduce tutorial first
-(See~\hyperlink{link_project4}{Useful Links}).
+(See~\hyperlink{link_exercise4}{Useful Links}).
 
 
 
@@ -190,7 +193,7 @@ $ cat output/project1.txt
 
 \subsection*{Useful Links}
 \begin{itemize}
-  \item \href{http://hbase.apache.org/}{HBase official website}\hypertarget{link_project4}
+  \item \href{http://hbase.apache.org/}{HBase official website}\hypertarget{link_exercise4}
   \item \href{http://lemurproject.org/clueweb09}{Clueweb09 dataset}
   \item \href{http://hbase.apache.org/book/mapreduce.example.html}{HBase MapReduce Examples}
   \item \href{http://salsahpc.indiana.edu/csci-b649-spring-2014/projects/project1.html}{Hadoop WordCount}
