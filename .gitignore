@@ -1,3 +1,4 @@
+.DS_*
 # Lua
 *.markdown.*
 # LaTeX
