@@ -12,7 +12,6 @@ LaTeX is available on all modern computer systems. A very good
 installation for OSX is available at:
 
 \begin{itemize}
-\tightlist
 \item
   \url{https://tug.org/mactex/}
 \end{itemize}
@@ -31,7 +30,7 @@ for bibliography management.
 Thus you will have the most of them on your system.
 
 \begin{itemize}
-\tightlist
+
 \item
   pdflatex: the latex program producing pdf
 \item
@@ -68,7 +67,7 @@ bibliography management with it and not just LaTeX. However, other
 editors are available including:
 
 \begin{itemize}
-\tightlist
+
 \item
   Kile, TeXworks, JLatexEditor, Gedit LaTeX Plugin, TeXMaker
 \end{itemize}
@@ -84,7 +83,7 @@ sudo apt-get install texmaker
 Other installations:
 
 \begin{itemize}
-\tightlist
+
 \item
   kile is installed by default
 \item
@@ -95,7 +94,7 @@ Other installations:
 \index{Latex!installation!OSX}
 
 \begin{itemize}
-\tightlist
+
 \item
   \url{https://www.latex-project.org/get/}
 \end{itemize}
@@ -104,7 +103,7 @@ Other installations:
 \index{Latex!installation!Windows}
 
 \begin{itemize}
-\tightlist
+
 \item
   \url{https://www.latex-project.org/get/}
 \end{itemize}
@@ -195,7 +194,7 @@ We do not know where this service is located. However it offers similar
 services as ShareLatex and Overleaf.
 
 \begin{itemize}
-\tightlist
+
 \item
   \url{https://papeeria.com/}
 \end{itemize}
@@ -238,37 +237,29 @@ section.
 Quotes are not written with the " character, but are embedded in two
 left single quotes and two right single quotes:
 
-\begin{verbatim}
-``This is a quote''
-\end{verbatim}
 
-which will result in:
-
+\begin{tcblisting}{colback=blue!5!white,colframe=gray!50!blue,listing side text,
+  title=quote,fonttitle=\bfseries}
 ``This is a quote''
+\end{tcblisting}
 
 In many papers we see that the quote is misused while putting quotes
 around a word. However quotes are often just used to quote a text from
 another paper. Instead of using quotes authors may actually emphasize a
 word. LaTeX has a special command for that using:
 
-\begin{verbatim}
+\begin{tcblisting}{colback=blue!5!white,colframe=gray!50!blue,listing side text,
+  title=emphasize,fonttitle=\bfseries}
 {\em this is emphasized}
-\end{verbatim}
-
-resulting in
-
-\emph{this is emphasized}
+\end{tcblisting}
 
 To write a text as bold (which should also be avoided as bold is
 typically used in section headers), you can use:
 
-\begin{verbatim}
-{\em this is bold fett}
-\end{verbatim}
-
-resulting in
-
-\textbf{this is bold fett}
+\begin{tcblisting}{colback=blue!5!white,colframe=gray!50!blue,listing side text,
+  title=bold fett,fonttitle=\bfseries}
+{\bf this is bold fett}
+\end{tcblisting}
 
 \subsection{Sections}\label{sections}
 \index{Latex!Elements!sections}
@@ -303,65 +294,47 @@ Multiple empty lines will be reduced to a single empty line.
 \subsection{Itemize}\label{itemize}
 \index{Latex!Elements!itemiz}
 
-Itemized lists can be written as:
 
-\begin{verbatim}
+Itemized lists can be written as follows:
+
+
+\begin{tcblisting}{colback=blue!5!white,colframe=gray!50!blue,listing side text,
+  title=itemize,fonttitle=\bfseries}
 \begin{itemize}
    \item First item
    \item Second item
-\begin{itemize}
-\end{verbatim}
-
-resulting in
-
-\begin{itemize}
-\tightlist
-\item
-  First item
-\item
-  Second item
 \end{itemize}
+\end{tcblisting} 
+
 
 \subsection{Enumerate}\label{enumerate}
 \index{Latex!Elements!enumerate}
 
 Enumerations can be written as:
 
-\begin{verbatim}
+\begin{tcblisting}{colback=blue!5!white,colframe=gray!50!blue,listing side text,
+  title=enumerate,fonttitle=\bfseries}
 \begin{enumerate}
    \item First item
    \item Second item
-\begin{enumerate}
-\end{verbatim}
-
-resulting in
-
-\begin{enumerate}
-\tightlist
-\item
-  First item
-\item
-  Second item
 \end{enumerate}
+\end{tcblisting} 
 
 \subsection{Descriptions}\label{descriptions}
 \index{Latex!Elements!description}
 
 Description lists can be written as:
 
-\begin{verbatim}
-\begin{itemize}
-   \item[Cloud] My definition of a Cloud.
-   \item[Big Data] My definition of Big Data
-\begin{itemize}
-\end{verbatim}
-
+\begin{tcblisting}{colback=blue!5!white,colframe=gray!50!blue,listing side text,
+  title=enumerate,fonttitle=\bfseries}
 \begin{description}
-\item[Cloud:]
-My definition of a Cloud
-\item[Big Data:]
-My definition of Big Data
+   \item[Cloud:] My definition of a Cloud is over more than one line
+     so we show the indentation.
+   \item[Big Data:] My definition of Big Data is also a long description.
 \end{description}
+\end{tcblisting} 
+
+
 
 \subsection{Images}\label{images}
 \index{Latex!Elements!images}
@@ -433,7 +406,7 @@ good online resouce is provided by the following online resource from
 which we have copied some examples:
 
 \begin{itemize}
-\tightlist
+
 \item
   \url{https://en.wikibooks.org/wiki/LaTeX/Mathematics}
 \end{itemize}
@@ -448,56 +421,42 @@ at the beginnning of the document after the document class
 
 Exponents are using the \^{} character:
 
-\begin{verbatim}
-$ (a + b)^2 = a^2 + 2ab + b^{c+2} $
-\end{verbatim}
-
-\[(a - b)^2 = a^2 - 2ab + b^2\]
+\begin{tcblisting}{colback=blue!5!white,colframe=gray!50!blue,listing side text,
+  title=exponents,fonttitle=\bfseries}
+$(a+b)^2 = a^2 + 2ab + b^{c+2}$
+\end{tcblisting} 
 
 Greek letters are referred to by their name proceeded by the slash:
 
-\begin{verbatim}
-$$ \alpha \beta \gamma \Gamma \pi \Pi \phi $$
-\end{verbatim}
-
-$$ \alpha \beta \gamma \Gamma \pi \Pi \phi $$
+\begin{tcblisting}{colback=blue!5!white,colframe=gray!50!blue,listing side text,
+  title=greek,fonttitle=\bfseries}
+$ \alpha \beta \gamma \Gamma \pi \Pi \phi $
+\end{tcblisting}
 
 
 Limits can be written as follows:
 
-\begin{verbatim}
-$$ \lim_{x \to \infty} \exp(-x) = 0 $$
-\end{verbatim}
-
-$$\lim_{x \to \infty} \exp(-x) = 0$$
+\begin{tcblisting}{colback=blue!5!white,colframe=gray!50!blue,listing side text,  title=limits,fonttitle=\bfseries}
+$ \lim_{x \to \infty} \exp(-x) = 0 $
+\end{tcblisting}
 
 Fractions are indicated by the frac command, and binomials by binom:
 
-\begin{verbatim}
+\begin{tcblisting}{colback=blue!5!white,colframe=gray!50!blue,listing side text,  title=fraction,fonttitle=\bfseries}
 $ \frac{n!}{k!(n-k)!} = \binom{n}{k} $   
-\end{verbatim}
-
-$$\frac{n!}{k!(n-k)!} = \binom{n}{k}$$
+\end{tcblisting}
 
 Matricies can be created as follows:
 
-\begin{verbatim}
-A_{m,n} = 
+\begin{tcblisting}{colback=blue!5!white,colframe=gray!50!blue,listing side text,  title=matrix,fonttitle=\bfseries}
+$ A_{m,n} = 
 \begin{pmatrix}
   a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
   a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
   \vdots  & \vdots  & \ddots & \vdots  \\
   a_{m,1} & a_{m,2} & \cdots & a_{m,n} 
-\end{pmatrix}
-\end{verbatim}
-
-$$A_{m,n} = 
-\begin{pmatrix}
-  a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
-  a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
-  \vdots  & \vdots  & \ddots & \vdots  \\
-  a_{m,1} & a_{m,2} & \cdots & a_{m,n} 
-\end{pmatrix}$$
+\end{pmatrix} $
+\end{tcblisting}
 
 \section{Advanced topics}
 
@@ -615,7 +574,7 @@ We will refrain from providing a detailed analysis on why we use LaTeX
 in many cases versus other technologies. In general, we find that LaTeX:
 
 \begin{itemize}
-\tightlist
+
 \item
   is incredibly stable
 \item
@@ -658,7 +617,7 @@ or Mendeley is possible.
 However, we ran into issues whenever we use word:
 
 \begin{itemize}
-\tightlist
+
 \item
   Word tends sometimes to crash for unknown reasons and we lost a lot of
   work
@@ -767,7 +726,7 @@ version.
 Using the ACM templates is documented here:
 
 \begin{itemize}
-\tightlist
+
 \item
   \url{https://wiki.lyx.org/Examples/AcmSiggraph}
 \end{itemize}
