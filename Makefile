@@ -41,13 +41,6 @@ skim:
 	echo $(DEFAULT)
 	open -a /Applications/skim.app $(DEFAULT).pdf
 
-s:
-	$(LATEX) $(FLAGS) single
-
-
-fast:
-	$(LATEX) $(FLAGS) $(FILE)
-
 all:
 	$(LATEX) $(FLAGS) $(FILE)
 	makeindex $(FILE).idx -s format/StyleInd.ist
@@ -107,6 +100,7 @@ clean:
 	rm -f *.fdb_latexmk
 	rm -f *.synctex.gz
 	rm -rf _markdown_*
+	rm -rf dest
 
 
 view:
