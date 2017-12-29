@@ -1,0 +1,262 @@
+\chapter{Scipy}
+\label{c:scipy}
+
+SciPy is a library built above numpy and has a number of off the shelf
+algorithms and operations implemented. These include algorithms from
+calculus (such as integration), statistics, linear algebra,
+image-processing, signal processing, machine learning.
+
+To achieve this, SciPy bundels a number of useful open-source software
+for mathematics, science, and engineering. It includes the follwoing
+packages:
+
+\begin{description}
+
+\item[NumPy,] for managin N-dimensional arrays
+\item[SciPy library,] to access fundamental scientific computing capabilities
+\iten[Matplotlib,] to conduct 2D plotting
+\item[IPython,] for an Interactive console (see jupyter)
+\item[Sympy,] for symbolic mathematics
+\item[pandas,] for providing data structures and analysis
+
+\end{description}
+
+
+\section{Introduction}
+
+First we add the usual scientific computing modules with the typical
+abbreviations, including sp for scipy. We could invoke scipy's
+statistical package as sp.stats, but for the sake of laziness we
+abbreviate that too.
+
+\begin{verbatim}
+import numpy as np # import numpy
+import scipy as sp # import scipy
+from scipy import stats # refer directly to stats rather than sp.stats
+import matplotlib as mpl # for visualization
+from matplotlib import pyplot as plt # refer directly to pyplot 
+                                     # rather than mpl.pyplot
+\end{verbatim}
+
+Now we create some random data to play with. We generate 100 samples
+from a Gaussian distribution centered at zero.
+
+\begin{verbatim}
+s = sp.randn(100)
+\end{verbatim}
+
+How many elements are in the set?
+
+\begin{verbatim}
+print ('There are',len(s),'elements in the set')
+\end{verbatim}
+
+What is the mean (average) of the set?
+
+\begin{verbatim}
+print ('The mean of the set is',s.mean())
+\end{verbatim}
+
+What is the minimum of the set?
+
+\begin{verbatim}
+print ('The minimum of the set is',s.min())
+\end{verbatim}
+
+What is the maximum of the set?
+
+\begin{verbatim}
+print ('The maximum of the set is',s.max())
+\end{verbatim}
+
+We can use the scipy functions too. What's the median?
+
+\begin{verbatim}
+print ('The median of the set is',sp.median(s))
+\end{verbatim}
+
+What about the standard deviation and variance?
+
+\begin{verbatim}
+print ('The standard deviation is',sp.std(s),
+       'and the variance is',sp.var(s))
+\end{verbatim}
+
+Isn't the variance the square of the standard deviation?
+
+\begin{verbatim}
+print ('The square of the standard deviation is',sp.std(s)**2)
+\end{verbatim}
+
+How close are the measures? The differences are close as the following
+calculation shows
+
+\begin{verbatim}
+print ('The difference is',abs(sp.std(s)**2 - sp.var(s)))
+\end{verbatim}
+
+\begin{verbatim}
+print ('And in decimal form, the difference is %0.16f' % 
+       (abs(sp.std(s)**2 - sp.var(s))))
+\end{verbatim}
+
+How does this look as a histogram?
+
+\begin{verbatim}
+plt.hist(s) # yes, one line of code for a histogram
+plt.show()
+\end{verbatim}
+
+\begin{center}
+\includegraphics[width=0.5\textwidth]{scipy/output_23_0.png}
+\end{center}
+
+Let's add some titles.
+
+\begin{verbatim}
+plt.clf() # clear out the previous plot
+
+plt.hist(s)
+plt.title("Histogram Example")
+plt.xlabel("Value")
+plt.ylabel("Frequency")
+
+plt.show()
+\end{verbatim}
+
+\begin{center}
+\includegraphics[width=0.5\textwidth]{scipy/output_25_0.png}
+\end{center}
+
+Typically we do not include titles when we prepare images for inclusion
+in LaTeX. There we use the caption to describe what the figure is about.
+
+\begin{verbatim}
+plt.clf() # clear out the previous plot
+
+plt.hist(s)
+plt.xlabel("Value")
+plt.ylabel("Frequency")
+
+plt.show()
+\end{verbatim}
+
+\begin{center}
+\includegraphics[width=0.5\textwidth]{scipy/output_27_0.png}
+\end{center}
+
+Let's try out some linear regression, or curve fitting.
+
+\begin{verbatim}
+import random
+
+def F(x):
+    return 2*x - 2
+
+def add_noise(x):
+    return x + random.uniform(-1,1) 
+\end{verbatim}
+
+\begin{verbatim}
+X = range(0,10,1)
+
+Y = []
+for i in range(len(X)):
+    Y.append(add_noise(X[i]))
+
+plt.clf() # clear out the old figure
+plt.plot(X,Y,'.')
+plt.show()
+\end{verbatim}
+
+\begin{center}
+\includegraphics[width=0.5\textwidth]{scipy/output_30_0.png}
+\end{center}
+
+Now let's try linear regression to fit the curve.
+
+\begin{verbatim}
+m, b, r, p, est_std_err = stats.linregress(X,Y)
+\end{verbatim}
+
+What is the slope and y-intercept of the fitted curve?
+
+\begin{verbatim}
+print ('The slope is',m,'and the y-intercept is', b)
+\end{verbatim}
+
+\begin{verbatim}
+def Fprime(x): # the fitted curve
+    return m*x + b
+\end{verbatim}
+
+Now let's see how well the curve fits the data. We'll call the fitted
+curve F'.
+
+\begin{verbatim}
+X = range(0,10,1)
+
+Yprime = []
+for i in range(len(X)):
+    Yprime.append(Fprime(X[i]))
+\end{verbatim}
+
+\begin{verbatim}
+plt.clf() # clear out the old figure
+
+# the observed points, blue dots
+plt.plot(X, Y, '.', label='observed points') 
+
+# the interpolated curve, connected red line
+plt.plot(X, Yprime, 'r-', label='estimated points')  
+
+plt.title("Linear Regression Example") # title
+plt.xlabel("x") # horizontal axis title
+plt.ylabel("y") # vertical axis title
+# legend labels to plot
+plt.legend(['obsered points', 'estimated points']) 
+
+# comment out so that you can save the figure
+#plt.show()
+\end{verbatim}
+
+To save images into a PDF file for inclusion into \LaTeX documents you
+can save the images as follows. Other formats such as png are also
+possible, but the quality is naturally not sufficient for inclusion in
+papers and documents. For that you certainly want to use PDF. The save
+of the figure has to occure before you use the \verb|show()| command.
+
+\begin{verbatim}
+plt.savefig("regression.pdf", bbox_inches='tight')
+\end{verbatim}
+
+\begin{verbatim}
+plt.savefig('regression.png') 
+\end{verbatim}
+
+\begin{verbatim}
+plt.show()
+\end{verbatim}
+
+\begin{center}
+\includegraphics[width=0.5\textwidth]{scipy/output_40_0.png}
+\end{center}
+
+
+\section{References}\label{references}
+
+For more information about SciPy we recommend that you visit the following link
+
+\URL{https://www.scipy.org/getting-started.html#learning-to-work-with-scipy}
+
+Additional material and inspiration for this section are from
+
+\begin{itemize}
+\item ``Getting Started guide'' \url{https://www.scipy.org/getting-started.html}
+\item
+  Prasanth. ``Simple statistics with SciPy.'' Comfort at 1 AU. 
+  February 28, 2011.   \url{https://oneau.wordpress.com/2011/02/28/simple-statistics-with-scipy/}.
+\item
+  SciPy Cookbook. Lasted updated: 2015. 
+  \url{http://scipy-cookbook.readthedocs.io/}. 
+\end{itemize}
