@@ -11,17 +11,19 @@ A simpler library for image processing in Python is Scipy's multi-dimensional im
 ## Installation
 
 OpenCV for Python can be installed on Linux in multiple ways, namely PyPI(Python Package Index), Linux package manager (apt-get for Ubuntu), Conda package manager, and also building from source. You are recommended to use PyPI. Here's the command that you need to run:
-```
-$  pip install opencv-python
-```
+
+	pip install opencv-python
+
 
 This was tested on Ubuntu 16.04 with a fresh Python 3.6 virtual environment. In order to test, import the module in Python command line:
-```
->>> import cv2
-```
+
+	>>> import cv2
+
 If it does not raise an error, it is installed correctly. Otherwise, try to solve the error.
 
-For installation on Windows, see: https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_setup/py_setup_in_windows/py_setup_in_windows.html#install-opencv-python-in-windows.
+For installation on Windows, see: 
+
+* https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_setup/py_setup_in_windows/py_setup_in_windows.html#install-opencv-python-in-windows.
 
 Note that building from source can take a long time and may not be feasible for deploying to limited platforms such as Raspberry Pi.
 
@@ -31,15 +33,16 @@ In this example, an image is loaded. A simple processing is performed, and the r
 ### Loading an image
 
 
-```python
-%matplotlib inline
-import cv2
 
-# Load an image
-img = cv2.imread('opencv_files/4.2.01.tiff') 
-# The image was downloaded from USC standard database: 
-# http://sipi.usc.edu/database/database.php?volume=misc&image=9
-```
+	%matplotlib inline
+	import cv2
+
+	img = cv2.imread('opencv_files/4.2.01.tiff') 
+
+The image was downloaded from USC standard database: 
+
+* http://sipi.usc.edu/database/database.php?volume=misc&image=9
+
 
 ### Displaying the image
 
@@ -47,29 +50,22 @@ The image is saved in a numpy array. Each pixel is represented with 3 values (R,
 You can display the image using imshow function as well as Matplotlib's imshow function.
 
 
-```python
-# You can display the image using imshow function:
-cv2.imshow('Original',img)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-```
+You can display the image using imshow function:
+
+	cv2.imshow('Original',img)
+	cv2.waitKey(0)
+	cv2.destroyAllWindows()
 
 
-```python
-# Or you can use Matplotlib
-import matplotlib.pyplot as plt
-# If you have not installed Matplotlib before, install it using: pip install matplotlib
-
-plt.imshow(img)
-```
+or you can use Matplotlib. If you have not installed Matplotlib before, install it using: 
 
 
+	pip install matplotlib
 
+Now you can use:
 
-    <matplotlib.image.AxesImage at 0x7fcecb4eee48>
-
-
-
+	import matplotlib.pyplot as plt
+	plt.imshow(img)
 
 ![png](opencv_files/output_5_1.png)
 
@@ -79,18 +75,12 @@ plt.imshow(img)
 Scaling (resizing) the image relative to different axis
 
 
-```python
-res = cv2.resize(img,None,fx=1.2, fy=0.7, interpolation = cv2.INTER_CUBIC)
-plt.imshow(res)
-```
-
-
-
-
-    <matplotlib.image.AxesImage at 0x7fcecb4cca90>
-
-
-
+	res = cv2.resize(img,
+	                 None,
+	                 fx=1.2, 
+	                 fy=0.7, 
+	                 interpolation=cv2.INTER_CUBIC)
+	plt.imshow(res)
 
 ![png](opencv_files/output_7_1.png)
 
@@ -98,21 +88,12 @@ plt.imshow(res)
 Rotation of the image for an angle of t
 
 
-```python
-rows,cols,_ = img.shape
-t = 45
-M = cv2.getRotationMatrix2D((cols/2,rows/2),t,1)
-dst = cv2.warpAffine(img,M,(cols,rows))
+	rows,cols,_ = img.shape
+	t = 45
+	M = cv2.getRotationMatrix2D((cols/2,rows/2),t,1)
+	dst = cv2.warpAffine(img,M,(cols,rows))
 
-plt.imshow(dst)
-```
-
-
-
-
-    <matplotlib.image.AxesImage at 0x7fcec835c9b0>
-
-
+	plt.imshow(dst)
 
 
 ![png](opencv_files/output_9_1.png)
@@ -121,38 +102,18 @@ plt.imshow(dst)
 ### Gray-scaling
 
 
-```python
-img2 = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-plt.imshow(img2, cmap='gray')
-```
 
-
-
-
-    <matplotlib.image.AxesImage at 0x7fcec8332ef0>
-
-
-
+	img2 = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+	plt.imshow(img2, cmap='gray')
 
 ![png](opencv_files/output_11_1.png)
 
 
 ### Image Thresholding
 
-
-```python
-ret,thresh = cv2.threshold(img2,127,255,cv2.THRESH_BINARY)
-plt.subplot(1,2,1), plt.imshow(img2, cmap='gray')
-plt.subplot(1,2,2), plt.imshow(thresh, cmap='gray')
-```
-
-
-
-
-    (<matplotlib.axes._subplots.AxesSubplot at 0x7fcec8381eb8>,
-     <matplotlib.image.AxesImage at 0x7fcec841e358>)
-
-
+	ret,thresh = 	cv2.threshold(img2,127,255,cv2.THRESH_BINARY)
+	plt.subplot(1,2,1), plt.imshow(img2, cmap='gray')
+	plt.subplot(1,2,2), plt.imshow(thresh, cmap='gray')
 
 
 ![png](opencv_files/output_13_1.png)
@@ -162,20 +123,10 @@ plt.subplot(1,2,2), plt.imshow(thresh, cmap='gray')
 Edge detection using Canny edge detection algorithm
 
 
-```python
-edges = cv2.Canny(img2,100,200)
+	edges = cv2.Canny(img2,100,200)
 
-plt.subplot(121),plt.imshow(img2,cmap = 'gray')
-plt.subplot(122),plt.imshow(edges,cmap = 'gray')
-```
-
-
-
-
-    (<matplotlib.axes._subplots.AxesSubplot at 0x7fcec82ec9e8>,
-     <matplotlib.image.AxesImage at 0x7fcec82ca828>)
-
-
+	plt.subplot(121),plt.imshow(img2,cmap = 'gray')
+	plt.subplot(122),plt.imshow(edges,cmap = 'gray')
 
 
 ![png](opencv_files/output_15_1.png)

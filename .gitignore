@@ -22,6 +22,8 @@ _*
 *.log
 *.fdb_latexmk
 *.fls
+*.tdo
+*.listing
 *--
 .idea
 # Byte-compiled / optimized / DLL files
