@@ -5,6 +5,8 @@ FILE=vonLaszewski-bigdata
 #FLAGS=-interaction nonstopmode  -file-line-error
 FLAGS=-shell-escape
 CLOUD=cloud
+FLAGS=-shell-scape -output-directory=dest -aux-directory=dest
+
 
 DEFAULT=$(CLOUD)
 
@@ -13,18 +15,20 @@ LATEX=pdflatex
 #LATEX=pdfflatex
 #LATEX=pydflatex -k
 
+dest:
+	mkdir -p dest
 
-single:
-	latexmk -shell-escape -pvc -view=pdf single
+single: dest
+	latexmk -jobname=dest/$(FILE) -shell-escape -pvc -view=pdf single
 
-g:
-	latexmk -shell-escape -pvc -view=pdf $(FILE)
+g: dest
+	latexmk -jobname=dest/$(FILE) -shell-escape -pvc -view=pdf $(FILE)
 
 c:
-	latexmk -pvc -view=pdf chameleon
+	latexmk -jobname=dest/$(FILE) -shell-escape -pvc -view=pdf chameleon
 
 plain:
-	latexmk -pvc -view=pdf plain
+	latexmk -jobname=dest/$(FILE) -shell-escape -pvc -view=pdf plain
 
 cloud:
 	$(LATEX) $(FLAGS) $(CLOUD)
@@ -95,6 +99,15 @@ clean:
 	rm -f *.run.xml
 	rm -f *.toc
 	rm -f *.log
+	rm -f *.markdown.out
+	rm -f *.markdown.lua
+	rm -f *.markdown.err
+	rm -f *.fls
+	rm -f *.listing
+	rm -f *.fdb_latexmk
+	rm -f *.synctex.gz
+	rm -rf _markdown_*
+
 
 view:
 	open $(FILE).pdf
