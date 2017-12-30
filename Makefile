@@ -16,7 +16,7 @@ LATEX=pdflatex
 #LATEX=pydflatex -k
 
 dest:
-	mkdir -p dest
+	mkdir -p dest/part
 
 single: dest
 	latexmk -jobname=dest/$(FILE) -shell-escape -pvc -view=pdf single
@@ -24,24 +24,24 @@ single: dest
 g: dest
 	latexmk -jobname=dest/$(FILE) -shell-escape -pvc -view=pdf $(FILE)
 
-c:
+c: dest
 	latexmk -jobname=dest/$(FILE) -shell-escape -pvc -view=pdf chameleon
 
-plain:
+plain: dest
 	latexmk -jobname=dest/$(FILE) -shell-escape -pvc -view=pdf plain
 
-cloud:
+cloud: dest
 	$(LATEX) $(FLAGS) $(CLOUD)
 	makeindex $(CLOUD).idx -s format/StyleInd.ist
 	biber $(CLOUD)
 	$(LATEX) $(FLAGS)  $(CLOUD) 
 	$(LATEX) $(FLAGS)  $(CLOUD)
 
-skim:
+skim: dest
 	echo $(DEFAULT)
 	open -a /Applications/skim.app $(DEFAULT).pdf
 
-all:
+all: dest
 	$(LATEX) $(FLAGS) $(FILE)
 	makeindex $(FILE).idx -s format/StyleInd.ist
 	biber $(FILE)
@@ -101,6 +101,7 @@ clean:
 	rm -f *.synctex.gz
 	rm -rf _markdown_*
 	rm -rf dest
+	rm -rf *.tdo
 
 
 view:

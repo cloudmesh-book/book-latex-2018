@@ -5,6 +5,8 @@ _*
 
 # LATEX FILES
 dest
+*.tdo
+*.fls
 *.markdown.*
 # LaTeX
 *.dvi
