@@ -1,14 +1,15 @@
 .DS_*
-# Lua
+_*
+.#*
+*.html
+
+# LATEX FILES
+dest
 *.markdown.*
 # LaTeX
 *.dvi
 *.out
-*.html
-_*
 *.synctex.*
-#
-.#*
 *.aux
 *.bbl
 *.bcf
