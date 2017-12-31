@@ -15,8 +15,7 @@ LATEX=pdflatex
 #LATEX=pdfflatex
 #LATEX=pydflatex -k
 
-dest:
-	mkdir -p dest/part
+
 
 single: dest
 	latexmk -jobname=dest/$(FILE) -shell-escape -pvc -view=pdf single
@@ -115,3 +114,64 @@ publish:
 
 watch:
 	latexmk -pvc -view=pdf ${FILE}
+dest:
+	mkdir -p dest/notebooks
+	mkdir -p dest/notebooks/dask
+	mkdir -p dest/notebooks/facedetection
+	mkdir -p dest/notebooks/facedetection/facedetection_files
+	mkdir -p dest/notebooks/files
+	mkdir -p dest/notebooks/fingerprint
+	mkdir -p dest/notebooks/fingerprint/fingerprint_matching_files
+	mkdir -p dest/notebooks/machinelearning
+	mkdir -p dest/notebooks/numpy
+	mkdir -p dest/notebooks/opencv
+	mkdir -p dest/notebooks/opencv/opencv_files
+	mkdir -p dest/notebooks/opencv/secchi
+	mkdir -p dest/notebooks/opencv/secchi/data
+	mkdir -p dest/notebooks/opencv/secchi-a
+	mkdir -p dest/notebooks/py-data-analysis-dask
+	mkdir -p dest/notebooks/scikit-learn
+	mkdir -p dest/notebooks/scikit-learn/scikit-learn-k-means_files
+	mkdir -p dest/notebooks/scipy
+	mkdir -p dest/notebooks/tmp
+	mkdir -p dest/notebooks/tmp/fingerprint_matching_files
+	mkdir -p dest/part
+	mkdir -p dest/section
+	mkdir -p dest/section/art
+	mkdir -p dest/section/cloud
+	mkdir -p dest/section/cloud/assignment
+	mkdir -p dest/section/cloud/chameleon
+	mkdir -p dest/section/cloud/evaluation
+	mkdir -p dest/section/cloud/participation
+	mkdir -p dest/section/cluster
+	mkdir -p dest/section/cluster/pi
+	mkdir -p dest/section/container
+	mkdir -p dest/section/courses
+	mkdir -p dest/section/doc
+	mkdir -p dest/section/intro
+	mkdir -p dest/section/faas
+	mkdir -p dest/section/git
+	mkdir -p dest/section/i524
+	mkdir -p dest/section/icloud
+	mkdir -p dest/section/icloud/assignment
+	mkdir -p dest/section/icloud/assignment/deprecated
+	mkdir -p dest/section/icloud/assignment/deprecated/exercise-old7
+	mkdir -p dest/section/icloud/assignment/exercise0
+	mkdir -p dest/section/icloud/assignment/exercise1
+	mkdir -p dest/section/icloud/assignment/exercise2
+	mkdir -p dest/section/icloud/assignment/exercise3
+	mkdir -p dest/section/icloud/assignment/exercise4
+	mkdir -p dest/section/icloud/assignment/exercise5
+	mkdir -p dest/section/icloud/assignment/exercise6
+	mkdir -p dest/section/icloud/assignment/exercise7
+	mkdir -p dest/section/icloud/assignment/exercise7/code-base
+	mkdir -p dest/section/icloud/assignment/exercise7/code-base/input
+	mkdir -p dest/section/icloud/assignment/exercise7/code-base/simplepagerank
+	mkdir -p dest/section/icloud/assignment/exercise8
+	mkdir -p dest/section/icloud/course
+	mkdir -p dest/section/iot
+	mkdir -p dest/section/new
+	mkdir -p dest/section/preface
+	mkdir -p dest/section/prg
+	mkdir -p dest/section/theory
+

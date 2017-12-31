@@ -35,25 +35,28 @@
 %--------------------------------------------------------------------------------------
 
 
+
+
+
 %----------------------------------------------------------------------------------------
 %	INTRODUCTION
 %----------------------------------------------------------------------------------------
 
-\include{part/part-syllabus}
+\include{part/intro}
 
-
-\include{part/part-intro}
+\include{part/syllabus}
 
 %----------------------------------------------------------------------------------------
 %	LINUX
 %----------------------------------------------------------------------------------------
 
-\include{part/part-doc}
+\include{part/doc}
  
 %----------------------------------------------------------------------------------------
 %	LINUX
 %----------------------------------------------------------------------------------------
 
+\begin{comment}
 \part{Code Development}
 
 \include{section/linux}
@@ -61,31 +64,36 @@
 \include{section/git/github}
 %\include{section/git/git-techlist}
 \include{section/virtualbox}
-\include{part/part-python}
-\include{part/part-python-advanced}
+\include{part/python}
+\include{part/python-advanced}
 
-\part{Python Notebooks}
-
-\include{notebooks/facedetection.tex}
-\include{notebooks/scikit-learn-k-means.tex}
-\include{notebooks/fingerprint_matching.tex}
+\include{part/python-cloudmesh}
 
 
 
-\include{part/part-container}
+%\part{Python Notebooks}
 
-\include{part/part-chameleon}
+%\include{notebooks/facedetection.tex}
+%\include{notebooks/scikit-learn-k-means.tex}
+%\include{notebooks/fingerprint_matching.tex}
 
-\include{part/part-dev}
-\include{part/part-iot}
 
-%\include{part/part-applications}
+
+\include{part/container}
+
+\include{part/chameleon}
+
+\include{part/dev}
+\include{part/iot}
+
+\include{part/applications}
+
 %\include{sentient}
 
 
 
 
-%\include{part/part-icloud}
+\include{part/icloud}
 
 
 
@@ -95,27 +103,22 @@
 %	PART
 %----------------------------------------------------------------------------------------
 
-% \part{I523}
+\part{I523}
 
 %----------------------------------------------------------------------------------------
-%	CHAPTER
+%	CHAPTER PREFACE i523
 %----------------------------------------------------------------------------------------
 
-%\include{section/intro/fall2017}
+\include{section/preface/fall2017}
+
+\include{section/preface/overview}
+
+\include{section/preface/organization}
+
+\include{section/preface/project}
+\include{section/preface/assignments}
 
 
-%\chapter{Overview}
-
-%\include{section/intro/overview}
-
-%\include{section/intro/organization}
-%
-%\include{section/intro/project}
-%\include{section/intro/assignments}
-
-
-
-\begin{comment}
 
 
 %----------------------------------------------------------------------------------------
@@ -124,7 +127,7 @@
 
 \part{Technologies}
 
-%\include{section/i524/technologies}
+\include{section/i524/technologies}
 
 %----------------------------------------------------------------------------------------
 %	FORMAT
@@ -142,6 +145,8 @@
 
 %\cite{book_key}
 %\cite{article_key}
+
+
 
 \chapter*{Bibliography}
 \addcontentsline{toc}{chapter}{\textcolor{ocre}{Bibliography}}
@@ -172,8 +177,6 @@
 \addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}}
 \printindex
 
-\end{comment}
-
 %----------------------------------------------------------------------------------------
-
+\end{comment}
 \end{document}

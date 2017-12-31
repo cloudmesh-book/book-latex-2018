@@ -166,4 +166,39 @@ permissions and limitations under the License.\\ % License information
  
 \lstset{style=code}
 
-\newcommand{\WHERE}[2]{\ref{#1}. \nameref{#1} \hfill ~ #2 ~ \pageref{#1}}
+\newcommand{\WHERE}[2]{\ref{#1}. \nameref{#1} \hfill ~ #2 ~ \pageref{#1}\\}
+
+\newenvironment{NOTE2}[1]
+    {\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,%
+                       fonttitle=\bfseries,size=small,%
+                       lefthand width=2cm,sidebyside,%
+                       sidebyside gap=6mm,%
+                       lower separated=false,title=#1]%
+    {\begin{tikzpicture}[overlay]
+\node[draw=ocre!60,line
+width=1pt,circle,fill=ocre!25,font=\sffamily\bfseries,inner
+sep=2pt,outer sep=0pt] at (25pt,0pt){\textcolor{ocre}{\LARGE Note}};\end{tikzpicture}}
+    \tcblower}
+    {\end{tcolorbox}}
+
+\newenvironment{COLORNOTE}[2]
+    {\begin{tcolorbox}[%
+        coltitle=#2!70!black,
+        colback=#2!3!white,colframe=#2!20!white,%
+        fonttitle=\bfseries,size=small,%
+        title=#1]}
+    {\end{tcolorbox}}
+
+\newenvironment{NOTE}
+    {\begin{COLORNOTE}{Note}{blue}}
+    {\end{COLORNOTE}}
+
+\newenvironment{WARNING}
+    {\begin{COLORNOTE}{Warning}{red}}
+    {\end{COLORNOTE}}
+
+
+
+
+
+

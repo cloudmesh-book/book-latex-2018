@@ -16,6 +16,7 @@ installation for OSX is available at:
   \url{https://tug.org/mactex/}
 \end{itemize}
 
+
 However, if you have older versions on your systems you may have to
 first completely uninstall them.
 
@@ -214,7 +215,13 @@ chapter some basic \LaTeX elements that will help you getting started
 quickly while serving you as a reminder what how to do certain things
 in \LaTeX.
 
+
+
 \subsection{Characters}\label{characters}
+\index{Latex!\%}
+\index{Latex!\$}
+\index{Latex!\#}
+\index{Latex!\_}
 
 LaTeX is a command language and as such uses some special characters as
 part of the language. Thus if you want to use these characters either in
@@ -228,20 +235,23 @@ front of them. For example to print a \% in the text you need to use:
 \%
 \end{verbatim}
 
-Furthermore tthe character " is not at all used as discussed in the next
+Furthermore the character \verb|"| is not at all used as discussed in the next
 section.
 
 \subsection{Highlighting Text}\label{highlighting-text}
 \index{Latex!Elements!highlight text}
 
-Quotes are not written with the " character, but are embedded in two
+Quotes are not written with the \verb|"| character, but are embedded in two
 left single quotes and two right single quotes:
+
 
 
 \begin{tcblisting}{colback=blue!5!white,colframe=gray!50!blue,listing side text,
   title=quote,fonttitle=\bfseries}
 ``This is a quote''
 \end{tcblisting}
+
+
 
 In many papers we see that the quote is misused while putting quotes
 around a word. However quotes are often just used to quote a text from
@@ -333,6 +343,7 @@ Description lists can be written as:
    \item[Big Data:] My definition of Big Data is also a long description.
 \end{description}
 \end{tcblisting} 
+
 
 
 
@@ -458,6 +469,8 @@ $ A_{m,n} =
 \end{pmatrix} $
 \end{tcblisting}
 
+
+
 \section{Advanced topics}
 
 \subsection{ACM and IEEE Proceedings Format}\label{acm-proceedings-format}
@@ -500,6 +513,31 @@ good, but for publications it produces inferior formatted images.
 
 We recommend that all images be stored into a folder called images in
 the same directory where your \LaTeX main document resides.
+
+
+
+\subsection{Colored Boxes}
+
+The package \verb|tcolorbox| provides sophisticated supprt to include
+color boxes. Together with the new envireonment we can create nice add
+ons to for example include notes.
+
+\URL{http://osl.ugr.es/CTAN/macros/latex/contrib/tcolorbox/tcolorbox.pdf}
+
+We have provided in this document notes as follows
+
+
+\begin{tcblisting}{colback=blue!5!white,colframe=gray!50!blue,listing side text,  title=Note,fonttitle=\bfseries}
+\begin{NOTE}
+This is a note
+\end{NOTE}
+\end{tcblisting}
+
+\begin{tcblisting}{colback=blue!5!white,colframe=gray!50!blue,listing side text,  title=Warning,fonttitle=\bfseries}
+\begin{WARNING}
+This is a note
+\end{WARNING}
+\end{tcblisting}
 
 
 \subsection{Slides}\label{slides}
@@ -690,7 +728,7 @@ on OSX for \LaTeX.
 
 \url{http://aquamacs.org}
 
-\begin{figure}[!h]
+\begin{figure}[!htb]
   \centering\includegraphics[width=8cm]{images/aquamacs.png}
   \caption{Aquamacs}
   \label{F:aquamacs}
@@ -717,7 +755,7 @@ We have made very good experiences with Lyx. You must assure that the
 team you work with uses it consistently and that you all use the same
 version.
 
-\begin{figure}[!h]
+\begin{figure}[!htb]
   \centering\includegraphics[width=8cm]{images/lyx.png}
   \caption{Lyx}
   \label{F:lyx}
@@ -982,3 +1020,4 @@ optional arguments:
   -l, --log-parsing   Only parse log
   -t, --typesetting   Only typeset
 \end{verbatim}
+
