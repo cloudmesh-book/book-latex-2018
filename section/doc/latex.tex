@@ -130,7 +130,7 @@ need more than three people in a team.
 \paragraph{IU Licensed ShareLaTeX}
 
 At IU we has a license for the ShareLaTeX service available to School
-of Informatics and Computing and Engeneering students, faculty, and
+of Informatics and Computing and Engineering students, faculty, and
 staff only on the Bloomington campus.  
 
 You can create a free ShareLaTeX account but the free accounts have
@@ -205,15 +205,15 @@ services as ShareLatex and Overleaf.
 \index{Latex!Elements}
 
 Often researchers may be initially overwhelmed with all the features
-that \LaTeX provides. However, it is much simpler than you initially
+that \LaTeX~ provides. However, it is much simpler than you initially
 believe. In Chapter ?? we introduced you towards using an article
 template. As a template is provided you can just look at the elements
 in that article and modify or copy them while adapting the
 content. Thus, it is more like filling out a form. You do not have to
 learn much and you can learn as you go. We are providing in this
-chapter some basic \LaTeX elements that will help you getting started
+chapter some basic \LaTeX~ elements that will help you getting started
 quickly while serving you as a reminder what how to do certain things
-in \LaTeX.
+in \LaTeX~.
 
 
 
@@ -228,7 +228,7 @@ part of the language. Thus if you want to use these characters either in
 your text or bibliography you need to be especially carful about. These
 characters include \% \$ \# \_
 
-Other than in hypreref links and urls you need to put a backslash in
+Other than in hyperref links and urls you need to put a backslash in
 front of them. For example to print a \% in the text you need to use:
 
 \begin{verbatim}
@@ -355,16 +355,27 @@ never worry about the placement as LaTeX does typically a very
 good job of doing this.:
 
 \begin{verbatim}
-In Figure \ref{F:graph} we show a black and white graph about ... .
+In Figure \ref{F:flow} we show a black and white graph about ... .
 
-\begin{figure}
-  \includegraphics[width=\columnwidth]{images/graph.pdf}
-  \caption{A sample black and white graphic. \cite{las17graph}}
-  \label{F:graph}
+\begin{figure}[htb]
+  \includegraphics[width=1.0\columnwidth]{images/gregor.png}
+  \caption{A demonstration in the scalability of PDF images.}
+  \label{F:flow}
 \end{figure}
 \end{verbatim}
 
-Note that las17graph must be a label of a valid bibtex entry. This is
+Which results in the following:
+\begin{quote}
+In Figure \ref{F:flow} we show a black and white graph about ... .
+
+\begin{figure}[htb]
+  \includegraphics[width=1.0\columnwidth]{images/i523-overview.pdf}
+  \caption{A demonstration in the scalability of PDF images.}
+  \label{F:flow}
+\end{figure}
+\end{quote
+
+Note that las17graph must be a label of a valid \BibTex entry. This is
 needed if you have copied the image from elsewhere to avoid plagiarism.
 However, if you came up with the graph yourself than you do not need a
 citation.
@@ -385,7 +396,68 @@ document command:
 \subsection{Tables}\label{tables}
 \index{Latex!Elements!tables}
 
-tables from csv tables by hand
+Latex tables are very similar to csv table. Thus you could with
+appropriate manipulation create tables from csv tables and use tools
+such as spreadsheet editors to manage your table. There are even
+packages that allow you to import the contents of csv tables directly
+into \LaTeX.
+
+In many cases you simply can start with an online table generator such as
+
+\URL{https://www.tablesgenerator.com/}
+
+For some tables you may want to rescale the width with
+
+\begin{verbatim}
+\resizebox{\textwidth}{!}{%
+   ... PUT YOUR TABLE HERE ....
+}
+\end{verbatim}
+
+In other cases you may want to rotate the table which you can easily
+google for. In all cases use as figures, tables need to be in the
+\verb|table| float environment. In contrast to figures captions are on
+the top. All tables must be referred to by \verb|ref|. For more
+information in directly including csv tables see 
+
+\URL{http://mirror.utexas.edu/ctan/macros/latex/contrib/csvsimple/csvsimple.pdf}
+
+However the format is very easy and can in most cases directly be
+included in latex as shown in Table \ref{T:elements}.
+
+\begin{verbatim}
+\begin{table}[htb]
+\caption{Table with elements}\label{T:elements}
+\bigskip
+\begin{center}
+\begin{tabular}{ c c c }
+ column1  & column2  & column3 \\
+\hline
+\hline
+ element1 & element2 & element3 \\ 
+ element4 & element5 & element6 \\  
+ element7 & element8 & element9 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\end{verbatim}
+
+\begin{table}[htb]
+\caption{Table with elements}\label{T:elements}
+\bigskip
+\begin{center}
+\begin{tabular}{ c c c }
+ column1  & column2  & column3 \\
+\hline
+\hline
+ element1 & element2 & element3 \\ 
+ element4 & element5 & element6 \\  
+ element7 & element8 & element9 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
 
 \subsection{Labels}\label{labels}
 \index{Latex!Elements!labels}
@@ -413,7 +485,7 @@ organizing your paper in case you have many labels.
 
 One of the strength of LaTeX thi the ability to write easily
 sophisticated mathematical expressions on paper with high quality. A
-good online resouce is provided by the following online resource from
+good online resource is provided by the following online resource from
 which we have copied some examples:
 
 \begin{itemize}
@@ -428,7 +500,7 @@ To activate them use
 \usepackage{amsmath}
 \end{verbatim}
 
-at the beginnning of the document after the document class
+at the beginning of the document after the document class
 
 Exponents are using the \^{} character:
 
@@ -457,7 +529,7 @@ Fractions are indicated by the frac command, and binomials by binom:
 $ \frac{n!}{k!(n-k)!} = \binom{n}{k} $   
 \end{tcblisting}
 
-Matricies can be created as follows:
+Matrices can be created as follows:
 
 \begin{tcblisting}{colback=blue!5!white,colframe=gray!50!blue,listing side text,  title=matrix,fonttitle=\bfseries}
 $ A_{m,n} = 
@@ -512,14 +584,14 @@ quality publication formats. For interactive display such tool may be
 good, but for publications it produces inferior formatted images.
 
 We recommend that all images be stored into a folder called images in
-the same directory where your \LaTeX main document resides.
+the same directory where your \LaTeX~ main document resides.
 
 
 
 \subsection{Colored Boxes}
 
-The package \verb|tcolorbox| provides sophisticated supprt to include
-color boxes. Together with the new envireonment we can create nice add
+The package \verb|tcolorbox| provides sophisticated support to include
+color boxes. Together with the new environment we can create nice add
 ons to for example include notes.
 
 \URL{http://osl.ugr.es/CTAN/macros/latex/contrib/tcolorbox/tcolorbox.pdf}
@@ -566,43 +638,6 @@ The text between slides is ignored
 However, in case you need to have a slide presentation we recommend you
 use ppt. Just paste and copy content from your PDF or your LaTeX source
 file into the ppt.
-
-
-\subsection{Useful Online Information about \LaTeX }
-\index{Latex!other documentation}
-
-\begin{description}
-
-
-\item[Latex Sheet:]    \url{https://wch.github.io/latexsheet/latexsheet.pdf}
-
-\item[Latex Short:]    \url{http://tug.ctan.org/info/lshort/english/lshort.pdf}
-
-\item[Wikibook:]       \url{https://en.wikibooks.org/wiki/LaTeX}
-\item[Wikibook (PDF)]: \url{https://upload.wikimedia.org/wikipedia/commons/2/2d/LaTeX.pdf}
-
-\item [Links to books:] \url{https://latexforhumans.wordpress.com/2008/10/11/the-best-guides-to-latex/}
-\item [Links to books:] \url{https://www.latex-project.org/help/books/}
-\item [LaTeX2e:]
-  The
-  \href{http://texdoc.net/texmf-dist/doc/latex/latex2e-help-texinfo/latex2e.pdf}{LaTeX
-  Reference Manual} provides a good introduction to Latex.
-
-\end{description}
-
-
-\begin{itemize}
-
-\item
-  LaTeX Users and Reference Guide, by Leslie Lamport
-  \url{https://www.amazon.com/LaTeX-Document-Preparation-System-2nd/dp/0201529831/ref=sr_1_2?s=books\&ie=UTF8\&qid=1507114870\&sr=1-2\&keywords=lamport}
-\item
-  LaTeX an Introduction, by Helmut Kopka
-  \url{https://www.amazon.com/Guide-LaTeX-4th-Helmut-Kopka/dp/0321173856/ref=pd_lpo_sbs_14_t_0?_encoding=UTF8\&psc=1\&refRID=2BB4APDFEX34A4JM65ZB}
-\item
-  The LaTeX Companion, by Frank Mittelbach
-  \url{https://www.amazon.com/LaTeX-Companion-Techniques-Computer-Typesetting/dp/0201362996}
-\end{itemize}
 
 
 
@@ -814,7 +849,7 @@ do is place the markdown text in a separate file. Let us call the file
 Obviously, we would have to convert this to LaTeX. Luckily there is a
 very useful program called {\em pandoc} that does this for you. YOu
 could make the translation in the shell, but you could also make the
-translation locally on your computer while allowing \LaTeX to start up
+translation locally on your computer while allowing \LaTeX~ to start up
 external programs. This is achieved with the {\em write18} command and
 allowing LaTeX explicitly to call external programs. Please inspect
 the following latex file that includes a template on how to do
@@ -996,7 +1031,7 @@ pip install blessings
 pip install -e "git+https://github.com/olivierverdier/pydflatex#egg=pydflatex"
 \end{verbatim}
 
-You can see the manula page with 
+You can see the manual page with 
 
 \begin{verbatim}
 pydflatex --help
@@ -1020,4 +1055,42 @@ optional arguments:
   -l, --log-parsing   Only parse log
   -t, --typesetting   Only typeset
 \end{verbatim}
+
+
+
+\subsection{References}
+\index{Latex!other documentation}
+
+\begin{description}
+
+
+\item[Latex Sheet:]    \url{https://wch.github.io/latexsheet/latexsheet.pdf}
+
+\item[Latex Short:]    \url{http://tug.ctan.org/info/lshort/english/lshort.pdf}
+
+\item[Wikibook:]       \url{https://en.wikibooks.org/wiki/LaTeX}
+\item[Wikibook (PDF)]: \url{https://upload.wikimedia.org/wikipedia/commons/2/2d/LaTeX.pdf}
+
+\item [Links to books:] \url{https://latexforhumans.wordpress.com/2008/10/11/the-best-guides-to-latex/}
+\item [Links to books:] \url{https://www.latex-project.org/help/books/}
+\item [LaTeX2e:]
+  The
+  \href{http://texdoc.net/texmf-dist/doc/latex/latex2e-help-texinfo/latex2e.pdf}{LaTeX
+  Reference Manual} provides a good introduction to Latex.
+
+\end{description}
+
+
+\begin{itemize}
+
+\item
+  LaTeX Users and Reference Guide, by Leslie Lamport
+  \url{https://www.amazon.com/LaTeX-Document-Preparation-System-2nd/dp/0201529831/ref=sr_1_2?s=books\&ie=UTF8\&qid=1507114870\&sr=1-2\&keywords=lamport}
+\item
+  LaTeX an Introduction, by Helmut Kopka
+  \url{https://www.amazon.com/Guide-LaTeX-4th-Helmut-Kopka/dp/0321173856/ref=pd_lpo_sbs_14_t_0?_encoding=UTF8\&psc=1\&refRID=2BB4APDFEX34A4JM65ZB}
+\item
+  The LaTeX Companion, by Frank Mittelbach
+  \url{https://www.amazon.com/LaTeX-Companion-Techniques-Computer-Typesetting/dp/0201362996}
+\end{itemize}
 
