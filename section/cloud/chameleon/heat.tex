@@ -1,8 +1,8 @@
+\chapter{HEAT}
+
+\label{C:cc-heat}
+
 \FILENAME
-
-\chapter{HEAT}\label{complex-appliances}
-
-\section{What are complex~appliances?}\label{what-are-complexappliances}
 
 Deploying an MPI cluster, an OpenStack installation, or any other type
 of cluster in which nodes can take on multiple roles can be complex: you
@@ -23,8 +23,7 @@ of such clusters. We call this image + template combination
 complex~appliance because it consists of more than just the image (i.e.,
 appliance).
 
-\section{How are complex appliances
-supported?}\label{how-are-complex-appliances-supported}
+\section{Supporting Complex Appliances}
 
 In a nutshell, complex appliances allow you to specify not only what
 image you want to deploy but also on how many nodes you want to deploy
@@ -60,8 +59,7 @@ more about Heat, please refer to its
 \href{http://docs.openstack.org/developer/heat/}{official
 documentation}.
 
-\section{Where can I find Chameleon complex
-appliances?}\label{where-can-i-find-chameleon-complex-appliances}
+\section{Chameleon Appliance Catalog}
 
 Our \href{https://www.chameleoncloud.org/appliances/}{Appliance Catalog}
 has several complex appliances for popular technologies that people want
@@ -73,8 +71,7 @@ corner representing a group of machines, as shown in the screenshot:
 
 \includegraphics[width=0.5\columnwidth]{images/chameleon/NFS.png}
 
-\section{How do I deploy a complex
-appliance?}\label{how-do-i-deploy-a-complex-appliance}
+\section{Deployment}
 
 We will explain how to launch a complex appliance based on our
 \href{https://www.chameleoncloud.org/appliances/25/}{NFS share
@@ -175,8 +172,7 @@ and information about them. In the ``Events'' tab you will see
 information about the history of the deployment so far. In Template you
 will see the template that was used to deploy this stack.
 
-\section{What is inside a Heat
-template?}\label{what-is-inside-a-heat-template}
+\section{Heat Template}
 
 The NFS share appliance deploys:
 
@@ -347,8 +343,7 @@ outputs:
 \end{verbatim}
 \end{footnotesize}
 
-\section{Customizing an existing
-template}\label{customizing-an-existing-template}
+\section{Customizing an existing template}
 
 Customizing an existing template is a good way to start developing your
 own. We will use a simpler template than the previous example to start

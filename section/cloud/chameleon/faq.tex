@@ -1,212 +1,8 @@
-\FILENAME
+
 
 \chapter{Frequently Asked Questions}\label{frequently-asked-questions}
 
-\section{General}\label{general}
-
-
-
-\subsection{What are the best practices for Chameleon
-usage?}\label{what-are-the-best-practices-for-chameleon-usage}
-
-
-\subsection{Are there any limitations on Chameleon
-usage?}\label{are-there-any-limitations-on-chameleon-usage}
-
-We have two types of limitations, introduced to promote fair resource
-usage to all:~
-
-\begin{itemize}
-\item
-  Allocation:~Chameleon projects are limited to a per-project allocation
-  currently set to~20,000 service units for 6 months. Allocations can be
-  renewed or extended---see the
-  \href{index.html\#toc-project-and-allocation-management}{Project and
-  Allocation Management} section for more details on Chameleon
-  allocations.
-\item
-  Lease: To ensure fairness to all users, resource reservations (leases)
-  are limited to a duration of 7 days. However, an active lease within
-  48 hours of its end time can be prolonged by up to 7 days from the
-  moment of request if resources are available. To prolong a lease,
-  click on the ``Update Lease'' button in the Reservations panel of the
-  CHI OpenStack dashboard, and enter the additional duration requested
-  in the ``Prolong for'' box including the unit suffix, e.g. ``5d'' for
-  5 days or ``30m'' for 30 minutes. If there is an advance reservation
-  blocking your lease prolongation that could potentially be moved, you
-  can interact through the users mailing list to coordinate with others
-  users.~Additionally, if you know from the start that your lease will
-  require longer than a week and can justify it, you can
-  \href{https://www.chameleoncloud.org/user/help/ticket/new/}{contact
-  Chameleon staff via the ticketing system} to request a one-time
-  exception to create a longer lease.
-\end{itemize}
-
-\subsection{How should I acknowledge Chameleon in my
-publications?}\label{how-should-i-acknowledge-chameleon-in-my-publications}
-
-An acknowledgement of support from the Chameleon project and the
-National Science Foundation should appear in any publication of
-material, whether copyrighted or not, that describes work which
-benefited from access to Chameleon cyberinfrastructure resources. The
-suggested acknowledgement is as follows: ``Results presented in this
-paper were obtained using the Chameleon testbed supported by the
-National Science Foundation''.
-
-\subsection{What infrastructures is Chameleon federated
-with?}\label{what-infrastructures-is-chameleon-federated-with}
-
-Chameleon supports identity federation with GENI designed to give GENI
-users immediate access to Chameleon without having to create a Chameleon
-account or project. GENI users can log in with their GENI credentials
-and charge their usage the GENI Federation Project created to provide
-startup cycles to researchers evaluating Chameleon. To obtain a larger
-allocation focused on their research needs, GENI users can then go on to
-create individual Chameleon projects. Chameleon users can also log in to
-the GENI Experimenter Portal using their Chameleon credentials. When
-selecting the organization with whom to log in to GENI, search for
-``Chameleon Cloud'' in the list of Identity Providers. You will be
-redirected to the Chameleon Auth Service to log in and then back to the
-GENI Experimenter Portal upon successful login.
-
-\section{Project and Allocation
-Management}\label{project-and-allocation-management}
-
-\subsection{My PI/Professor/Colleague already has a Chameleon Project.
-How do I get added as a user on the
-project?}\label{my-piprofessorcolleague-already-has-a-chameleon-project.-how-do-i-get-added-as-a-user-on-the-project}
-
-You will need to contact the project PI and request that they add you as
-a user. Provide the PI with your Chameleon username. The project PI
-should visit
-the~\href{https://www.chameleoncloud.org/user/projects}{Chameleon
-Project Management page}. From the list of projects, locate the project
-to which the user is to be added and click
-
-View Project
-
-. Near the bottom of the page, under the heading~\emph{Project Users},
-is a form where the PI can enter the Chameleon username of the user to
-add. Clicking
-
-Add user
-
-~will add the user to the project.
-
-\subsection{What are the units of an allocation, and how am I
-charged?}\label{what-are-the-units-of-an-allocation-and-how-am-i-charged}
-
-Chameleon allocations can consist of several components of the system.
-Users can request allocation of individual compute nodes, storage
-servers, or complete Scalable Compute Units (SCUs) which contain compute
-servers, storage nodes, and an open flow switch.
-
-Compute servers are allocated in Service Units (SUs), which equates to
-one hour of wall clock time on a single server (for virtual machines, an
-SU is 24 cores with up to 128GB of RAM). Note this unit differs from
-traditional HPC or cloud service units that are charged in core-hours; a
-Chameleon SU is a full server, as the type of experiments and
-performance measurements users may wish to do may be contaminated by
-sharing nodes.
-
-Storage servers are also charged in SUs, at 2x the rate of compute
-servers (i.e., 1 hour allocation of 1 storage server == 2 SUs). SCUs are
-charged at the rate of 50 SUs per wall clock hour (42 compute servers, 4
-storage nodes, plus one OpenFlow switch).
-
-An allocation may make use of multiple SCUs, up to the size of the full
-testbed.
-
-For example, a user wishing to provision a 10 node cluster +1 storage
-server for a 1 week experiment should budget
-\texttt{{[}(10\ +\ 2)\ SUs\ per\ hour{]}\ *\ {[}7\ days\ *\ 24\ hours/day{]}\ =\ 2,016\ SUs}
-for that experiment.
-
-SUs are charged the same regardless of use case. Hence, whether asking
-for bare metal access, virtual machine access, or use of default images,
-the charge is the same --- you are charged for the fraction of the
-resource your experiment occupies, regardless of the type of the
-experiment.
-
-The basic principle for charging service units for Chameleon resources
-is to evaluate the amount of time a fraction of the resource is
-unavailable to other users. If a reservation is made through the portal
-for a particular date/time in the future, the user will be charged for
-this time regardless of whether the reservation is actually used, as the
-Chameleon scheduling system will have to drain the appropriate part of
-the system to satisfy the reservation, even if the nodes requested are
-not actually used. A reservation request may be cancelled in which case
-no charges will apply.
-
-\subsection{What are the project allocation sizes and
-limits?}\label{what-are-the-project-allocation-sizes-and-limits}
-
-In the initial phase Chameleon is operating on a ``soft allocation
-model'' where each project, if approved, will receive a startup
-allocation of 20,000 SUs for six months that can be both recharged
-(i.e., more SUs can be added) and renewed (i.e., the duration can be
-extended) via submitting a renew/recharge request. This startup
-allocation value has been designed to respond to both PI needs (i.e.,
-cover an amount of experimentation needed to obtain a significant
-result) and balance fairness to other users (it represents roughly 1\%
-of testbed six months' capacity). Requests for these startup projects
-will receive a fast track internal review (i.e., users can expect them
-to be approved within a few days).
-
-A PI can apply for multiple projects/allocations; however, the number of
-held allocations will be taken into account during review.
-
-As our understanding of user need grows we expect the Chameleon
-allocation model to evolve towards closer reflection of those needs in
-the form of more differentiated allocations that will allow us to give
-larger allocations to users for longer time.
-
-\section{Account Management
-Troubleshooting}\label{account-management-troubleshooting}
-
-\subsection{When I attempt to create an account it says my email is
-already registered; why does it
-happen?}\label{when-i-attempt-to-create-an-account-it-says-my-email-is-already-registered-why-does-it-happen}
-
-Chameleon relies on TACC's Identity Service for account management. If
-you already have a TACC account, possibly
-through~\href{http://www.xsede.org}{XSEDE}~or directly through TACC,
-then you should use that account to log in to Chameleon. If you don't
-know your TACC password, you
-can~\href{https://www.chameleoncloud.org/password-reset}{reset your
-password}. After resetting your password you should be able to log in to
-Chameleon.
-
-\subsection{I cannot log into the portal after creating an account, what
-should I
-do?}\label{i-cannot-log-into-the-portal-after-creating-an-account-what-should-i-do}
-
-Please make sure that you have successfully confirmed your email
-address. Check your junk folder as the confirmation email might have
-been marked as spam.\textbf{~}Double- check that you are using the
-password that you provided during the registration. If you are unsure of
-the password you used, you
-can~\href{https://www.chameleoncloud.org/user/password-reset/}{reset
-it}. If you still cannot log in,
-please~\href{https://www.chameleoncloud.org/user/help/ticket/new/guest/}{open
-a ticket}.
-
-\subsection{I have an account, but when I try to log in to
-OpenStack/Experiment it says my username/password is unknown,
-why?}\label{i-have-an-account-but-when-i-try-to-log-in-to-openstackexperiment-it-says-my-usernamepassword-is-unknown-why}
-
-You must be a member of~an active project to access the
-OpenStack/Experiment interface. If you are PI Eligible, you can request
-a new project on
-the~\href{https://www.chameleoncloud.org/user/projects}{Chameleon
-Project Management page}. If you are not PI Eligible, you will need to
-be added to an existing project by the project PI. You can check that a
-project has an active Chameleon allocation by clicking on
-the~\textbf{View Project}~button. If you are part of a project but the
-allocation is~\emph{Pending}, it means your project is under review. If
-you still cannot log in,
-please~\href{https://www.chameleoncloud.org/user/help/}{open a ticket
-with our help desk}.
+\FILENAME
 
 \section{Appliances}\label{appliances}
 
@@ -232,8 +28,7 @@ them in the
 \href{https://www.chameleoncloud.org/docs/complex-appliances/}{Complex
 Appliances documentation}.
 
-\subsection{What is the Chameleon Appliance
-Catalog?}\label{what-is-the-chameleon-appliance-catalog}
+\subsection{What is the Chameleon Appliance Catalog?}\label{what-is-the-chameleon-appliance-catalog}
 
 \href{https://www.chameleoncloud.org/appliances/}{The Chameleon
 Appliance Catalog}~is a repository that allows users to discover,
@@ -341,8 +136,7 @@ against our resource registry, gathering of metrics, etc.
 Since 2016, we also provide and~support Ubuntu 14.04 and
 16.04~appliances with the same functionality.
 
-\section{Bare Metal
-Troubleshooting}\label{bare-metal-troubleshooting}
+\section{Bare Metal Troubleshooting}\label{bare-metal-troubleshooting}
 
 \subsection{Why are my Bare Metal instances failing to
 launch?}\label{why-are-my-bare-metal-instances-failing-to-launch}
@@ -353,7 +147,6 @@ before allowing them to launch instances. Please follow the
 and make sure that:
 
 \begin{enumerate}
-\tightlist
 \item
   You have created a lease and it has started (the associated
   reservation is shown as \textbf{Active})
@@ -366,8 +159,7 @@ If you still cannot start instances, please
 \href{https://www.chameleoncloud.org/user/help/}{open a ticket with our
 help desk}.
 
-\section{OpenStack KVM
-Troubleshooting}\label{openstack-kvm-troubleshooting}
+\section{OpenStack KVM Troubleshooting}\label{openstack-kvm-troubleshooting}
 
 \subsection{Why are my OpenStack KVM instances failing to
 launch?}\label{why-are-my-openstack-kvm-instances-failing-to-launch}
@@ -387,7 +179,6 @@ should not be discounted too easily, it is always prudent to first
 check~for the~following issues:
 
 \begin{itemize}
-\tightlist
 \item
   Do you have a floating IP associated with your instance?~By default,
   instances do not have publicly-accessible IP addresses assigned. See
@@ -415,8 +206,7 @@ please~\href{https://www.chameleoncloud.org/user/help/}{open a ticket
 with our help desk}, and send~us the results of the above (and any
 evidence of nanites you find as well).
 
-\section{Create your own SSH key
-pairs}\label{create-your-own-ssh-key-pairs}
+\section{Create your own SSH key pairs}\label{create-your-own-ssh-key-pairs}
 
 The following document describes the procedure on how you can create an
 SSH key pair on your Unix, Linux or Windows operating system.
@@ -503,8 +293,7 @@ public key will be inserted into the instance's
 connect to the instance, the private key provided by the user will be
 validated against this public key in the known\_hosts file.
 
-\subparagraph{Connect to an instance from your
-terminal}\label{connect-to-an-instance-from-your-terminal}
+\subparagraph{Connect to an instance from your terminal}\label{connect-to-an-instance-from-your-terminal}
 
 \subparagraph{After you have created a key pair and imported it in
 Chameleon, you can connect to~any instance configured with this key

@@ -1,12 +1,32 @@
 
 
-\chapter{Linux Shell}
-\label{C:linux-shell}
+\chapter{Linux}
+\label{C:linux}
 
 \FILENAME
 
+\section{History}
+
+LINUX is a reimplementation by the community of UNIX which was
+developed in 1969 by Ken Thompson and Dennis Ritchie of Bell
+Laboratories and rewritten in C. An important part of UNIX is what is
+called the {\em kernel} which allows the software to talk to
+the hardware and utilize it. 
+
+In 1991 Linus Trovalds started developing a Linux Kernel that was
+initially targeted for PC's. THis made it possible to run it on
+Laptops and was later on further developed by making it a full
+Operating system replacement for UNIX. 
+
+\section{Shell}
+
+One of the most important features for us will be to access the
+computer with the help of a {\em shell}. THe shell is typically run in
+what is called a terminal and allows interaction to the computer with
+commandline programs. 
+
 There are many good tutorials out there that explain why one needs a
-linux shell and not just a GUI. Randomly we picked the firts one that
+linux shell and not just a GUI. Randomly we picked the first one that
 came up with a google query (This is not an endorsement for the material
 we point to, but could be a worth while read for someone that has no
 experience in Shell programming:
@@ -15,53 +35,176 @@ experience in Shell programming:
 
 Certainly you are welcome to use other resources that may suite you
 best. We will however summarize in table form a number of useful
-commands that you may als find in a link to a RefCard.
+commands that you may als find even as a RefCard.
 
 \URL{http://www.cheat-sheets.org/\#Linux}
 
+We provide in Table \ref{T:shell-commands} a number of useful commands
+that you want to explore. For more information simply type man and the
+name of the command.
 
-\section{File commands}\label{file-commands}
 
-Find included a number of commands related to file manipulation.
+\begin{center}
+\begin{longtable}{|p{4cm}|p{8cm}|}
+\caption{Common commands}\label{T:shell-commands}\\
 
-\begin{tabular}{ll}
-Command & Description \\
 \hline
-ls & Directory listing\\
-ls -lisa & list details \\
-cd \emph{dirname} & Change directory to \emph{dirname} \\
-mkdir \emph{dirname} & create the directory \\
-pwd & print working directory \\
-rm \emph{file} & remove the file \\
-cp \emph{a} \emph{b} & copy file \emph{a} to \emph{b} \\
-mv \emph{a} \emph{b} & move/rename file \emph{a} to \emph{b}\\
-cat \emph{a} & print content of file\emph{a}\\
-less \emph{a} & print paged content of file \emph{a}\\
-head -5 \emph{a} & Display first 5 lines of file \emph{a}\\
-tail -5 \emph{a} & Display last 5 lines of file \emph{a}
-\end{tabular}
+\multicolumn{1}{|p{4cm}|}{\textbf{Example}} & \multicolumn{1}{p{8cm}|}{\textbf{Description}} \\ 
+\hline 
+\endfirsthead
 
-\section{Search commands}\label{search-commands}
+\multicolumn{2}{p{12cm}}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline 
+\hline \multicolumn{1}{|p{4cm}|}{\textbf{Example}} & \multicolumn{1}{p{8cm}|}{\textbf{Description}} \\ 
+\hline 
+\endhead
 
-Find included a number of commands related to seraching.
-
-\begin{tabular}{ll}
-Command & Description \\
+\hline 
+\multicolumn{2}{|r|}{{Continued on next page}} \\
 \hline
-fgrep &  TBD \\
-grep -R ``xyz'' . & TBD \\
-find . -name ``*.py'' &  TBD \\
-\end{tabular}
+\endfoot
 
-\section{Help}\label{help}
-
-Find included a number of commands related to manual pages.
-
-\begin{tabular}{ll}
-Command & Description \\
+%\hline 
 \hline
-man \emph{command} & manual page for the \emph{command} \\
-\end{tabular}
+\endlastfoot
+
+  \multicolumn{2}{|l|}{\cellcolor{blue!15} Help Commands}\\
+  \hline
+  man \emph{command} & manual page for the \emph{command} \\
+  apropos {\em text} & list all commands that have text in it\\
+  & \\
+
+  \hline
+  \multicolumn{2}{|l|}{\cellcolor{blue!15} File Commands}\\
+  \hline
+  ls & Directory listing\\
+  ls -lisa & list details \\
+  tree & list the directories in graphical form \\
+  cd \emph{dirname} & Change directory to \emph{dirname} \\
+  mkdir \emph{dirname} & create the directory \\
+  pwd & print working directory \\
+  rm \emph{file} & remove the file \\
+  cp \emph{a} \emph{b} & copy file \emph{a} to \emph{b} \\
+  mv \emph{a} \emph{b} & move/rename file \emph{a} to \emph{b}\\
+  cat \emph{a} & print content of file\emph{a}\\
+  cat - n &  (assignment) \\
+  less \emph{a} & print paged content of file \emph{a}\\
+  head -5 \emph{a} & Display first 5 lines of file \emph{a}\\
+  tail -5 \emph{a} & Display last 5 lines of file \emph{a}\\
+  du -hs . & show in human readable form the space used by the current
+             directory\\
+  wc &  (assignment) \\
+  sort &  (assignment) \\
+  tar &  (assignment) \\
+  rsync &  (assignment) \\
+  gzip &  (assignment) \\
+  bzip2 &  (assignment) \\
+  & \\
+  
+  %\hline
+  %\multicolumn{2}{|l|}{\cellcolor{blue!15} Search Commands}\\
+  %\hline
+  chmod go-rwx {\em file} & changes the permission of the file \\
+  chown {\em username} {\em file} & changes the ownership of the file \\
+  chgrp {\em group} {\em file} & changes the group of a file\\
+  & \\
+
+  \hline
+  \multicolumn{2}{|l|}{\cellcolor{blue!15} Search Commands}\\
+  \hline
+  fgrep ``text'' filename &  searches the text in the given file \\
+  grep -R ``xyz'' . & recursively searches for xyz in all files \\
+  find . -name ``*.py'' &  find all files with .py at the end \\
+  & \\
+
+  %\hline
+  %\multicolumn{2}{|l|}{\cellcolor{blue!15} Process Commands}\\
+  %\hline
+  ps & list the running processes \\
+  kill -9 1234 & kill the process with the id 1234 \\
+  at &  (assignment) \\
+  cron &  (assignment) \\
+  crontab &  (assignment) \\
+  & \\
+
+  \hline
+  \multicolumn{2}{|l|}{\cellcolor{blue!15} Device Commands}\\
+  \hline
+  mount /dev/cdrom /mnt/cdrom & mount a filesystem from a cd rom to /mnt/cdrom\\
+  & \\
+
+  \hline
+  \multicolumn{2}{|l|}{\cellcolor{blue!15} System Commands}\\
+  \hline
+  users &  (assignment) \\
+  who &  (assignment) \\
+  whoami &  (assignment) \\
+  dmesg &  (assignment) \\
+  last &  (assignment) \\
+  free -tm &  (assignment) \\
+  uname &  (assignment) \\
+  date &  (assignment) \\
+  time &  (assignment) \\
+  shutdown -h ``shut down'' & (assignment) \\
+  & \\
+
+  \hline
+  \multicolumn{2}{|l|}{\cellcolor{blue!15} Networking Commands}\\
+  \hline
+  ping &  (assignment) \\
+  netstat &  (assignment) \\
+  hostname &  (assignment) \\
+  traceroute &  (assignment) \\
+  ifconfig &  (assignment) \\
+  & \\
+
+  \hline
+  \multicolumn{2}{|l|}{\cellcolor{blue!15} Internet Commands}\\
+  \hline
+  host &  (assignment) \\
+  whois &  (assignment) \\
+  dig &  (assignment) \\
+  wget &  (assignment) \\
+  curl &  (assignment) \\
+  & \\
+
+  \hline
+  \multicolumn{2}{|l|}{\cellcolor{blue!15} Remote Access Commands}\\
+  \hline
+  ssh &  (assignment) \\
+  scp &  (assignment) \\
+  sftp &  (assignment) \\
+  & \\
+
+
+\end{longtable}
+\end{center}
+
+\section{Multi-command execution}
+
+One of the important features is that one can execute multiple
+commands in the shell.
+
+To execute command 2 once command 1 has finished use
+
+\begin{verbatim}
+command1; command2
+\end{verbatim}
+
+To execute command 2 as soon as command 1 forwards output to stdout use
+
+\begin{verbatim}
+command1; command2
+\end{verbatim}
+
+To execute command 1 in the background use
+
+\begin{verbatim}
+command1 &
+\end{verbatim}
+
+
 
 \section{Keyboard Shortcuts}\label{keyboard-shortcuts}
 
@@ -77,8 +220,8 @@ Ctrl + z & Stops the current command  \\
          & Resume with bg in the background \\
 Ctrl + c & Halts the current command\\
 Ctrl + l & Clear the screen\\
-Ctrl + a & Return to the start of the command you're typing\\
-Ctrl + e & Go to the end of the command you're typing\\
+Ctrl + a & Return to the start of the line\\
+Ctrl + e & Go to the end of the line\\
 Ctrl + k & Cut everything after the cursor to a special clipboard\\
 Ctrl + y & Paste from the special clipboard \\
 Ctrl + d & Log out of current session, similar to exit \\
@@ -87,9 +230,9 @@ Ctrl + d & Log out of current session, similar to exit \\
 \section{.bashrc and .bash\_profile}\label{bashrc-and-.bash_profile}
 
 Usage of a particular command and all the attributes associated with it,
-use `man' command. Avoid using `rm -r' command to delete files
+use `man' command. Avoid using \verb|rm -r| command to delete files
 recursively. A good way to avoid accidental deletion is to include the
-following in your .bash\_profile file:
+following in your \verb|.bash_profile| file:
 
 \begin{verbatim}
 alias e=open_emacs
@@ -112,4 +255,11 @@ Find more commands that you find useful and add them to this page.
 \item[Linux.3:]
 Use the sort command to sort all lines of a file while removing
 duplicates.
+\item[Linux.4:] In Table \ref{T:shell-commands} you will find a number
+  of commands with (assignment). Develop descriptions that you will
+  contribute and add to the manual with a pull request. Work in a team
+  so that only one pull request is issued. Do not only provide the
+  description, but also a real example as showcased within the table.
+\item[Linux.4:] Should there be other commands listed in the table. If
+  so which? Create a pull request for them. 
 \end{description}

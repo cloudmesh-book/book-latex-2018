@@ -1,18 +1,19 @@
 \FILENAME
 
 \chapter{Horizon Graphical User Interface}
+\label{C:cc-horizon}
 
-\section{Configure~resources}\label{configureresources}
+\section{Configure resources}
 
 Once your lease is started, you are almost ready to start an instance.
-But first, you need to make sure that you will be able to connect to it
-by setting up a key pair. This only has to be done once per user per
-project.
+But first, you need to make sure that you will be able to connect to
+it by setting up a key pair. This only has to be done once per user
+per project.
 
 Go to Project \textgreater{} Compute \textgreater{} Access \& Security,
 then select the Key Pairs tab.
 
-\includegraphics[width=\columnwidth]{images/chameleon/Screen-Shot-2016-10-26-at-14-37-00.png}
+\includegraphics[width=0.8\columnwidth]{images/chameleon/Screen-Shot-2016-10-26-at-14-37-00.png}
 
 Here you can either ask OpenStack to create an SSH key pair for you (via
 the ``Create Key'' Pair~button), or, if you already have an SSH key pair
@@ -27,12 +28,12 @@ terminal:
 It copies the content of the public key to your copy/paste buffer. Then
 you can simply paste in the ``Public Key'' box.
 
-\includegraphics[width=\columnwidth]{images/chameleon/Screen-Shot-2016-10-26-at-14-37-18.png}
+\includegraphics[width=0.8\columnwidth]{images/chameleon/Screen-Shot-2016-10-26-at-14-37-18.png}
 
 Then, click on the blue ``Import Key~Pair'' button. This should show you
 the list of key pairs, with the one you just added.
 
-\includegraphics[width=\columnwidth]{images/chameleon/Screen-Shot-2016-10-26-at-14-37-52.png}
+\includegraphics[width=0.8\columnwidth]{images/chameleon/Screen-Shot-2016-10-26-at-14-37-52.png}
 
 For those already familiar with OpenStack, note that Security Groups are
 not functional on bare-metal. All instances ports are open to the
@@ -42,7 +43,7 @@ Internet and any security group rule you add will not be~respected.
 
 Now, go to the ``Instances'' panel.
 
-\includegraphics[width=\columnwidth]{images/chameleon/Screen-Shot-2016-10-26-at-14-39-56.png}
+\includegraphics[width=0.8\columnwidth]{images/chameleon/Screen-Shot-2016-10-26-at-14-39-56.png}
 
 Click on the ``Launch Instance'' button in the top right corner. Select
 a reservation in the Reservation box, pick an instance name (in this
@@ -51,18 +52,18 @@ environment named CC-CentOS7. If you have multiple key pairs registered,
 you need to select one in the ``Access \& Security''~tab. Finally, click
 on the blue ``Launch'' button.
 
-\includegraphics[width=\columnwidth]{images/chameleon/Screen-Shot-2016-10-26-at-14-41-08.png}
+\includegraphics[width=0.8\columnwidth]{images/chameleon/Screen-Shot-2016-10-26-at-14-41-08.png}
 
 The instance will show up in the instance list, at first in Build
 status. It takes a few minutes to deploy the instance on bare-metal
 hardware and reboot the machine.
 
-\includegraphics[width=\columnwidth]{images/chameleon/Screen-Shot-2016-10-26-at-15-53-31.png}
+\includegraphics[width=0.8\columnwidth]{images/chameleon/Screen-Shot-2016-10-26-at-15-53-31.png}
 
 After a few minutes the instance should become in Active status and the
 Power State should be Running.
 
-\includegraphics[width=\columnwidth]{images/chameleon/Screen-Shot-2016-10-26-at-16-22-38.png}
+\includegraphics[width=0.8\columnwidth]{images/chameleon/Screen-Shot-2016-10-26-at-16-22-38.png}
 
 At this point the instance might still be booting: it might take a
 minute or two to actually be accessible on the network and accept SSH
@@ -70,28 +71,28 @@ connections.~In the meantime, you can attach a floating IP to the
 instance. Click on the~``Associate Floating IP'' button.~You should get
 a screen like the one below:
 
-\includegraphics[width=\columnwidth]{images/chameleon/Screen-Shot-2016-10-26-at-16-25-04.png}
+\includegraphics[width=0.8\columnwidth]{images/chameleon/Screen-Shot-2016-10-26-at-16-25-04.png}
 
 If there are no unused floating IP already allocated to your project,
 click on the + button. In the window that opens, select the ext-net pool
 if not already selected by default and click on the blue Allocate IP
 button.
 
-\includegraphics[width=\columnwidth]{images/chameleon/Screen-Shot-2016-10-26-at-16-33-45-W05kOLQ.png}
+\includegraphics[width=0.1\columnwidth]{images/chameleon/Screen-Shot-2016-10-26-at-16-33-45-W05kOLQ.png}
 
 You will be returned to the previous window. The correct value for
 ``Port to be associated'' should already be selected, so you only have
 to click on ``Associate''.
 
-\includegraphics[width=\columnwidth]{images/chameleon/Screen-Shot-2016-10-26-at-16-25-10.png}
+\includegraphics[width=0.8\columnwidth]{images/chameleon/Screen-Shot-2016-10-26-at-16-25-10.png}
 
 This should send you back to the instance list, where you can see the
 floating IP attached to the instance (you may need to refresh your
 browser to see the floating IP).
 
-\includegraphics[width=\columnwidth]{images/chameleon/Screen-Shot-2016-10-26-at-16-26-54.png}
+\includegraphics[width=0.8\columnwidth]{images/chameleon/Screen-Shot-2016-10-26-at-16-26-54.png}
 
-\section{Interact with resources}\label{interact-with-resources}
+\section{Interact with resources}
 
 Now you should be able to connect to the instance via SSH using the cc
 account. In a terminal, type ssh
@@ -134,8 +135,7 @@ run commands with root privileges by prefixing them with~\texttt{sudo}.
 To completely~switch~user and become root, use
 the~\texttt{sudo\ su\ -\ root}~command.
 
-\subsection{\texorpdfstring{{Snapshot an
-instance}}{Snapshot an instance}}\label{snapshot-an-instance}
+\subsection{Snapshot an instance}
 
 All instances in Chameleon, whether KVM or bare-metal, are running off
 disk images. The content of these disk images can be snapshotted at any
@@ -173,13 +173,13 @@ to our
 \href{https://www.chameleoncloud.org/docs/user-guides/ironic/\#snapshotting_an_instance}{image
 management guide}.}
 
-\section{Use FPGAs}\label{use-fpgas}
+\section{Use FPGAs}
 
 Consult the
 \href{https://www.chameleoncloud.org/docs/bare-metal-user-guide/fpga/}{dedicated
 page}~if you would like to use the FPGAs available on Chameleon.
 
-\section{Next Step}\label{next-step}
+\section{Next Step}
 
 Now that you have created some resources, it is time to interact with
 them! You will find instructions to the next step by visiting the

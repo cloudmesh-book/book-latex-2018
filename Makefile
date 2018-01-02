@@ -101,7 +101,7 @@ clean:
 	rm -rf _markdown_*
 	rm -rf dest
 	rm -rf *.tdo
-
+	find . -name '*.aux' -delete
 
 view:
 	open $(FILE).pdf

@@ -6,35 +6,32 @@
 \FILENAME
 
 In some classes the material may be openly shared in code
-repositories. In other cases the class participants may be developing
-lecture notes or other valuable material that other students can
-benefit from. What if not only instructors, but also students could
-contribute to the goal of developing such material. For this reason
-we need some mechanism to share content with a large number of
-students. For this reason we have elected to use git for creating the
-content that you are reading now. 
+repositories. This includes class material, papers and project.
+Hence, we need some mechanism to share content with a large number of
+students. For this reason we use \URL{github.com}.
 
 First, we like to introduce you to git and github.com (Section
 \ref{s:github}).  Next, we provide you with the basic commands to
 interact with git from the commandline (Section
-\ref{s:git-commands}). Than we will introduce you how you can contribute
-to this set of documentations with pull requests.
+\ref{s:git-commands}). Than we will introduce you how you can
+contribute to this set of documentations with pull requests.
 
 \section{Obverview}\label{s:github}
 
-Github is a code repository that allows the development of code in a
-distributed fashion. There are many good tutorials about github.
-Some of them can be found on the github Web page. An interactive
-tutorial is for example available at
+Github is a code repository that allows the development of code and
+documents with many contributors in a distributed fashion. There are
+many good tutorials about github.  Some of them can be found on the
+github Web page. An interactive tutorial is for example available at
 
 \URL{https://try.github.io/}
 
-However although this tutorial is great in some cases you have already
-a repository set up by yoru organization and you do not have to
-completely initialize it. Thus do not just replicate the commands in
-the tutorial, or the once we present here before not evaluating their
-consequences. In general make sure you verify if the command does what
-you expect before you execute it.
+However, although these tutorials are helpful in many cases they do
+not address some cases. For example, you have already a repository set
+up by yoru organization and you do not have to completely initialize
+it. Thus do not just replicate the commands in the tutorial, or the
+once we present here before not evaluating their consequences. In
+general make sure you verify if the command does what you expect {\bf
+  before} you execute it.
 
 A more extensive list of tutorials can be found at
 
@@ -80,7 +77,7 @@ When you start editing your project, you diverge from the original
 version. During your developing, the original version may be updated, or
 other developers may have some of their branches implementing good
 features that you would like to include in your current work. That is
-when `Rebase' becomes useful. When you `Rebase' to certain points, could
+when {\em Rebase} becomes useful. When you {\em Rebase} to certain points, could
 be a newer Master or other custom branch, consider you graft all your
 on-going work right to that point.
 
@@ -99,7 +96,7 @@ work. Managing remote repositories includes knowing how to add remote
 repositories, remove remotes that are no longer valid, manage various
 remote branches and define them as being tracked or not, and more.
 
-Though out this semester, you will typically work on two `remote' repos.
+Though out this semester, you will typically work on two {\em remote} repos.
 One is the office class repo, and another is the repo you forked from
 the class repo. The class repo is used as the centralized, authority and
 final version of all student submissions. The repo under your own Github
@@ -107,14 +104,14 @@ account is for your personal storage. To show progress on a weekly
 basis you need to commit your changes on a weekly basis. However make
 sure that things in the master branch are working. If not, just use
 another branch to conduct your changes and merge at a later
-time. we like you to call your development branch ``dev''.
+time. we like you to call your development branch {\ dev}.
 
 \URL{https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes}
 
 \section{Pull Request}\label{pull-request}
 
 Pull requests are a means of starting a conversation about a proposed
-change back into a project. We'll be taking a look at the strength of
+change back into a project. We will be taking a look at the strength of
 conversation, integration options for fuller information about a change,
 and cleanup strategy for when a pull request is finished.
 
@@ -124,15 +121,15 @@ and cleanup strategy for when a pull request is finished.
 
 Branches are an excellent way to not only work safely on features or
 experiments, but they are also the key element in creating Pull Requests
-on GitHub. Let's take a look at why we want branches, how to create and
+on GitHub. Lets take a look at why we want branches, how to create and
 delete branches, and how to switch branches in this episode.
 
 \video{Git}{2:25}{Branch}{https://www.youtube.com/watch?v=H5GJfcp3p4Q}
 
 \section{Checkout}\label{checkout}
 
-Change where and what you're working on with the checkout command.
-Whether we're switching branches, wanting to look at the working tree at
+Change where and what you are working on with the checkout command.
+Whether we are switching branches, wanting to look at the working tree at
 a specific commit in history, or discarding edits we want to throw away,
 all of these can be done with the checkout command.
 
@@ -143,7 +140,7 @@ all of these can be done with the checkout command.
 
 Once you know branches, merging that work into master is the natural
 next step. Find out how to merge branches, identify and clean up merge
-conflicts or avoid conflicts until a later date. Lastly, we'll look at
+conflicts or avoid conflicts until a later date. Lastly, we will look at
 combining the merged feature branch into a single commit and cleaning up
 your feature branch after merges.
 
@@ -154,7 +151,7 @@ your feature branch after merges.
 Using Graphical User Interfaces can supplement your use of the command
 line to get the best of both worlds. GitHub for Windows and GitHub for
 Mac allow for switching to command line, ease of grabbing repositories
-from GitHub, and participating in a particular pull request. We'll also
+from GitHub, and participating in a particular pull request. We will also
 see the auto-updating functionality helps us stay up to date with stable
 versions of Git on the command line.
 
@@ -279,7 +276,7 @@ names and no special characters such as @ ; / \_ and spaces. In general
 we recommend that you avoid using directoru names with capital letters
 spaces and \_ in them. This will simplify your documentation efforts and
 make the URLs from git more readable. Also while on some OS's the
-directories ``MyDirectory'' is different from ``mydirectory'' on OSX
+directories {\em MyDirectory} is different from {\em mydirectory} on OSX
 it is considered the same and thus renaming from capital to lower case
 can not be done without first renaming it to another directory. 
 
@@ -323,34 +320,56 @@ remote repository using:
 git pull
 \end{verbatim}
 
-\section{README.yml}
+\section{README.yml and notebook.md}
 
-In case you take classes with us you will have to create a README.yaml
-file in the top most directory of your repository. It serves the
-purpose of identifying your submission for homework and information
-about yourself.
+In case you take classes e516 and e616 with us you will have to create
+a README.yaml and notebook.md file in the top most directory of your
+repository. It serves the purpose of identifying your submission for
+homework and information about yourself.
 
-It is important to follow the format precisely. Any derivation from
-this format will not allow us to see your homework as our automated
-scripts will use the README.yml to detect them. However this is simple
-as the README must be a valid YAML file. you can easily check
-validation with a python program and you should consider this your
-first homework, to write a program that checks if your README.yml is
-valid. Make sure the file does not contain ay TABs.  Please also mind
-that all filenames of all homework and the main directory must be
-\textbf{lowercase} and do not include spaces. This will simplify your
-task of managing the files across different operating systems.
+It is important to follow the format precisely. As it is yaml it is an
+easy homework to write a 4 line python script that validates if the
+README.yaml file is valid. In addition you can use programs such as
+\verb|yamllint| which is documented at 
 
-Naturally you need to use the first name and lastname that you used
-in the university so we can identify you. Assignments will 
+\URL{https://yamllint.readthedocs.io/en/latest/}
 
-Please check with your instructor on the format of the README
-file. typically they will have provided a template for you.
+This file is used to integrate your assignments into a proceedings. An
+example is provided at 
 
+\URL{https://github.com/bigdata-i523/sample-hid000/blob/master/README.yml}
 
+Any derivation from this format will not allow us to see your homework
+as our automated scripts will use the README.yml to detect
+them. Make sure the file does not
+contain ay TABs.  Please also mind that all filenames of all homework
+and the main directory must be \textbf{lowercase} and do not include
+spaces. This will simplify your task of managing the files across
+different operating systems.
+
+In case you work in a team, on a submission, the document will only be
+submitted in the author and hid that is listed first. All other
+readmes, will have for that particular artifact a
+\verb|duplicate: yes| entry to indicate that this submission is
+managed elswhere. The team will be responsible to manage their own
+pull requests, but if the team desires we can grant access for all
+memebers to a repository by a user. Please be aware that you must make
+sure you coordinate with your team.
+
+We will not accept submission of homework as pdf documents or tar
+files. All assignments must be submitted as code and the reports in
+native latex and in github. We have a script that will automatically
+create the PDF and include it in a proceedings. There is no exception
+from this rule and all reports not compilable will be returned without
+review and if not submitted within the deadline receive a panelty.
+
+Please check with your instructor on the format of the README.yaml
+file as it could be different for your class. 
 
 \section{Contributing to the Document}
 
+\TODO{This section has to be redone as we use class specific clones
+  and not the master}
 
 
 \subsection{Clone}
@@ -483,19 +502,16 @@ those tutorials. We found the following useful
 \subsection{Exercise}\label{exercise}
 
 \begin{description}
-\item[Github.1:]
-How do you set your favorite editor as a default with github config
-\item[Github.2:]
-What is the difference between merge and rebase?
-\item[Github.3:]
-Assume you have made a change in your local fork, however other users
-have since committed to the master branch, how can you make sure your
-commit works off from the latest information in the master branch?
-\item[Github.4:]
-Find a spelling error in the Web page or a contribution and create a
-pull request for it.
+\item[Github.1:] How do you set your favorite editor as a default with
+  github config
+\item[Github.2:] What is the difference between merge and rebase?
+\item[Github.3:] Assume you have made a change in your local fork,
+  however other users have since committed to the master branch, how
+  can you make sure your commit works off from the latest information
+  in the master branch?
+\item[Github.4:] Find a spelling error in the Web page or a
+  contribution and create a pull request for it.
 \item[Gitlab.5:] Create a README.yml in your github account directory
-  provided for you for class.
-information
+  provided for you for class.  information
 
 \end{description}
