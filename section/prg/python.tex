@@ -11,10 +11,10 @@
 Let us explore the syntax of Python. Type into the interactive loop and
 press Enter:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 print("Hello world from Python!")
 # Hello world from Python! 
-\end{minted}
+\end{lstlisting}
 
 What happened: the print function was given a \textbf{string} to
 process. A string is a sequence of characters. A \textbf{character} can
@@ -37,18 +37,18 @@ the line, showing you the output.
 You can store data into a \textbf{variable} to access it later. For
 instance, instead of:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 print('Hello world from Python!')
-\end{minted}
+\end{lstlisting}
 
 which is a lot to type if you need to do it multiple times, you can
 store the string in a variable for convenient access:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 hello = 'Hello world from Python!'
 print(hello)
 # Hello world from Python!
-\end{minted}
+\end{lstlisting}
 
 \section{Data Types}\label{data-types}
 \index{Python!data types}
@@ -79,7 +79,7 @@ You can combine booleans with \textbf{boolean operators}:
   or
 \end{itemize}
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 print(True and True)
 # True
 
@@ -97,7 +97,7 @@ print(True or False)
 
 print(False or False)
 # False
-\end{minted}
+\end{lstlisting}
 
 \subsection{Numbers}\label{numbers}
 \index{Python!numbers}
@@ -105,10 +105,10 @@ print(False or False)
 The interactive interpreter can also be used as a calculator. For
 instance, say we wanted to compute a multiple of 21:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 print(21 * 2)
 # 42
-\end{minted}
+\end{lstlisting}
 
 We saw here the print statement again. We passed in the result of the
 operation 21 * 2. An \textbf{integer} (or \textbf{int}) in Python is a
@@ -130,19 +130,19 @@ Exponentiation $x^y$ is written as x**y is x to the yth power.
 
 You can combine \textbf{float}s and \textbf{int}s:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 print(3.14 * 42 / 11 + 4 - 2)
 # 13.9890909091
 
 print(2**3)
 # 8
-\end{minted}
+\end{lstlisting}
 
 Note that \textbf{operator precedence} is important. Using parenthesis
 to indicate affect the order of operations gives a difference results,
 as expected:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 print(3.14 * (42 / 11) + 4 - 2)
 # 11.42
 
@@ -151,7 +151,7 @@ print(1 + 2 * 3 - 4 / 5.0)
 
 print( (1 + 2) * (3 - 4) / 5.0 )
 # -0.6
-\end{minted}
+\end{lstlisting}
 
 
 
@@ -174,10 +174,10 @@ module. The from\ldots{}import Statement Python's from statement lets
 you import specific attributes from a module into the current namespace.
 It is prefered to use for each import its own line such as:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 import numpy
 import matplotlib
-\end{minted}
+\end{lstlisting}
 
 When the interpreter encounters an import statement, it imports the
 module if the module is present in the search path. A search path is a
@@ -192,9 +192,9 @@ Python's from statement lets you import specific attributes from a
 module into the current namespace. The from \ldots{} import has the
 following syntax:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 from datetime import datetime   
-\end{minted}
+\end{lstlisting}
 
 \section{Date Time in Python}\label{date-time-in-python}
 \index{Python!date}
@@ -209,61 +209,61 @@ functionality, see also the time and calendar modules.
 The import Statement You can use any Python source file as a module by
 executing an import statement in some other Python source file.
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 from datetime import datetime
-\end{minted}
+\end{lstlisting}
 
 This module offers a generic date/time string parser which is able to
 parse most known formats to represent a date and/or time.
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 from dateutil.parser import parse
-\end{minted}
+\end{lstlisting}
 
 pandas is an open source Python library for data analysis that needs to
 be imported.
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 import pandas as pd
-\end{minted}
+\end{lstlisting}
 
 Create a string variable with the class start time
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 fall_start = '08-21-2017'
-\end{minted}
+\end{lstlisting}
 
 Convert the string to datetime format
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 datetime.strptime(fall_start, '%m-%d-%Y')
 # datetime.datetime(2017, 8, 21, 0, 0)
-\end{minted}
+\end{lstlisting}
 
 Creating a list of strings as dates
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 class_dates = ['8/25/2017', '9/1/2017', '9/8/2017', '9/15/2017', '9/22/2017', '9/29/2017']
-\end{minted}
+\end{lstlisting}
 
 Convert Class\_dates strings into datetime format and save the list into
 variable a
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 a = [datetime.strptime(x, '%m/%d/%Y') for x in class_dates]
-\end{minted}
+\end{lstlisting}
 
 Use parse() to attempt to auto-convert common string formats. Parser
 must be a string or character stream, not list.
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 parse(fall_start)
 # datetime.datetime(2017, 8, 21, 0, 0)
-\end{minted}
+\end{lstlisting}
 
 Use parse() on every element of the Class\_dates string.
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 [parse(x) for x in class_dates] 
 # [datetime.datetime(2017, 8, 25, 0, 0),
 #   datetime.datetime(2017, 9, 1, 0, 0),
@@ -271,20 +271,20 @@ Use parse() on every element of the Class\_dates string.
 #   datetime.datetime(2017, 9, 15, 0, 0),
 #   datetime.datetime(2017, 9, 22, 0, 0),
 #   datetime.datetime(2017, 9, 29, 0, 0)]  
-\end{minted}
+\end{lstlisting}
 
 Use parse, but designate that the day is first.
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 parse (fall_start, dayfirst=True)
 # datetime.datetime(2017, 8, 21, 0, 0)
-\end{minted}
+\end{lstlisting}
 
 Create a dataframe.A DataFrame is a tablular data structure comprised of
 rows and columns, akin to a spreadsheet, database table. DataFrame as a
 group of Series objects that share an index (the column names).
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 import pandas as pd
 data = {'class_dates': ['8/25/2017 18:47:05.069722', 
                         '9/1/2017 18:47:05.119994', 
@@ -302,11 +302,11 @@ print(df)
 #  3  9/15/2017 18:47:05.230071         1
 #  4  9/22/2017 18:47:05.230071         0
 #  5  9/29/2017 18:47:05.280592         1
-\end{minted}
+\end{lstlisting}
 
 Convert \verb|df[`date`]| from string to datetime
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 import pandas as pd
 pd.to_datetime(df['class_dates'])
 # 0   2017-08-25 18:47:05.069722
@@ -316,7 +316,7 @@ pd.to_datetime(df['class_dates'])
 # 4   2017-09-22 18:47:05.230071
 # 5   2017-09-29 18:47:05.280592
 # Name: class_dates, dtype: datetime64[ns]
-\end{minted}
+\end{lstlisting}
 
 \section{Control Statements}\label{control-statements}
 
@@ -337,17 +337,17 @@ Python has several conditional operators:
 Conditions are always combined with variables. A program can make a
 choice using the if keyword. For example:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 x = int(input("Guess x:"))
 if x == 4:
    print('You guessed correctly!')
-\end{minted}
+\end{lstlisting}
 
 In this example, \emph{You guessed correctly!} will only be printed if
 the variable x equals to four (see table above). Python can also execute
 multiple conditions using the elif and else keywords.
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 x = int(input("Guess x:"))
 if x == 4:
     print('You guessed correctly!')
@@ -355,7 +355,7 @@ elif abs(4 - x) == 1:
     print('Wrong guess, but you are close!')
 else:
     print('Wrong guess')
-\end{minted}
+\end{lstlisting}
 
 \subsection{Iteration}\label{iteration}
 \index{Python!for}
@@ -363,35 +363,35 @@ else:
 To repeat code, the for keyword can be used. For example, to display the
 numbers from 1 to 10, we could write something like this:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 for i in range(1, 11):
    print('Hello!')
-\end{minted}
+\end{lstlisting}
 
 The second argument to range, \emph{11}, is not inclusive, meaning that
 the loop will only get to \emph{10} before it finishes. Python itself
 starts counting from 0, so this code will also work:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 for i in range(0, 10):
    print(i + 1)
-\end{minted}
+\end{lstlisting}
 
 In fact, the range function defaults to starting value of \emph{0}, so
 the above is equivalent to:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 for i in range(10):
    print(i + 1)
-\end{minted}
+\end{lstlisting}
 
 We can also nest loops inside each other:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 for i in range(0,10):
     for j in range(0,10):
         print(i,' ',j)
-\end{minted}
+\end{lstlisting}
 
 In this case we have two nested loops. The code will iterate over the
 entire coordinate range (0,0) to (9,9)
@@ -409,33 +409,33 @@ can be accessed using a 0-based index.
 To define a list, you simply list its elements between square brackest
 `{[}{]}`:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 names = ['Albert', 'Jane', 'Liz', 'John', 'Abby']
 names[0] # access the first element of the list
 # 'Albert'
 names[2] # access the third element of the list
 # 'Liz'
-\end{minted}
+\end{lstlisting}
 
 You can also use a negative index if you want to start counting elements
 from the end of the list. Thus, the last element has index \emph{-1},
 the second before last element has index \emph{-2} and so on:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 names[-1] # access the last element of the list
 # 'Abby'
 names[-2] # access the second last element of the list
 # 'John'
-\end{minted}
+\end{lstlisting}
 
 Python also allows you to take whole slices of the list by specifing a
 beginning and end of the slice separated by a colon
 
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 names[1:-1] # the middle elements, excluding first and last
 # ['Jane', 'Liz', 'John']
-\end{minted}
+\end{lstlisting}
 
 As you can see from the example above, the starting index in the slice
 is inclusive and the ending one, exclusive.
@@ -445,45 +445,45 @@ list.
 
 You can add elements with append`:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 names.append('Liz')
 names
 # ['Albert', 'Jane', 'Liz', 'John', 'Abby', 'Liz']
-\end{minted}
+\end{lstlisting}
 
 As you can see, the elements in a list need not be unique.
 
 Merge two lists with `extend`:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 names.extend(['Lindsay', 'Connor'])
 names
 # ['Albert', 'Jane', 'Liz', 'John', 'Abby', 'Liz', 'Lindsay', 'Connor']
-\end{minted}
+\end{lstlisting}
 
 Find the index of the first occurrence of an element with `index`:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 names.index('Liz')
 # 2
-\end{minted}
+\end{lstlisting}
 
 Remove elements by value with `remove`:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 names.remove('Abby')
 names
 # ['Albert', 'Jane', 'Liz', 'John', 'Liz', 'Lindsay', 'Connor']
-\end{minted}
+\end{lstlisting}
 
 Remove elements by index with `pop`:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 names.pop(1)
 # 'Jane'
 names
 # ['Albert', 'Liz', 'John', 'Liz', 'Lindsay', 'Connor']
-\end{minted}
+\end{lstlisting}
 
 Notice that pop returns the element being removed, while remove does
 not.
@@ -491,7 +491,7 @@ not.
 If you are familiar with stacks from other programming languages, you
 can use insert and `pop`:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 names.insert(0, 'Lincoln')
 names
 # ['Lincoln', 'Albert', 'Liz', 'John', 'Liz', 'Lindsay', 'Connor']
@@ -499,7 +499,7 @@ names.pop()
 # 'Connor'
 names
 # ['Lincoln', 'Albert', 'Liz', 'John', 'Liz', 'Lindsay']
-\end{minted}
+\end{lstlisting}
 
 The Python documentation contains a \href{}{full list of list
 operations}.
@@ -507,49 +507,49 @@ operations}.
 To go back to the range function you used earlier, it simply creates a
 list of numbers:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 range(10)
 # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 range(2, 10, 2)
 # [2, 4, 6, 8]
-\end{minted}
+\end{lstlisting}
 
 \subsection{Sets}\label{sets}
 \index{Python!set}
 
 Python lists can contain duplicates as you saw above:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 names = ['Albert', 'Jane', 'Liz', 'John', 'Abby', 'Liz']
-\end{minted}
+\end{lstlisting}
 
 When we don't want this to be the case, we can use a
 \href{https://docs.python.org/2/library/stdtypes.html\#set}{set}:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 unique_names = set(names)
 unique_names
 # set(['Lincoln', 'John', 'Albert', 'Liz', 'Lindsay'])
-\end{minted}
+\end{lstlisting}
 
 Keep in mind that the \emph{set} is an unordered collection of objects,
 thus we can not access them by index:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 unique_names[0]
 # Traceback (most recent call last):
 #   File "<stdin>", line 1, in <module>
 #   TypeError: 'set' object does not support indexing
-\end{minted}
+\end{lstlisting}
 >
 However, we can convert a set to a list easily:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 unique_names = list(unique\_names) 
 unique_names [`Lincoln', `John', `Albert', `Liz', `Lindsay']
 unique_names[0]
 # `Lincoln'
-\end{minted}
+\end{lstlisting}
 
 Notice that in this case, the order of elements in the new list
 matches the order in which the elements were displayed when we create
@@ -580,27 +580,27 @@ implemented by an array, while the set is implemented by a hash table.
 We will demonstrate this with an example. Let's say we have a list and a
 set of the same number of elements (approximately 100 thousand):
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 import sys, random, timeit
 nums_set = set([random.randint(0, sys.maxint) for _ in range(10**5)])
 nums_list = list(nums_set)
 len(nums_set)
 # 100000
-\end{minted}
+\end{lstlisting}
 
 We will use the
 \href{https://docs.python.org/2/library/timeit.html}{timeit} Python
 module to time 100 operations that test for the existence of a member in
 either the list or set:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 timeit.timeit('random.randint(0, sys.maxint) in nums', 
               setup='import random; nums=%s' % str(nums_set), number=100)
 # 0.0004038810729980469
 timeit.timeit('random.randint(0, sys.maxint) in nums', 
               setup='import random; nums=%s' % str(nums_list), number=100)
 # 0.3980541229248047
-\end{minted}
+\end{lstlisting}
 
 The exact duration of the operations on your system will be different,
 but the take away will be the same: searching for an element in a set is
@@ -615,17 +615,17 @@ referred to as \emph{dict}.
 
 A dictionary represents a key value store:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 person = {'Name': 'Albert', 'Age': 100, 'Class': 'Scientist'}
 print("person['Name']: ", person['Name'])
 # person['Name']:  Albert
 print("person['Age']: ", person['Age'])
 # person['Age']:  100
-\end{minted}
+\end{lstlisting}
 
 You can delete elements with the following commands:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 del person['Name'] # remove entry with key 'Name'
 person
 # {'Age': 100, 'Class': 'Scientist'}
@@ -637,11 +637,11 @@ person
 # Traceback (most recent call last):
 #  File "<stdin>", line 1, in <module>
 #  NameError: name 'person' is not defined
-\end{minted}
+\end{lstlisting}
 
 You can iterate over a dict:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 person = {'Name': 'Albert', 'Age': 100, 'Class': 'Scientist'}
 for item in person:
   print(item, person[item])
@@ -649,7 +649,7 @@ for item in person:
 # Age 100
 # Name Albert
 # Class Scientist
-\end{minted}
+\end{lstlisting}
 
 \subsection{Dictionary Keys and Values}\label{dictionary-keys-and-values}
 \index{Python!keys}
@@ -657,12 +657,12 @@ for item in person:
 You can retrieve both the keys and values of a dictionary using the
 keys() and values() methods of the dictionary, respectively:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 person.keys()
 # ['Age', 'Name', 'Class']
 person.values()
 # [100, 'Albert', 'Scientist']
-\end{minted}
+\end{lstlisting}
 
 Both methods return lists. Notice, however, that the order in which the
 elements appear in the returned lists (Age, Name, Class) is different
@@ -686,13 +686,13 @@ One application of dictionaries that frequently comes up is counting the
 elements in a sequence. For example, say we have a sequence of coin
 flips:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 import random
 die_rolls = [random.choice(['heads', 'tails']) for _ in range(10)]
 # die_rolls
 # ['heads', 'tails', 'heads', 'tails', 'heads', 'heads', 
    'tails', 'heads', 'heads', 'heads']
-\end{minted}
+\end{lstlisting}
 
 The actual list die\_rolls will likely be different when you execute
 this on your computer since the outcomes of the die rolls are random.
@@ -700,7 +700,7 @@ this on your computer since the outcomes of the die rolls are random.
 To compute the probabilities of heads and tails, we could count how many
 heads and tails we have in the list:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 counts = {'heads': 0, 'tails': 0}
 for outcome in coin_flips:
    assert outcome in counts
@@ -710,7 +710,7 @@ print('Probability of heads: %.2f' % (counts['heads'] / len(coin_flips)))
 
 print('Probability of tails: %.2f' % (counts['tails'] / sum(counts.values())))
 # Probability of tails: 0.30
-\end{minted}
+\end{lstlisting}
 
 In addition to how we use the dictionary counts to count the elements of
 coin\_flips, notice a couple things about this example:
@@ -740,7 +740,7 @@ code that logically belongs together in one coherent whole. A function
 has a unique name in the program. Once you call a function, it will
 execute its body which consists of one or more lines of code:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 def check_triangle(a, b, c):
 return \
     a < b + c and a > abs(b - c) and \
@@ -748,7 +748,7 @@ return \
     c < a + b and c > abs(a - b)
 
 print(check_triangle(4, 5, 6))
-\end{minted}
+\end{lstlisting}
 
 The def keyword tells Python we are defining a function. As part of the
 definition, we have the function name, check\_triangle, and the
@@ -763,7 +763,7 @@ function calls.
 It is also possible to store the output of a function in a variable, so
 it can be reused.
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 def check_triangle(a, b, c):
   return \
      a < b + c and a > abs(b - c) and \
@@ -772,7 +772,7 @@ def check_triangle(a, b, c):
 
 result = check_triangle(4, 5, 6)
 print(result)
-\end{minted}
+\end{lstlisting}
 
 \section{Classes}\label{classes}
 \index{Python!classes}
@@ -782,7 +782,7 @@ The data is represented in member variables, and the processes are
 defined in the methods of the class (methods are functions inside the
 class). For example, let's see how to define a Triangle class:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 class Triangle(object):
 
  def __init__(self, length, width, height, angle1, angle2, angle3):
@@ -809,7 +809,7 @@ class Triangle(object):
      return a + b + c == 180
 
 triangle = Triangle(4, 5, 6, 35, 65, 80)
-\end{minted}
+\end{lstlisting}
 
 Python has full Aobject-oriented programming (OOP) capabilities, however
 we can not cover all of them in a quick tutorial, so please refer to the
