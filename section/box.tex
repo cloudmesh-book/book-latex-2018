@@ -1,0 +1,109 @@
+\section{Box}\label{box}
+
+what is box
+
+Link:
+
+\begin{itemize}
+\tightlist
+\item
+  \url{http://opensource.box.com/box-python-sdk/tutorials/intro.html}
+\item
+  \url{https://github.com/box/box-python-sdk/tree/1.5/demo}
+\end{itemize}
+
+Install:
+
+\begin{verbatim}
+pip install boxsdk
+\end{verbatim}
+
+app.cfg:
+
+\begin{verbatim}
+* A Box client ID for a Box application
+* The corresponding Box client secret
+* A valid developer token for that application
+\end{verbatim}
+
+code:
+
+\begin{verbatim}
+# Import two classes from the boxsdk module - Client and OAuth2
+from boxsdk import Client, OAuth2
+
+# Define client ID, client secret, and developer token.
+CLIENT_ID = None
+CLIENT_SECRET = None
+ACCESS_TOKEN = None
+
+# Read app info from text file
+with open('app.cfg', 'r') as app_cfg:
+  CLIENT_ID = app_cfg.readline()
+  CLIENT_SECRET = app_cfg.readline()
+  ACCESS_TOKEN = app_cfg.readline()
+
+# Create OAuth2 object. It's already authenticated, thanks to the developer token.
+oauth2 = OAuth2(CLIENT_ID, CLIENT_SECRET, access_token=ACCESS_TOKEN)
+
+# Create the authenticated client
+client = Client(oauth2, LoggingNetwork())
+
+# Get information about the logged in user (that's whoever owns the developer token)
+my = client.user(user_id='me').get()
+print (my.name)
+print (my.login)
+print (my.avatar_url)
+
+root_folder = client.folder('0')
+root_folder_with_info = root_folder.get()
+
+print (root_folder_with_info)
+\end{verbatim}
+
+Questions
+
+\begin{itemize}
+\tightlist
+\item
+  how to list all file sin dir
+\item
+  how to recursively iterate
+\item
+  how to download each file when we iterate
+\end{itemize}
+
+\subsection{boxpython}\label{boxpython}
+
+* \url{https://github.com/wesleyfr/boxpython}
+
+\begin{quote}
+from boxpython import BoxAuthenticateFlow, BoxSession, BoxError
+\end{quote}
+
+\textgreater{}\textgreater{}\textgreater{}
+\textgreater{}\textgreater{}\textgreater{} flow =
+BoxAuthenticateFlow(`\textless{}client\_id\textgreater{}',
+`\textless{}client\_secret\textgreater{}')
+\textgreater{}\textgreater{}\textgreater{}
+flow.get\_authorization\_url()
+`\url{https://www.box.com/api/oauth2/authorize?response_type=code\&client_id}=\textless{}client\_id\textgreater{}\&state=authenticated'
+\textgreater{}\textgreater{}\textgreater{}
+
+access\_token, refresh\_token =
+flow.get\_access\_tokens(`\textless{}auth\_code\textgreater{}')
+
+def tokens\_changed(refresh\_token, access\_token): \ldots{}
+save\_to\_file(refresh\_token, access\_token) \ldots{}
+\textgreater{}\textgreater{}\textgreater{} box =
+BoxSession(`\textless{}client\_id\textgreater{}',
+`\textless{}client\_secret\textgreater{}', refresh\_token,
+access\_token, tokens\_changed)
+
+box.get\_folder\_info(0)
+
+box.download\_file(11006194629, `/tmp/test\_dl.txt')
+
+\subsection{Pybox}\label{pybox}
+
+\url{https://github.com/hzheng/pybox}

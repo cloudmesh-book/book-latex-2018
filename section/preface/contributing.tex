@@ -1,67 +1,33 @@
 \FILENAME
 
-\section{Contributing}\label{contributing}
+\section{Contributing}\label{S:contributing}
 \index{Contributing}
 
-\begin{description}
-\item[We assume you are using a Linux or OSX operating system. If]
-you use Windows, you can use virtualbox and install for example ubuntu
-16.04. An alternative is to use gitbash
-\end{description}
+The document is managed in \LaTeX and is stored on github. Thus
+creating of the document is rather simple.
 
-Contributing content to this web page is easy. First, you have to
-\textbf{fork} the repository while going to the link:
+\subsection{Requirements}
 
-\begin{itemize}
-\tightlist
-\item
-  \url{https://github.com/cloudmesh/classes}
-\end{itemize}
+We assume you are using a an OS on which you have installed and can
+execute pdflatex. Operating systems such as Linux, OSX, or Windows can
+be set up for it. On WIndows we recommend that you also install
+bitbash and have  make installed.
 
-And press the fork icon. Now you can clone or directly manipulate your
-fork from the web browser. If you clone, you need to make sure you clone
-from your fork.
+We assume that you are familiar with git and have git installed.
 
-We assume you use Python 3.6.2. If not please find instructions on how
-to install it. We recommend that you use pyenv so you can install
-multiple python environments.
-
-Next, you can cd to the classes directory and make the modifications.
-Check them locally with:
-
-\begin{verbatim}
-pip install -r requirements.txt
-make
-make view
-\end{verbatim}
-
-To change things you can simply edit files in the docs/source directory.
-Commit the changes and push them into your \textbf{local fork}. Now you
-can create on the web page for the classes a pull request.
-
-If accepted the request will be merged and you will be credited via your
-github account. Make sure you use git config to set your name and
-e-mail. Please remember that pull requests are merged by a human and it
-will take time. This is not an instantaneous action.
-
-\subsection{MD vs. RST}\label{md-vs.-rst}
-
-If you see an .md file and an .rst file in the same directory, never
-edit the rst file. This file will be automatically created. In a future
-version we will remove the rst file and only have the md file in the
-directory.
-
-\subsection{Using GitHub}\label{using-github}
+\subsection{Setting up Git}
 
 These instructions assume that you are using git from the commandline.
 For Linux or OSX, please follow our instructions on how to install it
 which is provided as part of the lessons.
 
 If you use windows you can install
-git for windows \textless{}https://git-for-windows.github.io/\textgreater{}\_
+git for windows \url{https://git-for-windows.github.io/}
 and than you can open up Gitbash in your classes directory.
 
-First you need to initialize your directory for use with Git:
+It is important that you have set up git correctly, otherwise your
+pull requeste may not show up properly.  First you need to initialize
+your directory for use with Git:
 
 \begin{verbatim}
 git init
@@ -72,11 +38,48 @@ work:
 
 \begin{verbatim}
 git config --global user.name "Firstname Lastname"
-it config --global user.email yourusername@iu.edu
+git config --global user.email yourusername@iu.edu
 \end{verbatim}
 
-Next you need to pull the information down from your forked repository.
-You will need to enter your Github username and password when prompted:
+
+Where you need to replace the firstname, lastname and the email with
+your information. Next you need to pull the information down from your
+forked repository.  You will need to enter your Github username and
+password when prompted:
+
+
+\subsection{Adding Content}
+
+First, you have to \textbf{fork} the repository while going to the link:
+
+  \URL{https://github.com/cloudmesh/book}
+
+and press the fork icon. Now you can clone or directly manipulate your
+fork from the web browser. 
+
+\begin{verbatim}
+git clone https://github.com/cloudmesh/book
+\end{verbatim}
+
+Next we need to swithc into the development branch called {\em dev}
+
+Using the GITUSERNAME will gurantee that you first If you clone, you need to make sure you clone
+from your fork.
+
+Once you have cloned and forked, you will find in the directory
+\verb|book| the file:
+
+\begin{verbatim}
+Makefile
+\end{verbatim}
+
+This makefiles has som convenient targets include that allow you to
+create the handbook. This is achieved most easily with
+
+\begin{verbatim}
+make g
+\end{verbatim}
+
 
 \begin{verbatim}
 git pull https://github.com/username/classes
@@ -119,8 +122,7 @@ issue a pull request for your work to be integrated into the original
 repository by clicking the \emph{Pull Request} field in the right hand
 corner beneath the topics.
 
-\subsection{Adding bibligraphic
-references}\label{adding-bibligraphic-references}
+\subsection{Adding bibligraphic references}\label{adding-bibligraphic-references}
 
 We use a single refrence file formated in \emph{bibtex}. The file is
 located in docs/source/refs.bib. We use sphinx-bibtex to manage the

@@ -27,11 +27,12 @@
 %\WarningFilter{latex}{Underfull}
 %\usepackage{marginnote}
 \usepackage{currfile}
-%\usepackage[top=1.5cm, bottom=1.5cm, outer=5cm, inner=2cm, heightrounded, marginparwidth=2.5cm, marginparsep=2cm]{geometry}
+%\usepackage[top=1.5cm, bottom=1.5cm, outer=5cm, inner=2cm, 
+%            heightrounded, marginparwidth=2.5cm, marginparsep=2cm]{geometry}
 
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 %	VARIOUS REQUIRED PACKAGES AND CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 \usepackage[top=3cm,bottom=3cm,left=3cm,right=3cm,headsep=10pt,a4paper]{geometry} % Page margins
 
 %\usepackage{tipa}
@@ -73,9 +74,9 @@
 \usepackage{minted}
 
 
-%----------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
 %	FONTS
-%----------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
 
 \usepackage{avant} % Use the Avantgarde font for headings
 %\usepackage{times} % Use the Times font for headings
@@ -85,9 +86,9 @@
 \usepackage[utf8]{inputenc} % Required for including letters with accents
 \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
 
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------------------
 %	BIBLIOGRAPHY AND INDEX
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------------------
 
 \usepackage[style=numeric,citestyle=numeric,sorting=nyt,sortcites=true,autopunct=true,%
             babel=hyphen,hyperref=true,abbreviate=false,backref=true,backend=biber]{biblatex}
@@ -99,9 +100,9 @@
 \usepackage{makeidx} % Required to make an index
 \makeindex % Tells LaTeX to create the files required for indexing
 
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 %	MAIN TABLE OF CONTENTS
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \usepackage{titletoc} % Required for manipulating the table of contents
 
@@ -122,17 +123,18 @@
 {\color{ocre!60}\normalsize\;\titlerule*[.5pc]{.}\;\thecontentspage} % Page number
 
 % Section text styling
-\titlecontents{section}[1.25cm] % Indentation
+\titlecontents{section}[1.75cm] % Indentation
 {\addvspace{3pt}\sffamily\bfseries} % Spacing and font options for sections
-{\contentslabel[\thecontentslabel]{1.25cm}} % Section number
+{\contentslabel[\thecontentslabel]{1.75cm}} % Section number
 {}
-{\hfill\color{black}\thecontentspage} % Page number
+{\ \titlerule*[.5pc]{.}\;\thecontentspage} % Page number
+% {\hfill\color{black}\thecontentspage} % Page number
 []
 
 % Subsection text styling
-\titlecontents{subsection}[1.25cm] % Indentation
+\titlecontents{subsection}[2.25cm] % Indentation
 {\addvspace{1pt}\sffamily\small} % Spacing and font options for subsections
-{\contentslabel[\thecontentslabel]{1.25cm}} % Subsection number
+{\contentslabel[\thecontentslabel]{2.25cm}} % Subsection number
 {}
 {\ \titlerule*[.5pc]{.}\;\thecontentspage} % Page number
 []
@@ -204,6 +206,8 @@
 
 % Removes the header from odd empty pages at the end of chapters
 \makeatletter
+\let\toc@pre\relax
+\let\toc@post\relax
 \renewcommand{\cleardoublepage}{
 \clearpage\ifodd\c@page\else
 \hbox{}
@@ -212,9 +216,9 @@
 \newpage
 \fi}
 
-%----------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
 %	THEOREM STYLES
-%----------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
 
 
 \usepackage{amsmath,amsfonts,amssymb,amsthm} % For math equations, theorems, symbols, etc
@@ -289,9 +293,9 @@
 \theoremstyle{ocrenum}
 \newtheorem{proposition}[dummy]{Proposition}
 
-%----------------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------
 %	DEFINITION OF COLORED BOXES
-%----------------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------
 
 \RequirePackage[framemethod=default]{mdframed} % Required for creating the theorem, definition, exercise and corollary boxes
 
@@ -364,9 +368,9 @@ innerbottommargin=5pt]{cBox}
 \newenvironment{example}{\begin{exampleT}}{\hfill{\tiny\ensuremath{\blacksquare}}\end{exampleT}}		
 \newenvironment{corollary}{\begin{cBox}\begin{corollaryT}}{\end{corollaryT}\end{cBox}}	
 
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 %	REMARK ENVIRONMENT
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \newenvironment{remark}{\par\vspace{10pt}\small % Vertical white space above the remark and smaller font size
 \begin{list}{}{
@@ -423,9 +427,9 @@ innerbottommargin=5pt]{cBox}
 {.1ex}
 {\normalfont\small\sffamily\bfseries}}
 
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 %	PART HEADINGS
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 
 % numbered part in the table of contents
 \newcommand{\@mypartnumtocformat}[2]{%
@@ -490,9 +494,9 @@ innerbottommargin=5pt]{cBox}
 \twocolumn
 \fi}
 
-%----------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
 %	CHAPTER HEADINGS
-%----------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
 
 % A switch to conditionally include a picture, implemented by  Christian Hupfer
 \newif\ifusechapterimage
@@ -537,9 +541,9 @@ innerbottommargin=5pt]{cBox}
 \par\vspace*{270\p@}}
 \makeatother
 
-%----------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
 %	HYPERLINKS IN THE DOCUMENTS
-%----------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
 
 \usepackage{hyperref}
 %\usepackage[colorlinks=true,

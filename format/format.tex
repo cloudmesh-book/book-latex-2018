@@ -1,21 +1,30 @@
-%----------------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
 %	COMMENT
-%----------------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
 
 
 \part{Book Format}
 
-%----------------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
 %	CHAPTER 1
-%----------------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------
 
-\chapterimage{chapter_head_2.pdf} % Chapter heading image
+\chapterimage{water.png} % Chapter heading image
 
-\chapter{LISTS}
+This document is prepared using a special enhanced \LaTeX book format to allow
+easy integration for section and index references, as well as
+citations and other straight forward enhancements that makes it easy
+for students to obtain a document with much of the Lecture material
+included. We provide some examples so that if you like to contribute
+you can do so easily and can use the correct way of doing so.
+
+\chapter{Format}
+
+\FILENAME
 
 \section{Paragraphs of Text}\index{Paragraphs of Text}
 
-\lipsum[1-7] % Dummy text
+\lipsum[1] % Dummy text
 
 %------------------------------------------------
 
@@ -31,32 +40,40 @@ Lists are useful to present information in a concise and/or ordered way\footnote
 
 \subsection{Numbered List}\index{Lists!Numbered List}
 
+\begin{tcblisting}{colback=blue!5!white,colframe=gray!50!blue,listing side text,
+  title=Numbered List,fonttitle=\bfseries}
 \begin{enumerate}
 \item The first item
 \item The second item
 \item The third item
 \end{enumerate}
+\end{tcblisting}
 
 \subsection{Bullet Points}\index{Lists!Bullet Points}
 
+\begin{tcblisting}{colback=blue!5!white,colframe=gray!50!blue,listing side text,
+  title=Bullet Points,fonttitle=\bfseries}
 \begin{itemize}
 \item The first item
 \item The second item
 \item The third item
 \end{itemize}
+\end{tcblisting}
 
 \subsection{Descriptions and Definitions}\index{Lists!Descriptions and Definitions}
 
+\begin{tcblisting}{colback=blue!5!white,colframe=gray!50!blue,listing side text,
+  title=Enumerations,fonttitle=\bfseries}
 \begin{description}
 \item[Name] Description
 \item[Word] Definition
 \item[Comment] Elaboration
 \end{description}
+\end{tcblisting}
 
-
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 %	CHAPTER 2
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 
 
 \section{Theorems}\index{Theorems}
@@ -65,6 +82,16 @@ This is an example of theorems.
 
 \subsection{Several equations}\index{Theorems!Several Equations}
 This is a theorem consisting of several equations.
+
+\begin{verbatim}
+\begin{theorem}[Name of the theorem]
+In $E=\mathbb{R}^n$ all norms are equivalent. It has the properties:
+\begin{align}
+& \big| ||\mathbf{x}|| - ||\mathbf{y}|| \big|\leq || \mathbf{x}- \mathbf{y}||\\
+&  ||\sum_{i=1}^n\mathbf{x}_i||\leq \sum_{i=1}^n||\mathbf{x}_i||\quad\text{where $n$ is a finite integer}
+\end{align}
+\end{theorem}
+\end{verbatim}
 
 \begin{theorem}[Name of the theorem]
 In $E=\mathbb{R}^n$ all norms are equivalent. It has the properties:
@@ -76,6 +103,12 @@ In $E=\mathbb{R}^n$ all norms are equivalent. It has the properties:
 
 \subsection{Single Line}\index{Theorems!Single Line}
 This is a theorem consisting of just one line.
+
+\begin{verbatim}
+\begin{theorem}
+A set $\mathcal{D}(G)$ in dense in $L^2(G)$, $|\cdot|_0$. 
+\end{theorem}
+\end{verbatim}
 
 \begin{theorem}
 A set $\mathcal{D}(G)$ in dense in $L^2(G)$, $|\cdot|_0$. 
@@ -227,4 +260,45 @@ Treatment 3 & 0.0009271 & 0.296 \\
 \caption{Figure caption}
 \end{figure}
 
+\subsection{Colored Boxes}
+
+The package \verb|tcolorbox| provides sophisticated support to include
+color boxes. Together with the new environment we can create nice add
+ons to for example include notes.
+
+\URL{http://osl.ugr.es/CTAN/macros/latex/contrib/tcolorbox/tcolorbox.pdf}
+
+We have provided in this document notes as follows
+
+
+\begin{tcblisting}{colback=blue!5!white,colframe=gray!50!blue,listing side text,  title=Note,fonttitle=\bfseries}
+\begin{NOTE}
+This is a note
+\end{NOTE}
+\end{tcblisting}
+
+\begin{tcblisting}{colback=blue!5!white,colframe=gray!50!blue,listing side text,  title=Warning,fonttitle=\bfseries}
+\begin{WARNING}
+This is a note
+\end{WARNING}
+\end{tcblisting}
+
+\begin{tcblisting}{colback=blue!5!white,colframe=gray!50!blue,listing side text,  title=Warning,fonttitle=\bfseries}
+\begin{IU}
+This is a note
+\end{IU}
+\end{tcblisting}
+
+\subsection{Section References}
+
+Section references with the Where command are used to refer to a
+section by label, but be presented with the section number, the title,
+and the page number. It can be augmented with a text, such as in which
+week the section is best to be studied. This is useful for creating a
+customized Syllabus
+
+\begin{tcblisting}{colback=blue!5!white,colframe=gray!50!blue,
+    listing side text, title=Warning,fonttitle=\bfseries}
+\WHERE{C:linux}{Week 2}
+\end{tcblisting}
 
