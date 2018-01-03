@@ -5,7 +5,7 @@ FILE=vonLaszewski-bigdata
 #FLAGS=-interaction nonstopmode  -file-line-error
 FLAGS=-shell-escape
 CLOUD=cloud
-FLAGS=-shell-scape -output-directory=dest -aux-directory=dest
+FLAGS=-shell-escape -output-directory=dest -aux-directory=dest
 
 
 DEFAULT=$(CLOUD)
@@ -18,16 +18,16 @@ LATEX=pdflatex
 
 
 single: dest
-	latexmk -jobname=dest/$(FILE) -shell-escape -pvc -view=pdf single
+	latexmk -jobname=$(FILE) $(FLAGS) -pvc -view=pdf single
 
 g: dest
-	latexmk -jobname=dest/$(FILE) -shell-escape -pvc -view=pdf $(FILE)
+	latexmk -jobname=$(FILE) $(FLAGS) -pvc -view=pdf $(FILE)
 
 c: dest
-	latexmk -jobname=dest/$(FILE) -shell-escape -pvc -view=pdf chameleon
+	latexmk -jobname=$(FILE) $(FLAGS) -pvc -view=pdf chameleon
 
 plain: dest
-	latexmk -jobname=dest/$(FILE) -shell-escape -pvc -view=pdf plain
+	latexmk -jobname=$(FILE) $(FLAGS) -pvc -view=pdf plain
 
 cloud: dest
 	$(LATEX) $(FLAGS) $(CLOUD)

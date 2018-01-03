@@ -14,6 +14,7 @@ Apache projects: \url{https://projects.apache.org/projects.html?category}
 
 
 \section{Workflow-Orchestration}
+\label{S:o-workflow}
 
 \subsection{ODE}
 
@@ -61,7 +62,7 @@ Apache projects: \url{https://projects.apache.org/projects.html?category}
    \cite{www-ultrascan}, SEAGrid \cite{www-seagrid} and GenApp
    \cite{www-genapp}).
 
-\subsection{Pegasus}
+\subsection{Pegasus}\label{S:pegasus}
 
    The Pegasus \cite{www-Pegasus} is workflow management system 
    that allows to compose and execute a workflow in an application
@@ -411,7 +412,34 @@ vendors \cite{paper-Oozie}.
     2. Easily Portable
     3. Single jar file for application deployment.
 
+\subsection{Askalon}
+
+     Askalan was developed at the University of Innsbruck \cite{RMBDP-Book}.  
+     It is application development as well as a runtime
+     environment. It allows easy execution of distributed work flow
+     applications in service oriented grids. It uses a Service
+     Oriented Architecture. Also, for its Grid middleware it uses the
+     Globus Toolkit. The work flow applications are developed using
+     Abstract Grid Work flow Language (AGWL). The architecture has
+     various components like the resource broker responsible for
+     brokerage functions like management and reservation, information
+     service for the discovery and organization of resources and data,
+     metascheduler for mapping in the Grid, performance analysis for
+     unification of performance monitoring and integration of the
+     results and the Askalon scheduler.
+
+     The Metascheduler is of special significance since it consists of
+     two major components - the workflow converter and the scheduling
+     engine. The former is responsible for conversion of traditional
+     workflows into directed acyclic graphs (DAGs) while the later one is
+     responsible for the scheduling of workflows for various specific
+     tasks. It has a conventional pluggable architecture which allows easy
+     integration of various services. By default, the Heterogeneous
+     Earliest Finish Time (HEFT) is used as the primary scheduling
+     algorithm.
+
 \subsection{Scalding}
+
 \subsection{e-Science Central}
 
     In \cite{e-science-central-paper-2010}, it is explained that
@@ -607,6 +635,7 @@ vendors \cite{paper-Oozie}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Application and Analytics}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\label{S:o-application}
 
 \subsection{Mahout \cite{www-mahout}}
 
@@ -1903,6 +1932,7 @@ vendors \cite{paper-Oozie}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{High level Programming}
+\label{S:o-programming}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Kite}
@@ -2191,7 +2221,13 @@ vendors \cite{paper-Oozie}.
      
 \subsection{Presto}
 
-     .. include:: techs/presto.rst
+     Presto \cite{www-presto} is an open-source distributed SQL query
+     engine that supports interactive analytics on large datasets. It
+     allows interfacing with a variety of data sources such as Hive,
+     Cassandra, RDBMSs and proprietary data source. Presto is used at a
+     number of big-data companies such as Facebook, Airbnb and
+     Dropbox. Presto's performance compares favorably to similar systems
+     such as Hive and Stinger \cite{presto-paper-2014}.
 
 \subsection{Google Dremel}
  
@@ -2410,6 +2446,7 @@ vendors \cite{paper-Oozie}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Streams}
+\label{S:o-streams}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Storm}
@@ -2712,6 +2749,7 @@ vendors \cite{paper-Oozie}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Basic Programming Model and Runtime, SPMD, MapReduce}
+\label{S:o-prg-model}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -2877,7 +2915,7 @@ vendors \cite{paper-Oozie}.
 \subsection{Pregel}
 \subsection{Pegasus}
 
-     See \#4 above.
+     See Section \ref{S:pegasus}.
 
 \subsection{Ligra}
 
@@ -2972,13 +3010,14 @@ vendors \cite{paper-Oozie}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Inter process communication Collectives}
+\label{S:o-process-communication}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \subsection{point-to-point}
 \subsection{(a) publish-subscribe: MPI}
 
-     see http://www.slideshare.net/Foxsden/high-performance-processing-of-streaming-data
+     see \URL{http://www.slideshare.net/Foxsden/high-performance-processing-of-streaming-data}
      
 \subsection{(b) publish-subscribe: Big Data}
 
@@ -3409,6 +3448,7 @@ vendors \cite{paper-Oozie}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{In-memory databases/caches}
+\label{S:o-db-memory}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -3614,6 +3654,7 @@ vendors \cite{paper-Oozie}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Object-relational mapping}
+\label{S:o-db-object}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Hibernate}
@@ -3717,6 +3758,7 @@ vendors \cite{paper-Oozie}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%     
 \section{Extraction Tools}
+\label{S:o-Tools}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -3752,11 +3794,12 @@ vendors \cite{paper-Oozie}.
      from over a thousand different file types (such as PPT, XLS, and
      PDF). All of these file types can be parsed through a single
      interface, making Tika useful for search engine indexing, content
-     analysis, translation, and much more. \cite{www-tika}''
+     analysis, translation, and much more \cite{www-tika}.''
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{SQL(NewSQL)}
+\section{SQL and SQL Services}
+\label{S:o-sql}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Oracle}
@@ -4108,6 +4151,7 @@ vendors \cite{paper-Oozie}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{NoSQL}
+\label{S:o-NoSQL}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Lucene}
@@ -4840,6 +4884,7 @@ vendors \cite{paper-Oozie}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{File management}
+\label{S:o-file-management}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -4867,7 +4912,7 @@ vendors \cite{paper-Oozie}.
      hosted on a remote Zone. \cite{github-irods-www}
 
 
-255. NetCDF
+\subsection{NetCDF}
 
 NetCDF is a set of software libraries and self-describing,
 machine-indepen dent data formats that support the creation, access,
@@ -4993,6 +5038,7 @@ b) A set of binary data formats c) A set of APIs for C/Fortran/Java
      
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Data Transport}
+\label{S:o-data-transport}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{BitTorrent}
@@ -5129,6 +5175,7 @@ b) A set of binary data formats c) A set of APIs for C/Fortran/Java
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Cluster Resource Management}
+\label{S:o-cluster}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -5413,6 +5460,7 @@ b) A set of binary data formats c) A set of APIs for C/Fortran/Java
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{File systems}
+\label{S:o-file-systems}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -5569,13 +5617,7 @@ b) A set of binary data formats c) A set of APIs for C/Fortran/Java
      of the largest and most powerful supercomputers on Earth today
      are powered by the Lustre file system.
      
-\subsection{GPFS}
-
-     IBM General Parallel File System (GPFS) was rebranded to IBM 
-     Spectrum Scale on February 17, 2015 \cite{www-wikigpfs}.
-     See 380.
-
-\subsection{IBM Spectrum Scale}
+\subsection{IBM Spectrum Scale, formerly GPFS}
 
      General Parallel File System (GPFS) was rebranded as IBM Spectrum 
      Scale on February 17, 2015 \cite{www-wikigpfs}.
@@ -5697,10 +5739,17 @@ b) A set of binary data formats c) A set of APIs for C/Fortran/Java
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Interoperability}
+\label{S:o-interoperability}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\subsection{cloudmesh}
+\subsection{Cloudmesh}
+
+Cloudmesh client allows to easily manage virtual machines, containers,
+HPC tasks, through a convenient client and API. Hence cloudmesh is not
+only a multi-cloud, but a multi-hpc environment that allows also to
+use container technologies. Cloudmesh is currently develloped as part
+of classes taught at Indiana University.
 
 \subsection{Libvirt}
 
@@ -5913,6 +5962,7 @@ b) A set of binary data formats c) A set of APIs for C/Fortran/Java
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{DevOps}
+\label{S:o-DevOps}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Docker (Machine, Swarm)}
@@ -6452,6 +6502,7 @@ b) A set of binary data formats c) A set of APIs for C/Fortran/Java
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{IaaS Management from HPC to hypervisors}
+\label{S:o-hypervisors}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Xen}
@@ -6881,12 +6932,13 @@ b) A set of binary data formats c) A set of APIs for C/Fortran/Java
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Cross-Cutting Functions}
+\label{S:o-cross-cutting-functions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Monitoring
+\subsection{Monitoring}
 
 
-\subsection{Ambari}
+\subsubsection{Ambari}
 
      Apache Amabari is an open source platform that enables easy
      management and maintenance of Hadoop clusters, regardless of
@@ -6905,7 +6957,7 @@ Monitoring
      Ambari. \cite{www-github-ambari} provides the project documents
      for ambari on github.
      
-\subsection{Ganglia}
+\subsubsection{Ganglia}
 
      Ganglia is a scalable distributed monitoring system for
      high-performance computing systems (clusters and grids). It is a
@@ -6926,7 +6978,7 @@ Monitoring
      architectures, and is currently in use on thousands of clusters
      around the world, handling clusters with 2000 nodes.
      
-\subsection{Nagios \cite{www-nagios}}
+\subsubsection{Nagios \cite{www-nagios}}
 
      Nagios is a platform, which provides a set of software for
      network infrastructure monitoring. It also offers administrative
@@ -6946,7 +6998,7 @@ Monitoring
      needing clients.
 
 
-\subsection{Inca}
+\subsubsection{Inca}
 
      Inca is a grid monitoring \cite{inca-book} software suite. It
      provides grid monitoring features. These monitoring features
@@ -6981,9 +7033,9 @@ Monitoring
      provides a solid monitoring system which not only monitors but
      also detects problems very early on.
 
-Security \& Privacy
+\subsection{Security and Privacy}
 
-\subsection{InCommon}
+\subsubsection{InCommon}
 
      The mission of InCommon is to ``create and support a common trust
      framework for U.S. education and research.  This includes
@@ -6998,7 +7050,7 @@ Security \& Privacy
      Currently any two and four year higher education institution that
      is accredited is eligble for joining InCommon.
 
-\subsection{Eduroam \cite{www-eduroam}}
+\subsubsection{Eduroam \cite{www-eduroam}}
 
      Eduroam is an initiative started in the year 2003 when the number
      of personal computers with in the academia are growing
@@ -7021,7 +7073,7 @@ Security \& Privacy
      and tens of thousands of access points worldwide.
 
 
-\subsection{OpenStack Keystone}
+\subsubsection{OpenStack Keystone}
 
      \cite{www-keystone-wiki} Keystone is the identity service used
      by OpenStack for authentication (authN) and high-level
@@ -7041,7 +7093,7 @@ Security \& Privacy
      services and AuthN/AuthZ mechanisms such as oAuth, SAML and
      openID in future versions \cite{www-keystone}.
 
-\subsection{LDAP}
+\subsubsection{LDAP}
 
      LDAP stands for Lightweight Directory Access Protocol. It is a software
      protocol for enabling anyone to locate organizations, individuals, and
@@ -7067,7 +7119,7 @@ Security \& Privacy
      request, passing it to other DSAs as necessary, but ensuring a
      single coordinated response for the user.
 
-\subsection{Sentry}
+\subsubsection{Sentry}
 
      ``Apache Sentry \cite{www-sentry}  is a granular, role-based authorization 
      module for Hadoop. Sentry provides the ability to control and enforce 
@@ -7080,8 +7132,8 @@ Security \& Privacy
      for Hadoop resources. Sentry is highly modular and can support authorization 
      for a wide variety of data models in Hadoop.''
 
-\subsection{Sqrrl}
-\subsection{OpenID }
+\subsubsection{Sqrrl}
+\subsubsection{OpenID }
 
      OpenID is an authentication protocol that allows users to log in
      to different websites, which are not related, using the same
@@ -7099,7 +7151,7 @@ Security \& Privacy
      an OpenID provider and there is no need for an individual to be
      approved.
 
-\subsection{SAML OAuth}
+\subsubsection{SAML OAuth}
 
      As explained in \cite{www-SAML}, Security Assertion Markup
      Language (SAML) is a secured XML based communication mechanism
@@ -7123,10 +7175,10 @@ Security \& Privacy
      allows the user to get direct access once it receives the
      authorization message from a known identity provider.
 
-Distributed Coordination
+\subsection{Distributed Coordination}
 
 
-\subsection{Google Chubby}
+\subsubsection{Google Chubby}
 
      Chubby Distributed lock service \cite{www-chubby}
      is intended for use within a loosely-coupled distributed system
@@ -7141,7 +7193,7 @@ Distributed Coordination
      the distributed consensus problem.  Google stack and Facebook
      stack both use versions of zookeeper.
      
-\subsection{Zookeeper}
+\subsubsection{Zookeeper}
  
      Zookeeper provides coordination services to distributed applications.
      It includes synchronization, configuration management and naming
@@ -7158,7 +7210,7 @@ Distributed Coordination
      is optimum for read-dominant workloads. It's maintained by Apache
      and is open-source.
 
-\subsection{Giraffe}
+\subsubsection{Giraffe}
 
      Giraffe is a scalable distributed coordination
      service. Distributed coordination is a media access technique
@@ -7177,10 +7229,14 @@ Distributed Coordination
      data organization and in-memory storage for high throughput and
      low latency.
      
-\subsection{JGroups}
+\subsubsection{JGroups}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Message and Data Protocols}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\label{S:o-protocols}
 
+\subsection{MQTT}
 
 \subsection{Avro}
 
@@ -7228,6 +7284,7 @@ Distributed Coordination
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Technologies To Be Integrated}
+\label{S:o-todo}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Snort}
@@ -7309,7 +7366,7 @@ Distributed Coordination
      AIX or SOLARIS etc. It is basically an integral part of many java
      based web application.
 
-\subsection{Apache Beam       }
+\subsection{Apache Beam}
 
      Apache Beam attempts to abstract away the need to write
      code for multiple data-oriented workflows, e.g., batch, interactive and
@@ -7359,7 +7416,7 @@ Distributed Coordination
      face recognition and distributed computing. \cite{www-cuda-wikipedia}
 	  
 
-\subsection{Blaze  }
+\subsection{Blaze}
 
      Blaze library translates NumPy/Pandas-like syntax to data
      computing systems (e.g. database , in-memory,
@@ -7478,31 +7535,6 @@ Distributed Coordination
      period until a review indicates that the project meets the 
      standards of other ASF projects \cite{www-apacheincubator}
 
-\subsection{Askalon}
-
-     Askalan was developed at the University of Innsbruck \cite{RMBDP-Book}.  
-     It is application development as well as a runtime
-     environment. It allows easy execution of distributed work flow
-     applications in service oriented grids. It uses a Service
-     Oriented Architecture. Also, for its Grid middleware it uses the
-     Globus Toolkit. The work flow applications are developed using
-     Abstract Grid Work flow Language (AGWL). The architecture has
-     various components like the resource broker responsible for
-     brokerage functions like management and reservation, information
-     service for the discovery and organization of resources and data,
-     metascheduler for mapping in the Grid, performance analysis for
-     unification of performance monitoring and integration of the
-     results and the Askalon scheduler.
-
-     The Metascheduler is of special significance since it consists of
-     two major components - the workflow converter and the scheduling
-     engine. The former is responsible for conversion of traditional
-     workflows into directed acyclic graphs (DAGs) while the later one is
-     responsible for the scheduling of workflows for various specific
-     tasks. It has a conventional pluggable architecture which allows easy
-     integration of various services. By default, the Heterogeneous
-     Earliest Finish Time (HEFT) is used as the primary scheduling
-     algorithm.
 
 \subsection{Apache Ant}
 
@@ -7602,7 +7634,7 @@ Distributed Coordination
      and easily. \cite{knox} This technology would be best placed
      under the interoperability category.
 
-\subsection{   Apache Apex}
+\subsection{Apache Apex}
 
      The Apex platform is designed to process real-time events with
      streaming data natively in Hadoop. The platform handles
