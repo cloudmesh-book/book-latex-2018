@@ -102,6 +102,7 @@ clean:
 	rm -rf dest
 	rm -rf *.tdo
 	find . -name '*.aux' -delete
+	rm -fr _minted-*
 
 view:
 	open $(FILE).pdf
