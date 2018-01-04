@@ -3,6 +3,7 @@
 \TODO{TA: some of the python examples assume REPL, but its better to use a
   print statement instead as more general, please fix}
 
+
 \section{Statements and Strings}\label{statements-and-strings}
 \index{Python!statements}
 \index{Python!strings}
@@ -815,3 +816,112 @@ Python has full Aobject-oriented programming (OOP) capabilities, however
 we can not cover all of them in a quick tutorial, so please refer to the
 \href{https://docs.python.org/2.7/tutorial/classes.html}{Python docs on
 classes and OOP}.
+
+\section{Modules}\label{modules}
+
+Now write this simple program and save it:
+
+\begin{lstlisting}
+from __future__ import print_statement, division
+print("Hello world!")
+\end{lstlisting}
+
+As a check, make sure the file contains the expected contents on the
+command line:
+
+\begin{lstlisting}
+$ cat hello.py
+from __future__ import print_statement, division
+print("Hello world!")
+\end{lstlisting}
+
+To execute your program pass the file as a parameter to the python
+command:
+
+\begin{lstlisting}
+$ python hello.py
+Hello world!
+\end{lstlisting}
+
+Files in which Python code is stored are called \textbf{module}s. You
+can execute a Python module form the command line like you just did, or
+you can import it in other Python code using the import statement.
+
+Let's write a more involved Python program that will receive as input
+the lengths of the three sides of a triangle, and will output whether
+they define a valid triangle. A triangle is valid if the length of each
+side is less than the sum of the lengths of the other two sides and
+greater than the difference of the lengths of the other two sides.:
+
+\begin{lstlisting}
+"""Usage: check_triangle.py [-h] LENGTH WIDTH HEIGHT
+
+Check if a triangle is valid.
+
+Arguments:
+  LENGTH     The length of the triangle.
+  WIDTH      The width of the traingle.
+  HEIGHT     The height of the triangle.
+
+Options:
+-h --help
+"""
+from __future__ import print_function, division
+from docopt import docopt
+
+if __name__ == '__main__':
+  args = docopt(__doc__)
+  a, b, c = int(args['LENGTH']), int(args['WIDTH']), int(args['HEIGHT'])
+  valid_triangle = \
+      a < b + c and a > abs(b - c) and \
+      b < a + c and b > abs(a - c) and \
+      c < a + b and c > abs(a - b)
+  print('Triangle with sides %d, %d and %d is valid: %r' % (
+      a, b, c, valid_triangle
+  ))
+\end{lstlisting}
+
+Assuming we save the program in a file called check\_triangle.py, we can
+run it like so:
+
+\begin{lstlisting}
+$ python check_triangle.py 4 5 6
+Triangle with sides 4, 5 and 6 is valid: True
+\end{lstlisting}
+
+Let break this down a bit.
+
+\begin{enumerate}
+\tightlist
+\item
+  We are importing the print\_function and division modules from Python
+  3 like we did earlier in this tutorial. It's a good idea to always
+  include these in your programs.
+\item
+  We've defined a boolean expression that tells us if the sides that
+  were input define a valid triangle. The result of the expression is
+  stored in the valid\_triangle variable. inside are true, and False
+  otherwise.
+\item
+  We've used the backslash symbol \textbackslash{} to format are code
+  nicely. The backslash simply indicates that the current line is being
+  continued on the next line.
+\item
+  When we run the program, we do the check if \_\_name\_\_ ==
+  '\_\_main\_\_'. \_\_name\_\_ is an internal Python variable that
+  allows us to tell whether the current file is being run from the
+  command line (value \_\_name\_\_), or is being imported by a module
+  (the value will be the name of the module). Thus, with this statement
+  we're just making sure the program is being run by the command line.
+\item
+  We are using the docopt module to handle command line arguments. The
+  advantage of using this module is that it generates a usage help
+  statement for the program and enforces command line arguments
+  automatically. All of this is done by parsing the docstring at the top
+  of the file.
+\item
+  In the print function, we are using
+  \href{https://docs.python.org/2/library/string.html\#format-string-syntax}{Python's
+  string formatting capabilities} to insert values into the string we
+  are displaying.
+\end{enumerate}

@@ -55,7 +55,7 @@ In order to follow along, you must have the NBIS tools which provide
 \texttt{mindtct} and \texttt{bozorth3} installed. If you are on Ubuntu
 16.04 Xenial, the following steps will accomplish this:
 
-\begin{verbatim}
+\begin{lstlisting}
 $ sudo apt-get update -qq
 $ sudo apt-get install -y build-essential cmake unzip
 $ wget "http://nigos.nist.gov:8080/nist/nbis/nbis_v5_0_0.zip"
@@ -63,7 +63,7 @@ $ unzip -d nbis nbis_v5_0_0.zip
 $ cd nbis/Rel_5.0.0
 $ ./setup.sh /usr/local --without-X11
 $ sudo make
-\end{verbatim}
+\end{lstlisting}
 
 \subsection{Implementation}\label{implementation}
 
@@ -80,82 +80,82 @@ $ sudo make
   Generate a plot to identify likely matches.
 \end{enumerate}
 
-\begin{verbatim}
+\begin{lstlisting}
 from __future__ import print_function
-\end{verbatim}
+\end{lstlisting}
 
-\begin{verbatim}
+\begin{lstlisting}
 import urllib
 import zipfile
 import hashlib
-\end{verbatim}
+\end{lstlisting}
 
 We'll be interacting with the operating system and manipulating files
 and their pathnames.
 
-\begin{verbatim}
+\begin{lstlisting}
 import os.path
 import os
 import sys
 import shutil
 import tempfile
-\end{verbatim}
+\end{lstlisting}
 
 Some general usefull utilities
 
-\begin{verbatim}
+\begin{lstlisting}
 import itertools
 import functools
 import types
 from pprint import pprint
-\end{verbatim}
+\end{lstlisting}
 
 Using the \texttt{attrs} library provides some nice shortcuts to
 defining objects
 
-\begin{verbatim}
+\begin{lstlisting}
 import attr
-\end{verbatim}
+\end{lstlisting}
 
-\begin{verbatim}
+\begin{lstlisting}
 import sys
-\end{verbatim}
+\end{lstlisting}
 
 We'll be randomly dividing the entire dataset, based on user input, into
 the probe and gallery stets
 
-\begin{verbatim}
+\begin{lstlisting}
 import random
-\end{verbatim}
+\end{lstlisting}
 
 We'll need to call out to the NBIS software. We'll also be using
 multiple processes to take advantage of all the cores on our machine
 
-\begin{verbatim}
+\begin{lstlisting}
 import subprocess
 import multiprocessing
-\end{verbatim}
+\end{lstlisting}
 
 As for plotting, we'll use \texttt{matplotlib}, though there are many
 alternatives.
 
-\begin{verbatim}
+\begin{lstlisting}
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
-\end{verbatim}
+\end{lstlisting}
 
 Finally, we'll write the results to a database.
 
-\begin{verbatim}
+\begin{lstlisting}
 import sqlite3
-\end{verbatim}
+\end{lstlisting}
 
 \subsection{Utility functions}\label{utility-functions}
 
 Next, we'll define some utility functions:
 
-\begin{verbatim}
+\begin{lstlisting}
 def take(n, iterable):
     "Returns a generator of the first **n** elements of an iterable"
     return itertools.islice(iterable, n )
@@ -215,7 +215,7 @@ def fetch_url(url, sha256, prefix='.', checksum_blocksize=2**20, dryRun=False):
     urllib.urlretrieve(url, local, report)
 
     return local
-\end{verbatim}
+\end{lstlisting}
 
 \subsection{Dataset}\label{dataset}
 
@@ -223,16 +223,16 @@ We'll now define some global parameters
 
 First, the fingerprint dataset
 
-\begin{verbatim}
+\begin{lstlisting}
 DATASET_URL = 'https://s3.amazonaws.com/nist-srd/SD4/NISTSpecialDatabase4GrayScaleImagesofFIGS.zip'
 DATASET_SHA256 = '4db6a8f3f9dc14c504180cbf67cdf35167a109280f121c901be37a80ac13c449'
-\end{verbatim}
+\end{lstlisting}
 
 We'll define how to download the dataset. This function is general
 enough that it could be used to retrieve most files, but we'll default
 it to use the values from above.
 
-\begin{verbatim}
+\begin{lstlisting}
 def prepare_dataset(url=None, sha256=None, prefix='.', skip=False):
     url = url or DATASET_URL
     sha256 = sha256 or DATASET_SHA256
@@ -266,7 +266,7 @@ def locate_images(paths):
 
     for path in itertools.ifilter(predicate, paths):
         yield image(id=path.checksum.value, path=path)
-\end{verbatim}
+\end{lstlisting}
 
 \subsection{Data Model}\label{data-model}
 
@@ -282,12 +282,12 @@ The checksum consists of the actual hash value (\texttt{value}) as well
 as a string representing the hashing algorithm. The validator enforces
 that the algorith can only be one of the listed acceptable methods
 
-\begin{verbatim}
+\begin{lstlisting}
 @attr.s(slots=True)
 class Checksum(object):
   value = attr.ib()
   kind = attr.ib(validator=lambda o, a, v: v in 'md5 sha1 sha224 sha256 sha384 sha512'.split())
-\end{verbatim}
+\end{lstlisting}
 
 \paragraph{Path}\label{path}
 
@@ -295,24 +295,24 @@ class Checksum(object):
 \texttt{Checksum}. We get the checksum ``for''free" since the MD5 hash
 is provided for each image in the dataset.
 
-\begin{verbatim}
+\begin{lstlisting}
 @attr.s(slots=True)
 class Path(object):
     checksum = attr.ib()
     filepath = attr.ib()
-\end{verbatim}
+\end{lstlisting}
 
 \paragraph{Image}\label{image}
 
 The start of the data pipeline is the image. An \texttt{image} has an
 \texttt{id} (the md5 hash) and the path to the image.
 
-\begin{verbatim}
+\begin{lstlisting}
 @attr.s(slots=True)
 class image(object):
     id = attr.ib()
     path = attr.ib()
-\end{verbatim}
+\end{lstlisting}
 
 \subsubsection{Mindtct}\label{mindtct}
 
@@ -322,7 +322,7 @@ applying \texttt{mindtct} on an \texttt{image}. The \texttt{xyt} output
 is needed fo r the next step, and the \texttt{image} attribute
 represents the image id.
 
-\begin{verbatim}
+\begin{lstlisting}
 @attr.s(slots=True)
 class mindtct(object):
     image = attr.ib()
@@ -331,7 +331,7 @@ class mindtct(object):
     def pretty(self):
         d = dict(id=self.image.id, path=self.image.path)
         return pprint(d)
-\end{verbatim}
+\end{lstlisting}
 
 We need a way to construct a \texttt{mindtct} object from an
 \texttt{image} object. A straightforward way of doing this would be to
@@ -340,7 +340,7 @@ have a \texttt{from\_image} \texttt{@staticmethod} or
 \texttt{multiprocessing} as top-level functions work best as they need
 to be serialized.
 
-\begin{verbatim}
+\begin{lstlisting}
 def mindtct_from_image(image):
     imgpath = os.path.abspath(image.path.filepath)
     tempdir = tempfile.mkdtemp()
@@ -359,7 +359,7 @@ def mindtct_from_image(image):
 
     finally:
         shutil.rmtree(tempdir)
-\end{verbatim}
+\end{lstlisting}
 
 \subsubsection{Bozorth3}\label{bozorth3}
 
@@ -373,7 +373,7 @@ static methods for SQL statements. While there are many
 Object-Relational-Model (ORM) libraries available for Python, this
 approach keeps the current implementation simple.
 
-\begin{verbatim}
+\begin{lstlisting}
 @attr.s(slots=True)
 class bozorth3(object):
     probe = attr.ib()
@@ -391,7 +391,7 @@ class bozorth3(object):
 
     def sql_prepared_stmt_insert_values(self):
         return self.probe, self.gallery, self.score
-\end{verbatim}
+\end{lstlisting}
 
 In order to work well with \texttt{multiprocessing}, we define a class
 representuing the input paramaters to \texttt{bozorth3} and a helper
@@ -403,7 +403,7 @@ As NBIS \texttt{bozorth3} can be called to compare one-to-one or
 one-to-many, we'll also dynamically choose between these approaches
 depending on if the gallery attribute is a list or a single object.
 
-\begin{verbatim}
+\begin{lstlisting}
 @attr.s(slots=True)
 class bozorth3_input(object):
     probe = attr.ib()
@@ -416,17 +416,17 @@ class bozorth3_input(object):
             return bozorth3_from_one_to_many(self.probe, self.gallery)
         else:
             raise ValueError('Unhandled type for gallery: {}'.format(type(gallery)))
-\end{verbatim}
+\end{lstlisting}
 
 The next is the top-level function to running \texttt{bozorth3}. It
 accepts an instance of \texttt{bozorth3\_input}. The is implemented as a
 simple top-level wrapper so that it can be easily passed to the
 \texttt{multiprocessing} library.
 
-\begin{verbatim}
+\begin{lstlisting}
 def run_bozorth3(input):
     return input.run()
-\end{verbatim}
+\end{lstlisting}
 
 \paragraph{Running Bozorth3}\label{running-bozorth3}
 
@@ -443,7 +443,7 @@ temporary directory
 
 \subparagraph{One-to-one}\label{one-to-one}
 
-\begin{verbatim}
+\begin{lstlisting}
 def bozorth3_from_one_to_one(probe, gallery):
     tempdir = tempfile.mkdtemp()
     probeFile = os.path.join(tempdir, 'probe.xyt')
@@ -460,11 +460,11 @@ def bozorth3_from_one_to_one(probe, gallery):
         return bozorth3(probe=probe.image, gallery=gallery.image, score=score)
     finally:
         shutil.rmtree(tempdir)
-\end{verbatim}
+\end{lstlisting}
 
 \subparagraph{One-to-many}\label{one-to-many}
 
-\begin{verbatim}
+\begin{lstlisting}
 def bozorth3_from_one_to_many(probe, galleryset):
     tempdir = tempfile.mkdtemp()
     probeFile = os.path.join(tempdir, 'probe.xyt')
@@ -484,7 +484,7 @@ def bozorth3_from_one_to_many(probe, galleryset):
                for score, gallery in zip(scores, galleryset)]
     finally:
         shutil.rmtree(tempdir)
-\end{verbatim}
+\end{lstlisting}
 
 \section{Plotting}\label{plotting}
 
@@ -494,7 +494,7 @@ the gallery images.
 
 The \texttt{mk\_short\_labels} helper function will be defined below.
 
-\begin{verbatim}
+\begin{lstlisting}
 def plot(dbfile, nprobes=10):
     conn = sqlite3.connect(dbfile)
     results = pd.read_sql(
@@ -514,129 +514,129 @@ def plot(dbfile, nprobes=10):
     plt.xlabel('Gallery')
     plt.legend(bbox_to_anchor=(0, 0, 1, -0.2))
     plt.show()
-\end{verbatim}
+\end{lstlisting}
 
 The image ids are long hash strings. In ordere to minimize the amount of
 space on the figure the labels occupy, we provide a helper function to
 create a short label that still uniquely identifies each probe image in
 the selected sample
 
-\begin{verbatim}
+\begin{lstlisting}
 def mk_short_labels(series, start=7):
     for size in xrange(start, len(series[0])):
         if len(series) == len(set(map(lambda s: s[:size], series))):
             break
     return map(lambda s: s[:size], series)
-\end{verbatim}
+\end{lstlisting}
 
 \section{Putting it all Together}\label{putting-it-all-together}
 
 First, set up a temporary directory in which to work:
 
-\begin{verbatim}
+\begin{lstlisting}
 pool = multiprocessing.Pool()
 prefix = '/tmp/fingerprint_example/'
 if not os.path.exists(prefix):
     os.makedirs(prefix)
-\end{verbatim}
+\end{lstlisting}
 
 Next we download and extract the fingerprint images from NIST:
 
-\begin{verbatim}
+\begin{lstlisting}
 %%time
 dataprefix = prepare_dataset(prefix=prefix)
-\end{verbatim}
+\end{lstlisting}
 
 Next we'll configure the location of of the MD5 checksum file that comes
 with the download
 
-\begin{verbatim}
+\begin{lstlisting}
 md5listpath = os.path.join(prefix, 'NISTSpecialDatabase4GrayScaleImagesofFIGS/sd04/sd04_md5.lst')
-\end{verbatim}
+\end{lstlisting}
 
 Load the images from the downloaded files to start the analysis pipeline
 
-\begin{verbatim}
+\begin{lstlisting}
 %%time
 print('Loading images')
 paths = locate_paths(md5listpath, dataprefix)
 images = locate_images(paths)
 mindtcts = pool.map(mindtct_from_image, images)
 print('Done')
-\end{verbatim}
+\end{lstlisting}
 
 We can examine one of the loaded image. Note that \texttt{image} is
 refers to the MD5 checksum that came with the image and the \texttt{xyt}
 attribute represents the raw image data.
 
-\begin{verbatim}
+\begin{lstlisting}
 print(mindtcts[0].image)
 print(mindtcts[0].xyt[:50])
-\end{verbatim}
+\end{lstlisting}
 
 For example purposes we'll only a use a small percentage of the
 database, randomly selected, for pur probe and gallery datasets.
 
-\begin{verbatim}
+\begin{lstlisting}
 perc_probe = 0.001
 perc_gallery = 0.1
-\end{verbatim}
+\end{lstlisting}
 
-\begin{verbatim}
+\begin{lstlisting}
 %%time
 print('Generating samples')
 probes  = random.sample(mindtcts, int(perc_probe   * len(mindtcts)))
 gallery = random.sample(mindtcts, int(perc_gallery * len(mindtcts)))
 print('|Probes| =', len(probes))
 print('|Gallery|=', len(gallery))
-\end{verbatim}
+\end{lstlisting}
 
 We can now compute the matching scores between the probe and gallery
 sets. This will use all cores available on this workstation.
 
-\begin{verbatim}
+\begin{lstlisting}
 %%time
 print('Matching')
 input = [bozorth3_input(probe=probe, gallery=gallery)
          for probe in probes]
 bozorth3s = pool.map(run_bozorth3, input)
-\end{verbatim}
+\end{lstlisting}
 
 \texttt{bozorth3s} is now a \texttt{list} of \texttt{lists} of
 \texttt{bozorth3} instances.
 
-\begin{verbatim}
+\begin{lstlisting}
 print('|Probes|  =', len(bozorth3s))
 print('|Gallery| =', len(bozorth3s[0]))
 print('Result:', bozorth3s[0][0])
-\end{verbatim}
+\end{lstlisting}
 
 Now add the results to the database
 
-\begin{verbatim}
+\begin{lstlisting}
 dbfile = os.path.join(prefix, 'scores.db')
 conn = sqlite3.connect(dbfile)
 cursor = conn.cursor()
 cursor.execute(bozorth3.sql_stmt_create_table())
-\end{verbatim}
+\end{lstlisting}
 
-\begin{verbatim}
+\begin{lstlisting}
 %%time
 for group in bozorth3s:
     vals = map(bozorth3.sql_prepared_stmt_insert_values, group)
     cursor.executemany(bozorth3.sql_prepared_stmt_insert(), vals)
     conn.commit()
     print('Inserted results for probe', group[0].probe)
-\end{verbatim}
+\end{lstlisting}
 
 We now plot the results.
 
-\begin{verbatim}
+\begin{lstlisting}
 plot(dbfile, nprobes=len(probes))
-\end{verbatim}
+\end{lstlisting}
 
 \includegraphics{fingerprint_matching_files/fingerprint_matching_74_0.png}
 
-\begin{verbatim}
+\begin{lstlisting}
 cursor.close()
-\end{verbatim}
+\end{lstlisting}
