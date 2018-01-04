@@ -1,4 +1,5 @@
 \chapter{SSH}
+\label{C:ssh}
 
 \begin{WARNING}
 This is writen for gitlab and not github
@@ -259,11 +260,51 @@ Your identification has been saved with the new passphrase.
 
 \section{Upload the key to gitlab}\label{upload-the-key-to-gitlab}
 
-Follow the instructions provided here:
+\begin{IU}
+We do not use gitlab.com for most classes but use github.com
+\end{IU}
+
+In case you use gitlab  Follow the instructions provided here to
+upload the public key
 
   \URL{http://docs.gitlab.com/ce/ssh/README.html}
 
-\section{Exercise}\label{exercise}
+\section{Tips}
+
+\begin{description}
+
+\item[Use SSH keys] You will need to use ssh keys to access remote machines
+
+\item[No blank passphrases] In most cases you must use a passphrase
+  with your key. In fact if we find that you use passwordless keys to
+  futuresystems and to chameleon cloud resources, we may elect to give
+  you an {\em F} for the assignment in question. There are some
+  exceptions, but they will be clearly communicated to you in
+  class. You will as part of your cloud drivers license test explain
+  how you gain access to futuresystmes and chameleon to explicitly
+  explain this point and provide us with reasosns what you can not do.
+
+\item[A key for each server] Under no circumstances copy the same
+  private key on multiple servers. THis violates security best
+  practices. Create for each server a new private key and use their
+  public keys to gain access to the appropriate server.
+
+\item[Use SSH agent] So as to not to type in all the time the
+  passphrase for a key, we recommend using ssh-agent to manage the
+  login. This will be part of your cloud drivers license.
+
+But shut down the ssh-agent if not in use
+
+\item[keep an offline backup, put encrypt the drive] You may for some
+  of our projects need to make backups of private keys on other
+  servers you set up. If you  like to make a backup you can do so on a
+  USB stick, but make sure that access to the stick is encrypted. Do
+  not stor anything else on that key and look it in a safe place. If
+  you lose the stick, recreate all keys on all machines.
+
+\end{description}
+
+\section{Exercise}
 
 \begin{description}
 \item[SSH.1:]
@@ -277,3 +318,4 @@ Upload your key to futuresystems.org. Login to india.futuresystems.org
 Note. that this could take some time as administrators need to approve
 you. Be patient.
 \end{description}
+

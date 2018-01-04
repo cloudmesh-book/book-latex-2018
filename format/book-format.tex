@@ -171,7 +171,7 @@ permissions and limitations under the License.\\ % License information
 \lstset{style=code}
 \lstset{language=python} 
 
-\newcommand{\WHERE}[2]{$\square$~ \ref{#1}. \nameref{#1} \hfill ~ #2 ~ \pageref{#1}\\}
+\newcommand{\WHERE}[3]{$\square$~ #1 \ref{#2}. \nameref{#2} \hfill ~ #3 ~ \pageref{#2}\\}
 
 \newenvironment{NOTE2}[1]
     {\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,%
@@ -213,4 +213,5 @@ sep=2pt,outer sep=0pt] at (25pt,0pt){\textcolor{ocre}{\LARGE Note}};\end{tikzpic
 \end{itemize} 
 }
 
-
+\newcommand{\YES}{\ding{51}}%
+\newcommand{\NO}{\ding{55}}%

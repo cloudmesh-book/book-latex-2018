@@ -113,8 +113,14 @@ publish:
 	cp $(FILE).pdf ~/github/laszewsk/laszewski.github.io/papers/$(FILE).pdf
 	cd ~/github/laszewsk/laszewski.github.io/papers; git add $(FILE).pdf; git commit -m "update $(FILE)"; git push
 
+size:
+	du -c -h dest/vonLaszewski-bigdata.pdf | fgrep total > dest/size.txt
+	du -c -h dest/vonLaszewski-bigdata.pdf | fgrep total 
+
+
 watch:
 	latexmk -pvc -view=pdf ${FILE}
+
 dest:
 	mkdir -p dest/notebooks
 	mkdir -p dest/notebooks/dask
