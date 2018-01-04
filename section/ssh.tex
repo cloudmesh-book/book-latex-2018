@@ -1,4 +1,13 @@
-\section{Using SSH Keys}
+\chapter{SSH}
+
+\begin{WARNING}
+This is writen for gitlab and not github
+\end{WARNING}
+
+\begin{WARNING}
+Windows has a new way via Linux on Windows
+\end{WARNING}
+
 
 If you do not know what ssh is we recommend that you
 \href{http://openssh.com/manual.html}{read up on it} . However, the
@@ -10,7 +19,7 @@ provide a public ssh key to FutureSystem. We explain how to generate a
 ssh key, upload it to the FutureSystem portal and log onto the
 resources. This manual covers UNIX, Mac OS X.
 
-\subsection{Using SSH from Windows}\label{using-ssh-from-windows}
+\section{Using SSH from Windows}\label{using-ssh-from-windows}
 
 For Linux users, please skip to the section s-ssh-generate
 
@@ -108,14 +117,14 @@ Other packages of interest include
 
 Before installing any of them evaluate if you need them.
 
-\subsection{Using SSH on Mac OS X}\label{using-ssh-on-mac-os-x}
+\section{Using SSH on Mac OS X}\label{using-ssh-on-mac-os-x}
 
 Mac OS X comes with an ssh client. In order to use it you need to open
 the \texttt{Terminal.app} application. Go to \texttt{Finder}, then click
 \texttt{Go} in the menu bar at the top of the screen. Now click
 \texttt{Utilities} and then open the \texttt{Terminal} application.
 
-\subsection{Generate a SSH key}\label{generate-a-ssh-key}
+\section{Generate a SSH key}\label{generate-a-ssh-key}
 
 First we must generate a ssh key with the tool
 \href{http://linux.die.net/man/1/ssh-keygen}{ssh-keygen}. This program
@@ -225,7 +234,7 @@ Uk+t9h48pBQj16FrUCp0rS02Pj+4/9dNeS1kmNJu5ZYS8HVRhvuoTXuAY/UVc
 ynEPUegkp+qYnR user@myemail.edu
 \end{verbatim}
 
-\subsection{Add or Replace Passphrase for an Already Generated
+\section{Add or Replace Passphrase for an Already Generated
 Key}\label{add-or-replace-passphrase-for-an-already-generated-key}
 
 In case you need to change your change passphrase, you can simply run
@@ -248,13 +257,13 @@ Enter same passphrase again:
 Your identification has been saved with the new passphrase.  
 \end{verbatim}
 
-\subsection{Upload the key to gitlab}\label{upload-the-key-to-gitlab}
+\section{Upload the key to gitlab}\label{upload-the-key-to-gitlab}
 
 Follow the instructions provided here:
 
   \URL{http://docs.gitlab.com/ce/ssh/README.html}
 
-\subsection{Exercise}\label{exercise}
+\section{Exercise}\label{exercise}
 
 \begin{description}
 \item[SSH.1:]

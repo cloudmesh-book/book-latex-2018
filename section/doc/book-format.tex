@@ -1,15 +1,9 @@
-%---------------------------------------------------------------------------------
-%	COMMENT
-%---------------------------------------------------------------------------------
-
-
-\part{Book Format}
-
-%---------------------------------------------------------------------------------
-%	CHAPTER 1
-%---------------------------------------------------------------------------------
 
 \chapterimage{water.png} % Chapter heading image
+
+\chapter{Book Format}
+
+\FILENAME
 
 This document is prepared using a special enhanced \LaTeX book format to allow
 easy integration for section and index references, as well as
@@ -18,27 +12,24 @@ for students to obtain a document with much of the Lecture material
 included. We provide some examples so that if you like to contribute
 you can do so easily and can use the correct way of doing so.
 
-\chapter{Format}
 
-\FILENAME
-
-\section{Paragraphs of Text}\index{Paragraphs of Text}
+\section{Paragraphs of Text}\index{\LaTeX!Book!Paragraphs of Text}
 
 \lipsum[1] % Dummy text
 
 %------------------------------------------------
 
-\section{Citation}\index{Citation}
+\section{Citation}\index{\LaTeX!Book!Citation}
 
 This statement requires citation \cite{article_key}; this one is more specific \cite[162]{book_key}.
 
 %------------------------------------------------
 
-\section{Lists}\index{Lists}
+\section{Lists}\index{\LaTeX!Book!Lists}
 
 Lists are useful to present information in a concise and/or ordered way\footnote{Footnote example...}.
 
-\subsection{Numbered List}\index{Lists!Numbered List}
+\subsection{Numbered List}\index{\LaTeX!Book!Lists!Numbered List}
 
 \begin{tcblisting}{colback=blue!5!white,colframe=gray!50!blue,listing side text,
   title=Numbered List,fonttitle=\bfseries}
@@ -49,7 +40,7 @@ Lists are useful to present information in a concise and/or ordered way\footnote
 \end{enumerate}
 \end{tcblisting}
 
-\subsection{Bullet Points}\index{Lists!Bullet Points}
+\subsection{Bullet Points}\index{\LaTeX!Book!Lists!Bullet Points}
 
 \begin{tcblisting}{colback=blue!5!white,colframe=gray!50!blue,listing side text,
   title=Bullet Points,fonttitle=\bfseries}
@@ -60,7 +51,7 @@ Lists are useful to present information in a concise and/or ordered way\footnote
 \end{itemize}
 \end{tcblisting}
 
-\subsection{Descriptions and Definitions}\index{Lists!Descriptions and Definitions}
+\subsection{Descriptions and Definitions}\index{\LaTeX!Book!Lists!Descriptions and Definitions}
 
 \begin{tcblisting}{colback=blue!5!white,colframe=gray!50!blue,listing side text,
   title=Enumerations,fonttitle=\bfseries}
@@ -76,11 +67,11 @@ Lists are useful to present information in a concise and/or ordered way\footnote
 %-------------------------------------------------------------------------------
 
 
-\section{Theorems}\index{Theorems}
+\section{Theorems}\index{\LaTeX!Book!Theorems}
 
 This is an example of theorems.
 
-\subsection{Several equations}\index{Theorems!Several Equations}
+\subsection{Several equations}\index{\LaTeX!Book!Theorems!Several Equations}
 This is a theorem consisting of several equations.
 
 \begin{verbatim}
@@ -101,7 +92,7 @@ In $E=\mathbb{R}^n$ all norms are equivalent. It has the properties:
 \end{align}
 \end{theorem}
 
-\subsection{Single Line}\index{Theorems!Single Line}
+\subsection{Single Line}\index{\LaTeX!Book!Theorems!Single Line}
 This is a theorem consisting of just one line.
 
 \begin{verbatim}
@@ -116,7 +107,7 @@ A set $\mathcal{D}(G)$ in dense in $L^2(G)$, $|\cdot|_0$.
 
 %------------------------------------------------
 
-\section{Definitions}\index{Definitions}
+\section{Definitions}\index{\LaTeX!Book!Definitions}
 
 This is an example of a definition. A definition could be mathematical or it could define a concept.
 
@@ -131,7 +122,7 @@ Given a vector space $E$, a norm on $E$ is an application, denoted $||\cdot||$, 
 
 %------------------------------------------------
 
-\section{Notations}\index{Notations}
+\section{Notations}\index{\LaTeX!Book!Notations}
 
 \begin{notation}
 Given an open subset $G$ of $\mathbb{R}^n$, the set of functions $\varphi$ are:
@@ -144,7 +135,7 @@ a vector space is denoted by $\mathcal{D}(G)$.
 
 %------------------------------------------------
 
-\section{Remarks}\index{Remarks}
+\section{Remarks}\index{\LaTeX!Book!Remarks}
 
 This is an example of a remark.
 
@@ -154,7 +145,7 @@ The concepts presented here are now in conventional employment in mathematics. V
 
 %------------------------------------------------
 
-\section{Corollaries}\index{Corollaries}
+\section{Corollaries}\index{\LaTeX!Book!Corollaries}
 
 This is an example of a corollary.
 
@@ -164,11 +155,11 @@ The concepts presented here are now in conventional employment in mathematics. V
 
 %------------------------------------------------
 
-\section{Propositions}\index{Propositions}
+\section{Propositions}\index{\LaTeX!Book!Propositions}
 
 This is an example of propositions.
 
-\subsection{Several equations}\index{Propositions!Several Equations}
+\subsection{Several equations}\index{\LaTeX!Book!Propositions!Several Equations}
 
 \begin{proposition}[Proposition name]
 It has the properties:
@@ -178,7 +169,7 @@ It has the properties:
 \end{align}
 \end{proposition}
 
-\subsection{Single Line}\index{Propositions!Single Line}
+\subsection{Single Line}\index{\LaTeX!Book!Propositions!Single Line}
 
 \begin{proposition} 
 Let $f,g\in L^2(G)$; if $\forall \varphi\in\mathcal{D}(G)$, $(f,\varphi)_0=(g,\varphi)_0$ then $f = g$. 
@@ -186,11 +177,11 @@ Let $f,g\in L^2(G)$; if $\forall \varphi\in\mathcal{D}(G)$, $(f,\varphi)_0=(g,\v
 
 %------------------------------------------------
 
-\section{Examples}\index{Examples}
+\section{Examples}\index{\LaTeX!Book!Examples}
 
 This is an example of examples.
 
-\subsection{Equation and Text}\index{Examples!Equation and Text}
+\subsection{Equation and Text}\index{\LaTeX!Book!Examples!Equation and Text}
 
 \begin{example}
 Let $G=\{x\in\mathbb{R}^2:|x|<3\}$ and denoted by: $x^0=(1,1)$; consider the function:
@@ -201,7 +192,7 @@ f(x)=\left\{\begin{aligned} & \mathrm{e}^{|x|} & & \text{si $|x-x^0|\leq 1/2$}\\
 The function $f$ has bounded support, we can take $A=\{x\in\mathbb{R}^2:|x-x^0|\leq 1/2+\epsilon\}$ for all $\epsilon\in\intoo{0}{5/2-\sqrt{2}}$.
 \end{example}
 
-\subsection{Paragraph of Text}\index{Examples!Paragraph of Text}
+\subsection{Paragraph of Text}\index{\LaTeX!Book!Examples!Paragraph of Text}
 
 \begin{example}[Example name]
 \lipsum[2]
@@ -209,7 +200,7 @@ The function $f$ has bounded support, we can take $A=\{x\in\mathbb{R}^2:|x-x^0|\
 
 %------------------------------------------------
 
-\section{Exercises}\index{Exercises}
+\section{Exercises}\index{\LaTeX!Book!Exercises}
 
 This is an example of an exercise.
 
@@ -219,7 +210,7 @@ This is a good place to ask a question to test learning progress or further ceme
 
 %------------------------------------------------
 
-\section{Problems}\index{Problems}
+\section{Problems}\index{\LaTeX!Book!Problems}
 
 \begin{problem}
 What is the average airspeed velocity of an unladen swallow?
@@ -227,7 +218,7 @@ What is the average airspeed velocity of an unladen swallow?
 
 %------------------------------------------------
 
-\section{Vocabulary}\index{Vocabulary}
+\section{Vocabulary}\index{\LaTeX!Book!Vocabulary}
 
 Define a word to improve a students' vocabulary.
 
@@ -235,7 +226,7 @@ Define a word to improve a students' vocabulary.
 Definition of word.
 \end{vocabulary}
 
-\section{Table}\index{Table}
+\section{Tables}\index{\LaTeX!Book!Table}
 
 \begin{table}[h]
 \centering
@@ -253,7 +244,7 @@ Treatment 3 & 0.0009271 & 0.296 \\
 
 %------------------------------------------------
 
-\section{Figure}\index{Figure}
+\section{Figures}\index{\LaTeX!Book!Figure}
 
 \begin{figure}[h]
 \centering\includegraphics[scale=0.5]{placeholder}
@@ -261,6 +252,10 @@ Treatment 3 & 0.0009271 & 0.296 \\
 \end{figure}
 
 \subsection{Colored Boxes}
+\index{\LaTeX!Book!Boxes}
+\index{\LaTeX!Book!NOTE}
+\index{\LaTeX!Book!WARNING}
+\index{\LaTeX!Book!IU}
 
 The package \verb|tcolorbox| provides sophisticated support to include
 color boxes. Together with the new environment we can create nice add
