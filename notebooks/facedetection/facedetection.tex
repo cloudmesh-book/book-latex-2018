@@ -10,19 +10,19 @@ using Ansible with its roles.
 
 Original:
 
-\includegraphics{face/image03.png}
+\includegraphics[width=0.5\textwidth]{face/image03.png}
 
 Pedestrian Detected:
 
-\includegraphics{face/image05.png}
+\includegraphics[width=0.5\textwidth]{face/image05.png}
 
 Original
 
-\includegraphics{face/image06.png}
+\includegraphics[width=0.5\textwidth]{face/image06.png}
 
 Pedestrian and Face/eyes Detected
 
-\includegraphics{face/image04.png}
+\includegraphics[width=0.5\textwidth]{face/image04.png}
 
 \subsection{Introduction}\label{introduction}
 
@@ -106,14 +106,14 @@ single file which is getting difficult to read when it deploys more
 applications on multiple layers. The main Ansible playbook runs Ansible
 roles in order which look like:
 
-\begin{verbatim}
+\begin{lstlisting}
 ---
 include: sched/00-mesos.yml
 include: proc/01-spark.yml
 include: apps/02-opencv.yml
 include: data/03-inria-dataset.yml
 Include: anlys/04-human-face-detection.yml
-\end{verbatim}
+\end{lstlisting}
 
 Directory names e.g. sched, proc, data, or anlys indicate BDSS layers
 like: - sched: scheduler layer - proc: data processing layer - apps:
@@ -195,7 +195,7 @@ part can be completed.
 
 Example of Ansible Inventory file (inventory.txt)
 
-\begin{verbatim}
+\begin{lstlisting}
 [masters]
 10.0.5.67
 10.0.5.68
@@ -204,7 +204,7 @@ Example of Ansible Inventory file (inventory.txt)
 10.0.5.70
 10.0.5.71
 10.0.5.72
-\end{verbatim}
+\end{lstlisting}
 
 \subsection{Instructions for
 Deployment}\label{instructions-for-deployment}
@@ -218,13 +218,13 @@ Github}\label{cloning-pedestrian-detection-repository-from-github}
 Roles are included as submodules which require \texttt{-\/-recursive}
 option to checkout them all.
 
-\begin{verbatim}
+\begin{lstlisting}
 !git clone --recursive https://github.com/futuresystems/pedestrian-and-face-detection.git
-\end{verbatim}
+\end{lstlisting}
 
 Change the following variable with actual ip addresses:
 
-\begin{verbatim}
+\begin{lstlisting}
 sample_inventory="""[masters]
 10.0.5.67
 10.0.5.68
@@ -233,32 +233,32 @@ sample_inventory="""[masters]
 10.0.5.70
 10.0.5.71
 10.0.5.72"""
-\end{verbatim}
+\end{lstlisting}
 
 Create a \texttt{inventory.txt} file with the variable in your local
 directory.
 
-\begin{verbatim}
+\begin{lstlisting}
 !printf "$sample_inventory" > inventory.txt
 !cat inventory.txt
-\end{verbatim}
+\end{lstlisting}
 
 Add \texttt{ansible.cfg} file with options for ssh host key checking and
 login name.
 
-\begin{verbatim}
+\begin{lstlisting}
 ansible_config="""[defaults]
 host_key_checking=false
 remote_user=ubuntu"""
 !printf "$ansible_config" > ansible.cfg
 !cat ansible.cfg
-\end{verbatim}
+\end{lstlisting}
 
 Check accessibility by ansible ping like:
 
-\begin{verbatim}
+\begin{lstlisting}
 !ansible -m ping -i inventory.txt all
-\end{verbatim}
+\end{lstlisting}
 
 Make sure that you have a correct ssh key in your account otherwise you
 may encounter `FAILURE' in the ping test above.
@@ -269,9 +269,9 @@ We use a main ansible playbook to deploy software packages for NIST
 Pedestrian and Face detection which includes: - mesos - spark -zookeeper
 - opencv - INRIA Person dataset - Python script for the detection
 
-\begin{verbatim}
+\begin{lstlisting}
 !cd pedestrian-and-face-detection/ && ansible-playbook -i ../inventory.txt site.yml
-\end{verbatim}
+\end{lstlisting}
 
 The installation may take 30 minutes or an hour to complete.
 
@@ -285,32 +285,32 @@ how it works.
 Let's import opencv python module and we will use images from the online
 database image-net.org to test OpenCV image recognition.
 
-\begin{verbatim}
+\begin{lstlisting}
 import cv2
-\end{verbatim}
+\end{lstlisting}
 
 Let's download a mailbox image with a red color to see if opencv
 identifies the shape with a color. The example file in this tutorial is:
 
-\begin{verbatim}
+\begin{lstlisting}
 !curl http://farm4.static.flickr.com/3061/2739199963_ee78af76ef.jpg > mailbox.jpg
-\end{verbatim}
+\end{lstlisting}
 
 \begin{quote}
 100 167k 100 167k 0 0 686k 0 --:--:-- --:--:-- --:--:-- 684k
 \end{quote}
 
-\begin{verbatim}
+\begin{lstlisting}
 %matplotlib inline
-\end{verbatim}
+\end{lstlisting}
 
-\begin{verbatim}
+\begin{lstlisting}
 from IPython.display import Image
 mailbox_image = "mailbox.jpg"
 Image(filename=mailbox_image)
-\end{verbatim}
+\end{lstlisting}
 
-\includegraphics{facedetection_files/facedetection_46_0.jpeg}
+\includegraphics[width=0.5\textwidth]{facedetection_files/facedetection_46_0.jpeg}
 
 You can try other images. Check out the image-net.org for mailbox
 images: \url{http://image-net.org/synset?wnid=n03710193}
@@ -327,7 +327,7 @@ using a Numpy library for better calculation * findContours: to find a
 outline of the object * bitwise\_and: to black-out the area of contours
 found
 
-\begin{verbatim}
+\begin{lstlisting}
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -360,9 +360,9 @@ cv2.putText(res, "masked image", (20,300), cv2.FONT_HERSHEY_SIMPLEX, 2, (255,255
 # display
 plt.imshow(cv2.cvtColor(res, cv2.COLOR_BGR2RGB))
 plt.show()
-\end{verbatim}
+\end{lstlisting}
 
-\includegraphics{facedetection_files/facedetection_49_0.png}
+\includegraphics[width=0.5\textwidth]{facedetection_files/facedetection_49_0.png}
 
 The red color mailbox is left alone in the image which we wanted to find
 in this example by opencv functions. You can try other images with
@@ -401,17 +401,17 @@ OpenCV}\label{human-and-face-detection-in-opencv}
 We use INRIA Person dataset to detect upright people and faces in images
 in this example. Let's download it first.
 
-\begin{verbatim}
+\begin{lstlisting}
 !curl ftp://ftp.inrialpes.fr/pub/lear/douze/data/INRIAPerson.tar > INRIAPerson.tar
-\end{verbatim}
+\end{lstlisting}
 
 \begin{quote}
 100 969M 100 969M 0 0 8480k 0 0:01:57 0:01:57 --:--:-- 12.4M
 \end{quote}
 
-\begin{verbatim}
+\begin{lstlisting}
 !tar xvf INRIAPerson.tar > logfile && tail logfile
-\end{verbatim}
+\end{lstlisting}
 
 \subsubsection{Face Detection using Haar
 Cascades}\label{face-detection-using-haar-cascades}
@@ -422,9 +422,9 @@ This section is prepared based on the opencv-python tutorial:
 There is a pre-trained classifier for face detection, download it from
 here:
 
-\begin{verbatim}
+\begin{lstlisting}
 !curl https://raw.githubusercontent.com/opencv/opencv/master/data/haarcascades/haarcascade_frontalface_default.xml > haarcascade_frontalface_default.xml
-\end{verbatim}
+\end{lstlisting}
 
 \begin{quote}
 100 908k 100 908k 0 0 2225k 0 --:--:-- --:--:-- --:--:-- 2259k
@@ -440,7 +440,7 @@ Snippet}\label{face-detection-python-code-snippet}
 
 Now, we detect faces from the first five images using the classifier.
 
-\begin{verbatim}
+\begin{lstlisting}
 # import the necessary packages
 from __future__ import print_function
 import numpy as np
@@ -476,39 +476,28 @@ for filename in onlyfiles:
     cnt = cnt + 1
     if cnt == 5:
         break
-\end{verbatim}
+\end{lstlisting}
 
-\includegraphics{facedetection_files/facedetection_59_0.png}
+\includegraphics[width=0.25\textwidth]{facedetection_files/facedetection_59_0.png}
+\includegraphics[width=0.25\textwidth]{facedetection_files/facedetection_59_1.png}
+\includegraphics[width=0.25\textwidth]{facedetection_files/facedetection_59_2.png}
+\includegraphics[width=0.25\textwidth]{facedetection_files/facedetection_59_3.png}
+\includegraphics[width=0.25\textwidth]{facedetection_files/facedetection_59_4.png}
+\includegraphics[width=0.25\textwidth]{facedetection_files/facedetection_59_5.png}
+\includegraphics[width=0.25\textwidth]{facedetection_files/facedetection_59_6.png}
+\includegraphics[width=0.25\textwidth]{facedetection_files/facedetection_59_7.png}
+\includegraphics[width=0.25\textwidth]{facedetection_files/facedetection_59_8.png}
+\includegraphics[width=0.25\textwidth]{facedetection_files/facedetection_59_9.png}
+\includegraphics[width=0.25\textwidth]{facedetection_files/facedetection_59_10.png}
 
-\includegraphics{facedetection_files/facedetection_59_1.png}
-
-\includegraphics{facedetection_files/facedetection_59_2.png}
-
-\includegraphics{facedetection_files/facedetection_59_3.png}
-
-\includegraphics{facedetection_files/facedetection_59_4.png}
-
-\includegraphics{facedetection_files/facedetection_59_5.png}
-
-\includegraphics{facedetection_files/facedetection_59_6.png}
-
-\includegraphics{facedetection_files/facedetection_59_7.png}
-
-\includegraphics{facedetection_files/facedetection_59_8.png}
-
-\includegraphics{facedetection_files/facedetection_59_9.png}
-
-\includegraphics{facedetection_files/facedetection_59_10.png}
-
-\subsection{Pedestrian Detection using HOG
-Descriptor}\label{pedestrian-detection-using-hog-descriptor}
+\subsection{Pedestrian Detection using HOG Descriptor}
 
 We will use Histogram of Oriented Gradients (HOG) to detect a upright
 person from images.
 
-\subsubsection{Python Code Snippet}\label{python-code-snippet}
+\subsubsection{Python Code Snippet}
 
-\begin{verbatim}
+\begin{lstlisting}
 # initialize the HOG descriptor/person detector
 hog = cv2.HOGDescriptor()
 hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
@@ -536,27 +525,18 @@ for filename in onlyfiles:
     cnt = cnt + 1
     if cnt == 5:
         break
-\end{verbatim}
+\end{lstlisting}
 
-\includegraphics{facedetection_files/facedetection_62_0.png}
-
-\includegraphics{facedetection_files/facedetection_62_1.png}
-
-\includegraphics{facedetection_files/facedetection_62_2.png}
-
-\includegraphics{facedetection_files/facedetection_62_3.png}
-
-\includegraphics{facedetection_files/facedetection_62_4.png}
-
-\includegraphics{facedetection_files/facedetection_62_5.png}
-
-\includegraphics{facedetection_files/facedetection_62_6.png}
-
-\includegraphics{facedetection_files/facedetection_62_7.png}
-
-\includegraphics{facedetection_files/facedetection_62_8.png}
-
-\includegraphics{facedetection_files/facedetection_62_9.png}
+\includegraphics[width=0.25\textwidth]{facedetection_files/facedetection_62_0.png}
+\includegraphics[width=0.25\textwidth]{facedetection_files/facedetection_62_1.png}
+\includegraphics[width=0.25\textwidth]{facedetection_files/facedetection_62_2.png}
+\includegraphics[width=0.25\textwidth]{facedetection_files/facedetection_62_3.png}
+\includegraphics[width=0.25\textwidth]{facedetection_files/facedetection_62_4.png}
+\includegraphics[width=0.25\textwidth]{facedetection_files/facedetection_62_5.png}
+\includegraphics[width=0.25\textwidth]{facedetection_files/facedetection_62_6.png}
+\includegraphics[width=0.25\textwidth]{facedetection_files/facedetection_62_7.png}
+\includegraphics[width=0.25\textwidth]{facedetection_files/facedetection_62_8.png}
+\includegraphics[width=0.25\textwidth]{facedetection_files/facedetection_62_9.png}
 
 \subsection{Processing by Apache
 Spark}\label{processing-by-apache-spark}
@@ -578,7 +558,7 @@ parallel to detet objects in this example.
   \emph{collect} fonction merges results in an array.
 \end{itemize}
 
-\begin{verbatim}
+\begin{lstlisting}
 def apply_batch(imagePath):
         import cv2
         import numpy as np
@@ -593,16 +573,16 @@ def apply_batch(imagePath):
         for (x, y, w, h) in rects:
             cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
         return image
-\end{verbatim}
+\end{lstlisting}
 
 \subsubsection{Parallelize in Spark
 Context}\label{parallelize-in-spark-context}
 
 The list of image files is given to parallelize.
 
-\begin{verbatim}
+\begin{lstlisting}
 pd = sc.parallelize(onlyfiles)
-\end{verbatim}
+\end{lstlisting}
 
 \subsubsection{Map Function
 (apply\_batch)}\label{map-function-apply_batch}
@@ -610,24 +590,24 @@ pd = sc.parallelize(onlyfiles)
 The `apply\_batch' function that we created above is given to map
 function to process in a spark cluster.
 
-\begin{verbatim}
+\begin{lstlisting}
 pdc = pd.map(apply_batch)
-\end{verbatim}
+\end{lstlisting}
 
 \subsubsection{Collect Function}\label{collect-function}
 
 The result of each map process is merged to an array.
 
-\begin{verbatim}
+\begin{lstlisting}
 result = pdc.collect()
-\end{verbatim}
+\end{lstlisting}
 
 \subsection{Results for 100+ images by Spark
 Cluster}\label{results-for-100-images-by-spark-cluster}
 
-\begin{verbatim}
+\begin{lstlisting}
 for image in result:
     plt.figure()
     plt.axis("off")
     plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
-\end{verbatim}
+\end{lstlisting}

@@ -1,10 +1,10 @@
-\section{Python Fingerprint Example}\label{python-fingerprint-example}
+\chapter{Python Fingerprint Example}\label{python-fingerprint-example}
 
 Python is a flexible and popular language for running data analysis
 pipelines. In this tutorial we will implement a solution for a
 fingerprint matching.
 
-\subsection{Overview}\label{overview}
+\section{Overview}\label{overview}
 
 Fingerprint recognition refers to the automated method for verifying a
 match between two fingerprints and that is used to identify individuals
@@ -13,7 +13,7 @@ used form of biometric used to identify individuals.
 
 \begin{figure}
 \centering
-\includegraphics{./fingerprints.png}
+\includegraphics{fingerprint_matching_files/fingerprints.png}
 \caption{Fingerprints}
 \end{figure}
 
@@ -29,17 +29,18 @@ We use the following NIST dataset for the study:
 Special Database 14 - NIST Mated Fingerprint Card Pairs 2.
 (\url{http://www.nist.gov/itl/iad/ig/special/_dbases.cfm})
 
-\subsection{Objectives}\label{objectives}
+\TODO{citation}
+
+\section{Objectives}\label{objectives}
 
 Match the fingerprint images from a probe set to a gallery set and
 report the match scores.
 
-\subsection{Prerequisites}\label{prerequisites}
+\section{Prerequisites}\label{prerequisites}
 
 For this work we will use the following algorithms:
 
 \begin{itemize}
-\tightlist
 \item
   MINDTCT: The NIST minutiae detector, which automatically locates and
   records ridge ending and bifurcations in a fingerprint image.
@@ -63,28 +64,21 @@ $ unzip -d nbis nbis_v5_0_0.zip
 $ cd nbis/Rel_5.0.0
 $ ./setup.sh /usr/local --without-X11
 $ sudo make
-\end{lstlisting}
+\end{lstlisting} 
+% $ trick emacs
 
-\subsection{Implementation}\label{implementation}
+\section{Implementation}\label{implementation}
 
 \begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  Fetch the fingerprint images from the web
-\item
-  Call out to external programs to prepare and compute the match scoreds
-\item
-  Store the results in a database
-\item
-  Generate a plot to identify likely matches.
+\item Fetch the fingerprint images from the web
+\item Call out to external programs to prepare and compute the match
+  scoreds
+\item Store the results in a database
+\item Generate a plot to identify likely matches.
 \end{enumerate}
 
 \begin{lstlisting}
 from __future__ import print_function
-\end{lstlisting}
-
-\begin{lstlisting}
 import urllib
 import zipfile
 import hashlib
@@ -151,7 +145,7 @@ Finally, we'll write the results to a database.
 import sqlite3
 \end{lstlisting}
 
-\subsection{Utility functions}\label{utility-functions}
+\section{Utility functions}\label{utility-functions}
 
 Next, we'll define some utility functions:
 
@@ -217,7 +211,7 @@ def fetch_url(url, sha256, prefix='.', checksum_blocksize=2**20, dryRun=False):
     return local
 \end{lstlisting}
 
-\subsection{Dataset}\label{dataset}
+\section{Dataset}\label{dataset}
 
 We'll now define some global parameters
 
@@ -268,15 +262,15 @@ def locate_images(paths):
         yield image(id=path.checksum.value, path=path)
 \end{lstlisting}
 
-\subsection{Data Model}\label{data-model}
+\section{Data Model}\label{data-model}
 
 We'll define some classes so we have a nice API for working with the
 dataflow. We set \texttt{slots=True} so that the resulting objects will
 be more space-efficient.
 
-\subsubsection{Utilities}\label{utilities}
+\subsection{Utilities}\label{utilities}
 
-\paragraph{Checksum}\label{checksum}
+\subsection{Checksum}\label{checksum}
 
 The checksum consists of the actual hash value (\texttt{value}) as well
 as a string representing the hashing algorithm. The validator enforces
@@ -289,7 +283,7 @@ class Checksum(object):
   kind = attr.ib(validator=lambda o, a, v: v in 'md5 sha1 sha224 sha256 sha384 sha512'.split())
 \end{lstlisting}
 
-\paragraph{Path}\label{path}
+\subsection{Path}\label{path}
 
 \texttt{Path}s refer to an image's filepath and associated
 \texttt{Checksum}. We get the checksum ``for''free" since the MD5 hash
@@ -302,7 +296,7 @@ class Path(object):
     filepath = attr.ib()
 \end{lstlisting}
 
-\paragraph{Image}\label{image}
+\subsection{Image}\label{image}
 
 The start of the data pipeline is the image. An \texttt{image} has an
 \texttt{id} (the md5 hash) and the path to the image.
@@ -314,7 +308,7 @@ class image(object):
     path = attr.ib()
 \end{lstlisting}
 
-\subsubsection{Mindtct}\label{mindtct}
+\subsection{Mindtct}\label{mindtct}
 
 The next step in the pipeline is to apply the \texttt{mindtct} program
 from NBIS. A \texttt{mindtct} object therefore represents the results of
@@ -361,7 +355,7 @@ def mindtct_from_image(image):
         shutil.rmtree(tempdir)
 \end{lstlisting}
 
-\subsubsection{Bozorth3}\label{bozorth3}
+\subsection{Bozorth3}\label{bozorth3}
 
 The final step in the pipeline is running the \texttt{bozorth3} from
 NBIS. The \texttt{bozorth3} class represents the match being done:
@@ -428,7 +422,7 @@ def run_bozorth3(input):
     return input.run()
 \end{lstlisting}
 
-\paragraph{Running Bozorth3}\label{running-bozorth3}
+\subsection{Running Bozorth3}\label{running-bozorth3}
 
 There are two cases to handle: 1. One-to-one probe to gallery sets 1.
 One-to-many probe to gallery sets
@@ -441,7 +435,7 @@ to \texttt{stdout} which is captured and then parsed. 1. Return a
 \texttt{bozorth3} instance for each match 1. Make sure to clean up the
 temporary directory
 
-\subparagraph{One-to-one}\label{one-to-one}
+\paragraph{One-to-one}\label{one-to-one}
 
 \begin{lstlisting}
 def bozorth3_from_one_to_one(probe, gallery):
@@ -462,7 +456,7 @@ def bozorth3_from_one_to_one(probe, gallery):
         shutil.rmtree(tempdir)
 \end{lstlisting}
 
-\subparagraph{One-to-many}\label{one-to-many}
+\paragraph{One-to-many}\label{one-to-many}
 
 \begin{lstlisting}
 def bozorth3_from_one_to_many(probe, galleryset):
@@ -543,7 +537,6 @@ if not os.path.exists(prefix):
 Next we download and extract the fingerprint images from NIST:
 
 \begin{lstlisting}
-%%time
 dataprefix = prepare_dataset(prefix=prefix)
 \end{lstlisting}
 
@@ -557,7 +550,6 @@ md5listpath = os.path.join(prefix, 'NISTSpecialDatabase4GrayScaleImagesofFIGS/sd
 Load the images from the downloaded files to start the analysis pipeline
 
 \begin{lstlisting}
-%%time
 print('Loading images')
 paths = locate_paths(md5listpath, dataprefix)
 images = locate_images(paths)
@@ -583,7 +575,6 @@ perc_gallery = 0.1
 \end{lstlisting}
 
 \begin{lstlisting}
-%%time
 print('Generating samples')
 probes  = random.sample(mindtcts, int(perc_probe   * len(mindtcts)))
 gallery = random.sample(mindtcts, int(perc_gallery * len(mindtcts)))
@@ -595,7 +586,6 @@ We can now compute the matching scores between the probe and gallery
 sets. This will use all cores available on this workstation.
 
 \begin{lstlisting}
-%%time
 print('Matching')
 input = [bozorth3_input(probe=probe, gallery=gallery)
          for probe in probes]
@@ -621,7 +611,6 @@ cursor.execute(bozorth3.sql_stmt_create_table())
 \end{lstlisting}
 
 \begin{lstlisting}
-%%time
 for group in bozorth3s:
     vals = map(bozorth3.sql_prepared_stmt_insert_values, group)
     cursor.executemany(bozorth3.sql_prepared_stmt_insert(), vals)
