@@ -1,36 +1,91 @@
+
+\section{Tutorials, Topic Paper, Term Paper, Project Report}
+
 \FILENAME
 
-\section{Term Paper or Project}\label{term-paper-or-project}
+Dependendt on the class you need to do different assignments. The
+assignments will be clearly posted in this document and updated in
+case clarification is needed. 
 
-You have a choice to write a term paper or do a software project. This
-will constitute to \textbf{60\%} of your class grade. You have plenty of
-time to make this choice and if you find you struggle with programming
-you may want to consider a term paper instead of a project.
+We use the following terminology:
 
-In case you chose a project your maximum grade for the entire class
+\begin{description}
+
+\item[Tutorials:] Tutorials are written in markdown, RST, or LaTeX and
+  include information on a particular technical issue that is in
+  general helpful for other students. Tutorials can be small, but sume
+  may need to be substential. As we expect that the tutorials can be
+  included in the Handbook, please be careful of plagiarizm and do not
+  just copy the tutorial from elswhere. 
+
+\item[Topic Paper:] A topic paper, or short paper is a smapp paper
+  about a technology, application, or useful information that provides
+  an overview of what you are trying to describe and analyses its
+  relatinship to the class topic. Be mindful about plagiarizm. The
+  paper is written in \LaTeX and uses jabref for bibliography management. 
+
+\item[Term Paper:] A term paper is an enhanced topic paper. The
+  difference is in length. Comparative or review papers can also be
+  term papers.  Term papers should have the quality to be publishable
+  either in a workshop or as part of the handbook.
+
+\item[Project Paper:] A project reportis an enhanced topic paper that
+  includes not just the analysis of a topic, but an actuall code, with
+  benchmark or demosntarted appliction use. Obviously it is longer
+  than a paper and includes descriptions about reproducability of the
+  application. Term papers should have the quality to be publishable
+  either in a workshop or as part of the handbook.
+
+\end{description}
+
+Examples from prior classes are avalable in the class proceedings.
+
+\TODO{include link to Results section}
+
+Dependent on the class you have to fulfill different
+requirements. Please make sure you understand which requirement you
+will have.
+
+\begin{description}
+
+\item[E516 and E616] In these classes you will need to produce
+  tutorials, topic papers and a project report with real code.
+
+\item[I524] same as E516 and E616, but you have the choide to
+  substitute the project report with a term paper. There is a penalty
+  though and we encourage studnets to do the project.
+
+\end{description}
+
+Please be aware that the project or term paper constitute to
+\textbf{60\%} of your class grade. You have plenty of time to make
+this choice and if you find you struggle with programming you may want
+to consider a term paper instead of a project.
+
+In case you chose a project paper your maximum grade for the entire class
 could be an A+. However, an A+ project must be truly outstanding and
 include an exceptional project report. Such a project and report will
 have the potential quality of being able to be published in a
 conference.
 
-In case you chose a Term Paper your maximum grade for the entire class
+In case you chose a term Paper your maximum grade for the {\em entire} class
 will be an A-.
 
-Please note that a project includes also writing a project report/paper.
-However the length is a bit lower than for a term paper.
+Please note that a project includes writing a project paper.  However
+the length is a bit lower than for a term paper.
 
-\subsection{Team}\label{team}
+\subsection{Team}
 
 Software projects and term papers can be conducted with one, two or
 three class members. We do not allow more than three members in a
-project. It will be up to you to determine a team, but we recommend that
-you chose wisely. Naturally if a team member does not contribute to the
-project you need to address this early on. Please do not come to us a
-week before the deadline is due and say a team member has not
-contributed, this is far to late to do any adjustment to the team. It is
-in your responsibility to manage the team.
+project. It will be up to you to determine a team, but we recommend
+that you chose wisely. Naturally if a team member does not contribute
+to the project you need to address this early on. Please do not come
+to us a week before the deadline is due and say a team member has not
+contributed, this is far to late to do any adjustment to the team. It
+is in your responsibility to manage the team.
 
-\subsection{Common Deleiverables}\label{common-deleiverables}
+\subsection{Common Deleiverables}
 
 Both Projects and Term paper have the following common deliverables
 
@@ -49,7 +104,7 @@ project we may invite the student to give a detailed presentation of the
 project.
 \item[Bibliography:]
 All bibliography has to be provided in a jabref/bibtex file. This is
-regardless if you use LaTeX or Word. Ther is \textbf{NO EXCEPTION} to
+regardless if you use LaTeX or Word. There is \textbf{NO EXCEPTION} to
 this rule. PLease be advised doing references right takes some time so
 you want to do this early. Please note that exports of Endnote or other
 bibliography management tools do not lead to properly formatted bibtex
@@ -66,13 +121,8 @@ sharelatex, you need to upload it and use it there.
 
 The format for LaTeX and Word found here:
 
-\begin{itemize}
-\tightlist
-\item
-  \href{https://github.com/cloudmesh/classes/raw/master/docs/source/format/report.zip}{report.zip}
-\item
-  \href{https://github.com/cloudmesh/classes/raw/master/docs/source/format/report.tar.gz}{report.tar.gz}
-\end{itemize}
+  \URL{https://github.com/bigdata-i523/sample-hid000/tree/master/paper1}
+
 \end{description}
 
 There will be \textbf{NO EXCEPTION} to this format. In case you are in a
@@ -88,38 +138,30 @@ Documents that do not follow the ACM format and are not accompanied by
 references managed with jabref or endnote or are not spell checked will
 be returned without review.
 
-More details about the format can be found at
+\TODO{Integrate the format from the class web page into the LateX
+  section More details about the format can be found at
+  \url{https://cloudmesh.github.io/classes/lesson/doc/report.html} }
 
-\begin{itemize}
-\tightlist
-\item
-  \url{https://cloudmesh.github.io/classes/lesson/doc/report.html}
-\end{itemize}
+\subsection{Project Paper}
 
-\subsection{Software Project}\label{software-project}
-
-\subsubsection{Systems Usage}\label{systems-usage}
+\subsubsection{Systems Usage}
 
 Projects may be executed on your local computer, a cloud or other
 resources you may have access to. This may include:
 
 \begin{itemize}
-\tightlist
-\item
-  chameleoncloud.org
-\item
-  furturesystems.org
-\item
-  AWS (you will be responsible for charges)
-\item
-  Azure (you will be responsible for charges)
-\item
-  virtualbox if you have a powerful computer and like to prototype
-\item
-  other clouds
+\item chameleoncloud.org
+\item furturesystems.org
+\item AWS (you will be responsible for charges)
+\item Azure (you will be responsible for charges)
+\item virtualbox if you have a powerful computer and like to prototype
+\item other clouds, please confirm with us.
 \end{itemize}
 
-\subsubsection{Deliverables}\label{deliverables}
+Access to clouds must be scripted and a cmd5 extension must be
+developed as part of your project to receive full credit.
+
+\subsubsection{Deliverables}
 
 The following artifacts are part of the deliverables for a project
 
@@ -145,20 +187,20 @@ make view
 \end{verbatim}
 
 Which would use a simple make file to install, run, and view the
-results. Naturally you can use cmd5 (we teach this in class), ansible or
-shell scripts. It is not permissible to use GUI based DevOps
-preinstalled frameworks. Everything must be installable form the command
-line.
-\item[Data:]
-If the data is small it can be added into a data directory in github. If
-you have larger data, it should be downloaded from the internet. IT is
-in your responsibility to develop a download program,
-\item[Project Report:]
-A report must be produced while using the format discussed in the Report
-Format section. The following length is required:
+results.  You are expected to integrate cmd5, which we teach in
+class. In addition you can use or are expected to us DOCKERFILES,
+ansible, or shell scripts. It is not permissible to use GUI based
+DevOps preinstalled frameworks. Everything must be installable and
+reproducable form the command line.
+
+\item[Data:] Data is to be hosted on IUs google drive if needed. If
+  you have larger data, it should be downloaded from the internet. It
+  is in your responsibility to develop a download program,
+\item[Project Report:] A report must be produced while using the
+  format discussed in the Report Format section. The following length
+  is required:
 
 \begin{itemize}
-\tightlist
 \item
   6 pages, one student in the project
 \item
@@ -166,16 +208,16 @@ Format section. The following length is required:
 \item
   10 pages, three students in the project
 \end{itemize}
-\item[License:]
-All projects are developed under an open source license such as Apache
-2.0 License, or similar. You will be required to add a LICENCE.txt file
-and if you use other software identify how it can be reused in your
-project. If your project uses different licenses, please add in a
-README.rst file which packages are used and which license these packages
-have.
+
+\item[License:] All projects are developed under an open source
+  license such as Apache 2.0 License. You will be required to add a
+  LICENCE.txt file and if you use other software identify how it can
+  be reused in your project. If your project uses different licenses,
+  please add in a README.rst file which packages are used and which
+  license these packages have.
 \end{description}
 
-\subsection{Term Paper}\label{term-paper}
+\subsection{Term Paper}
 
 In case you chose the term paper, you or your team will pick a topic
 relevant for the class. You will write a high quality scholarly paper
@@ -185,24 +227,23 @@ discussed in the Report Format section. The following length is
 required:
 
 \begin{itemize}
-\tightlist
-\item
-  9 pages, one student in the project
-\item
-  12 pages, two student in the project
-\item
-  15 pages, three student in the project
+\item 8 pages, one student in the project
+\item 10 pages, two student in the project
+\item 12 pages, three student in the project
 \end{itemize}
+
 
 \section{Grading}\label{grading}
 
-Grading for homework will be done within two weeks of the submission on
-the due date. For homework that were submitted beyond the due date, the
-grading will be done a month after the submission. A 10\% grade
-reduction will be given for residential students if the project is late.
-Some homework can not be delivered late (which will be clearly marked
-and 0 points will be given if late; these are mostly related to setting
-up your account and communicating to us your account names.)
+Grading for homework will be done within reasonable time of the
+submission if the submission was on time. This however could still
+take multiple weeks. Students that miss the deadline will be graded on
+best effort, which could mean at the end of the semester as TAs will
+grade first papers that have been handed in on time.  A 10\% grade
+reduction will be given for residential students if the project is
+late.  Some homework can not be delivered late (which will be clearly
+marked and 0 points will be given if late; these are mostly related to
+setting up your account and communicating to us your account names.)
 
 It is the student's responsibility to upload submissions well ahead of
 the deadline to avoid last minute problems with network connectivity,
@@ -210,23 +251,49 @@ browser crashes, cloud issues, etc. It is a very good idea to make early
 submissions and then upload updates as the deadline approaches; we will
 grade the last submission received before the deadline.
 
-Note that paper and project will take a considerable amount of time and
-doing proper time management is a must for this class. Avoid starting
-your project late. Procrastination does not pay off. Late Projects or
-term papers will receive a 10\% grade reduction.
+Note that the term paper or project paper will take a considerable
+amount of time and doing proper time management is a must for this
+class. Avoid starting your project late. Procrastination does not pay
+off. Starting a paper a day or even in the week before the deadline
+will allow you not to achieve your best. Late Projects or term papers
+will receive a 10\% grade reduction.
+
+For E516 I524, E616 the grading scene is
 
 \begin{itemize}
-\tightlist
-\item
-  15\% Paper 1
-\item
-  15\% Paper 2
-\item
-  60\% Term Paper or Project
-\item
-  10\% Participation/Discussion
+\item 5\% Tutorial 1
+\item 5\% Tutorial 2
+\item 20\% Paper 1
+\item 60\% Term Paper or Project
+\item 10\% Participation/Discussion
 \end{itemize}
 
 All other assignments are pass/fail assignments and are geared towards
 you being able to explore rather than you being bound by small
 assignments.
+
+\subsection{Grades on Canvas}
+
+The final grade for your class is {\bf NOT} accurately posted in
+CANVAS. Please visit the registrar for your final grade.
+We have run many times into issues with CANVAS thus we try to stay as
+much as possible away form it. We know that the total grade will not
+be accurately reported in CANVAS.
+
+Furthermore we are using only a letter grading scheme that
+distinguishes qualitatively between grades. Typically we do not engage
+in arguing if you get a point more or less. Instead we look at the
+artifact and decide if it is an A or A- and so on.
+
+Once the due date is passed all incomplete assignments will appear as
+an {\em F} in CANVAS. Once we receive and review the submission this grade will
+be changed. Please, do not cintact us if you submitted late and you
+see an F in CANVAS temportrarily.
+
+\subsection{Discussion about Grades}
+
+Should it be necessary a discussion about a grade must not be taking
+place via e-mail nor via piazza. YOu must use the CANVAS message
+feature as we want to make sure that by accident you post information
+to others that you do not intend to. FOr this reason we will not read
+such messages on pizza and in our e-mail and deleted them without reading.
