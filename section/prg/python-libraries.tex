@@ -142,34 +142,6 @@ $ autopep8 -i file.py # update in place
 If you use pyCharm you have the ability to use a similar function while
 p;ressing on Inspect Code.
 
-\section{Further Learning}\label{further-learning}
-
-There is much more to python than what we have covered here:
-
-\begin{itemize}
-\tightlist
-\item
-  conditional expression (if, if...then,`if..elif..then`)
-\item
-  function definition(def)
-\item
-  class definition (class)
-\item
-  function positional arguments and keyword arguments
-\item
-  lambda expression
-\item
-  iterators
-\item
-  generators
-\item
-  loops
-\item
-  docopts
-\item
-  humanize
-\end{itemize}
-
 \section{Writing Python 3 Compatible
 Code}\label{writing-python-3-compatible-code}
 
@@ -377,19 +349,19 @@ This list may be useful as it also contains links to data visualization
 and manipulation libraries, and AI tools and libraries. Please note that
 for this class you can reuse such libraries if not otherwise stated.
 
-\section{Jupyter Notebook Tutorials}\label{jupyter-notebook-tutorials}
+\subsection{Jupyter Notebook Tutorials}\label{jupyter-notebook-tutorials}
 
 A Short Introduction to Jupyter Notebooks and NumPy To view the
 notebook, open this link in a background tab
-\textless{}\url{https://nbviewer.jupyter.org/}\textgreater{} and copy
-and paste the following link in the URL input area
-\textless{}\url{https://cloudmesh.github.io/classes/lesson/prg/Jupyter-NumPy-tutorial-I523-F2017.ipynb}\textgreater{}
-Then hit Go!
+\url{https://nbviewer.jupyter.org/} and copy and paste the following
+link in the URL input area
+\url{https://cloudmesh.github.io/classes/lesson/prg/Jupyter-NumPy-tutorial-I523-F2017.ipynb}
+Then hit Go.
+
 
 \section{Exercises}\label{exercises}
 
-\begin{description}
-\item[EPython.1:]
+\begin{exercise}\label{E:Python.1}
 Write a python program called iterate.py that accepts an integer n from
 the command line. Pass this integer to a function called iterate.
 
@@ -397,20 +369,23 @@ The iterate function should then iterate from 1 to n. If the ith number
 is a multiple of three, print ``multiple of 3'', if a multiple of 5
 print ``multiple of 5'', if a multiple of both print ``multiple of 3 and
 5'', else print the value.
-\item[EPython.2:]
-\begin{enumerate}
-\tightlist
-\item
-  Create a pyenv or virtualenv \textasciitilde{}/ENV
-\item
-  Modify your \textasciitilde{}/.bashrc shell file to activate your
-  environment upon login.
-\item
-  Install the docopt python package using pip
-\item
-  Write a program that uses docopt to define a commandline program.
-  Hint: modify the iterate program.
-\item
-  Demonstrate the program works and submit the code and output.
-\end{enumerate}
-\end{description}
+\end{exercise}
+
+\begin{exercise}\label{E:Python.2}
+  \begin{enumerate}
+  \item
+    Create a pyenv or virtualenv \textasciitilde{}/ENV
+  \item
+    Modify your \textasciitilde{}/.bashrc shell file to activate your
+    environment upon login.
+  \item
+    Install the docopt python package using pip
+  \item
+    Write a program that uses docopt to define a commandline program.
+    Hint: modify the iterate program.
+  \item
+    Demonstrate the program works and submit the code and output.
+  \end{enumerate}
+\end{exercise}
+
+
