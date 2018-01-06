@@ -21,7 +21,11 @@ you can do so easily and can use the correct way of doing so.
 
 \section{Citation}\index{\LaTeX!Book!Citation}
 
-This statement requires citation \cite{article_key}; this one is more specific \cite[162]{book_key}.
+\begin{tcblisting}{colback=blue!5!white,colframe=gray!50!blue,listing side text,
+  title=Numbered List,fonttitle=\bfseries}
+This statement requires citation \cite{article_key}; 
+this one is more specific \cite[162]{book_key}.
+\end{tcblisting}
 
 %------------------------------------------------
 
@@ -74,7 +78,7 @@ This is an example of theorems.
 \subsection{Several equations}\index{\LaTeX!Book!Theorems!Several Equations}
 This is a theorem consisting of several equations.
 
-\begin{verbatim}
+\begin{lstlisting}
 \begin{theorem}[Name of the theorem]
 In $E=\mathbb{R}^n$ all norms are equivalent. It has the properties:
 \begin{align}
@@ -82,7 +86,7 @@ In $E=\mathbb{R}^n$ all norms are equivalent. It has the properties:
 &  ||\sum_{i=1}^n\mathbf{x}_i||\leq \sum_{i=1}^n||\mathbf{x}_i||\quad\text{where $n$ is a finite integer}
 \end{align}
 \end{theorem}
-\end{verbatim}
+\end{lstlisting}
 
 \begin{theorem}[Name of the theorem]
 In $E=\mathbb{R}^n$ all norms are equivalent. It has the properties:

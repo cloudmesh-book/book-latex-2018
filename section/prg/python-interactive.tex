@@ -4,34 +4,33 @@
 \index{Python!REPL}
 \index{Python!interactive}
 
-Python can be used interactively. Start by entering the interactive loop
-by executing the command:
+Python can be used interactively. You can enter the interactive mode
+by entering the interactive loop by executing the command:
 
-\begin{verbatim}
+\begin{lstlisting}
 $ python
-\end{verbatim}
+\end{lstlisting}
+% $
 
-You should see something like the following:
+You will see something like the following:
 
-\begin{verbatim}
+\begin{lstlisting}
 Python 2.7.13 (default, Nov 19 2016, 06:48:10)
 [GCC 5.4.0 20160609] on linux2
 Type "help", "copyright", "credits" or "license" for more information.
 >>>
-\end{verbatim}
+\end{lstlisting}
 
-The \textgreater{}\textgreater{}\textgreater{} is the prompt for the
-interpreter. This is similar to the shell interpreter you have been
-using.
+The \verb|>>>| is the prompt used by the interpreter. This is similar to
+bash where commonly \verb|$| is used.
 
-Often we show the prompt when illustrating an example. This is to
-provide some context for what we are doing. If you are following along
-you will not need to type in the prompt.
+Sometimes it is convenient to show the prompt when illustrating an
+example. This is to provide some context for what we are doing. If you
+are following along you will not need to type in the prompt.
 
-This interactive prompt does the following:
+This interactive python process does the following:
 
 \begin{itemize}
-\tightlist
 \item
   \emph{read} your input commands
 \item
@@ -49,69 +48,70 @@ This is why you may see the interactive loop referred to as a
 \section{REPL (Read Eval Print Loop)}\label{repl-read-eval-print-loop}
 \index{Python!REPL}
 
-We have so far seen a few examples of types: \textbf{string}s,
-\textbf{bool}s, \textbf{int}s, and \textbf{float}s. A \textbf{type}
-indicates that values of that type support a certain set of operations.
-For instance, how would you exponentiate a string? If you ask the
-interpreter, this results in an error:
-
-\begin{verbatim}
->>> "hello"**3
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
-\end{verbatim}
-
 There are many different types beyond what we have seen so far, such as
 \textbf{dictionaries}s, \textbf{list}s, \textbf{set}s. One handy way of
 using the interactive python is to get the type of a value using
-`type():
+type():
 
-::
+\begin{lstlisting}
+>>> type(42)
+<type 'int'>
+>>> type(hello)
+<type 'str'>
+>>> type(3.14)
+<type 'float'>
+\end{lstlisting}
 
-   \textgreater{}\textgreater{}\textgreater{} type(42)
-   \textless{}type 'int'\textgreater{}
-   \textgreater{}\textgreater{}\textgreater{} type(hello)
-   \textless{}type 'str'\textgreater{}
-   \textgreater{}\textgreater{}\textgreater{} type(3.14)
-   \textless{}type 'float'\textgreater{}
 
 You can also ask for help about something using help():
 
-::
+\begin{lstlisting}
+>>> help(int)
+>>> help(list)
+>>> help(str)
+\end{lstlisting}
 
-   \textgreater{}\textgreater{}\textgreater{} help(int)
-   \textgreater{}\textgreater{}\textgreater{} help(list)
-   \textgreater{}\textgreater{}\textgreater{} help(str)
-
-.. tip::
-
-   Using help()` opens up a pager. To navigate you can use the spacebar
-to go down a page w to go up a page, the arrow keys to go up/down
-line-by-line, or q to exit.
+Using help() opens up a help message within a pager. To navigate you
+can use the spacebar to go down a page w to go up a page, the arrow
+keys to go up/down line-by-line, or q to exit.
 
 \section{Python 3 Features in Python 2}\label{python-3-features-in-python-2}
 \index{Python!2 and 3}
 
+In this course we want to be able to seamlesly switch between python 2
+and python 3. Thus it is convenient from the start to use python 3
+syntax when it is supported also in python 2. One of the most used
+functions is the print statement that has in python 3 parantheses. To
+enable it in python 2 you just need to import this function:
 
-As mentioned earlier, we assume you will use Python 2.7.X because there
-are still some libraries that haven't been ported to Python 3. However,
-there are some features of Python 3 we can and want to use in Python
-2.7. Before we do anything else, we need to make these features
-available to any subsequent code we write:
-
-\begin{verbatim}
+\begin{lstlisting}
 >>> from __future__ import print_function, division
-\end{verbatim}
+\end{lstlisting}
 
 The first of these imports allows us to use the print function to output
 text to the screen, instead of the print statement, which Python 2 uses.
 This is simply a \href{https://www.python.org/dev/peps/pep-3105/}{design
 decision} that better reflects Python's underlying philosophy.
 
-The second of these imports makes sure that the
+
+Other functions such as the division also behave differently. Thus we use
+
+\begin{lstlisting}
+>>> from __future__ import division
+\end{lstlisting}
+
+This import makes sure that the
 \href{https://www.python.org/dev/peps/pep-0238/}{division operator}
-behaves in a way a newcomer to the language might find more intruitive.
-In Python 2, division / is \emph{floor division} when the arguments are
-integers, meaning that 5 / 2 == 2, for example. In Python 3, division /
-is \emph{true division}, thus 5 / 2 == 2.5.
+behaves in a way a newcomer to the language might find more
+intruitive.  In Python 2, division / is \emph{floor division} when the
+arguments are integers, meaning that the following 
+
+\begin{lstlisting}
+(5 / 2 == 2) is True
+\end{lstlisting}
+
+In Python 3, division / is a flaoting point division, thus 
+
+\begin{lstlisting}
+(5 / 2 == 2.5) is True
+\end{lstlisting}

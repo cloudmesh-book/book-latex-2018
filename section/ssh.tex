@@ -319,26 +319,42 @@ pscp user@host.name:"\"remote filename with spaces\"" local_filename
 \end{verbatim}
 
 Putty is best known for its GUI configuration application to manage
-several machines as demonstrated next.
+several machines as demonstrated next. Once you have downloaded it and
+opened PuTTYgen, you will be presented with a a key generator window
+(images provided by chameleon cloud) (see Figure \ref{F:putty-key}).
 
-Once you have downloades it and opened PuTTYgen, you will be presented
-with a a key generator window (images provided by chameleon cloud):
+\FIGURE{htb} 
+       {0.5}
+       {images/chameleon/putty2.png}
+       {Key generation window}
+       {F:putty-key} 
 
-\includegraphics[width=\columnwidth]{images/chameleon/putty2.png}
+To generate a key you click the {\em Generate} button which is
+blue. The PuTTY Key Generator (see Figure \ref {F:putty-pass})
+will then ask you to move your mouse around the program's blank
+space to generate ``randomness'' for your key.  You must enter a
+``Key passphrase'' and then confirm the passphrase.
 
-To generate a key you click the {\em Generate} button which is 
-blue. The PuTTY Key Generator will then ask you to move your mouse around
-the program's blank space to generate ``randomness'' for your key.
+\FIGURE{htb} 
+       {0.5}
+       {images/chameleon/putty3.png}
+       {Key generation window}
+       {F:putty-pass} 
 
-You must enter a ``Key passphrase'' and then confirm the
-passphrase.
-
-\includegraphics[width=\columnwidth]{images/chameleon/putty3.png}
 
 Next you need to save both the public and private keys into a file of your choice using
 the ``Save public key'' and ``Save private key'' buttons. We suggest
 you name something obvious like ``public\_key.pub'' and ``private\_key'' so that you
 can distinguish between the two.
+
+
+Before closing this window, select the entire public key and copy it
+with ``Control-C''. Please note that everything should be copied,
+including ``ssh-rsa''. This will be used when importing the key pair to
+Openstack.
+
+At this time, the public key has been created and copied. Now you can
+use the public key and upload it to systems you like to ligin to.
 
 
 \subsection{Chocolatey}
@@ -553,14 +569,21 @@ name.
 
 \section{Exercises}
 
+\begin{exercise}
+\label{E:SSH.1} create an SSH key pair
+\end{exercise}
 
-\begin{description}
-\item[SSH.1:] create an SSH key pair
-\item[SSH.2:] upload the public key to git repository you use. Create a fork in
+\begin{exercise}
+\label{E:SSH.2} upload the public key to git repository you use. Create a fork in
   git and use your ssh key to clone and commit to it
-\item[SSH.3:] Get an account on futuresystems.org (if you are
+\end{exercise}
+
+\begin{exercise}
+\label{E:SSH.3} Get an account on futuresystems.org (if you are
   authorized to do so).  Upload your key to futuresystems.org. Login
   to india.futuresystems.org Note. that this could take some time as
   administrators need to approve you. Be patient.
-\end{description}
+\end{exercise}
+
+
 
