@@ -7,14 +7,17 @@ fingerprint matching.
 \section{Overview}\label{overview}
 
 Fingerprint recognition refers to the automated method for verifying a
-match between two fingerprints and that is used to identify individuals
-and verify their identity. Fingerprints (Figure 1) are the most widely
-used form of biometric used to identify individuals.
+match between two fingerprints and that is used to identify
+individuals and verify their identity. Fingerprints (Figure
+\ref{F:fingerprints}) are the most widely used form of biometric used
+to identify individuals.
 
-\begin{figure}
+\TODO{image missing}
+
+\begin{figure}[htb]
 \centering
-\includegraphics{fingerprint_matching_files/fingerprints.png}
-\caption{Fingerprints}
+\includegraphics{notebooks/fingerprint/fingerprints.png}
+\caption{Fingerprints}\label{F:fingerprints}
 \end{figure}
 
 The automated fingerprint matching generally required the detection of
@@ -624,7 +627,7 @@ We now plot the results.
 plot(dbfile, nprobes=len(probes))
 \end{lstlisting}
 
-\includegraphics{fingerprint_matching_files/fingerprint_matching_74_0.png}
+\includegraphics[width=0.5\textwidth]{notebooks/fingerprint/fingerprint_matching_74_0.png}
 
 \begin{lstlisting}
 cursor.close()
