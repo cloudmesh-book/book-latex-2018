@@ -1,3 +1,4 @@
+\newcommand{\TODAY}{\today~\currenttime}
 
 %----------------------------------------------------------------------------------------
 % remove pandoc commands
@@ -56,7 +57,7 @@ opacity=0.9,text opacity=1,inner
 sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering
     \TITLE \\[15pt] % Book title
 {\Large \SUBTITLE}\\[20pt] % Subtitle
-{\huge \AUTHOR \\ \Large \EMAIL }}}; % Author name
+{\huge \AUTHOR \\ \Large \EMAIL \\ \normalsize \TODAY}}}; % Author name
 \end{tikzpicture}
 \vfill
 \endgroup
@@ -208,11 +209,6 @@ sep=2pt,outer sep=0pt] at (25pt,0pt){\textcolor{ocre}{\LARGE Note}};\end{tikzpic
     {\end{COLORNOTE}}
 
 
-\newcommand{\TODAY}{
-\begin{itemize}
-\item \today~\currenttime 
-\end{itemize} 
-}
 
 \newcommand{\YES}{\ding{51}}%
 \newcommand{\NO}{\ding{55}}%
