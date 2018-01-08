@@ -111,6 +111,7 @@ view:
 	open $(FILE).pdf
 
 publish:
+	cp dest/$(FILE).pdf .
 	cp $(FILE).pdf ~/github/laszewsk/papers/
 	cd ~/github/laszewsk/papers; git add $(FILE).pdf; git commit -m "update $(FILE)"; git push
 	cp $(FILE).pdf ~/github/laszewsk/laszewski.github.io/papers/$(FILE).pdf
