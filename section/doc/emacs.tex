@@ -191,3 +191,76 @@ than 70 characters.\tabularnewline
 M-x flyspell-mode & Highlights misspelled words as you type.\tabularnewline
 \bottomrule
 \end{longtable}
+
+
+\subsection{Org Mode}
+
+Emacs has some very advanced fetures that you can activate via a
+mode. One such feature is to organize a TODO list via org-mode.
+
+Instead of us designing our own video, we point to a community
+tutorial such as
+
+\video{Cloud}{18:04}{Emacs org-mode}{https://www.youtube.com/watch?v=Kde5YVUwDTQ}{Youtube}
+
+
+\subsection{Programming Python with Emacs}
+
+Emacs comes by default with syntax hughl lighting for python when you
+edit a .py file. This is realy all you need. It also comes with a
+python ide that you can use and customize.
+
+Python auto-completion for Emacs:
+
+  \URL{https://github.com/tkf/emacs-jedi}
+
+
+Some more information is available at
+
+\URL{https://realpython.com/blog/python/emacs-the-best-python-editor/}
+\URL{https://www.emacswiki.org/emacs/PythonProgrammingInEmacs}
+
+\subsection{Emacs Keys in a Terminal}
+
+One of the real great features of knowing emacs is that you can set
+all your editors to emacs shortcuts. This includes pyCharm, but also
+bash. IN bash you simply say 
+
+\begin{verbatim}
+set -o emacs
+\end{verbatim}
+
+in your bash prompt. Additionally, if you do not have a window systems
+configured, you can run emacs directly in the terminal with 
+
+\begin{verbatim}
+emacs -nw
+\end{verbatim}
+
+This you can log in to a remote computer and if it has emacs
+installed. use it in the terminal. This would replace editors such as
+vi, vim, nano, pico or others that work in a terminal.
+
+\subsection{\LaTeX~  and Emacs}
+
+LaTeX is directly supported by emacs and nothinghas to be
+changed. However, a collection of information about additional \LaTeX~
+features for emacs is avalable at
+
+\URL{https://www.emacswiki.org/emacs/LaTeX}
+
+Of interest are for example also 
+
+* M-x flyspell-mode: allowing to do spell checking in the window
+* predictive mode: https://www.emacswiki.org/emacs/PredictiveMode
+* preview latex
+* whizzy tex
+
+However instead of previes and whizzy tex we recommend to use
+\url{https://www.emacswiki.org/emacs/LatexMk} which comes preinstalled
+and allows you to do editing in one terminal, while previewing the
+update on change in another window.
+
+LatexMk is all integrated in our report Makefiles and the Book format,
+so you will be able to use this immediately. This is similar to share
+latex, but much faster and without collaborators editing teh same file.

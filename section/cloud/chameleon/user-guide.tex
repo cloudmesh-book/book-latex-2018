@@ -1,6 +1,6 @@
 
 
-\chapter{OpenStack Virtual Machines}
+\section{OpenStack Virtual Machines}
 \label{C:cc-guide}
 
 \FILENAME
@@ -17,7 +17,7 @@ This tutorial provide basic information about how to use the OpenStack
 web interface and provides some information specific to using OpenStack
 KVM on Chameleon.
 
-\section{Web Interface}\label{web-interface-horizon}
+\subsection{Web Interface}\label{web-interface-horizon}
 
 An easy way to use OpenStack KVM on Chameleon~is via
 the~\href{https://openstack.tacc.chameleoncloud.org/dashboard}{OpenStack
@@ -45,7 +45,7 @@ selected and no information about your other projects is shown.
 
 \includegraphics[width=0.8\columnwidth]{images/chameleon/openstack_alamo_overview.png}
 
-\subsection{Managing Virtual Machine Instances}\label{managing-virtual-machine-instances}
+\subsubsection{Managing Virtual Machine Instances}\label{managing-virtual-machine-instances}
 
 One of the main activities you'll be performing in this web interface is
 the management of virtual machines, or instances. You do this via the
@@ -123,7 +123,7 @@ reach the instane via ssh for some reason.
 
 \includegraphics[width=0.8\columnwidth]{images/chameleon/openstack_alamo_console.png}
 
-\subsection{Snapshots}\label{snapshots}
+\subsubsection{Snapshots}\label{snapshots}
 
 The instance list page shown above has an option `Create Snapshot' that
 allows you to save a copy of the disk contents of a running virtual
@@ -131,7 +131,7 @@ machine. This allows you to start new virtual machines in the future
 that are identical to this one and is an easy way to save any changes
 you make to a running virtual machine.
 
-\subsection{Firewall (Access Security)}\label{firewall-access-security}
+\subsubsection{Firewall (Access Security)}\label{firewall-access-security}
 
 Each project has control over their own firewall settings for their
 instances. At minimum you'll probably want to allow SSH access so you
@@ -154,7 +154,7 @@ OpenStack cloud. Feel free to add other rules as necessary.
 
 \includegraphics[width=0.8\columnwidth]{images/chameleon/openstack_alamo_add_secgroup_rule.png}
 
-\section{OpenStack REST Interfaces}\label{openstack-rest-interfaces}
+\subsection{OpenStack REST Interfaces}\label{openstack-rest-interfaces}
 
 The OpenStack REST Interfaces are supported on Chameleon over secure
 HTTP connections. You can download your OpenStack credentials file from
@@ -176,7 +176,7 @@ the --os-cacert cacert.pem arguments.
 \begin{comment}
 
  
-\section{EC2 Interface}\label{ec2-interface}
+\subsection{EC2 Interface}\label{ec2-interface}
 
 \begin{IU}
 Last time we used the EC2 interface it was broken, thus we no longer
@@ -195,7 +195,7 @@ project.
 
 \end{comment}
 
-\section{Downloading and uploading data}\label{downloading-and-uploading-data}
+\subsection{Downloading and uploading data}\label{downloading-and-uploading-data}
 
 You can use the OpenStack command line clients to download data from and
 upload data to Chameleon clouds. Configure your environment by following

@@ -44,6 +44,7 @@ access to IU linux machines.
 
 \section{Teaching and learning methods}
 
+
 \begin{itemize}
 \item Lectures
 \item Assignments including specific lab activities
@@ -127,22 +128,108 @@ This section will change and be updated throughout the semester
 
 \subsection{Communication Track}
 
-\WHERE{\NO}{C:doc}{Month 1}
-\WHERE{\NO}{S:plagiarism}{Month 1}
-\WHERE{\NO}{S:writing}{Month 1}
-\WHERE{\NO}{C:latex}{Month 1}
-\WHERE{\NO}{C:bibtex}{Month 1}
-\WHERE{\NO}{C:emacs}{Optional, highly recommended}
-\WHERE{\NO}{S:markdown}{Month 1}
-\WHERE{\NO}{S:results}{Week 1}
+\WHERE{\YES}{C:doc}{Month 1}
+\WHERE{\YES}{S:plagiarism}{Week 1}
+\WHERE{\YES}{S:results}{Week 1}
+
+\WHERE{\YES}{S:markdown}{Week 1}
+\WHERE{\YES}{C:emacs}{Week 2}
+
+\WHERE{\YES}{S:writing}{Week 3}
+\WHERE{\YES}{C:latex}{Week 3}
+\WHERE{\YES}{C:bibtex}{Week 4}
+
+\begin{description}
+\item[Evaluation Paper1:] Create a paper about a cloud technology with
+  our give class template in the git repository. If a paper is
+  plagiarised you will receive an ``F'' and it is reported based on
+  University policies.
+\end{description}
+
 
 \subsection{Theory Track}
 
+\begin{itemize}
+\item IaaS - OpenStack
+\item PaaS - Hadoop
+\item SaaS - SaaS with REST
+\end{itemizes}
 
+\begin{description}
+\item[Evaluation Paper1:] Create a paper about a cloud technology with
+  our give class template in the git repository. If a paper is
+  plagiarized you will receive an ``F'' and it is reported based on
+  University policies. The paper is in a directory called paper1. All
+  images are in the directory paper1/images, the report is in
+  report.tex, the content is in content.tex. It follows the template
+  we provided. Submission of report.pdf is not allowed. We will create
+  the report and check completness that way.
+\end{description}
 
 \subsection{Programming Track}
 
-\subsection{Cluster Track}
+\subsubsection{Development Environment}
+
+\WHERE{\NO}{C:linux}{Week 2}
+\WHERE{\NO}{C:ssh}{Week 2}
+\WHERE{\NO}{C:github}{Week 3}
+\WHERE{\NO}{S:virtual-box}{Week 3}
+
+\begin{description}
+\item[Evaluation Experiment 1:] Create a virtual machine and take a
+  photo with your laptop or computer and the virtual box running on
+  the screen. Showcase the virtual box interface and in non full
+  screen mode at the same time the operating system you run. We
+  recommend yo use Ubuntu.
+\end{description}
+
+\subsubsection{Python}
+
+\WHERE{\YES}{C:python}{Week 3 - 4}
+\WHERE{\YES}{C:python-install}{Week ?}
+\WHERE{\YES}{C:python-language}{Week ?}
+\WHERE{\YES}{C:python-lib}{Week ?}
+\WHERE{\NO}{C:python-cmd5}{Week ?}
+
+\subsubsection{Cloud}
+
+\begin{itemize}
+\item Build a Multi cloud interface to OpenStack
+\item Build a Multi cloud interface to AWS
+\item Build a Multi cloud interface to Azure
+\item Build a Multi cloud interface to Docker/Kubernetes
+\end{itemize}
+
+
+\begin{description}
+\item[Evaluation Experiment 1:] Create a program in python that
+  identifies a termination criteria for the Secchi disk
+  problem. E.g. at what image can we no longer see the disk?
+  Describe your solution in md and submit to the git repository in a
+  directory called {\em secchi}. The program is called secchi.py, the
+  description is in README.md. It uses cmd5 for creating a command
+  shell that can load the data and analyze it. 
+\end{description}
+
+\subsubsection{Chameleon Cloud and OpenStack}
+
+\WHERE{\YES}{C:chameleon}{Week 4}
+\WHERE{\YES}{C:cc-charge}{Week 4}
+\WHERE{\YES}{C:cc-hardware}{Week 4}
+\WHERE{\YES}{C:cc-start}{Week 4}
+\WHERE{\YES}{C:cc-horizon}{Week 5}
+\WHERE{\YES}{C:cc-guide}{Week 4}
+\WHERE{\NO}{C:cc-heat}{Optional}
+\WHERE{\NO}{C:cc-baremetal}{Optional}
+
+\section{Containers}
+
+\begin{itemize}
+\item Docker 
+\item Docker File
+\item Doker Swarm
+\item Kubernetes
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{E616: Advanced Cloud Computing}
@@ -266,16 +353,16 @@ This section will change and be updated throughout the semester
 
 \subsection{Communication Track}
 
-\WHERE{\NO}{C:doc}{Month 1}
+\WHERE{\YES}{C:doc}{Month 1}
 \WHERE{\YES}{S:plagiarism}{Week 1}
 \WHERE{\YES}{S:results}{Week 1}
 
 \WHERE{\YES}{S:markdown}{Week 1}
-\WHERE{\NO}{C:emacs}{Week 2}
+\WHERE{\YES}{C:emacs}{Week 2}
 
-\WHERE{\NO}{S:writing}{Week 3}
-\WHERE{\NO}{C:latex}{Week 3}
-\WHERE{\NO}{C:bibtex}{Week 4}
+\WHERE{\YES}{S:writing}{Week 3}
+\WHERE{\YES}{C:latex}{Week 3}
+\WHERE{\YES}{C:bibtex}{Week 4}
 
 \begin{description}
 \item[Evaluation Paper1:] Create a paper about a cloud technology with
@@ -340,12 +427,11 @@ This section will change and be updated throughout the semester
 
 \subsubsection{Python}
 
-\WHERE{\NO}{C:python}{Week 3 - 4}
-\WHERE{\NO}{C:python-install}{Week ?}
-\WHERE{\NO}{C:python-language}{Week ?}
-\WHERE{\NO}{C:python-lib}{Week ?}
+\WHERE{\YES}{C:python}{Week 3 - 4}
+\WHERE{\YES}{C:python-install}{Week ?}
+\WHERE{\YES}{C:python-language}{Week ?}
+\WHERE{\YES}{C:python-lib}{Week ?}
 \WHERE{\NO}{C:python-cmd5}{Week ?}
-
 
 \WHERE{\NO}{c:numpy}{}
 \WHERE{\NO}{c:scipy}{} 
@@ -362,25 +448,48 @@ This section will change and be updated throughout the semester
   shell that can load the data and analyze it. 
 \end{description}
 
+\subsection{DevOps}
+
+\begin{itemize}
+\item ssh for DevOps
+\item Ansible
+\item Dokerfile
+\end{itemize}
+
 \subsection{Cloud}
+
+\begin{itemize}
+\item OpenAPI REST Service
+\item OpenAPI Big Data Services
+\end{itemize}
 
 \subsubsection{Chameleon Cloud and OpenStack}
 
-\WHERE{\NO}{C:chameleon}{Week 4}
-\WHERE{\NO}{C:cc-charge}{Week 4}
-\WHERE{\NO}{C:cc-hardware}{Week 4}
-\WHERE{\NO}{C:cc-start}{Week 4}
-\WHERE{\NO}{C:cc-horizon}{Week 5}
-\WHERE{\NO}{C:cc-guide}{Week 4}
+\WHERE{\YES}{C:chameleon}{Week 4}
+\WHERE{\YES}{C:cc-charge}{Week 4}
+\WHERE{\YES}{C:cc-hardware}{Week 4}
+\WHERE{\YES}{C:cc-start}{Week 4}
+\WHERE{\YES}{C:cc-horizon}{Week 5}
+\WHERE{\YES}{C:cc-guide}{Week 4}
 \WHERE{\NO}{C:cc-heat}{Optional}
 \WHERE{\NO}{C:cc-baremetal}{Optional}
 
 
+\section{Containers}
+
+\begin{itemize}
+\item Docker 
+\item Docker File
+\item Doker Swarm
+\item Kubernetes
+\end{itemize}
 
 \subsection{Cluster Track}
 
-\WHERE{\NO}{c:pi-cluster-form-factor}{Month 1}
-
+%\WHERE{\NO}{c:pi-cluster-form-factor}{Month 1}
+\begin{itemize}
+\item Build a Kubernetes Cluster
+\end{itemize}
 
 \chapter{Course Management at IU}
 

@@ -23,6 +23,9 @@ single: dest
 g: dest
 	latexmk -jobname=$(FILE) $(FLAGS) -pvc -view=pdf $(FILE)
 
+gg: dest
+	pdflatex -shell-escape $(FILE)
+
 c: dest
 	latexmk -jobname=$(FILE) $(FLAGS) -pvc -view=pdf chameleon
 
