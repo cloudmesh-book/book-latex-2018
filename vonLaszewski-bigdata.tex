@@ -5,12 +5,13 @@
 
 % \includeonly{part/container}
 
+\begin{comment}
 \includeonly{%
-section/cluster/pi/cluster}%
-%section/cluster/pi/container,%
-%part/container,%
-%part/dev}
-
+section/cluster/pi/cluster,
+section/cluster/pi/container,%
+part/container,%
+part/dev}
+\end{comment}
 
 \newcommand{\TITLE}{Handbook of \\ Clouds and Big Data}
 \newcommand{\SUBTITLE}{Theory and Practice}
@@ -138,7 +139,7 @@ section/cluster/pi/cluster}%
 
 \part{Draft Chapters}
 
-\input{section/cluster/pi/cluster}
+\include{section/cluster/pi/cluster}
 \include{section/cluster/pi/container}
 \include{part/container}
 
