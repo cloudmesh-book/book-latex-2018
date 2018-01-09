@@ -1,10 +1,5 @@
 \part{Syllabus}
 
-Intelligent Systems Engineering is a department and a new major at
-Indiana University. This course is for students who are interested in
-any component of the Masters or Ph.D. in Intelligent Systems
-Engineering. It is an advanced elective class.
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{E516: Introduction to Cloud Computing}
@@ -76,19 +71,16 @@ a graduate course level the communication track has already been
 covered elsewhere, we made sure we also include it here in case you dod
 not yet have such experiences.
 
-\begin{description}
+\begin{itemize}
 
-\item[Introduction] Overview and status of cloud computing
-\item[Big Data Applications] Introduction to the Apache Big Data
-  Satck. Selective presentation of the members of the Big Data set
-\item[New Big Data Application Technologies] Students will
-  explore the Apache Web page and report on them.
-\item[Hadoop] Introduction to Hadoop
-\item[Virtual Machines] Introduction to OpenStack
-\item[Cloud 3.0] Microservices, Events, Functions  
-\item[Project] Delivery of a reproducible substantial student project
+\item {\bf Introduction:} Overview and status of cloud computing
+\item {\bf Cloud Computing:} Basics of Cloud Computing 
+\item {\bf Virtual Machines:} Introduction to OpenStack
+\item {\bf Cloud 3.0:} Microservices, Events, Functions  
+\item {\bf Hadoop:} Introduction to Hadoop
+\item {\bf Project:} Delivery of a reproducible substantial student project
  
-\end{description}
+\end{itemize}
 
 
 \section{Student learning outcomes}
@@ -96,15 +88,11 @@ not yet have such experiences.
 When students complete this course, they should be able to:
 
 \begin{itemize}
-\item Have an advanced understanding of issues involved in designing
+\item Have an elementary understanding of issues involved in designing
   and Software Defined Systems.
-\item Gain hands-on laboratory experience with several examples from
-  academia and industry.
-\item Understand the application of Apache Big Data Software Stack and
-  DevOps to Software Defined systems.
+\item Understand the concepts of Cloud Computing
+\item Gain hands-on laboratory experience with several examples.
 \item Apply knowledge of mathematics, science, and engineering
-\item Understand research challenges and important issues with
-  Software Defined Systems.
 \item	Have advanced skills in teamwork with peers.
 \end{itemize}
 
@@ -113,8 +101,8 @@ When students complete this course, they should be able to:
 \begin{tabular}{lr}
 Grade Item	  & Percentage\\
 \hline
-Assignments	  & 30\% \\
-Final Project	& 60\% \\
+Assignments	  & 40\% \\
+Final Project	& 50\% \\
 Participation	& 10\% \\
 \hline
 \end{tabular}
@@ -124,7 +112,7 @@ Participation	& 10\% \\
 
 \section{Representative bibliography}
 
-\begin{itemize}
+\begin{enumerate}
 \item Cloud Computing for Science and Engineering By Ian Foster and
   Dennis
   B. Gannon\URL{https://mitpress.mit.edu/books/cloud-computing-science-and-engineering}
@@ -134,7 +122,31 @@ Participation	& 10\% \\
   illustrated at \url{http://hpc-abds.org/kaleidoscope/}
 \item	\url{http://cloudmesh.github.io/introduction_to_cloud_computing/}
 \item	There are a huge number of web resources
-\end{itemize}
+
+\item (This document) {\bf Handbook of Clouds and Big Data}, Gregor von Laszewski,
+  Geoffrey C. Fox, and Judy Qiu, Fall 2017,
+  \url{https://tinyurl.com/cloudmesh/vonLaszewski-i523-v1.pdf}
+
+\item {\bf Use Cases in Big Data Software and
+  Analytics Vol. 1}, Gregor von Laszewski, Fall 2017,
+  \url{https://tinyurl.com/cloudmesh/vonLaszewski-i523-v1.pdf}
+
+\item {\bf Use Cases in Big Data Software and
+  Analytics Vol. 2}, Gregor von Laszewski, Fall 2017, \url{https://tinyurl.com/cloudmesh/vonLaszewski-i523-v2.pdf}
+
+\item  {\bf Use Cases in Big Data Software and
+  Analytics Vol. 3}, Gregor von Laszewski, Fall 2017, \url{https://tinyurl.com/cloudmesh/vonLaszewski-i523-v3.pdf}
+
+\item (Draft) {\bf Big Data Software Vol 1.}, Gregor von Laszewski, Spring 2017,
+\url{https://github.com/cloudmesh/sp17-i524/blob/master/paper1/proceedings.pdf}
+
+\item (Draft) {\bf Big Data Software Vol 2.}, Gregor von Laszewski, Spring 2017,
+\URL{https://github.com/cloudmesh/sp17-i524/blob/master/paper2/proceedings.pdf}
+
+\item (Draft) {\bf Big Data Projects}, Gregor von Laszewski, Spring 2017,
+\URL{https://github.com/cloudmesh/sp17-i524/blob/master/project/projects.pdf}
+
+\end{enumerate}
 
 \section{Lectures and Lecture Material}
 
@@ -158,7 +170,7 @@ This section will change and be updated throughout the semester
 \begin{description}
 \item[Evaluation Paper1:] Create a paper about a cloud technology with
   our give class template in the git repository. If a paper is
-  plagiarised you will receive an ``F'' and it is reported based on
+  plagiarized you will receive an ``F'' and it is reported based on
   University policies.
 \end{description}
 
@@ -209,6 +221,12 @@ This section will change and be updated throughout the semester
 
 \subsubsection{Cloud}
 
+\paragraph{Assignments}
+
+Develop a Big Data related REST service with swagger.
+
+Chose two of them so you can see the difference between the APIs:
+
 \begin{itemize}
 \item Build a Multi cloud interface to OpenStack
 \item Build a Multi cloud interface to AWS
@@ -225,6 +243,11 @@ This section will change and be updated throughout the semester
   directory called {\em secchi}. The program is called secchi.py, the
   description is in README.md. It uses cmd5 for creating a command
   shell that can load the data and analyze it. 
+\item[Evaluation Assignment 1:] Create two a REST service for Big Data
+  with swagger and provide a python implementation from the exported
+  python code to provide real functionality.
+\item[Evaluation Assignment 2:] Develop cloudmesh extensions to access
+  cloud services from 2 different providers.
 \end{description}
 
 \subsubsection{Chameleon Cloud and OpenStack}
@@ -240,8 +263,12 @@ This section will change and be updated throughout the semester
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{E616 \& I524: Advanced Cloud Computing and Big Data}
+\chapter{E616/I524: Advanced Cloud Computing}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+This class is also known under the name {\em I524 Big Data
+Applications and Open Source Software.}
+ 
 
 We present the syllabus for the E616 course taught at Indiana
 University that uses in part the material presented in this
@@ -249,7 +276,7 @@ document. The information includes the section or chapter number, the
 name of the chapter or section, and the timeframe when it is
 recommended to work through the material and the page number where to
 find the material in this document. Please note that we will update
-the document throughout the semester thus, page numbers will change. 
+the document throughout the semester thus, page numbers will change.
 
 \section{Course Description }
 
@@ -321,7 +348,6 @@ Info Online:
 \end{itemize}
 
 
-
 \section{Covered Topics}
 
 The class will cover a number of topics as part of tracks that are
@@ -330,24 +356,24 @@ a graduate course level the communication track has already been
 covered elsewhere, we made sure we also include it here in case you dod
 not yet have such experiences.
 
-\begin{description}
+\begin{itemize}
 
-\item[Introduction] Overview and status of cloud computing
-\item[Cloud and Big Data Applications] Introduction to the Apache Big
-  Data Satck. Selective presentation of the members of the Big Data
+\item {\bf Introduction} Overview and status of cloud computing
+\item {\bf Cloud and Big Data Applications} Introduction to the Apache Big
+  Data Stack. Selective presentation of the members of the Big Data
   set
-\item[New Cloud Big Data Application Technologies] Students will
+\item {\bf New Cloud Big Data Application Technologies} Students will
   explore the Apache Web page and report on them.
-\item[DevOps] Introduction to DevOps with Dokerfile and ansible
-\item[Virtual Machines] Introduction to OpenStack
-\item[Containers] Introduction to Container technology
-\item[Advanced Containers] Building clusters with containers.
-\item[Cloud 3.0] Microservices, Events, Functions  
-\item[Project] Delivery of a reproducible substantial student project
+\item {\bf DevOps} Introduction to DevOps with Dokerfile and ansible
+\item {\bf Virtual Machines} Introduction to OpenStack
+\item {\bf Containers} Introduction to Container technology
+\item {\bf Advanced Containers} Building clusters with containers.
+\item {\bf Cloud 3.0} Microservices, Events, Functions  
+\item {\bf Project} Delivery of a reproducible substantial student project
   (you are allowed to substantially enhance a project that you started
   in E516)
 
-\end{description}
+\end{itemize}
 
 \section{Student learning outcomes}
 
@@ -372,8 +398,8 @@ When students complete this course, they should be able to:
 \begin{tabular}{lr}
 Grade Item	  & Percentage\\
 \hline
-Assignments	  & 30\% \\
-Final Project	& 60\% \\
+Assignments	  & 40\% \\
+Final Project	& 50\% \\
 Participation	& 10\% \\
 \hline
 \end{tabular}
@@ -382,16 +408,40 @@ Participation	& 10\% \\
 
 \section{Representative bibliography}
 
-\begin{itemize}
+\begin{enumerate}
 \item Cloud Computing for Science and Engineering By Ian Foster and
   Dennis
   B. Gannon\URL{https://mitpress.mit.edu/books/cloud-computing-science-and-engineering}
 \item	Machine to machine protocols \url{https://en.wikipedia.org/wiki/MQTT}
 \item	Cloud software systems \url{http://hpc-abds.org/kaleidoscope/}
-\item	GE Software defined machines \url{https://www.ge.com/digital/blog/software-defined-machines}
 \item	Software Defined Networks \url{https://en.wikipedia.org/wiki/Software-defined_networking}
 \item	There are a huge number of other web resources
-\end{itemize}
+
+\item (This document) {\bf Handbook of Clouds and Big Data}, Gregor von Laszewski,
+  Geoffrey C. Fox, and Judy Qiu, Fall 2017,
+  \url{https://tinyurl.com/cloudmesh/vonLaszewski-i523-v1.pdf}
+
+\item {\bf Use Cases in Big Data Software and
+  Analytics Vol. 1}, Gregor von Laszewski, Fall 2017,
+  \url{https://tinyurl.com/cloudmesh/vonLaszewski-i523-v1.pdf}
+
+\item {\bf Use Cases in Big Data Software and
+  Analytics Vol. 2}, Gregor von Laszewski, Fall 2017, \url{https://tinyurl.com/cloudmesh/vonLaszewski-i523-v2.pdf}
+
+\item  {\bf Use Cases in Big Data Software and
+  Analytics Vol. 3}, Gregor von Laszewski, Fall 2017, \url{https://tinyurl.com/cloudmesh/vonLaszewski-i523-v3.pdf}
+
+\item (Draft) {\bf Big Data Software Vol 1.}, Gregor von Laszewski, Spring 2017,
+\url{https://github.com/cloudmesh/sp17-i524/blob/master/paper1/proceedings.pdf}
+
+\item (Draft) {\bf Big Data Software Vol 2.}, Gregor von Laszewski, Spring 2017,
+\URL{https://github.com/cloudmesh/sp17-i524/blob/master/paper2/proceedings.pdf}
+
+\item (Draft) {\bf Big Data Projects}, Gregor von Laszewski, Spring 2017,
+\URL{https://github.com/cloudmesh/sp17-i524/blob/master/project/projects.pdf}
+
+\end{enumerate}
+
 
 \section{Lectures and Lecture Material}
 
@@ -509,6 +559,7 @@ This section will change and be updated throughout the semester
 \begin{itemize}
 \item OpenAPI REST Service
 \item OpenAPI Big Data Services
+\item Deploy cloud services with Ansible
 \end{itemize}
 
 \subsubsection{Chameleon Cloud and OpenStack}
@@ -526,20 +577,19 @@ This section will change and be updated throughout the semester
 \section{Containers}
 
 \begin{itemize}
-\item Docker 
-\item Docker File
-\item Doker Swarm
-\item Kubernetes
+\item Introduction to Docker - Docker File
+\item Advanced Docker - Doker Swarm -  Kubernetes
+\item Deploy cloud services with Doker/Kubernetes
+\item Build a Raspberry Pi based Kubernetes cluster with 5 nodes
+  (residential student can work on this in teams up to 5 students, we
+  have 50 Raspberry Pi's)
+\item Benchmark a 144 node Raspberry PI kubernetes cluster after
+  deploying it (open class work)
 \end{itemize}
 
-\subsection{Cluster Track}
-
-%\WHERE{\NO}{c:pi-cluster-form-factor}{Month 1}
-\begin{itemize}
-\item Build a Kubernetes Cluster
-\end{itemize}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{E222: Intelligent Systems Engineering II}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Course Description}
 
@@ -549,7 +599,7 @@ systems and their use in desktop and cloud solutions.
 
 \section{Course pre-requisites}
 
-One programming language, Intelligent Systems Engeneering I or equivalent
+One programming language, Intelligent Systems Engineering I or equivalent
 
 \section{Course Registration}
 
@@ -589,7 +639,7 @@ The topics covered in thie class include.
 \item Introduction to Hadoop: Theory and Practice - Run Hadoop in a
   container; run hadoop on a futuresystems cluster
 \item Edge Computing: Theory and Practice - Integrate Sensordata into
-  CLoud Services via REST and MQTT
+  Cloud Services via REST and MQTT
 \end{itemize}
 
 
@@ -605,8 +655,8 @@ When students complete this course, they should be able to:
 \item Understand research challenges and important issues with
   Software Defined Systems.
 \item	Have advanced skills in teamwork with peers.
-\item Have theoretical and parctical knowledge about REST, Clouds,
-  COntainers, and Edge Computing.
+\item Have theoretical and practical knowledge about REST, Clouds,
+  Containers, and Edge Computing.
 \end{itemize}
 
 
@@ -615,22 +665,46 @@ When students complete this course, they should be able to:
 \begin{tabular}{lr}
   Grade Item	  & Percentage\\
   \hline
-  Assignments	and Exams  & TBD\% proposed: 40\%\\
-  Final Project	& TBD\% proposed: 50\%\\
-  Participation	& TBD\% proposed: 10\%\\
+  Assignments	  & 40\%\\
+  Final Project	& 50\%\\
+  Participation	& 10\%\\
   \hline
 \end{tabular}
 
 
 \section{Representative bibliography}
 
-\begin{itemize}
+\begin{enumerate}
+
 \item Cloud Computing for Science and Engineering By Ian Foster and
   Dennis
   B. Gannon\URL{https://mitpress.mit.edu/books/cloud-computing-science-and-engineering}
-\item The four volumes
-\end{itemize}
 
+
+\item (This document) {\bf Handbook of Clouds and Big Data}, Gregor von Laszewski,
+  Geoffrey C. Fox, and Judy Qiu, Fall 2017,
+  \url{https://tinyurl.com/cloudmesh/vonLaszewski-i523-v1.pdf}
+
+\item {\bf Use Cases in Big Data Software and
+  Analytics Vol. 1}, Gregor von Laszewski, Fall 2017,
+  \url{https://tinyurl.com/cloudmesh/vonLaszewski-i523-v1.pdf}
+
+\item {\bf Use Cases in Big Data Software and
+  Analytics Vol. 2}, Gregor von Laszewski, Fall 2017, \url{https://tinyurl.com/cloudmesh/vonLaszewski-i523-v2.pdf}
+
+\item  {\bf Use Cases in Big Data Software and
+  Analytics Vol. 3}, Gregor von Laszewski, Fall 2017, \url{https://tinyurl.com/cloudmesh/vonLaszewski-i523-v3.pdf}
+
+\item (Draft) {\bf Big Data Software Vol 1.}, Gregor von Laszewski, Spring 2017,
+\url{https://github.com/cloudmesh/sp17-i524/blob/master/paper1/proceedings.pdf}
+
+\item (Draft) {\bf Big Data Software Vol 2.}, Gregor von Laszewski, Spring 2017,
+\URL{https://github.com/cloudmesh/sp17-i524/blob/master/paper2/proceedings.pdf}
+
+\item (Draft) {\bf Big Data Projects}, Gregor von Laszewski, Spring 2017,
+\URL{https://github.com/cloudmesh/sp17-i524/blob/master/project/projects.pdf}
+
+\end{enumerate}
 
 \section{Lectures and Lecture Material}
 
@@ -682,6 +756,7 @@ When students complete this course, they should be able to:
 \WHERE{\NO}{C:github}{Week 3}
 \WHERE{\NO}{S:virtual-box}{Week 3}
 
+\begin{comment}
 \begin{description}
 \item[Evaluation Experiment 1:] Create a virtual machine and take a
   photo with your laptop or computer and the virtual box running on
@@ -689,6 +764,8 @@ When students complete this course, they should be able to:
   screen mode at the same time the operating system you run. We
   recommend yo use Ubuntu.
 \end{description}
+\end{comment}
+
 
 \subsubsection{Python}
 
@@ -705,10 +782,6 @@ When students complete this course, they should be able to:
 \item Build a program to create VMs on an OpenStack cloud.
 \end{itemize}
 
-\begin{description}
-\item[Evaluation Experiment 1:] TBD.
-\end{description}
-
 
 
 \section{Containers}
@@ -720,66 +793,49 @@ When students complete this course, they should be able to:
 \item Kubernetes
 \end{itemize}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Course Management at IU}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
 
-We describe briefly how we manage different classes and how to
-interact with us. 
+\begin{longtable}{p{3cm}p{11cm}}
+  \caption{Calendar} \\   
+  \toprule
+  Date & Activity \\
+  \midrule
+  \endfirsthead
+  \toprule
+  Date & Activity \\
+  \endhead
+  \hline
+  \multicolumn{2}{c}{Continued}\\   \bottomrule
+  \endfoot
+  \bottomrule
+  \endlastfoot
 
-\subsection{Communication and Use of CANVAS}
+  Jan 8, Mon & Class Begins\\
+  
+  Jan 15, Mon 9am & Setup communication pathways for the class. (1)
+  You must have created a github repository in our class repository.
+  (2) You must be in the class Piazza.  (3) Motivation: if we can not
+  communicate with you we can not conduct the class. Everyone must be
+  in piazza and github timely.  \\
 
-In the past we have found numerous limitations to CANVAS that makes it
-not possible for us to use it effectively for this class. Such
-limitations were not overcome even after consulting our professional
-course support team at IU although we spend days and weeks trying to
-fix the issues. We have been given the advice form IU to avoid using
-CANVAS for certain things and like to point out to you our much
-simpler approach:
+  Weekly & contribution to notebook.md \\
+  Weekly & contribution to piazza and/or the Handbook \\
 
-\begin{itemize}
-
-\item we use CANVAS notifications only for the initial class setup and
-  notify you how to gain access to piazza where all class discussions
-  take place;
-
-\item any discussion about grades is done in CANVAS;
-
-\item we will DELETE all e-mail send to us on personal e-mails. All
-  discussions need to take place either in private or in public posts
-  on piazza (other than grades which need to be send via CANVAS);
-
-\item TAs are strictly forbidden to answer any mail that is not send
-  via piazza;
-
-\item any post to piazza to a TA must be not done to the individual TA
-  but to {\em instructors};
-
-\end{itemize}
-
-\subsection{Online  and Office Hours}
-
-To support you we have established an open policy of sharing
-information not only as part of the class material, but also as part
-of how we conduct support. We establish the following principals:
-
-\begin{itemize}
-
-\item in case of doubt how to communicate address this early in class
-  and attend online hours;
-
-\item all office hours if not of personal nature are open office hours
-  meaning that any student in class can be joined by any member of the
-  class and  all meeting times are posted publicly.
-
-\item it is in your responsibility to attend in person classes and
-  online hours as we found that those that do get better grades. For
-  residential students participation is mandatory.
-
-\item instructors of this class will attempt within reason to find
-  suitable times for you to attend an online hour in case you are an
-  online student. Residential students can attend the class on Friday
-  and ask any question. 
-
-\end{itemize}
-
+  Jan 15, Mon & MLK Jr. Day. Good day to work on projects, computer setup \\
+  Jan 22, Mon 9am & Tutorial 1 \\
+  Feb 5,  Mon 9am & Tutorial 2 \\
+  Feb 26, Mon 9am & Paper 1 \\
+  Mar 5, Mon 9am & Project draft paper due without panelty \\
+  \hline
+  Spring Break &\\
+  Mar 11 - Mar 18.  & This is a good time to work ahead or catch up
+  with things. We strongly advise to use this time wisely. \\
+  \hline
+  Mar 16, Mon 9am & Project reports due without penalty \\
+  Mar 23, Mon 9am & Improvments to Projects and documents possible,
+  but substential work must have been done before to not encounter a
+  grade reduction \\
+  May 1 & Any paper submitted after May 1st will get an
+  incomplete and a grade reduction. \\
+\end{longtable}
+\end{comment}
