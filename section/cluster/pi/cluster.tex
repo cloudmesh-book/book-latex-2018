@@ -1,4 +1,7 @@
+\chapterimage{pi-cluster.jpg} % Chapter heading image
+
 \chapter{Pi Cluster Form Factor}\label{c:pi-cluster-form-factor}
+
 
 \section{NAS (1 Pi)}\label{nas-1-pi}
 
@@ -30,6 +33,8 @@ Pi Zeros via to be attached to a regular Raspberry PI 3 to simulate a
 small cluster.
 
 According to the Web Site it supports the following features:
+
+
 
 \begin{itemize}
 \item
@@ -92,25 +97,32 @@ fan has for an impact on the temperature.
 \URL{http://climbers.net/sbc/diy-raspberry-pi-3-cluster/}
 
 
-From the above Web page we find the following information:
+From the above Web page we find the following information as shown in
+Table \ref{F:pi-fan}. From the data in the table it is clear that we
+need to keep the Pi from throttling while being in a case by adding a
+fan as obvious from experiment No. 2.
 
-\begin{longtable}[]{@{}llllllll@{}}
-\toprule
+
+
+\begin{table}[htb]
+\caption{Temperature comparision of fan impact}\label{F:pi-fan}
+\bigskip
+\begin{tabular}{llllllll}
+\hline
 No. & Case & Fan & Direction & RPM & Idle & 100\% Load &
 Performance\tabularnewline
-\midrule
-\endhead
+\hline
 1 & no & no & - & - & 41.0C & 75.5C & OK (barely)\tabularnewline
 2 & yes & no & - & - & 45.0C & 82.5C & throttles\tabularnewline
 3 & yes & 5V & in & unkown & 37.9C & 74.5C & OK (barely)\tabularnewline
 4 & yes & 7V & in & 800 & 35.6C & 69.5C & OK\tabularnewline
 5 & yes & 12V & in & 1400 & 32.5C & 61.1C & OK\tabularnewline
 6 & yes & 7V & out & 800 & 34.5C & 66.4C & OK\tabularnewline
-\bottomrule
-\end{longtable}
+\hline
+\end{tabular}
+\end{table}
 
-From this table it is clear that we need to keep the Pi from throttling
-while being in a case by adding a fan as obvious from experiment No. 2.
+
 
 
 \section{Bitscope Case (40 Pi)}\label{bitscope-case-40-pi}
@@ -122,14 +134,14 @@ Figure b.1. The rack to place 10 of them is shown in Figure b.2.
 
 \begin{figure}
 \centering
-\includegraphics[width=0.5\textwidth]{04.jpg}
+\includegraphics[width=0.3\textwidth]{04.jpg}
 \caption{Bitscope blade for 4 Pi's.}
 \end{figure}
 
 
 \begin{figure}
 \centering
-\includegraphics[width=0.5\textwidth]{br40a.png}
+\includegraphics[width=0.3\textwidth]{br40a.png}
 \caption{40 Pi Blade rack.}
 \end{figure}
 
@@ -140,25 +152,29 @@ however as we can store 40 Pis in them and they can share the
 power-supply and reduce cabeling we think this case is quite interesting
 overall due to its price-point of \$20 per Pi.
 
+
+
 \section{Bitscope Cluster (144 Pi)}\label{bitscope-cluster-144-pi}
 
 Together with LANL a new cluster module that holds 144 Pis is developed.
-This sytem is targeted to be p{[}laced into a rack to create a large Pi
-cluster. The cost for such a module is about \$15K. Figure b.3 shows the
-module and Figure b.4 shows how multiple modules can be placed into a
+This sytem is targeted to be placed into a rack to create a large Pi
+cluster. The cost for such a module is about \$15K. Figure
+\ref{F:pi-mod-1} shows the
+module and Figure \ref{F:pi-mod-2} shows how multiple modules can be placed into a
 single rack.
 
 \begin{figure}
 \centering
 \includegraphics[width=0.5\textwidth]{cluster-module.png}
-\caption{Bitscope 144 cluster module.}
+\caption{Bitscope 144 cluster module.}\label{F:pi-mod-1}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=0.5\textwidth]{rack-overview.png}
-\caption{Rack placement of multiple Bitscope 144 cluster modules.}
+\caption{Rack placement of multiple Bitscope 144 cluster modules.}\label{F:pi-mod-2}
 \end{figure}
+
 
 
 
@@ -170,6 +186,8 @@ single rack.
 \URL{http://my.bitscope.com/store/?p=view\&i=item+7}
 \URL{http://www.newark.com/bitscope/bb04b/quattro-pi-board-raspberry-pi/dp/95Y0643}
 \URL{http://linuxgizmos.com/rpi-expansion-boards-support-up-to-40-pi-clusters/}
+
+
 
 \section{Build Your Own 5 Node Pi CLuster}
 
@@ -217,67 +235,85 @@ on github.
 
 \begin{table}[htb]
 
-
 \caption{Parts list for a Pi cluster, remember you need at least 3
   Raspberry Pis}\label{T:picluster-partslist}
 \bigskip
 
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{p{1cm}p{15cm}{p1cm}}
-\hline
-Price   &  Description & URL          \\
-\hline
-\hline
-\$29.99 & 
-Anker 60W 6-Port USB Wall Charger, PowerPort 6 for iPhone 7 / 6s /
-   Plus, iPad Pro / Air 2 / mini, Galaxy S7 / S6 / Edge /
-   Plus, Note 5 / 4, LG, Nexus, HTC and More  & 
-\href{https://www.amazon.com/Anker-6-Port-Charger-PowerPort-iPhone/dp/B00P933OJC/ref=pd\_sim\_107\_70?\_encoding=UTF8\&psc=1\&refRID=B1S6V5G0CTJ9NH5G0CRT}{link}      \\
-\$8.90  & 
-Cat 6 Ethernet Cable 1 ft White ( 6 Pack ) – Flat Internet Network
-   Cable – Jadaol Cat 6 Computer Cable short - Cat6 Ethernet
-   Patch Lan Cable With &
-\href{https://www.amazon.com/Cat-Ethernet-Cable-White-Pack/dp/B01IQWGI0O/ref=sr\_1\_1?s=electronics\&ie=UTF8\&qid=1513699717\&sr=1-1\&keywords=Cat+6+Ethernet+Cable+1+ft+White+\%28+6+Pack+\%29+\%E2\%80\%93+Flat+Internet+Network+Cable+\%E2\%80\%93+Jadaol+Cat+6+Computer+Cable+short+-+Cat6+Ethernet+Patch+Lan+Cable+With\%E2\%80\%A6}{link}  \\
 
-\$19.99 &  D-link 8-Port Unmanaged Gigabit Switch
-                       (GO-SW-8G)   & 
-\href{https://www.amazon.com/D-link-8-Port-Unmanaged-Gigabit-GO-SW-8G/dp/B008PC1MSO}{link}      \\
-\$10.49 &  SanDisk Ultra 32GB microSDHC UHS-I Card with
-   Adapter, Grey/Red, Standard Packaging
-   (SDSQUNC-032G-GN6MA)
-     & 
-\href{https://www.amazon.com/SanDisk-microSDHC-Standard-Packaging-SDSQUNC-032G-GN6MA/dp/B010Q57T02/ref=sr\_1\_10?s=pc\&rps=1\&ie=UTF8\&qid=1498443283\&sr=1-10\&refinements=p\_85:2470955011,p\_n\_feature\_two\_browse-bin:6518304011,p\_n\_feature\_keywords\_two\_browse-bin:5947557011}{link}       \\
-\$8.59  & Short USB Cable, OKRAY 10 Pack Colorful Micro
-   USB 2.0 Charging Data Sync Cable Cord for
-   Samsung, Android Phone and Tablet, Nexus, HTC,
-   Nokia, LG, Sony, Many Digital Cameras-0.66ft
-   (7.87 Inch) & 
-\href{https://www.amazon.com/OKRAY-Colorful-Charging-Samsung-Cameras-0-66ft/dp/B00R5GZJR6/ref=sr\_1\_6?s=pc\&ie=UTF8\&qid=1498447476\&sr=1-6\&keywords=micro+usb+cable+1ft}{link}         \\
-\$7.69    & 50 Pcs M2 x 20mm + 5mm Hex Hexagonal Threaded
-   Spacer Support
-     & 
-\href{https://www.amazon.com/20mm-Hexagonal-Threaded-Spacer-Support/dp/B00FH8AB8Q/ref=sr\_1\_9?s=industrial\&ie=UTF8\&qid=1513700337\&sr=1-9\&keywords=hex+spacers+m2+20mm}{link}         \\
-\$7.99  & Easycargo 15 pcs Raspberry Pi Heatsink Aluminum
-   + Copper + 3M 8810 thermal conductive adhesive
-   tape for cooling cooler Raspberry Pi 3, Pi 2,
-   Pi Model B+
-     & 
-\href{https://www.amazon.com/Easycargo-Raspberry-Heatsink-Aluminum-conductive/dp/B07217N5LS/ref=sr\_1\_3?s=industrial\&ie=UTF8\&qid=1513700498\&sr=1-3\&keywords=raspberry+pi+3}{link}    \\
-\$34.49 & Raspberry Pi 3 Model B Motherboard  (you need at least 3 of them)   & 
-\href{https://www.amazon.com/Raspberry-Pi-RASPBERRYPI3-MODB-1GB-Model-Motherboard/dp/B01CD5VC92}{link}    \\
-\$59.99 & 1TB drive   & \href{http://wdlabs.wd.com/products/wd-pidrive-berryboot-edition/}{link}    \\
-\$15.19 & 64GB flash  & \href{https://www.wdc.com/products/wdlabs/wd-pidrive-foundation-edition.html\#WD3750LMCW}{link} \\
-\$6.99  & HDMI Cable, Rankie 2-Pack 6FT Latest Standard
-   HDMI 2.0 HDTV Cable - Supports Ethernet, 3D, 4K
-   and Audio Return (Black) - R1108
-     & 
-\href{https://www.amazon.com/Cable-Rankie-2-Pack-Latest-Standard/dp/B00Z07XQ4A/ref=sr\_1\_6?s=wireless\&ie=UTF8\&qid=1513782649\&sr=1-6\&keywords=hdmi+cable+6ft}{link}         \\
-\$12.99  & AUKEY USB C Adapter, USB C to USB 3.0 Adapter
-   Aluminum 2 Pack for Samsung Note 8 S8 S8+,
-   Google Pixel 2 XL, MacBook Pro, Nexus 6P 5X, LG
-   G5 V20 (Gray)
-     & 
-\href{https://www.amazon.com/Cat-Ethernet-Cable-White-Pack/dp/B01IQWGI0O/ref=pd\_sim\_147\_2?\_encoding=UTF8\&psc=1\&refRID=FZZ7E36666EJPDTH7B6A}{link}     \\
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{rp{13cm}p{1cm}}
+  \hline
+  Price   &  Description & URL          \\
+  \hline
+  \hline
+  \$29.99 & 
+            Anker 60W 6-Port USB Wall Charger, PowerPort 6 for iPhone 7 / 6s /
+            Plus, iPad Pro / Air 2 / mini, Galaxy S7 / S6 / Edge /
+            Plus, Note 5 / 4, LG, Nexus, HTC and More  
+                         & 
+                           \href{https://www.amazon.com/Anker-6-Port-Charger-PowerPort-iPhone/dp/B00P933OJC/ref=pd\_sim\_107\_70?\_encoding=UTF8\&psc=1\&refRID=B1S6V5G0CTJ9NH5G0CRT}{link}
+  \\
+
+  \$8.90  & 
+            Cat 6 Ethernet Cable 1 ft White ( 6 Pack ) – Flat Internet Network
+            Cable – Jadaol Cat 6 Computer Cable short - Cat6 Ethernet
+            Patch Lan Cable With &
+                                   \href{https://www.amazon.com/Cat-Ethernet-Cable-White-Pack/dp/B01IQWGI0O/ref=sr\_1\_1?s=electronics\&ie=UTF8\&qid=1513699717\&sr=1-1\&keywords=Cat+6+Ethernet+Cable+1+ft+White+\%28+6+Pack+\%29+\%E2\%80\%93+Flat+Internet+Network+Cable+\%E2\%80\%93+Jadaol+Cat+6+Computer+Cable+short+-+Cat6+Ethernet+Patch+Lan+Cable+With\%E2\%80\%A6}{link}  \\
+
+  $^{(1)}$ \$19.99 &  D-link 8-Port Unmanaged Gigabit Switch
+            (GO-SW-8G)   & 
+                           \href{https://www.amazon.com/D-link-8-Port-Unmanaged-Gigabit-GO-SW-8G/dp/B008PC1MSO}{link}      \\
+
+
+  \$10.49 &  SanDisk Ultra 32GB microSDHC UHS-I Card with
+            Adapter, Grey/Red, Standard Packaging
+            (SDSQUNC-032G-GN6MA)
+                         & 
+                           \href{https://www.amazon.com/SanDisk-microSDHC-Standard-Packaging-SDSQUNC-032G-GN6MA/dp/B010Q57T02/ref=sr\_1\_10?s=pc\&rps=1\&ie=UTF8\&qid=1498443283\&sr=1-10\&refinements=p\_85:2470955011,p\_n\_feature\_two\_browse-bin:6518304011,p\_n\_feature\_keywords\_two\_browse-bin:5947557011}{link}       \\
+
+  \$8.59  & Short USB Cable, OKRAY 10 Pack Colorful Micro
+            USB 2.0 Charging Data Sync Cable Cord for
+            Samsung, Android Phone and Tablet, Nexus, HTC,
+            Nokia, LG, Sony, Many Digital Cameras-0.66ft
+            (7.87 Inch) & 
+                          \href{https://www.amazon.com/OKRAY-Colorful-Charging-Samsung-Cameras-0-66ft/dp/B00R5GZJR6/ref=sr\_1\_6?s=pc\&ie=UTF8\&qid=1498447476\&sr=1-6\&keywords=micro+usb+cable+1ft}{link}         \\
+
+
+  \$7.69    & 50 Pcs M2 x 20mm + 5mm Hex Hexagonal Threaded
+              Spacer Support
+                         & 
+                           \href{https://www.amazon.com/20mm-Hexagonal-Threaded-Spacer-Support/dp/B00FH8AB8Q/ref=sr\_1\_9?s=industrial\&ie=UTF8\&qid=1513700337\&sr=1-9\&keywords=hex+spacers+m2+20mm}{link}
+  \\
+
+  \$7.99  & Easycargo 15 pcs Raspberry Pi Heatsink Aluminum
+            + Copper + 3M 8810 thermal conductive adhesive
+            tape for cooling cooler Raspberry Pi 3, Pi 2,
+            Pi Model B+
+                         & 
+                           \href{https://www.amazon.com/Easycargo-Raspberry-Heatsink-Aluminum-conductive/dp/B07217N5LS/ref=sr\_1\_3?s=industrial\&ie=UTF8\&qid=1513700498\&sr=1-3\&keywords=raspberry+pi+3}{link}
+  \\
+
+  \$34.49 & Raspberry Pi 3 Model B Motherboard  (you need at least 3 of them)   & 
+                                                                                  \href{https://www.amazon.com/Raspberry-Pi-RASPBERRYPI3-MODB-1GB-Model-Motherboard/dp/B01CD5VC92}{link}
+  \\
+
+ $^{(2)}$ \$59.99 & 1TB drive   & \href{http://wdlabs.wd.com/products/wd-pidrive-berryboot-edition/}{link}    \\
+
+  \$15.19 & 64GB flash  & \href{https://www.wdc.com/products/wdlabs/wd-pidrive-foundation-edition.html\#WD3750LMCW}{link} \\
+
+  \$6.99  & HDMI Cable, Rankie 2-Pack 6FT Latest Standard
+            HDMI 2.0 HDTV Cable - Supports Ethernet, 3D, 4K
+            and Audio Return (Black) - R1108
+                         & 
+                           \href{https://www.amazon.com/Cable-Rankie-2-Pack-Latest-Standard/dp/B00Z07XQ4A/ref=sr\_1\_6?s=wireless\&ie=UTF8\&qid=1513782649\&sr=1-6\&keywords=hdmi+cable+6ft}{link}         \\
+
+  \$12.99  & AUKEY USB C Adapter, USB C to USB 3.0 Adapter
+             Aluminum 2 Pack for Samsung Note 8 S8 S8+,
+             Google Pixel 2 XL, MacBook Pro, Nexus 6P 5X, LG
+             G5 V20 (Gray)
+                         & 
+                           \href{https://www.amazon.com/Cat-Ethernet-Cable-White-Pack/dp/B01IQWGI0O/ref=pd\_sim\_147\_2?\_encoding=UTF8\&psc=1\&refRID=FZZ7E36666EJPDTH7B6A}{link}     \\
+
 \$19.19 & For Raspberry Pi 3 2 TFT LCD Display, kuman 3.5
    Inch 480x320 TFT Touch Screen Monitor for
    Raspberry Pi Model B B+ A+ A Module SPI
@@ -287,7 +323,13 @@ Cat 6 Ethernet Cable 1 ft White ( 6 Pack ) – Flat Internet Network
 \hline
 \end{tabular}
 }
+\smallskip
+
+{\footnotesize (1) items were replaced with similar item}\\
+{\footnotesize (2) item was not avialable}
+
 \end{table}
+
 
 
 \subsection{Exercise}\label{E:cluster-pi}
@@ -297,8 +339,8 @@ In case you do not have access to multiple PIs conduct the Single Pi experiment.
 \section{Single Pi}
 
 
-You have been presented in Section \ref
-S:cluster-case-with-cooling-5-pi} with a table that compares
+You have been presented in Section
+\ref{S:cluster-case-with-cooling-5-pi} with a table that compares
 tempreatures. Your task is to identify issues with the experiment and
 the table.  Furthermore we like you to rerun a temperature experiment
 in the entire class.
@@ -318,24 +360,32 @@ in the entire class.
 
 Exercises:
 
-\begin{description}
 
-\item[Exercise.Pi.Single.1.] What temperature measurement is missing from the
+\begin{exercise}
+\label{E:Exercise.Pi.Single.1} What temperature measurement is missing from the
   table. 
+\end{exercise}
 
-\item[Exercise.Pi.Single.2.] How would you create an experiment under {\en load}.
+\begin{exercise}
+\label{E:.Pi.Single.2} How would you create an experiment under {\em load}.
+\end{exercise}
 
-\item[Exercise.Pi.Single.3.] How would you create an experiment to which all
+\begin{exercise}
+\label{E:.Pi.Single.3} How would you create an experiment to which all
   students in different classes could contribute their values? Can the
   cloud be used?
+\end{exercise}
 
-\item[Exercise.Pi.Single.4.] Collect the information from all class members
+\begin{exercise}
+\label{E:.Pi.Single.4} Collect the information from all class members
   using cloud services.
+\end{exercise}
 
-\item[Exercise.Pi.Single.5.] Identify who to use the VPN server so you
+\begin{exercise}
+\label{E:.Pi.Single.5} Identify who to use the VPN server so you
   can use your Laptop instead of a TV or computer monitor. Write a tutorial.
+\end{exercise}
 
-\end{description}
 
 Discussion of this assignment is to be executed openly in
 class. Points will be issued only once the class agrees upon an
@@ -359,29 +409,34 @@ that find issues and improve deployment tutorials will receive points.
 TA's will also replicate these steps to identify a fair evaluation
 without bias.
 
-\begin{description}
 
-\item[Exercise.Pi.Cluster.Build.] Build groups of up to 5 people. Make a
+\begin{exercise}
+
+\label{E:.Pi.Cluster.Build} Build groups of up to 5 people. Make a
   plan on what needs to be done to build the cluster and develop a
   schedule. Include in this plan (a) obtaining the material the
   hardware build, (b) the installation of the operating system (c) the
   testing of the system (d) familiarizing with the OS.
+\end{exercise}
 
-\item[Exercise.Pi.Cluster.DockerSwarm.] Install a docker Swarm cluster on your
+\begin{exercise}
+
+\label{E:.Pi.Cluster.DockerSwarm} Install a docker Swarm cluster on your
   PI. Develop a tutorial in markdown and mind plagiarism. Contribute your tutorial
   to this document to get acknowledged and credit. Work with others in
   class to coordinate a single tutorial.
+\end{exercise}
 
-\item[Exercise.Pi.Cluster.Kubernetes.] Install a kubernetes cluster on your
+\begin{exercise}
+
+\label{E:.Pi.Cluster.Kubernetes} Install a kubernetes cluster on your
   PI. Develop a tutorial in markdown and mind plagiarism. Contribute your tutorial
   to this document to get acknowledged and credit. Work with others in
   class to coordinate a single tutorial.
   
-\item[Exercise.Pi.Cluster.Spark.] Install a spark cluster on your
+\label{E:.Pi.Cluster.Spark} Install a spark cluster on your
   PI. Develop a tutorial in markdown and mind plagiarism. Contribute your tutorial
   to this document to get acknowledged and credit. Work with others in
   class to coordinate a single tutorial.
-  
-
-\end{description}
+\end{exercise}
 

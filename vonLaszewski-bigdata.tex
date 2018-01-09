@@ -5,6 +5,13 @@
 
 % \includeonly{part/container}
 
+\includeonly{%
+section/cluster/pi/cluster}%
+%section/cluster/pi/container,%
+%part/container,%
+%part/dev}
+
+
 \newcommand{\TITLE}{Handbook of \\ Clouds and Big Data}
 \newcommand{\SUBTITLE}{Theory and Practice}
 \newcommand{\AUTHOR}{Gregor von Laszewski\\Geoffrey C. Fox\\Judy Qiu}
@@ -12,7 +19,7 @@
 
 \input{format/book-format}
 
-\graphicspath{{./}{images/}{notebooks/opencv/}{notebooks/}{notebooks/facedetection/}{notebooks/fingerprint}}
+\graphicspath{{./}{images/}{notebooks/opencv/}{notebooks/}{notebooks/facedetection/}{notebooks/fingerprint}{section/cluster/pi/images/}}
 
 \chapterimage{water.png} % Chapter heading image
 
@@ -62,9 +69,9 @@
 \include{section/preface/spring2018}
 \include{section/preface/overview}
 \include{section/preface/project}
-\include{section/preface/assignments-sp18}
 \include{section/doc/piazza}
 
+%\include{section/preface/assignments-sp18}
 %\include{section/preface/piazza}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -129,7 +136,10 @@
 
 %\include{notebooks/scikit-learn-k-means.tex}
 
-\part{TBD}
+\part{Draft Chapters}
+
+\input{section/cluster/pi/cluster}
+\include{section/cluster/pi/container}
 \include{part/container}
 
 \include{part/dev}
@@ -154,7 +164,9 @@
 \end{comment}
 
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapterimage{water.png} 
 \chapter*{Bibliography}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \addcontentsline{toc}{chapter}{\textcolor{ocre}{Bibliography}}

@@ -185,4 +185,6 @@ dest:
 	mkdir -p dest/section/preface
 	mkdir -p dest/section/prg
 	mkdir -p dest/section/theory
+	mkdir -p dest/section/cluster/pi
+	mkdir -p dest/section/cluster/pi/images
 
