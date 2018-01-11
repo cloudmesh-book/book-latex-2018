@@ -16,15 +16,20 @@ LATEX=pdflatex
 #LATEX=pydflatex -k
 
 
-
-single: dest
-	latexmk -jobname=$(FILE) $(FLAGS) -pvc -view=pdf single
-
 g: dest
 	latexmk -jobname=$(FILE) $(FLAGS) -pvc -view=pdf $(FILE)
 
 gg: dest
 	pdflatex -shell-escape $(FILE)
+
+pdflatex:
+	make -f gg
+
+google:
+	gdrive update 1Mdd_TJcbXurJYRpG2gKCVqWmbhvED2Mp dest/vonLaszewski-bigdata.pdf
+
+single: dest
+	latexmk -jobname=$(FILE) $(FLAGS) -pvc -view=pdf single
 
 c: dest
 	latexmk -jobname=$(FILE) $(FLAGS) -pvc -view=pdf chameleon
@@ -110,12 +115,13 @@ clean:
 view:
 	open $(FILE).pdf
 
-publish:
-	cp dest/$(FILE).pdf .
-	cp $(FILE).pdf ~/github/laszewsk/papers/
-	cd ~/github/laszewsk/papers; git add $(FILE).pdf; git commit -m "update $(FILE)"; git push
-	cp $(FILE).pdf ~/github/laszewsk/laszewski.github.io/papers/$(FILE).pdf
-	cd ~/github/laszewsk/laszewski.github.io/papers; git add $(FILE).pdf; git commit -m "update $(FILE)"; git push
+publish: google
+	echo pdf document copied to google
+#	cp dest/$(FILE).pdf .
+#	cp $(FILE).pdf ~/github/laszewsk/papers/
+#	cd ~/github/laszewsk/papers; git add $(FILE).pdf; git commit -m "update $(FILE)"; git push
+#	cp $(FILE).pdf ~/github/laszewsk/laszewski.github.io/papers/$(FILE).pdf
+#	cd ~/github/laszewsk/laszewski.github.io/papers; git add $(FILE).pdf; git commit -m "update $(FILE)"; git push
 
 size:
 	du -c -h dest/vonLaszewski-bigdata.pdf | fgrep total > dest/size.txt

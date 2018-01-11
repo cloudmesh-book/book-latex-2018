@@ -19,3 +19,5 @@
 
 \RequirePackage[hyphens]{url}
 \LoadClass[11pt,felqn]{book}
+
+\usepackage{comment}
