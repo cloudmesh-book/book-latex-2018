@@ -1056,6 +1056,39 @@ optional arguments:
   -t, --typesetting   Only typeset
 \end{verbatim}
 
+\subsection{latex2html}
+
+\LaTeX~ can be exported to html with the the tool
+\verb|latex2html|. It is available 
+
+for Linux and OSX. More information can be found at
+
+\URL{http://mirrors.ctan.org/support/latex2html/manual.pdf}
+
+\URL{www.latex2html.org}
+
+\begin{WARNING}
+At this time the inastallation via brew install of latex2html is
+broken. Instead one needs to conduct the insalation from source.
+
+\begin{verbatim}
+brew install latex2html
+\end{verbatim}
+\end{WARNING} 
+
+The instalation from source can be conducted as follows
+
+\begin{verbatim}
+brew install libpng
+wget https://github.com/latex2html/latex2html/archive/master.zip
+uzip master.zip 
+cd latex2html-master/
+configure
+make
+make check
+sudo make install
+\end{verbatim}
+
 \subsection{References}
 \index{Latex!other documentation}
 
