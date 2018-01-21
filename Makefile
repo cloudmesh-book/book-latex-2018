@@ -29,7 +29,7 @@ google:
 	gdrive update 1Mdd_TJcbXurJYRpG2gKCVqWmbhvED2Mp dest/vonLaszewski-bigdata.pdf
 
 single: dest
-	latexmk -jobname=$(FILE) $(FLAGS) -pvc -view=pdf single
+	latexmk -jobname=single $(FLAGS) -pvc -view=pdf single
 
 c: dest
 	latexmk -jobname=$(FILE) $(FLAGS) -pvc -view=pdf chameleon
