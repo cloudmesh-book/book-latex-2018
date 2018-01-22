@@ -1,9 +1,11 @@
 
 \chapter{REST}
 
+\section{Overview}
+
 This section is accompanied by a video about REST.
 
-\video{REST}{12:36}{REST}{https://youtu.be/xjFuA6q5N_U}
+\video{REST}{36:02}{REST}{https://youtu.be/xjFuA6q5N_U}
 
 REST stands for {\bf RE}presentational {\bf S}tate {\bf
   T}ransfer. REST is an architecture style for designing networked
@@ -63,24 +65,624 @@ illustrating how to implement them with HTTP methods.
 \end{description}
 
 Source:
-\url{https://en.wikipedia.org/wiki/Representational_state_transfer}
+\URL{https://en.wikipedia.org/wiki/Representational_state_transfer}
 
 
-Du to the structure that REST provides a number of tools have been
+Due to the structure that REST provides a number of tools have been
 created that manage the creation of the specification for rest
 services and their programming. We distinguish several different
 categories:
 
-(1) REST programming language support: the tools and services are
-targeting a particular programming language.
+\begin{description}
+\item[REST programming language support:] These tools and services are
+targeting a particular programming language. Such tools include Eve
+which we will explore in more detail.
+
+\item[REST documentation based tools:] These tools are primarily
+  focussing on documenting REST specifications. Such tools include Swagger.
+
+\item[REST design support tools:] These tools are used to support the
+  design process of developing REST services while abstracting on top
+  of the programming languages and define reusable specifications that
+  can be used to create clients and servers for particular
+  technology targets. Such tools include also swagger as additional
+  tools are available that can generate code from swagger specifications
+\end{description}
+
+\section{Eve}
+
+Next, we will focus on how to make a RESTful web service with Python
+Eve. Eve makes the creation of a REST implementation in python easy. 
 
 
-(3) REST documentation based tools that are primarily oriented towards
-documenting REST specifications.
+\URL{http://python-eve.org/}
 
-(2) REST design support: When abstracting the programming language out
-dfine reusable specifications that can be used to to create clients
-and servers for particular technology targets.
+\begin{WARNING}
+
+Although we do recommend Ubuntu 17.04, at this time there is a bug
+that forces us to use 16.04. Furthermore, we require you to follow the
+instructions on how to install pyenv and use it to set up your python
+environment. We recommend that you use either python 2.7.14 or 3.6.4.
+We do not recommend you to use anaconda as it is not suited for cloud
+computing but targets desktop computing. If you use pyenv you also
+avoid the issue of interfering with your system wide python
+install. We do recommend pyenv regardless if you use a virtual machine
+or are working directly on your operating system. After you have set
+up a proper python environment, make sure you have the newest version
+of pip installed with 
+
+\smallskip
+
+\begin{lstlisting}
+pip install pip -U
+\end{lstlisting}
+\end{WARNING}
+
+To install Eve, you can say 
+
+\begin{lstlisting}
+  $ pip install eve
+\end{lstlisting}
+
+As Eve also needs a backend database and as MongoDB is an obvious
+choice for this, we will also install MongoDB.  MongoDB is a Non-SQL
+database which helps to store light weight data easily.
+
+\subsection{Ubuntu}
+On Ubuntu you can install MongoDB as follows
+
+\begin{lstlisting}
+$ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5
+$ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/
+mongodb-org/3.6 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.6.list
+$ sudo apt-get update
+$ sudo apt-get install -y mongodb-org
+\end{lstlisting}
+% $
+
+\subsection{OSX}
+
+On OSX you can use the command
+
+\begin{lstlisting}
+brew update.
+brew install mongodb
+\end{lstlisting}
+
+After downloading Mongo, create the {\em db} directory. This is where
+the Mongo data files will live. You can create the directory in the
+default location and assure it has the right permissions. Make sure
+that the /data/db directory has the right permissions by running
+
+\subsection{Verification}
+
+In order to check the MongoDB installation, please run the following
+commands in one terminal:
+
+\begin{lstlisting}
+$ mkdir -p ~/data/db
+$ mongod --dbpath ~/data/db
+\end{lstlisting}
+
+In another terminal we try to connect to mongo and issue a mongo
+command to show the databases:
+
+\begin{lstlisting}
+$ mongo --host 127.0.0.1:27017
+$ show databases
+\end{lstlisting}
+
+If they execute without errors, you have successfully installed
+MongoDB. In order to stop the running database instance run the
+following command. simply CTRL-C the running mongod process
+
+\subsection{Building a simple REST Service}
+
+In this section we will focus on creating a simple rest service. To
+organize our work we will create the following directory:
+
+
+\begin{lstlisting}
+$ mkdir ~/cloudmesh/eve
+$ cd ~/cloudmesh/eve
+\end{lstlisting}
+
+As Eve needs a configuration and it is read in by default from the
+file \verb|settings.py| we place the following content in the file
+\verb|~/cloudmesh/eve/settings.py|:
+
+\begin{lstlisting}
+MONGO_HOST = 'localhost'
+MONGO_PORT = 27017
+MONGO_DBNAME = 'student_db'
+DOMAIN = {
+    'student': {
+        'schema': {
+            'firstname': {
+                'type': 'string'
+            },
+            'lastname': {
+                'type': 'string'
+            },
+            'school': {
+                'type': 'string'
+            },
+            'university': {
+                'type': 'string'
+            },
+            'email': {
+                'type': 'string',
+                 'unique': True
+            }
+        }
+    }
+}
+RESOURCE_METHODS = ['GET', 'POST']
+\end{lstlisting}
+
+The DOMAIN object specifies the format of a \verb|student| object that
+we are using as part of our REST service.  In addition we can specify
+\verb|RESOURCE_METHODS| which methods are activated for the REST
+service. This way the developer can restrict the available methods for
+a REST service. To pass along the specification for mongoDB, we simply
+specify the hostname, the port, as well as the database name.
+
+
+
+
+Thus our object will be
+
+Initially we need to create the python application to host the REST
+API and we will use CURL to do the GET and POST requests in this
+tutorial.
+
+\subsection{Creating REST Service}
+
+Create a file called \textbf{run.py} in the same directory where you
+placed the \textbf{settings.py} and add the following code.
+
+\begin{lstlisting}
+from eve import Eve
+app = Eve()
+
+if __name__ == '__main__':
+    app.run()
+\end{lstlisting}
+
+This is the minimal application which can host a REST
+application. Let's start our database server and the REST service.
+
+\subsection{Running REST Service}
+
+Let's say we'll use terminal 1 to run the python REST API.
+
+To start the rest service :
+\begin{lstlisting}
+$python run.py
+\end{lstlisting}
+
+\subsection{Running Database Server}
+
+Next in terminal 2, run the following command to start the database server
+\begin{lstlisting}
+$ mongod --dbpath=<BASE-PATH>/data/db/
+\end{lstlisting}
+
+For example :
+BASE-PATH can be replaced by any path you want. 
+\begin{lstlisting}
+$ mongod --dbpath=/home/john/e222/labs/lab1/data/db/
+\end{lstlisting}
+
+\subsection{Saving Data Using Curl}
+
+We can use the commandline to save the data in the database using the
+REST api. Here we use the endpoint we created as student in the schema
+as the entry point to the rest service. The data is being saved using
+JSON format.
+
+Run the following command in the terminal 3, this will save data in
+the database server.
+
+\begin{lstlisting}
+$ curl -H "Content-Type: application/json" -X POST -d 
+'{"firtname":"John","lastname":"Doe", "school" : "ISE",
+"university":"IUB", "email":"johndoe@iu.edu"}' http://127.0.0.1:5000/student/
+\end{lstlisting}
+
+\newline
+
+In order to check the database please run the following commands in Terminal 4,
+
+\begin{lstlisting}
+Run mongo client
+$ mongo
+Query the databse list
+$>show databases; (will display eve)  
+Select database
+$use eve  
+$ show tables # query the table names
+$ db.student.find().pretty()  # pretty will show the json in a clear way
+\end{lstlisting}
+
+\newline
+
+Here we specify the header using \textbf{H} tag saying we need the
+data to be saved using json format. And \textbf{X} tag says the HTTP
+protocol and here we use POST method. And the tag \textbf{d} specifies
+the data and make sure you use json format to enter the data. Finally,
+the REST api endpoint to which we must save data. This allows us to
+save the data in a table called \textbf{student} in MongoDB within a
+database called \textbf{eve}.
+
+\subsection{Retrieving Data Using Curl}
+
+Run the following command to retrieve the saved data :
+
+\begin{lstlisting}
+$ curl http://127.0.0.1:5000/student?firstname=John
+\end{lstlisting}
+
+
+
+\newline
+
+Here you can use any of the attributes in the saved object to call the
+value. If you just used the endpoint itself without specifying the
+attribute name, it will load all the saved objects.
+
+\section{Exercises}
+\subsection{Payloads}
+For this section we will ensure that the proper payloads are received
+upon a GET and DELETE request. For this to work ensure that you have a
+MongoDB up and running.
+\begin{lstlisting}
+$ sudo service mongod start
+\end{lstlisting}
+
+We will now create the proper script to launch the API and an
+appropriate configuration file. \\ The configuration file
+(settings.py) should have the following line.
+\begin{lstlisting}
+DOMAIN = {'people': {}}
+\end{lstlisting}
+
+In the same directory as the the configuration file you need to create
+a launch script i.e. run.py with the following lines.
+
+\begin{lstlisting}
+from eve import Eve
+app = Eve()
+
+if __name__ == '__main__':
+    app.run()
+\end{lstlisting}
+
+Now that you have an instance of MongoDB running and the two newly
+created .py files located in the same directory we can launch the
+API. In a new terminal navigate to the directory containing the
+configuration and launch files and execute the launch script. Again
+make sure this is in a seperate terminal so you can see what's
+happening as you make requests.
+
+\begin{lstlisting}
+$ python run.py
+* Running on http://127.0.0.1:5000/
+\end{lstlisting}
+
+Now consume the API with the following command and inspect the payload
+and identify what request was made.
+
+\begin{lstlisting}
+$ curl -i http://127.0.0.1:5000
+\end{lstlisting}
+
+Your payload should look like the one below, if your output isn't
+formatted like below try adding ?pretty=1 (curl -i
+http://127.0.0.1:5000?pretty=1) to the end of the curl command.
+\begin{lstlisting}
+HTTP/1.0 200 OK
+Content-Type: application/json
+Content-Length: 150
+Server: Eve/0.7.6 Werkzeug/0.11.15 Python/2.7.5
+Date: Wed, 17 Jan 2018 18:34:07 GMT
+
+{
+    "_links": {
+        "child": [
+            {
+                "href": "people",
+                "title": "people"
+            }
+        ]
+    }
+\end{lstlisting}
+
+Remember that the API entry points adhere to the HATEOAS principle,
+thus provide information regarding the resources accessible through
+the API. In this case how many child resources are available through
+our API?
+
+\vspace{5mm}
+
+If you said (1) you're correct! It's the one resource we defined in
+the configuration file 'people'. Now lets try to request people.
+
+\begin{lstlisting}
+$ curl -i http://127.0.0.1:5000/people
+\end{lstlisting}
+
+How does the payload change? What does the \_links section describe?
+Notice the difference between the payload when people is requested.
+
+\begin{lstlisting}
+{
+    "_items": [],
+    "_links": {
+        "self": {
+            "href": "people",
+            "title": "people"
+        },
+        "parent": {
+            "href": "/",
+            "title": "home"
+        }
+    },
+    "_meta": {
+        "max_results": 25,
+        "total": 0,
+        "page": 1
+    }
+}
+\end{lstlisting} 
+
+
+\begin{exercise}
+Write a RESTful service to determine a useful piece of information off
+of your computer i.e. disk space, memory, RAM, etc.
+\end{exercise}
+
+
+
+
+\section{Object Management with Eve and Evegenie}
+
+\url{http://python-eve.org/}
+
+Eve makes the creation of a REST implementation in python easy.  We
+will provide you with an implementation example that showcases that we
+can create REST services without writing a single line of code. The
+code for this is located at \url{https://github.com/cloudmesh/rest}
+
+This code will have a master branch but will also have a dev branch in
+which we will add gradually more objects. Objects in the dev branch will
+include:
+
+\begin{itemize}
+\item
+ virtual directories
+\item
+ virtual clusters
+\item
+ job sequences
+\item
+ inventories
+\end{itemize}
+
+You may want to check our active development work in the dev branch.
+However for the purpose of this class the master branch will be
+sufficient.
+
+\subsection{Installation}\label{installation}
+
+First we have to install mongodb. The installation will depend on your
+operating system. For the use of the rest service it is not important to
+integrate mongodb into the system upon reboot, which is focus of many
+online documents. However, for us it is better if we can start and stop
+the services explicitly for now.
+
+On ubuntu, you need to do the following steps:
+
+\begin{lstlisting}
+TO BE CONTRIBUTED BY THE STUDENTS OF THE CLASS AS HOMEWORK
+\end{lstlisting}
+
+On windows 10, you need to do the following steps:
+
+\begin{lstlisting}
+TO BE CONTRIBUTED BY THE STUDENTS OF THE CLASS AS HOMEWORK. If you
+elect Windows 10. YOu could be using the online documentation
+provided by starting it on Windows, or running it in a docker container.
+\end{lstlisting}
+
+On OSX you can use home-brew and install it with:
+
+\begin{lstlisting}
+brew update
+brew install mongodb
+\end{lstlisting}
+
+In future we may want to add ssl authentication in which case you
+may
+need to install it as follows:
+
+\begin{lstlisting}
+brew install mongodb --with-openssl
+\end{lstlisting}
+
+\subsection{Starting the service}\label{starting-the-service}
+
+We have provided a convenient Makefile that currently only works for
+OSX. It will be easy for you to adapt it to Linux. Certainly you can
+look at the targes in the makefile and replicate them one by one.
+Important targets are deploy and test.
+
+When using the makefile you can start the services with:
+
+\begin{lstlisting}
+make deploy
+\end{lstlisting}
+
+IT will start two terminals. IN one you will see the mongo service, in
+the other you will see the eve service. The eve service will take a file
+called sample.settings.py that is base on sample.json for the start of
+the eve service. The mongo servide is configured in sucj a way that it
+only accepts incoming connections from the local host which will be
+sufficient for our case. The mongo data is written into the
+\verb|$USER/.cloudmesh| directory, so make sure it exists.
+
+To test the services you can say:
+
+\begin{lstlisting}
+make test
+\end{lstlisting}
+
+YOu will se a number of json text been written to the screen.
+
+\section{Creating your own objects}\label{creating-your-own-objects}
+
+The example demonstrated how easy it is to create a mongodb and an eve
+rest service. Now lets use this example to create your own. FOr this we
+have modified a tool called evegenie to install it onto your system.
+
+The original documentation for evegenie is located at:
+
+\begin{itemize}
+\tightlist
+\item
+ \url{http://evegenie.readthedocs.io/en/latest/}
+\end{itemize}
+
+However, we have improved evegenie while providing a commandline tool
+based on it. The improved code is located at:
+
+\begin{itemize}
+\tightlist
+\item
+ \url{https://github.com/cloudmesh/evegenie}
+\end{itemize}
+
+You clone it and install on your system as follows:
+
+\begin{lstlisting}
+cd ~/github
+git clone https://github.com/cloudmesh/evegenie
+cd evegenie
+python setup.py install
+pip install .
+\end{lstlisting}
+
+This should install in your system evegenie. YOu can verify this by
+typing:
+
+\begin{lstlisting}
+which evegenie
+\end{lstlisting}
+
+If you see the path evegenie is installed. With evegenie installed its
+usaage is simple:
+
+\begin{lstlisting}
+$ evegenie
+
+Usage:
+  evegenie --help
+  evegenie FILENAME
+\end{lstlisting}
+
+It takes a json file as input and writes out a settings file for the use
+in eve. Lets assume the file is called sample.json, than the settings
+file will be called sample.settings.py. Having the evegenie programm
+will allow us to generate the settings files easily. You can include
+them into your project and leverage the Makefile targets to start the
+services in your project. In case you generate new objects, make sure
+you rerun evegenie, kill all previous windows in which you run eve and
+mongo and restart. In case of changes to objects that you have designed
+and run previously, you need to also delete the mongod database.
+
+\section{Towards cmd5 extensions to manage eve and
+mongo}\label{towards-cmd5-extensions-to-manage-eve-and-mongo}
+
+Naturally it is of advantage to have in cms administration commands to
+manage mongo and eve from cmd instead of targets in the Makefile. Hence,
+we \textbf{propose} that the class develops such an extension. We will
+create in the repository the extension called admin and hobe that
+students through collaborative work and pull requests complete such an
+admin command.
+
+The proposed command is located at:
+
+ \URL{https://github.com/cloudmesh/rest/blob/master/cloudmesh/ext/command/admin.py}
+
+
+It will be up to the class to implement such a command. Please
+coordinate with each other.
+
+The implementation based on what we provided in the Make file seems
+straight forward. A great extension is to load the objects definitions
+or eve e.g. settings.py not from the class, but forma place in
+.cloudmesh. I propose to place the file at:
+
+\begin{lstlisting}
+.cloudmesh/db/settings.py
+\end{lstlisting}
+
+the location of this file is used when the Service class is initialized
+with None. Prior to starting the service the file needs to be copied
+there. This could be achieved with a set command.
+
+\section{Responses}
+
+\URL{https://dzone.com/refcardz/rest-foundations-restful}
+
+
+\begin{comment}
+
+
+\begin{lstlisting}
+Code  Description
+
+200 OK. The request has successfully executed. Response depends upon the verb invoked.
+201 Created. The request has successfully executed and a new resource has been created in the process. The response body is either empty or contains a representation containing URIs for the resource created. The Location header in the response should point to the URI as well.
+202 Accepted. The request was valid and has been accepted but has not yet been processed. The response should include a URI to poll for status updates on the request. This allows asynchronous REST requests
+204 No Content. The request was successfully processed but the server did not have any response. The client should not update its display.
+Table 1 - Successful Client Requests
+
+
+Redirected Client Requests
+
+CODE  DESCRIPTION
+301 Moved Permanently. The requested resource is no longer located at the specified URL. The new Location should be returned in the response header. Only GET or HEAD requests should redirect to the new location. The client should update its bookmark if possible.
+302 Found. The requested resource has temporarily been found somewhere else. The temporary Location should be returned in the response header. Only GET or HEAD requests should redirect to the new location. The client need not update its bookmark as the resource may return to this URL.
+303 See Other. This response code has been reinterpreted by the W3C Technical Architecture Group (TAG) as a way of responding to a valid request for a non-network addressable resource. This is an important concept in the Semantic Web when we give URIs to people, concepts, organizations, etc. There is a distinction between resources that can be found on the Web and those that cannot. Clients can tell this difference if they get a 303 instead of 200. The redirected location will be reflected in the Location header of the response. This header will contain a reference to a document about the resource or perhaps some metadata about it.
+
+
+
+
+Invalid Client Requests
+
+Code  Description
+405 Method Not Allowed.
+406 Not Acceptable.
+410 Gone.
+411 Length Required.
+412 Precondition Failed.
+413 Entity Too Large.
+414 URI Too Long.
+415 Unsupported Media Type.
+417 Expectation Failed.
+
+
+Code  Description
+500 Internal Server Error.
+501 Not Implemented.
+503 Service Unavailable.
+
+\end{lstlisting}
+
+\end{comment}
+
+
 
 \section{Swagger}
 
@@ -93,7 +695,7 @@ Swagger itself has a number of tools which together build a framework
 for developing REST services for a variety of languages.
 
 
-\subsection{Tools}
+\section{Swagger Tools}
 
 The major Swagger tools of interest are:
 
@@ -134,240 +736,15 @@ develop Flask-RESTful services quickly.
 
 \URL{http://www.django-rest-framework.org/}
 
-\section{Eve}
+Django REST framework is a large toolkit to develop Web APIs. The
+developers of the framework provide the following reasons for using it:
+
+``(1) The Web browsable API is a huge usability win for your
+developers.  (2) Authentication policies including packages for
+OAuth1a and OAuth2.  (3) Serialization that supports both ORM and
+non-ORM data sources.  (4) Customizable all the way down - just use
+regular function-based views if you don't need the more powerful
+features.  (5) Extensive documentation, and great community support.
+(6) Used and trusted by internationally recognised companies including
+Mozilla, Red Hat, Heroku, and Eventbrite.''
 
-\url{http://python-eve.org/}
-
-Eve makes the creation of a REST implementation in python easy.  We
-will provide you with an implementation example that showcases that we
-can create REST services without writing a single line of code. The
-code for this is located at \url{https://github.com/cloudmesh/rest}
-
-This code will have a master branch but will also have a dev branch in
-which we will add gradually more objects. Objects in the dev branch will
-include:
-
-\begin{itemize}
-\tightlist
-\item
- virtual directories
-\item
- virtual clusters
-\item
- job sequences
-\item
- inventories
-\end{itemize}
-
-;You may want to check our active development work in the dev branch.
-However for the purpose of this class the master branch will be
-sufficient.
-
-\subsubsection{Installation}\label{installation}
-
-First we havt to install mongodb. The installation will depend on your
-operating system. For the use of the rest service it is not important to
-integrate mongodb into the system upon reboot, which is focus of many
-online documents. However, for us it is better if we can start and stop
-the services explicitly for now.
-
-On ubuntu, you need to do the following steps:
-
-\begin{verbatim}
-TO BE CONTRIBUTED BY THE STUDENTS OF THE CLASS AS HOMEWORK
-\end{verbatim}
-
-On windows 10, you need to do the following steps:
-
-\begin{verbatim}
-TO BE CONTRIBUTED BY THE STUDENTS OF THE CLASS AS HOMEWORK. If you
-elect Windows 10. YOu could be using the online documentation
-provided by starting it on Windows, or running it in a docker container.
-\end{verbatim}
-
-On OSX you can use home-brew and install it with:
-
-\begin{verbatim}
-brew update
-brew install mongodb
-\end{verbatim}
-
-In future we may want to add ssl authentication in which case you
-may
-need to install it as follows:
-
-\begin{verbatim}
-brew install mongodb --with-openssl
-\end{verbatim}
-
-\subsubsection{Starting the service}\label{starting-the-service}
-
-We have provided a convenient Makefile that currently only works for
-OSX. It will be easy for you to adapt it to Linux. Certainly you can
-look at the targes in the makefile and replicate them one by one.
-Important targets are deploy and test.
-
-When using the makefile you can start the services with:
-
-\begin{verbatim}
-make deploy
-\end{verbatim}
-
-IT will start two terminals. IN one you will see the mongo service, in
-the other you will see the eve service. The eve service will take a file
-called sample.settings.py that is base on sample.json for the start of
-the eve service. The mongo servide is configured in sucj a way that it
-only accepts incoming connections from the local host which will be
-sufficient for our case. The mongo data is written into the
-\verb|$USER/.cloudmesh| directory, so make sure it exists.
-
-To test the services you can say:
-
-\begin{verbatim}
-make test
-\end{verbatim}
-
-YOu will se a number of json text been written to the screen.
-
-\subsection{Creating your own objects}\label{creating-your-own-objects}
-
-The example demonstrated how easy it is to create a mongodb and an eve
-rest service. Now lets use this example to create your own. FOr this we
-have modified a tool called evegenie to install it onto your system.
-
-The original documentation for evegenie is located at:
-
-\begin{itemize}
-\tightlist
-\item
- \url{http://evegenie.readthedocs.io/en/latest/}
-\end{itemize}
-
-However, we have improved evegenie while providing a commandline tool
-based on it. The improved code is located at:
-
-\begin{itemize}
-\tightlist
-\item
- \url{https://github.com/cloudmesh/evegenie}
-\end{itemize}
-
-You clone it and install on your system as follows:
-
-\begin{verbatim}
-cd ~/github
-git clone https://github.com/cloudmesh/evegenie
-cd evegenie
-python setup.py install
-pip install .
-\end{verbatim}
-
-This should install in your system evegenie. YOu can verify this by
-typing:
-
-\begin{verbatim}
-which evegenie
-\end{verbatim}
-
-If you see the path evegenie is installed. With evegenie installed its
-usaage is simple:
-
-\begin{verbatim}
-$ evegenie
-
-Usage:
-  evegenie --help
-  evegenie FILENAME
-\end{verbatim}
-
-It takes a json file as input and writes out a settings file for the use
-in eve. Lets assume the file is called sample.json, than the settings
-file will be called sample.settings.py. Having the evegenie programm
-will allow us to generate the settings files easily. You can include
-them into your project and leverage the Makefile targets to start the
-services in your project. In case you generate new objects, make sure
-you rerun evegenie, kill all previous windows in which you run eve and
-mongo and restart. In case of changes to objects that you have designed
-and run previously, you need to also delete the mongod database.
-
-\subsection{Towards cmd5 extensions to manage eve and
-mongo}\label{towards-cmd5-extensions-to-manage-eve-and-mongo}
-
-Naturally it is of advantage to have in cms administration commands to
-manage mongo and eve from cmd instead of targets in the Makefile. Hence,
-we \textbf{propose} that the class develops such an extension. We will
-create in the repository the extension called admin and hobe that
-students through collaborative work and pull requests complete such an
-admin command.
-
-The proposed command is located at:
-
- \URL{https://github.com/cloudmesh/rest/blob/master/cloudmesh/ext/command/admin.py}
-
-
-It will be up to the class to implement such a command. Please
-coordinate with each other.
-
-The implementation based on what we provided in the Make file seems
-straight forward. A great extension is to load the objects definitions
-or eve e.g. settings.py not from the class, but forma place in
-.cloudmesh. I propose to place the file at:
-
-\begin{verbatim}
-.cloudmesh/db/settings.py
-\end{verbatim}
-
-the location of this file is used when the Service class is initialized
-with None. Prior to starting the service the file needs to be copied
-there. This could be achieved with a set command.
-
-\subsection{Responses}
-
-\URL{https://dzone.com/refcardz/rest-foundations-restful}
-
-
-\begin{comment}
-
-
-\begin{verbatim}
-Code	Description
-
-200	OK. The request has successfully executed. Response depends upon the verb invoked.
-201	Created. The request has successfully executed and a new resource has been created in the process. The response body is either empty or contains a representation containing URIs for the resource created. The Location header in the response should point to the URI as well.
-202	Accepted. The request was valid and has been accepted but has not yet been processed. The response should include a URI to poll for status updates on the request. This allows asynchronous REST requests
-204	No Content. The request was successfully processed but the server did not have any response. The client should not update its display.
-Table 1 - Successful Client Requests
-
-
-Redirected Client Requests
-
-CODE	DESCRIPTION
-301	Moved Permanently. The requested resource is no longer located at the specified URL. The new Location should be returned in the response header. Only GET or HEAD requests should redirect to the new location. The client should update its bookmark if possible.
-302	Found. The requested resource has temporarily been found somewhere else. The temporary Location should be returned in the response header. Only GET or HEAD requests should redirect to the new location. The client need not update its bookmark as the resource may return to this URL.
-303	See Other. This response code has been reinterpreted by the W3C Technical Architecture Group (TAG) as a way of responding to a valid request for a non-network addressable resource. This is an important concept in the Semantic Web when we give URIs to people, concepts, organizations, etc. There is a distinction between resources that can be found on the Web and those that cannot. Clients can tell this difference if they get a 303 instead of 200. The redirected location will be reflected in the Location header of the response. This header will contain a reference to a document about the resource or perhaps some metadata about it.
-
-
-
-
-Invalid Client Requests
-
-Code	Description
-405	Method Not Allowed.
-406	Not Acceptable.
-410	Gone.
-411	Length Required.
-412	Precondition Failed.
-413	Entity Too Large.
-414	URI Too Long.
-415	Unsupported Media Type.
-417	Expectation Failed.
-
-
-Code	Description
-500	Internal Server Error.
-501	Not Implemented.
-503	Service Unavailable.
-
-\end{verbatim}
-
-\end{comment}
