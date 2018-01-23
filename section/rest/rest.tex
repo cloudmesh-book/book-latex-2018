@@ -1,7 +1,7 @@
 
 \chapter{REST}
 
-\section{Overview}
+\section{Overview of REST}\label{s:rest-intro}
 
 This section is accompanied by a video about REST.
 
@@ -89,7 +89,7 @@ which we will explore in more detail.
   tools are available that can generate code from swagger specifications
 \end{description}
 
-\section{Eve}
+\section{Eve}\label{s:eve-intro}
 
 Next, we will focus on how to make a RESTful web service with Python
 Eve. Eve makes the creation of a REST implementation in python easy. 
@@ -160,8 +160,8 @@ In order to check the MongoDB installation, please run the following
 commands in one terminal:
 
 \begin{lstlisting}
-$ mkdir -p ~/data/db
-$ mongod --dbpath ~/data/db
+$ mkdir -p ~/cloudmesh/data/db
+$ mongod --dbpath ~/cloudmesh/data/db
 \end{lstlisting}
 
 In another terminal we try to connect to mongo and issue a mongo
@@ -227,19 +227,13 @@ service. This way the developer can restrict the available methods for
 a REST service. To pass along the specification for mongoDB, we simply
 specify the hostname, the port, as well as the database name.
 
-
-
-
-Thus our object will be
-
-Initially we need to create the python application to host the REST
-API and we will use CURL to do the GET and POST requests in this
-tutorial.
-
-\subsection{Creating REST Service}
-
-Create a file called \textbf{run.py} in the same directory where you
-placed the \textbf{settings.py} and add the following code.
+Now that we have defined the settings for our example service, we need
+to start it with a simple python program. We could name that program
+anything we like, but often it is called simply \verb|run.py|. This
+file is placed in the same directory where you placed the
+\textbf{settings.py}. In our case it is in the file
+\verb|~/cloudmesh/eve/settings.py| and contains the following python
+program:
 
 \begin{lstlisting}
 from eve import Eve
@@ -249,50 +243,62 @@ if __name__ == '__main__':
     app.run()
 \end{lstlisting}
 
-This is the minimal application which can host a REST
-application. Let's start our database server and the REST service.
+This is the most minimal application for Eve, that uses the
+settings.py file for its configuration. Naturally, if we were to
+change the configuration file and for example change the DOMAIN and
+its schema, we would naturally have to remove the database previously
+created and start the service new. This is especially important as
+during the development phase we may frequently change the schema and
+the database. Thus it is convenient to develop necessary cleaning
+actions as part of a Makefile which we leave as easy exercise for the
+students.
 
-\subsection{Running REST Service}
+Next, we need to start the services which can easily be achieved in a
+terminal while running the commands:
 
-Let's say we'll use terminal 1 to run the python REST API.
+Previously we started the mogoDB service as follows:
 
-To start the rest service :
 \begin{lstlisting}
-$python run.py
+$ mongod --dbpath=~/cloudmesh/data/db/
+\end{lstlisting}
+%$
+
+This is done in its own terminal, so we can observe the log messages easily.
+Next we start in another window the Eve service with 
+
+\begin{lstlisting}
+$ cd ~/cloudmesh/eve
+$ python run.py
 \end{lstlisting}
 
-\subsection{Running Database Server}
 
-Next in terminal 2, run the following command to start the database server
-\begin{lstlisting}
-$ mongod --dbpath=<BASE-PATH>/data/db/
-\end{lstlisting}
+\subsection{Interacting with the REST service}
 
-For example :
-BASE-PATH can be replaced by any path you want. 
-\begin{lstlisting}
-$ mongod --dbpath=/home/john/e222/labs/lab1/data/db/
-\end{lstlisting}
-
-\subsection{Saving Data Using Curl}
-
+Yet in another window, we can now interact with the REST service.
 We can use the commandline to save the data in the database using the
-REST api. Here we use the endpoint we created as student in the schema
-as the entry point to the rest service. The data is being saved using
-JSON format.
+REST api. The data can be retrieved in XML or in json format. Json is
+often more convenient for debugging as it is easier to read than XML.
 
-Run the following command in the terminal 3, this will save data in
-the database server.
+Naturally, we need first to put some data into the server. Lets assume
+we add the user Albert Zweistein.
 
 \begin{lstlisting}
 $ curl -H "Content-Type: application/json" -X POST -d 
-'{"firtname":"John","lastname":"Doe", "school" : "ISE",
-"university":"IUB", "email":"johndoe@iu.edu"}' http://127.0.0.1:5000/student/
+'{"firtname":"Albert","lastname":"Zweistein", "school" : "ISE",
+"university":"Indiana University", "email":"albert@iu.edu"}' http://127.0.0.1:5000/student/
 \end{lstlisting}
+%$
 
-\newline
+To achieve this, we need to specify the header using \textbf{H} tag
+saying we need the data to be saved using json format. And \textbf{X}
+tag says the HTTP protocol and here we use POST method. And the tag
+\textbf{d} specifies the data and make sure you use json format to
+enter the data. Finally, the REST api endpoint to which we must save
+data. This allows us to save the data in a table called
+\textbf{student} in MongoDB within a database called \textbf{eve}.
 
-In order to check the database please run the following commands in Terminal 4,
+In order to check if the entry was accepted in mongo and included in the
+server issue the following command sequence in another terminal:
 
 \begin{lstlisting}
 Run mongo client
@@ -304,82 +310,44 @@ $use eve
 $ show tables # query the table names
 $ db.student.find().pretty()  # pretty will show the json in a clear way
 \end{lstlisting}
+%$
 
-\newline
+Naturally this is not really necessary for A REST service such as eve
+as we show you how to gain access to the data via mongo while not
+using REST calls.   Instead while using REST we can simply retrieve
+the information with the help of a simple URI:
 
-Here we specify the header using \textbf{H} tag saying we need the
-data to be saved using json format. And \textbf{X} tag says the HTTP
-protocol and here we use POST method. And the tag \textbf{d} specifies
-the data and make sure you use json format to enter the data. Finally,
-the REST api endpoint to which we must save data. This allows us to
-save the data in a table called \textbf{student} in MongoDB within a
-database called \textbf{eve}.
-
-\subsection{Retrieving Data Using Curl}
-
-Run the following command to retrieve the saved data :
 
 \begin{lstlisting}
-$ curl http://127.0.0.1:5000/student?firstname=John
+$ curl http://127.0.0.1:5000/student?firstname=Albert
 \end{lstlisting}
+%$
 
+Naturally, you can formulate other URLs and query attributes that are
+passed along after the ? 
 
+This will now allow you to develop sophisticated REST services. We
+encourage you to inspect the documentation provided by Eve to showcase
+additional features that you could be using as part of your efforts.
 
-\newline
+Let us explore how to properly use additional REST API calls. We
+assume you have MongoDB up and running. To query the service itself we
+can use the URI on the Eve port
 
-Here you can use any of the attributes in the saved object to call the
-value. If you just used the endpoint itself without specifying the
-attribute name, it will load all the saved objects.
-
-\section{Exercises}
-\subsection{Payloads}
-For this section we will ensure that the proper payloads are received
-upon a GET and DELETE request. For this to work ensure that you have a
-MongoDB up and running.
-\begin{lstlisting}
-$ sudo service mongod start
-\end{lstlisting}
-
-We will now create the proper script to launch the API and an
-appropriate configuration file. \\ The configuration file
-(settings.py) should have the following line.
-\begin{lstlisting}
-DOMAIN = {'people': {}}
-\end{lstlisting}
-
-In the same directory as the the configuration file you need to create
-a launch script i.e. run.py with the following lines.
-
-\begin{lstlisting}
-from eve import Eve
-app = Eve()
-
-if __name__ == '__main__':
-    app.run()
-\end{lstlisting}
-
-Now that you have an instance of MongoDB running and the two newly
-created .py files located in the same directory we can launch the
-API. In a new terminal navigate to the directory containing the
-configuration and launch files and execute the launch script. Again
-make sure this is in a seperate terminal so you can see what's
-happening as you make requests.
-
-\begin{lstlisting}
-$ python run.py
-* Running on http://127.0.0.1:5000/
-\end{lstlisting}
-
-Now consume the API with the following command and inspect the payload
-and identify what request was made.
 
 \begin{lstlisting}
 $ curl -i http://127.0.0.1:5000
 \end{lstlisting}
+%$
 
-Your payload should look like the one below, if your output isn't
-formatted like below try adding ?pretty=1 (curl -i
-http://127.0.0.1:5000?pretty=1) to the end of the curl command.
+Your payload should look like the one below, if your output is not
+formatted like below try adding \verb|?pretty=1|
+
+\begin{lstlisting}
+$ curl -i http://127.0.0.1:5000?pretty=1
+\end{lstlisting}
+%$
+
 \begin{lstlisting}
 HTTP/1.0 200 OK
 Content-Type: application/json
@@ -398,22 +366,44 @@ Date: Wed, 17 Jan 2018 18:34:07 GMT
     }
 \end{lstlisting}
 
-Remember that the API entry points adhere to the HATEOAS principle,
-thus provide information regarding the resources accessible through
-the API. In this case how many child resources are available through
+Remember that the API entry points include additional information such
+as links and a child, and href.
+
+
+\begin{exercise}
+What is the meining and purpose of links, child, and href
+\end{exercise}
+
+\begin{exercise}
+In this case how many child resources are available through
 our API?
+\end{exercise}
 
-\vspace{5mm}
+\begin{exercise}
+Develop a REST service with Eve and start and stop it
+\end{exercise}
 
-If you said (1) you're correct! It's the one resource we defined in
-the configuration file 'people'. Now lets try to request people.
+\begin{exercise}
+Define curl calls to store data into the service and retrive it.
+\end{exercise}
 
+\begin{exercise}
+Write a Makefile and in it a target clean that cleans the data
+base. Develop additional targets such as start and stop, that start
+and stop the mongoDB but also the Eve REST service
+\end{exercise}
+
+
+\begin{exercise}
+Issue the command
 \begin{lstlisting}
 $ curl -i http://127.0.0.1:5000/people
 \end{lstlisting}
+%$
 
-How does the payload change? What does the \_links section describe?
-Notice the difference between the payload when people is requested.
+What does the \verb|_links| section describe?
+
+What does the \verb|_items| section describe?
 
 \begin{lstlisting}
 {
@@ -435,6 +425,7 @@ Notice the difference between the payload when people is requested.
     }
 }
 \end{lstlisting} 
+\end{exercise}
 
 
 \begin{exercise}
@@ -743,7 +734,7 @@ developers of the framework provide the following reasons for using it:
 developers.  (2) Authentication policies including packages for
 OAuth1a and OAuth2.  (3) Serialization that supports both ORM and
 non-ORM data sources.  (4) Customizable all the way down - just use
-regular function-based views if you don't need the more powerful
+regular function-based views if you do not need the more powerful
 features.  (5) Extensive documentation, and great community support.
 (6) Used and trusted by internationally recognised companies including
 Mozilla, Red Hat, Heroku, and Eventbrite.''
