@@ -10,36 +10,47 @@ This section is accompanied by a video about REST.
 REST stands for {\bf RE}presentational {\bf S}tate {\bf
   T}ransfer. REST is an architecture style for designing networked
 applications. It is based on stateless, client-server, cacheable
-communications protocol. Although not based on http, in most cases,
-the HTTP protocol is used. In contrast to what some others write or
-say, REST is not a \emph{standard}. RESTful applications use HTTP
-requests to (a) post data while creating and/or updating it, (b) read
-data while making queries, and (c) delete data.
+communications protocol. In contrast to what some others write or say,
+REST is not a \emph{standard}. Although not based on http, in most
+cases, the HTTP protocol is used. In that case, RESTful applications
+use HTTP requests to (a) post data while creating and/or updating it,
+(b) read data while making queries, and (c) delete data.
 
-\url{https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm}
+REST was first introduced in a thesis from Fielding:
 
-Hence REST uses HTTP for the four CRUD operations:
+\URL{https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm}
+
+Hence REST can use HTTP for the four CRUD operations:
 
 \begin{itemize}
-\item  {\bf C}reate 
-\item  {\bf R}ead
-\item  {\bf U}pdate
-\item  {\bf D}elete
+\item  {\bf C}reate resources
+\item  {\bf R}ead resources
+\item  {\bf U}pdate resources
+\item  {\bf D}elete resources
 \end{itemize}
 
-As part of the HTTP protocol we have methods such as GET, PUT, POST, and
-DELETE. These methods can than be used to implement a REST service. As
-REST introduces collections and items we need to implement the CRUD
-functions for them. The semantics is explained in the Table
-illustrating how to implement them with HTTP methods.
+As part of the HTTP protocol we have methods such as GET, PUT, POST,
+and DELETE. These methods can than be used to implement a REST
+service. This is not surprising as the HTTP protocol was explicitly
+designed to support these operations. As REST introduces collections
+and items we need to implement the CRUD functions for them.  We
+distinguish single resources  and collection of resources.  The
+semantics for accessing them is explained next illustrating how to
+implement them with HTTP methods (see
+\url{https://en.wikipedia.org/wiki/Representational_state_transfer}).
 
-\begin{description}
 
-\item[http://.../resources/] ~\\
+\subsection{Collection of Resources}
 
-    \begin{description} 
+Let us assume the following URI identifies a collection of resources
+
+\verb|http://.../resources/|
+
+than we need to implement the following CRUD methods:
+
+\begin{description} 
     \item[GET] List the URIs and perhaps other details of the
-      collection’s members
+      collections members
     \item[PUT] Replace the entire collection with another collection.
     \item[POST] Create a new entry in the collection. The new entry’s
       URI is assigned automatically and is usually returned by the
@@ -47,30 +58,36 @@ illustrating how to implement them with HTTP methods.
     \item[DELETE] Delete the entire collection.
 \end{description} 
 
-\item[http://.../resources/item42] ~\\
+
+\subsection{Single Resource}
+
+Let us assume the following URI identifies a single resource in a
+collection of resources
+
+\verb|http://.../resources/item42|
+
+than we need to implement the following CRUD methods:
 
     \begin{description} 
 
     \item[GET] Retrieve a representation of the addressed member of
-      the collection, expressed in an appropriate Internet media type.
+      the collection, expressed in an appropriate internet media type.
 
     \item[PUST] Replace the addressed member of the collection, or if
       it does not exist, create it.
 
     \item[POST] Not generally used. Treat the addressed member as a
-      collection in its own right and create a new entry within it
+      collection in its own right and create a new entry within it.
                                
-\item[DELETE] Delete the addressed member of the collection. 
+    \item[DELETE] Delete the addressed member of the collection. 
 \end{description} 
-\end{description}
 
-Source:
-\URL{https://en.wikipedia.org/wiki/Representational_state_transfer}
+ 
+\subsection{REST Tool Classification}
 
-
-Due to the structure that REST provides a number of tools have been
-created that manage the creation of the specification for rest
-services and their programming. We distinguish several different
+Due to the well defined structure that REST provides a number of tools
+have been created that manage the creation of the specification for
+rest services and their programming. We distinguish several different
 categories:
 
 \begin{description}
@@ -79,21 +96,23 @@ targeting a particular programming language. Such tools include Eve
 which we will explore in more detail.
 
 \item[REST documentation based tools:] These tools are primarily
-  focussing on documenting REST specifications. Such tools include Swagger.
+  focussing on documenting REST specifications. Such tools include
+  Swagger, which we will explore in more detail.
 
 \item[REST design support tools:] These tools are used to support the
   design process of developing REST services while abstracting on top
   of the programming languages and define reusable specifications that
-  can be used to create clients and servers for particular
-  technology targets. Such tools include also swagger as additional
-  tools are available that can generate code from swagger specifications
+  can be used to create clients and servers for particular technology
+  targets. Such tools include also swagger as additional tools are
+  available that can generate code from swagger specifications, which
+  we will explore in more detail.
 \end{description}
 
 \section{Eve}\label{s:eve-intro}
 
 Next, we will focus on how to make a RESTful web service with Python
-Eve. Eve makes the creation of a REST implementation in python easy. 
-
+Eve. Eve makes the creation of a REST implementation in python
+easy. More information about Eve can be found at:
 
 \URL{http://python-eve.org/}
 
@@ -124,11 +143,11 @@ To install Eve, you can say
   $ pip install eve
 \end{lstlisting}
 
-As Eve also needs a backend database and as MongoDB is an obvious
-choice for this, we will also install MongoDB.  MongoDB is a Non-SQL
+As Eve also needs a backend database, and as MongoDB is an obvious
+choice for this, we will have to first install MongoDB.  MongoDB is a Non-SQL
 database which helps to store light weight data easily.
 
-\subsection{Ubuntu}
+\subsection{Ubuntu install of MongoDB}
 On Ubuntu you can install MongoDB as follows
 
 \begin{lstlisting}
@@ -140,7 +159,7 @@ $ sudo apt-get install -y mongodb-org
 \end{lstlisting}
 % $
 
-\subsection{OSX}
+\subsection{OSX install of MongoDB}
 
 On OSX you can use the command
 
@@ -149,6 +168,24 @@ brew update.
 brew install mongodb
 \end{lstlisting}
 
+\subsection{Windows 10 Installation of MongoDB}
+
+\begin{exercise}
+
+A student or student group of this class are invited to discuss on
+piazza on how to install mongoDB on Windows 10 and come up with an
+easy installation solution. Naturally we have the same 2 different ways
+on how to run mongo. In user space or in the system. As we want to
+make sure your computer stays secure. the solution must have an easy
+way on how to shut down the Mongo services.
+
+An enhancement of this task would be to integrate this function into
+cloudmesh cmd5 with a command {\em mongo} that allows for easily
+starting and stopping the service from {\em cms}.
+\end{exercise}
+
+
+\subsection{Database Location}
 After downloading Mongo, create the {\em db} directory. This is where
 the Mongo data files will live. You can create the directory in the
 default location and assure it has the right permissions. Make sure
@@ -301,20 +338,23 @@ In order to check if the entry was accepted in mongo and included in the
 server issue the following command sequence in another terminal:
 
 \begin{lstlisting}
-Run mongo client
 $ mongo
-Query the databse list
-$>show databases; (will display eve)  
-Select database
-$use eve  
-$ show tables # query the table names
-$ db.student.find().pretty()  # pretty will show the json in a clear way
+\end{lstlisting}
+% $ 
+
+Now you can query mongo directly with its shell interface
+
+\begin{lstlisting}
+> show databases; (will display eve)  
+> use student_db  
+> show tables # query the table names
+> db.student.find().pretty()  # pretty will show the json in a clear way
 \end{lstlisting}
 %$
 
 Naturally this is not really necessary for A REST service such as eve
-as we show you how to gain access to the data via mongo while not
-using REST calls.   Instead while using REST we can simply retrieve
+as we show you next how to gain access to the data via mongo while
+using REST calls. We can simply retrieve
 the information with the help of a simple URI:
 
 
@@ -370,8 +410,16 @@ Remember that the API entry points include additional information such
 as links and a child, and href.
 
 
+
 \begin{exercise}
-What is the meining and purpose of links, child, and href
+Set up a python environment that works for your platform. Provide
+explicit reasons why anaconda and other prepackaged python versions
+have issues for cloud related activities. When may you use anaconda
+and when should you not use anaconda. Why would you want to use pyenv?
+\end{exercise}
+
+\begin{exercise}
+What is the meaning and purpose of links, child, and href
 \end{exercise}
 
 \begin{exercise}
