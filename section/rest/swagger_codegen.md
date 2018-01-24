@@ -1,20 +1,23 @@
-Example of Using OpenAPI 2.0 and Swagger Codegen to Define and Develop a REST Service
-=====================================================================================
-**This example assumes you have been familiar with the [concept of REST service, OpenAPI and Swagger](link to the section).**
+# REST Services Code Generation with Swagger
 
-We will use a simple example to demonstrate the process of developing a REST service with Swagger/OpenAPI 2.0
-specification and related tools. The general steps are:
-1. Define the REST service conforming to Swagger/OpenAPI 2.0 specification. It's a YAML document file with
-basics of the REST service defined, e.g., what resources it has and what actions are supported.
-2. Use Swagger Codegen to generate the server side stub code. Fill in the actual implementation of the
+
+In this section we are discussing how to use OpenAPI 2.0 and Swagger Codegen to define and develop a REST Service. 
+
+We assumee you have been familiar with the concept of REST service, OpenAPI and Swagger as discussed in Section ??.
+
+
+We will use a simple example to demonstrate the process of developing a REST service with Swagger/OpenAPI 2.0 specification and the tools related to is. The general steps are:
+
+* Step 1. Define the REST service conforming to Swagger/OpenAPI 2.0 specification. It is a YAML document file with the basics of the REST service defined, e.g., what resources it has and what actions are supported.
+* Step 2. Use Swagger Codegen to generate the server side stub code. Fill in the actual implementation of the
 business logic portion in the code.
-3. Install the server side code and run it. The service will then be available.
-4. Generate client side code. Develop code to call the REST service. Install and run to verify.
+* Step 3. Install the server side code and run it. The service will then be available.
+* Step 4. Generate client side code. Develop code to call the REST service. Install and run to verify.
 
 Step 1: Define Your REST Service
 --------------------------------
 In this example we define a simple REST service that returns the hosting server's basic CPU info. The example
-specification in yaml is as the following:
+specification in yaml is as follows:
 
 ```yamlex
   swagger: "2.0"
