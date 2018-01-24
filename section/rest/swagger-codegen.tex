@@ -1,32 +1,32 @@
-\chapter{REST Services Code Generation with
-Swagger}
+\chapterimage{rest.png} 
+
+\chapter{REST Service Generation with
+Swagger} \label{c:swagger-codegen}
 
 In this section we are discussing how to use OpenAPI 2.0 and Swagger
 Codegen to define and develop a REST Service.
 
-We assumee you have been familiar with the concept of REST service,
-OpenAPI and Swagger as discussed in Section ??.
+We assume you have been familiar with the concept of REST service,
+OpenAPI and Swagger as discussed in Section
+\ref{s:managing-custom-python-installs}.
 
 We will use a simple example to demonstrate the process of developing a
 REST service with Swagger/OpenAPI 2.0 specification and the tools
 related to is. The general steps are:
 
 \begin{itemize}
-\item
-  Step 1. Define the REST service conforming to Swagger/OpenAPI 2.0
-  specification. It is a YAML document file with the basics of the REST
-  service defined, e.g., what resources it has and what actions are
-  supported.
-\item
-  Step 2. Use Swagger Codegen to generate the server side stub code.
-  Fill in the actual implementation of the business logic portion in the
-  code.
-\item
-  Step 3. Install the server side code and run it. The service will then
-  be available.
-\item
-  Step 4. Generate client side code. Develop code to call the REST
-  service. Install and run to verify.
+\item Step 1 (Section \ref{s:step-1-define-your-rest-service}). Define
+  the REST service conforming to Swagger/OpenAPI 2.0 specification. It
+  is a YAML document file with the basics of the REST service defined,
+  e.g., what resources it has and what actions are supported.
+\item Step 2 (Section \ref{s:step-2-swagger-code-gen}). Use Swagger
+  Codegen to generate the server side stub code.  Fill in the actual
+  implementation of the business logic portion in the code.
+\item Step 3 (Section \ref{s:step-3-swagger-codegen}). Install the
+  server side code and run it. The service will then be available.
+\item Step 4 (Section \ref{s:step-4-swagger-codegen}). Generate client
+  side code. Develop code to call the REST service. Install and run to
+  verify.
 \end{itemize}
 
 \section{Step 1: Define Your REST  Service}
@@ -80,7 +80,7 @@ follows:
 
 
 \section{Step 2: Server Side Stub Code Generation and
-Implementation}\label{step-2-server-side-stub-code-generation-and-implementation}
+Implementation}\label{s:step-2-swagger-code-gen}
 
 With the REST service having been defined, we can now generate the
 server side stub code easily.
@@ -119,7 +119,7 @@ java -jar swagger-codegen-cli.jar generate \
 In the specified directory under \emph{flaskConnexion} you will find the
 generated python flask code, with python 2 compatibility. It is best to
 place the swagger code under the directory \textasciitilde{}/cloudmesh
-to have a location wher you can easily find it. If you want to use
+to have a location where you can easily find it. If you want to use
 python 3 make sure to chose the appropriate option. To switch between
 python 2 and python 3 we recommend that you use pyenv as discussed in
 our python section.
@@ -155,7 +155,7 @@ would like your REST call to be really doing. In reality this could be
 some call to a backend database or datastore; a call to another API; or
 even calling another REST service from another location. In this example
 we simply retrieve the cpu model information from the hosting server
-through a simpl python call to illustrate this principle. Thus you can
+through a simple python call to illustrate this principle. Thus you can
 define the following code:
 
 \begin{lstlisting}
@@ -197,7 +197,7 @@ It is best \emph{not} to include the definition of
 \texttt{get\_processor\_name()} in the same file as you see the
 definition of \texttt{cpu\_get()}. The reason for this is that in case
 you need to regenerate the code, your modified code will naturally be
-overwritten. Thus, to minimize the changes, we do recommend to maintaine
+overwritten. Thus, to minimize the changes, we do recommend to maintain
 that portion in a different filename and import the function as to keep
 the modifications small.
 
@@ -205,14 +205,14 @@ At this step we have completed the server side code development.
 
 
 \section{Step 3: Install and Run the REST
-Service:}\label{step-3-install-and-run-the-rest-service}
+Service:}\label{s:step-3-swagger-codegen}
 
 Now we can install and run the REST service. It is strongly recommended
 that you run this in a pyenv or a virtualenv environment.
 
 \subsection{Start a virtualenv:}\label{start-a-virtualenv}
 
-In case you are not using pyenv, please use virtual env as follwos:
+In case you are not using pyenv, please use virtual env as follows:
 
 \begin{lstlisting}
 virtualenv RESTServer
@@ -274,7 +274,7 @@ Assignment: How would you verify that your service works with a
 \texttt{curl} call?
 
 \section{Step 4: Generate Client Side Code and
-Verify}\label{step-4-generate-client-side-code-and-verify}
+Verify}\label{s:step-4-swagger-codegen}
 
 In addition to the server side code swagger can also create a client
 side code.
@@ -373,7 +373,7 @@ case please make changes on the API definition accordingly, e.g., the
 \begin{exercise}
   In Section \ref{s:step-1-define-your-rest-service}, we introduced a
   schema. The question relates to \$ref: what is the meaning of the
-  \$ref. Discuss on piazza, come up with a stduent answer in class.
+  \$ref. Discuss on piazza, come up with a student answer in class.
 \end{exercise}
 
 \begin{exercise}
