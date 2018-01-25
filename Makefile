@@ -132,6 +132,7 @@ watch:
 	latexmk -pvc -view=pdf ${FILE}
 
 dest:
+	mkdir -p dest/format
 	mkdir -p dest/notebooks
 	mkdir -p dest/notebooks/dask
 	mkdir -p dest/notebooks/facedetection
@@ -184,12 +185,14 @@ dest:
 	mkdir -p dest/section/icloud/assignment/exercise7/code-base
 	mkdir -p dest/section/icloud/assignment/exercise7/code-base/input
 	mkdir -p dest/section/icloud/assignment/exercise7/code-base/simplepagerank
+
 	mkdir -p dest/section/icloud/assignment/exercise8
 	mkdir -p dest/section/icloud/course
 	mkdir -p dest/section/iot
 	mkdir -p dest/section/new
 	mkdir -p dest/section/preface
 	mkdir -p dest/section/prg
+	mkdir -p dest/section/rest
 	mkdir -p dest/section/theory
 	mkdir -p dest/section/cluster/pi
 	mkdir -p dest/section/cluster/pi/images
