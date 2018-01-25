@@ -116,7 +116,7 @@ You can configure certain behaviours when creating a SwaggerClient. Here is a sa
 """
 from bravado.client import SwaggerClient, SwaggerFormat
 
-my_super_duper_format = SwaggerFormat(...)
+mysuperformat = SwaggerFormat(...)
 
 config = {
     # === bravado config ===
