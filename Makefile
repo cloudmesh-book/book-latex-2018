@@ -169,6 +169,7 @@ dest:
 	mkdir -p dest/section/intro
 	mkdir -p dest/section/faas
 	mkdir -p dest/section/git
+	mkdir -p dest/section/help
 	mkdir -p dest/section/i524
 	mkdir -p dest/section/icloud
 	mkdir -p dest/section/icloud/assignment
