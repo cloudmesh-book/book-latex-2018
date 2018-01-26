@@ -1,0 +1,424 @@
+\chapterimage{rest.png} 
+
+\chapter{REST Service Generation with
+Swagger} \label{c:swagger-codegen}
+
+In this section we are discussing how to use OpenAPI 2.0 and Swagger
+Codegen to define and develop a REST Service.
+
+We assume you have been familiar with the concept of REST service,
+OpenAPI and Swagger as discussed in Section
+\ref{s:managing-custom-python-installs}.
+
+We will use a simple example to demonstrate the process of developing a
+REST service with Swagger/OpenAPI 2.0 specification and the tools
+related to is. The general steps are:
+
+\begin{itemize}
+\item Step 1 (Section \ref{s:step-1-define-your-rest-service}). Define
+  the REST service conforming to Swagger/OpenAPI 2.0 specification. It
+  is a YAML document file with the basics of the REST service defined,
+  e.g., what resources it has and what actions are supported.
+\item Step 2 (Section \ref{s:step-2-swagger-code-gen}). Use Swagger
+  Codegen to generate the server side stub code.  Fill in the actual
+  implementation of the business logic portion in the code.
+\item Step 3 (Section \ref{s:step-3-swagger-codegen}). Install the
+  server side code and run it. The service will then be available.
+\item Step 4 (Section \ref{s:step-4-swagger-codegen}). Generate client
+  side code. Develop code to call the REST service. Install and run to
+  verify.
+\end{itemize}
+
+\section{Step 1: Define Your REST  Service}
+\label{s:step-1-define-your-rest-service}
+
+In this example we define a simple REST service that returns the hosting
+server's basic CPU info. The example specification in yaml is as
+follows:
+
+\begin{lstlisting}
+  swagger: "2.0"
+  info: 
+    version: "0.0.1"
+    title: "cpuinfo"
+    description: "A simple service to get cpuinfo as an example of using swagger-2.0 specification and codegen"
+    termsOfService: "http://swagger.io/terms/"
+    contact: 
+      name: "Cloudmesh REST Service Example"
+    license: 
+      name: "Apache"
+  host: "localhost:8080"
+  basePath: "/api"
+  schemes: 
+    - "http"
+  consumes: 
+    - "application/json"
+  produces: 
+    - "application/json"
+  paths: 
+    /cpu:
+      get: 
+        description: "Returns cpu information of the hosting server"
+        produces: 
+          - "application/json"
+        responses: 
+          "200":
+            description: "CPU info"
+            schema: 
+              $ref: "#/definitions/CPU"
+
+  definitions:
+    CPU:
+      type: "object"
+      required: 
+        - "model"
+      properties: 
+        model:
+          type: "string"
+\end{lstlisting}
+% $
+
+
+\section{Step 2: Server Side Stub Code Generation and
+Implementation}\label{s:step-2-swagger-code-gen}
+
+With the REST service having been defined, we can now generate the
+server side stub code easily.
+
+\subsection{Setup the Codegen
+Environment}\label{setup-the-codegen-environment}
+
+You will need to \href{https://swagger.io/docs/swagger-tools/}{install
+the Swagger Codegen tool} if not yet done so.
+
+For the current stable release, the \texttt{.jar} file can be downloaded
+from
+\href{https://oss.sonatype.org/content/repositories/releases/io/swagger/swagger-codegen-cli/2.2.1/swagger-codegen-cli-2.2.1.jar}{this
+link}.
+
+Also make sure Java 7 or 8 is installed in your system. To have a well
+defined location we recommend that you place the code in the directory
+\texttt{\textasciitilde{}/cloudmesh}. In this directory you will also
+place the \texttt{cpu.yaml} file.
+
+\subsection{Generate Server Stub
+Code}\label{generate-server-stub-code}
+
+After you have the codegen tool ready, and with Java 7 or 8 installed in
+your system, you can run the following to generate the server side stub
+code:
+
+\begin{lstlisting}
+java -jar swagger-codegen-cli.jar generate \
+    -i ~/cloudmesh/cpu.yaml \
+    -l python-flask \
+    -o ~/cloudmesh/swagger_example/server/cpu/flaskConnexion \
+    -D supportPython2=true
+\end{lstlisting}
+
+In the specified directory under \emph{flaskConnexion} you will find the
+generated python flask code, with python 2 compatibility. It is best to
+place the swagger code under the directory \textasciitilde{}/cloudmesh
+to have a location where you can easily find it. If you want to use
+python 3 make sure to chose the appropriate option. To switch between
+python 2 and python 3 we recommend that you use pyenv as discussed in
+our python section.
+
+\subsection{Fill in the actual
+implementation}\label{s:swagger-codegen-implementation}
+
+Under the \emph{flaskConnecxion} directory, you will find a
+\emph{swagger\_server} directory, under which you will find directories
+with \emph{models} defined and \emph{controllers} code stub resides. The
+models code are generated from the definition in Step 1. On the
+controller code though, we will need to fill in the actual
+implementation. You may see a \texttt{default\_controller.py} file under
+the \emph{controllers} directory in which the resource and action is
+defined but yet to be implemented. In our example, you will find such a
+function definition which we list next:
+
+\begin{lstlisting}
+def cpu_get():  # noqa: E501
+    """cpu_get
+
+    Returns cpu info of the hosting server # noqa: E501
+
+
+    :rtype: CPU
+    """
+    return 'do some magic!'
+\end{lstlisting}
+
+Please note the \texttt{do\ some\ magic!} string at the return of the
+function. This ought to be replaced with actual implementation what you
+would like your REST call to be really doing. In reality this could be
+some call to a backend database or datastore; a call to another API; or
+even calling another REST service from another location. In this example
+we simply retrieve the cpu model information from the hosting server
+through a simple python call to illustrate this principle. Thus you can
+define the following code:
+
+\begin{lstlisting}
+import os, platform, subprocess, re
+
+def get_processor_name():
+    if platform.system() == "Windows":
+        return platform.processor()
+    elif platform.system() == "Darwin":
+        command = "/usr/sbin/sysctl -n machdep.cpu.brand_string"
+        return subprocess.check_output(command, shell=True).strip()
+    elif platform.system() == "Linux":
+        command = "cat /proc/cpuinfo"
+        all_info = subprocess.check_output(command, shell=True).strip()
+        for line in all_info.split("\n"):
+            if "model name" in line:
+                return re.sub(".*model name.*:", "", line, 1)
+    return "cannot find cpuinfo"
+\end{lstlisting}
+
+And then change the \textbf{cpu\_get()} function to the following:
+
+\begin{lstlisting}
+def cpu_get():  # noqa: E501
+    """cpu_get
+
+    Returns cpu info of the hosting server # noqa: E501
+
+
+    :rtype: CPU
+    """
+    return CPU(get_processor_name())
+\end{lstlisting}
+
+Plese note we are returning a CPU object as defined in the API and later
+generated by the codegen tool in the \emph{models} directory.
+
+It is best \emph{not} to include the definition of
+\texttt{get\_processor\_name()} in the same file as you see the
+definition of \texttt{cpu\_get()}. The reason for this is that in case
+you need to regenerate the code, your modified code will naturally be
+overwritten. Thus, to minimize the changes, we do recommend to maintain
+that portion in a different filename and import the function as to keep
+the modifications small.
+
+At this step we have completed the server side code development.
+
+
+\section{Step 3: Install and Run the REST
+Service:}\label{s:step-3-swagger-codegen}
+
+Now we can install and run the REST service. It is strongly recommended
+that you run this in a pyenv or a virtualenv environment.
+
+\subsection{Start a virtualenv:}\label{start-a-virtualenv}
+
+In case you are not using pyenv, please use virtual env as follows:
+
+\begin{lstlisting}
+virtualenv RESTServer
+source RESTServer/bin/activate
+\end{lstlisting}
+
+\subsection{Make sure you have the latest
+pip:}\label{make-sure-you-have-the-latest-pip}
+
+\begin{lstlisting}
+pip install -U pip
+\end{lstlisting}
+
+\subsection{Install the requirements of the server side
+code:}\label{install-the-requirements-of-the-server-side-code}
+
+\begin{lstlisting}
+cd ~/cloudmesh/swagger_example/server/cpu/flaskConnexion
+pip install -r requirements.txt
+\end{lstlisting}
+
+\subsection{Install the server side code
+package:}\label{install-the-server-side-code-package}
+
+Under the same directory, run:
+
+\begin{lstlisting}
+python setup.py install
+\end{lstlisting}
+
+\subsection{Run the service}\label{run-the-service}
+
+Under the same directory:
+
+\begin{lstlisting}
+python -m swagger_server
+\end{lstlisting}
+
+You should see a message like this:
+
+\begin{lstlisting}
+* Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+\end{lstlisting}
+
+\subsection{Verify the service using a web
+browser:}\label{verify-the-service-using-a-web-browser}
+
+Open a web browser and visit:
+
+\begin{itemize}
+\tightlist
+\item
+  http://localhost:8080/api/cpu
+\end{itemize}
+
+to see if it returns a json object with cpu model info in it.
+
+Assignment: How would you verify that your service works with a
+\texttt{curl} call?
+
+\section{Step 4: Generate Client Side Code and
+Verify}\label{s:step-4-swagger-codegen}
+
+In addition to the server side code swagger can also create a client
+side code.
+
+\subsection{Client side code
+generation:}\label{client-side-code-generation}
+
+Generate the client side code in a similar fashion as we did for the
+server side code:
+
+\begin{lstlisting}
+java -jar swagger-codegen-cli.jar generate \
+    -i ~/cloudmesh/cpu.yaml \
+    -l python \
+    -o ~/cloudmesh/swagger_example/client/cpu \
+    -D supportPython2=true
+\end{lstlisting}
+
+\subsection{Install the client side code
+package:}\label{install-the-client-side-code-package}
+
+Although we could have installed the client in the same python pyenv or
+virtualenv, we showcase here that it can be installed in a completely
+different environment. That would make it even posible to use a python 3
+based client and a python 2 based server showcasing interoperability
+between python versions (although we just use python 2 here). Thus we
+create ane new python virtual environment and conduct our install.
+
+\begin{lstlisting}
+virtualenv RESTClient
+source RESTClient/bin/activate
+pip install -U pip
+cd swagger_example/client/cpu
+pip install -r requirements.txt
+python setup.py install
+\end{lstlisting}
+
+\subsection{Using the client API to interact with the REST
+service}\label{using-the-client-api-to-interact-with-the-rest-service}
+
+Under the directory \emph{swagger\_example/client/cpu} you will find a
+README.md file which serves as an API documentation with example client
+code in it. E.g., if we save the following code into a .py file:
+
+\begin{lstlisting}
+from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+# create an instance of the API class
+api_instance = swagger_client.DefaultApi()
+
+try:
+    api_response = api_instance.cpu_get()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->cpu_get: %s\n" % e)
+\end{lstlisting}
+
+We can then run this code to verify the calling to the REST service
+actually works. We are expecting to see a return similar to this:
+
+\begin{lstlisting}
+{'model': 'Intel(R) Core(TM)2 Quad CPU    Q9550  @ 2.83GHz'}
+\end{lstlisting}
+
+Obviosly, we could have applied additional cleanup of the information
+returned by the python code, such as removing duplicated spaces.
+
+\section{Towards a Distributed Client
+Server}\label{towards-a-distributed-client-server}
+
+Although we develop and run the example on one localhost machine, you
+can separate the process into two separate machines. E.g., on a server
+with external IP or even DNS name to deploy the server side code, and on
+a local laptop or workstation to deploy the client side code. In this
+case please make changes on the API definition accordingly, e.g., the
+\textbf{host} value.
+
+\section{Exercises}\label{s:swagger-exercises}
+
+\begin{exercise}
+  In Section \ref{s:step-1-define-your-rest-service}, we introduced a
+  schema. The question relates to termsOfService: Investigate what the
+  termOfService attribut is and suggest a better value. Discuss on
+  piazza.
+\end{exercise}
+
+\begin{exercise}
+  In Section \ref{s:step-1-define-your-rest-service}, we introduced a
+  schema. The question relates to model: What is the meaning of model
+  under the definitions
+\end{exercise}
+
+\begin{exercise}
+  In Section \ref{s:step-1-define-your-rest-service}, we introduced a
+  schema. The question relates to \$ref: what is the meaning of the
+  \$ref. Discuss on piazza, come up with a student answer in class.
+\end{exercise}
+
+\begin{exercise}
+  In Section \ref{s:step-1-define-your-rest-service}, we introduced a
+  schema.  What does the response 200 mean. Do you need other
+  responses?
+\end{exercise}
+
+\begin{exercise}
+  After you have gone through the entire section and verified it works
+  for you add create a more sophisticated schema and add more attributes
+  exposing more information from your system.
+\end{exercise}
+
+\begin{exercise}
+  How can you for example develop a rest service that exposes portions
+  of your file system serving large files, e.g.~their filenames and
+  their size? How would you download these files? Would you use a rest
+  service, or would you register an alternative service such as ftp,
+  DAV, or others? Please discuss in piazza. Note this will be a helping
+  you to prepare a larger assignment. Think abou this first before you
+  implement.
+\end{exercise}
+
+
+\begin{exercise}
+You can try expand the API definition with more resources and
+actions included. E.g., to include more detailed attributes in the CPU
+object and to have those information provided in the actual
+implementation as well. Or you could try defining totally different
+resources.
+\end{exercise}
+
+\begin{exercise}
+The codegen tool provides a convenient way to have the code
+stubs ready, which frees the developers to focus more on the API
+definition and the real implementation of the business logics. Try with
+complex implementation on the back end server side code to interact with
+a database/datastore or a 3rd party REST service.
+\end{exercise}
+
+\begin{exercise}
+For advanced python users, you can naturally use function assignments to
+replace the \texttt{cpu\_get()} entirely even after loading the
+instantiation of the server. However, this is not needed. If you are an
+advanced python developer, please feel free to experiment and let us
+know how you suggest to integrate things easily.
+\end{exercise}

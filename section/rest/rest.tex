@@ -1,5 +1,7 @@
 
-\chapter{REST}
+\chapterimage{rest.png} 
+
+\chapter{REST} \label{c:rest}
 
 \section{Overview of REST}\label{s:rest-intro}
 
@@ -132,15 +134,15 @@ of pip installed with
 
 \smallskip
 
-\begin{lstlisting}
-pip install pip -U
+\begin{lstlisting}{language=bash}
+$ pip install pip -U
 \end{lstlisting}
 \end{WARNING}
 
 To install Eve, you can say 
 
-\begin{lstlisting}
-  $ pip install eve
+\begin{lstlisting}{language=bash}
+$ pip install eve
 \end{lstlisting}
 
 As Eve also needs a backend database, and as MongoDB is an obvious
@@ -150,7 +152,7 @@ database which helps to store light weight data easily.
 \subsection{Ubuntu install of MongoDB}
 On Ubuntu you can install MongoDB as follows
 
-\begin{lstlisting}
+\begin{lstlisting}{language=bash}
 $ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5
 $ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/
 mongodb-org/3.6 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.6.list
@@ -163,7 +165,7 @@ $ sudo apt-get install -y mongodb-org
 
 On OSX you can use the command
 
-\begin{lstlisting}
+\begin{lstlisting}{language=bash}
 brew update.
 brew install mongodb
 \end{lstlisting}
@@ -196,7 +198,7 @@ that the /data/db directory has the right permissions by running
 In order to check the MongoDB installation, please run the following
 commands in one terminal:
 
-\begin{lstlisting}
+\begin{lstlisting}{language=bash}
 $ mkdir -p ~/cloudmesh/data/db
 $ mongod --dbpath ~/cloudmesh/data/db
 \end{lstlisting}
@@ -204,7 +206,7 @@ $ mongod --dbpath ~/cloudmesh/data/db
 In another terminal we try to connect to mongo and issue a mongo
 command to show the databases:
 
-\begin{lstlisting}
+\begin{lstlisting}{language=bash}
 $ mongo --host 127.0.0.1:27017
 $ show databases
 \end{lstlisting}
@@ -219,7 +221,7 @@ In this section we will focus on creating a simple rest service. To
 organize our work we will create the following directory:
 
 
-\begin{lstlisting}
+\begin{lstlisting}{language=bash}
 $ mkdir ~/cloudmesh/eve
 $ cd ~/cloudmesh/eve
 \end{lstlisting}
@@ -269,7 +271,7 @@ to start it with a simple python program. We could name that program
 anything we like, but often it is called simply \verb|run.py|. This
 file is placed in the same directory where you placed the
 \textbf{settings.py}. In our case it is in the file
-\verb|~/cloudmesh/eve/settings.py| and contains the following python
+\verb|~/cloudmesh/eve/run.py| and contains the following python
 program:
 
 \begin{lstlisting}
@@ -295,15 +297,15 @@ terminal while running the commands:
 
 Previously we started the mogoDB service as follows:
 
-\begin{lstlisting}
-$ mongod --dbpath=~/cloudmesh/data/db/
+\begin{lstlisting}{language=bash}
+$ mongod --dbpath ~/cloudmesh/data/db/
 \end{lstlisting}
 %$
 
 This is done in its own terminal, so we can observe the log messages easily.
 Next we start in another window the Eve service with 
 
-\begin{lstlisting}
+\begin{lstlisting}{language=bash}
 $ cd ~/cloudmesh/eve
 $ python run.py
 \end{lstlisting}
@@ -319,10 +321,11 @@ often more convenient for debugging as it is easier to read than XML.
 Naturally, we need first to put some data into the server. Lets assume
 we add the user Albert Zweistein.
 
-\begin{lstlisting}
-$ curl -H "Content-Type: application/json" -X POST -d 
-'{"firtname":"Albert","lastname":"Zweistein", "school" : "ISE",
-"university":"Indiana University", "email":"albert@iu.edu"}' http://127.0.0.1:5000/student/
+\begin{lstlisting}{language=bash}
+$ curl -H "Content-Type: application/json" -X POST \
+       -d '{"firstname":"Albert","lastname":"Zweistein", \
+       "school":"ISE","university":"Indiana University", \
+       "email":"albert@iu.edu"}' http://127.0.0.1:5000/student/
 \end{lstlisting}
 %$
 
@@ -345,7 +348,7 @@ $ mongo
 Now you can query mongo directly with its shell interface
 
 \begin{lstlisting}
-> show databases; (will display eve)  
+> show databases
 > use student_db  
 > show tables # query the table names
 > db.student.find().pretty()  # pretty will show the json in a clear way
@@ -358,7 +361,7 @@ using REST calls. We can simply retrieve
 the information with the help of a simple URI:
 
 
-\begin{lstlisting}
+\begin{lstlisting}{language=bash}
 $ curl http://127.0.0.1:5000/student?firstname=Albert
 \end{lstlisting}
 %$
@@ -375,7 +378,7 @@ assume you have MongoDB up and running. To query the service itself we
 can use the URI on the Eve port
 
 
-\begin{lstlisting}
+\begin{lstlisting}{language=bash}
 $ curl -i http://127.0.0.1:5000
 \end{lstlisting}
 %$
@@ -383,7 +386,7 @@ $ curl -i http://127.0.0.1:5000
 Your payload should look like the one below, if your output is not
 formatted like below try adding \verb|?pretty=1|
 
-\begin{lstlisting}
+\begin{lstlisting}{language=bash}
 $ curl -i http://127.0.0.1:5000?pretty=1
 \end{lstlisting}
 %$
@@ -444,7 +447,8 @@ and stop the mongoDB but also the Eve REST service
 
 \begin{exercise}
 Issue the command
-\begin{lstlisting}
+
+\begin{lstlisting}{language=bash}
 $ curl -i http://127.0.0.1:5000/people
 \end{lstlisting}
 %$
@@ -522,21 +526,18 @@ the services explicitly for now.
 
 On ubuntu, you need to do the following steps:
 
-\begin{lstlisting}
-TO BE CONTRIBUTED BY THE STUDENTS OF THE CLASS AS HOMEWORK
-\end{lstlisting}
+\TODO{TO BE CONTRIBUTED BY THE STUDENTS OF THE CLASS AS HOMEWORK}
 
 On windows 10, you need to do the following steps:
 
-\begin{lstlisting}
-TO BE CONTRIBUTED BY THE STUDENTS OF THE CLASS AS HOMEWORK. If you
-elect Windows 10. YOu could be using the online documentation
-provided by starting it on Windows, or running it in a docker container.
-\end{lstlisting}
+\TODO{TO BE CONTRIBUTED BY THE STUDENTS OF THE CLASS AS HOMEWORK. If
+  you elect Windows 10. You could be using the online documentation
+  provided by starting it on Windows, or running it in a docker
+  container.}
 
 On OSX you can use home-brew and install it with:
 
-\begin{lstlisting}
+\begin{lstlisting}{language=bash}
 brew update
 brew install mongodb
 \end{lstlisting}
@@ -545,7 +546,7 @@ In future we may want to add ssl authentication in which case you
 may
 need to install it as follows:
 
-\begin{lstlisting}
+\begin{lstlisting}{language=bash}
 brew install mongodb --with-openssl
 \end{lstlisting}
 
@@ -558,7 +559,7 @@ Important targets are deploy and test.
 
 When using the makefile you can start the services with:
 
-\begin{lstlisting}
+\begin{lstlisting}{language=bash}
 make deploy
 \end{lstlisting}
 
@@ -572,7 +573,7 @@ sufficient for our case. The mongo data is written into the
 
 To test the services you can say:
 
-\begin{lstlisting}
+\begin{lstlisting}{language=bash}
 make test
 \end{lstlisting}
 
@@ -587,7 +588,6 @@ have modified a tool called evegenie to install it onto your system.
 The original documentation for evegenie is located at:
 
 \begin{itemize}
-\tightlist
 \item
  \url{http://evegenie.readthedocs.io/en/latest/}
 \end{itemize}
@@ -603,7 +603,7 @@ based on it. The improved code is located at:
 
 You clone it and install on your system as follows:
 
-\begin{lstlisting}
+\begin{lstlisting}{language=bash}
 cd ~/github
 git clone https://github.com/cloudmesh/evegenie
 cd evegenie
@@ -628,6 +628,7 @@ Usage:
   evegenie --help
   evegenie FILENAME
 \end{lstlisting}
+%$
 
 It takes a json file as input and writes out a settings file for the use
 in eve. Lets assume the file is called sample.json, than the settings

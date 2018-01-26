@@ -3,14 +3,41 @@
 \chapter{Pi Cluster Form Factor}\label{c:pi-cluster-form-factor}
 
 
+In this chapter we will discuss a number of opportunities to build
+small scale compute and cluster resources using Raspberry Pi's.
+
+This includes the following:
+
+\begin{itemize}
+
+\item a NAS server with one Raspberry Pi 3 (Section \ref{nas-1-pi})
+
+\item a Cluster using 1 Raspberry Pi as master and 4 Raspberry Zeros
+  as workers (Section \ref{clusterhat-4-zero-1-pi})
+
+\item a Cluster with 5 Raspberry Pi's (Section
+  \ref{S:cluster-case-with-cooling-5-pi}). A minimum of 3 is needed.
+
+\item a Cluster with 40 Raspberry Pi's (Section
+  \ref{bitscope-case-40-pi})
+
+\item a Cluster with 144 Raspberry Pi's (Section
+  \ref{bitscope-cluster-144-pi})
+
+\item our recommended 5 node Raspberry Pi Cluster (Section
+  \ref{s:pi5}). 3 nodes need to be used at minimum. 
+ 
+
+\end{itemize}
+
 \section{NAS (1 Pi)}\label{nas-1-pi}
 
-Although a NAS is not really a compute cluster the Pi has used many times to build a
-Network Attached Storage (NAS) server. In this configuration a HDD is
-attached to the Raspberry and the network features of the Raspberry is
-used to access the disk drive via software installed on the PI that
-make this easily possible. Many tutorials exists on the Web that help
-setting op such a device.
+Although a NAS is not really a compute cluster the Pi has used many
+times to build a Network Attached Storage (NAS) server. In this
+configuration a HDD is attached to the Raspberry and the network
+features of the Raspberry is used to access the disk drive via
+software installed on the PI that make this easily possible. Many
+tutorials exists on the Web that help setting op such a device.
 
 We like to hear from you if you have successfully developed such a NAS
 and provide us with such links. Links that may help include:
@@ -182,6 +209,9 @@ single rack.
 
 \subsection{Links}\label{links}
 
+Additional information about this form factor can be found at the
+following links:
+
 \URL{https://cluster.bitscope.com/solutions}
 \URL{https://www.pcper.com/news/General-Tech/BitScope-Unveils-Raspberry-Pi-Cluster-2880-CPU-Cores-LANL-HPC-RD}
 \URL{http://my.bitscope.com/store/}
@@ -191,7 +221,7 @@ single rack.
 
 
 
-\section{Build Your Own 5 Node Pi CLuster}
+\section{Build Your Own 5 Node Pi Cluster}\label{s:pi5}
 
 To experiment with building an elementary cluster one does not need to
 have a big budget. Such clusters are often dedicated to research tasks
@@ -226,7 +256,7 @@ will have to potentially do this more than once it is not recommended
 to buy an SD card with the OS on it. Buy the SD card writer instead so
 you can redo the flashing of the card when needed. In addition to the
 SD card you need a USB mouse and keyboard and a monitor or TV with
-HDMMI port.
+HDMI port.
 
 Locate setup instructions and write  a tutorial in markdown that we
 will include here once it is finished. The tutorial is to be managed
@@ -328,15 +358,16 @@ on github.
 \smallskip
 
 {\footnotesize (1) items were replaced with similar item}\\
-{\footnotesize (2) item was not avialable}
+{\footnotesize (2) item was not available}
 
 \end{table}
 
 
-
-\subsection{Exercise}\label{E:cluster-pi}
-
-In case you do not have access to multiple PIs conduct the Single Pi experiment.
+\begin{exercise}
+\label{E:cluster-pi}
+In case you do not have access to multiple PIs conduct the Single Pi
+experiment.
+\end{exercise}
 
 \section{Single Pi}
 
@@ -360,12 +391,18 @@ in the entire class.
   Conduct a temperature experiment.
 \end{enumerate}
 
-Exercises:
+Discussion of these assignment is to be executed openly in
+class. Points will be issued only once the class agrees upon an
+experiment.
+
+This exercise is not only to learn about the behaviour of the Pi, but
+also about how to coordinate experiments with a large number of
+students.
 
 
 \begin{exercise}
-\label{E:Exercise.Pi.Single.1} What temperature measurement is missing from the
-  table. 
+  \label{E:Exercise.Pi.Single.1} What temperature measurement is
+  missing from the table.
 \end{exercise}
 
 \begin{exercise}
@@ -384,24 +421,19 @@ Exercises:
 \end{exercise}
 
 \begin{exercise}
-\label{E:.Pi.Single.5} Identify who to use the VPN server so you
-  can use your Laptop instead of a TV or computer monitor. Write a tutorial.
+  \label{E:.Pi.Single.5} Identify how to use the VPN server so you can
+  use your Laptop instead of a TV or computer monitor. Write a
+  tutorial.
 \end{exercise}
 
 
-Discussion of this assignment is to be executed openly in
-class. Points will be issued only once the class agrees upon an
-experiment.
 
-This exercise is not only to learn about the behaviour of the Pi, but
-also about how to coordinate experiments with a large number of
-students.
-
-\section{Small Cluster Single Pi}
+\section{Small Pi Cluster}
 
 In this set of exercises we will be building a small Raspberry Pi
-cluster. All of you will have to do Exercise.Pi.Cluster.Build, as well
-as one of the tasks related to Swarm, kubernetes or Spark.
+cluster. All of you will have to do Exercise
+\ref{Exercise.Pi.Cluster.Build}, as well as one of the tasks related
+to Swarm, kubernetes or Spark.
 
 It is important that you write down all steps very carefully as you
 are expected to use the steps to develop an automated deployment. For
@@ -423,22 +455,27 @@ without bias.
 
 \begin{exercise}
 
-\label{E:.Pi.Cluster.DockerSwarm} Install a docker Swarm cluster on your
-  PI. Develop a tutorial in markdown and mind plagiarism. Contribute your tutorial
-  to this document to get acknowledged and credit. Work with others in
-  class to coordinate a single tutorial.
+  \label{E:.Pi.Cluster.DockerSwarm} Install a docker Swarm cluster on
+  your PI. Develop a tutorial in markdown and mind
+  plagiarism. Contribute your tutorial to this document to get
+  acknowledged and credit. Work with others in class to coordinate a
+  single tutorial.
 \end{exercise}
 
 \begin{exercise}
 
-\label{E:.Pi.Cluster.Kubernetes} Install a kubernetes cluster on your
-  PI. Develop a tutorial in markdown and mind plagiarism. Contribute your tutorial
-  to this document to get acknowledged and credit. Work with others in
-  class to coordinate a single tutorial.
-  
-\label{E:.Pi.Cluster.Spark} Install a spark cluster on your
-  PI. Develop a tutorial in markdown and mind plagiarism. Contribute your tutorial
-  to this document to get acknowledged and credit. Work with others in
-  class to coordinate a single tutorial.
+  \label{E:.Pi.Cluster.Kubernetes} Install a kubernetes cluster on
+  your PI. Develop a tutorial in markdown and mind
+  plagiarism. Contribute your tutorial to this document to get
+  acknowledged and credit. Work with others in class to coordinate a
+  single tutorial.
 \end{exercise}
+  
+\begin{exercise}
+  \label{E:.Pi.Cluster.Spark} Install a spark cluster on your
+  PI. Develop a tutorial in markdown and mind plagiarism. Contribute
+  your tutorial to this document to get acknowledged and credit. Work
+  with others in class to coordinate a single tutorial.
+\end{exercise}
+
 
