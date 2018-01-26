@@ -271,7 +271,7 @@ to start it with a simple python program. We could name that program
 anything we like, but often it is called simply \verb|run.py|. This
 file is placed in the same directory where you placed the
 \textbf{settings.py}. In our case it is in the file
-\verb|~/cloudmesh/eve/settings.py| and contains the following python
+\verb|~/cloudmesh/eve/run.py| and contains the following python
 program:
 
 \begin{lstlisting}
@@ -298,7 +298,7 @@ terminal while running the commands:
 Previously we started the mogoDB service as follows:
 
 \begin{lstlisting}{language=bash}
-$ mongod --dbpath=~/cloudmesh/data/db/
+$ mongod --dbpath ~/cloudmesh/data/db/
 \end{lstlisting}
 %$
 
@@ -348,7 +348,7 @@ $ mongo
 Now you can query mongo directly with its shell interface
 
 \begin{lstlisting}
-> show databases; (will display eve)  
+> show databases
 > use student_db  
 > show tables # query the table names
 > db.student.find().pretty()  # pretty will show the json in a clear way
@@ -526,17 +526,14 @@ the services explicitly for now.
 
 On ubuntu, you need to do the following steps:
 
-\begin{lstlisting}
-TO BE CONTRIBUTED BY THE STUDENTS OF THE CLASS AS HOMEWORK
-\end{lstlisting}
+\TODO{TO BE CONTRIBUTED BY THE STUDENTS OF THE CLASS AS HOMEWORK}
 
 On windows 10, you need to do the following steps:
 
-\begin{lstlisting}
-TO BE CONTRIBUTED BY THE STUDENTS OF THE CLASS AS HOMEWORK. If you
-elect Windows 10. YOu could be using the online documentation
-provided by starting it on Windows, or running it in a docker container.
-\end{lstlisting}
+\TODO{TO BE CONTRIBUTED BY THE STUDENTS OF THE CLASS AS HOMEWORK. If
+  you elect Windows 10. You could be using the online documentation
+  provided by starting it on Windows, or running it in a docker
+  container.}
 
 On OSX you can use home-brew and install it with:
 
