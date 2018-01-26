@@ -1,0 +1,104 @@
+\chapter{Help}
+
+\section{Compiling Cloudmesh Handbook}\label{s:help-compile-handbook}
+
+In compiling the cloudmesh handbook with new sections added will be an
+important task in case of adding new content.
+
+As a good practice in order to make sure there are minimal errors caused
+in the process of making new content, we take a safety precausion by creating
+our own Makefile in the cloned repository in the local machine.
+
+For instance if a new section was added as follows
+
+\begin{lstlisting}
+  section/machine-learning/kmeans.tex 
+\end{lstlisting}
+
+We must add this folder path to the Makefile.
+
+Before doing this, a new Makefile is created as follows
+Make sure you are inside the repo home folder i.e book/
+\begin{lstlisting}
+  cp Makefile Makefile.<your_name>
+  ex : cp Makefile Makefile.albert
+\end{lstlisting}
+
+Then open the new Makefile created and copy the following line
+and paste it below that line. 
+
+\begin{lstlisting}
+single: dest 
+	latexmk -jobname=single $(FLAGS) -pvc -view=pdf single
+\end{lstlisting}  
+
+After pasting modify it as follows.
+
+\begin{lstlisting}
+albert: dest 
+	latexmk -jobname=albert $(FLAGS) -pvc -view=pdf albert
+\end{lstlisting}  
+
+This is like an insurance policy to minimize the errors caused
+by developer on the repository.
+
+And as we added a new section as we described earlier, it must be
+included in the new Makefile as well.
+
+So considering the alphabetical order add that folder path in the
+dest section in the new Makefile created. Consider the following
+example
+
+\begin{lstlisting}
+ dest:
+       mkdir -p dest/format
+       mkdir -p dest/machine-learning
+       mkdir -p dest/notebooks
+\end{lstlisting}
+
+Like this way we can add the new folder in between the correct place
+in dest section with respect to the alphabetic order of path.
+
+Now the new changes to the file can be made and finally it must be
+linked to the final pdf file that must be created. For this run the
+following commands.
+
+In the book/ path run the following commands. And remember the name
+of the new user we selected is albert.
+
+\begin{lstlisting}
+  cp single.tex albert.tex
+\end{lstlisting}
+
+For this new albert.tex file we must include the path of the new
+section as follows,
+
+\begin{lstlisting}
+ \include{section/machine-learning/kmeans}
+\end{lstlisting}
+
+Now all the steps have been completed for the test run.
+
+In the terminal run the following commands.
+
+\begin{lstlisting}
+  make -f Makefile.albert albert
+\end{lstlisting}
+
+The above command will make the file and it will load up a pdf.  In
+that case if you still get errors, read the error line and install
+xpdf reader by running the following command.
+
+\begin{lstlisting}
+ sudo apt-get install xpdf
+\end{lstlisting}
+
+It is very important to make sure all the packages are installed
+beforehand jumping in to modifying or adding new content to the
+handbook.
+
+There is a way of adding the browser to view the pdf by configuring it
+with the build. This will be discussed in a new chapter.
+
+Finally if the expected output is displayed in the build pdf which is located in the dest folder, we can integrate the changes that we did for the albert.tex and Makefile.albert to the original Makefile and the single.tex file. 
+
