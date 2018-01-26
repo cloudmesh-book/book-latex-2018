@@ -169,6 +169,7 @@ dest:
 	mkdir -p dest/section/intro
 	mkdir -p dest/section/faas
 	mkdir -p dest/section/git
+	mkdir -p dest/section/help
 	mkdir -p dest/section/i524
 	mkdir -p dest/section/icloud
 	mkdir -p dest/section/icloud/assignment
@@ -185,6 +186,7 @@ dest:
 	mkdir -p dest/section/icloud/assignment/exercise7/code-base
 	mkdir -p dest/section/icloud/assignment/exercise7/code-base/input
 	mkdir -p dest/section/icloud/assignment/exercise7/code-base/simplepagerank
+
 	mkdir -p dest/section/icloud/assignment/exercise8
 	mkdir -p dest/section/icloud/course
 	mkdir -p dest/section/iot
