@@ -32,6 +32,7 @@ makefile:
 albert: dest 
 	latexmk -jobname=kmeans $(FLAGS) -pvc -view=pdf kmeans
 \end{lstlisting}  
+%$
 
 As the kmeans.tex file is in a new directory, we need to add the
 directory name to the place where the LaTeX output files are placed.
@@ -49,43 +50,42 @@ dest:
     ...
 \end{lstlisting}
 
-Safe the Makefile.kmeans.
-Next, copy the file called single.tex to kmeans.tex. 
+Next, save the Makefile.kmeans.
+Now opy the file called single.tex to kmeans.tex. 
 
 \begin{lstlisting}
 cp single.tex kmeans-main.tex
 \end{lstlisting}
 
-As we want to review the section we must however  add it to this LaTex
-file with the line
+As we want to review the section we must however  add it to this \LaTex~
+file with the section name included
 
 \begin{lstlisting}
 \include{section/machine-learning/kmeans}
 \end{lstlisting}
 
-You may eelect to outcomment other sections.
+You may elect to outcomment other sections.
 Now you can compile the file with 
 
 \begin{lstlisting}
   make -f Makefile.kmeans kmeans-main
 \end{lstlisting}
 
-FROM HERE TO IMPROVE
 
-The above command will make the file and it will load up a pdf.  In
-that case if you still get errors, read the error line and install
-xpdf reader by running the following command.
+The above command will make the file, create a pdf file, and if you
+have configured latexmk properly pop up the PDF in your configured PDF
+browser. If not, you can find it in the dest folder at for our example
+at 
+
+\begin{lstlisting}
+dest/kmeans-main.pdf
+\end{lstlisting}
+
+
+To configure your pdf browser you can for example use in ubuntu
 
 \begin{lstlisting}
  sudo apt-get install xpdf
 \end{lstlisting}
 
-It is very important to make sure all the packages are installed
-beforehand jumping in to modifying or adding new content to the
-handbook.
-
-There is a way of adding the browser to view the pdf by configuring it
-with the build. This will be discussed in a new chapter.
-
-Finally if the expected output is displayed in the build pdf which is located in the dest folder, we can integrate the changes that we did for the albert.tex and Makefile.albert to the original Makefile and the single.tex file. 
 

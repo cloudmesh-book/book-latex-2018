@@ -486,6 +486,70 @@ of your computer i.e. disk space, memory, RAM, etc.
 \end{exercise}
 
 
+\subsection{HATEOAS}\label{s:hateoas}
+
+In the previous section we discussed the basic concepts about RESTful
+web service. Next we introduce you to the concept of HATEOAS
+
+HATEOAS stands for Hypermedia as the Engine of Application State and
+this is enabled by the default configuration within Eve. It is useful
+to review the terminology and attributes used as part of this
+configuration. HATEOS explains how REST API endpoints are defined and it
+priovides a clear description on how the API can be consumed through
+these terms:
+
+\begin{description} 
+
+\item [\_links]. Links describe the relation of current resource being
+  accessed to the rest of the resources. It is like if we have a set
+  of links to the set of objects or service endpoints that we are
+  referring in the RESTful webservice. Here an endpoint refers to a
+  service call which is responsible for executing one of the CRUD
+  operations on a particular object or set of objects. More on the
+  links, the links object contains the list of servable API endpoints
+  or list of services.  When we are calling a GET request or any other
+  request, we can use these service endpoints to execute different
+  queries based on the user purpose.  For instance, a service call can
+  be used to insert data or retrieve data from a remote database using
+  a REST API call. About databases we will discuss in detail in another
+  chapter.
+
+\item [title]. The title in the rest endpoint is the name or topic
+  that we are trying to address. It describes the nature of the object
+  by a single word. For instance student, bank-statement, salary,etc
+  can be a title.
+
+\item [parent]. The term parent referes to the very initial link or an
+  API endpoint in a particular RESTful web service. Generally this is
+  denoted with the primary address like http://example.com/api/v1/.
+
+\item [href]. The term href refers to the url segment that we use to
+  access the a particular REST API endpoint. For instance
+  ``student?page=1'' will return the first page of student list by
+  retrieving a particular number of items from a remote database or a
+  remote data source. The full url will look like this,
+  ``http://www.exampleapi.com/student?page=1''.
+
+\end{description}  
+
+\begin{comment}
+\subsection{Rendering Data in UI}
+
+\TODO{seems incomplete}
+
+In this section, we are talking about the way of using HATEOAS
+practically in user interface development in web applications.
+
+\begin{lstlisting}
+  <resource>
+  <link rel='child' href='student' title='student'/>
+  </resource>
+\end{lstlisting}
+
+This is the practical representation of the HATEOAS in real world
+applications.
+\end{comment}
+
 
 
 \section{Object Management with Eve and Evegenie}
