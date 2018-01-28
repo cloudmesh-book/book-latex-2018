@@ -546,7 +546,7 @@ Field	& Description \\
 \verb|_etag|	& ETag, to be used for concurrency control and conditional requests.\\
 \verb|_id|	& unique item key, also needed to access the individual item
   endpoint.\\
-\end{tabular
+\end{tabular}
 
 Pagenation information can be included in the \verb|_meta| field.
 
@@ -618,6 +618,28 @@ specify this for example through curl with an Accept header
 curl -H "Accept: application/xml" -i http://localhost
 \end{lstlisting}
 
+\section{Extensions to Eve}
+
+A number of extensions have been developed by the community. This
+includes
+eve-swagger,
+eve-sqlalchemy,
+eve-elastic,
+eve-mongoengine,
+eve-neo4j,
+eve.net,
+eve-auth-jwt, and
+flask-sentinel.
+
+Naturally there are many more.
+
+Students have the opportunity to pic one of the community extensions
+and provide a section for the handbook.
+
+\begin{exercise}
+Pick one of the extension, research it and provide a small section for
+the handbook so we add it.
+\end{exercise}
 
 \section{Object Management with Eve and Evegenie}
 
