@@ -295,7 +295,7 @@ students.
 Next, we need to start the services which can easily be achieved in a
 terminal while running the commands:
 
-Previously we started the mogoDB service as follows:
+Previously we started the mongoDB service as follows:
 
 \begin{lstlisting}{language=bash}
 $ mongod --dbpath ~/cloudmesh/data/db/
@@ -495,7 +495,7 @@ HATEOAS stands for Hypermedia as the Engine of Application State and
 this is enabled by the default configuration within Eve. It is useful
 to review the terminology and attributes used as part of this
 configuration. HATEOS explains how REST API endpoints are defined and it
-priovides a clear description on how the API can be consumed through
+provides a clear description on how the API can be consumed through
 these terms:
 
 \begin{description} 
@@ -503,10 +503,10 @@ these terms:
 \item [\_links]. Links describe the relation of current resource being
   accessed to the rest of the resources. It is like if we have a set
   of links to the set of objects or service endpoints that we are
-  referring in the RESTful webservice. Here an endpoint refers to a
+  referring in the RESTful web service. Here an endpoint refers to a
   service call which is responsible for executing one of the CRUD
   operations on a particular object or set of objects. More on the
-  links, the links object contains the list of servable API endpoints
+  links, the links object contains the list of serviceable API endpoints
   or list of services.  When we are calling a GET request or any other
   request, we can use these service endpoints to execute different
   queries based on the user purpose.  For instance, a service call can
@@ -551,7 +551,7 @@ Field	& Description \\
 Pagenation information can be included in the \verb|_meta| field.
 
 
-\subsubsection{Fliltering}
+\subsubsection{Filtering}
 
 
 CLients can submit query strings to the rest service to retrieve
