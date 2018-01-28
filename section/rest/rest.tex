@@ -532,6 +532,47 @@ these terms:
 
 \end{description}  
 
+In addition to these fields eve will automatically create the
+follwoing information when resources are created as showcased ot 
+
+\URL{http://python-eve.org/features.html}
+
+
+\begin{tabular}{ll}
+Field	& Description \\
+\hline
+\verb|_created|	& item creation date.\\
+\verb|_updated|	& item last updated on.\\
+\verb|_etag|	& ETag, to be used for concurrency control and conditional requests.\\
+\verb|_id|	& unique item key, also needed to access the individual item
+  endpoint.\\
+\end{tabular
+
+Pagenation information can be included in the \verb|_meta| field.
+
+
+\subsubsection{Fliltering}
+
+
+CLients can submit query strings to the rest service to retrieve
+resources based on a filter. This also allows sorting of the results
+queried. One nice feature about using mongo as a backend database is
+that Eve not only allows python conditional expressions, but also
+mongo queries.
+
+A number of examples to conduct such queries include:
+
+
+\begin{lstlisting}
+curl -i -g http://eve-demo.herokuapp.com/people?where={%22lastname%22:%20%22Doe%22}
+\end{lstlisting}
+
+A python expression
+
+\begin{lstlisting}
+curl -i http://eve-demo.herokuapp.com/people?where=lastname=="Doe"
+\end{lstlisting}
+
 \begin{comment}
 \subsection{Rendering Data in UI}
 
@@ -550,6 +591,32 @@ This is the practical representation of the HATEOAS in real world
 applications.
 \end{comment}
 
+\subsection{Pretty Printing}
+
+Pretty printing is typically supported by adding the parameter
+\verb|?pretty| or \verb|?pretty=1|
+
+If this does not work you can always use python to beautify a json
+output with 
+
+\begin{lstlisting}
+curl -i http://localhost/people?pretty
+\end{lstlisting}
+
+or
+
+\begin{lstlisting}
+curl -i http://localhost/people | python -m json.tool
+\end{lstlisting}
+
+\subsection{XML}
+
+If for some reason you like to retrieve the information in XML you can
+specify this for example through curl with an Accept header
+
+\begin{lstlisting}
+curl -H "Accept: application/xml" -i http://localhost
+\end{lstlisting}
 
 
 \section{Object Management with Eve and Evegenie}
