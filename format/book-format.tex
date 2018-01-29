@@ -138,8 +138,12 @@ permissions and limitations under the License.\\ % License information
 \end{figure} 
 }
 
-\newcommand{\URL}[1]{ \begin{footnotesize} \begin{itemize} \item \url{#1} \end{itemize} \end{footnotesize}}
-\newcommand{\HREF}[2]{ \begi<n{itemize} \item \href{#1}{#2} \end{itemize} }
+\newcommand{\URL}[1]{ \begin{footnotesize} \begin{itemize} \item
+      \url{#1} \end{itemize} \end{footnotesize}}
+\newcommand{\HREF}[2]{ \begin{itemize} \item \href{#1}{#2} \end{itemize} }
+
+%for some reason this does not work:
+\newcommand{\EURL}[2]{ \hfill \href{#1}{#2 ~ $\Mapsto$} }
 
 \newcommand{\video}[4]{%
 {\em \hfill \href{#4}{#3 (#2)~\includegraphics[width=\baselineskip]{images/video.png}}}    \index{Video!#1!#3 (#2)}
