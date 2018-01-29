@@ -479,10 +479,67 @@ What does the \verb|_items| section describe?
 \end{lstlisting} 
 \end{exercise}
 
+\clearpage
+
+\subsection{Creating REST API Endpoints}\label{s:rest-api-endpoints}
+
+First let's get back to the eve working directory,
+
+\begin{lstlisting}
+ $ cd ~/cloudmesh/eve
+\end{lstlisting}
+
+And add the following content to a file called \textbf{api.py}
+
+\begin{lstlisting}
+from eve import Eve
+app = Eve()
+
+@app.route('/student/hello')
+def hello():
+    return "Hello I am John"
+
+if __name__ == '__main__':
+    app.run()
+
+\end{lstlisting}
+
+After creating and saving the file. Run the following command to start
+the API.
+
+
+\begin{lstlisting}
+ $ python api.py
+\end{lstlisting}
+
+After running the command, you can consume the api by running the following
+url in the web browser,
+
+\begin{lstlisting}
+http://127.0.0.1:5000/student/hello
+\end{lstlisting}
+
+After running this the browser will show the follwing message.
+
+\begin{lstlisting}
+Hello I am John.
+\end{lstlisting}
+
+This is a simple exercise to creat your own REST API endpoint.
+
+In this case the \textbf{app.route} provided the route of the API endpoint
+which will be the address appended to the base path, \textbf{http://127.0.0.1:5000}. And in this example we just returned a simple string using the annotated hellp method. It is not compulsory for the function to have the same name as the API endpoint, but the best practice is to have a relationship between endpoint name and function name. For instance you can use \textbf{/student/getAge} and use a function called \textbf{age} to get that or vise versa.
+
+This is the way to create REST API endpoints in your rest web service. 
 
 \begin{exercise}
 Write a RESTful service to determine a useful piece of information off
-of your computer i.e. disk space, memory, RAM, etc.
+of your computer i.e. disk space, memory, RAM, etc. In this exercise what
+you need to do is use a python library to extract data about computer
+information mentioned above and send these information to the user once
+the user calls an API endpoint like http://localhost:5000/performance/getRAM,
+it must return the RAM value of the given machine. For each information like
+disk space, RAM, etc you can use an endpoint per each feature needed. 
 \end{exercise}
 
 
@@ -719,7 +776,7 @@ make deploy
 IT will start two terminals. IN one you will see the mongo service, in
 the other you will see the eve service. The eve service will take a file
 called sample.settings.py that is base on sample.json for the start of
-the eve service. The mongo servide is configured in sucj a way that it
+the eve service. The mongo servide is configured in such a way that it
 only accepts incoming connections from the local host which will be
 sufficient for our case. The mongo data is written into the
 \verb|$USER/.cloudmesh| directory, so make sure it exists.
