@@ -55,3 +55,9 @@
 ## Run REST
 	$ cd ~/cloudmesh/eve
 	$ python run.py
+
+## CURL POST
+curl -H "Content-Type: application/json" -X POST -d '{"firstname":"Albert","lastname":"Zweistein","school":"ISE","university":"Indiana University","email":"albert@iu.edu"}' http://127.0.0.1:5000/student/
+
+## CURL GET
+curl http://127.0.0.1:5000/student?firstname=Albert
