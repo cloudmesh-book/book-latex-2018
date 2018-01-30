@@ -534,6 +534,63 @@ which will be the address appended to the base path, \textbf{http://127.0.0.1:50
 
 This is the way to create REST API endpoints in your rest web service. 
 
+\clearpage
+
+\subsection{Consuming REST API Using a Client Application}
+
+In the first section we created our own REST API application using
+Python Eve. Now once the api is up and running, a client or simply a
+consumer can use our API using another programme.
+
+First go back to the working folder
+\begin{lstlisting}
+ $ cd ~/cloudmesh/eve
+\end{lstlisting}
+
+Then create a new python file called \textbf{runapi.py}. Include the
+following content in this file.
+
+\begin{lstlisting}
+import requests
+import json
+
+
+def get_all():
+    response = requests.get("http://127.0.0.1:5000/student")
+    print json.dumps(response.json(), indent=4, sort_keys=True)
+
+
+def save_record():
+    headers = {
+        'Content-Type': 'application/json',
+    }
+
+    data = '{"firstname":"Jane","lastname":"Doe","school":"ISE","university":"Indiana University","email":"jane@iu.edu"}'
+
+    response = requests.post('http://localhost:5000/student/', headers=headers, data=data)
+
+    print(response.json())
+
+
+
+get_all()
+\end{lstlisting}
+
+Run the following command in a new terminal to run thi
+
+\begin{lstlisting}
+ $ python apirun.py
+\end{lstlisting}
+
+This is a simple python client designed using the \textbf{requests} python
+library to send GET, POST and other HTTP requests in an easier manner.
+
+The $get_all$ function provides a way to get a prettier output in the
+console with all the data in the student database. And the save record
+function provides a way to save data in the database. You can create
+dynamic functions in order to save dynamic data. This may be a treak
+needed to complete the exercicses in this class.
+
 \begin{exercise}
 Write a RESTful service to determine a useful piece of information off
 of your computer i.e. disk space, memory, RAM, etc. In this exercise what
@@ -543,7 +600,6 @@ the user calls an API endpoint like http://localhost:5000/performance/getRAM,
 it must return the RAM value of the given machine. For each information like
 disk space, RAM, etc you can use an endpoint per each feature needed. 
 \end{exercise}
-
 
 \subsection{HATEOAS}\label{s:hateoas}
 
