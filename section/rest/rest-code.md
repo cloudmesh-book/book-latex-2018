@@ -29,7 +29,8 @@
 		    'unique':True
 		 }
 	      }
-
+	    }
+	   } 
 	RESOURCE_METHODS = ['GET', 'POST']
 
 ## MongoDB Installation
