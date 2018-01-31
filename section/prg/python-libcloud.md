@@ -92,6 +92,21 @@ https://libcloud.readthedocs.io/en/latest/compute/key_pair_management.html
 
 ## Data
 
+### Providers
+
+* Google cloud storage
+* Azure Blobs
+* Local STorage
+* OPenstack swift
+* Amazon S3
+* Ceph
+
+
+### Object Storrage
+
+https://libcloud.readthedocs.io/en/latest/storage/index.html
+
+https://libcloud.readthedocs.io/en/latest/storage/examples.html
 
 ## Examples
 
@@ -100,3 +115,29 @@ https://libcloud.readthedocs.io/en/latest/compute/examples.html
 ## API
 
 https://libcloud.readthedocs.io/en/latest/compute/api.html
+
+##LOad balancers
+
+* Amazon application load balancing
+* Amazon Elastic load balancer
+* google compute load balancer
+* softlayer loadbalancer (? ibm)
+
+## DNS as a Service
+
+We will not discuss
+
+https://libcloud.readthedocs.io/en/latest/dns/index.html
+
+## Container
+
+https://libcloud.readthedocs.io/en/latest/container/index.html
+
+https://libcloud.readthedocs.io/en/latest/container/supported_providers.html
+
+docker
+amazon
+google
+kubernetes
+rancher
+joynet?
