@@ -320,7 +320,7 @@ We can use the commandline to save the data in the database using the
 REST api. The data can be retrieved in XML or in json format. Json is
 often more convenient for debugging as it is easier to read than XML.
 
-Naturally, we need first to put some data into the server. Lets assume
+Naturally, we need first to put some data into the server. Let us assume
 we add the user Albert Zweistein.
 
 \begin{lstlisting}{language=bash}
@@ -485,21 +485,23 @@ What does the \verb|_items| section describe?
 
 \subsection{Creating REST API Endpoints}\label{s:rest-api-endpoints}
 
-First let's get back to the eve working directory,
+Next we wont to enhance our example a bit. First, let us get back to
+the eve working directory with
 
 \begin{lstlisting}
  $ cd ~/cloudmesh/eve
 \end{lstlisting}
+%$
 
-And add the following content to a file called \textbf{api.py}
+Add the following content to a file called \textbf{run2.py}
 
 \begin{lstlisting}
 from eve import Eve
 app = Eve()
 
-@app.route('/student/hello')
-def hello():
-    return "Hello I am John"
+@app.route('/student/john')
+def the_student_john():
+    return "My name is John"
 
 if __name__ == '__main__':
     app.run()
@@ -507,48 +509,53 @@ if __name__ == '__main__':
 \end{lstlisting}
 
 After creating and saving the file. Run the following command to start
-the API.
+the service
 
 
 \begin{lstlisting}
- $ python api.py
+ $ python run2.py
 \end{lstlisting}
+%$
 
-After running the command, you can consume the api by running the following
-url in the web browser,
+After running the command, you can interact with the service while
+entering the  following url in the web browser:
 
 \begin{lstlisting}
 http://127.0.0.1:5000/student/hello
 \end{lstlisting}
 
-After running this the browser will show the follwing message.
+The browser will show the following message:
 
 \begin{lstlisting}
-Hello I am John.
+My name is John
 \end{lstlisting}
 
-This is a simple exercise to creat your own REST API endpoint.
-
-In this case the \textbf{app.route} provided the route of the API endpoint
-which will be the address appended to the base path, \textbf{http://127.0.0.1:5000}. And in this example we just returned a simple string using the annotated hellp method. It is not compulsory for the function to have the same name as the API endpoint, but the best practice is to have a relationship between endpoint name and function name. For instance you can use \textbf{/student/getAge} and use a function called \textbf{age} to get that or vise versa.
-
-This is the way to create REST API endpoints in your rest web service. 
-
-\clearpage
+This example illustrates how easy it is to create REST services in
+python.  The important part is to understand the decorator
+\textbf{app.route} provided the route of the API endpoint which will
+be the address appended to the base path,
+\textbf{http://127.0.0.1:5000}. And in this example we just returned a
+simple string using the annotated method. It is not compulsory
+for the function to have the same name as the API endpoint, but the
+best practice is to have a relationship between endpoint name and
+function name. For instance you can use \textbf{/student/john} and
+use a function called \textbf{the_student_john}.
 
 \subsection{Consuming REST API Using a Client Application}
 
-In the first section we created our own REST API application using
-Python Eve. Now once the api is up and running, a client or simply a
-consumer can use our API using another programme.
+In the Section \ref{s:rest-api-endpoints} we created our own REST API application using
+Python Eve. Now once the service running, a we need to learn how to
+interact with it through clients.
 
-First go back to the working folder
+First go back to the working folder:
+
 \begin{lstlisting}
  $ cd ~/cloudmesh/eve
 \end{lstlisting}
+%$
 
-Then create a new python file called \textbf{runapi.py}. Include the
-following content in this file.
+Here we create a new python file called \textbf{client.py}. The file include the
+following content
 
 \begin{lstlisting}
 import requests
@@ -565,38 +572,45 @@ def save_record():
         'Content-Type': 'application/json',
     }
 
-    data = '{"firstname":"Jane","lastname":"Doe","school":"ISE","university":"Indiana University","email":"jane@iu.edu"}'
+    data = '{"firstname":"Jane",
+             "lastname":"Doe",
+             "school":"ISE",
+             "university":"Indiana University",
+             "email":"jane@iu.edu"}'
 
-    response = requests.post('http://localhost:5000/student/', headers=headers, data=data)
+    response = requests.post('http://localhost:5000/student/', 
+                             headers=headers, 
+                             data=data)
 
     print(response.json())
-
 
 
 get_all()
 \end{lstlisting}
 
-Run the following command in a new terminal to run thi
+Run the following command in a new terminal to execute the simple client
 
 \begin{lstlisting}
- $ python apirun.py
+ $ python client.py
 \end{lstlisting}
+%$
 
-This is a simple python client designed using the \textbf{requests} python
-library to send GET, POST and other HTTP requests in an easier manner.
+This client is using the \textbf{requests} python
+library to send GET, POST and other HTTP requests to the server so you
+can leverage build in methods to simplify your work.
 
-The $get_all$ function provides a way to get a prettier output in the
-console with all the data in the student database. And the save record
+The $get_all$ function provides a way to get the output to the
+console with all the data in the student database. The \verb|save_record|
 function provides a way to save data in the database. You can create
-dynamic functions in order to save dynamic data. This may be a treak
-needed to complete the exercicses in this class.
+dynamic functions in order to save dynamic data. However it may take
+some time for you to apply as exercise.
 
 \begin{exercise}
 Write a RESTful service to determine a useful piece of information off
 of your computer i.e. disk space, memory, RAM, etc. In this exercise what
 you need to do is use a python library to extract data about computer
 information mentioned above and send these information to the user once
-the user calls an API endpoint like http://localhost:5000/performance/getRAM,
+the user calls an API endpoint like http://localhost:5000/performance/ram,
 it must return the RAM value of the given machine. For each information like
 disk space, RAM, etc you can use an endpoint per each feature needed. 
 \end{exercise}
@@ -850,8 +864,9 @@ YOu will se a number of json text been written to the screen.
 \section{Creating your own objects}\label{creating-your-own-objects}
 
 The example demonstrated how easy it is to create a mongodb and an eve
-rest service. Now lets use this example to create your own. FOr this we
-have modified a tool called evegenie to install it onto your system.
+rest service. Now let us use this example to create your own. For
+this we have modified a tool called evegenie to install it onto your
+system.
 
 The original documentation for evegenie is located at:
 
