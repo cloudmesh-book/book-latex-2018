@@ -310,6 +310,8 @@ $ cd ~/cloudmesh/eve
 $ python run.py
 \end{lstlisting}
 
+You can find the codes and commands up to this point in the following document.
+\URL{https://github.com/cloudmesh/book/blob/dev/section/rest/rest-code.md}
 
 \subsection{Interacting with the REST service}
 
@@ -479,12 +481,125 @@ What does the \verb|_items| section describe?
 \end{lstlisting} 
 \end{exercise}
 
+\clearpage
+
+\subsection{Creating REST API Endpoints}\label{s:rest-api-endpoints}
+
+First let's get back to the eve working directory,
+
+\begin{lstlisting}
+ $ cd ~/cloudmesh/eve
+\end{lstlisting}
+
+And add the following content to a file called \textbf{api.py}
+
+\begin{lstlisting}
+from eve import Eve
+app = Eve()
+
+@app.route('/student/hello')
+def hello():
+    return "Hello I am John"
+
+if __name__ == '__main__':
+    app.run()
+
+\end{lstlisting}
+
+After creating and saving the file. Run the following command to start
+the API.
+
+
+\begin{lstlisting}
+ $ python api.py
+\end{lstlisting}
+
+After running the command, you can consume the api by running the following
+url in the web browser,
+
+\begin{lstlisting}
+http://127.0.0.1:5000/student/hello
+\end{lstlisting}
+
+After running this the browser will show the follwing message.
+
+\begin{lstlisting}
+Hello I am John.
+\end{lstlisting}
+
+This is a simple exercise to creat your own REST API endpoint.
+
+In this case the \textbf{app.route} provided the route of the API endpoint
+which will be the address appended to the base path, \textbf{http://127.0.0.1:5000}. And in this example we just returned a simple string using the annotated hellp method. It is not compulsory for the function to have the same name as the API endpoint, but the best practice is to have a relationship between endpoint name and function name. For instance you can use \textbf{/student/getAge} and use a function called \textbf{age} to get that or vise versa.
+
+This is the way to create REST API endpoints in your rest web service. 
+
+\clearpage
+
+\subsection{Consuming REST API Using a Client Application}
+
+In the first section we created our own REST API application using
+Python Eve. Now once the api is up and running, a client or simply a
+consumer can use our API using another programme.
+
+First go back to the working folder
+\begin{lstlisting}
+ $ cd ~/cloudmesh/eve
+\end{lstlisting}
+
+Then create a new python file called \textbf{runapi.py}. Include the
+following content in this file.
+
+\begin{lstlisting}
+import requests
+import json
+
+
+def get_all():
+    response = requests.get("http://127.0.0.1:5000/student")
+    print json.dumps(response.json(), indent=4, sort_keys=True)
+
+
+def save_record():
+    headers = {
+        'Content-Type': 'application/json',
+    }
+
+    data = '{"firstname":"Jane","lastname":"Doe","school":"ISE","university":"Indiana University","email":"jane@iu.edu"}'
+
+    response = requests.post('http://localhost:5000/student/', headers=headers, data=data)
+
+    print(response.json())
+
+
+
+get_all()
+\end{lstlisting}
+
+Run the following command in a new terminal to run thi
+
+\begin{lstlisting}
+ $ python apirun.py
+\end{lstlisting}
+
+This is a simple python client designed using the \textbf{requests} python
+library to send GET, POST and other HTTP requests in an easier manner.
+
+The $get_all$ function provides a way to get a prettier output in the
+console with all the data in the student database. And the save record
+function provides a way to save data in the database. You can create
+dynamic functions in order to save dynamic data. This may be a treak
+needed to complete the exercicses in this class.
 
 \begin{exercise}
 Write a RESTful service to determine a useful piece of information off
-of your computer i.e. disk space, memory, RAM, etc.
+of your computer i.e. disk space, memory, RAM, etc. In this exercise what
+you need to do is use a python library to extract data about computer
+information mentioned above and send these information to the user once
+the user calls an API endpoint like http://localhost:5000/performance/getRAM,
+it must return the RAM value of the given machine. For each information like
+disk space, RAM, etc you can use an endpoint per each feature needed. 
 \end{exercise}
-
 
 \subsection{HATEOAS}\label{s:hateoas}
 
@@ -719,7 +834,7 @@ make deploy
 IT will start two terminals. IN one you will see the mongo service, in
 the other you will see the eve service. The eve service will take a file
 called sample.settings.py that is base on sample.json for the start of
-the eve service. The mongo servide is configured in sucj a way that it
+the eve service. The mongo servide is configured in such a way that it
 only accepts incoming connections from the local host which will be
 sufficient for our case. The mongo data is written into the
 \verb|$USER/.cloudmesh| directory, so make sure it exists.
