@@ -62,3 +62,49 @@
 
 ## CURL GET
    	$ curl http://127.0.0.1:5000/student?firstname=Albert
+
+## run2.py
+
+	from eve import Eve
+	app = Eve()
+
+	@app.route('/student/john')
+	def theStudentJohn():
+	    return "My name is John"
+
+	if __name__ == '__main__':
+	    app.run()
+
+
+## client.py
+	import requests
+	import json
+
+
+	def get_all():
+	    response = requests.get("http://127.0.0.1:5000/student")
+	    print json.dumps(response.json(), indent=4, sort_keys=True)
+
+
+	def save_record():
+	    headers = {
+	    	'Content-Type': 'application/json',
+	    }
+
+	    data = '{"firstname":"Jane",
+		     "lastname":"Doe",
+		     "school":"ISE",
+		     "university":"Indiana University",
+		     "email":"jane@iu.edu"}'
+
+            response = requests.post('http://localhost:5000/student/',
+			              headers=headers, 
+				      data=data)
+
+      	    print(response.json())
+
+
+	get_all()
+
+## Run Python Client
+	python client.py
