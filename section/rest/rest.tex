@@ -500,7 +500,7 @@ from eve import Eve
 app = Eve()
 
 @app.route('/student/john')
-def the_student_john():
+def theStudentJohn():
     return "My name is John"
 
 if __name__ == '__main__':
@@ -539,7 +539,7 @@ simple string using the annotated method. It is not compulsory
 for the function to have the same name as the API endpoint, but the
 best practice is to have a relationship between endpoint name and
 function name. For instance you can use \textbf{/student/john} and
-use a function called \textbf{the_student_john}.
+use a function called \textbf{theStudentJohn}.
 
 \subsection{Consuming REST API Using a Client Application}
 

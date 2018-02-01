@@ -19,6 +19,9 @@ LATEX=pdflatex
 g: dest
 	latexmk -jobname=$(FILE) $(FLAGS) -pvc -view=pdf $(FILE)
 
+test: dest
+	pdflatex $(FILE)
+
 gg: dest
 	pdflatex -shell-escape $(FILE)
 
