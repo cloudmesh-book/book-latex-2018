@@ -1,9 +1,13 @@
 
 \chapterimage{rest.png} 
 
-\chapter{REST} \label{c:rest}
+\chapter{REST} 
+\label{c:rest}
+\index{REST}
+
 
 \section{Overview of REST}\label{s:rest-intro}
+\index{REST!Overview}
 
 This section is accompanied by a video about REST.
 
@@ -110,7 +114,110 @@ which we will explore in more detail.
   we will explore in more detail.
 \end{description}
 
-\section{Eve}\label{s:eve-intro}
+
+\section{Flask RESTful Services}
+\index{REST}
+\index{REST!Flask RESTful}
+
+
+Flask is a mocro services framework allowing to write web services in
+python quickly. One of its extensions is Flask-RESTful. It adds for 
+building REST APIs based on a class definition making it relatively
+simple. Through tis interface we can than integrate with
+your existing Object Relational Modles and libraries. As Flask-RESTful
+leverages the main features from Flask an extensive set of
+documentation is available allowing you to get started quickly and
+thouroghly. The Web page contains extensive documentation:
+
+\URL{https://flask-restful.readthedocs.io/en/latest/}
+
+We will provide a simple example that showcases some {\em hard coded}
+data to be served as a rest service. It will be easy to replace this
+for example with functions and methods that obtain such information
+dynamically from the operationg system. 
+
+\begin{WARNING}
+This example has not been tested., We like that the E222 class defines
+a beautiful example to contribute to this section. and explains what
+happens in this example.
+\end{WARNING}
+
+
+\begin{lstlisting}
+from flask import Flask
+from flask_restful import reqparse, abort, Api, Resource
+
+app = Flask(__name__)
+api = Api(app)
+
+COMPUTERS = {
+    'computer1': {
+      'processor': 'iCore7'
+    },
+    'computer2': {
+      'processor': 'iCore5'
+    },
+    'computer3': {
+      'processor': 'iCore3'
+    },
+}
+
+def abort_if_cluster_doesnt_exist(computer_id):
+    if todo_id not in TODOS:
+        abort(404, message="Computer {} doesn't exist".format(computer_id))
+
+parser = reqparse.RequestParser()
+parser.add_argument('processor')
+
+class Computer(Resource):
+    ''' shows a single computer item and lets you delete a computer
+        item.'''
+
+    def get(self, computer_id):
+        abort_if_computer_doesnt_exist(computer_id)
+        return COMPUTERS[computer_id]
+
+    def delete(self, computer_id):
+        abort_if_computer_doesnt_exist(computer_id)
+        del COMPUTERS[computer_id]
+        return '', 204
+
+    def put(self, computer_id):
+        args = parser.parse_args()
+        processor = {'processor': args['processor']}
+        COMPUTERS[computer_id] = processor
+        return processor, 201
+
+
+# ComputerList
+class ComputerList(Resource):
+    ''' shows a list of all computers, and lets you POST to add new computers'''
+
+    def get(self):
+        return COMPUTERS
+
+    def post(self):
+        args = parser.parse_args()
+        computer_id = int(max(COMPUTERS.keys()).lstrip('computer')) + 1
+        computer_id = 'computer%i' % computer_id
+        COMPUTERS[computer_id] = {'processor': args['processor']}
+        return COMPUTERS[computer_id], 201
+
+##
+## Setup the Api resource routing here
+##
+api.add_resource(ComputerList, '/computers')
+api.add_resource(Computer, '/computers/<computer_id>')
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
+\end{lstlisting}
+
+
+\section{Rest Services with Eve}\label{s:eve-intro}
+\index{REST}
+\index{REST!Eve}
 
 Next, we will focus on how to make a RESTful web service with Python
 Eve. Eve makes the creation of a REST implementation in python
@@ -689,6 +796,7 @@ and try to save the object like wise.
 \end{exercise}
 
 \subsection{HATEOAS}\label{s:hateoas}
+\index{REST!HATEOS}
 
 In the previous section we discussed the basic concepts about RESTful
 web service. Next we introduce you to the concept of HATEOAS
@@ -820,7 +928,9 @@ specify this for example through curl with an Accept header
 curl -H "Accept: application/xml" -i http://localhost
 \end{lstlisting}
 
-\section{Extensions to Eve}
+
+\subsection{Extensions to Eve}
+\index{REST!Eve!Extensions}
 
 A number of extensions have been developed by the community. This
 includes
@@ -844,6 +954,9 @@ the handbook so we add it.
 \end{exercise}
 
 \section{Object Management with Eve and Evegenie}
+\index{REST!Evegenie}
+\index{Evegenie}
+
 
 \url{http://python-eve.org/}
 
@@ -934,7 +1047,7 @@ make test
 
 YOu will se a number of json text been written to the screen.
 
-\section{Creating your own objects}\label{creating-your-own-objects}
+\subsection{Creating your own objects}\label{creating-your-own-objects}
 
 The example demonstrated how easy it is to create a mongodb and an eve
 rest service. Now let us use this example to create your own. For
@@ -999,6 +1112,7 @@ and run previously, you need to also delete the mongod database.
 \section{Towards cmd5 extensions to manage eve and
 mongo}\label{towards-cmd5-extensions-to-manage-eve-and-mongo}
 
+
 Naturally it is of advantage to have in cms administration commands to
 manage mongo and eve from cmd instead of targets in the Makefile. Hence,
 we \textbf{propose} that the class develops such an extension. We will
@@ -1030,7 +1144,6 @@ there. This could be achieved with a set command.
 \section{Responses}
 
 \URL{https://dzone.com/refcardz/rest-foundations-restful}
-
 
 \begin{comment}
 
@@ -1081,6 +1194,8 @@ Code  Description
 
 
 \section{Swagger}
+\index{REST!Swagger}
+\index{Swagger}
 
 Swagger \url{https://swagger.io/} is a tool for developing API
 specifications based on the OpenAPI Specification (OAS). It allows not
@@ -1118,15 +1233,6 @@ locally on a variety of operating systems including OSX, Linux, and
 Windows. 
 
 
-\section{FlaskRESTful}
-
-Flask-RESTful provides a framework for developing REST APIs on top of
-Flask. The abstraction introduce tha ability to use traditional existing
-ORM libraries. The goal is to enable a minimal setup and allow
-developers to leverage the familiarity they have with Flask and
-develop Flask-RESTful services quickly.
-
-\URL{https://flask-restful.readthedocs.io/en/latest/}
 
 \section{Django REST Framework}
 
