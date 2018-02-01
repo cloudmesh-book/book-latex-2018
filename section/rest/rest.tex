@@ -541,10 +541,68 @@ best practice is to have a relationship between endpoint name and
 function name. For instance you can use \textbf{/student/john} and
 use a function called \textbf{theStudentJohn}.
 
+\subsection{REST API Output Formats and Request Processing}
+
+In Eve, by default the data return type is JSON, in this case if we have a
+result as a string, there has to be a way to formulate a standard JSON. In order
+to do this, we can include a better formatting in the code as follows. 
+
+If we want to create an object like Student, we can first define a python class.
+Create a file called \textbf{student.py}.
+
+\begin{lstlisting}
+class Student(object):
+    def __init__(self, firstname, lastname, age, school, email):
+        self.firstname = firstname
+        self.lastname = lastname
+        self.age = age
+        self.school = school
+        self.email = email
+
+\end{lstlisting}
+
+This is how we create a class in python. Next we can reformulate our API coding
+we earlier did to return information about a particular student. Open up the 
+same \textbf{run2.py} file and add the following lines and the final
+file will look like as shown below. (You can replace the content in the previous
+file).
+
+\begin{lstlisting}
+from eve import Eve
+from student import Student
+import platform
+import psutil
+import json
+from flask import Response
+
+app = Eve()
+
+
+@app.route('/student/getInfo', methods=['GET'])
+def processor():
+    studentInfo = Student("John", "Doe", "23", "ISE", "john@iu.edu")
+
+    sdata = json.dumps(studentInfo.__dict__)
+
+    response = Response()
+    response.headers["status"] = 200
+    response.headers["Content-Type"] = "application/json; charset=utf-8"
+    response.data = sdata
+
+    return response
+
+
+if __name__ == '__main__':
+    app.run()
+
+
+\end{lstlisting}
+
+
 \subsection{Consuming REST API Using a Client Application}
 
-In the Section \ref{s:rest-api-endpoints} we created our own REST API application using
-Python Eve. Now once the service running, a we need to learn how to
+In the Section \ref{s:rest-api-endpoints} we created our own REST API application
+using Python Eve. Now once the service running, a we need to learn how to
 interact with it through clients.
 
 First go back to the working folder:
@@ -555,7 +613,7 @@ First go back to the working folder:
 %$
 
 Here we create a new python file called \textbf{client.py}. The file include the
-following content
+following content.
 
 \begin{lstlisting}
 import requests
@@ -584,16 +642,28 @@ def save_record():
 
     print(response.json())
 
-
-get_all()
+save_record()
+#get_all()
 \end{lstlisting}
 
-Run the following command in a new terminal to execute the simple client
+Run the following command in a new terminal to execute the simple client by 
 
 \begin{lstlisting}
  $ python client.py
 \end{lstlisting}
 %$
+
+Here when you run this class for the first time, it will run successfully, but 
+if you tried it for the second time, it will give you an error. Because we did 
+set the email to be a unique field in the schema when we designed the settings.py
+file in the beginning. So if you want to save another record you must have entries
+with unique emails. In order to make this dynamic you can include a input reading
+by using the terminal to get the student data first and instead of the static
+data you can use the user input data from the terminal to get dynamic data. 
+But for this exercise we don't expect that or any other form data functionality.
+
+In order to get the saved data, you can comment the record saving function and
+uncoment the get all function. In python commenting is done by using \textbf{#}.
 
 This client is using the \textbf{requests} python
 library to send GET, POST and other HTTP requests to the server so you
@@ -612,7 +682,10 @@ you need to do is use a python library to extract data about computer
 information mentioned above and send these information to the user once
 the user calls an API endpoint like http://localhost:5000/performance/ram,
 it must return the RAM value of the given machine. For each information like
-disk space, RAM, etc you can use an endpoint per each feature needed. 
+disk space, RAM, etc you can use an endpoint per each feature needed. As a tip 
+for this exercise, use the psutil library in python to retrieve the data, and
+then get these information into an string then populate a class called Computer 
+and try to save the object like wise.
 \end{exercise}
 
 \subsection{HATEOAS}\label{s:hateoas}
