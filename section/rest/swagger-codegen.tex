@@ -1,9 +1,9 @@
 \chapterimage{rest.png} 
 
-\chapter{REST Service Generation with
+\section{REST Service Generation with
 Swagger} \label{c:swagger-codegen}
 
-In this section we are discussing how to use OpenAPI 2.0 and Swagger
+In this subsection we are discussing how to use OpenAPI 2.0 and Swagger
 Codegen to define and develop a REST Service.
 
 We assume you have been familiar with the concept of REST service,
@@ -29,7 +29,7 @@ related to is. The general steps are:
   verify.
 \end{itemize}
 
-\section{Step 1: Define Your REST  Service}
+\subsection{Step 1: Define Your REST  Service}
 \label{s:step-1-define-your-rest-service}
 
 In this example we define a simple REST service that returns the hosting
@@ -79,13 +79,13 @@ follows:
 % $
 
 
-\section{Step 2: Server Side Stub Code Generation and
+\subsection{Step 2: Server Side Stub Code Generation and
 Implementation}\label{s:step-2-swagger-code-gen}
 
 With the REST service having been defined, we can now generate the
 server side stub code easily.
 
-\subsection{Setup the Codegen
+\subsubsection{Setup the Codegen
 Environment}\label{setup-the-codegen-environment}
 
 You will need to \href{https://swagger.io/docs/swagger-tools/}{install
@@ -101,7 +101,7 @@ defined location we recommend that you place the code in the directory
 \texttt{\textasciitilde{}/cloudmesh}. In this directory you will also
 place the \texttt{cpu.yaml} file.
 
-\subsection{Generate Server Stub
+\subsubsection{Generate Server Stub
 Code}\label{generate-server-stub-code}
 
 After you have the codegen tool ready, and with Java 7 or 8 installed in
@@ -124,7 +124,7 @@ python 3 make sure to chose the appropriate option. To switch between
 python 2 and python 3 we recommend that you use pyenv as discussed in
 our python section.
 
-\subsection{Fill in the actual
+\subsubsection{Fill in the actual
 implementation}\label{s:swagger-codegen-implementation}
 
 Under the \emph{flaskConnecxion} directory, you will find a
@@ -204,13 +204,13 @@ the modifications small.
 At this step we have completed the server side code development.
 
 
-\section{Step 3: Install and Run the REST
+\subsection{Step 3: Install and Run the REST
 Service:}\label{s:step-3-swagger-codegen}
 
 Now we can install and run the REST service. It is strongly recommended
 that you run this in a pyenv or a virtualenv environment.
 
-\subsection{Start a virtualenv:}\label{start-a-virtualenv}
+\subsubsection{Start a virtualenv:}\label{start-a-virtualenv}
 
 In case you are not using pyenv, please use virtual env as follows:
 
@@ -219,14 +219,14 @@ virtualenv RESTServer
 source RESTServer/bin/activate
 \end{lstlisting}
 
-\subsection{Make sure you have the latest
+\subsubsection{Make sure you have the latest
 pip:}\label{make-sure-you-have-the-latest-pip}
 
 \begin{lstlisting}
 pip install -U pip
 \end{lstlisting}
 
-\subsection{Install the requirements of the server side
+\subsubsection{Install the requirements of the server side
 code:}\label{install-the-requirements-of-the-server-side-code}
 
 \begin{lstlisting}
@@ -234,7 +234,7 @@ cd ~/cloudmesh/swagger_example/server/cpu/flaskConnexion
 pip install -r requirements.txt
 \end{lstlisting}
 
-\subsection{Install the server side code
+\subsubsection{Install the server side code
 package:}\label{install-the-server-side-code-package}
 
 Under the same directory, run:
@@ -243,7 +243,7 @@ Under the same directory, run:
 python setup.py install
 \end{lstlisting}
 
-\subsection{Run the service}\label{run-the-service}
+\subsubsection{Run the service}\label{run-the-service}
 
 Under the same directory:
 
@@ -257,7 +257,7 @@ You should see a message like this:
 * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
 \end{lstlisting}
 
-\subsection{Verify the service using a web
+\subsubsection{Verify the service using a web
 browser:}\label{verify-the-service-using-a-web-browser}
 
 Open a web browser and visit:
@@ -273,13 +273,13 @@ to see if it returns a json object with cpu model info in it.
 Assignment: How would you verify that your service works with a
 \texttt{curl} call?
 
-\section{Step 4: Generate Client Side Code and
+\subsection{Step 4: Generate Client Side Code and
 Verify}\label{s:step-4-swagger-codegen}
 
 In addition to the server side code swagger can also create a client
 side code.
 
-\subsection{Client side code
+\subsubsection{Client side code
 generation:}\label{client-side-code-generation}
 
 Generate the client side code in a similar fashion as we did for the
@@ -293,7 +293,7 @@ java -jar swagger-codegen-cli.jar generate \
     -D supportPython2=true
 \end{lstlisting}
 
-\subsection{Install the client side code
+\subsubsection{Install the client side code
 package:}\label{install-the-client-side-code-package}
 
 Although we could have installed the client in the same python pyenv or
@@ -312,7 +312,7 @@ pip install -r requirements.txt
 python setup.py install
 \end{lstlisting}
 
-\subsection{Using the client API to interact with the REST
+\subsubsection{Using the client API to interact with the REST
 service}\label{using-the-client-api-to-interact-with-the-rest-service}
 
 Under the directory \emph{swagger\_example/client/cpu} you will find a
@@ -345,7 +345,7 @@ actually works. We are expecting to see a return similar to this:
 Obviosly, we could have applied additional cleanup of the information
 returned by the python code, such as removing duplicated spaces.
 
-\section{Towards a Distributed Client
+\subsection{Towards a Distributed Client
 Server}\label{towards-a-distributed-client-server}
 
 Although we develop and run the example on one localhost machine, you
@@ -355,7 +355,7 @@ a local laptop or workstation to deploy the client side code. In this
 case please make changes on the API definition accordingly, e.g., the
 \textbf{host} value.
 
-\section{Exercises}\label{s:swagger-exercises}
+\subsection{Exercises}\label{s:swagger-exercises}
 
 \begin{exercise}
   In Section \ref{s:step-1-define-your-rest-service}, we introduced a
