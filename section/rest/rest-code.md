@@ -80,31 +80,26 @@
 	import requests
 	import json
 
-
 	def get_all():
 	    response = requests.get("http://127.0.0.1:5000/student")
-	    print json.dumps(response.json(), indent=4, sort_keys=True)
+	    print(json.dumps(response.json(), indent=4, sort_keys=True))
 
 
 	def save_record():
 	    headers = {
-	    	'Content-Type': 'application/json',
+		'Content-Type': 'application/json'
 	    }
 
-	    data = '{"firstname":"Jane",
-		     "lastname":"Doe",
-		     "school":"ISE",
-		     "university":"Indiana University",
-		     "email":"jane@iu.edu"}'
+	    data = '{"firstname":"Jane","lastname":"Doe","school":"ISE","university":"Indiana University","email":"jane@iu.edu"}'
 
-            response = requests.post('http://localhost:5000/student/',
-			              headers=headers, 
-				      data=data)
+	    response = requests.post('http://localhost:5000/student/',
+		                      headers=headers,
+		                      data=data)
 
-      	    print(response.json())
+	    print(response.json())
 
-
-	get_all()
+	save_record()
+	#get_all()
 
 ## Run Python Client
 	python client.py
