@@ -37,44 +37,43 @@ server's basic CPU info. The example specification in yaml is as
 follows:
 
 \begin{lstlisting}
-  swagger: "2.0"
-  info: 
-    version: "0.0.1"
-    title: "cpuinfo"
-    description: "A simple service to get cpuinfo as an example of using swagger-2.0 specification and codegen"
-    termsOfService: "http://swagger.io/terms/"
-    contact: 
-      name: "Cloudmesh REST Service Example"
-    license: 
-      name: "Apache"
-  host: "localhost:8080"
-  basePath: "/api"
-  schemes: 
-    - "http"
-  consumes: 
-    - "application/json"
-  produces: 
-    - "application/json"
-  paths: 
-    /cpu:
-      get: 
-        description: "Returns cpu information of the hosting server"
-        produces: 
-          - "application/json"
-        responses: 
-          "200":
-            description: "CPU info"
-            schema: 
-              $ref: "#/definitions/CPU"
-
-  definitions:
-    CPU:
-      type: "object"
-      required: 
-        - "model"
-      properties: 
-        model:
-          type: "string"
+swagger: "2.0"
+info: 
+  version: "0.0.1"
+  title: "cpuinfo"
+  description: "A simple service to get cpuinfo as an example of using swagger-2.0 specification and codegen"
+  termsOfService: "http://swagger.io/terms/"
+  contact: 
+    name: "Cloudmesh REST Service Example"
+  license: 
+    name: "Apache"
+host: "localhost:8080"
+basePath: "/api"
+schemes: 
+  - "http"
+consumes: 
+  - "application/json"
+produces: 
+  - "application/json"
+paths: 
+  /cpu:
+    get: 
+      description: "Returns cpu information of the hosting server"
+      produces: 
+        - "application/json"
+      responses: 
+        "200":
+          description: "CPU info"
+          schema: 
+            $ref: "#/definitions/CPU"
+definitions:
+  CPU:
+    type: "object"
+    required: 
+      - "model"
+    properties: 
+      model:
+        type: "string"
 \end{lstlisting}
 % $
 

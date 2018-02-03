@@ -802,44 +802,122 @@ accordingly from week to week.
 
 \end{WARNING}
 
+\subsection{Week 1. Administration}
 
-\subsubsection{Week 2. REST for Cloud computing}
+We have explained how to use piazza which we will be using for class
+communication. Students that missed that lecture are responible for
+working with TAs to catch up.
+
+\subsection{Week 1 and 3. Introdcution to Cloud Computing}
+
+A number of presentations have been posted to introduce you to ths
+Class.
+
+\TODO{Tyler: include the links to Geoffreys lecture he presented}
+
+This introduction has been continued in Week 3 of the class by
+Geoffrey posting additional lectures.
+
+\TODO{Tyler: include the links to Geoffreys lectures he presented}
+
+
+\subsection{Week 2. REST for Cloud computing }
+
+We will be starting the class with introducing you to REST services
+that provide a foundation for setting up services in the cloud and to
+intercat with these services. As part of this class we will be
+revisiting the REST services and use them to deploy them on a cloud as
+well as develop our own AI based rest services in the second half of
+the class. 
+
+To get you started you need to read the follwoing sections:
+
+An introduction to rest is provided in Section \ref{c:rest}. It also
+provides a video recording of the material that was presented in
+class.
+
+\WHERE{\YES}{s:rest-intro}{}
+
+Next, we present you with information on how to easily create a rest
+service with FlaskRESTFUL a libraruy that makes the creation of web
+services in python useing an object oriented approach easy. A Lab was
+held that introduced you to developing such a service
+
+\WHERE{\YES}{s:rest-flask}{}
+
+A number of contributions from students have since been made including
+the development effort for this lab. Links to this work can be found
+at
+
+\URL{https://github.com/cloudmesh-community/hid-sp18-505/everest}
+Link will change to 
+\URL{https://github.com/cloudmesh-community/hid-sp18-505/rest}
+\URL{https://github.com/cloudmesh-community/hid-sp18-409/tree/master/rest}
+
+\TODO{TYler: work with 505 to rename everest to rest, ubdate handbook
+  when done}
+
+Next, we introduced you to Python Eve which ia a framework that allows
+you to define rest services with schemas. This is important as it
+first allows you to easily define them while having just to do a very
+minimal set of programming. Second, it allows you via Eve to make sure
+you define a well designed data model that you can communicate to the
+users of the REST service.
+
+\WHERE{\YES}{s:eve-intro}{}
+
+In the Lab that may spawn multiple weeks you will be developing a
+Flask or Eve rest service.  The REST service retrieves information
+form your computer and exposes it to the client. You can chose what
+you like to present, but we want that all students in class do a
+different information. TAs are working with you which information you
+expose. A detailed Assignment is posted and coordinated in piazza
+about this. YOu will be writing two services. One that uses flask
+features, the other one that uses a database schema using Eve. The
+entire class can openly collaborate with each other on this task. The
+code is to be checcked in into your github repository. Information of
+interrest include memory available of the computer, cpu type and so
+on. This is not read from a text file but life queried.
+
+\TODO{Tyler: add url to assignment on piazza. Describe how each
+  student gets a unique assignment. Coordinate that assignment.}
+
+
+\subsection{Week 2-3. Setting up your development environment}
+
+It is important that you have a development environment to conduct the
+class assignments. We recommend that you use virtual box and use
+ubuntu. We have provided an extensive set of material for you to
+achieve this. Please consult additional resources form the Web
+
+The material includes:
+
+\TODO{Tyler: please include links to the sections}
 
 \begin{itemize}
-\item Introduction to rest
-\item Practical programming of a rest service in eve
-\item Exercise: develop a rest service that returns some real
-  information, such as memory of the computer, cpu type and so
-  on. This is not read from a text file but life queried.
-\item Exercise: show the process list in a RESET service
-\item Exersise (Week 2): A+ projects develop REST services for big
-  data while proposing a useful schema so it can be contributed to
-  NIST
+
+\item Set up virtual box
+
+\item Install ubuntu on the virtual box
+
+\item Install an editor to develop python programs. We recommend
+  pyCharm or simply emacs.
+
+\item Using pyenv for multi version python installs
+
 \end{itemize}
-
-\subsubsection{Week 2-3. Setting up your development environment}
-
-In this week we will work with you to complete the set up of your
-development environment. We will introduce you to lectures about
-Python programmig and the use pf PyCharm as editor.
 
 Technologies covered:	piazza,	git,	pycharm,	virtualbox,	pyenv,	python
 
 Exersise: Continue to work on REST service.
 
-\subsubsection{Week 3. Overview of Cloud Services}
-
-We will be introducing you how to use Cloud services offored via a
-number of Cloud providers. Topics covered include: overview of AWS,
-overview of Openstack, libcloud, and boto
-
-\subsubsection{Week 4. Introduction to simple Containers}
+\subsection{Week 4. Introduction to simple Containers}
 
 We will be providing an introduction to containers and container
 technologies. Excercises will include to run the REST services that we
 developed earlier to start in containers and utilize them.
 
-\subsubsection{Week 5. Introduction to Container Clusters}
+\subsection{Week 5. Introduction to Container Clusters}
 
 We will be providing you with an introduction on how to not use one
 server, but multiple servers to run containers on. This includes
@@ -848,14 +926,20 @@ Exercises include the deployment of minikube that enables you to run
 kubernetes on your computers. Alternatively access to a docker swarm
 cluster may be provided.
 
-\subsubsection{Week 6. Map Reduce}
+\subsection{Week 6. Map Reduce}
 
 In this section we will introduce you to the concept of Map reduce. We
 will discuss systems such as Hadoop and Spark and how they differ. You
 will be deploying via a container hadoop on your machine and use it to
 gain hands on experience.
 
-\subsubsection{Week 7. Multi cloud environments}
+\subsection{Week 7. Overview of Cloud Services}
+
+We will be introducing you how to use Cloud services offored via a
+number of Cloud providers. Topics covered include: overview of AWS,
+overview of Openstack, libcloud, and boto
+
+\subsection{Week 8. Multi cloud environments}
 
 We will teach you how to create a multi cloud shell while leveraging
 an abstract programming interface to easily switch betwen multiple
@@ -865,7 +949,7 @@ containers, you can develop such interfaces also for containers
 including frameworks such as kubernetes. We will be using libcloud to
 simplify the abstraction.
 	
-\subsubsection{Week 8. Cloud Data and Applications}
+\subsection{Week 8. Cloud Data and Applications}
 
 We will cover a number of Application examples for Cloud computing. In
 the second part we will focus on CLoud Data Services and how we access
@@ -874,7 +958,7 @@ services. THis includes your own computer, box and google which both
 are offered at IU.
 
 
-\subsubsection{Other weeks}
+\subsection{Other weeks}
 
 All excersises in these weeks will develop REST services that {\em
   expose} machine leraning algorithms as service. Data will be either
