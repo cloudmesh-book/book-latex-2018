@@ -21,7 +21,9 @@ true independence between applications and infrastructure and
 developers and IT ops to unlock their potential and creates a model
 for better collaboration and innovation.
 
-![Docker Containers](https://www.docker.com/sites/default/files/Package%20software%40x2.png)
+![Docker Containers](images/container-1.png)
+
+Image Source [https://www.docker.com/sites/default/files/Package%20software%40x2.png)]
 
 ## Install Docker
 
@@ -113,7 +115,9 @@ Kubernetes is
 
 ## What are containers?
 
-![Kubernetes Containers](https://d33wubrfki0l68.cloudfront.net/e7b766e0175f30ae37f7e0e349b87cfe2034a1ae/3e391/images/docs/why_containers.svg) Image source: 
+![Kubernetes Containers](images/why-container.svg) 
+
+Image source: [https://d33wubrfki0l68.cloudfront.net/e7b766e0175f30ae37f7e0e349b87cfe2034a1ae/3e391/images/docs/why_containers.svg]
 
 ## Basic Units
 
