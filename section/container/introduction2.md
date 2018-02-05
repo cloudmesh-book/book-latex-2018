@@ -115,7 +115,7 @@ Kubernetes is
 
 ## What are containers?
 
-![Kubernetes Containers](images/why-containers.svg) 
+![Kubernetes Containers](images/why_containers.svg) 
 
 Image source: [https://d33wubrfki0l68.cloudfront.net/e7b766e0175f30ae37f7e0e349b87cfe2034a1ae/3e391/images/docs/why_containers.svg]
 
