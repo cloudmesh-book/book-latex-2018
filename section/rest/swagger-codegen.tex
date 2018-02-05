@@ -1,14 +1,16 @@
 \chapterimage{rest.png} 
 
-\section{REST Service Generation with
-Swagger} \label{c:swagger-codegen}
+\section{REST Service Generation with Swagger}
+\label{c:swagger-codegen}
+
+\video{REST}{36:02}{Swagger}{https://youtu.be/0_Ub13py_K8}
 
 In this subsection we are discussing how to use OpenAPI 2.0 and Swagger
 Codegen to define and develop a REST Service.
 
 We assume you have been familiar with the concept of REST service,
-OpenAPI and Swagger as discussed in Section
-\ref{s:managing-custom-python-installs}.
+OpenAPI and Swagger as discussed in Sections
+\ref{s:rest-intro} and \ref{S:swagger-specification}.
 
 We will use a simple example to demonstrate the process of developing a
 REST service with Swagger/OpenAPI 2.0 specification and the tools
@@ -88,11 +90,33 @@ server side stub code easily.
 Environment}\label{setup-the-codegen-environment}
 
 You will need to \href{https://swagger.io/docs/swagger-tools/}{install
-the Swagger Codegen tool} if not yet done so.
+the Swagger Codegen tool} if not yet done so. For OSX we recommend
+that you use the homebrew install via 
 
-For the current stable release, the \texttt{.jar} file can be downloaded
+\begin{lstlisting}
+brew install swagger-codegen
+\end{lstlisting}
+
+On Ubuntu you can install swagger as follows (update the version as needed):
+
+\begin{lstlisting}
+ mkdir ~/swagger
+cd ~/swagger
+wget https://oss.sonatype.org/content/repositories/releases/io/swagger/swagger-codegen-cli/2.3.1/swagger-codegen-cli-2.3.1.jar
+alias swagger-codegen="java -jar ~/swagger/swagger-codegen-cli-2.3.1.jar"
+\end{lstlisting}
+
+Add the alias to your \verb|.bashrc| or \verb|.bash_profile| file. After you start a
+new terminal you can use in that terminal now the command 
+
+\begin{lstlisting}
+swagger-codegen
+\end{lstlisting}
+
+
+For other platforms you can just use the \texttt{.jar} file, which can be downloaded
 from
-\href{https://oss.sonatype.org/content/repositories/releases/io/swagger/swagger-codegen-cli/2.2.1/swagger-codegen-cli-2.2.1.jar}{this
+\href{https://oss.sonatype.org/content/repositories/releases/io/swagger/swagger-codegen-cli/2.3.1/swagger-codegen-cli-2.3.1.jar}{this
 link}.
 
 Also make sure Java 7 or 8 is installed in your system. To have a well
@@ -108,6 +132,16 @@ your system, you can run the following to generate the server side stub
 code:
 
 \begin{lstlisting}
+swagger-codegen generate \
+    -i ~/cloudmesh/cpu.yaml \
+    -l python-flask \
+    -o ~/cloudmesh/swagger_example/server/cpu/flaskConnexion \
+    -D supportPython2=true
+\end{lstlisting}
+
+or if you have not created an alias 
+
+\begin{lstlisting}
 java -jar swagger-codegen-cli.jar generate \
     -i ~/cloudmesh/cpu.yaml \
     -l python-flask \
@@ -115,9 +149,11 @@ java -jar swagger-codegen-cli.jar generate \
     -D supportPython2=true
 \end{lstlisting}
 
+
+
 In the specified directory under \emph{flaskConnexion} you will find the
 generated python flask code, with python 2 compatibility. It is best to
-place the swagger code under the directory \textasciitilde{}/cloudmesh
+place the swagger code under the directory \verb|~/cloudmesh|
 to have a location where you can easily find it. If you want to use
 python 3 make sure to chose the appropriate option. To switch between
 python 2 and python 3 we recommend that you use pyenv as discussed in

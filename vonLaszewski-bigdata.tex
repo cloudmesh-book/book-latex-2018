@@ -20,7 +20,8 @@ part/dev}
 
 \input{format/book-format}
 
-\graphicspath{{./}{images/}{notebooks/opencv/}{notebooks/}{notebooks/facedetection/}{notebooks/fingerprint}{section/cluster/pi/images/}}
+\graphicspath{{./}{images/}{notebooks/opencv/}{notebooks/}{notebooks/facedetection/}{notebooks/fingerprint}
+  {section/cluster/pi/images/}{section/container/}}
 
 \chapterimage{water.png} % Chapter heading image
 
@@ -148,8 +149,15 @@ part/dev}
 
 %\include{notebooks/scikit-learn-k-means.tex}
 
-\begin{comment}
 \part{Draft Chapters}
+
+\include{section/container/introduction.tex}
+\include{section/container/introduction2.tex}
+\include{section/container/docker.tex}
+\include{section/container/docker-fs.tex}
+
+
+\begin{comment}
 
 \include{section/cluster/pi/container}
 \include{part/container}
