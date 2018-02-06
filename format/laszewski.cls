@@ -25,6 +25,7 @@
 %-------------------------------------------------------------------------------
 
 \usepackage{comment}
+\usepackage{shorttoc}
 \usepackage{markdown}
 \usepackage{todonotes}
 \usepackage{fancyvrb}
