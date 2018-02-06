@@ -2,10 +2,9 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %---------------------------------------------
 
-\documentclass[11pt,fleqn]{book} 
+\documentclass{format/laszewski} 
 
 \usepackage{markdown}
-\usepackage{fontawesome}
 \newcommand{\TITLE}{Lecture Notes\\Introduction to Cloud Computing}
 \newcommand{\SUBTITLE}{Theory and Practice}
 %\newcommand{\AUTHOR}{Gregor von Laszewski}
@@ -15,16 +14,25 @@
 \newcommand{\EMAIL}{~}
 
 
-\input{format/book-format}
+\include{format/book-format}
+%\include{section/helps/book-compile}
+%\include{section/rest/rest}
+%\include{section/rest/swagger-codegen}
 
-\graphicspath{{./}{images/}{section/cluster/pi/images/}}
+%\include{part/syllabus}
+
+
+
+\include{section/assignments}
+
+
+\begin{comment}
+\include{section/prg/python-big-data}
 
 \include{section/python-cmd}
 \include{section/wordcount}
-
-
 \include{section/ubuntu}
-\include{section/ssh}
+
 \include{section/refcards}
 \include{section/datasets}
 \include{section/ansible}
@@ -36,40 +44,14 @@
 \include{section/vis}
 \include{section/course1}
 
-
-
-%\part{Linux}
-%\include{section/linux}
-
-%\include{part/part-doc}
-
-%\include{part/part-doc}
+\end{comment}
 
 %\include{section/container/docker}
 %\include{section/container/docker-fs}
 
-%\include{part-preface}
+%\include{part/pi}
 
-%\include{part-syllabus}
-
-%\include{part-i524}
-
-%\include{part-doc}
-
-%\include{part-pi}
-
-%\include{section/doc/plagiarism}
 %\include{section/art/sentient}
-
-
-%\include{part-dev}
-
-%\include{part-container}
-%\include{part-icloud}
-
-\include{part-chameleon}
-
-
 
 
 %----------------------------------------------------------------------------------------

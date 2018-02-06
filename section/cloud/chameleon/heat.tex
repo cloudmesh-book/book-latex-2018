@@ -1,4 +1,4 @@
-\chapter{HEAT}
+\section{HEAT}
 
 \label{C:cc-heat}
 
@@ -23,7 +23,7 @@ of such clusters. We call this image + template combination
 complex~appliance because it consists of more than just the image (i.e.,
 appliance).
 
-\section{Supporting Complex Appliances}
+\subsection{Supporting Complex Appliances}
 
 In a nutshell, complex appliances allow you to specify not only what
 image you want to deploy but also on how many nodes you want to deploy
@@ -59,7 +59,7 @@ more about Heat, please refer to its
 \href{http://docs.openstack.org/developer/heat/}{official
 documentation}.
 
-\section{Chameleon Appliance Catalog}
+\subsection{Chameleon Appliance Catalog}
 
 Our \href{https://www.chameleoncloud.org/appliances/}{Appliance Catalog}
 has several complex appliances for popular technologies that people want
@@ -71,7 +71,7 @@ corner representing a group of machines, as shown in the screenshot:
 
 \includegraphics[width=0.5\columnwidth]{images/chameleon/NFS.png}
 
-\section{Deployment}
+\subsection{Deployment}
 
 We will explain how to launch a complex appliance based on our
 \href{https://www.chameleoncloud.org/appliances/25/}{NFS share
@@ -172,7 +172,7 @@ and information about them. In the ``Events'' tab you will see
 information about the history of the deployment so far. In Template you
 will see the template that was used to deploy this stack.
 
-\section{Heat Template}
+\subsection{Heat Template}
 
 The NFS share appliance deploys:
 
@@ -343,7 +343,7 @@ outputs:
 \end{verbatim}
 \end{footnotesize}
 
-\section{Customizing an existing template}
+\subsection{Customizing an existing template}
 
 Customizing an existing template is a good way to start developing your
 own. We will use a simpler template than the previous example to start
@@ -612,7 +612,7 @@ At this stage, we have fully recreated the NFS share appliance starting
 from the Hello World one! The next section will explain how to write a
 new template from scratch.
 
-\section{Writing a new template}\label{writing-a-new-template}
+\subsection{Writing a new template}\label{writing-a-new-template}
 
 You may want to write a whole new template, rather than customizing an
 existing one. Each template should follow the same layout and be
@@ -631,7 +631,7 @@ composed of the following sections:
   Outputs
 \end{itemize}
 
-\subsection{Heat template version}\label{heat-template-version}
+\subsubsection{Heat template version}\label{heat-template-version}
 
 Each Heat template has to include the heat\_template\_version key with a
 valid version of HOT (Heat Orchestration Template). Chameleon bare-metal
@@ -644,7 +644,7 @@ access to all supported features:
 
 \texttt{heat\_template\_version:\ 2015-10-15}
 
-\subsection{Description}\label{description}
+\subsubsection{Description}\label{description}
 
 While not mandatory, it is good practice to describe what ~is deployed
 and configured by your template. It can be on a single line:
@@ -666,7 +666,7 @@ description: >
 \end{verbatim}
 \end{footnotesize}
 
-\subsection{Resources}\label{resources}
+\subsubsection{Resources}\label{resources}
 
 The resources section is required and must contain at least one resource
 definition. A
@@ -703,7 +703,7 @@ If you know of another resource that you would like to use and think it
 should be supported by the OpenStack services on Chameleon bare-metal,
 please let us know via our help desk.
 
-\subsection{Parameters}\label{parameters}
+\subsubsection{Parameters}\label{parameters}
 
 Parameters allow users to customize the template with necessary or
 optional values. For example, they can customize which Chameleon
@@ -716,7 +716,7 @@ providing a pre-filled selection box in the web interface.
 \href{http://docs.openstack.org/developer/heat/template_guide/hot_spec.html\#parameter-constraints}{More
 details about constraints}~are available in the Heat documentation.
 
-\subsection{Outputs}\label{outputs}
+\subsubsection{Outputs}\label{outputs}
 
 Outputs allow template to give information from the deployment to users.
 This can include usernames, passwords, IP addresses, hostnames, paths,
@@ -738,7 +738,7 @@ Generally values will be calls to get\_attr, get\_param, or some other
 function to get information from parameters or resources deployed by the
 template and return them in the proper format to the user.
 
-\section{Sharing new complex
+\subsection{Sharing new complex
 appliances}\label{sharing-new-complex-appliances}
 
 If you have written your own complex appliances
@@ -760,9 +760,9 @@ string to your appliance. Once submitted, your appliance will be
 reviewed. We will get in touch if a change is needed, but if it's all
 good we will publish it right away!
 
-\section{Advanced topics}\label{advanced-topics}
+\subsection{Advanced topics}\label{advanced-topics}
 
-\subsection{All-to-all information
+\subsubsection{All-to-all information
 exchange}\label{all-to-all-information-exchange}
 
 The previous examples have all used user-data scripts to provide

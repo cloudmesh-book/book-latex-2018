@@ -1,8 +1,17 @@
 %-------------------------------------------------------------------------------
 %	DO NOT CHAMGE CONFIGURATION
 %
-\RequirePackage[hyphens]{url}
-\documentclass[11pt,fleqn]{book} 
+\documentclass{format/laszewski} 
+
+% \includeonly{part/container}
+
+\begin{comment}
+\includeonly{%
+section/cluster/pi/cluster,
+section/cluster/pi/container,%
+part/container,%
+part/dev}
+\end{comment}
 
 \newcommand{\TITLE}{Handbook of \\ Clouds and Big Data}
 \newcommand{\SUBTITLE}{Theory and Practice}
@@ -11,7 +20,8 @@
 
 \input{format/book-format}
 
-\graphicspath{{./}{images/}{notebooks/opencv/}{notebooks/}}
+\graphicspath{{./}{images/}{notebooks/opencv/}{notebooks/}{notebooks/facedetection/}{notebooks/fingerprint}
+  {section/cluster/pi/images/}{section/container/}}
 
 \chapterimage{water.png} % Chapter heading image
 
@@ -34,35 +44,65 @@
 %	END EXAMPLES
 %------------------------------------------------------------------------------
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	TODO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\listoftodos[Todo List]
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	PREFACE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\include{part/preface}
+\include{section/preface/update}
 
-%------------------------------------------------------------------------------
-%	INTRODUCTION
-%------------------------------------------------------------------------------
-
-\include{part/intro}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	SYLLABUS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \include{part/syllabus}
+\include{section/assignments}
 
-%-------------------------------------------------------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\part{Class Policies and Communication}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\include{section/preface/spring2018}
+\include{section/preface/overview}
+\include{section/preface/project}
+\include{section/doc/piazza}
+
+%\include{section/preface/assignments-sp18}
+%\include{section/preface/piazza}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	SCIENTIFIC WRITING
-%-------------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \include{part/doc}
  
-%-------------------------------------------------------------------------------
-%	LINUX
-%-------------------------------------------------------------------------------
 
-
-\part{Development Tools and Services}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\part{Development Tools}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \include{section/linux}
+\include{section/ssh}
+\include{section/cloud/ssh-futuregrid}
 \include{section/git/github}
 \include{section/virtualbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\part{Cloud Resources}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{section/futuresystems}
 \include{part/chameleon}
+
+
 
 %\include{section/git/git-techlist}
 
@@ -73,6 +113,15 @@
 \include{part/python-advanced}
 \include{part/python-cloudmesh}
 
+\part{Cloud Technologies}
+
+\include{section/rest/rest}
+\include{section/rest/swagger}
+\include{section/rest/swagger-spec}
+\include{section/rest/swagger-codegen}
+
+\include{section/cluster/pi/cluster}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % CLOUD
@@ -80,69 +129,64 @@
 
 \include{part/icloud} 
 
-\include{section/hadoop/hadoop}
+% \include{section/hadoop/hadoop}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\part{Big Data Applications and Analytics}
+% BIG DATA APPLICATIONS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%	CHAPTER PREFACE i523
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\include{section/preface/fall2017}
-\include{section/preface/overview}
-\include{section/preface/organization}
-\include{section/preface/project}
-\include{section/preface/assignments}
 \include{part/applications}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \part{Cloud and Big Data Technologies}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\include{section/i524/lectures}
+\include{part/i524}
+
 \include{section/i524/technologies}
 
 
 
-\begin{comment}
-%\part{Python Notebooks}
-
-%\include{notebooks/facedetection.tex}
 %\include{notebooks/scikit-learn-k-means.tex}
-%\include{notebooks/fingerprint_matching.tex}
 
+\part{Draft Chapters}
+
+\include{section/container/introduction.tex}
+\include{section/container/introduction2.tex}
+\include{section/container/docker.tex}
+\include{section/container/docker-fs.tex}
+
+
+\begin{comment}
+
+\include{section/cluster/pi/container}
 \include{part/container}
+
 \include{part/dev}
+
 \include{part/iot}
 \end{comment}
 
 %\include{sentient}
 
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%	FORMAT
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\include{format/format}
-
-
+\begin{comment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	Appendix
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\part{Appendix}
+\part{Appendix}
 
+\input{section/icloud/assignment/assignment}
 
 %\cite{book_key}
 %\cite{article_key}
+\end{comment}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapterimage{water.png} 
 \chapter*{Bibliography}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \addcontentsline{toc}{chapter}{\textcolor{ocre}{Bibliography}}

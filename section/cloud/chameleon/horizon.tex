@@ -1,9 +1,9 @@
 \FILENAME
 
-\chapter{Horizon Graphical User Interface}
+\section{Horizon Graphical User Interface}
 \label{C:cc-horizon}
 
-\section{Configure resources}
+\subsection{Configure resources}
 
 Once your lease is started, you are almost ready to start an instance.
 But first, you need to make sure that you will be able to connect to
@@ -92,7 +92,7 @@ browser to see the floating IP).
 
 \includegraphics[width=0.8\columnwidth]{images/chameleon/Screen-Shot-2016-10-26-at-16-26-54.png}
 
-\section{Interact with resources}
+\subsection{Interact with resources}
 
 Now you should be able to connect to the instance via SSH using the cc
 account. In a terminal, type ssh
@@ -135,7 +135,7 @@ run commands with root privileges by prefixing them with~\texttt{sudo}.
 To completely~switch~user and become root, use
 the~\texttt{sudo\ su\ -\ root}~command.
 
-\subsection{Snapshot an instance}
+\subsubsection{Snapshot an instance}
 
 All instances in Chameleon, whether KVM or bare-metal, are running off
 disk images. The content of these disk images can be snapshotted at any
@@ -173,13 +173,13 @@ to our
 \href{https://www.chameleoncloud.org/docs/user-guides/ironic/\#snapshotting_an_instance}{image
 management guide}.}
 
-\section{Use FPGAs}
+\subsection{Use FPGAs}
 
 Consult the
 \href{https://www.chameleoncloud.org/docs/bare-metal-user-guide/fpga/}{dedicated
 page}~if you would like to use the FPGAs available on Chameleon.
 
-\section{Next Step}
+\subsection{Next Step}
 
 Now that you have created some resources, it is time to interact with
 them! You will find instructions to the next step by visiting the

@@ -202,12 +202,12 @@ as a separate element.
 
 Thus we probably want a table generator such as
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 class Database (object):
    @staticmethod
    def generate (dictionary):
       # implement me
-\end{minted}
+\end{lstlisting}
 
 Additionally we want to create convenience methods for adding,
 deleting, and searching information
@@ -218,11 +218,11 @@ deleting, and searching information
 Python provides the feature of a context that we are well familiar
 with from file management. An example is:
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 with open('/tmp/gregor.txt', 'wt') as f:
     f.write('Hello Gregor')
 # after this, the file is automatically closed
-\end{minted}
+\end{lstlisting}
 
 If we look at this example it is desirable to develop at least two
 context for multicloud envireonments. The first is to manage virtual
@@ -237,7 +237,7 @@ examples.
 
 When defining the following cloud context 
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 class Cloud:
     
     def __init__(self, name):
@@ -252,15 +252,15 @@ class Cloud:
 
     def machine(self, name, action):
         print (name, action)
-\end{minted}
+\end{lstlisting}
 
 we can issue conveniently commands such as the following 
 
-\begin{minted}{python}
+\begin{lstlisting}{python}
 cloud = 'chameleon'
 with Cloud(cloud) as c:
     vm = c.machine('vm1', 'start')
-\end{minted}
+\end{lstlisting}
 
 It is obvious that through this abstraction we can formulate a
 tempalted bahavior such as starting a virtual machine and through the

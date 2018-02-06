@@ -83,23 +83,58 @@ name of the command.
   tree & list the directories in graphical form \\
   cd \emph{dirname} & Change directory to \emph{dirname} \\
   mkdir \emph{dirname} & create the directory \\
+  rmdir \emph{dirname} & delete the directory \\
   pwd & print working directory \\
   rm \emph{file} & remove the file \\
   cp \emph{a} \emph{b} & copy file \emph{a} to \emph{b} \\
   mv \emph{a} \emph{b} & move/rename file \emph{a} to \emph{b}\\
   cat \emph{a} & print content of file\emph{a}\\
-  cat - n &  (assignment) \\
+  cat -n &  (assignment) \\
   less \emph{a} & print paged content of file \emph{a}\\
   head -5 \emph{a} & Display first 5 lines of file \emph{a}\\
   tail -5 \emph{a} & Display last 5 lines of file \emph{a}\\
   du -hs . & show in human readable form the space used by the current
              directory\\
-  wc &  (assignment) \\
-  sort &  (assignment) \\
-  tar &  (assignment) \\
+  df -h & show the details of the disk file system \\
+  wc {\em filename}&  counts the word in a file \\
+  sort {\em filename} &  sorts the file \\
+  uniq {\em filename} &  displays only uniq entries in the file \\
+  tar -xvf {\em dir} &  tars up a compressed version of the directory \\
   rsync &  (assignment) \\
   gzip &  (assignment) \\
+  gunzip &  (assignment) \\
   bzip2 &  (assignment) \\
+  bunzip2 &  (assignment) \\
+  clear & \\
+  touch & \\
+  who & \\
+  whoami & \\
+  echo & \\
+  data & \\
+  logout & \\
+  exit & \\
+  kill & \\
+  ps & \\
+  sleep & \\
+  uptime & \\
+  time & \\
+  date & \\
+  find & \\
+  diff & \\
+  hostname & \\
+  which & \\
+  tail & \\
+  head & \\
+  top & \\
+  locate {\em filename} & \\
+  grep & \\
+  chmod ug+rw {\em filename} & \\
+  chown & \\
+  history & \\
+  sudo & \\
+  su & \\
+  uname & \\
+  set -o emacs & \\
   & \\
   
   %\hline
@@ -144,8 +179,8 @@ name of the command.
   last &  (assignment) \\
   free -tm &  (assignment) \\
   uname &  (assignment) \\
-  date &  (assignment) \\
-  time &  (assignment) \\
+  date &  prints the current date and time \\
+  time {\em command} &  prints the syste, real and user time \\
   shutdown -h ``shut down'' & (assignment) \\
   & \\
 
@@ -224,10 +259,10 @@ Ctrl + a & Return to the start of the line\\
 Ctrl + e & Go to the end of the line\\
 Ctrl + k & Cut everything after the cursor to a special clipboard\\
 Ctrl + y & Paste from the special clipboard \\
-Ctrl + d & Log out of current session, similar to exit \\
+Ctrl + d & Logout of current session, similar to exit \\
 \end{tabular}
 
-\section{.bashrc and .bash\_profile}\label{bashrc-and-.bash_profile}
+\section{.bashrc and .bash\_profile}
 
 Usage of a particular command and all the attributes associated with it,
 use `man' command. Avoid using \verb|rm -r| command to delete files
@@ -245,21 +280,35 @@ More Information
 
 \url{https://cloudmesh.github.io/classes/lesson/linux/refcards.html}
 
-\section{Exercise}
+\section{Exercises}
 
-\begin{description}
-\item[Linux.1:]
+\begin{exercise}
+\label{E:Linux.1}
 Familiarize yourself with the commands
-\item[Linux.2:]
+\end{exercise}
+
+\begin{exercise}
+\label{E:Linux.2}
 Find more commands that you find useful and add them to this page.
-\item[Linux.3:]
+\end{exercise}
+
+\begin{exercise}
+\label{E:Linux.3}
 Use the sort command to sort all lines of a file while removing
 duplicates.
-\item[Linux.4:] In Table \ref{T:shell-commands} you will find a number
+\end{exercise}
+
+\begin{exercise}
+\label{E:Linux.4} In Table \ref{T:shell-commands} you will find a number
   of commands with (assignment). Develop descriptions that you will
   contribute and add to the manual with a pull request. Work in a team
   so that only one pull request is issued. Do not only provide the
   description, but also a real example as showcased within the table.
-\item[Linux.4:] Should there be other commands listed in the table. If
+\end{exercise}
+
+\begin{exercise}
+\label{E:Linux.4} Should there be other commands listed in the table. If
   so which? Create a pull request for them. 
-\end{description}
+\end{exercise}
+
+

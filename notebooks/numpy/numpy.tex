@@ -10,147 +10,147 @@ We provide a short introduction to Numpy.
 First we import the modules needed for this introduction and abreviate
 them with the \texttt{as} feature of the import statement
 
-\begin{verbatim}
+\begin{lstlisting}
 import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt
-\end{verbatim}
+\end{lstlisting}
 
 Now we showcase some features of Numpy.
 
-\section{Float Range}\label{float-range}
+\section{Float Range}
 
 \texttt{arange()} is like \texttt{range()}, but for floating-point
 numbers.
 
-\begin{verbatim}
+\begin{lstlisting}
 X = np.arange(0.2,1,.1)
-\end{verbatim}
+\end{lstlisting}
 
-\begin{verbatim}
+\begin{lstlisting}
 print (X)
-\end{verbatim}
+\end{lstlisting}
 
 We use this function to generate parameter space that can then be
 iterated on.
 
-\begin{verbatim}
+\begin{lstlisting}
 P = 10.0 ** np.arange(-7,1,1)
 
 print (P)
-\end{verbatim}
+\end{lstlisting}
 
-\begin{verbatim}
+\begin{lstlisting}
 for x,p in zip(X,P):
     print ('%f, %f' % (x, p))
-\end{verbatim}
+\end{lstlisting}
 
-\section{Arrays}\label{arrays}
+\section{Arrays}
 
 To create one dimensional arrays you use
 
-\begin{verbatim}
+\begin{lstlisting}
 a = np.array([1, 2, 3])   
-\end{verbatim}
+\end{lstlisting}
 
 To check some properties you can use the following
 
-\begin{verbatim}
+\begin{lstlisting}
 print(type(a))            # Prints "<class 'numpy.ndarray'>"
-\end{verbatim}
+\end{lstlisting}
 
-\begin{verbatim}
+\begin{lstlisting}
 print(a.shape)            # Prints "(3,)"
-\end{verbatim}
+\end{lstlisting}
 
 The shape indicates that in the first dimension, there are 3 elements.
 To print the actual values you can use
 
-\begin{verbatim}
+\begin{lstlisting}
 print(a)                  # Prints the values of the array
 print(a[0], a[1], a[2])   # Prints "1 2 3"
-\end{verbatim}
+\end{lstlisting}
 
 To change values you can use the index of the element or use any other
 python method to do so. IN our example we change the first element to
 \texttt{42}
 
-\begin{verbatim}
+\begin{lstlisting}
 a[0] = 42                 
 print(a)                  
-\end{verbatim}
+\end{lstlisting}
 
 To create more dimensional arrays you use
 
-\begin{verbatim}
+\begin{lstlisting}
 b = np.array([[1,2,3],[4,5,6]])    # Create a 2 dimensional array
 print(b.shape)                     # Prints "(2, 3)"
 print(b[0, 0], b[0, 1], b[1, 0])   # Prints "1 2 4"
-\end{verbatim}
+\end{lstlisting}
 
 \section{Array Operations}\label{array-operations}
 
 Let us first create some arrays with a predefined datatype
 
-\begin{verbatim}
+\begin{lstlisting}
 x = np.array([[1,2],[3,4]], dtype=np.float64)
 y = np.array([[5,6],[7,8]], dtype=np.float64)
-\end{verbatim}
+\end{lstlisting}
 
-\begin{verbatim}
+\begin{lstlisting}
 print (x)
-\end{verbatim}
+\end{lstlisting}
 
-\begin{verbatim}
+\begin{lstlisting}
 print(y)
-\end{verbatim}
+\end{lstlisting}
 
 To add the numbers use
 
-\begin{verbatim}
+\begin{lstlisting}
 print(x+y)
-\end{verbatim}
+\end{lstlisting}
 
 Other functions such as \texttt{-}, \texttt{*}, \texttt{/} behave as
 expected using elementwise oerations:
 
-\begin{verbatim}
+\begin{lstlisting}
 print(x-y)
-\end{verbatim}
+\end{lstlisting}
 
-\begin{verbatim}
+\begin{lstlisting}
 print(x*y)
-\end{verbatim}
+\end{lstlisting}
 
-\begin{verbatim}
+\begin{lstlisting}
 print(x/y)
-\end{verbatim}
+\end{lstlisting}
 
 To apply functions such as `sin' make sure you use the function provided
 by the numpy package such as \texttt{np.sin}. The list of functions is
 included in the manual at *
 \url{https://docs.scipy.org/doc/numpy/reference/routines.math.html}
 
-\begin{verbatim}
+\begin{lstlisting}
 print (np.sin(x))
-\end{verbatim}
+\end{lstlisting}
 
-\begin{verbatim}
+\begin{lstlisting}
 print (np.sum(x))
-\end{verbatim}
+\end{lstlisting}
 
 Computations can also be applied to columns and rows
 
-\begin{verbatim}
+\begin{lstlisting}
 print(np.sum(x, axis=0)) # sum of each column
 print(np.sum(x, axis=1)) # sum of each row
-\end{verbatim}
+\end{lstlisting}
 
-\section{Linear Algebra}\label{linear-algebra}
+\section{Linear Algebra}
 
 Linear algebra methods are also provided.
 
-\begin{verbatim}
+\begin{lstlisting}
 from numpy import linalg 
 
 A = np.diag((1,2,3))
@@ -159,14 +159,11 @@ w,v = linalg.eig(A)
 
 print ('w =', w)
 print ('v =', v)
-\end{verbatim}
+\end{lstlisting}
 
-\section{Resources}\label{resources}
+\section{Resources}
 
 \begin{itemize}
-\tightlist
-\item
-  \url{https://docs.scipy.org/doc/numpy/}
-\item
-  \url{http://cs231n.github.io/python-numpy-tutorial/\#numpy}
+\item \url{https://docs.scipy.org/doc/numpy/}
+\item \url{http://cs231n.github.io/python-numpy-tutorial/\#numpy}
 \end{itemize}
