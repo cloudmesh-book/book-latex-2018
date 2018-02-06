@@ -13,10 +13,10 @@ need a prior folder structure to do the installation properly.
 
 ### Create Directories
 
-'''
+```
 $ mkdir ~/software
 $ mkdir ~/zips
-'''
+```
 
 We keep these two folders to keep the softwares in one folder and the other 
 folder will keep the original zip files. 
