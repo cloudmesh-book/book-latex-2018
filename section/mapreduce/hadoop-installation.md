@@ -6,85 +6,51 @@ HDFS (Hadoop Distributed File System). In this tutorial our main focus is on
 using Hadoop 2.6.0 version along with the Yarn resource manager. We will be 
 focusing more on the Hadoop installation in this chapter. 
 
-## INSTALLATION OF HADOOP
+## Prerequisits
+
+We assume that you have emacs, ssh, and rsync installed
+
+	$ sudo apt-get install emacs
+	$ sudo apt-get install ssh
+	$ sudo apt-get install rsync
+
+### Install Java
+
+why can we not put a script in github thats does this?
+
+We also assume you have Java installed.
+
+	$ mkdir -p ~/cloudmesh/bin
+	$ cd ~/cloudmesh/bin
+	$ wget -c --header "Cookie: oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u161-b12/2f38c3b165be4555a1fa6e98c45e0808/jdk-8u161-linux-x64.tar.gz"
+	$ tar xvzf jdk-8u161-linux-x64.tar.gz
+
+## INSTALLATION OF HADOOP (use not all caps)
 
 First we will take a look on how to install Hadoop 2.6.0 on Ubuntu 16.04. We may
 need a prior folder structure to do the installation properly. 
 
-### Create Directories
 
-```
-$ mkdir ~/software
-$ mkdir ~/zips
-```
-
-We keep these two folders to keep the softwares in one folder and the other folder will keep the original zip files.
-
-In case you have not installed a text editor you need to install emacs or vim. Here let's use vim.
-
-### Install VIM
-
-```
-$ sudo apt-get install vim
-```
-
-The next important thing is to set up ssh to localhost. 
-
-### Install SSH and Rsync
-
-```
-$ sudo apt-get install ssh
-$ sudo apt-get install rsync
-```
-
-Then try to ssh into localhost :
-
-```
-$ ssh localhost
-```
-If it works make sure you exit by doing the following,
-
-```
-$ exit
-```
-
-### Install Java
-
-Here we need to install Java in the machine. If you have 
-already installed Java version, make sure you are using the recommended Java version in this tutorial. 
-
-```
-$ cd ~/software
-```
-
-```
-$ wget -c --header "Cookie: oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u161-b12/2f38c3b165be4555a1fa6e98c45e0808/jdk-8u161-linux-x64.tar.gz"
-```
-Unzip the files
-```
-$ tar xzf jdk-8u161-linux-x64.tar.gz
-```
-
-Then move the zip files to the zip folder
-
-```
-$ mv jdk-8u161-linux-x64.tar.gz ~/zips
-```
 ### Add Environmental Variables
 
 In Ubuntu the environmental variables are setup in a file called bashrc at it can be accessed the following way
 
-```
-$ vim ~/.bashrc
-```
+	$ emacs ~/.bashrc
+
+
+why can we not use echo and cat for this without editor?
+mention to make sure these ar not yet set... 
+
 
 In the opened file press Insert Key.
 Then copy and paste the following content in the end of the file. You can got to the end of the file by pressing
 ESC Then, SHIFT+G+A. This will take you to the final line of the bashrc file. 
 
+where is hadoop comming from
+
 ```
-export JAVA_HOME=~/software/jdk1.8.0_161
-export HADOOP_HOME=~/software/hadoop-2.6.0
+export JAVA_HOME=~/cloudmesh/bin/jdk1.8.0_161
+export HADOOP_HOME=~/cloudmesh/hadoop-2.6.0
 export YARN_HOME=$HADOOP_HOME
 export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
 export PATH=$HADOOP_HOME/bin:$JAVA_HOME/bin:$PATH
