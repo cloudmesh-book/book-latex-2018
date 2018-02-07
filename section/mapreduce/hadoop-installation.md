@@ -25,6 +25,8 @@ We also assume you have Java installed.
 	$ wget -c --header "Cookie: oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u161-b12/2f38c3b165be4555a1fa6e98c45e0808/jdk-8u161-linux-x64.tar.gz"
 	$ tar xvzf jdk-8u161-linux-x64.tar.gz
 
+can we not just create a script and host this in github?
+
 ## INSTALLATION OF HADOOP (use not all caps)
 
 First we will take a look on how to install Hadoop 2.6.0 on Ubuntu 16.04. We may
@@ -38,13 +40,6 @@ In Ubuntu the environmental variables are setup in a file called bashrc at it ca
 	$ emacs ~/.bashrc
 
 
-why can we not use echo and cat for this without editor?
-mention to make sure these ar not yet set... 
-
-
-In the opened file press Insert Key.
-Then copy and paste the following content in the end of the file. You can got to the end of the file by pressing
-ESC Then, SHIFT+G+A. This will take you to the final line of the bashrc file. 
 
 where is hadoop comming from
 
