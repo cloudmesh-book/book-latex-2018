@@ -1,6 +1,7 @@
 %-------------------------------------------------------------------------------
 %	DO NOT CHAMGE CONFIGURATION
 %
+\RequirePackage[hyphens]{url}
 \documentclass{format/laszewski} 
 
 % \includeonly{part/container}
@@ -18,10 +19,23 @@ part/dev}
 \newcommand{\AUTHOR}{Gregor von Laszewski\\Geoffrey C. Fox\\Judy Qiu}
 \newcommand{\EMAIL}{laszewski@gmail.com}
 
+\begin{document}
+\pagestyle{fancy} 
+
 \input{format/book-format}
 
-\graphicspath{{./}{images/}{notebooks/opencv/}{notebooks/}{notebooks/facedetection/}{notebooks/fingerprint}
-  {section/cluster/pi/images/}{section/container/}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% IMAGE DIRECTORIES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\graphicspath{%
+{./}%
+{images/}%
+{notebooks/opencv/}%
+{notebooks/}%
+{notebooks/facedetection/}%
+{notebooks/fingerprint}%
+{section/cluster/pi/images/}%
+{section/container/}}
 
 \chapterimage{water.png} % Chapter heading image
 
