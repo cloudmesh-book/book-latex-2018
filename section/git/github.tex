@@ -16,6 +16,8 @@ interact with git from the commandline (Section
 \ref{s:git-commands}). Than we will introduce you how you can
 contribute to this set of documentations with pull requests.
 
+
+
 \section{Obverview}\label{s:github}
 
 Github is a code repository that allows the development of code and
@@ -526,4 +528,156 @@ those tutorials. We found the following useful
 \label{E:Gitlab.5} Create a README.yml in your github account directory
   provided for you for class.  information
 \end{exercise}
+
+
+
+\section{Github Issues}\label{S:git-issues}
+
+\video{Github}{8:29}{Issues}{https://youtu.be/qozgBPQJx0A}
+
+
+When we work in teams or even if we work by ourselves, it is prudent to
+identify a system to coordinate your work. While conduction projects
+that use a variety of cloud services, it is important to have a system
+that enables us to have a cloud service that enables us to facilitate
+this coordination. Github provides such a feature through its {\em
+  issue} service that is embedded in each repository. 
+
+
+Issues allow for the coordination of tasks, enhancements, bugs, as
+well as self defined labeled activities. Issues are shared within your
+team that has access to your repository. Furthermore, in an open
+source project the issues are visible to the community, allowing to
+easily communicate the status, as well as a roadmap to new features. 
+
+This enables the community to participate also in reporting of
+bugs. Using such a system transforms the development of software from
+the traditional closed shop development toa truly open source
+development encouraging contributions from others. Furthermore it is
+also used as bug tracker in which not only you, but the community can
+communicate bugs to the project.
+
+\TODO{Tyler: Include image of the issues on hid-sample}
+
+\begin{comment}
+Figure ?? shows where to find the link to the git issues. An
+example issue list is shown in Figure ??.
+\end{comment}
+
+A good resource for learning more about issues is provided at 
+
+\URL{https://guides.github.com/features/issues/}
+
+\subsection{Git Issue Features}
+
+A git issue has the following features:
+
+\begin{description}
+\item [title] -- a short description of what the issue is about
+\item [description] a more detailed description. Descriptions allow
+  also to conveniently add check-boxed todo's.
+\item [label] a color enhanced label that can be used to easily
+  categorize the issue. YOu can define your own labels.
+\item [milestone] a milestone so you can identify categorical groups
+  issues as well as their due date. You can for example group all
+  tasks for a week in a milestone, or you could for example put all
+  tasks for a topic such as developing a paper in a milestone and
+  provide a deadline for it.
+\item[assignee] an assignee is the person that is responsible for
+  making sure the task is executed or on track if a team works on
+  it. Often projects allow only one assignee, but in certain cases it
+  is useful to assign a grou, and the group identifies if the task can
+  be split up and assigns them through check-boxed todo's.
+\item [comments] allow anyone with access to provide feedback via
+  comments.
+\end{description}
+
+\subsection{Github Markdown}
+
+Github uses markdown which we introduce you in Section
+  \ref{S:markdown}.
+
+As github has its own flavor of markdown we however also point you to 
+\URL{https://help.github.com/articles/basic-writing-and-formatting-syntax/}
+
+as a reference. We like to mention the special enhancements fo github's
+markdown that integrate well to
+support project management.
+
+
+
+\subsubsection{Task lists}
+
+Taks lists can be added to any description or comment in github issues
+To create a task list you can add to any item \verb|[ ]|. This includes a
+task to be done. To make it as complete simple change it to
+\verb|[x]|. Whoever the great feature of tasks is that you do not even have
+to open the editor but you can simply check the task on and of via a
+mouse click. An example of a task list could be 
+
+\begin{lstlisting}
+Post Bios
+
+* [x] Post bio on piazza
+* [ ] Post bio on google docs
+* [ ] Post bio on github
+* [ ] \(optional) integrate image in google docs bio
+\end{lstlisting}
+
+In case you need to use a \verb|(|have at the beginning ot the task
+text, you need to escape it with a \verb|\|
+
+\subsubsection{Team integration}
+
+A person or team on GitHub can be mentioned by typing the username
+proceeded by the \verb|@| sign. When posting the text in the issue, it
+will trigger a notification to them and allow them to react to it. It
+is even possible to notify entire teams, which are described in more
+detail at 
+
+\URL{https://help.github.com/articles/about-teams/}
+
+\subsubsection{Referencing Issues and Pull requests}
+
+Each issue has a number. If you use the \verb|#| followed by the issue
+number you can refer to it in the text which will also automatically
+include a hyperlink to the task. The same is valid for pull requests.
+
+\subsubsection{Emojis}
+
+Although github supports emojis such as \verb|:+1:| we do not use them
+typically in our class.
+
+
+\subsection{Notifications}
+
+Github allows you to set preferences on how you lik to receive
+notifications. You can receive them either via e-mail or the Web.
+This is controlled by configuring it in {\em your settings}, where
+you can set the preferences for participating projects as well as
+projects you decide to watch. To access the notifications you can
+simply look at them in the {\em notification} screen. In this screen
+when you press the ? you will see a number of commands that allow you
+to controll the notification when pressing on one of them.
+
+\subsection{cc}
+
+To carbon copy users in your issue text, simply use \verb|/cc|
+followed by the \verb|@| sign and their github user name.
+
+
+\subsection{Interacting with issues}
+
+Github has the ability to serach issues with a search query and a
+search language that you can find out more about it at 
+
+\url{https://guides.github.com/features/issues/#search}
+
+A dashboard gives convenient overviews of the issues. including a {\em
+  pulse} that lists todo's status if you use them in the issue
+description.
+
+
+
+
 

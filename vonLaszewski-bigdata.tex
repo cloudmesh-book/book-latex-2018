@@ -1,16 +1,41 @@
 %-------------------------------------------------------------------------------
 %	DO NOT CHAMGE CONFIGURATION
 %
+\RequirePackage[hyphens]{url}
 \documentclass{format/laszewski} 
+
+% \includeonly{part/container}
+
+\begin{comment}
+\includeonly{%
+section/cluster/pi/cluster,
+section/cluster/pi/container,%
+part/container,%
+part/dev}
+\end{comment}
 
 \newcommand{\TITLE}{Handbook of \\ Clouds and Big Data}
 \newcommand{\SUBTITLE}{Theory and Practice}
 \newcommand{\AUTHOR}{Gregor von Laszewski\\Geoffrey C. Fox\\Judy Qiu}
 \newcommand{\EMAIL}{laszewski@gmail.com}
 
+\begin{document}
+\pagestyle{fancy} 
+
 \input{format/book-format}
 
-\graphicspath{{./}{images/}{notebooks/opencv/}{notebooks/}{notebooks/facedetection/}{notebooks/fingerprint}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% IMAGE DIRECTORIES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\graphicspath{%
+{./}%
+{images/}%
+{notebooks/opencv/}%
+{notebooks/}%
+{notebooks/facedetection/}%
+{notebooks/fingerprint}%
+{section/cluster/pi/images/}%
+{section/container/}}
 
 \chapterimage{water.png} % Chapter heading image
 
@@ -44,12 +69,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \include{part/preface}
+\include{section/preface/update}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	SYLLABUS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \include{part/syllabus}
+\include{section/assignments}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -60,9 +87,9 @@
 \include{section/preface/spring2018}
 \include{section/preface/overview}
 \include{section/preface/project}
-\include{section/preface/assignments-sp18}
 \include{section/doc/piazza}
 
+%\include{section/preface/assignments-sp18}
 %\include{section/preface/piazza}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -100,6 +127,24 @@
 \include{part/python-advanced}
 \include{part/python-cloudmesh}
 
+\part{Cloud Technologies}
+
+\include{section/rest/rest}
+\include{section/rest/swagger}
+\include{section/rest/swagger-spec}
+\include{section/rest/swagger-codegen}
+\include{section/msg/mqtt}
+\include{section/msg/graphql}
+
+
+\part{Cloud Computing with Raspberry Pi}
+
+\include{section/cluster/pi/cluster}
+\include{section/cluster/pi/container}
+\include{section/cluster/pi/kubernetes}
+\include{section/cluster/pi/swarm}
+\include{section/cluster/pi/spark}
+\include{section/cluster/pi/slurm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % CLOUD
@@ -123,12 +168,24 @@
 
 \include{section/i524/technologies}
 
-\begin{comment}
+
 
 %\include{notebooks/scikit-learn-k-means.tex}
 
+\part{Draft Chapters and Parts}
+
+\include{section/container/introduction.tex}
+\include{section/container/introduction2.tex}
+\include{section/container/docker.tex}
+\include{section/container/docker-fs.tex}
+
+
+\begin{comment}
+
 \include{part/container}
+
 \include{part/dev}
+
 \include{part/iot}
 \end{comment}
 
@@ -149,7 +206,9 @@
 \end{comment}
 
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapterimage{water.png} 
 \chapter*{Bibliography}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \addcontentsline{toc}{chapter}{\textcolor{ocre}{Bibliography}}

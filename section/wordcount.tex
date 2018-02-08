@@ -2,15 +2,15 @@
 
 \subsection{Introduction}
 
-In this lesson we will demonstrate Python's \texttt{multiprocessing} API
+We will demonstrate Python's \texttt{multiprocessing} API
 for parallel computation by writing a program that counts how many times
 each word in a collection of documents appear.
 
 \subsection{Generating a Document Collection}
 
-Before we begin, let's write a script that will let us generate document
+Before we begin, let us write a script that will generate document
 collections by specifying the number of documents and the number of
-words per document. This will make benchmarking later straightforward.
+words per document. This will make benchmarking straightforward.
 
 To keep it simple, the vocabulary of the document collection will
 consist of random numbers rather than the words of an actual language:
@@ -261,6 +261,7 @@ and use Linux's \texttt{time} command:
 \begin{lstlisting}{language=bash}
 $ time python wordcount.py docs-1000-10000
 \end{lstlisting}
+% $
 
 The output contains the real run time and the user run time. real is
 wall clock time - time from start to finish of the call. user is the

@@ -16,15 +16,23 @@ LATEX=pdflatex
 #LATEX=pydflatex -k
 
 
-
-single: dest
-	latexmk -jobname=$(FILE) $(FLAGS) -pvc -view=pdf single
-
 g: dest
 	latexmk -jobname=$(FILE) $(FLAGS) -pvc -view=pdf $(FILE)
 
+test: dest
+	pdflatex $(FILE)
+
 gg: dest
 	pdflatex -shell-escape $(FILE)
+
+pdflatex:
+	make -f gg
+
+google:
+	gdrive update 1Mdd_TJcbXurJYRpG2gKCVqWmbhvED2Mp dest/vonLaszewski-bigdata.pdf
+
+single: dest
+	latexmk -jobname=single $(FLAGS) -pvc -view=pdf single
 
 c: dest
 	latexmk -jobname=$(FILE) $(FLAGS) -pvc -view=pdf chameleon
@@ -82,6 +90,8 @@ old:
 	$(LATEX) $(FILE) x 2
 
 clean:
+	rm -r single
+	rm -r $(FILE)
 	rm -f *.aux
 	rm -f *.bbl
 	rm -f *.bcf
@@ -110,11 +120,13 @@ clean:
 view:
 	open $(FILE).pdf
 
-publish:
-	cp $(FILE).pdf ~/github/laszewsk/papers/
-	cd ~/github/laszewsk/papers; git add $(FILE).pdf; git commit -m "update $(FILE)"; git push
-	cp $(FILE).pdf ~/github/laszewsk/laszewski.github.io/papers/$(FILE).pdf
-	cd ~/github/laszewsk/laszewski.github.io/papers; git add $(FILE).pdf; git commit -m "update $(FILE)"; git push
+publish: google
+	echo pdf document copied to google
+#	cp dest/$(FILE).pdf .
+#	cp $(FILE).pdf ~/github/laszewsk/papers/
+#	cd ~/github/laszewsk/papers; git add $(FILE).pdf; git commit -m "update $(FILE)"; git push
+#	cp $(FILE).pdf ~/github/laszewsk/laszewski.github.io/papers/$(FILE).pdf
+#	cd ~/github/laszewsk/laszewski.github.io/papers; git add $(FILE).pdf; git commit -m "update $(FILE)"; git push
 
 size:
 	du -c -h dest/vonLaszewski-bigdata.pdf | fgrep total > dest/size.txt
@@ -125,6 +137,7 @@ watch:
 	latexmk -pvc -view=pdf ${FILE}
 
 dest:
+	mkdir -p dest/format
 	mkdir -p dest/notebooks
 	mkdir -p dest/notebooks/dask
 	mkdir -p dest/notebooks/facedetection
@@ -177,11 +190,15 @@ dest:
 	mkdir -p dest/section/icloud/assignment/exercise7/code-base
 	mkdir -p dest/section/icloud/assignment/exercise7/code-base/input
 	mkdir -p dest/section/icloud/assignment/exercise7/code-base/simplepagerank
+
 	mkdir -p dest/section/icloud/assignment/exercise8
 	mkdir -p dest/section/icloud/course
 	mkdir -p dest/section/iot
 	mkdir -p dest/section/new
 	mkdir -p dest/section/preface
 	mkdir -p dest/section/prg
+	mkdir -p dest/section/rest
 	mkdir -p dest/section/theory
+	mkdir -p dest/section/cluster/pi
+	mkdir -p dest/section/cluster/pi/images
 

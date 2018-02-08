@@ -1,48 +1,3 @@
-
-%----------------------------------------------------------------------------------------
-% remove pandoc commands
-%----------------------------------------------------------------------------------------
-\newcommand{\tightlist}{}
-\newenvironment{Shaded}{}{}
-\newenvironment{Highlighting}{}{}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
-\newcommand{\ImportTok}[1]{{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
-\newcommand{\BuiltInTok}[1]{{#1}}
-\newcommand{\ExtensionTok}[1]{{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
-\newcommand{\RegionMarkerTok}[1]{{#1}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
-\newcommand{\NormalTok}[1]{{#1}}
-
-%----------------------------------------------------------------------------------------
-
-\input{format/structure} % Insert the commands.tex file which contains the majority of the structure behind the template
-
-\begin{document}
-
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
@@ -55,8 +10,12 @@
 opacity=0.9,text opacity=1,inner
 sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering
     \TITLE \\[15pt] % Book title
-{\Large \SUBTITLE}\\[20pt] % Subtitle
-{\huge \AUTHOR \\ \Large \EMAIL }}}; % Author name
+    {\Large \SUBTITLE}\\[20pt] % Subtitle
+    {\huge \AUTHOR \\ \Large \EMAIL} \\
+    {\normalsize \TODAY} \\
+    {\normalsize   \url{https://tinyurl.com/vonLaszewski-handbook} } \\
+  }
+}; % Author name
 \end{tikzpicture}
 \vfill
 \endgroup
@@ -76,7 +35,10 @@ sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centerin
 
 % \noindent \textsc{Indiana University}\\ % Publisher
 
-\noindent \url{https://github.com/cloudmesh/classes}\\ 
+\noindent \url{https://github.com/cloudmesh/classes}\\
+
+\noindent \url{https://tinyurl.com/vonLaszewski-handbook}\\
+
 
 \begin{comment}
 \noindent Licensed under the Creative Commons
@@ -104,6 +66,8 @@ permissions and limitations under the License.\\ % License information
 
 \pagestyle{empty} % No headers
 
+\shorttableofcontents{Short Table Of Contents}{0}
+\newpage
 \tableofcontents % Print the table of contents itself
 
 \cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
@@ -112,108 +76,3 @@ permissions and limitations under the License.\\ % License information
 
 
 
-\newcommand{\FILENAME}{%
-    \begin{fileremark}%
-      \currfiledir\currfilename%
-    \end{fileremark}%
-    \rfoot{\footnotesize\em\currfiledir\currfilename}}
-\newcommand{\CHANGE}{\begin{changeremark}THIS WILL CHANGE
-    \currfilename\end{changeremark}}
-\newcommand{\TODO}[1]{\todo[inline,bordercolor=yellow,color=yellow!5]{TODO: #1}}
-\newcommand{\DONE}[1]{DONE: \todo[inline,color=green!5]{#1}}
-
-\newcommand{\FIGURE}[5]{
-\begin{figure}[#1] 
-  \centering 
-    \includegraphics[width=#2\columnwidth]{#3} 
-  \caption{#4}\label{#5} 
-\end{figure} 
-}
-
-\newcommand{\URL}[1]{ \begin{footnotesize} \begin{itemize} \item \url{#1} \end{itemize} \end{footnotesize}}
-\newcommand{\HREF}[2]{ \begi<n{itemize} \item \href{#1}{#2} \end{itemize} }
-
-\newcommand{\video}[4]{%
-{\em \hfill \href{#4}{#3 (#2)~\includegraphics[width=\baselineskip]{images/video.png}}}    \index{Video!#1!#3 (#2)}
-}
-
-\newcommand{\slides}[4]{%
-  {\em  \hfill \href{#4}{#3 (#2)~\includegraphics[width=\baselineskip]{images/slide.png}}} \index{Slides!#1!#3 (#2)}
-}
-
-\DefineVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\footnotesize,xleftmargin=.5in}
-
-
-\definecolor{codegreen}{rgb}{0,0.6,0}
-\definecolor{codegray}{rgb}{0.5,0.5,0.5}
-\definecolor{codepurple}{rgb}{0.58,0,0.82}
-\definecolor{backcolour}{rgb}{0.97, 0.97, 0.97}
- 
-\lstdefinestyle{code}{
-    backgroundcolor=\color{backcolour},   
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple},
-    basicstyle=\footnotesize,
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,                 
-    numbers=left,                    
-    numbersep=5pt,                  
-    showspaces=false,                
-    showstringspaces=false,
-    showtabs=false,                  
-    tabsize=2,
-    xleftmargin=.3in
-}
-
-\lstset{style=code}
-\lstset{language=python} 
-
-\newcommand{\WHERE}[3]{$\square$~ #1 \ref{#2}. \nameref{#2} \hfill ~ #3 ~ \pageref{#2}\\}
-
-\newenvironment{NOTE2}[1]
-    {\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,%
-                       fonttitle=\bfseries,size=small,%
-                       lefthand width=2cm,sidebyside,%
-                       sidebyside gap=6mm,%
-                       lower separated=false,title=#1]%
-    {\begin{tikzpicture}[overlay]
-\node[draw=ocre!60,line
-width=1pt,circle,fill=ocre!25,font=\sffamily\bfseries,inner
-sep=2pt,outer sep=0pt] at (25pt,0pt){\textcolor{ocre}{\LARGE Note}};\end{tikzpicture}}
-    \tcblower}
-    {\end{tcolorbox}}
-
-\newenvironment{COLORNOTE}[2]
-    {\begin{tcolorbox}[%
-        coltitle=#2!70!black,
-        colback=#2!3!white,colframe=#2!20!white,%
-        fonttitle=\bfseries,size=small,%
-        title=#1]}
-    {\end{tcolorbox}}
-
-\newenvironment{NOTE}
-    {\begin{COLORNOTE}{Note}{blue}}
-    {\end{COLORNOTE}}
-
-\newenvironment{WARNING}
-    {\begin{COLORNOTE}{Warning}{red}}
-    {\end{COLORNOTE}}
-
-\newenvironment{IU}
-    {\begin{COLORNOTE}{Indiana University}{red}}
-    {\end{COLORNOTE}}
-
-
-\newcommand{\TODAY}{
-\begin{itemize}
-\item \today~\currenttime 
-\end{itemize} 
-}
-
-\newcommand{\YES}{\ding{51}}%
-\newcommand{\NO}{\ding{55}}%
-\newcommand{\SQUARE}{$\square$~}
