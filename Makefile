@@ -90,8 +90,8 @@ old:
 	$(LATEX) $(FILE) x 2
 
 clean:
-	rm -r single
-	rm -r $(FILE)
+	rm -fr single
+	rm -fr $(FILE)
 	rm -f *.aux
 	rm -f *.bbl
 	rm -f *.bcf

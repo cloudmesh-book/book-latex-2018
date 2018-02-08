@@ -788,6 +788,7 @@ sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centerin
 
 \shorttableofcontents{Short Table Of Contents}{0}
 \newpage
+
 \tableofcontents % Print the table of contents itself
 
 \cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
