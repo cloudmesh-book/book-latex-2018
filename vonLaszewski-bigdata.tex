@@ -1,7 +1,7 @@
 %-------------------------------------------------------------------------------
 %	DO NOT CHAMGE CONFIGURATION
 %
-\RequirePackage[hyphens]{url}
+% \RequirePackage[hyphens]{url}
 \documentclass{format/laszewski} 
 
 % \includeonly{part/container}
@@ -19,10 +19,6 @@ part/dev}
 \newcommand{\AUTHOR}{Gregor von Laszewski\\Geoffrey C. Fox\\Judy Qiu}
 \newcommand{\EMAIL}{laszewski@gmail.com}
 
-\begin{document}
-\pagestyle{fancy} 
-
-\input{format/book-format}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % IMAGE DIRECTORIES
@@ -37,11 +33,21 @@ part/dev}
 {section/cluster/pi/images/}%
 {section/container/}}
 
+
+\begin{document}
+
+%\maketitle
+
 \chapterimage{water.png} % Chapter heading image
 
 %
 %	END CONFIGURATION
 %-------------------------------------------------------------------------------
+
+%
+
+\pagestyle{fancy} 
+
 
 
 
