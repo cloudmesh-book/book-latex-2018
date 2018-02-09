@@ -1,4 +1,4 @@
-REST Service Generation with Swagger {#c:swagger-codegen}
+REST Service Generation with Swagger 
 ====================================
 
 In this subsection we are discussing how to use OpenAPI 2.0 and Swagger
