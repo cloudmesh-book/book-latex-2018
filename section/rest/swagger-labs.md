@@ -3,28 +3,45 @@ ON THE BOTTOM OF EACH PAGE YOU FIND THE LATEX SOURCE WHICH INCLUDES THE
 INFORMATION YOU LOOK FOR 
 
 .
-.
-.
-.
-.
-.
-.
+
 .
 
 .
+
 .
 
 .
-.
-.
-.
-.
-.
-.
+
 .
 
 .
+
 .
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
 .
 
 .
