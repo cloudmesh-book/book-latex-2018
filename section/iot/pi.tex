@@ -1,17 +1,19 @@
+
+
+\chpater{Raspberry PI 3}\label{raspberry-pi-3}
+
 \FILENAME
 
-\section{Raspberry PI 3}\label{raspberry-pi-3}
-
-\subsection{Raspbery PI for IOT
+\section{Raspbery PI for IOT
 (Gregor)}\label{raspbery-pi-for-iot-gregor}
 
-\subsection{Hardware}\label{hardware}
+\section{Hardware}\label{hardware}
 
 see hardware page we have
 
-\subsection{Installation}\label{installation}
+\section{Installation}\label{installation}
 
-\subsubsection{Erasing the SD Card}\label{erasing-the-sd-card}
+\subsection{Erasing the SD Card}\label{erasing-the-sd-card}
 
 Before you can install an OS on your sd card, you must erase it and put
 it in the proper format.
@@ -35,7 +37,7 @@ it in the proper format.
   multiple tries to work.
 \end{enumerate}
 
-\subsubsection{Installation of NOOBS}\label{installation-of-noobs}
+\subsection{Installation of NOOBS}\label{installation-of-noobs}
 
 NOOBS is an OS that includes Raspian. The official descrition of
 Raspbian can be found
@@ -61,7 +63,7 @@ pre-packaged with many useful programming tools, and is easy to use.
   Power up your raspberry and you will see a menu like this
 \end{enumerate}
 
-\begin{figure}
+\begin{figure}[htb]
 \centering
 \includegraphics[width=0.5\textwidth]{images/noobs.jpg}
 \caption{Noobs}
@@ -75,7 +77,7 @@ pre-packaged with many useful programming tools, and is easy to use.
   Select Raspbian and click \texttt{Install\ (i)}
 \end{enumerate}
 
-\subsubsection{Installation of Dexter}\label{installation-of-dexter}
+\subsection{Installation of Dexter}\label{installation-of-dexter}
 
 The version of Dexter that you want to flash onto your sd card is called
 Raspbian for Robots. This is a Raspbian based os that is compatible with
@@ -96,7 +98,7 @@ software.
   Open etcher and flash the uncompressed jessie image onto the sd card.
 \end{enumerate}
 
-\begin{figure}
+\begin{figure}[htb]
 \centering
 \includegraphics[width=0.5\textwidth]{images/etcher.png}
 \caption{Etcher}
@@ -110,11 +112,11 @@ software.
   Eject your sd card and insert it into your raspberry pi.
 \end{enumerate}
 
-\subsection{Configure}\label{configure}
+\section{Configure}\label{configure}
 
-\subsubsection{Prepare OS}\label{prepare-os}
+\subsection{Prepare OS}\label{prepare-os}
 
-\subsection{Update}\label{update}
+\section{Update}\label{update}
 
 The following are essential updates:
 
@@ -154,9 +156,9 @@ curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv
 
 source
 
-\subsubsection{Update to Python 3.6.1}\label{update-to-python-3.6.1}
+\subsection{Update to Python 3.6.1}\label{update-to-python-3.6.1}
 
-\subsection{change python version}\label{change-python-version}
+\section{change python version}\label{change-python-version}
 
 \begin{itemize}
 \tightlist
@@ -208,7 +210,7 @@ Now make python3.4 to your default with
 
 Select python3.4
 
-\subsection{install 3.6.1}\label{install-3.6.1}
+\section{install 3.6.1}\label{install-3.6.1}
 
 To install python 3.6.1, follow steps 1 and 2. This is unnecessary for
 our purposes.
@@ -220,7 +222,7 @@ our purposes.
   get 3.6.1}
 \end{itemize}
 
-\subsection{install cloudmesh.pi}\label{install-cloudmesh.pi}
+\section{install cloudmesh.pi}\label{install-cloudmesh.pi}
 
 pip install cloudmesh.pi
 
@@ -235,7 +237,7 @@ pip install cloudmesh.pi with
 see how we do this in osx/linux can this be done on raspbery? if not
 document update from source with altinstall
 
-\subsubsection{Install scientific
+\subsection{Install scientific
 Libraries}\label{install-scientific-libraries}
 
 check if they are already installed we don't have enough space to
@@ -250,7 +252,7 @@ matplotlib\\
 scipy\\
 scikitlearn
 
-\subsubsection{cloudmesh.pi (Jon)}\label{cloudmesh.pi-jon}
+\subsection{cloudmesh.pi (Jon)}\label{cloudmesh.pi-jon}
 
 cloudmesh.pi is a repository for our GrovePi module classes. These
 classes require Dexter software, so you need to either have Raspian for
@@ -267,23 +269,23 @@ cd cloudmesh.pi
 sudo pip install .
 \end{verbatim}
 
-\subsubsection{Install VNC}\label{install-vnc}
+\subsection{Install VNC}\label{install-vnc}
 
 describe how to install and configure VNC
 
-\subsection{Sensors (Jon)}\label{sensors-jon}
+\section{Sensors (Jon)}\label{sensors-jon}
 
-\subsubsection{Grove Sensors (Jon)}\label{grove-sensors-jon}
+\subsection{Grove Sensors (Jon)}\label{grove-sensors-jon}
 
 we already have draft
 
-\subsubsection{Non Grove Sensors (Jon)}\label{non-grove-sensors-jon}
+\subsection{Non Grove Sensors (Jon)}\label{non-grove-sensors-jon}
 
 Elegoo as example
 
-\subsection{Notes To integrates}\label{notes-to-integrates}
+\section{Notes To integrates}\label{notes-to-integrates}
 
-\subsubsection{Connecting}\label{connecting}
+\subsection{Connecting}\label{connecting}
 
 Hostnames:
 
@@ -311,7 +313,7 @@ Connect the cable
 You will see the activity LEDs flash while the OS installs. Depending on
 your SD-Card this can take up to 40-60 minutes.
 
-\subsection{VLC on OSX}\label{vlc-on-osx}
+\section{VLC on OSX}\label{vlc-on-osx}
 
 \begin{itemize}
 \item
@@ -321,7 +323,7 @@ your SD-Card this can take up to 40-60 minutes.
 \item
   \url{http://www.mybigideas.co.uk/RPi/RPiCamera/}
 \item ~
-  \subsection{Camera on Pi}\label{camera-on-pi}
+  \section{Camera on Pi}\label{camera-on-pi}
 
   sudo apt-get install vlc
 \item
@@ -330,7 +332,7 @@ your SD-Card this can take up to 40-60 minutes.
   \url{https://www.hackster.io/bestd25/pi-car-016e66}
 \end{itemize}
 
-\subsection{Streaming video}\label{streaming-video}
+\section{Streaming video}\label{streaming-video}
 
 \begin{itemize}
 \tightlist
@@ -338,7 +340,7 @@ your SD-Card this can take up to 40-60 minutes.
   \url{https://blog.miguelgrinberg.com/post/stream-video-from-the-raspberry-pi-camera-to-web-browsers-even-on-ios-and-android}
 \end{itemize}
 
-\subsection{Linux Commandline}\label{linux-commandline}
+\section{Linux Commandline}\label{linux-commandline}
 
 \begin{itemize}
 \tightlist
@@ -346,11 +348,11 @@ your SD-Card this can take up to 40-60 minutes.
   \url{http://www.computerworld.com/article/2598082/linux/linux-linux-command-line-cheat-sheet.html}
 \end{itemize}
 
-\subsection{Enable SPI}\label{enable-spi}
+\section{Enable SPI}\label{enable-spi}
 
 go to the configuration interfaces and enable
 
-\subsection{RTIMUlib2}\label{rtimulib2}
+\section{RTIMUlib2}\label{rtimulib2}
 
 git clone https://github.com/RTIMULib/RTIMULib2.git cd RTIMULib
 
@@ -379,9 +381,9 @@ sudo i2cdetect -y 1
 70: -- -- -- -- -- -- -- --
 \end{verbatim}
 
-\begin{figure}
+\begin{figure}[htb]
 \centering
-\includegraphics{images/rasp3.jpg}
+\includegraphics[width=0.5\textwidth]{images/rasp3.jpg}
 \caption{Pinout}
 \end{figure}
 
@@ -444,7 +446,7 @@ sudo make install
 sudo ldconfig
 \end{verbatim}
 
-\subsection{Compile RTIMULib Apps}\label{compile-rtimulib-apps}
+\section{Compile RTIMULib Apps}\label{compile-rtimulib-apps}
 
 \begin{verbatim}
 cd /home/pi/github/RTIMULib2/Linux/RTIMULibCal
@@ -475,7 +477,7 @@ make -j4
 sudo make install
 \end{verbatim}
 
-\subsection{Camera}\label{camera}
+\section{Camera}\label{camera}
 
 \begin{itemize}
 \tightlist
@@ -503,6 +505,7 @@ copy into \textasciitilde{}/.profile:
  echo "export WORKON_HOME=$HOME/.virtualenvs" >> ~/.profile
  echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.profile
 \end{verbatim}
+%$
 
 source \textasciitilde{}/.profile
 
@@ -523,7 +526,7 @@ unzip opencv.zip
 unzip opencv_contrib.zip
 \end{verbatim}
 
-\subsection{Lessons and Projects}\label{lessons-and-projects}
+\section{Lessons and Projects}\label{lessons-and-projects}
 
 \begin{itemize}
 \tightlist
@@ -539,9 +542,9 @@ unzip opencv_contrib.zip
   car flask}
 \end{itemize}
 
-\subsection{OTHER TO BE INTEGRATED}\label{other-to-be-integrated}
+\section{OTHER TO BE INTEGRATED}\label{other-to-be-integrated}
 
-\subsubsection{PI emulator on Windows}\label{pi-emulator-on-windows}
+\subsection{PI emulator on Windows}\label{pi-emulator-on-windows}
 
 We have not yet tried it, but we like to hear back from you on
 experiences with
@@ -552,7 +555,7 @@ experiences with
   https://sourceforge.net/projects/rpiqemuwindows/
 \end{itemize}
 
-\subsubsection{Scratch}\label{scratch}
+\subsection{Scratch}\label{scratch}
 
 \begin{itemize}
 \tightlist
@@ -560,7 +563,7 @@ experiences with
   \href{https://github.com/DexterInd/GrovePi/tree/master/Software/Scratch}{scratch}
 \end{itemize}
 
-\subsection{Web Server}\label{web-server}
+\section{Web Server}\label{web-server}
 
 \begin{itemize}
 \tightlist

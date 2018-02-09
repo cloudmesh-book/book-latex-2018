@@ -1,8 +1,10 @@
+
+
+\chapter{GrovePi Modules}\label{grovepi-modules}
+
 \FILENAME
 
-\section{GrovePi Modules}\label{grovepi-modules}
-
-\subsection{Intro}\label{intro}
+\section{Introduction}\label{intro}
 
 \begin{itemize}
 \tightlist
@@ -24,7 +26,7 @@
   module classes}: A repository for the GrovePi module classes.
 \end{itemize}
 
-\subsection{LED}\label{led}
+\section{LED}\label{led}
 
 An LED is the simplest possible module for a raspberry pi, as it is
 responsive only to the provided power. For an LED to emit light, it must
@@ -59,7 +61,7 @@ code for the \texttt{LED} class can be found here:
 \caption{LED}
 \end{figure}
 
-\subsection{Buzzer}\label{buzzer}
+\section{Buzzer}\label{buzzer}
 
 Connect the buzzer to a digital port. The default port for the Buzzer
 class is D3. You will notice that the Buzzer class and the LED class are
@@ -80,7 +82,7 @@ principal. Their two values are on and off. The code for the
 \caption{Buzzer}
 \end{figure}
 
-\subsection{Relay}\label{relay}
+\section{Relay}\label{relay}
 
 The relay acts as a switch in a circuit. When the value on the relay is
 1, it allows current to flow through it. When the value is 0, the relay
@@ -101,7 +103,7 @@ found here:
 \caption{Relay}
 \end{figure}
 
-\subsection{Light Sensor}\label{light-sensor}
+\section{Light Sensor}\label{light-sensor}
 
 The light sensor measures ligh intensity and returns a value between 0
 and 1023. Connect the light sensor to an analog port. The default port
@@ -121,7 +123,7 @@ values. The \texttt{LightSensor} class can be found here:
 \caption{Light Sensor}
 \end{figure}
 
-\subsection{Rotary Angle Sensor}\label{rotary-angle-sensor}
+\section{Rotary Angle Sensor}\label{rotary-angle-sensor}
 
 The rotary angle sensor measures the angle to which it is turned.
 Connect the sensor to an analog port. Port A0 is the default. The
@@ -140,7 +142,7 @@ Connect the sensor to an analog port. Port A0 is the default. The
 \caption{Rotary Angle Sensor}
 \end{figure}
 
-\subsection{Barometer}\label{barometer}
+\section{Barometer}\label{barometer}
 
 Connect the barometer to an I2C port. In addition to pressure, the
 GrovePi barometer measures temperature in Fahrenheit and Celcius. The
@@ -159,7 +161,7 @@ GrovePi barometer measures temperature in Fahrenheit and Celcius. The
 \caption{Barometer}
 \end{figure}
 
-\subsection{Distance Sensor}\label{distance-sensor}
+\section{Distance Sensor}\label{distance-sensor}
 
 Connect the distance sensor to a digital port. The grovepi module has a
 built-in function to read the distance from the distance sensor, but it
@@ -180,7 +182,7 @@ found here:
 \caption{Distance Sensor}
 \end{figure}
 
-\subsection{Temperature Sensor}\label{temperature-sensor}
+\section{Temperature Sensor}\label{temperature-sensor}
 
 The temperature sensor measures both temperature and humidity. Connect
 the temperature sensor to a digital port. D7 is the default port. The
@@ -199,7 +201,7 @@ the temperature sensor to a digital port. D7 is the default port. The
 \caption{Temperature Sensor}
 \end{figure}
 
-\subsection{Heartbeat Sensor}\label{heartbeat-sensor}
+\section{Heartbeat Sensor}\label{heartbeat-sensor}
 
 Connect the heartbeat sensor to an I2C port. The heartbeat sensor
 returns the heart rate of the wearer. The \texttt{HeartbeatSensor} class
@@ -218,7 +220,7 @@ can be found here:
 \caption{image}
 \end{figure}
 
-\subsection{Joystick}\label{joystick}
+\section{Joystick}\label{joystick}
 
 Connect the joystick to an analog port. A0 is the default port. The
 joystick has an x, y, and click status based on the current state of the
@@ -237,7 +239,7 @@ module. The \texttt{Joystick} class can be found here:
 \caption{image}
 \end{figure}
 
-\subsection{LCD Screen}\label{lcd-screen}
+\section{LCD Screen}\label{lcd-screen}
 
 The LCD screen can be used to display text and colors. In order to use
 it, plug it into one of the I2C ports. The \texttt{LCD} class can be
@@ -256,7 +258,7 @@ found here:
 \caption{LCD Screen}
 \end{figure}
 
-\subsection{Moisture Sensor}\label{moisture-sensor}
+\section{Moisture Sensor}\label{moisture-sensor}
 
 Connect the moisture sensor to an analog port. The default port is A0.
 The \texttt{MoistureSensor} class can be found here:
@@ -280,7 +282,7 @@ Industries can be found
 The program is meant to measure the environmental conditions that affect
 plant growth.
 
-\subsection{Water Sensor}\label{water-sensor}
+\section{Water Sensor}\label{water-sensor}
 
 The water sensor measures the amount of water in the environment of the
 sensor. Connect the sensor to a digital point. D2 is the default port.

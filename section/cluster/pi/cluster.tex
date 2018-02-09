@@ -481,3 +481,33 @@ without bias.
 \end{exercise}
 
 
+\subsection{Virtual Raspberry Cluster}
+
+It should also be possible to craete a virtual raspberry PI cluster
+while for example using virtual box. This requires two steps. First
+the deployment of a virtualized Raspberry PI. The following
+information may be useful for this
+
+\URL{http://dbakevlar.com/2015/08/emulating-a-raspberry-pi-on-virtualbox/}
+
+The next step includes the deployment of multiple VMs emulating
+Raspberrys. Naturally each should have its own name so you can
+distinguish them. INstead of just using the GUI, it would be improtant
+to find out how to start them from a commandline as a shell script as
+well as tear them down.
+
+Next you will need to make sure you can communicate from the PIs to
+each other. This is naturally the same as on a real cluster
+
+\begin{exercise}
+provide a tutorial 
+\end{exercise}
+
+This can be chosen as part of your project, but you need to develop a
+cloudmesh command for managing the cluster. THis includes starting and
+stoping as well as checkpointing the cluster from a cloudmesh
+command. Furthermore you need to benchmark it and identify how to do
+this and contrast this to other clusters that you may start or have
+access to. Please get in contact with Gregor. THis prject is reserverd
+for online students, as residential students will have access to real
+Rasperry PI hardware.
