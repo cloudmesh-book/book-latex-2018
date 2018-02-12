@@ -1,0 +1,36 @@
+\chapter{Data Formats}
+
+\section{YAML}
+
+\URL{https://en.wikipedia.org/wiki/YAML}
+
+\begin{lstlisting}
+import os
+import sys
+import yaml
+
+try:
+    yamlFilename = os.sys.argv[1]
+    yamlFile = open(yamlFilename, "r")
+except:
+    print("filename does not exist")
+    sys.exit()
+try:
+   yaml.load(yamlFile.read())
+except:
+   print("YAML file is not valid.")
+\begin{endlisting}
+
+
+\section{JSON}
+
+\URL{https://en.wikipedia.org/wiki/JSON}
+\URL{https://www.json.org/}
+
+
+\section{Comparision}
+
+
+YAML is a superset of JSON. 
+
+\URL{https://stackoverflow.com/questions/1726802/what-is-the-difference-between-yaml-and-json-when-to-prefer-one-over-the-other}
