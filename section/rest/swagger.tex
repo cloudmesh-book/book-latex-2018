@@ -40,4 +40,69 @@ The convenient online editor is available which also can be installed
 locally on a variety of operating systems including OSX, Linux, and
 Windows. 
 
+\section{Swagger Community Tools}
+
+\begin{exercise}
+notify us about other tools that you find and woul like us to mention here.
+\end{exercise}
+
+\subsection{Swagger Toolbox}
+\label{s:swagger-toolbox}
+
+Swagger toolbox is a utility that can convert json to swagger
+compatible yaml models. It is hosted online at 
+
+\URL{https://swagger-toolbox.firebaseapp.com/}
+
+The source code to this tool is available on github at
+
+\URL{https://github.com/essuraj/swagger-toolbox}.
+
+It is important to make sure that the json model is properly
+configured. As such each datatype must be wrapped in ``quotes'' andthe
+last element must not have a , behind it. 
+
+In case you have large models, we recommend that you gradually add
+more and more features so that it is easier to debug in case of an
+error. This tool is not designed to provide back a full featured
+OpenAPI, but help you getting started deriving one.
+
+Let us look at a small example. Let us assume we want to create a REST
+service to execute a command on the remote service. We  know this may
+not be a good idea if it is not properly secured, so be extra
+carful. A good way to simulate this is to just use a return string
+instead of executing the command.
+
+Let us assume the json schema looks like:
+
+\begin{lstlisting}
+{
+   "host": "string",
+   "command": "string"
+}
+\end{lstlisting}
+
+The output the swagger toolbox creates is
+
+\begin{lstlisting}
+---
+  required: 
+    - "host"
+    - "command"
+  properties: 
+    host: 
+      type: "string"
+    command: 
+      type: "string"
+\end{lstlisting}
+
+As you can see it is far from complete, but it could be used to get
+you started.
+
+\begin{exercise}
+Based on this tool develop a rest service to which you send a schema
+in JSON format from which you get back the YAML model.
+\end{exercise}
+
+
 

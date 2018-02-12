@@ -70,7 +70,19 @@
 
 
 \usepackage{graphicx} % Required for including pictures
-\graphicspath{{./}{images/}} % Specifies the directory where pictures are stored
+
+
+\makeatletter
+\newcommand\appendtographicspath[1]{%
+  \g@addto@macro\Ginput@path{#1}%
+}
+\makeatother
+
+\graphicspath{{.}}
+\appendtographicspath{{images/}}
+\appendtographicspath{{format/images/}}
+
+
 
 \usepackage[style=numeric,citestyle=numeric,sorting=nyt,sortcites=true,autopunct=true,%
             babel=hyphen,hyperref=true,abbreviate=false,backref=true,backend=biber]{biblatex}
