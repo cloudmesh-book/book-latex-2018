@@ -56,7 +56,7 @@ which will be explained later.
 
 Besides the one requried field, the *Operation Object* **can** have *summary* and *description*
 to indicate what the operation is about;
-and *operationalId* to uniquely identify the operation; and *consumes* and *produces* to indicate
+and *operationId* to uniquely identify the operation; and *consumes* and *produces* to indicate
 what MIME types it expects as input and for returns, e.g., *application/json* in most modern RESTful APIs.
 It can further specify what input parameter is expected using *parameters*, which requires a *name*
 and *in* fields. *name* specifies the name of the parameter, and *in* specifies from where to get

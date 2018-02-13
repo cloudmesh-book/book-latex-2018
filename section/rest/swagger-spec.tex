@@ -8,12 +8,12 @@ When following the API-specification-first approach to define and
 develop a RESTful service, the first and foremost step is to define
 the API conforming to the OpenAPI specification, and then using
 codegen tools to conveniently generate server side stub code, client
-code, documentations, in the language you desire. In this Section
-\ref{S:vcluster-spec} we use an example to show how to define an API
-following the OpenAPI 2.0 specification. The example is a simplified
-object to specify a virtual cluster. In Section
-\ref{c:swagger-codegen} the we introduce the codegen tool and how to
-use that to generate server side and client side code.
+code, documentations, in the language you desire. In Section
+\ref{c:swagger-codegen} the we have introduced the codegen tool and how to
+use that to generate server side and client side code and documentation.
+In this Section \ref{S:vcluster-spec} we will use a slightly more complex
+example to show how to define an API following the OpenAPI 2.0 specification.
+The example is to retrieve virtual cluster (VC) object from the server.
 
 The OpenAPI Specification is formerly known as Swagger RESTful API
 Documentation Specification. It defines a specification to describe
@@ -86,7 +86,7 @@ in the same specification file, which will be explained later.
 
 Besides the required field, the \emph{Operation Object} \textbf{can}
 have \emph{summary} and \emph{description} to indicate what the
-operation is about; and \emph{operationalId} to uniquely identify the
+operation is about; and \emph{operationId} to uniquely identify the
 operation; and \emph{consumes} and \emph{produces} to indicate what MIME
 types it expects as input and for returns, e.g., \emph{application/json}
 in most modern RESTful APIs. It can further specify what input parameter
@@ -162,14 +162,10 @@ frequently used ones are:
 \subsubsection{Terminology}
 
 \begin{description}
-\item[VC]
-\item[FE]
-\item[vcs]
+\item[VC] A virtual cluster, which has one Front-End (FE) management node and multiple compute nodes. A VC object also has \emph{id} and \emph{name} to identify the VC, and \emph{nnodes} to indicate how many compute nodes it has.
+\item[FE] A management node from which to access the compute nodes. The FE node usually connects to all the compute nodes via private network.
+\item[Node] A computer node object that the info \emph{ncores} to indicate number of cores it has, and \emph{ram} and \emph{localdisk} to show the size of RAM and local disk storage.
 \end{description}
-
-
-Include diagram
-
 
 \subsubsection{Specification}
 
