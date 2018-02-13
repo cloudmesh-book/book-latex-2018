@@ -30,9 +30,7 @@ Run the following commands to configure ssh.
 
 ```
 $ su – hduser1
-
 ```
-
 ```
 $ ssh-keygen -t rsa
 ```
