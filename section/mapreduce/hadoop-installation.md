@@ -51,7 +51,7 @@ where is hadoop comming from
 
 ```
 export JAVA_HOME=~/cloudmesh/bin/jdk1.8.0_161
-export HADOOP_HOME=~/cloudmesh/hadoop-2.6.0
+export HADOOP_HOME=~/cloudmesh/bin/hadoop-2.6.0
 export YARN_HOME=$HADOOP_HOME
 export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
 export PATH=$HADOOP_HOME/bin:$JAVA_HOME/bin:$PATH
@@ -97,38 +97,5 @@ Usage: hadoop [--config confdir] COMMAND
 Most commands print help when invoked w/o parameters.
 ```
 
-### Setup SSH 
-
-Here in order to adding password every time, we will use a keygen generated
-using a passphrase to login to ssh. Follow the steps to setup SSH properly.
-
-```
-$ ssh localhost
-```
-
-In case of this task need the password, follow the below mentioned commands.
-
-```
-$ ssh-keygen -t rsa
-(hit enter to the default file name)
-(add a password for the passphrase section)
-```
-
-Then we need to add the generated key into authorized key list by running the following commands.
-
-```
-$ cd ~/.ssh
-$ cat id_rsa.pub>>authorized_keys
-```
-
-Then try to ssh again by running the following commands.
-
-```
-$ ssh localhost
-$ exit
-```
-This will log you into localhost and log you out.
-
-If you have completed up to this part, you have successfully completed hadoop installation in your machine and in the next lab we'll discuss about Hadoop configuration and running an example.
 
 
