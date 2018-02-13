@@ -34,7 +34,7 @@ need a prior folder structure to do the installation properly.
 
 ```
 $ cd ~/cloudmesh/bin/
-$ wget http://www-eu.apache.org/dist/hadoop/common/hadoop-2.6.0/hadoop-2.6.0.tar.gz	
+$ wget https://archive.apache.org/dist/hadoop/core/hadoop-2.6.0/hadoop-2.6.0.tar.gz
 $ tar -xzvf hadoop-2.6.0.tar.gz
 ```
 
