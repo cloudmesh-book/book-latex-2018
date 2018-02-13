@@ -1,77 +1,153 @@
 # HADOOP	
 
-Hadoop is an open source framework for storage and processing of large datasets
-on commodity clusters. Hadoop internally uses its own file system called 
-HDFS (Hadoop Distributed File System). In this tutorial our main focus is on 
-using Hadoop 2.6.0 version along with the Yarn resource manager. We will be 
-focusing more on the Hadoop installation in this chapter. 
+Hadoop is an open source framework for storage and processing of large datasets on commodity clusters. Hadoop internally uses its own file system called  HDFS (Hadoop Distributed File System). In this tutorial our main focus is on using Hadoop 2.6.0 version along with the Yarn resource manager. We will be focusing more on the Hadoop installation in this chapter.
 
 ## Prerequisits
 
 We assume that you have emacs, ssh, and rsync installed
+```bash
+$ sudo apt-get install emacs
+$ sudo apt-get install ssh
+$ sudo apt-get install rsync
+```
 
-	$ sudo apt-get install emacs
-	$ sudo apt-get install ssh
-	$ sudo apt-get install rsync
+### User and User Group Creation
+
+In installing hadoop, for the security reasons we will stick to a specific user for hadoop and a specific user group.
+
+```bash
+$ sudo addgroup hadoop_group
+$ sudo adduser --ingroup hadoop_group hduser1
+$ sudo adduser hduser1 sudo
+```
+
+After this point we are completed giving sudo privileges to the created user in the specific user group.
+
+### Configuring SSH
+
+Here we have to configure ssh for the created user for security in the hadoop installation.
+Run the following commands to configure ssh.
+
+```bash
+$ su – hduser1
+```
+```bash
+$ ssh-keygen -t rsa
+```
+After this step you will see some console screen as shown below. Follow the instructions in the command line.
+
+When you see the following console input, press ENTER.
+```bash
+Enter file in which to save the key (/home/hduser1/.ssh/id_rsa):
+```
+Next you will be asked to enter a password for ssh configuration,
+
+```bash
+Enter passphrase (empty for no passphrase):
+
+```
+Here enter the same password 
+
+```bash
+Enter same passphrase again:
+```
+
+Finally you will see something like this after these steps are finished.
+
+```bash
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/hduser1/.ssh/id_rsa):
+Created directory '/home/hduser1/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/hduser1/.ssh/id_rsa.
+Your public key has been saved in /home/hduser1/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:0UBCPd6oYp7MEzCpOhMhNiJyQo6PaPCDuOT48xUDDc0 hduser1@messi
+The key's randomart image is:
++---[RSA 2048]----+
+|    .+ooo        |
+| .   oE.oo       |
+|+  .. ...+.      |
+|X+=  .  o..      |
+|XX.o  o.S        |
+|Bo+ + .o         |
+|*o * +.          |
+|*.. *.           |
+| +.o..           |
++----[SHA256]-----+
+```
+
+You have successfully configured ssh.
+
 
 ### Install Java
 
-why can we not put a script in github thats does this?
+First log on to the newly created user :
 
-We also assume you have Java installed.
+```bash
+$ su - hduser1
+```
 
-	$ mkdir -p ~/cloudmesh/bin
-	$ cd ~/cloudmesh/bin
-	$ wget -c --header "Cookie: oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u161-b12/2f38c3b165be4555a1fa6e98c45e0808/jdk-8u161-linux-x64.tar.gz"
-	$ tar xvzf jdk-8u161-linux-x64.tar.gz
-
-can we not just create a script and host this in github?
-
-## INSTALLATION OF HADOOP (use not all caps)
+```bash
+$ mkdir -p ~/cloudmesh/bin
+$ cd ~/cloudmesh/bin
+$ wget -c --header "Cookie: oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u161-b12/2f38c3b165be4555a1fa6e98c45e0808/jdk-8u161-linux-x64.tar.gz"
+$ tar xvzf jdk-8u161-linux-x64.tar.gz
+```
+## Installation Of Hadoop
 
 First we will take a look on how to install Hadoop 2.6.0 on Ubuntu 16.04. We may
 need a prior folder structure to do the installation properly. 
+
+```bash
+$ cd ~/cloudmesh/bin/
+$ wget https://archive.apache.org/dist/hadoop/core/hadoop-2.6.0/hadoop-2.6.0.tar.gz
+$ tar -xzvf hadoop-2.6.0.tar.gz
+```
 
 
 ### Add Environmental Variables
 
 In Ubuntu the environmental variables are setup in a file called bashrc at it can be accessed the following way
 
-	$ emacs ~/.bashrc
-
+```bash
+$ emacs ~/.bashrc
+```
 
 
 where is hadoop comming from
 
-```
+```bash
 export JAVA_HOME=~/cloudmesh/bin/jdk1.8.0_161
-export HADOOP_HOME=~/cloudmesh/hadoop-2.6.0
+export HADOOP_HOME=~/cloudmesh/bin/hadoop-2.6.0
 export YARN_HOME=$HADOOP_HOME
 export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
 export PATH=$HADOOP_HOME/bin:$JAVA_HOME/bin:$PATH
 ```
 
-After editing you must update the variables in the system
+In Emacs to save the file Ctrl+X+S and Ctrl+X+C to exit.
+After editing you must update the variables in the system.
 
-```
+```bash
 $ source ~/.bashrc
 $ java -version
 ```
 If you have installed things properly there will be no errors. It will show the version as follows,
 
-```
+```bash
 java version "1.8.0_161"
 Java(TM) SE Runtime Environment (build 1.8.0_161-b12)
 Java HotSpot(TM) 64-Bit Server VM (build 25.161-b12, mixed mode)
 ```
 And verifying the hadoop installation,
 
-```
+```bash
 $ hadoop
 ```
 If you have successfully installed this, there must be a message shown as below.
 
-```
+```bash
 Usage: hadoop [--config confdir] COMMAND
        where COMMAND is one of:
   fs                   run a generic filesystem user client
@@ -91,35 +167,5 @@ Usage: hadoop [--config confdir] COMMAND
 Most commands print help when invoked w/o parameters.
 ```
 
-### Setup Password-less SSH
-
-```
-$ ssh localhost
-```
-
-In case of this task need the password, follow the below mentioned commands.
-
-```
-$ ssh-keygen -t rsa
-(hit enter to the default file name)
-(add a password for the passphrase section)
-```
-
-Then we need to add the generated key into authorized key list by running the following commands.
-
-```
-$ cd ~/.ssh
-$ cat id_rsa.pub>>authorized_keys
-```
-
-Then try to ssh again by running the following commands.
-
-```
-$ ssh localhost
-$ exit
-```
-This will log you into localhost and log you out.
-
-If you have completed up to this part, you have successfully completed hadoop installation in your machine and in the next lab we'll discuss about Hadoop configuration and running an example.
 
 
