@@ -1,0 +1,223 @@
+\section{HADOOP}\label{hadoop}
+
+Hadoop is an open source framework for storage and processing of large
+datasets on commodity clusters. Hadoop internally uses its own file
+system called HDFS (Hadoop Distributed File System). In this tutorial
+our main focus is on using Hadoop 2.6.0 version along with the Yarn
+resource manager. We will be focusing more on the Hadoop installation in
+this chapter.
+
+\subsection{Prerequisits}\label{prerequisits}
+
+We assume that you have emacs, ssh, and rsync installed
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\KeywordTok{sudo} \NormalTok{apt-get install emacs}
+\NormalTok{$ }\KeywordTok{sudo} \NormalTok{apt-get install ssh}
+\NormalTok{$ }\KeywordTok{sudo} \NormalTok{apt-get install rsync}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{User and User Group
+Creation}\label{user-and-user-group-creation}
+
+In installing hadoop, for the security reasons we will stick to a
+specific user for hadoop and a specific user group.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\KeywordTok{sudo} \NormalTok{addgroup hadoop_group}
+\NormalTok{$ }\KeywordTok{sudo} \NormalTok{adduser --ingroup hadoop_group hduser1}
+\NormalTok{$ }\KeywordTok{sudo} \NormalTok{adduser hduser1 sudo}
+\end{Highlighting}
+\end{Shaded}
+
+After this point we are completed giving sudo privileges to the created
+user in the specific user group.
+
+\subsubsection{Configuring SSH}\label{configuring-ssh}
+
+Here we have to configure ssh for the created user for security in the
+hadoop installation. Run the following commands to configure ssh.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\KeywordTok{su} \NormalTok{– hduser1}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\KeywordTok{ssh-keygen} \NormalTok{-t rsa}
+\end{Highlighting}
+\end{Shaded}
+
+After this step you will see some console screen as shown below. Follow
+the instructions in the command line.
+
+When you see the following console input, press ENTER.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{Enter} \NormalTok{file in which to save the key (/home/hduser1/.ssh/id_rsa)}\KeywordTok{:}
+\end{Highlighting}
+\end{Shaded}
+
+Next you will be asked to enter a password for ssh configuration,
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{Enter} \NormalTok{passphrase (empty for no passphrase)}\KeywordTok{:}
+\end{Highlighting}
+\end{Shaded}
+
+Here enter the same password
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{Enter} \NormalTok{same passphrase again:}
+\end{Highlighting}
+\end{Shaded}
+
+Finally you will see something like this after these steps are finished.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{Generating} \NormalTok{public/private rsa key pair.}
+\KeywordTok{Enter} \NormalTok{file in which to save the key (/home/hduser1/.ssh/id_rsa)}\KeywordTok{:}
+\KeywordTok{Created} \NormalTok{directory }\StringTok{'/home/hduser1/.ssh'}\NormalTok{.}
+\KeywordTok{Enter} \NormalTok{passphrase (empty for no passphrase)}\KeywordTok{:}
+\KeywordTok{Enter} \NormalTok{same passphrase again:}
+\KeywordTok{Your} \NormalTok{identification has been saved in /home/hduser1/.ssh/id_rsa.}
+\KeywordTok{Your} \NormalTok{public key has been saved in /home/hduser1/.ssh/id_rsa.pub.}
+\KeywordTok{The} \NormalTok{key fingerprint is:}
+\KeywordTok{SHA256}\NormalTok{:0UBCPd6oYp7MEzCpOhMhNiJyQo6PaPCDuOT48xUDDc0 hduser1@messi}
+\KeywordTok{The} \NormalTok{key}\StringTok{'s randomart image is:}
+\StringTok{+---[RSA 2048]----+}
+\StringTok{|    .+ooo        |}
+\StringTok{| .   oE.oo       |}
+\StringTok{|+  .. ...+.      |}
+\StringTok{|X+=  .  o..      |}
+\StringTok{|XX.o  o.S        |}
+\StringTok{|Bo+ + .o         |}
+\StringTok{|*o * +.          |}
+\StringTok{|*.. *.           |}
+\StringTok{| +.o..           |}
+\StringTok{+----[SHA256]-----+}
+\end{Highlighting}
+\end{Shaded}
+
+You have successfully configured ssh.
+
+\subsubsection{Install Java}\label{install-java}
+
+First log on to the newly created user :
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\KeywordTok{su} \NormalTok{- hduser1}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\KeywordTok{mkdir} \NormalTok{-p ~/cloudmesh/bin}
+\NormalTok{$ }\KeywordTok{cd} \NormalTok{~/cloudmesh/bin}
+\NormalTok{$ }\KeywordTok{wget} \NormalTok{-c --header }\StringTok{"Cookie: oraclelicense=accept-securebackup-cookie"} \StringTok{"http://download.oracle.com/otn-pub/java/jdk/8u161-b12/2f38c3b165be4555a1fa6e98c45e0808/jdk-8u161-linux-x64.tar.gz"}
+\NormalTok{$ }\KeywordTok{tar} \NormalTok{xvzf jdk-8u161-linux-x64.tar.gz}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Installation Of Hadoop}\label{installation-of-hadoop}
+
+First we will take a look on how to install Hadoop 2.6.0 on Ubuntu
+16.04. We may need a prior folder structure to do the installation
+properly.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\KeywordTok{cd} \NormalTok{~/cloudmesh/bin/}
+\NormalTok{$ }\KeywordTok{wget} \NormalTok{https://archive.apache.org/dist/hadoop/core/hadoop-2.6.0/hadoop-2.6.0.tar.gz}
+\NormalTok{$ }\KeywordTok{tar} \NormalTok{-xzvf hadoop-2.6.0.tar.gz}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Add Environmental
+Variables}\label{add-environmental-variables}
+
+In Ubuntu the environmental variables are setup in a file called bashrc
+at it can be accessed the following way
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\KeywordTok{emacs} \NormalTok{~/.bashrc}
+\end{Highlighting}
+\end{Shaded}
+
+where is hadoop comming from
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{export} \OtherTok{JAVA_HOME=}\NormalTok{~/cloudmesh/bin/jdk1.8.0_161}
+\KeywordTok{export} \OtherTok{HADOOP_HOME=}\NormalTok{~/cloudmesh/bin/hadoop-2.6.0}
+\KeywordTok{export} \OtherTok{YARN_HOME=$HADOOP_HOME}
+\KeywordTok{export} \OtherTok{HADOOP_CONF_DIR=$HADOOP_HOME}\NormalTok{/etc/hadoop}
+\KeywordTok{export} \OtherTok{PATH=$HADOOP_HOME}\NormalTok{/bin:}\OtherTok{$JAVA_HOME}\NormalTok{/bin:}\OtherTok{$PATH}
+\end{Highlighting}
+\end{Shaded}
+
+In Emacs to save the file Ctrl+X+S and Ctrl+X+C to exit. After editing
+you must update the variables in the system.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\KeywordTok{source} \NormalTok{~/.bashrc}
+\NormalTok{$ }\KeywordTok{java} \NormalTok{-version}
+\end{Highlighting}
+\end{Shaded}
+
+If you have installed things properly there will be no errors. It will
+show the version as follows,
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{java} \NormalTok{version }\StringTok{"1.8.0_161"}
+\KeywordTok{Java}\NormalTok{(TM) }\KeywordTok{SE} \NormalTok{Runtime Environment (build 1.8.0_161-b12)}
+\KeywordTok{Java} \NormalTok{HotSpot(TM) }\KeywordTok{64-Bit} \NormalTok{Server VM (build 25.161-b12, mixed mode)}
+\end{Highlighting}
+\end{Shaded}
+
+And verifying the hadoop installation,
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\KeywordTok{hadoop}
+\end{Highlighting}
+\end{Shaded}
+
+If you have successfully installed this, there must be a message shown
+as below.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{Usage}\NormalTok{: hadoop [--config confdir] COMMAND}
+       \KeywordTok{where} \NormalTok{COMMAND is one of:}
+  \KeywordTok{fs}                   \NormalTok{run a generic filesystem user client}
+  \KeywordTok{version}              \NormalTok{print the version}
+  \KeywordTok{jar} \KeywordTok{<}\NormalTok{jar}\KeywordTok{>}            \NormalTok{run a jar file}
+  \KeywordTok{checknative} \NormalTok{[-a}\KeywordTok{|-h}\NormalTok{]  check native hadoop and compression libraries availability}
+  \KeywordTok{distcp} \KeywordTok{<}\NormalTok{srcurl}\KeywordTok{>} \KeywordTok{<}\NormalTok{desturl}\KeywordTok{>} \NormalTok{copy file or directories recursively}
+  \KeywordTok{archive} \NormalTok{-archiveName NAME -p }\KeywordTok{<}\NormalTok{parent path}\KeywordTok{>} \KeywordTok{<}\NormalTok{src}\KeywordTok{>}\NormalTok{* }\KeywordTok{<}\NormalTok{dest}\KeywordTok{>} \NormalTok{create a hadoop archive}
+  \KeywordTok{classpath}            \NormalTok{prints the class path needed to get the}
+  \KeywordTok{credential}           \NormalTok{interact with credential providers}
+                       \KeywordTok{Hadoop} \NormalTok{jar and the required libraries}
+  \KeywordTok{daemonlog}            \NormalTok{get/set the log level for each daemon}
+  \KeywordTok{trace}                \NormalTok{view and modify Hadoop tracing settings}
+ \KeywordTok{or}
+  \KeywordTok{CLASSNAME}            \NormalTok{run the class named CLASSNAME}
+
+\KeywordTok{Most} \NormalTok{commands print help when invoked w/o parameters.}
+\end{Highlighting}
+\end{Shaded}
+
