@@ -220,3 +220,214 @@ provide a mini tutorial
 
 \URL{http://www.noveldevices.co.uk/rp-dhcp-server}
 
+\section{Gregor's Notes}
+
+THis section contains some unordered notes by Gregor that you may want
+to look at and integrate into proper sections:
+
+\subsection{editor}
+
+find an editor that is installed and can be used on commandline nano, vi, other?
+\subsection{hostname}
+
+The hostname is stored in \verb|/etc/hostname|. Edit the file and
+change it to a name such as green00, green01, green02, green03, green04,
+green05. Be consitant with the names. The 00 host shoudl be the top
+most host in the cluster.
+
+edit
+
+\begin{lstlisting}
+nano /etc/hostname
+\end{lstlisting}
+
+after you edited the hostname
+
+\begin{lstlisting}
+sudo /etc/init.d/hostname.sh start
+\end{lstlisting}
+
+Ideally we want to find out how to write the hostname after we burn
+the SDcard on the laptop that does the burning
+
+develop a python script to do that
+
+\subsection{Gather the mac addresses}
+
+Is there a better way?
+
+\begin{lstlisting}
+/sys/class/net/<interface-name>/address
+
+cat /sys/class/net/eth0/address
+cat /sys/class/net/wlan0/address
+ifconfig eth0
+\end{lstlisting}
+
+develop a python script to do that
+
+\subsection{Enable sshd}
+
+Not tested
+
+\begin{lstlisting}
+sudo mv /boot/boot_enable_ssh.rc /boot/boot.rc
+sudo reboot
+\end{lstlisting}
+
+\URL{http://www.noveldevices.co.uk/rp-ssh}
+
+NOt sure if this is needed:
+
+``
+You may find that you can connect to your Pi with SSH but the session
+hangs after a successful logon. This is usually caused because of a
+network QoS mismatch that affects certain switches and routers but you
+can correct this by editing the two files
+
+\begin{lstlisting}
+/etc/ssh/ssh_config
+/etc/ssh/sshd_config
+\end{lstlisting}
+
+and adding
+
+\begin{lstlisting}
+IPQoS 0x00
+\end{lstlisting}
+
+to each file as the last record.
+``
+develop a a python script to do that
+
+\subsection{Wireless}
+
+Do not use iu secure. Do not leave your passwd on the pi as insecure.
+
+\begin{lstlisting}
+sudo nano /etc/network/interfaces
+
+auto wlan0
+allow-hotplug wlan0
+iface wlan0 inet dhcp
+wpa-ssid "your-WLAN-SSID"
+wpa-psk "your-WLAN-password"
+\end{lstlisting}
+
+develop a pthon script to do that
+
+\subsection{Update when on network}
+
+for now dont put pi on network so do this once we figure out a better
+way
+
+\begin{lstlisting}
+sudo apt-get update
+sudo apt-get install emacs
+\end{lstlisting}
+
+\subsection{USB stick}
+
+\begin{lstlisting}
+cat /var/log/messages
+\end{lstlisting}
+
+find sda*
+
+find the right name ;-)
+
+\begin{lstlisting}
+sudo fdisk /dev/<device-name>
+sudo mkfs -t vfat /dev/<device-name>
+mkdir ~/<mount-point>
+sudo mount /dev/<device-name> ~/<mount-point>
+\end{lstlisting}
+
+\subsection{Locale}
+
+set locale to US so you can use keyboard
+
+\begin{lstlisting}
+raspi-config 
+\end{lstlisting}
+
+or
+
+\begin{lstlisting}
+sudo dpkg-reconfigure locales
+\end{lstlisting}
+
+develop a python script to do that
+
+\subsection{DHCP server on 00}
+
+\begin{lstlisting}
+sudo apt-get update
+sudo apt-get install isc-dhcp-server
+sudo nano /etc/network/interfaces
+\end{lstlisting}
+
+
+Change it to 
+
+\begin{lstlisting}
+iface eth0 inet static
+address <the-IP-address-of-your-Pi-that-will-be-the-DHCP-server>
+netmask <the-subnet-mask-of-your-LAN>
+gateway <the-IP-address-of-your-LAN-gateway>
+sudo nano /etc/dhcp/dhcpd.conf
+\end{lstlisting}
+
+uncomment the info so the server can start
+
+\begin{lstlisting}
+subnet <starting-IP-address-of-your-network> netmask <starting-IP-address-of-your-network> {
+
+     range <first-IP-address-of-your-DHCP-address-range> <last-IP-address-of-your-DHCP-address-range>;
+
+     option routers <the-IP-address-of-your-gateway-or-router>;
+
+     option broadcast-address <the-broadcast-IP-address-for-your-network>;
+
+}
+\end{lstlisting}
+
+edit /etc/default/isc-dhcp-server
+
+\begin{lstlisting}
+DHCPD_CONF=/etc/dhcp/dhcpd.conf
+DHCPD_PID=/var/run/dhcpd.pid
+INTERFACES="eth0"
+\end{lstlisting}
+
+\begin{lstlisting}
+sudo service isc-dhcp-server restart
+\end{lstlisting}
+
+\subsection{Temperature}
+
+\begin{lstlisting}
+cat /sys/class/thermal/thermal_zone0/temp
+\end{lstlisting}
+
+\subsection{graphana}
+
+could be helpful to monitor cluster/clusters
+
+\URL{https://github.com/grafana/grafana}
+
+
+\URL{https://github.com/weaveworks/grafanalib}
+
+there are many more, just search. we have not tested them
+example with yaml
+
+\URL{https://github.com/jakubplichta/grafana-dashboard-builder}
+
+light scheme
+
+in /etc/grafana/grafana.ini uncomment line and set 
+
+\begin{lstlisting}
+default_theme = light 
+\end{lstlisting}
