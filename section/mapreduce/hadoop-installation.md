@@ -27,10 +27,16 @@ We also assume you have Java installed.
 
 can we not just create a script and host this in github?
 
-## INSTALLATION OF HADOOP (use not all caps)
+## Installation Of Hadoop
 
 First we will take a look on how to install Hadoop 2.6.0 on Ubuntu 16.04. We may
 need a prior folder structure to do the installation properly. 
+
+```
+$ cd ~/cloudmesh/bin/
+$ wget http://www-eu.apache.org/dist/hadoop/common/hadoop-2.6.0/hadoop-2.6.0.tar.gz	
+$ tar -xzvf hadoop-2.6.0.tar.gz
+```
 
 
 ### Add Environmental Variables
@@ -91,7 +97,10 @@ Usage: hadoop [--config confdir] COMMAND
 Most commands print help when invoked w/o parameters.
 ```
 
-### Setup Password-less SSH
+### Setup SSH 
+
+Here in order to adding password every time, we will use a keygen generated
+using a passphrase to login to ssh. Follow the steps to setup SSH properly.
 
 ```
 $ ssh localhost
