@@ -126,7 +126,8 @@ export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
 export PATH=$HADOOP_HOME/bin:$JAVA_HOME/bin:$PATH
 ```
 
-After editing you must update the variables in the system
+In Emacs to save the file Ctrl+X+S and Ctrl+X+C to exit.
+After editing you must update the variables in the system.
 
 ```bash
 $ source ~/.bashrc
