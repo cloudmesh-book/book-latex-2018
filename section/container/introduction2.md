@@ -38,21 +38,42 @@ In order to install on OSX, you need to do the following steps:
 
 ### Install Docker for Windows 10
 
-[Download docker] (https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe)
+[Download docker](https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe)
 
 [Download docker toolbox](https://download.docker.com/win/stable/DockerToolbox.exe)
 
 Move these downloaded files to a directory as shown below.
 
-Replace <username> with the username in your Windows 10 account
-
-Example : Neo
-
 ```
 mkdir C:\Users\<username>\Documents\cloudmesh
 ```
 
+Replace <username> with the username in your Windows 10 account
+
+Example : Neo
+
+
+```
+mkdir C:\Users\Neo\Documents\cloudmesh
+```
+
 Place all the downloaded exe files in the cloudmesh directory we created earlier. First do the Docker installation and then do the Docker Toolbox installation. Then you can double click the exe file and run it for installation.
+
+When you are doing the installation, tic mark the descriptions in the installation saying to create shortcuts in your desktop. This way you can load all the tools in the desktop as shortcuts.
+
+For running you will need the "Docker Quickstart Terminal" application and it will load all the requirements and provide a terminal window in which you can execute docker commands.
+
+Once the terminal is loaded, it will show something like following :
+
+```
+$ <username>@<yourpc> MINGW64 ~
+```
+
+For instance
+
+```
+$neo@neo MINGW64 ~
+```
 
 ### Install Docker Commuinity Edition for Ubuntu
 
