@@ -110,9 +110,6 @@
 %	BIBLIOGRAPHY AND INDEX
 %-----------------------------------------------------------------------------
 
-\addbibresource{bib/bibliography.bib} % BibTeX bibliography file
-\addbibresource{bib/refs-jabref.bib} % BibTeX bibliography file
-\defbibheading{bibempty}{}
 
 %-------------------------------------------------------------------------------
 %	MAIN TABLE OF CONTENTS
