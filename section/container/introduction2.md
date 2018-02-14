@@ -35,6 +35,25 @@ In order to install on OSX, you need to do the following steps:
 
 2. Start `Docker.app`
 
+
+### Install Docker for Windows 10
+
+[Download docker] (https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe)
+
+[Download docker toolbox](https://download.docker.com/win/stable/DockerToolbox.exe)
+
+Move these downloaded files to a directory as shown below.
+
+Replace <username> with the username in your Windows 10 account
+
+Example : Neo
+
+```
+mkdir C:\Users\<username>\Documents\cloudmesh
+```
+
+Place all the downloaded exe files in the cloudmesh directory we created earlier. First do the Docker installation and then do the Docker Toolbox installation. Then you can double click the exe file and run it for installation.
+
 ### Install Docker Commuinity Edition for Ubuntu
 
 In order to instal Docker community edition for Ubuntu, you first have
@@ -75,7 +94,7 @@ To check if the Docker works, please follow the following command.
 ```
 $ sudo docker run hello-world
 ```
- 
+
 # Introduction to Kubernetes
 
 ## Topics Covered and Learning Outcome
@@ -161,16 +180,58 @@ resources with new Deployments.
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.25.0/minikube-darwin-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
 ```
 
+#### Windows 10
+
+We assume that you have installed Oracle VirtualBox in your machine which must be a version 5.x.x.
+
+Initially, we need to download two executables.
+
+[Download Kubectl] (http://storage.googleapis.com/kubernetes-release/release/v1.4.0/bin/windows/amd64/kubectl.exe)
+
+[Download Minikube](https://storage.googleapis.com/minikube/releases/v0.25.0/minikube-windows-amd64.exe)
+
+After downloading these two executables place them in the cloudmesh directory we earlier created. Rename the "minikube-windows-amd64.exe" to "minikube.exe". Makesure minikube.exe and kubectl.exe lie in the same directory.
+
 #### Linux
 
 ```
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.25.0/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
 ```
 
+Installing KVM2 is important for Ubuntu distributions
+
+```
+$ sudo apt install libvirt-bin qemu-kvm
+$ sudo usermod -a -G libvirtd $(whoami)
+$ newgrp libvirtd
+```
+
+We are going to run minikube using KVM2 libraries instead of virtualbox libraries for windows installation.
+
+Then install the drivers for KVM2,
+
+```
+$ curl -LO https://storage.googleapis.com/minikube/releases/latest/docker-machine-driver-kvm2 && chmod +x docker-machine-driver-kvm2 && sudo mv docker-machine-driver-kvm2 /usr/bin/
+```
+
 ### Start a cluster using Minikube
+
+#### OSX Minikube Start
 
 ```
 $ minikube start
+```
+
+#### Ubuntu Minikube Start
+```
+minikube start --vm-driver=kvm2
+```
+
+#### Windows 10 Minikube Start
+
+```
+$ cd  C:\Users\<username>\Documents\cloudmesh
+$ .\minikube.exe start --vm-driver="virtualbox"
 ```
 
 ### Create a deployment
@@ -205,6 +266,14 @@ $ curl $(minikube service hello-minikube --url)
 $ minikube dashboard
 ```
 
+If you want to get an interactive dashboard,
+
+```
+$ .\minikube.exe dashboard --url=true
+http://192.168.99.101:30000
+```
+Browse to http://192.168.99.101:30000 in your web browser and it will provide a GUI dashboard regarding minikube. 
+
 ### Delete the service and deployment
 
 ```
@@ -213,6 +282,8 @@ $ kubectl delete deployment hello-minikube
 ```
 
 ### Stop the cluster
+
+For all platforms we can use the following command.
 
 ```
 $ minikube stop
