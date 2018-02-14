@@ -1,6 +1,12 @@
-%\chapter{Help}
+\chapter{Help}
 
 \section{Compiling Cloudmesh Handbook}\label{s:help-compile-handbook}
+
+You must fork the github repository from here :
+\URL{https://github.com/cloudmesh/book}
+
+And you must install latex in your machine to compile it. We assume
+you have installed latex before trying this tutorial.
 
 Our handbook is conveniently designed so that new sections can be
 added easily. This includes the support of draft chapters that use the
@@ -54,24 +60,38 @@ dest:
 \end{lstlisting}
 
 Next, save the Makefile.albert.
-Now opy the file called single.tex to kmeans.tex. 
+Now copy the file called single.tex to albert.tex. 
 
 \begin{lstlisting}
 cp single.tex albert.tex
 \end{lstlisting}
 
-As we want to review the section we must however  add it to this \LaTex~
+As we want to review the section we must however  add it to this latex
 file with the section name included
 
 \begin{lstlisting}
 \include{section/machine-learning/kmeans}
 \end{lstlisting}
 
-You may elect to outcomment other sections.
+You may select to outcomment other sections.
 Now you can compile the file with 
 
+Sample kmeans.tex file is shown below. And also make sure you include
+all the images needed in the image folder inside the repository folder.
+Do not create image folders within other folders, pleaese use the given
+folder to include images. 
+
+Sample kmeans.tex can be found here :
+\URL{https://github.com/cloudmesh/book/blob/master/section/container/docker-kubernetes-installation.tex}
+
+
+%%%%%%%%%%%%%
+
+Sample albert.tex can be found here :
+\URL{https://github.com/cloudmesh/book/blob/master/single.tex}
+
 \begin{lstlisting}
-  make -f Makefile.albert albert
+make -f Makefile.albert albert
 \end{lstlisting}
 
 
