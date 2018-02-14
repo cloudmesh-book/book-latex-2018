@@ -250,6 +250,12 @@ minikube start --vm-driver=kvm2
 
 #### Windows 10 Minikube Start
 
+In this case you must run "Windows PowerShell" as administrator.
+For this search for the application in search and right click and
+click Run as administrator. If you are an administrator it will run
+automatically but if you are not please make sure you provide the
+admin login information in the pop up.
+
 ```
 $ cd  C:\Users\<username>\Documents\cloudmesh
 $ .\minikube.exe start --vm-driver="virtualbox"
