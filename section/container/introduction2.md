@@ -207,7 +207,7 @@ We assume that you have installed Oracle VirtualBox in your machine which must b
 
 Initially, we need to download two executables.
 
-[Download Kubectl] (http://storage.googleapis.com/kubernetes-release/release/v1.4.0/bin/windows/amd64/kubectl.exe)
+[Download Kubectl](http://storage.googleapis.com/kubernetes-release/release/v1.4.0/bin/windows/amd64/kubectl.exe)
 
 [Download Minikube](https://storage.googleapis.com/minikube/releases/v0.25.0/minikube-windows-amd64.exe)
 
