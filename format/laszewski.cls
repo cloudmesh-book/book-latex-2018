@@ -637,11 +637,11 @@ addtohook={%
 \newcommand{\EURL}[2]{ \hfill \href{#1}{#2 ~ $\Mapsto$} }
 
 \newcommand{\video}[4]{%
-{\em \hfill \href{#4}{#3 (#2)~\includegraphics[width=\baselineskip]{images/video.png}}}    \index{Video!#1!#3 (#2)}
+\textit{\hfill \href{#4}{#3 (#2)~\includegraphics[width=\baselineskip]{images/video.png}}}    \index{Video!#1!#3 (#2)}
 }
 
 \newcommand{\slides}[4]{%
-  {\em  \hfill \href{#4}{#3 (#2)~\includegraphics[width=\baselineskip]{images/slide.png}}} \index{Slides!#1!#3 (#2)}
+  \textit{ \hfill \href{#4}{#3 (#2)~\includegraphics[width=\baselineskip]{images/slide.png}}} \index{Slides!#1!#3 (#2)}
 }
 
 \DefineVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\footnotesize,xleftmargin=.5in}
@@ -677,7 +677,7 @@ addtohook={%
         basicstyle=\small\ttfamily} 
 %        basicstyle=\small\ttfamily} 
 
-\newcommand{\WHERE}[3]{$\square$~ #1 \ref{#2}. \nameref{#2} \hfill ~ #3 ~ \pageref{#2}\\}
+\newcommand{\WHERE}[3]{$\square$~ #1~\ref{#2}. \nameref{#2} \hfill ~ #3 ~ \pageref{#2}\\}
 
 \newenvironment{NOTE2}[1]
     {\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,%

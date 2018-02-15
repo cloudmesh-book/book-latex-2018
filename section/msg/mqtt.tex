@@ -87,12 +87,12 @@ forward-slash ( / ), where each part represents a different topic
 level. This is a common model introduced in file systems but also in
 internet URLs. 
 
-A topic looks therefore as follows: {\em topic-level0/topic-level1/topic-level2}.
+A topic looks therefore as follows: \textit{topic-level0/topic-level1/topic-level2}.
 
 
 
 Subscribers can subscribe to different topics via the broker.
-Subscribing to {\em topic-level0} allows the subscriber to receive all
+Subscribing to \textit{topic-level0} allows the subscriber to receive all
 messages that are associated with topics that start with {\em
   topic-level0}. This allows subscribers to filter what messages to
 receive based on the topic hierarchy. Thus, when a publisher publishes
@@ -239,9 +239,9 @@ MQTT integration into other Services.
 
 \item [ELK stack.]  ELK stack (elastic-search, logstash and kibana) is
   an opensource project designed for scalability which contains three
-  main software packages, the {\em elastic-search} search and
-  analytics engine, {\em logstash} which is a data collection pipeline
-  and {\em kibana} which is a visualization dashboard
+  main software packages, the \textit{elastic-search} search and
+  analytics engine, \textit{logstash} which is a data collection pipeline
+  and \textit{kibana} which is a visualization dashboard
   \cite{elk-stack}. Data from an IoT network can be collected,
   analysed and visualized easily with the help of the ELK stack as
   shown in \cite{mqtt-elasticsearch-setup} and
@@ -357,7 +357,7 @@ registered. Each raspberry pi receives the corresponding message and
 turns the LEDs or relays on or off as per the message.
 
 On a local network this process happens in near real time and no
-delays were observed. Eclipse IoT MQTT broker ({\em iot.eclipse.org})
+delays were observed. Eclipse IoT MQTT broker (\textit{iot.eclipse.org})
 was also tried which also did not result in any significant delays.
 
 Thus it is observed that two raspberry pis can be easily controlled

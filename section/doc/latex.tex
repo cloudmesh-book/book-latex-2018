@@ -152,7 +152,7 @@ the commercial github.com and not the IU Enterprise GitHub at
 github.iu.edu. As we require in our courses github.com you will be
 able to use it.
 
-{\em Please note that this license is only available to School of
+\textit{Please note that this license is only available to School of
 Informatics and Computing students, faculty, and staff on the
 Bloomington campus.  Students must be enrolled in one of the SoIC
 degree programs on the Bloomington campus to be eligible.  Students in
@@ -271,7 +271,7 @@ word. LaTeX has a special command for that using:
 
 \begin{tcblisting}{colback=blue!5!white,colframe=gray!50!blue,listing side text,
   title=emphasize,fonttitle=\bfseries}
-{\em this is emphasized}
+\textit{this is emphasized}
 \end{tcblisting}
 
 To write a text as bold (which should also be avoided as bold is
@@ -366,7 +366,7 @@ never worry about the placement as LaTeX does typically a very
 good job of doing this.:
 
 \begin{verbatim}
-In Figure \ref{F:flow} we show a black and white graph about ... .
+In Figure~\ref{F:flow} we show a black and white graph about ... .
 
 \begin{figure}[htb]
   \includegraphics[width=1.0\columnwidth]{images/gregor.png}
@@ -377,7 +377,7 @@ In Figure \ref{F:flow} we show a black and white graph about ... .
 
 Which results in the following:
 \begin{quote}
-In Figure \ref{F:flow} we show a black and white graph about ... .
+In Figure~\ref{F:flow} we show a black and white graph about ... .
 
 \begin{figure}[htb]
   \includegraphics[width=1.0\columnwidth]{images/i523-overview.pdf}
@@ -434,7 +434,7 @@ information in directly including csv tables see
 \URL{http://mirror.utexas.edu/ctan/macros/latex/contrib/csvsimple/csvsimple.pdf}
 
 However the format is very easy and can in most cases directly be
-included in latex as shown in Table \ref{T:elements}.
+included in latex as shown in Table~\ref{T:elements}.
 
 \begin{verbatim}
 \begin{table}[htb]
@@ -484,7 +484,7 @@ also to sections. Thus I can place a label after a section:
 and write elsewhere in the paper:
 
 \begin{verbatim}
-As we showcased in Section \ref{S:introduction}
+As we showcased in Section~\ref{S:introduction}
 \end{verbatim}
 
 Furthermore to conveniently distinguish sections tables and figures, we
@@ -858,10 +858,10 @@ do is place the markdown text in a separate file. Let us call the file
 \end{verbatim}
 
 Obviously, we would have to convert this to LaTeX. Luckily there is a
-very useful program called {\em pandoc} that does this for you. YOu
+very useful program called \textit{pandoc} that does this for you. YOu
 could make the translation in the shell, but you could also make the
 translation locally on your computer while allowing \LaTeX~ to start up
-external programs. This is achieved with the {\em write18} command and
+external programs. This is achieved with the \textit{write18} command and
 allowing LaTeX explicitly to call external programs. Please inspect
 the following latex file that includes a template on how to do
 this. We assume the file is called markdown.tex for our example.
@@ -881,14 +881,14 @@ this. We assume the file is called markdown.tex for our example.
 \end{verbatim}
 
 Now to generate the PDF we simply have to call the following command
-that include the {\em -shell-escape} flag to allow the execution of
+that include the \textit{-shell-escape} flag to allow the execution of
 write18 embedded commands:
 
 \begin{verbatim}
 pdflatex -shell-escape markdown-test
 \end{verbatim}
 
-The output will be {\em markdown.pdf} with the content from the
+The output will be \textit{markdown.pdf} with the content from the
 markdown file translated. Doing this naturally allows you to write
 large portions in markdown and automatically include them in your
 LaTeX document. Hence, you can use editors such as Macdown to initially
@@ -1099,6 +1099,89 @@ make
 make check
 sudo make install
 \end{verbatim}
+
+\subsection{lachek}
+\label{s:lacheck}
+\index{lacheck}
+\index{\LaTeX!lacheck}
+
+Lacheck allows to find­ing common mistakes in \LaTeX~
+documents. We recommend that you use it to check your latex files.
+
+You can invoke it as follows
+
+\begin{lstlisting}
+lacheck filename.tex
+\end{lstlisting}
+
+More information can be found at
+
+\URL{https://ctan.org/tex-archive/support/lacheck}
+
+\subsection{chktex}
+\label{s:chktex}
+\index{chktex}
+\index{\LaTeX!chktex}
+
+LaTeX is a powerfull program to develop professional documents. In
+some cases i is useful to check some semantics on the document. For
+this reason you can use 
+
+\begin{lstlisting}
+chktex filename.tex
+\end{lstlisting}
+
+It will execute a number of filters and produce a check on them. You
+can configure it to produce warnings and errors based on the error
+type.
+
+For a manual page use
+
+\begin{lstlisting}
+chktex --help
+\end{lstlisting}
+
+When using it some errors and wrnings can be ignored, while others
+should be considerd. Supported featured mantiond on the Web page
+include:
+``
+\begin{itemize}
+          \item  Commands terminated with space. Ignores \verb|\tt|, etc.
+          \item  Space in front of references instead of \verb|~|.
+          \item  Forgetting to group parenthesis characters when
+            sub-/superscripting.
+          \item  Italic correction (\verb|\/|) mistakes (double, missing,
+            unnecessary).
+          \item  Parenthesis and environment matching.
+          \item  Ellipsis detection; also checks whether to use \verb|\dots|,
+            \verb|\cdots| or \verb|\ldots|.
+          \item  Enforcement of normal space after abbreviation. Detects most
+            abbreviations automagically.
+          \item  Enforcement of end-of-sentence space when the last sentence
+            ended with capital letter.
+          \item  Math-mode on/off detection.
+          \item  Quote checking, both wrong types (\verb|"|) and wrong direction.
+          \item  Recommends splitting three quotes in a row.
+          \item  Searching for user patterns.
+          \item  Displays comments.
+          \item  Space in front of \verb|\label| and similar commands.
+          \item  Use of \verb|x| instead of \verb|$\times$| between numbers.
+          \item  Multiple spaces in input which will be rendered as one space
+            (or multiple spaces, where that is undesirable).
+          \item  Warns about text which may be ignored.
+          \item  Mathematical operators typeset as variables.
+          \item  No space in front of/after parenthesis.
+          \item  Demands a consistent quote style.
+          \item  Punctuation inside inner math mode/outside display math mode.
+          \item  Use of TeX primitives where LaTeX equivalents are available.
+          \item  Space in front of footnotes.
+          \item  Bogus characters following commands.
+\end{itemize}
+``
+
+For more details see
+
+\URL{http://baruch.ev-en.org/proj/chktex/}
 
 \subsection{References}
 \index{Latex!other documentation}

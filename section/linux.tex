@@ -10,7 +10,7 @@
 LINUX is a reimplementation by the community of UNIX which was
 developed in 1969 by Ken Thompson and Dennis Ritchie of Bell
 Laboratories and rewritten in C. An important part of UNIX is what is
-called the {\em kernel} which allows the software to talk to
+called the \textit{kernel} which allows the software to talk to
 the hardware and utilize it. 
 
 In 1991 Linus Trovalds started developing a Linux Kernel that was
@@ -21,7 +21,7 @@ Operating system replacement for UNIX.
 \section{Shell}
 
 One of the most important features for us will be to access the
-computer with the help of a {\em shell}. THe shell is typically run in
+computer with the help of a \textit{shell}. THe shell is typically run in
 what is called a terminal and allows interaction to the computer with
 commandline programs. 
 
@@ -39,7 +39,7 @@ commands that you may als find even as a RefCard.
 
 \URL{http://www.cheat-sheets.org/\#Linux}
 
-We provide in Table \ref{T:shell-commands} a number of useful commands
+We provide in Table~\ref{T:shell-commands} a number of useful commands
 that you want to explore. For more information simply type man and the
 name of the command.
 
@@ -72,7 +72,7 @@ name of the command.
   \multicolumn{2}{|l|}{\cellcolor{blue!15} Help Commands}\\
   \hline
   man \emph{command} & manual page for the \emph{command} \\
-  apropos {\em text} & list all commands that have text in it\\
+  apropos \textit{text} & list all commands that have text in it\\
   & \\
 
   \hline
@@ -96,10 +96,10 @@ name of the command.
   du -hs . & show in human readable form the space used by the current
              directory\\
   df -h & show the details of the disk file system \\
-  wc {\em filename}&  counts the word in a file \\
-  sort {\em filename} &  sorts the file \\
-  uniq {\em filename} &  displays only uniq entries in the file \\
-  tar -xvf {\em dir} &  tars up a compressed version of the directory \\
+  wc \textit{filename}&  counts the word in a file \\
+  sort \textit{filename} &  sorts the file \\
+  uniq \textit{filename} &  displays only uniq entries in the file \\
+  tar -xvf \textit{dir} &  tars up a compressed version of the directory \\
   rsync &  (assignment) \\
   gzip &  (assignment) \\
   gunzip &  (assignment) \\
@@ -126,9 +126,9 @@ name of the command.
   tail & \\
   head & \\
   top & \\
-  locate {\em filename} & \\
+  locate \textit{filename} & \\
   grep & \\
-  chmod ug+rw {\em filename} & \\
+  chmod ug+rw \textit{filename} & \\
   chown & \\
   history & \\
   sudo & \\
@@ -140,9 +140,9 @@ name of the command.
   %\hline
   %\multicolumn{2}{|l|}{\cellcolor{blue!15} Search Commands}\\
   %\hline
-  chmod go-rwx {\em file} & changes the permission of the file \\
-  chown {\em username} {\em file} & changes the ownership of the file \\
-  chgrp {\em group} {\em file} & changes the group of a file\\
+  chmod go-rwx \textit{file} & changes the permission of the file \\
+  chown \textit{username} \textit{file} & changes the ownership of the file \\
+  chgrp \textit{group} \textit{file} & changes the group of a file\\
   & \\
 
   \hline
@@ -180,7 +180,7 @@ name of the command.
   free -tm &  (assignment) \\
   uname &  (assignment) \\
   date &  prints the current date and time \\
-  time {\em command} &  prints the syste, real and user time \\
+  time \textit{command} &  prints the syste, real and user time \\
   shutdown -h ``shut down'' & (assignment) \\
   & \\
 
@@ -299,7 +299,7 @@ duplicates.
 \end{exercise}
 
 \begin{exercise}
-\label{E:Linux.4} In Table \ref{T:shell-commands} you will find a number
+\label{E:Linux.4} In Table~\ref{T:shell-commands} you will find a number
   of commands with (assignment). Develop descriptions that you will
   contribute and add to the manual with a pull request. Work in a team
   so that only one pull request is issued. Do not only provide the
