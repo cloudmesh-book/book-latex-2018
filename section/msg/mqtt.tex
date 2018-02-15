@@ -26,7 +26,7 @@ have very limited memory and need to conserve power. The computing
 power on some of these devices is so limited that the sensory data
 need to be analyzed remotely. Furthermore, they may not even have
 enough computing capacity to process traditional HTTP web requests
-efficiently \cite{mqtt-vs-http,hivemq-website} or these traditional
+efficiently \cite{mqtt-vs-http}\cite{hivemq-website} or these traditional
 Web-based services are too resource hungry. Monitoring the state of a
 remotely located sensor using HTTP would require sending requests and
 receiving responses to and from the device frequently, which may not
@@ -47,7 +47,7 @@ is implemented on top of TCP/IP it is reliable in contrast to other
 protocols such as UDP. It allows efficient transmission of
 data to various devices listening for the same event, and is scalable
 as the number of devices increase
-\cite{mqtt-wiki,mqtt-official}.
+\cite{mqtt-wiki}\cite{mqtt-official}.
 
 The current support for MQTT is conducted as part of the Eclipse Paho
 project \cite{eclipse-mosquitto}.  As MQTT is a protocol many
@@ -115,7 +115,7 @@ appropriate action when a certain message is received
 One of the advantages of using MQTT is that it supports
 asynchronous behaviour with the help of callbacks. Both the publisher
 and subscriber can use non-blocking callbacks to act upon message exchanges.
-\cite{hivemq-details,python-paho-mqtt}.
+\cite{hivemq-details}\cite{python-paho-mqtt}.
 
 For example, the paho-mqtt package for python provides callbacks
 methods including \verb|on-connect()|, \verb|on-message()| and
