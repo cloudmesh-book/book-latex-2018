@@ -114,7 +114,7 @@ Other installations:
 
 \begin{exercise}
 
-Evaluate if you can install \LaTeX~ on Windows. We suggest you start
+Evaluate if you can install \LaTeX~on Windows. We suggest you start
 with miktex. Find out how to install gitbash and make as we have some
 makefiles.. we also want to figure out how to instal latexmk
 
@@ -216,13 +216,13 @@ services as ShareLatex and Overleaf.
 \index{Latex!Elements}
 
 Often researchers may be initially overwhelmed with all the features
-that \LaTeX~ provides. However, it is much simpler than you initially
+that \LaTeX~provides. However, it is much simpler than you initially
 believe. In Chapter ?? we introduced you towards using an article
 template. As a template is provided you can just look at the elements
 in that article and modify or copy them while adapting the
 content. Thus, it is more like filling out a form. You do not have to
 learn much and you can learn as you go. We are providing in this
-chapter some basic \LaTeX~ elements that will help you getting started
+chapter some basic \LaTeX~elements that will help you getting started
 quickly while serving you as a reminder what how to do certain things
 in \LaTeX~.
 
@@ -595,7 +595,7 @@ quality publication formats. For interactive display such tool may be
 good, but for publications it produces inferior formatted images.
 
 We recommend that all images be stored into a folder called images in
-the same directory where your \LaTeX~ main document resides.
+the same directory where your \LaTeX~main document resides.
 
 
 
@@ -860,7 +860,7 @@ do is place the markdown text in a separate file. Let us call the file
 Obviously, we would have to convert this to LaTeX. Luckily there is a
 very useful program called \textit{pandoc} that does this for you. YOu
 could make the translation in the shell, but you could also make the
-translation locally on your computer while allowing \LaTeX~ to start up
+translation locally on your computer while allowing \LaTeX~to start up
 external programs. This is achieved with the \textit{write18} command and
 allowing LaTeX explicitly to call external programs. Please inspect
 the following latex file that includes a template on how to do
@@ -870,7 +870,7 @@ this. We assume the file is called markdown.tex for our example.
 \documentclass{article}
 
 \include{graphicx}
-\newcommand{\tightlist}{}
+\newcommand{}{}
 
 \begin{document}
 \immediate\write18{pandoc content.md -o content.tex}
@@ -1069,7 +1069,7 @@ optional arguments:
 
 \subsection{latex2html}
 
-\LaTeX~ can be exported to html with the the tool
+\LaTeX~can be exported to html with the the tool
 \verb|latex2html|. It is available 
 
 for Linux and OSX. More information can be found at
@@ -1105,7 +1105,7 @@ sudo make install
 \index{lacheck}
 \index{\LaTeX!lacheck}
 
-Lacheck allows to find­ing common mistakes in \LaTeX~
+Lacheck allows to finding common mistakes in \LaTeX~
 documents. We recommend that you use it to check your latex files.
 
 You can invoke it as follows

@@ -637,11 +637,11 @@ addtohook={%
 \newcommand{\EURL}[2]{ \hfill \href{#1}{#2 ~ $\Mapsto$} }
 
 \newcommand{\video}[4]{%
-\textit{\hfill \href{#4}{#3 (#2)~\includegraphics[width=\baselineskip]{images/video.png}}}    \index{Video!#1!#3 (#2)}
+\textit{\hfill \href{#4}{#3 (#2)~\includegraphics[width=\baselineskip]{images/video.png}}}   \index{Video!#1!#3 (#2)}
 }
 
 \newcommand{\slides}[4]{%
-  \textit{ \hfill \href{#4}{#3 (#2)~\includegraphics[width=\baselineskip]{images/slide.png}}} \index{Slides!#1!#3 (#2)}
+  \textit{ \hfill \href{#4}{#3 (#2)~\includegraphics[width=\baselineskip]{images/slide.png}}}\index{Slides!#1!#3 (#2)}
 }
 
 \DefineVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\footnotesize,xleftmargin=.5in}
