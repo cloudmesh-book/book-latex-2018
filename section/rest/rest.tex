@@ -363,6 +363,10 @@ DOMAIN = {
                 'type': 'string',
                  'unique': True
             }
+            'username': {
+                'type': 'string',
+                 'unique': True
+            }
         }
     }
 }
@@ -437,7 +441,8 @@ we add the user Albert Zweistein.
 $ curl -H "Content-Type: application/json" -X POST \
        -d '{"firstname":"Albert","lastname":"Zweistein", \
        "school":"ISE","university":"Indiana University", \
-       "email":"albert@iu.edu"}' http://127.0.0.1:5000/student/
+       "email":"albert@iu.edu", "username": "albert"}' \
+       http://127.0.0.1:5000/student/
 \end{lstlisting}
 %$
 
@@ -607,15 +612,28 @@ Add the following content to a file called \textbf{run2.py}
 
 \begin{lstlisting}
 from eve import Eve
-app = Eve()
+from flask import jsonify
+import os
+import getpass
 
-@app.route('/student/john')
-def theStudentJohn():
-    return "My name is John"
+app = Eve ()
+
+@app.route('/student/albert')
+def alberts_information():
+    data = {
+        'firstname': 'Albert',
+        'lastname': 'Zweistsein',
+        'university': 'Indiana University',
+        'email': 'albert@example.com'
+        }
+    try:
+        data['username'] = getpass.getuser()
+    except:
+        data['username'] = 'not-found'
+    return jsonify(**data)
 
 if __name__ == '__main__':
-    app.run()
-
+    app.run(debug=True, host="127.0.0.1")
 \end{lstlisting}
 
 After creating and saving the file. Run the following command to start
@@ -631,51 +649,68 @@ After running the command, you can interact with the service while
 entering the  following url in the web browser:
 
 \begin{lstlisting}
-http://127.0.0.1:5000/student/john
+http://127.0.0.1:5000/student/alberts
 \end{lstlisting}
 
-The browser will show the following message:
+You can also open up a second terminal and type in it 
 
 \begin{lstlisting}
-My name is John
+curl http://127.0.0.1:5000/student/alberts
+\end{lstlisting}
+
+The following information will be returned:
+
+\begin{lstlisting}
+{
+  "firstname": "Albert", 
+  "lastname": "Zweistain", 
+  "university": "Indiana University", 
+  "email": "albert@example.com", 
+  "username": "albert"
+}
 \end{lstlisting}
 
 This example illustrates how easy it is to create REST services in
-python.  The important part is to understand the decorator
-\textbf{app.route} provided the route of the API endpoint which will
-be the address appended to the base path,
-\textbf{http://127.0.0.1:5000}. And in this example we just returned a
-simple string using the annotated method. It is not compulsory
-for the function to have the same name as the API endpoint, but the
-best practice is to have a relationship between endpoint name and
-function name. For instance you can use \textbf{/student/john} and
-use a function called \textbf{theStudentJohn}.
+python while combining information from a dict with information
+retrieved from the system. The important part is to understand the
+decorator \textbf{app.route}. The parameter specifies the route of the
+API endpoint which will be the address appended to the base path,
+\textbf{http://127.0.0.1:5000}.  It is important that we return a
+jsonified object, which can easily be done with the \verb|jsonify|
+function provided by flask.As you can see the name of the decorated
+function can be anything you lok. The route specifies how we access it
+from the service.
 
 \subsection{REST API Output Formats and Request Processing}
 
-In Eve, by default the data return type is JSON, in this case if we have a
-result as a string, there has to be a way to formulate a standard JSON. In order
-to do this, we can include a better formatting in the code as follows. 
+Another way of managing the data is to utilize class definitions and 
+response types taht we explicitly define. 
 
 If we want to create an object like Student, we can first define a python class.
-Create a file called \textbf{student.py}.
+Create a file called \textbf{student.py}. Please, note the get method
+that returns simply the information in the dict for the class. It is
+not related to the REST get function.
 
 \begin{lstlisting}
 class Student(object):
-    def __init__(self, firstname, lastname, age, school, email):
+    def __init__(self, firstname, lastname, university, email):
         self.firstname = firstname
         self.lastname = lastname
-        self.age = age
-        self.school = school
+        self.university = university
         self.email = email
+        self.username = 'undefined'
+
+    def get(self): 
+       return self.__dict__
+
+    def setUsername(self, name):
+       self.username = name
+       return name
 
 \end{lstlisting}
 
-This is how we create a class in python. Next we can reformulate our API coding
-we earlier did to return information about a particular student. Open up the 
-same \textbf{run2.py} file and add the following lines and the final
-file will look like as shown below. (You can replace the content in the previous
-file).
+Next we define a REST service with Eve as shown in the following
+listing
 
 \begin{lstlisting}
 from eve import Eve
@@ -684,32 +719,47 @@ import platform
 import psutil
 import json
 from flask import Response
+import getpass
 
 app = Eve()
 
 
-@app.route('/student/john', methods=['GET'])
+@app.route('/student/albert', methods=['GET'])
 def processor():
-    studentInfo = Student("John", "Doe", "23", "ISE", "john@iu.edu")
-
-    sdata = json.dumps(studentInfo.__dict__)
+    student = Student("Albert", 
+                      "Zweistein", 
+                      "Indiana University", 
+                      "albert@example.edu")
 
     response = Response()
-    response.headers["status"] = 200
     response.headers["Content-Type"] = "application/json; charset=utf-8"
-    response.data = sdata
 
+    try:
+        student.setUsername(getpass.getuser())
+        response.headers["status"] = 200
+    except:
+        response.headers["status"] = 500
+
+    response.data = json.dumps(student.get())        
     return response
 
-
 if __name__ == '__main__':
-    app.run()
-
-
+    app.run(debug=True, host='127.0.0.1')
 \end{lstlisting}
 
 
-\subsection{Consuming REST API Using a Client Application}
+In contrast to our earlier example, we are not using the jsonify
+object, but create explicitly a response that we return to the
+clients. The response includes a header that we return the information
+in json format, a status of 200, which means the object was returned
+sucessfully, and the actual data.
+
+
+
+
+\subsection{WRONG: Consuming REST API Using a Client Application}
+
+\TODO{This example is not tested. Please provide feedback and improve}
 
 In the Section~\ref{s:rest-api-endpoints} we created our own REST API application
 using Python Eve. Now once the service running, a we need to learn how to
@@ -739,16 +789,21 @@ def save_record():
         'Content-Type': 'application/json'
     }
 
-    data = '{"firstname":"Jane","lastname":"Doe","school":"ISE","university":"Indiana University","email":"jane@iu.edu"}'
+    data = '{"firstname":"Gregor",
+             "lastname":"von Laszewski",
+             "university": "Indiana University",
+             "email":"jane@iu.edu",
+             "username": "jane"}'
 
     response = requests.post('http://localhost:5000/student/',
                               headers=headers,
                               data=data)
-
     print(response.json())
 
-save_record()
-#get_all()
+
+if __name__ == '__main__':
+    save_record()
+    get_all()
 \end{lstlisting}
 
 Run the following command in a new terminal to execute the simple client by 
