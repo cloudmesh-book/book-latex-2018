@@ -48,11 +48,11 @@ $ emacs requirements.txt
 ```
 Include the folllowing content in the requirements.txt file.
 
-{% 5d23aa8bef2bc0669cc4ffd0da4bfb05 %}
+{% gist 5d23aa8bef2bc0669cc4ffd0da4bfb05 %}
 
 Inside the opened emacs window, add the following information.
 
-{% e68cea5526cfe4196ddf278a1b2272d7 %}
+{% gist e68cea5526cfe4196ddf278a1b2272d7 %}
 
 
 
