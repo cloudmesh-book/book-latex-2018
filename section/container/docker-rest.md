@@ -124,6 +124,20 @@ $ cd ~/cloudmesh/containers/docker-flask
 $ docker build -t sample-flask-rest-app .
 ```
 
+If it builds successfully, you will get the following response
+
+```bash
+$ docker build -t sample-flask-rest-app .
+Sending build context to Docker daemon  19.15MB
+Step 1/2 : FROM tiangolo/uwsgi-nginx-flask:python2.7
+ ---> ec43f17def9a
+Step 2/2 : COPY ./app /app
+ ---> e8eb1bff86b8
+Successfully built e8eb1bff86b8
+Successfully tagged sample-flask-rest-app:latest
+
+```
+
 ```
 Note : Changing any content inside the app folder must be updated in the container by rebuilding the image.
 ```
@@ -156,7 +170,7 @@ f7c6a4710ad2        prakhar1989/static-site   "./wrapper.sh"           5 days ag
 1f90a411c746        hello-world               "/hello"                 11 days ago         Exited (0) 11 days ago                                 reverent_raman
 $ docker stop dc8cccf22216
 dc8cccf22216
-vibhatha@vibhatha-ThinkPad-P50:~/Sandbox/docker-flask$ docker ps -a
+$ docker ps -a
 CONTAINER ID        IMAGE                     COMMAND                  CREATED             STATUS                       PORTS               NAMES
 dc8cccf22216        35ffca69dcc3              "/entrypoint.sh /sta…"   4 minutes ago       Exited (137) 5 seconds ago                       romantic_sammet
 e7a45c81b237        sample-flask              "/entrypoint.sh /usr…"   2 days ago          Exited (0) 2 days ago                            silly_kare
