@@ -48,11 +48,8 @@ $ emacs requirements.txt
 ```
 Include the folllowing content in the requirements.txt file.
 
-{% gist 5d23aa8bef2bc0669cc4ffd0da4bfb05 %}
+<script src="https://gist.github.com/vibhatha/5d23aa8bef2bc0669cc4ffd0da4bfb05.js"></script>
 
-Inside the opened emacs window, add the following information.
-
-{% gist e68cea5526cfe4196ddf278a1b2272d7 %}
 
 
 
