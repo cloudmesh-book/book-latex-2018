@@ -2,7 +2,7 @@
 
 ## Objective
 
-The objective of this interactive tutorial is to use Docker to deploy a REST service designed using Python Flask. 
+The objective of this interactive tutorial is to use Docker to deploy a REST service designed using Python Flask.
 
 ## Prerequisites
 
@@ -55,7 +55,7 @@ Flask==0.11.1
 Now run the following command
 
 ```bash
-pip install -r requirements.txt
+$ pip install -r requirements.txt
 ```
 
 
@@ -148,6 +148,68 @@ Run the following commands to get the REST API hosted on [http://0.0.0.0:80](htt
 
 ```bash
 $ docker run -p 80:80 -t sample-flask-rest-app
+```
+
+If it runs successfully you will see a response shown below. 
+
+```bash
+
+$ docker run -p 80:80 -t sample-flask-rest-app
+Checking for script in /app/prestart.sh
+Running script /app/prestart.sh
+Running inside /app/prestart.sh, you could add migrations to this file, e.g.:
+
+#! /usr/bin/env bash
+
+# Let the DB start
+sleep 10;
+# Run migrations
+alembic upgrade head
+
+/usr/lib/python2.7/dist-packages/supervisor/options.py:296: UserWarning: Supervisord is running as root and it is searching for its configuration file in default locations (including its current working directory); you probably want to specify a "-c" argument specifying an absolute path to a configuration file for improved security.
+  'Supervisord is running as root and it is searching '
+2018-02-19 18:07:46,198 CRIT Supervisor running as root (no user in config file)
+2018-02-19 18:07:46,198 WARN Included extra file "/etc/supervisor/conf.d/supervisord.conf" during parsing
+2018-02-19 18:07:46,204 INFO RPC interface 'supervisor' initialized
+2018-02-19 18:07:46,204 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2018-02-19 18:07:46,204 INFO supervisord started with pid 7
+2018-02-19 18:07:47,207 INFO spawned: 'nginx' with pid 10
+2018-02-19 18:07:47,211 INFO spawned: 'uwsgi' with pid 11
+[uWSGI] getting INI configuration from /app/uwsgi.ini
+[uWSGI] getting INI configuration from /etc/uwsgi/uwsgi.ini
+*** Starting uWSGI 2.0.15 (64bit) on [Mon Feb 19 18:07:47 2018] ***
+compiled with version: 4.9.2 on 04 February 2018 16:11:35
+os: Linux-4.4.0-112-generic #135-Ubuntu SMP Fri Jan 19 11:48:36 UTC 2018
+nodename: 7f9706084219
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /app
+detected binary path: /usr/local/bin/uwsgi
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /tmp/uwsgi.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 2.7.14 (default, Dec 12 2017, 16:55:09)  [GCC 4.9.2]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1eed1b0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 1237056 bytes (1208 KB) for 16 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1eed1b0 pid: 11 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 11)
+spawned uWSGI worker 1 (pid: 14, cores: 1)
+spawned uWSGI worker 2 (pid: 15, cores: 1)
+2018-02-19 18:07:48,357 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-02-19 18:07:48,358 INFO success: uwsgi entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+
+
 ```
 
 Go to this URL :  [http://0.0.0.0:80](http://0.0.0.0:80)
@@ -257,13 +319,3 @@ Deleted: sha256:8b3246425402b55aa5c4cf02cc5ad9ebd880b9fef639529b81495e778e3b3246
 Deleted: sha256:639497d8f8bfa7cf497dfc142c8cc9d9b0b6b8689c777b9daa185c618b33d03c
 
 ```
-
-
-
-
-
-
-
-
-
-
