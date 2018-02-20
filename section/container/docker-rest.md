@@ -62,8 +62,11 @@ $ pip install -r requirements.txt
 
 ### Step 2 :
 
-Then we are going to create thr Dockerfile which includes all the instructions
-for the deployment of the REST API on docker.
+We will be authoring Dockerfile which imports nginx-flask image from Docker Hub and copies a main flask script.
+Open a editor with a file name `Dockerfile`, no extension.
+
+.. note:: Windows Powershell ISE provides editing; press Windows key, type "Windows PowerShell ISE" to open Powershell ISE.
+          After saving `Dockerfile`, run `Rename-Item .\Dockerfile.ps1 .\Dockerfile to remove a wrong file extension.
 
 ```dockerfile
 FROM tiangolo/uwsgi-nginx-flask:flask
@@ -111,7 +114,7 @@ def get_cpu():
     return "SHOW YOUR CPU INFO"
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", debug=True, port=80)
+    app.run(host="127.0.0.1", debug=True, port=80)
 ```
 
 After adding the content save and exit emacs.
@@ -144,7 +147,7 @@ Note : Changing any content inside the app folder must be updated in the contain
 
 ## Run Docker Image
 
-Run the following commands to get the REST API hosted on [http://0.0.0.0:80](http://0.0.0.0:80)
+Run the following commands to get the REST API hosted on [http://127.0.0.1:80](http://127.0.0.1:80)
 
 ```bash
 $ docker run -p 80:80 -t sample-flask-rest-app
@@ -212,7 +215,7 @@ spawned uWSGI worker 2 (pid: 15, cores: 1)
 
 ```
 
-Go to this URL :  [http://0.0.0.0:80](http://0.0.0.0:80)
+Go to this URL :  [http://127.0.0.1:80](http://127.0.0.1:80)
 
 
 #### Additional INFO :
