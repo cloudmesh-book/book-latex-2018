@@ -38,6 +38,7 @@
 %	VARIOUS REQUIRED PACKAGES AND CONFIGURATIONS
 %-------------------------------------------------------------------------------
 
+\usepackage{tikz}
 \usepackage{currfile}
 \usepackage{comment}
 \usepackage{shorttoc}
@@ -47,7 +48,6 @@
 \usepackage{parskip}
 \usepackage{longtable}
 \usepackage{lipsum} % Inserts dummy text
-\usepackage{tikz} % Required for drawing custom shapes
 \usepackage[english]{babel} % English language/hyphenation
 \usepackage{enumitem} % Customize lists
 \setlist{nolistsep} % Reduce spacing between bullet points and numbered lists
