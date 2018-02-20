@@ -6,7 +6,7 @@ dist: trusty
 addons:
   apt:
     packages:
-      - texlive
+      - texlive-full
       - latexmk
  #     - wget
  #     - curl
