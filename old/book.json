@@ -1,8 +1,0 @@
-{
-   "plugins": [ "github" ],
-    "pluginsConfig": {
-        "github": {
-            "url": "https://github.com/cloudmesh/book"
-        }
-    }
-}
