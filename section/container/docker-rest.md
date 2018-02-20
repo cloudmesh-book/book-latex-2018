@@ -248,10 +248,11 @@ In Windows powershell Run as adminstrator (use the previous powershell window)
 ```bash
 $ docker run -p 80:80 -t sample-flask-rest-app
 ```
+Here you may have to grant permission for using this port number. So please allow that to run.
 
 
 
-If it runs successfully you will see a response shown below. 
+It will take sometime to load the server once it is loaded and if it runs successfully you will see a response shown below.
 
 ```bash
 
