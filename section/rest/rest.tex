@@ -165,7 +165,7 @@ COMPUTERS = {
 }
 
 def abort_if_cluster_doesnt_exist(computer_id):
-    if todo_id not in TODOS:
+    if computer_id not in COMPUTERS:
         abort(404, message="Computer {} doesn't exist".format(computer_id))
 
 parser = reqparse.RequestParser()
