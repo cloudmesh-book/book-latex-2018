@@ -1,12 +1,17 @@
 sudo: required
 dist: trusty
-#before_install:
-#- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended
+before_install:
+- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends 
 
 addons:
   apt:
     packages:
       - texlive-full
+      - texlive-fonts-recommended
+      - texlive-latex-extra
+      - texlive-fonts-extra
+      - dvipng
+      - texlive-latex-recommended
       - latexmk
  #     - wget
  #     - curl
