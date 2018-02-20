@@ -30,6 +30,7 @@ Now add this environmental variable to PATH in System variables the same way we 
 	```bash
     C:\Python27\lib\site-packages
     ```
+
 After adding the variables make sure you use a new cmd.exe.
 
 3. Virtualenv installation : Run 
