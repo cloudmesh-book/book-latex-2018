@@ -6,10 +6,44 @@ The objective of this interactive tutorial is to use Docker to deploy a REST ser
 
 ## Prerequisites
 
+### Ubuntu
+
 1. Virtualenv installation
 2. Pip installation
 
+### Windows
+0. Install Python [Download Python MSI](https://www.python.org/ftp/python/2.7.14/python-2.7.14.msi)
+1. After installing python add an environmental variable by pressing Windows Key + Pause and Select Advanced system settings. Then add an environment varible for system variables for the variable PATH which is already there. And in that add the new variable 
+
+    ```bash
+    C:\Python27
+    ```
+
+2. Pip installation : [Download Pip Installer Script](https://bootstrap.pypa.io/get-pip.py). Now copy this file to C:\Users\<your_username>\cloudmesh\bin. If you don't have this path please create it, because we will be using this place to store all the tools we need. Within the bin folder run the following commands using command line tool or cmd.exe in windows.
+
+    ```bash
+    $ python get-pip.py
+    ```
+Now add this environmental variable to PATH in System variables the same way we did earlier by putting the following value
+
+```bash
+ C:\Python27\lib\site-packages
+```
+
+After adding the variables make sure you use a new cmd.exe.
+
+3. Virtualenv installation : Run 
+
+    ```bash
+    $ pip install virtualenv 
+    ```
+4. Turn on Hyper-V (Windows Features Turn On and In the list select Hyber V)
+5. Turn on Containers (Windows Features Turn On and In the list select Hyber V)
+6. Install Notepad++
+
 ## Activate Virutal Environment
+
+### Ubuntu and OSX
 
 ```bash
 $ mkdir -p ~/cloudmesh/containers/docker-flask
@@ -17,6 +51,20 @@ $ cd ~/cloudmesh/containers/docker-flask
 $ virtualenv venv
 $ source venv/bin/activate
 ```
+
+### Windows
+
+Using cmd.exe
+Please replace <your_username> with your username.
+
+```bash
+$ mkdir -p C:\Users\<your_username>\cloudmesh\containers\docker-flask
+$ cd C:\Users\<your_username>\cloudmesh\containers\docker-flask
+$ virtualenv venv
+$ venv/Script/activate
+```
+
+
 
 Now you are inside the created virtual environment.
 The terminal will look something like
@@ -42,10 +90,18 @@ docker-flask/[FOLDER]:[BASE PATH : ~/cloudmesh/containers/docker-flask]
 
 Create requirements.txt file
 
+#### Ubuntu and OSX
 ```
 $ emacs requirements.txt
 
 ```
+
+#### Windows
+
+```bash
+start notepad++ requirements.txt
+```
+
 Include the folllowing content in the requirements.txt file.
 
 ```
@@ -58,12 +114,23 @@ Now run the following command
 $ pip install -r requirements.txt
 ```
 
-
-
 ### Step 2 :
 
 Then we are going to create thr Dockerfile which includes all the instructions
 for the deployment of the REST API on docker.
+
+#### Ubuntu and OSX
+```
+$ emacs Dockerfile
+
+```
+
+#### Windows
+
+```bash
+start notepad++ Dockerfile
+```
+
 
 ```dockerfile
 FROM tiangolo/uwsgi-nginx-flask:flask
@@ -89,9 +156,18 @@ Now the Dockerfile is completed and we have everything needed to build a docker 
 
 Then we need to creat the main.py file inside the app folder.
 
+#### Ubuntu and OSX
+
 ```bash
 emacs app/main.py
 ```
+
+#### Windows
+
+```bash
+start notepad++ app/main.py
+```
+
 
 Then add the following content.
 
@@ -111,18 +187,30 @@ def get_cpu():
     return "SHOW YOUR CPU INFO"
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", debug=True, port=80)
+    app.run(host="127.0.0.1", debug=True, port=80)
 ```
 
 After adding the content save and exit emacs.
 
 ## Build Docker Image
 
+### Ubuntu and OSX
+
 Now run the following commands.
 ```bash
 $ cd ~/cloudmesh/containers/docker-flask
 $ docker build -t sample-flask-rest-app .
 ```
+
+### Windows
+
+Run Powershell as administrator and replace <your_username> with your username. 
+
+```bash
+$ cd C:\Users\<your_username>\cloudmesh\containers\docker-flask
+$ docker build -t sample-flask-rest-app .
+```
+
 
 If it builds successfully, you will get the following response
 
@@ -144,13 +232,26 @@ Note : Changing any content inside the app folder must be updated in the contain
 
 ## Run Docker Image
 
-Run the following commands to get the REST API hosted on [http://0.0.0.0:80](http://0.0.0.0:80)
+Run the following commands to get the REST API hosted on [http://127.0.0.1:80](http://127.0.0.1:80)
+
+### Ubuntu and OSX
 
 ```bash
 $ docker run -p 80:80 -t sample-flask-rest-app
 ```
 
-If it runs successfully you will see a response shown below. 
+### Windows
+
+In Windows powershell Run as adminstrator (use the previous powershell window)
+
+```bash
+$ docker run -p 80:80 -t sample-flask-rest-app
+```
+Here you may have to grant permission for using this port number. So please allow that to run.
+
+
+
+It will take sometime to load the server once it is loaded and if it runs successfully you will see a response shown below.
 
 ```bash
 
@@ -212,7 +313,7 @@ spawned uWSGI worker 2 (pid: 15, cores: 1)
 
 ```
 
-Go to this URL :  [http://0.0.0.0:80](http://0.0.0.0:80)
+Go to this URL :  [http://127.0.0.1:80](http://127.0.0.1:80)
 
 
 #### Additional INFO :
