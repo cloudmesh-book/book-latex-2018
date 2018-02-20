@@ -20,7 +20,7 @@ g: dest
 	latexmk -jobname=$(FILE) $(FLAGS) -pvc -view=pdf $(FILE)
 
 travis: dest
-	latexmk -jobname=$(FILE) $(FLAGS) -pdf $(FILE)
+	latexmk -pdflatex='pdflatex -file-line-error -synctex=1' -jobname=$(FILE) $(FLAGS) -pdf $(FILE)
 
 
 test: dest
