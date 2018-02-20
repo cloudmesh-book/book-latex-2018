@@ -26,9 +26,9 @@ The objective of this interactive tutorial is to use Docker to deploy a REST ser
     ```
 Now add this environmental variable to PATH in System variables the same way we did earlier by putting the following value
 
-    ```bash
-    C:\Python27\lib\site-packages
-    ```
+```bash
+ C:\Python27\lib\site-packages
+```
 
 After adding the variables make sure you use a new cmd.exe.
 
