@@ -19,6 +19,10 @@ LATEX=pdflatex
 g: dest
 	latexmk -jobname=$(FILE) $(FLAGS) -pvc -view=pdf $(FILE)
 
+travis: dest
+	latexmk -jobname=$(FILE) $(FLAGS) -pdf $(FILE)
+
+
 test: dest
 	pdflatex $(FILE)
 
