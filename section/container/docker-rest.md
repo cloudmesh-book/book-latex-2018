@@ -235,7 +235,7 @@ Note : Changing any content inside the app folder must be updated in the contain
 
 Run the following commands to get the REST API hosted on [http://127.0.0.1:80](http://127.0.0.1:80)
 
-###Ubuntu and OSX
+### Ubuntu and OSX
 
 ```bash
 $ docker run -p 80:80 -t sample-flask-rest-app
@@ -313,7 +313,7 @@ spawned uWSGI worker 2 (pid: 15, cores: 1)
 
 ```
 
-Go to this URL :  [http://0.0.0.0:80](http://0.0.0.0:80)
+Go to this URL :  [http://127.0.0.1:80](http://127.0.0.1:80)
 
 
 #### Additional INFO :
