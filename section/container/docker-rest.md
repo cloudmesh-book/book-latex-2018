@@ -23,7 +23,6 @@ The objective of this interactive tutorial is to use Docker to deploy a REST ser
 
     ```bash
     $ python get-pip.py
-
     ```
 Now add this environmental variable to PATH in System variables the same way we did earlier by putting the following value
 
