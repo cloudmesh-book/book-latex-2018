@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#! s/usr/bin/env python
 
 #
 # usage python md-to-tex.py ubuntu-usb-osx.md 
