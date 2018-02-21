@@ -30,7 +30,7 @@ The objective of this interactive tutorial is to use Docker to deploy a REST ser
 
 Now add this environmental variable to PATH in System variables the same way we did earlier by putting the following value
 
-```bash
+```
  C:\Python27\lib\site-packages
 ```
 
@@ -38,7 +38,7 @@ After adding the variables make sure you use a new cmd.exe.
 
 3. Virtualenv installation : Run 
 
-    ```bash
+    ```
     $ pip install virtualenv 
     ```
 4. Turn on Hyper-V (Windows Features Turn On and In the list select Hyber V)
@@ -49,7 +49,7 @@ After adding the variables make sure you use a new cmd.exe.
 
 ### Ubuntu and OSX
 
-```bash
+```
 $ mkdir -p ~/cloudmesh/containers/docker-flask
 $ cd ~/cloudmesh/containers/docker-flask
 $ virtualenv venv
@@ -61,7 +61,7 @@ $ source venv/bin/activate
 Using cmd.exe
 Please replace <your_username> with your username.
 
-```bash
+```
 $ mkdir -p C:\Users\<your_username>\cloudmesh\containers\docker-flask
 $ cd C:\Users\<your_username>\cloudmesh\containers\docker-flask
 $ virtualenv venv
@@ -72,7 +72,7 @@ $ venv/Script/activate
 
 Now you are inside the created virtual environment.
 The terminal will look something like
-```bash
+```
 (venv)neo$
 
 ```
@@ -102,7 +102,7 @@ $ emacs requirements.txt
 
 #### Windows
 
-```bash
+```
 start notepad++ requirements.txt
 ```
 
@@ -114,7 +114,7 @@ Flask==0.11.1
 
 Now run the following command
 
-```bash
+```
 $ pip install -r requirements.txt
 ```
 
@@ -131,7 +131,7 @@ $ emacs Dockerfile
 
 #### Windows
 
-```bash
+```
 start notepad++ Dockerfile
 ```
 
@@ -162,13 +162,13 @@ Then we need to creat the main.py file inside the app folder.
 
 #### Ubuntu and OSX
 
-```bash
+```
 emacs app/main.py
 ```
 
 #### Windows
 
-```bash
+```
 start notepad++ app/main.py
 ```
 
@@ -201,7 +201,7 @@ After adding the content save and exit emacs.
 ### Ubuntu and OSX
 
 Now run the following commands.
-```bash
+```
 $ cd ~/cloudmesh/containers/docker-flask
 $ docker build -t sample-flask-rest-app .
 ```
@@ -210,7 +210,7 @@ $ docker build -t sample-flask-rest-app .
 
 Run Powershell as administrator and replace <your_username> with your username. 
 
-```bash
+```
 $ cd C:\Users\<your_username>\cloudmesh\containers\docker-flask
 $ docker build -t sample-flask-rest-app .
 ```
@@ -218,7 +218,7 @@ $ docker build -t sample-flask-rest-app .
 
 If it builds successfully, you will get the following response
 
-```bash
+```
 $ docker build -t sample-flask-rest-app .
 Sending build context to Docker daemon  19.15MB
 Step 1/2 : FROM tiangolo/uwsgi-nginx-flask:python2.7
@@ -240,7 +240,7 @@ Run the following commands to get the REST API hosted on [http://127.0.0.1:80](h
 
 ### Ubuntu and OSX
 
-```bash
+```
 $ docker run -p 80:80 -t sample-flask-rest-app
 ```
 
@@ -248,7 +248,7 @@ $ docker run -p 80:80 -t sample-flask-rest-app
 
 In Windows powershell Run as adminstrator (use the previous powershell window)
 
-```bash
+```
 $ docker run -p 80:80 -t sample-flask-rest-app
 ```
 Here you may have to grant permission for using this port number. So please allow that to run.
@@ -257,7 +257,7 @@ Here you may have to grant permission for using this port number. So please allo
 
 It will take sometime to load the server once it is loaded and if it runs successfully you will see a response shown below.
 
-```bash
+```
 
 $ docker run -p 80:80 -t sample-flask-rest-app
 Checking for script in /app/prestart.sh
@@ -322,7 +322,7 @@ Go to this URL :  [http://127.0.0.1:80](http://127.0.0.1:80)
 
 #### Additional INFO :
 
-```bash
+```
 
 $ docker ps -a
 CONTAINER ID        IMAGE                     COMMAND                  CREATED             STATUS                   PORTS                         NAMES
@@ -352,7 +352,7 @@ f7c6a4710ad2        prakhar1989/static-site   "./wrapper.sh"           5 days ag
 
 #### Deleting Docker Conatiner first and then remove Docker Image
 
-```bash
+```
 
 
 $ docker images
