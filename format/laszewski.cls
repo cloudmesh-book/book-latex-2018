@@ -615,12 +615,12 @@ addtohook={%
     %\begin{fileremark}%
     %  \currfiledir\currfilename%
     %\end{fileremark}%
-    \rfoot{\href{https://github.com/cloudmesh/book/blob/dev/\currfiledir\currfilename}{\footnotesize\em\currfiledir\currfilename}}}
+    \rfoot{\href{https://github.com/cloudmesh/book/blob/master/\currfiledir\currfilename}{\footnotesize\em\currfiledir\currfilename}}}
 \newcommand{\MDNAME}{%
     %\begin{fileremark}%
     %  \currfiledir\currfilename%
     %\end{fileremark}%
-    \rfoot{\href{https://github.com/cloudmesh/book/blob/dev/\currfiledir\currfilebase.md}{\footnotesize\em\currfiledir\currfilebase.md}}}
+    \rfoot{\href{https://github.com/cloudmesh/book/blob/master/\currfiledir\currfilebase.md}{\footnotesize\em\currfiledir\currfilebase.md}}}
 \newcommand{\CHANGE}{\begin{changeremark}THIS WILL CHANGE
     \currfilename\end{changeremark}}
 \newcommand{\TODO}[1]{\todo[inline,bordercolor=yellow,color=yellow!5]{TODO: #1}}
