@@ -134,7 +134,7 @@ To write the ISO file to the USB stick, we're going to use a free and open sourc
 
 By default, recent versions of macOS block the running of applications from unidentified developers. To side-step this issue, enable ‘App Store and identified developers' in the ‘Security & Privacy' pane of System Preferences. If you are still warned against running the application, click ‘Open Anyway' in the same pane.
 
-![](https://tutorials.ubuntu.com/es6-bundled/src/codelabs/tutorial-create-a-usb-stick-on-macos/img/49647529d8a4f32b.png)
+![](images/49647529d8a4f32b.png)
 
 
 ## Prepare the USB stick
@@ -147,7 +147,7 @@ By default, recent versions of macOS block the running of applications from unid
 * Set the format to MS-DOS (FAT) and the scheme to GUID Partition Map
 Check you've chosen the correct device and click Erase
 
-![](https://tutorials.ubuntu.com/es6-bundled/src/codelabs/tutorial-create-a-usb-stick-on-macos/img/14c3877ad1c43497.png)
+![](images/14c3877ad1c43497.png)
 
 ## Etcher configuration
 
@@ -157,7 +157,7 @@ Etcher will configure and write to your USB device in three stages, each of whic
 * Select drive, replaced by the name of your USB device if one is already attached, lets you select your target device. You will be warned if the storage space is too small for your selected ISO.
 * Flash! will activate when both the image and the drive have been selected. As with Disk Utility, Etcher needs low-level access to your storage hardware and will ask for your password after selection.
 
-![](https://tutorials.ubuntu.com/es6-bundled/src/codelabs/tutorial-create-a-usb-stick-on-macos/img/3bb88ce0bc88abb3.png)
+![](images/3bb88ce0bc88abb3.png)
 
 # Write to the USB stick
 
@@ -172,7 +172,7 @@ When everything has finished, Etcher will declare the process a success.
 
 Congratulations! You now have Ubuntu on a USB stick, bootable and ready to go.
 
-![](https://tutorials.ubuntu.com/es6-bundled/src/codelabs/tutorial-create-a-usb-stick-on-macos/img/4207a01ff6afea52.png)
+![](images/4207a01ff6afea52.png)
 
 **Warning: After the write process has completed, macOS may inform you that ‘The disk you inserted was not readable by this computer'. Don't select Initialise. Instead, select Eject and remove the USB device.**
 
@@ -184,7 +184,7 @@ If you want to use your USB stick with an Apple Mac, you will need to restart or
 
 This will launch Apple's ‘Startup Manager' which shows bootable devices connected to the machine. Your USB stick should appear as gold/yellow and labelled ‘EFI Boot'. Selecting this will lead you to the standard Ubuntu boot menu.
 
-![](https://tutorials.ubuntu.com/es6-bundled/src/codelabs/tutorial-create-a-usb-stick-on-macos/img/ba4c21e1ca753cf.png)
+![](images/ba4c21e1ca753cf.png)
 
 
 If you want to install Ubuntu, follow our install Ubuntu desktop tutorial.
