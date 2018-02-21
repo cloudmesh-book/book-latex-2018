@@ -1,4 +1,4 @@
-# Using the Kubernetes cluster on FutureSystems
+# Using Kubernetes on FutureSystems
 \label{s:kubernetes-fs}
 
 ## Overview
