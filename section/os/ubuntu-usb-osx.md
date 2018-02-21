@@ -13,7 +13,11 @@ This can be achieved while visiting the URL
 
 * [https://www.ubuntu.com/download/desktop](https://www.ubuntu.com/download/desktop)
 
-First we assume that you downloaded to iso from ubuntu to a folder called *iso*. Next we open a terminal and cd into the folder *iso*. Now we need to convert the is to an image file. This is done as follows and you need to execute the command for the version of ubuntu you like to use.
+First we assume that you downloaded to iso from ubuntu to a folder
+called *iso*. Next we open a terminal and cd into the folder
+*iso*. Now we need to convert the is to an image file. This is done as
+follows and you need to execute the command for the version of ubuntu
+you like to use.
 
 Your folde will look something like this 
 
@@ -23,28 +27,34 @@ Your folde will look something like this
 		ubuntu-17.10.1-desktop-amd64.iso
 
 
-For 17.10.1 you will need to generate an image with the following command
+For 17.10.1 you will need to generate an image with the following
+command
 
 	hdiutil convert ubuntu-17.10.1-desktop-amd64.iso -format UDRW -o ubuntu-17.10.1-desktop-amd64.img
 
-For 16.04.3 you will need  to generate an image with the following command
+For 16.04.3 you will need to generate an image with the following
+command
 
 	hdiutil convert ubuntu-16.04.3-desktop-amd64.iso -format UDRW -o ubuntu-16.04.3-desktop-amd64.img
 
-OSX will append a  .dmg behind the name. When considering the OS and you only want to use one, we 
-recommend that you use the latest OS. Please let us know if we need to update the verion numbers. Check with the ubuntu Web page.
+OSX will append a .dmg behind the name. When considering the OS and
+you only want to use one, we recommend that you use the latest
+OS. Please let us know if we need to update the verion numbers. Check
+with the ubuntu Web page.
 
 At this time do not plug in your usb stick. Just issue the command 
 
 	diskutil list
 
-Observe the output. Now plug in the USB stick. Wait till the USB stick registers in the Finder. 
-If this does not work find a new USB stick or format it. Execute the command 
+Observe the output. Now plug in the USB stick. Wait till the USB stick
+registers in the Finder.  If this does not work find a new USB stick
+or format it. Execute the command
 
 	diskutil list
 
 
-and observer the output again. Another devce will register and you will see something like
+and observer the output again. Another devce will register and you
+will see something like
 
 	/dev/disk2 (external, physical):
 	#:     TYPE NAME               SIZE       IDENTIFIER
@@ -55,18 +65,25 @@ Please note in this example the device path and number is recognized as
 
 	/dev/disk2
 	
-It also says external, which is a good sign as the USB stick is external. Next, we need to unmoundt the device with 
+It also says external, which is a good sign as the USB stick is
+external. Next, we need to unmoundt the device with
 
 	diskutil unmountDisk /dev/diskN
 
-where you replace the number N with the disk number that you found for the device. In our example it would be 2. If you see the error "Unmount of diskN failed: at least one volume could not be unmounted", start Disk Utility.app and unmount the volume (don't eject). If it was successful, you will see 
+where you replace the number N with the disk number that you found for
+the device. In our example it would be 2. If you see the error
+"Unmount of diskN failed: at least one volume could not be unmounted",
+start Disk Utility.app and unmount the volume (don't eject). If it was
+successful, you will see
 
 	Unmount of all volumes on disk2 was successful
 
-The next step is dangerous and you need to make 
-sure you follow it. So please do not copy and paste, but read first, 
-reflect and only if you understand it execute it. We know we say this 
-all the time, but better saying it again instead of you destryoing your system. This command also requires sudo access so you will either have to be in the sudo group, or use 
+The next step is dangerous and you need to make sure you follow it. So
+please do not copy and paste, but read first, reflect and only if you
+understand it execute it. We know we say this all the time, but better
+saying it again instead of you destryoing your system. This command
+also requires sudo access so you will either have to be in the sudo
+group, or use
 
 	su <your administrator name>
 	
@@ -74,7 +91,8 @@ login and than execute the command under root.
 
 	sudo dd if=ubuntu-17.10.1-desktop-amd64.img.dmg of=/dev/diskN bs=1m
 
-(Not tested: Using /dev/rdisk instead of /dev/disk may be faster according to the ubuntu documentation)
+(Not tested: Using /dev/rdisk instead of /dev/disk may be faster
+according to the ubuntu documentation)
 
 Ubuntu's Web page also gives the following tips:
 

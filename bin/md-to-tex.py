@@ -1,36 +1,17 @@
-#! s/usr/bin/env python
+#! /usr/bin/env python
+"""Markdown to tex converter
 
-#
-# usage python md-to-tex.py ubuntu-usb-osx.md 
-#
+Usage:
+  md-to-tex.py FILENAME
+  md-to-tex.py -h | --help
 
+Options:
+  -h --help     Show this screen.
+"""
+from docopt import docopt
 import re
 import sys
 import subprocess
-
-filename = sys.argv[1]
-
-data = subprocess.check_output(["pandoc","-t", "latex", filename]).decode("utf-8")  
-    
-#origText = '''
-#Some text here..
-#more text before...
-#\hypertarget{ubuntu-on-a-usb-stick-for-osx}{%
-#\section{Ubuntu on a USB stick for
-#OSX}\label{ubuntu-on-a-usb-stick-for-osx}}
-#Text after...
-#more text after..
-#
-#\hypertarget{another section}{%
-#\section{I am another
-#section}\label{another section}}
-#
-#more text even...
-#
-#'''
-
-original = data.replace("{verbatim}", "{lstlisting}").replace("\\tightlist\n","")
-
 
 def substitute_section(name, origText):
 
@@ -53,15 +34,26 @@ def substitute_section(name, origText):
             finished = True
     return newText
 
-#Hack to get all the sections out
 
-while 'hypertarget' in original:
-    tmp_section = substitute_section("section", original)
-    tmp_subsection = substitute_section("subsection", tmp_section)
-    tmp_subsubsection = substitute_section("subsubsection", tmp_subsection)
-    tmp_paragraph = substitute_section("paragraph", tmp_subsubsection)
 
-    output = tmp_paragraph
-    original = output
+if __name__ == '__main__':
+    arguments = docopt(__doc__)
 
-print (output)
+    filename = arguments['FILENAME']
+
+    data = subprocess.check_output(["pandoc","-t", "latex", filename]).decode("utf-8")  
+
+    original = data.replace("{verbatim}", "{lstlisting}").replace("\\tightlist\n","")
+
+    #Hack to get all the sections out
+
+    while 'hypertarget' in original:
+        tmp_section = substitute_section("section", original)
+        tmp_subsection = substitute_section("subsection", tmp_section)
+        tmp_subsubsection = substitute_section("subsubsection", tmp_subsection)
+        tmp_paragraph = substitute_section("paragraph", tmp_subsubsection)
+
+        output = tmp_paragraph
+        original = output
+
+    print (output)

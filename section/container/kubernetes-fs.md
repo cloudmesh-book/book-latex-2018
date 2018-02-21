@@ -54,20 +54,21 @@ created and started. To see the deployment, please use the command
 
     kubectl get deployment
 
-```
-NAME      DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
-nginx     2         2         2            2           7m
-```
+This will result in the following output
+
+    NAME      DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
+    nginx     2         2         2            2           7m
+
 
 To see the pods please use the command
 
     kubectl get pods
 
-```
-NAME                   READY STATUS  RESTARTS AGE
-nginx-7587c6fdb6-4jnh6 1/1   Running 0        7m
-nginx-7587c6fdb6-pxpsz 1/1   Running 0        7m
-```
+This will result in the following output
+
+    NAME                   READY STATUS  RESTARTS AGE
+    nginx-7587c6fdb6-4jnh6 1/1   Running 0        7m
+    nginx-7587c6fdb6-pxpsz 1/1   Running 0        7m
 
 If we want to see more detailed information we cn use the command
 
