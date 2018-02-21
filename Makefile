@@ -31,6 +31,9 @@ test: dest markdown
 gg: dest markdown
 	pdflatex -shell-escape $(FILE)
 
+check:
+	make gg
+
 pdflatex:
 	make gg
 

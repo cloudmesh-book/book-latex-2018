@@ -56,4 +56,8 @@ if __name__ == '__main__':
         output = tmp_paragraph
         original = output
 
+    print (79* "%")
+    print ("% DO NOT MODIFY THIS FILE")
+    print (79* "%")
+    print ()
     print (output)

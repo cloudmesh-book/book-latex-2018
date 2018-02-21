@@ -23,7 +23,7 @@ for better collaboration and innovation.
 
 ![Docker Containers](images/container-1.png)
 
-Image Source [https://www.docker.com/sites/default/files/Package%20software%40x2.png)]
+Image Source [https://www.docker.com/sites/default/files/Package%20software%40x2.png](https://www.docker.com/sites/default/files/Package%20software%40x2.png])
 
 ## Install Docker
 
@@ -31,7 +31,7 @@ Image Source [https://www.docker.com/sites/default/files/Package%20software%40x2
 
 In order to install on OSX, you need to do the following steps:
 
-1. Download `Docker.dmg` file from [https://docs.docker.com/docker-for-mac/install/#download-docker-for-mac]()
+1. Download `Docker.dmg` file from [https://docs.docker.com/docker-for-mac/install/#download-docker-for-mac](https://docs.docker.com/docker-for-mac/install/#download-docker-for-mac)
 
 2. Start `Docker.app`
 
@@ -155,9 +155,10 @@ Kubernetes is
 
 ## What are containers?
 
-![Kubernetes Containers](images/why_containers.svg) 
+![Kubernetes Containers](images/why_containers.png) 
 
-Image source: [https://d33wubrfki0l68.cloudfront.net/e7b766e0175f30ae37f7e0e349b87cfe2034a1ae/3e391/images/docs/why_containers.svg]
+Image source:
+* https://d33wubrfki0l68.cloudfront.net/e7b766e0175f30ae37f7e0e349b87cfe2034a1ae/3e391/images/docs/why_containers.svg
 
 ## Basic Units
 
