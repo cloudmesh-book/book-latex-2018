@@ -1,4 +1,6 @@
 # Dockerized Flask REST API Application
+\label{s:docker-flask-rest}
+\index{Docker!Flask REST API}
 
 ## Objective
 
@@ -12,18 +14,20 @@ The objective of this interactive tutorial is to use Docker to deploy a REST ser
 2. Pip installation
 
 ### Windows
-0. Install Python [Download Python MSI](https://www.python.org/ftp/python/2.7.14/python-2.7.14.msi)
-1. After installing python add an environmental variable by pressing Windows Key + Pause and Select Advanced system settings. Then add an environment varible for system variables for the variable PATH which is already there. And in that add the new variable 
 
-    ```bash
-    C:\Python27
-    ```
+0. Install Python
+   [Download Python MSI](https://www.python.org/ftp/python/2.7.14/python-2.7.14.msi)
+1. After installing python add an environmental variable by pressing
+   Windows Key + Pause and Select Advanced system settings. Then add
+   an environment varible for system variables for the variable PATH
+   which is already there. And in that add the new variable
+
+        C:\Python27
 
 2. Pip installation : [Download Pip Installer Script](https://bootstrap.pypa.io/get-pip.py). Now copy this file to C:\Users\<your_username>\cloudmesh\bin. If you don't have this path please create it, because we will be using this place to store all the tools we need. Within the bin folder run the following commands using command line tool or cmd.exe in windows.
 
-    ```bash
-    $ python get-pip.py
-    ```
+        $ python get-pip.py
+
 Now add this environmental variable to PATH in System variables the same way we did earlier by putting the following value
 
 ```bash
