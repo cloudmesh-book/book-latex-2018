@@ -13,7 +13,7 @@ The objective of this interactive tutorial is to use Docker to deploy a REST ser
 
 ### Windows
 0. Install Python [Download Python MSI](https://www.python.org/ftp/python/2.7.14/python-2.7.14.msi)
-1. After installing python add an environmental variable by pressing Windows Key + Pause and Select Advanced system settings. Then add an environment varible for system variables for the variable PATH which is already there. And in that add the new variable 
+1. After installing python add an environmental variable by pressing Windows Key + Pause and Select Advanced system settings. Then add an environment varible for system variables for the variable PATH which is already there. And in that add the new variable
 
     ```bash
     C:\Python27
