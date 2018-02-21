@@ -4,7 +4,10 @@ The original Web page for this method is available at
 
 * [https://help.ubuntu.com/community/How%20to%20install%20Ubuntu%20on%20MacBook%20using%20USB%20Stick](https://help.ubuntu.com/community/How%20to%20install%20Ubuntu%20on%20MacBook%20using%20USB%20Stick)
 
-We have copied some of the information from this Web page but made enhancements to it. Our goal is to create a USB stick that has either Ubuntu 16.04.03 or ubuntu 17.10.1 on it.
+We have copied some of the information from this Web page but made enhancements to it. 
+Currently all images are copied form that Web page.
+
+Our goal is to create a USB stick that has either Ubuntu 16.04.03 or ubuntu 17.10.1 on it.
 
 This can be achieved while visiting the URL 
 
@@ -98,7 +101,7 @@ There are some issue from this point on.
 	sudo apt-get update
 
 
-Add univers to the window for application updates
+Add universe to the window for application updates
 
 see https://help.ubuntu.com/community/Repositories/Ubuntu
 
@@ -110,7 +113,9 @@ Start the server and set up a password
 
 	vncserver
 
-**WARNING: UNTESTED FOR NOW**
+\begin{WARNING}
+The next section is untested and needs verification. 
+\end{WARNING}
 
 # Ubuntu on a USB stick for OSX
 
