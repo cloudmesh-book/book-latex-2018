@@ -1,16 +1,5 @@
 # Using the Kubernetes cluster on FutureSystems
-
-## Testing markdown
-
-\begin{verbatim}
-ghkjkhk
-\end{verbatim}
-
-\cite{www-cloudmesh-classes}
-
-\begin{WARNING}
-test
-\end{WARNING}
+\label{s:kubernetes-fs}
 
 ## Overview
 
