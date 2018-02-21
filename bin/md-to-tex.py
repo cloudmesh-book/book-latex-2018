@@ -38,7 +38,7 @@ def substitute_section(name, origText):
 
 if __name__ == '__main__':
     arguments = docopt(__doc__)
-
+    output = ''
     filename = arguments['FILENAME']
 
     data = subprocess.check_output(["pandoc","-t", "latex", filename]).decode("utf-8")  
