@@ -30,7 +30,7 @@ data = subprocess.check_output(["pandoc","-t", "latex", filename]).decode("utf-8
 #'''
 
 original = data.replace("{verbatim}", "{lstlisting}").replace("\\tightlist\n","")
-
+output = original
 
 def substitute_section(name, origText):
 
