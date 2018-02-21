@@ -3,6 +3,9 @@ dist: trusty
 before_install:
 - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends 
 
+python:
+  - "3.6"
+  
 addons:
   apt:
     packages:
@@ -18,8 +21,12 @@ addons:
  #     - sed
  #     - grep
 
+install:
+  - pip install -r requirements.txt
+  
 script:
 - make travis
+
 #deploy:
 #  provider: releases
 #  api_key:
