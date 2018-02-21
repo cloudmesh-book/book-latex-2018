@@ -1,11 +1,23 @@
 # Using the Kubernetes cluster on FutureSystems
 
+## Testing markdown
+
+\begin{verbatim}
+ghkjkhk
+\end{verbatim}
+
+\cite{www-cloudmesh-classes}
+
+\begin{WARNING}
+test
+\end{WARNING}
 
 ## Overview
 
 This documentation introduces you on how to use the Kubernetes cluster
 on FutureSystems.  Currently we have deployed kubernetes on our
 cluster called *echo*.
+
 
 ## Getting Access
 
@@ -122,15 +134,20 @@ We se somthing like this
     kubernetes    ClusterIP 10.96.0.1     <none> 443/TCP      8h
     999-nginx-ext NodePort  10.96.183.189 <none> 80:30275/TCP 6s
 
-please note that we have given a unique name. You could use your
-username or if you use one of our classes your hid. The number part
-will typically be suficient. For class users that do not use the hid
-in the name we will terminate all instances without notification. In
-addition, we like you explicitly to add "-ext" to every container that
-is exposed to the internet. Naturally we want you to shut down such
-services if they are not in use. Failure to do so may result in
-termination of the service without notice, and in the worst case
-revocation of your priveledges to use *echo*.
+please note that we have given a unique name.
+
+\begin{IU}
+
+You could use your username or if you use one of our classes your
+hid. The number part will typically be suficient.  For class users
+that do not use the hid in the name we will terminate all instances
+without notification. In addition, we like you explicitly to add
+"-ext" to every container that is exposed to the internet. Naturally
+we want you to shut down such services if they are not in use. Failure
+to do so may result in termination of the service without notice, and
+in the worst case revocation of your priveledges to use *echo*.
+
+\end{IU}
 
 In our example you will find the port on which our service is exposed
 and remaped to. We find the port **30275** in the value
@@ -145,9 +162,14 @@ you should see the 'Welcome to nginx' page.
 
 ## Exercises
 
-1. Explore more complex service examples.
+\begin{exercise}
+Explore more complex service examples.
+\end{exercise}
 
-2. Explore constructing a complex web app with multiple services.
+\begin{exercise}
+Explore constructing a complex web app with multiple services.
+\end{exercise}
 
-3. Define a deployment with a yaml file declaratively.
-
+\begin{exercise}
+Define a deployment with a yaml file declaratively.
+\end{exercise}
