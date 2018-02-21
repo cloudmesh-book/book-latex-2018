@@ -1,11 +1,9 @@
-\hypertarget{create-a-usb-stick-with-ubuntu-from-osx}{%
-\section{Create a USB stick with Ubuntu from
-OSX}\label{create-a-usb-stick-with-ubuntu-from-osx}}
+\MDNAME
+\section{Create a USB stick with Ubuntu from OSX}
 
 The original Web page for this method is available at
 
 \begin{itemize}
-\tightlist
 \item
   \url{https://help.ubuntu.com/community/How\%20to\%20install\%20Ubuntu\%20on\%20MacBook\%20using\%20USB\%20Stick}
 \end{itemize}
@@ -17,7 +15,6 @@ Ubuntu 16.04.03 or ubuntu 17.10.1 on it.
 This can be achieved while visiting the URL
 
 \begin{itemize}
-\tightlist
 \item
   \url{https://www.ubuntu.com/download/desktop}
 \end{itemize}
@@ -30,26 +27,26 @@ you like to use.
 
 Your folde will look something like this
 
-\begin{verbatim}
+\begin{lstlisting}
 ls -1
 
     ubuntu-16.04.3-desktop-amd64.iso
     ubuntu-17.10.1-desktop-amd64.iso
-\end{verbatim}
+\end{lstlisting}
 
 For 17.10.1 you will need to generate an image with the following
 command
 
-\begin{verbatim}
+\begin{lstlisting}
 hdiutil convert ubuntu-17.10.1-desktop-amd64.iso -format UDRW -o ubuntu-17.10.1-desktop-amd64.img
-\end{verbatim}
+\end{lstlisting}
 
 For 16.04.3 you will need to generate an image with the following
 command
 
-\begin{verbatim}
+\begin{lstlisting}
 hdiutil convert ubuntu-16.04.3-desktop-amd64.iso -format UDRW -o ubuntu-16.04.3-desktop-amd64.img
-\end{verbatim}
+\end{lstlisting}
 
 OSX will append a .dmg behind the name. When considering the OS and you
 only want to use one, we recommend that you use the latest OS. Please
@@ -58,40 +55,40 @@ ubuntu Web page.
 
 At this time do not plug in your usb stick. Just issue the command
 
-\begin{verbatim}
+\begin{lstlisting}
 diskutil list
-\end{verbatim}
+\end{lstlisting}
 
 Observe the output. Now plug in the USB stick. Wait till the USB stick
 registers in the Finder. If this does not work find a new USB stick or
 format it. Execute the command
 
-\begin{verbatim}
+\begin{lstlisting}
 diskutil list
-\end{verbatim}
+\end{lstlisting}
 
 and observer the output again. Another devce will register and you will
 see something like
 
-\begin{verbatim}
+\begin{lstlisting}
 /dev/disk2 (external, physical):
 #:     TYPE NAME               SIZE       IDENTIFIER
 0:     FDisk_partition_scheme *8.2 GB     disk2
 1:     DOS_FAT_32 NO NAME      8.2 GB     disk2s1
-\end{verbatim}
+\end{lstlisting}
 
 Please note in this example the device path and number is recognized as
 
-\begin{verbatim}
+\begin{lstlisting}
 /dev/disk2
-\end{verbatim}
+\end{lstlisting}
 
 It also says external, which is a good sign as the USB stick is
 external. Next, we need to unmoundt the device with
 
-\begin{verbatim}
+\begin{lstlisting}
 diskutil unmountDisk /dev/diskN
-\end{verbatim}
+\end{lstlisting}
 
 where you replace the number N with the disk number that you found for
 the device. In our example it would be 2. If you see the error ``Unmount
@@ -99,9 +96,9 @@ of diskN failed: at least one volume could not be unmounted'', start
 Disk Utility.app and unmount the volume (don't eject). If it was
 successful, you will see
 
-\begin{verbatim}
+\begin{lstlisting}
 Unmount of all volumes on disk2 was successful
-\end{verbatim}
+\end{lstlisting}
 
 The next step is dangerous and you need to make sure you follow it. So
 please do not copy and paste, but read first, reflect and only if you
@@ -110,15 +107,15 @@ saying it again instead of you destryoing your system. This command also
 requires sudo access so you will either have to be in the sudo group, or
 use
 
-\begin{verbatim}
+\begin{lstlisting}
 su <your administrator name>
-\end{verbatim}
+\end{lstlisting}
 
 login and than execute the command under root.
 
-\begin{verbatim}
+\begin{lstlisting}
 sudo dd if=ubuntu-17.10.1-desktop-amd64.img.dmg of=/dev/diskN bs=1m
-\end{verbatim}
+\end{lstlisting}
 
 (Not tested: Using /dev/rdisk instead of /dev/disk may be faster
 according to the ubuntu documentation)
@@ -126,7 +123,6 @@ according to the ubuntu documentation)
 Ubuntu's Web page also gives the following tips:
 
 \begin{itemize}
-\tightlist
 \item
   ``If you see the error dd: Invalid number `1m', you are using GNU dd.
   Use the same command but replace bs=1m with bs=1M.''
@@ -140,9 +136,9 @@ You will see an error window popping up telling you: \textbf{The disk
 inserted was not readbale by this compute}. Please, leave the window as
 is and instead type in on the terminal.
 
-\begin{verbatim}
+\begin{lstlisting}
 diskutil eject /dev/diskN
-\end{verbatim}
+\end{lstlisting}
 
 Now remove the flash drive, and press in the error window
 \textbf{Ignore}\\
@@ -157,45 +153,40 @@ You will need a plug for USB keyboard, USB mouse, and netwwork cable.
 
 There are some issue from this point on.
 
-\begin{verbatim}
+\begin{lstlisting}
 sudo apt-get update
-\end{verbatim}
+\end{lstlisting}
 
 Add univers to the window for application updates
 
 see https://help.ubuntu.com/community/Repositories/Ubuntu
 
-\begin{verbatim}
+\begin{lstlisting}
 sudo apt-get install vnc4server
-\end{verbatim}
+\end{lstlisting}
 
 Start the server and set up a password
 
-\begin{verbatim}
+\begin{lstlisting}
 vncserver
-\end{verbatim}
+\end{lstlisting}
 
 \textbf{WARNING: UNTESTED FOR NOW}
 
-\hypertarget{ubuntu-on-a-usb-stick-for-osx}{%
-\section{Ubuntu on a USB stick for
-OSX}\label{ubuntu-on-a-usb-stick-for-osx}}
+\section{Ubuntu on a USB stick for OSX}
 
 The material in thi section was copied from
 
 \begin{itemize}
-\tightlist
 \item
   https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-macos
 \end{itemize}
 
-\hypertarget{requirements}{%
-\subsection{Requirements}\label{requirements}}
+\subsection{Requirements}
 
 You will need:
 
 \begin{itemize}
-\tightlist
 \item
   A 2GB or larger USB stick/flash drive
 \item
@@ -205,8 +196,7 @@ You will need:
   https://www.ubuntu.com/download
 \end{itemize}
 
-\hypertarget{install-etcher}{%
-\subsection{Install Etcher}\label{install-etcher}}
+\subsection{Install Etcher}
 
 To write the ISO file to the USB stick, we're going to use a free and
 open source application called Etcher. After downloading this and
@@ -214,7 +204,6 @@ clicking to mount the package, Etcher can either be run in-place or
 dragged into your Applications folder.
 
 \begin{itemize}
-\tightlist
 \item
   https://etcher.io/
 \end{itemize}
@@ -227,14 +216,12 @@ click `Open Anyway' in the same pane.
 
 \includegraphics{https://tutorials.ubuntu.com/es6-bundled/src/codelabs/tutorial-create-a-usb-stick-on-macos/img/49647529d8a4f32b.png}
 
-\hypertarget{prepare-the-usb-stick}{%
-\subsection{Prepare the USB stick}\label{prepare-the-usb-stick}}
+\subsection{Prepare the USB stick}
 
 \textbf{Warning: Disk Utility needs to be used with caution as selecting
 the wrong device or partition can result in data loss.}
 
 \begin{itemize}
-\tightlist
 \item
   Launch Disk Utility from Applications\textgreater{}Utilities or
   Spotlight search
@@ -250,14 +237,12 @@ the wrong device or partition can result in data loss.}
 
 \includegraphics{https://tutorials.ubuntu.com/es6-bundled/src/codelabs/tutorial-create-a-usb-stick-on-macos/img/14c3877ad1c43497.png}
 
-\hypertarget{etcher-configuration}{%
-\subsection{Etcher configuration}\label{etcher-configuration}}
+\subsection{Etcher configuration}
 
 Etcher will configure and write to your USB device in three stages, each
 of which needs to be selected in turn:
 
 \begin{itemize}
-\tightlist
 \item
   Select image will open a file requester from which should navigate to
   and select the ISO file downloaded previously. By default, the ISO
@@ -274,8 +259,7 @@ of which needs to be selected in turn:
 
 \includegraphics{https://tutorials.ubuntu.com/es6-bundled/src/codelabs/tutorial-create-a-usb-stick-on-macos/img/3bb88ce0bc88abb3.png}
 
-\hypertarget{write-to-the-usb-stick}{%
-\section{Write to the USB stick}\label{write-to-the-usb-stick}}
+\section{Write to the USB stick}
 
 Write to device
 
@@ -299,8 +283,7 @@ you that `The disk you inserted was not readable by this computer'.
 Don't select Initialise. Instead, select Eject and remove the USB
 device.}
 
-\hypertarget{boot-from-the-usb-stick}{%
-\subsection{Boot from the USB Stick}\label{boot-from-the-usb-stick}}
+\subsection{Boot from the USB Stick}
 
 oot your Mac
 
@@ -319,7 +302,7 @@ If you want to install Ubuntu, follow our install Ubuntu desktop
 tutorial.
 
 \begin{itemize}
-\tightlist
 \item
   https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-desktop\#0
 \end{itemize}
+

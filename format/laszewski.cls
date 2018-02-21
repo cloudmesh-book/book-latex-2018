@@ -62,6 +62,7 @@
 \usepackage{datetime}
 %\usepackage{minted} % use lstlisting instead
 \usepackage[top=3cm,bottom=3cm,left=3cm,right=3cm,headsep=10pt,a4paper]{geometry} % Page margins
+\usepackage{xstring}
 
 %\usepackage{tipa}
 \parindent 0pt
@@ -615,6 +616,11 @@ addtohook={%
     %  \currfiledir\currfilename%
     %\end{fileremark}%
     \rfoot{\href{https://github.com/cloudmesh/book/blob/dev/\currfiledir\currfilename}{\footnotesize\em\currfiledir\currfilename}}}
+\newcommand{\MDNAME}{%
+    %\begin{fileremark}%
+    %  \currfiledir\currfilename%
+    %\end{fileremark}%
+    \rfoot{\href{https://github.com/cloudmesh/book/blob/dev/\currfiledir\currfilebase.md}{\footnotesize\em\currfiledir\currfilebase.md}}}
 \newcommand{\CHANGE}{\begin{changeremark}THIS WILL CHANGE
     \currfilename\end{changeremark}}
 \newcommand{\TODO}[1]{\todo[inline,bordercolor=yellow,color=yellow!5]{TODO: #1}}

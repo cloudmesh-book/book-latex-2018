@@ -16,21 +16,23 @@ LATEX=pdflatex
 #LATEX=pydflatex -k
 
 
-g: dest
+g: dest markdown
 	latexmk -jobname=$(FILE) $(FLAGS) -pvc -view=pdf $(FILE)
 
-travis: dest
+travis: dest markdown
 	latexmk -pdflatex='pdflatex -file-line-error -synctex=1' -jobname=$(FILE) $(FLAGS) -pdf $(FILE)
 
+markdown:
+	bin/md-all-to-tex.py
 
-test: dest
+test: dest markdown
 	pdflatex $(FILE)
 
-gg: dest
+gg: dest markdown
 	pdflatex -shell-escape $(FILE)
 
 pdflatex:
-	make -f gg
+	make gg
 
 google:
 	gdrive update 1Mdd_TJcbXurJYRpG2gKCVqWmbhvED2Mp dest/vonLaszewski-bigdata.pdf
@@ -44,7 +46,7 @@ c: dest
 plain: dest
 	latexmk -jobname=$(FILE) $(FLAGS) -pvc -view=pdf plain
 
-cloud: dest
+cloud: dest markdown
 	$(LATEX) $(FLAGS) $(CLOUD)
 	makeindex $(CLOUD).idx -s format/StyleInd.ist
 	biber $(CLOUD)
@@ -55,7 +57,7 @@ skim: dest
 	echo $(DEFAULT)
 	open -a /Applications/skim.app $(DEFAULT).pdf
 
-all: dest
+all: dest makedown
 	$(LATEX) $(FLAGS) $(FILE)
 	makeindex $(FILE).idx -s format/StyleInd.ist
 	biber $(FILE)
