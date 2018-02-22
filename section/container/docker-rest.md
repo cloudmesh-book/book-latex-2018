@@ -28,9 +28,9 @@ a REST service designed using Python Flask.
    Windows Key + Pause and Select Advanced system settings. Then add
    an environment varible for system variables for the variable PATH
    which is already there. And in that add the new variable
-
-        C:\Python27
-
+```
+C:\Python27
+```
 4. Pip installation :
    [Download Pip Installer Script](https://bootstrap.pypa.io/get-pip.py). Now
    copy this file to C:\Users\<your_username>\cloudmesh\bin. If you
@@ -38,15 +38,16 @@ a REST service designed using Python Flask.
    this place to store all the tools we need. Within the bin folder
    run the following commands using command line tool or cmd.exe in
    windows.
-
-        $ python get-pip.py
-
+```
+$ python get-pip.py
+```
 Now add this environmental variable to PATH in System variables the
 same way we did earlier by putting the following value
 
-    C:\Python27\lib\site-packages
-	C:\Python27\Scripts
-
+```
+C:\Python27\lib\site-packages
+C:\Python27\Scripts
+```
 
 After adding the variables make sure you use a new cmd.exe.
 
@@ -226,10 +227,10 @@ Now run the following commands.
 Run Powershell as administrator and replace <your_username> with your
 username.
 
-
-    $ cd C:\Users\<your_username>\cloudmesh\containers\docker-flask
-    $ docker build -t sample-flask-rest-app .
-
+```
+cd C:\Users\<your_username>\cloudmesh\containers\docker-flask
+docker build -t sample-flask-rest-app .
+```
 
 If it builds successfully, you will get the following response
 
