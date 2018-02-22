@@ -38,14 +38,14 @@ Now add this environmental variable to PATH in System variables the same way we 
 
 After adding the variables make sure you use a new cmd.exe.
 
-3. Virtualenv installation : Run 
+5. Virtualenv installation : Run 
 
     ```
     $ pip install virtualenv 
     ```
-4. Turn on Hyper-V (Windows Features Turn On and In the list select Hyber V)
-5. Turn on Containers (Windows Features Turn On and In the list select Hyber V)
-6. Install Notepad++
+6. Turn on Hyper-V (Windows Features Turn On and In the list select Hyber V)
+7. Turn on Containers (Windows Features Turn On and In the list select Hyber V)
+8. Install Notepad++
 
 ## Activate Virutal Environment
 
