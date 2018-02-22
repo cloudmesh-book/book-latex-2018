@@ -106,7 +106,7 @@ The File structure takes the following look.
     	    --|venv [FOLDER]
 
 
-### Step 1:
+### Step 1
 
 Create requirements.txt file
 
