@@ -129,13 +129,20 @@ clean:
 view:
 	open $(FILE).pdf
 
-publish: google
+publish: google html
 	echo pdf document copied to google
 #	cp dest/$(FILE).pdf .
 #	cp $(FILE).pdf ~/github/laszewsk/papers/
 #	cd ~/github/laszewsk/papers; git add $(FILE).pdf; git commit -m "update $(FILE)"; git push
 #	cp $(FILE).pdf ~/github/laszewsk/laszewski.github.io/papers/$(FILE).pdf
 #	cd ~/github/laszewsk/laszewski.github.io/papers; git add $(FILE).pdf; git commit -m "update $(FILE)"; git push
+	make -f Makefile.publish publish
+
+html:
+	mkdir -p ~/pdf
+	cp dest/$(FILE).pdf ~/pdf
+	docker run -ti --rm -v ~/pdf:/pdf bwits/pdf2htmlex pdf2htmlEX --zoom 1.3 $(FILE).pdf 
+	gdrive update 10zA34VsM-WnsQo31rHzDOtqdU3rqvkvQ ~/pdf/vonLaszewski-bigdata.html
 
 size:
 	du -c -h dest/vonLaszewski-bigdata.pdf | fgrep total > dest/size.txt

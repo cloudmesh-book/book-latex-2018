@@ -743,7 +743,7 @@ sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centerin
     {\Large \SUBTITLE}\\[20pt] % Subtitle
     {\huge \AUTHOR \\ \Large \EMAIL} \\
     {\normalsize \TODAY} \\
-    {\normalsize   \url{https://tinyurl.com/vonLaszewski-handbook} } \\
+    {\normalsize   \LOCATION} \\
   }
 }; % Author name
 \end{tikzpicture}
