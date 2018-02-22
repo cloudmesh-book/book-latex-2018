@@ -4,7 +4,8 @@
 
 ## Objective
 
-The objective of this interactive tutorial is to use Docker to deploy a REST service designed using Python Flask.
+The objective of this interactive tutorial is to use Docker to deploy
+a REST service designed using Python Flask.
 
 ## Prerequisites
 
@@ -15,8 +16,12 @@ The objective of this interactive tutorial is to use Docker to deploy a REST ser
 
 ### Windows
 
-0. Install Python [Download Python MSI](https://www.python.org/ftp/python/2.7.14/python-2.7.14.msi)
-1. After installing python add an environmental variable by pressing Windows Key + Pause and Select Advanced system settings. Then add an environment varible for system variables for the variable PATH which is already there. And in that add the new variable
+0. Install Python
+   [Download Python MSI](https://www.python.org/ftp/python/2.7.14/python-2.7.14.msi)
+1. After installing python add an environmental variable by pressing
+   Windows Key + Pause and Select Advanced system settings. Then add
+   an environment varible for system variables for the variable PATH
+   which is already there. And in that add the new variable
 2. Install Python
    [Download Python MSI](https://www.python.org/ftp/python/2.7.14/python-2.7.14.msi)
 3. After installing python add an environmental variable by pressing
@@ -26,11 +31,18 @@ The objective of this interactive tutorial is to use Docker to deploy a REST ser
 
         C:\Python27
 
-4. Pip installation : [Download Pip Installer Script](https://bootstrap.pypa.io/get-pip.py). Now copy this file to C:\Users\<your_username>\cloudmesh\bin. If you don't have this path please create it, because we will be using this place to store all the tools we need. Within the bin folder run the following commands using command line tool or cmd.exe in windows.
+4. Pip installation :
+   [Download Pip Installer Script](https://bootstrap.pypa.io/get-pip.py). Now
+   copy this file to C:\Users\<your_username>\cloudmesh\bin. If you
+   don't have this path please create it, because we will be using
+   this place to store all the tools we need. Within the bin folder
+   run the following commands using command line tool or cmd.exe in
+   windows.
 
         $ python get-pip.py
 
-Now add this environmental variable to PATH in System variables the same way we did earlier by putting the following value
+Now add this environmental variable to PATH in System variables the
+same way we did earlier by putting the following value
 
  	C:\Python27\lib\site-packages
 
@@ -45,8 +57,10 @@ After adding the variables make sure you use a new cmd.exe.
     
     	$ pip install virtualenv 
     
-6. Turn on Hyper-V (Windows Features Turn On and In the list select Hyber V)
-7. Turn on Containers (Windows Features Turn On and In the list select Hyber V)
+6. Turn on Hyper-V (Windows Features Turn On and In the list select
+   Hyber V)
+7. Turn on Containers (Windows Features Turn On and In the list select
+   Hyber V)
 8. Install Notepad++
 
 ## Activate Virutal Environment
@@ -123,8 +137,8 @@ $ pip install -r requirements.txt
 
 ### Step 2 :
 
-Then we are going to create thr Dockerfile which includes all the instructions
-for the deployment of the REST API on docker.
+Then we are going to create thr Dockerfile which includes all the
+instructions for the deployment of the REST API on docker.
 
 #### Ubuntu and OSX
 ```
@@ -148,17 +162,23 @@ COPY ./app /app
 
 Here we have created a minimal Dockerfile.
 
-FROM  : command tells the image that has to be pulled from the Docker hub. So in this case for the ease of the task and to keep it simple with minimum packages we are going to select an image including nginx, flask and uWSGI.
+FROM: command tells the image that has to be pulled from the Docker
+hub. So in this case for the ease of the task and to keep it simple
+with minimum packages we are going to select an image including nginx,
+flask and uWSGI.
 
-1. Nginx : An open source software for web serving capability.
-2. Flask : REST API package in Python
-3. uWSGI : A server and one of the protocols implemented in WSGI which is a protocol used for pure HTTP communications and load balancing.
+1. Nginx: An open source software for web serving capability.
+2. Flask: REST API package in Python
+3. uWSGI: A server and one of the protocols implemented in WSGI which
+   is a protocol used for pure HTTP communications and load balancing.
 
 So this image includes everything we need to work on this tutorial.
 
-COPY : Here it will copy content from app folder created in local machine to the Docker container.
+COPY: Here it will copy content from app folder created in local
+machine to the Docker container.
 
-Now the Dockerfile is completed and we have everything needed to build a docker image.
+Now the Dockerfile is completed and we have everything needed to build
+a docker image.
 
 ### Step 3 :
 
@@ -212,7 +232,8 @@ $ docker build -t sample-flask-rest-app .
 
 ### Windows
 
-Run Powershell as administrator and replace <your_username> with your username. 
+Run Powershell as administrator and replace <your_username> with your
+username.
 
 ```
 $ cd C:\Users\<your_username>\cloudmesh\containers\docker-flask
@@ -235,12 +256,14 @@ Successfully tagged sample-flask-rest-app:latest
 ```
 
 ```
-Note : Changing any content inside the app folder must be updated in the container by rebuilding the image.
+Note: Changing any content inside the app folder must be
+      updated in the container by rebuilding the image.
 ```
 
 ## Run Docker Image
 
-Run the following commands to get the REST API hosted on [http://127.0.0.1:80](http://127.0.0.1:80)
+Run the following commands to get the REST API hosted on
+[http://127.0.0.1:80](http://127.0.0.1:80)
 
 ### Ubuntu and OSX
 
@@ -250,19 +273,22 @@ $ docker run -p 80:80 -t sample-flask-rest-app
 
 ### Windows
 
-In Windows powershell Run as adminstrator (use the previous powershell window)
+In Windows powershell Run as adminstrator (use the previous powershell
+window)
 
 ```
 $ docker run -p 80:80 -t sample-flask-rest-app
 ```
-Here you may have to grant permission for using this port number. So please allow that to run.
+
+Here you may have to grant permission for using this port number. So
+please allow that to run.
 
 
 
-It will take sometime to load the server once it is loaded and if it runs successfully you will see a response shown below.
+It will take sometime to load the server once it is loaded and if it
+runs successfully you will see a response shown below.
 
 ```
-
 $ docker run -p 80:80 -t sample-flask-rest-app
 Checking for script in /app/prestart.sh
 Running script /app/prestart.sh
@@ -324,7 +350,7 @@ spawned uWSGI worker 2 (pid: 15, cores: 1)
 Go to this URL :  [http://127.0.0.1:80](http://127.0.0.1:80)
 
 
-#### Additional INFO :
+#### Additional INFO
 
 ```
 
