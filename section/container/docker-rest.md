@@ -2,65 +2,68 @@
 \label{s:docker-flask-rest}
 \index{Docker!Flask REST API}
 
-## Objective
-
-The objective of this interactive tutorial is to use Docker to deploy
-a REST service designed using Python Flask.
+We discuss how to use Docker to deploy a REST service designed using Python Flask.
 
 ## Prerequisites
 
+In order to follow our discussion you will need a system on which you
+can run docker. THis could either be OSX, LInux, or Windows.
+
 ### Ubuntu and OSX
+
+Q: WHICH VERSION OF PYTHON?
 
 1. Virtualenv installation
 2. Pip installation
 
 ### Windows
 
-0. Install Python
-   [Download Python MSI](https://www.python.org/ftp/python/2.7.14/python-2.7.14.msi)
-1. After installing python add an environmental variable by pressing
-   Windows Key + Pause and Select Advanced system settings. Then add
-   an environment varible for system variables for the variable PATH
-   which is already there. And in that add the new variable
-2. Install Python
-   [Download Python MSI](https://www.python.org/ftp/python/2.7.14/python-2.7.14.msi)
-3. After installing python add an environmental variable by pressing
-   Windows Key + Pause and Select Advanced system settings. Then add
-   an environment varible for system variables for the variable PATH
-   which is already there. And in that add the new variable
-```
-C:\Python27
-```
-4. Pip installation :
-   [Download Pip Installer Script](https://bootstrap.pypa.io/get-pip.py). Now
-   copy this file to C:\Users\<your_username>\cloudmesh\bin. If you
-   don't have this path please create it, because we will be using
-   this place to store all the tools we need. Within the bin folder
-   run the following commands using command line tool or cmd.exe in
-   windows.
-```
-$ python get-pip.py
-```
-Now add this environmental variable to PATH in System variables the
-same way we did earlier by putting the following value
+We start with download Python:
 
-```
-C:\Python27\lib\site-packages
-C:\Python27\Scripts
-```
+[Download Python MSI](https://www.python.org/ftp/python/2.7.14/python-2.7.14.msi)
+
+After installing python add an environmental variable by pressing
+Windows Key + Pause and Select Advanced system settings. Then add an
+environment varible for system variables for the variable PATH which
+is already there. And in that add the new variable
+
+    C:\Python27
+
+As older python versions do not come or come with an outdated version
+of pip, we install it as follows:
+
+[Download Pip Installer Script](https://bootstrap.pypa.io/get-pip.py)
+
+Now copy this file to
+
+    C:\Users\<your_username>\cloudmesh\bin
+
+If you don't have this path please create it, because we will be using
+this place to store all the tools we need. Within the bin folder run
+the following commands using command line tool or cmd.exe in windows.
+
+    $ python get-pip.py
+
+Now add this environmental variable to
+PATH in System variables the same way we did earlier by putting the
+following value
+
+    C:\Python27\lib\site-packages
+    C:\Python27\Scripts
+
 
 After adding the variables make sure you use a new cmd.exe.
 
-5. Virtualenv installation: Run 
+Now continue by installing a Virtualenv installation 
 
-    
     	$ pip install virtualenv 
     
-6. Turn on Hyper-V (Windows Features Turn On and In the list select
-   Hyber V)
-7. Turn on Containers (Windows Features Turn On and In the list select
-   Hyber V)
-8. Install emacs via chocolatey
+
+Turn on Hyper-V (Windows Features Turn On and In the list selectHyber V)
+
+Turn on Containers (Windows Features Turn On and In the list select Hyber V)
+
+Install emacs via chocolatey
 
 ## Activate Virutal Environment
 
