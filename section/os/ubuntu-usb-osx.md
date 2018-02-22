@@ -1,19 +1,25 @@
-# Create a USB stick with Ubuntu from OSX
+# Ubuntu on a USB stick for OSX
 
-The original Web page for this method is available at 
+## Ubuntu on a USB stick for OSX via Command Line
 
-* [https://help.ubuntu.com/community/How%20to%20install%20Ubuntu%20on%20MacBook%20using%20USB%20Stick](https://help.ubuntu.com/community/How%20to%20install%20Ubuntu%20on%20MacBook%20using%20USB%20Stick)
+The easiest way to create an ubuntu distribution that can be booted
+from an USB stick is done via command line. The original Web page for this method is available at 
+
+* <https://help.ubuntu.com/community/How%20to%20install%20Ubuntu%20on%20MacBook%20using%20USB%20Stick>
 
 We have copied some of the information from this Web page but made enhancements to it. 
 Currently all images are copied form that Web page.
 
 Our goal is to create a USB stick that has either Ubuntu 16.04.03 or ubuntu 17.10.1 on it.
+You will need a USB stick/flash drive. We recommend a  8GB or
+larger. Please let us know if it works for you on larger than 8GB drives.
 
-This can be achieved while visiting the URL 
+First you have to download a distribution of your choice. This can be
+achieved while visiting the URL
 
-* [https://www.ubuntu.com/download/desktop](https://www.ubuntu.com/download/desktop)
+* <https://www.ubuntu.com/download/desktop>
 
-First we assume that you downloaded to iso from ubuntu to a folder
+We assume that you downloaded to iso from ubuntu to a folder
 called *iso*. Next we open a terminal and cd into the folder
 *iso*. Now we need to convert the is to an image file. This is done as
 follows and you need to execute the command for the version of ubuntu
@@ -121,7 +127,7 @@ There are some issue from this point on.
 
 Add universe to the window for application updates
 
-see https://help.ubuntu.com/community/Repositories/Ubuntu
+see <https://help.ubuntu.com/community/Repositories/Ubuntu>
 
 
 	sudo apt-get install vnc4server
@@ -135,34 +141,86 @@ Start the server and set up a password
 The next section is untested and needs verification. 
 \end{WARNING}
 
-# Ubuntu on a USB stick for OSX
+## Boot from the USB Stick
 
-The material in thi section was copied from 
+To boot from the USB stick, you need to restart or power-on the Mac
+with the USB stick inserted while you press the Option/alt key.
 
-* https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-macos
+The launch ‘Startup Manager' will be started showing a list of bootable
+devices connected to the machine. Your USB stick should appear as
+gold/yellow and labelled ‘EFI Boot'. USe your curser keys to move to
+the most right EFI boot device in that list (likely the USB stick) and
+press ENTER. YOu can also use the mouse.
 
-## Requirements
+![](images/ba4c21e1ca753cf.png)
 
-You will need:
+A boot menu will shortly start up and after you press again ENTER your
+machine will boot into Ubuntu.
 
-* A 2GB or larger USB stick/flash drive
-* An Apple computer or laptop running macOS
-* An Ubuntu ISO file. See Get Ubuntu for download links https://www.ubuntu.com/download
+For more information on how to setup ubuntu see:
 
-## Install Etcher
+* <https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-desktop#0>
 
-To write the ISO file to the USB stick, we're going to use a free and open source application called Etcher. After downloading this and clicking to mount the package, Etcher can either be run in-place or dragged into your Applications folder.
+After you have booted and looged in, you need to update the
+distribution. We recommend that you switch on Universe in the
+applications settings.
 
-* https://etcher.io/
+Next you need to issue in the command terminal
 
-By default, recent versions of macOS block the running of applications from unidentified developers. To side-step this issue, enable ‘App Store and identified developers' in the ‘Security & Privacy' pane of System Preferences. If you are still warned against running the application, click ‘Open Anyway' in the same pane.
+    sudo apt-get update
+
+You will likely see some warnings with number 95 which you can
+ignore. Please report your experience and we update this page based on
+your feedback.
+
+
+## Ubuntu on a USB stick for OSX via GUI
+
+An alternative to the Command Line solution to create an USB stick
+with bootable UBuntu on is to use the OSX GUI. This method is more
+complex than the command line solution. In addition as we are learning
+about cloud computing in this book, it is of advantage to learn how
+to do this from commandline as the replication of the approach via
+commandline is easier and more scalable. However for completness, we
+have also included here the GUI-based method.
+
+The material in this section was copied and modified from
+
+* <https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-macos>
+
+You will need a USB stick/flash drive. We recommend a  8GB or
+larger. Please let us know if it works for you on larger than 8GB drives.
+
+### Install Etcher
+
+Etcher is a tool that allows you to easily write an ISO onto a USB
+stick. Etcher is integrated in the OSX GUI environment and allows
+to drag the iso into it for burning. Etcher can be found at
+
+* <https://etcher.io/>
+
+As this is an application from unidentified developers (not registered
+in the apple store), you need to enable it after downloading.
+To do so, you can 
+enable the ‘App
+Store and identified developers' in the ‘Security & Privacy' pane in
+the System Preferences. IN case you get a warning about running the
+application, click ‘Open Anyway' in the same pane.
 
 ![](images/49647529d8a4f32b.png)
 
 
-## Prepare the USB stick
+### Prepare the USB stick
 
-**Warning: Disk Utility needs to be used with caution as selecting the wrong device or partition can result in data loss.**
+\begin{WARNING}
+
+The Disk Utility needs to be used with caution as selecting the
+wrong device or partition can result in data loss.
+
+\end{WARNING}
+
+Next you need to conduct the following steps which we copied from the
+Ubuntu Web page:
 
 * Launch Disk Utility from Applications>Utilities or Spotlight search
 * Insert your USB stick and observe the new device added to Disk Utility
@@ -172,45 +230,39 @@ Check you've chosen the correct device and click Erase
 
 ![](images/14c3877ad1c43497.png)
 
-## Etcher configuration
+### Etcher configuration
 
-Etcher will configure and write to your USB device in three stages, each of which needs to be selected in turn:
+Next we use Etcher to configure and write to your USB device as
+follows (copied form the Ubuntu Web page):
 
-* Select image will open a file requester from which should navigate to and select the ISO file downloaded previously. By default, the ISO file will be in your Downloads folder.
-* Select drive, replaced by the name of your USB device if one is already attached, lets you select your target device. You will be warned if the storage space is too small for your selected ISO.
-* Flash! will activate when both the image and the drive have been selected. As with Disk Utility, Etcher needs low-level access to your storage hardware and will ask for your password after selection.
+* Select image will open a file requester from which should navigate
+  to and select the ISO file downloaded previously. By default, the
+  ISO file will be in your Downloads folder.
+* Select drive, replaced by the name of your USB device if one is
+  already attached, lets you select your target device. You will be
+  warned if the storage space is too small for your selected ISO.
+* Flash! will activate when both the image and the drive have been
+  selected. As with Disk Utility, Etcher needs low-level access to
+  your storage hardware and will ask for your password after
+  selection.
 
 ![](images/3bb88ce0bc88abb3.png)
 
-# Write to the USB stick
+### Write to the USB stick
 
+When writing to the USB, Etcher will ask you for your password. It
+will write the ISO file, once you confirmed the password.
 
-Write to device
-
-After entering your password, Etcher will start writing the ISO file to your USB device.
-
-The Flash stage of the process will show progress, writing speed and an estimated duration until completion. This will be followed by a validation stage that will ensure the contents of the USB device are identical to the source image.
-
-When everything has finished, Etcher will declare the process a success.
-
-Congratulations! You now have Ubuntu on a USB stick, bootable and ready to go.
+You will see the progress reported to the Etcher window. Once
+it has finished, Etcher will report on the successful process.
 
 ![](images/4207a01ff6afea52.png)
 
-**Warning: After the write process has completed, macOS may inform you that ‘The disk you inserted was not readable by this computer'. Don't select Initialise. Instead, select Eject and remove the USB device.**
+\begin{WARNING}
 
-## Boot from the USB Stick
+After the write process has completed, macOS may inform you that ‘The
+disk you inserted was not readable by this computer'. Don't select
+Initialise. Instead, select Eject and remove the USB device.
 
-oot your Mac
-
-If you want to use your USB stick with an Apple Mac, you will need to restart or power-on the Mac with the USB stick inserted while the Option/alt key is pressed.
-
-This will launch Apple's ‘Startup Manager' which shows bootable devices connected to the machine. Your USB stick should appear as gold/yellow and labelled ‘EFI Boot'. Selecting this will lead you to the standard Ubuntu boot menu.
-
-![](images/ba4c21e1ca753cf.png)
-
-
-If you want to install Ubuntu, follow our install Ubuntu desktop tutorial.
-
-* https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-desktop#0
+\end{WARNING}
 

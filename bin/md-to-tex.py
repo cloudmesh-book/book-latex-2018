@@ -44,7 +44,9 @@ if __name__ == '__main__':
     data = subprocess.check_output(["pandoc","-t", "latex", filename]).decode("utf-8")  
 
     original = data.replace("{verbatim}", "{lstlisting}").replace("\\tightlist\n","")
+    original = original.replace("\\includegraphics", "\includegraphics[width=0.8\columnwidth]")
 
+    
     #Hack to get all the sections out
 
     while 'hypertarget' in original:

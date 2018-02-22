@@ -19,6 +19,10 @@ LATEX=pdflatex
 g: dest markdown
 	latexmk -jobname=$(FILE) $(FLAGS) -pvc -view=pdf $(FILE)
 
+once: dest markdown
+	latexmk -jobname=$(FILE) $(FLAGS) -view=pdf $(FILE)
+	make html
+
 travis: dest markdown
 	latexmk -pdflatex='pdflatex -file-line-error -synctex=1' -jobname=$(FILE) $(FLAGS) -pdf $(FILE)
 
@@ -127,22 +131,22 @@ clean:
 	rm -fr _minted-*
 
 view:
-	open $(FILE).pdf
+	open dest/$(FILE).pdf
 
-publish: google html
+publish: google
 	echo pdf document copied to google
 #	cp dest/$(FILE).pdf .
 #	cp $(FILE).pdf ~/github/laszewsk/papers/
 #	cd ~/github/laszewsk/papers; git add $(FILE).pdf; git commit -m "update $(FILE)"; git push
 #	cp $(FILE).pdf ~/github/laszewsk/laszewski.github.io/papers/$(FILE).pdf
 #	cd ~/github/laszewsk/laszewski.github.io/papers; git add $(FILE).pdf; git commit -m "update $(FILE)"; git push
-	make -f Makefile.publish publish
+	make -f Makefile.publish
 
 html:
 	mkdir -p ~/pdf
 	cp dest/$(FILE).pdf ~/pdf
 	docker run -ti --rm -v ~/pdf:/pdf bwits/pdf2htmlex pdf2htmlEX --zoom 1.3 $(FILE).pdf 
-	gdrive update 10zA34VsM-WnsQo31rHzDOtqdU3rqvkvQ ~/pdf/vonLaszewski-bigdata.html
+	# gdrive update 10zA34VsM-WnsQo31rHzDOtqdU3rqvkvQ ~/pdf/vonLaszewski-bigdata.html
 
 size:
 	du -c -h dest/vonLaszewski-bigdata.pdf | fgrep total > dest/size.txt
