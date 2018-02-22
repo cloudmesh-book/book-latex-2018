@@ -138,6 +138,7 @@ $ emacs Dockerfile
 start notepad++ Dockerfile
 ```
 
+Include the following content in the Dockerfile
 
 ```dockerfile
 FROM tiangolo/uwsgi-nginx-flask:flask
