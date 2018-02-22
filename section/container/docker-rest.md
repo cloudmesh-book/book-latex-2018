@@ -8,7 +8,7 @@ The objective of this interactive tutorial is to use Docker to deploy a REST ser
 
 ## Prerequisites
 
-### Ubuntu
+### Ubuntu and OSX
 
 1. Virtualenv installation
 2. Pip installation
