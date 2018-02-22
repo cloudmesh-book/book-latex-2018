@@ -89,8 +89,8 @@ docker-flask/[FOLDER]:[BASE PATH : ~/cloudmesh/containers/docker-flask]
 	--|Dockerfile [FILE]
 	--|requirements.txt [FILE]
 	--|app/ [FOLDER]
-    	--|main.py [FILE]
-    --|venv [FOLDER]
+    	--|--|main.py [FILE]
+    	--|venv [FOLDER]
 ```
 
 ### Step 1 :
