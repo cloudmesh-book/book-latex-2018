@@ -22,6 +22,7 @@ addons:
  #     - grep
 
 install:
+  - sudo pip install pathlib
   - sudo pip install -r requirements.txt
   
 script:
