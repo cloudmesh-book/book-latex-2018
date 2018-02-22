@@ -44,15 +44,13 @@ a REST service designed using Python Flask.
 Now add this environmental variable to PATH in System variables the
 same way we did earlier by putting the following value
 
- 	C:\Python27\lib\site-packages
-
+    C:\Python27\lib\site-packages
 	C:\Python27\Scripts
-
 
 
 After adding the variables make sure you use a new cmd.exe.
 
-5. Virtualenv installation : Run 
+5. Virtualenv installation: Run 
 
     
     	$ pip install virtualenv 
@@ -61,7 +59,7 @@ After adding the variables make sure you use a new cmd.exe.
    Hyber V)
 7. Turn on Containers (Windows Features Turn On and In the list select
    Hyber V)
-8. Install Notepad++
+8. Install emacs via chocolatey
 
 ## Activate Virutal Environment
 
@@ -85,80 +83,74 @@ Please replace <your_username> with your username.
 	$ venv/Script/activate
 
 
-
-
 Now you are inside the created virtual environment.
 The terminal will look something like
-```
-(venv)neo$
 
-```
+    (venv)neo$
+
+
 
 ## File Structure
 
 The File structure takes the following look.
 
-```
-docker-flask/[FOLDER]:[BASE PATH : ~/cloudmesh/containers/docker-flask]
-	--|Dockerfile [FILE]
-	--|requirements.txt [FILE]
-	--|app/ [FOLDER]
-    	--|--|main.py [FILE]
-    	--|venv [FOLDER]
-```
+    docker-flask/[FOLDER]:[BASE PATH : ~/cloudmesh/containers/docker-flask]
+	    --|Dockerfile [FILE]
+	    --|requirements.txt [FILE]
+	    --|app/ [FOLDER]
+    	    --|--|main.py [FILE]
+    	    --|venv [FOLDER]
 
-### Step 1 :
+
+### Step 1:
 
 Create requirements.txt file
 
 #### Ubuntu and OSX
-```
-$ emacs requirements.txt
 
-```
+
+    $ emacs requirements.txt
+
 
 #### Windows
 
-```
-start notepad++ requirements.txt
-```
+Install an editor such as emacs on Windows. YOu can use chocolatey for
+that, or use pycharm. Do not use notepad++
+
+    emacs requirements.txt
 
 Include the folllowing content in the requirements.txt file.
 
-```
-Flask==0.11.1
-```
+    Flask==0.11.1
+
 
 Now run the following command
 
-```
-$ pip install -r requirements.txt
-```
+    $ pip install -r requirements.txt
 
-### Step 2 :
+
+### Step 2
 
 Then we are going to create thr Dockerfile which includes all the
 instructions for the deployment of the REST API on docker.
 
 #### Ubuntu and OSX
-```
-$ emacs Dockerfile
 
-```
+    $ emacs Dockerfile
+
 
 #### Windows
 
-```
-start notepad++ Dockerfile
-```
+
+    emacs Dockerfile
+
 
 Include the following content in the Dockerfile
 
-```dockerfile
-FROM tiangolo/uwsgi-nginx-flask:flask
 
-COPY ./app /app
-```
+    FROM tiangolo/uwsgi-nginx-flask:flask
+    COPY ./app /app
+
 
 Here we have created a minimal Dockerfile.
 
@@ -180,43 +172,42 @@ machine to the Docker container.
 Now the Dockerfile is completed and we have everything needed to build
 a docker image.
 
-### Step 3 :
+### Step 3
 
 Then we need to creat the main.py file inside the app folder.
 
 #### Ubuntu and OSX
 
-```
-emacs app/main.py
-```
+
+    emacs app/main.py
+
 
 #### Windows
 
-```
-start notepad++ app/main.py
-```
+
+    emacs app/main.py
+
 
 
 Then add the following content.
 
-```python
-from flask import Flask
+    from flask import Flask
 
-app = Flask(__name__)
+    app = Flask(__name__)
 
-@app.route("/")
-def hello():
-    return "Hey I'm using Docker!"
+    @app.route("/")
+    def hello():
+        return "Hey I'm using Docker!"
 
-@app.route("/api/cpu")
-def get_cpu():
-# ADD CODE TO GET CPU INFO
-# USE psutil LIBRARY
-    return "SHOW YOUR CPU INFO"
+    @app.route("/api/cpu")
+    def get_cpu():
+    # ADD CODE TO GET CPU INFO
+    # USE psutil LIBRARY
+        return "SHOW YOUR CPU INFO"
 
-if __name__ == "__main__":
-    app.run(host="127.0.0.1", debug=True, port=80)
-```
+    if __name__ == "__main__":
+        app.run(host="127.0.0.1", debug=True, port=80)
+
 
 After adding the content save and exit emacs.
 
@@ -225,40 +216,35 @@ After adding the content save and exit emacs.
 ### Ubuntu and OSX
 
 Now run the following commands.
-```
-$ cd ~/cloudmesh/containers/docker-flask
-$ docker build -t sample-flask-rest-app .
-```
+
+    $ cd ~/cloudmesh/containers/docker-flask
+    $ docker build -t sample-flask-rest-app .
+
 
 ### Windows
 
 Run Powershell as administrator and replace <your_username> with your
 username.
 
-```
-$ cd C:\Users\<your_username>\cloudmesh\containers\docker-flask
-$ docker build -t sample-flask-rest-app .
-```
+
+    $ cd C:\Users\<your_username>\cloudmesh\containers\docker-flask
+    $ docker build -t sample-flask-rest-app .
 
 
 If it builds successfully, you will get the following response
 
-```
-$ docker build -t sample-flask-rest-app .
-Sending build context to Docker daemon  19.15MB
-Step 1/2 : FROM tiangolo/uwsgi-nginx-flask:python2.7
- ---> ec43f17def9a
-Step 2/2 : COPY ./app /app
- ---> e8eb1bff86b8
-Successfully built e8eb1bff86b8
-Successfully tagged sample-flask-rest-app:latest
+    $ docker build -t sample-flask-rest-app .
+    Sending build context to Docker daemon  19.15MB
+    Step 1/2: FROM tiangolo/uwsgi-nginx-flask:python2.7
+     ---> ec43f17def9a
+    Step 2/2: COPY ./app /app
+     ---> e8eb1bff86b8
+    Successfully built e8eb1bff86b8
+    Successfully tagged sample-flask-rest-app:latest
 
-```
+    Note: Changing any content inside the app folder must be
+          updated in the container by rebuilding the image.
 
-```
-Note: Changing any content inside the app folder must be
-      updated in the container by rebuilding the image.
-```
 
 ## Run Docker Image
 
@@ -267,18 +253,15 @@ Run the following commands to get the REST API hosted on
 
 ### Ubuntu and OSX
 
-```
-$ docker run -p 80:80 -t sample-flask-rest-app
-```
+    $ docker run -p 80:80 -t sample-flask-rest-app
 
 ### Windows
 
 In Windows powershell Run as adminstrator (use the previous powershell
 window)
 
-```
-$ docker run -p 80:80 -t sample-flask-rest-app
-```
+    $ docker run -p 80:80 -t sample-flask-rest-app
+
 
 Here you may have to grant permission for using this port number. So
 please allow that to run.
@@ -347,7 +330,7 @@ spawned uWSGI worker 2 (pid: 15, cores: 1)
 
 ```
 
-Go to this URL :  [http://127.0.0.1:80](http://127.0.0.1:80)
+Go to this URL:  [http://127.0.0.1:80](http://127.0.0.1:80)
 
 
 #### Additional INFO
@@ -365,8 +348,10 @@ f7c6a4710ad2        prakhar1989/static-site   "./wrapper.sh"           5 days ag
 350ec9a2609f        busybox                   "sh"                     5 days ago          Exited (0) 5 days ago                                  nifty_mahavira
 893cb11019f9        hello-world               "/hello"                 5 days ago          Exited (0) 5 days ago                                  competent_spence
 1f90a411c746        hello-world               "/hello"                 11 days ago         Exited (0) 11 days ago                                 reverent_raman
+
 $ docker stop dc8cccf22216
 dc8cccf22216
+
 $ docker ps -a
 CONTAINER ID        IMAGE                     COMMAND                  CREATED             STATUS                       PORTS               NAMES
 dc8cccf22216        35ffca69dcc3              "/entrypoint.sh /sta…"   4 minutes ago       Exited (137) 5 seconds ago                       romantic_sammet
