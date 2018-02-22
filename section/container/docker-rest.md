@@ -32,17 +32,19 @@ The objective of this interactive tutorial is to use Docker to deploy a REST ser
 
 Now add this environmental variable to PATH in System variables the same way we did earlier by putting the following value
 
-```
- C:\Python27\lib\site-packages
-```
+ 	C:\Python27\lib\site-packages
+
+	C:\Python27\Scripts
+
+
 
 After adding the variables make sure you use a new cmd.exe.
 
 5. Virtualenv installation : Run 
 
-    ```
-    $ pip install virtualenv 
-    ```
+    
+    	$ pip install virtualenv 
+    
 6. Turn on Hyper-V (Windows Features Turn On and In the list select Hyber V)
 7. Turn on Containers (Windows Features Turn On and In the list select Hyber V)
 8. Install Notepad++
@@ -51,24 +53,23 @@ After adding the variables make sure you use a new cmd.exe.
 
 ### Ubuntu and OSX
 
-```
-$ mkdir -p ~/cloudmesh/containers/docker-flask
-$ cd ~/cloudmesh/containers/docker-flask
-$ virtualenv venv
-$ source venv/bin/activate
-```
+	$ mkdir -p ~/cloudmesh/containers/docker-flask
+	$ cd ~/cloudmesh/containers/docker-flask
+	$ virtualenv venv
+	$ source venv/bin/activate
+	
 
 ### Windows
 
 Using cmd.exe
 Please replace <your_username> with your username.
 
-```
-$ mkdir -p C:\Users\<your_username>\cloudmesh\containers\docker-flask
-$ cd C:\Users\<your_username>\cloudmesh\containers\docker-flask
-$ virtualenv venv
-$ venv/Script/activate
-```
+
+	$ mkdir -p C:\Users\<your_username>\cloudmesh\containers\docker-flask
+	$ cd C:\Users\<your_username>\cloudmesh\containers\docker-flask
+	$ virtualenv venv
+	$ venv/Script/activate
+
 
 
 
