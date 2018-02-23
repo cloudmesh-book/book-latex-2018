@@ -61,3 +61,16 @@ python ./get-pip.py
 WARNING: The Python bz2 extension was not compiled. Missing the bzip2 lib?
 WARNING: The Python readline extension was not compiled. Missing the GNU readline lib?
 WARNING: The Python sqlite3 extension was not compiled. Missing the SQLite3 lib?
+
+
+
+
+docker kill u16
+docker rm u16
+docker build -t u16 .
+docker run --name u16 -dit u16 /sbin/init
+docker exec -it u16 bash -l
+
+docker build -t cloudmesh .
+docker run --name u16 -dit cloudmesh /sbin/init
+docker exec -it u16 bash -l

@@ -1,6 +1,7 @@
 FROM ubuntu:16.04
 MAINTAINER Gregor von Laszewski <laszewski@gmail.com>
 
+
 RUN apt-get update -q && apt-get install -qy \
     build-essential \
     wget \
@@ -9,7 +10,9 @@ RUN apt-get update -q && apt-get install -qy \
     git-core \
     pandoc \
     libssl-dev \
-    zlib1g-dev 
+    zlib1g-dev \
+    software-properties-common
+
 RUN add-apt-repository universe
 
 RUN apt-get install -qy \
