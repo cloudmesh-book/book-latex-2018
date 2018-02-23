@@ -8,18 +8,15 @@ RUN apt-get update -q && apt-get install -qy \
     curl \
     emacs \
     git-core \
-    pandoc \
-    libssl-dev \
-    zlib1g-dev \
     software-properties-common
 
 RUN add-apt-repository universe
 
-RUN apt-get install -qy \
-    texlive-full \
-    biber
-
 RUN curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
+
+RUN pyenv install 3.6.4
+RUN pyenv global 3.6.4
+RUN python -m ensurepip
 
 RUN echo 'export PATH="/root/.pyenv/bin:$PATH"' > .profile
 RUN echo 'eval "$(pyenv init -)"' >> .profile
@@ -27,17 +24,13 @@ RUN echo 'eval "$(pyenv virtualenv-init -)"' >> .profile
 
 RUN pwd
 
-RUN export PATH="/root/.pyenv/bin:$PATH"
-RUN eval "$(pyenv init -)"
-RUN eval "$(pyenv virtualenv-init -)"
+#RUN export PATH="/root/.pyenv/bin:$PATH"
+#RUN eval "$(pyenv init -)"
+#RUN eval "$(pyenv virtualenv-init -)"
 
 # RUN source .profile
 
-RUN pyenv install 3.6.4
-RUN pyenv global 3.6.4
-RUN python -m ensurepip
 
-RUN git clone https://github.com/cloudmesh/book.git
 
 WORKDIR /book
 VOLUME ["/book"]
