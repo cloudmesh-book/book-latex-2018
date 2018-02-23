@@ -22,7 +22,8 @@ addons:
       - dvipng
       - texlive-latex-recommended
       - latexmk
-      - pandoc      
+      - pandoc
+      - biber
  #     - wget
  #     - curl
  #     - sed
