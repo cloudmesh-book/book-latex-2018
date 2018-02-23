@@ -23,11 +23,11 @@ addons:
       - texlive-latex-recommended
       - latexmk
       - pandoc
-#      - biber
- #     - wget
- #     - curl
- #     - sed
- #     - grep
+#     - biber
+#     - wget
+#     - curl
+#     - sed
+#     - grep
 
 install:
   - python --version
