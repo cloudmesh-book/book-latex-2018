@@ -27,7 +27,8 @@ install:
   - sudo pip install -r requirements.txt
   
 script:
-- make travis
+  - python --version
+  - make travis
 
 #deploy:
 #  provider: releases
