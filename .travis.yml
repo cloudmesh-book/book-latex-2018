@@ -23,7 +23,7 @@ addons:
       - texlive-latex-recommended
       - latexmk
       - pandoc
-      - biber
+#      - biber
  #     - wget
  #     - curl
  #     - sed
