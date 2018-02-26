@@ -1,6 +1,7 @@
 \FILENAME
 
-\section{Integrating Bibliographies}\label{S:bibliographies}
+\section{Integrating Bibliographies}
+\label{S:bibliographies}
 \index{Bibliography}
 \index{bibtex}
 \index{biber}
@@ -144,7 +145,7 @@ the semantics of the fields.
 
 \susubsection{What are the Different entry Types and Fields}
 
-You see that the entry contains a number of fields AN extensive
+You see that the entry contains a number of fields. An extensive
 explanation of these fields can be found at 
 
 Please see \url{https://en.wikipedia.org/wiki/BibTeX}
@@ -231,11 +232,11 @@ url specified was a normal webpage, the \verb|{Web Page}| entry would be
 valid.
 
 \subsubsection{Month}\label{s:e:month}
-\index{Bibtex!Field!MOnth}
+\index{Bibtex!Field!Month}
 
 To allow internationalization of the month we use the first 3 letters
-in the english language for the month. Thus it is \verb|month =
-jul|. Not that there are no brackets around the month.
+in the english language for the month. Thus it is 
+\verb|month = jul|. Note that there are no brackets around the month.
 
 \subsubsection{Owner}\label{s:e:owner}
 \index{Bibtex!Field!Owner}
@@ -281,7 +282,15 @@ Note =     {Version: 1.2.3, Accessed: 2017-1-24},
 \end{verbatim}
 \end{description}
 
+\subsection{Pedigree}
 
+Often it is advantageous to document the pedigree of the bibtex
+entries. Eg, how did you derive the final entry? To do so you can
+simply add a field such as \verb|bibsource| and include in it all
+links you used to gather the final entry. However, we believe that the
+effort to curate an entry is sufficient to manage your own
+bibliography which you should freely distribute and constitute an own
+contribution. 
 
 \subsection{Article in a Journal}
 \label{s:e:article-in-a-journal}
@@ -437,20 +446,19 @@ Now let us look at another obvious example that needs improvement:
 
 \begin{verbatim}
 @InProceedings{wettinger-any2api,
-  Title                    = {Any2API - Automated APIfication},
-  Author                   = {Wettinger, Johannes and
-                              Uwe Breitenb{\"u}cher
-                              and Frank Leymann},
-  Booktitle                = {Proceedings of the 5th International
-                              Conference on Cloud Computing and
-              Services Science},
-  Year                     = {2015},
-  Pages                    = {475­486},
-  Publisher                = {SciTePress},
-
-  ISSN                     = {2326-7550},
-  Owner                    = {S17-IO-3005},
-  Url                      = {https://pdfs.semanticscholar.org/1cd4/4b87be8cf68ea5c4c642d38678a7b40a86de.pdf}
+  Title      = {Any2API - Automated APIfication},
+  Author     = {Wettinger, Johannes and
+                Uwe Breitenb{\"u}cher
+                and Frank Leymann},
+  Booktitle  = {Proceedings of the 5th International
+                Conference on Cloud Computing and
+                Services Science},
+  Year       = {2015},
+  Pages      = {475­486},
+  Publisher  = {SciTePress},
+  ISSN       = {2326-7550},
+  Owner      = {S17-IO-3005},
+  Url        = {https://pdfs.semanticscholar.org/1cd4/4b87be8cf68ea5c4c642d38678a7b40a86de.pdf}
 }
 \end{verbatim}
 

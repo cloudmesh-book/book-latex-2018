@@ -1,4 +1,4 @@
-.PHONY: book images
+.PHONY: book images dot
 
 FILE=vonLaszewski-bigdata
 #FLAGS=-interaction nonstopmode -halt-on-error -file-line-error
@@ -25,6 +25,9 @@ once: dest markdown
 
 travis: dest markdown
 	latexmk -pdflatex='pdflatex -file-line-error -synctex=1' -jobname=$(FILE) $(FLAGS) -pdf $(FILE)
+
+dot:
+	cd dot; dot -Tpdf gr.dot -o gr.pdf
 
 markdown:
 	bin/md-all-to-tex.py
