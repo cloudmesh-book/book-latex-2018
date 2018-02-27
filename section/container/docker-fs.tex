@@ -55,10 +55,20 @@ the swarm cluster:
 \begin{quote}
 docker service create --name notebook\_test -p 9001:8888
 jupyter/datascience-notebook start-notebook.sh
---NotebookApp.password=NOTEBOOK\_PASS
+--NotebookApp.password=NOTEBOOK\_PASS\_HASH
 \end{quote}
 
-It pulls a published image from docker cloud, starts a container and
+The NOTEBOOK\_PASS\_HASH can be generated in python:
+
+\begin{verbatim}
+>>> import IPython
+>>> IPython.lib.passwd("YOUR_SELECTED_PASSWROD")
+'sha1:52679cadb4c9:6762e266af44f86f3d170ca1......'
+\end{verbatim}
+
+So pass through the string starting with 'sha1:......'.
+
+The command pulls a published image from docker cloud, starts a container and
 runs a script to start the service inside the container with necessary
 parameters. The option ``-p 9001:8888'' maps the service port inside the
 container (8888) to an external port of the cluster node (9001) so the
