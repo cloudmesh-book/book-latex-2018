@@ -1,0 +1,87 @@
+\section{Apache Spark with Docker}\label{apache-spark-with-docker}
+
+\subsection{Pull Image from Docker
+Repository}\label{pull-image-from-docker-repository}
+
+We use a Docker image from Docker Hub:
+(https://hub.docker.com/r/sequenceiq/spark/) This repository contains a
+Docker file to build a Docker image with Apache Spark and Hadoop Yarn.
+
+\begin{lstlisting}
+docker pull sequenceiq/spark:1.6.0
+\end{lstlisting}
+
+\subsection{Running the Image}\label{running-the-image}
+
+In this step, we will launch a Spark container.
+
+\subsubsection{Running interactively}\label{running-interactively}
+
+\begin{lstlisting}
+docker run -it -p 8088:8088 -p 8042:8042 -h sandbox sequenceiq/spark:1.6.0 bash
+\end{lstlisting}
+
+\subsubsection{Running in the
+background}\label{running-in-the-background}
+
+\begin{lstlisting}
+docker run -d -h sandbox sequenceiq/spark:1.6.0 -d
+\end{lstlisting}
+
+\subsection{Run Spark}\label{run-spark}
+
+After a container is launched, we can run Spark in the following two
+modes: 1) yarn-client and 2) yarn-cluster. The differences between the
+two modes can be found here:
+https://spark.apache.org/docs/latest/running-on-yarn.html
+
+\subsubsection{Run Spark in Yarn-Client
+Mode}\label{run-spark-in-yarn-client-mode}
+
+\begin{lstlisting}
+spark-shell --master yarn-client --driver-memory 1g --executor-memory 1g --executor-cores 1
+\end{lstlisting}
+
+\subsubsection{Run Spark in Yarn-Cluster
+Mode}\label{run-spark-in-yarn-cluster-mode}
+
+\begin{lstlisting}
+spark-submit --class org.apache.spark.examples.SparkPi --master yarn-client --driver-memory 1g --executor-memory 1g --executor-cores 1 $SPARK_HOME/lib/spark-examples-1.6.0-hadoop2.6.0.jar
+\end{lstlisting}
+
+\subsection{Observe Task Execution from Running Logs of Spark
+Pi}\label{observe-task-execution-from-running-logs-of-spark-pi}
+
+Let us observe Spark task execution by adjusting the parameter of
+SparkPi and the Pi result from the following two commands.
+
+\begin{lstlisting}
+spark-submit --class org.apache.spark.examples.SparkPi --master yarn-client --driver-memory 1g --executor-memory 1g --executor-cores 1 $SPARK_HOME/lib/spark-examples-1.6.0-hadoop2.6.0.jar 10
+
+
+
+spark-submit --class org.apache.spark.examples.SparkPi --master yarn-client --driver-memory 1g --executor-memory 1g --executor-cores 1 $SPARK_HOME/lib/spark-examples-1.6.0-hadoop2.6.0.jar 10000
+\end{lstlisting}
+
+\subsection{Write a Word-Count Application with Spark
+RDD}\label{write-a-word-count-application-with-spark-rdd}
+
+Let us write our own word-count with Spark RDD.
+
+\subsubsection{Launch Spark Interactive
+Shell}\label{launch-spark-interactive-shell}
+
+\begin{lstlisting}
+spark-shell --master yarn-client --driver-memory 1g --executor-memory 1g --executor-cores 1
+\end{lstlisting}
+
+\subsubsection{Program in Scala}\label{program-in-scala}
+
+\begin{lstlisting}
+val textFile = sc.textFile("file:///etc/hosts")
+val words = textFile.flatMap(line => line.split("\\s+"))
+val counts = words.map(word => (word, 1)).reduceByKey(_ + _)
+counts.values.sum()
+\end{lstlisting}
+
+
