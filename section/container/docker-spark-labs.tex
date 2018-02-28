@@ -84,4 +84,19 @@ val counts = words.map(word => (word, 1)).reduceByKey(_ + _)
 counts.values.sum()
 \end{lstlisting}
 
+\subsubsection{Launch PySpark Interactive
+Shell}\label{launch-pyspark-interactive-shell}
+
+\begin{lstlisting}
+pyspark --master yarn-client --driver-memory 1g --executor-memory 1g --executor-cores 1
+\end{lstlisting}
+
+\subsubsection{Program in Python}\label{program-in-python}
+
+\begin{lstlisting}
+textFile = sc.textFile("file:///etc/hosts")
+words = textFile.flatMap(lambda line:line.split())
+counts = words.map(lambda word:(word, 1)).reduceByKey(lambda x,y: x+y)
+counts.map(lambda x:x[1]).sum()
+\end{lstlisting}
 
