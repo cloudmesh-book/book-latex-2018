@@ -23,8 +23,17 @@ once: dest markdown
 	latexmk -jobname=$(FILE) $(FLAGS) -view=pdf $(FILE)
 	make html
 
+abc:
+	latexmk -jobname=b $(FLAGS) -pvc -view=pdf b
+
 travis: dest markdown
 	latexmk -pdflatex='pdflatex -file-line-error -synctex=1' -jobname=$(FILE) $(FLAGS) -pdf $(FILE)
+
+issues: clean dest
+	python bin/issues.py > section/preface/issues.tex
+	pdflatex issues
+	#latexmk -jobname=issues $(FLAGS) -view=pdf issues
+
 
 dot:
 	cd dot; dot -Tpdf gr.dot -o gr.pdf
