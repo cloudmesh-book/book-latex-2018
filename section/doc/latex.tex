@@ -1195,6 +1195,19 @@ For more details see
 
 \URL{http://baruch.ev-en.org/proj/chktex/}
 
+\subsection{Chacking For Non-ASCII Charaters}
+
+To create the most portable \LaTeX~we recommend that you avoid
+non-ASCII c haracters and replace them with the appropreate
+\LaTeX~symbol. To find the characters a program such as thsi coudl be
+helpful. Important is that you not only check teh tex file, but also
+the bib file.
+
+\begin{lstlisting}
+perl -ane '{ if(m/[[:^ascii:]]/) { print  } }' filename.tex
+perl -ane '{ if(m/[[:^ascii:]]/) { print  } }' filename.bib
+\end{lstlisting}
+
 \subsection{References}
 \index{Latex!other documentation}
 
