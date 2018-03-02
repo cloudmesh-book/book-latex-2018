@@ -1,41 +1,47 @@
-\section{Apache Hadoop using Docker}\label{apache-hadoop-with-docker}
+\section{Apache Hadoop using Docker}
+\label{apache-hadoop-with-docker}
 
-The main idea of this hands-on tutorial is to try basic examples of Map/Reduce
-framework using Hadoop which is provided by Docker container. The example
-that we use in this session is similar to WordCount but simple calculations are
-added e.g. minimum, maximum, average and standard deviation values using
-several input files which contain float numbers.
+The main idea of this hands-on tutorial is to try basic examples of
+Map/Reduce framework using Hadoop which is provided by Docker
+container. The example that we use in this session is similar to
+WordCount but simple calculations are added e.g. minimum, maximum,
+average and standard deviation values using several input files which
+contain float numbers.
 
-\subsection{Hadoop from Docker}\label{ahwd-hadoop-docker}
+\subsection{Hadoop from Docker}
+\label{ahwd-hadoop-docker}
 
-We use a Docker image from Docker Hub: (https://hub.docker.com/r/lee212/e222/) 
-The base image is from sequenceiq/hadoop and the example with input data is
-added for this tutorial.
+We use a Docker image from Docker Hub:
+(https://hub.docker.com/r/lee212/e222/) The base image is from
+sequenceiq/hadoop and the example with input data is added for this
+tutorial.
 
-\subsection{Start a Hadoop container}\label{ahwd-start}
+\subsection{Start a Hadoop container}
+\label{ahwd-start}
 
 \begin{lstlisting}
 docker run -it lee212/e222 /etc/bootstrap.sh -bash
 \end{lstlisting}
 
-It may take a few minutes at first to download image layers which are about
-847MB.
+It may take a few minutes at first to download image layers which are
+about 847MB.
 
 \subsection{Statistical Example with Hadoop}       
 
-After a container is launched, the interactive shell prompt is given to run
-hadoop application which we have an example to get Min/Max/Avg/Std values by
-analyzing input text files.
+After a container is launched, the interactive shell prompt is given
+to run hadoop application which we have an example to get
+Min/Max/Avg/Std values by analyzing input text files.
 
 \subsubsection{Description}
 
-In a nutshell, this Hadoop program reads multiple files from HDFS and provides
-calculated values. We walk through every step from compiling Java source code
-to reading a output file from HDFS. The idea of this exercise is to get you
-started with Hadoop and the MapReduce concept. You may seen the WordCount from
-Hadoop official website or documentation and this example has a same functions
-(Map/Reduce) except that you will be computing the basic statistics such as
-min, max, average, and standard deviation of a given data set.
+In a nutshell, this Hadoop program reads multiple files from HDFS and
+provides calculated values. We walk through every step from compiling
+Java source code to reading a output file from HDFS. The idea of this
+exercise is to get you started with Hadoop and the MapReduce
+concept. You may seen the WordCount from Hadoop official website or
+documentation and this example has a same functions (Map/Reduce)
+except that you will be computing the basic statistics such as min,
+max, average, and standard deviation of a given data set.
 
 The input to the program will be a text file(s) carrying exactly one
 floating point number per line. The result file includes \textit{min,
@@ -58,21 +64,22 @@ cd /root/exer1
 \subsubsection{Input Files}
 
 A test input files are available under \textit{/root/exer1/input_data}
-directory inside of the container.  The statistics values for this input are
-\textit{Min: 0.20 Max: 19.99 Avg:  9.51 StdDev: 5.55} for all input files.
+directory inside of the container.  The statistics values for this
+input are \textit{Min: 0.20 Max: 19.99 Avg: 9.51 StdDev: 5.55} for all
+input files.
 
-10 files contain 55000 lines to process and each line is a random float point
-value ranging from 0.2 to 20.0.
+10 files contain 55000 lines to process and each line is a random
+float point value ranging from 0.2 to 20.0.
 
 \subsubsection{Compilation}
 
-The source code file name is \textit{MinMaxAvgStd.java} which is available at
-\textit{/root/exer1/src/exercise/}.
+The source code file name is \textit{MinMaxAvgStd.java} which is
+available at \textit{/root/exer1/src/exercise/}.
 
-There are three functions in the code \textit{Map, Reduce and Main} where Map
-reads each line of a file and updates values to calculate minimum, maximum
-values and Reduce collects mappers to produce average and standard deviation
-values at last.
+There are three functions in the code \textit{Map, Reduce and Main}
+where Map reads each line of a file and updates values to calculate
+minimum, maximum values and Reduce collects mappers to produce average
+and standard deviation values at last.
 
 \begin{lstlisting}
 export HADOOP_CLASSPATH=`$HADOOP_PREFIX/bin/hadoop classpath`
@@ -80,8 +87,8 @@ mkdir /root/exer1/dest
 javac -classpath $HADOOP_CLASSPATH -d /root/exer1/dest root/exer1/src/exercise/MinMaxAvgStd.java
 \end{lstlisting}
 
-These commands simply prepare compiling the example code and the compiled class
-files are generated at the \textit{dest} location.
+These commands simply prepare compiling the example code and the
+compiled class files are generated at the \textit{dest} location.
 
 \subsubsection{Archiving Class Files}
 
@@ -123,17 +130,19 @@ Found 10 items
 
 \subsubsection{Run Program with a Single Input File}
 
-We are ready to run the program to calculate values from text files. First, we
-simply run the program with a single input file to see how it works.
-\textit{data_1000.txt} contains 1000 lines of floats, we use this file here.
+We are ready to run the program to calculate values from text
+files. First, we simply run the program with a single input file to
+see how it works.  \textit{data_1000.txt} contains 1000 lines of
+floats, we use this file here.
 
 \begin{lstlisting}
 hadoop jar exer1.jar exercise.MinMaxAvgStd exer1_input/data_1000.txt exer1_output_1000
 \end{lstlisting}
 
-The command runs with input parameters which indicate a jar file (the program,
-exer1.jar), exercise.MinMaxAvgStd (package name.class name), input file path
-(exer1_input/data_1000.txt) and output file path (exer1_output_1000).
+The command runs with input parameters which indicate a jar file (the
+program, exer1.jar), exercise.MinMaxAvgStd (package name.class name),
+input file path (exer1_input/data_1000.txt) and output file path
+(exer1_output_1000).
 
 The sample results that the program produces look like this:
 
@@ -209,7 +218,8 @@ The sample results that the program produces look like this:
 
 \end{lstlisting}
 
-The second line of the following logs indicates that the number of input files is 1.
+The second line of the following logs indicates that the number of
+input files is 1.
 
 \subsubsection{Result for Single Input File}
 
@@ -230,24 +240,25 @@ Std:    5.679809322880863
 
 \subsubsection{Run Program with Multiple Input Files}
 
-The first run was done pretty quickly (1440 milliseconds took according to the
-sample result above) because the input file size was small (1,000 lines) and it
-was a single file. We provides more input files with a larger size (2,000 to
-10,000 lines). Input files are already uploaded to HDFS. We simply run the
-program again with a slight change in the parameters.
+The first run was done pretty quickly (1440 milliseconds took
+according to the sample result above) because the input file size was
+small (1,000 lines) and it was a single file. We provides more input
+files with a larger size (2,000 to 10,000 lines). Input files are
+already uploaded to HDFS. We simply run the program again with a
+slight change in the parameters.
 
 \begin{lstlisting}
 hadoop jar exer1.jar exercise.MinMaxAvgStd exer1_input/ exer1_output_all
 \end{lstlisting}
 
-The command is almost same except that an input path is a directory and a new
-output directory.  Note that every time that you run this program, the output
-directory will be created which means that you have to provide a new directory
-name unless you delete it.
+The command is almost same except that an input path is a directory
+and a new output directory.  Note that every time that you run this
+program, the output directory will be created which means that you
+have to provide a new directory name unless you delete it.
 
-The sample output messages look like the following which is almost identical
-compared to the previous run except that this time the number of input files to
-process is 10, see the line two below:
+The sample output messages look like the following which is almost
+identical compared to the previous run except that this time the
+number of input files to process is 10, see the line two below:
 
 \begin{lstlisting}
 18/02/28 23:17:18 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
@@ -341,10 +352,10 @@ Std:    5.553921579413547
 
 \subsection{Conclusion}
 
-The example program of calculating some values by reading multiple files shows
-how Map/Reduce is written by a Java programming language and how Hadoop runs
-its program using HDFS. We also observed the one of benefits using Docker
-container which is that the hassle of configuration and installation of Hadoop
-is not necessary anymore.
+The example program of calculating some values by reading multiple
+files shows how Map/Reduce is written by a Java programming language
+and how Hadoop runs its program using HDFS. We also observed the one
+of benefits using Docker container which is that the hassle of
+configuration and installation of Hadoop is not necessary anymore.
 
 
