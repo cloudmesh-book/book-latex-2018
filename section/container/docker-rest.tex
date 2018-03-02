@@ -54,7 +54,7 @@ If you do not have this path please create it, because we will be using
 this place to store all the tools we need. Within the bin folder run the
 following commands using command line tool or cmd.exe in windows.
 
-\begin{lstlisting}
+\begin{lstlisting}[language=bash]
 $ python get-pip.py
 \end{lstlisting}
 %$
@@ -71,8 +71,8 @@ After adding the variables make sure you use a new cmd.exe.
 
 Now continue by installing a Virtualenv installation
 
-\begin{lstlisting}
-    $ pip install virtualenv 
+\begin{lstlisting}[language=bash]
+$ pip install virtualenv 
 \end{lstlisting}
 %$
 
@@ -87,7 +87,7 @@ Install emacs via chocolatey
 
 \subsubsection{Ubuntu and OSX}
 
-\begin{lstlisting}
+\begin{lstlisting}[language=bash]
 $ mkdir -p ~/cloudmesh/containers/docker-flask
 $ cd ~/cloudmesh/containers/docker-flask
 $ virtualenv venv
@@ -98,7 +98,7 @@ $ source venv/bin/activate
 
 Using cmd.exe Please replace with your username.
 
-\begin{lstlisting}
+\begin{lstlisting}[language=bash]
 $ mkdir -p C:\Users\<your_username>\cloudmesh\containers\docker-flask
 $ cd C:\Users\<your_username>\cloudmesh\containers\docker-flask
 $ virtualenv venv
@@ -108,7 +108,7 @@ $ venv/Script/activate
 Now you are inside the created virtual environment. The terminal will
 look something like
 
-\begin{lstlisting}
+\begin{lstlisting}[language=bash]
 (venv)neo$
 \end{lstlisting}
 %$
@@ -132,7 +132,7 @@ Create requirements.txt file
 
 \paragraph{Ubuntu and OSX}
 
-\begin{lstlisting}
+\begin{lstlisting}[language=bash]
 $ emacs requirements.txt
 \end{lstlisting}
 %$
@@ -142,7 +142,7 @@ $ emacs requirements.txt
 Install an editor such as emacs on Windows. YOu can use chocolatey for
 that, or use pycharm. Do not use notepad++
 
-\begin{lstlisting}
+\begin{lstlisting}[language=bash]
 emacs requirements.txt
 \end{lstlisting}
 
@@ -154,7 +154,7 @@ Flask==0.11.1
 
 Now run the following command
 
-\begin{lstlisting}
+\begin{lstlisting}[language=bash]
 $ pip install -r requirements.txt
 \end{lstlisting}
 %$
@@ -166,14 +166,14 @@ instructions for the deployment of the REST API on docker.
 
 \paragraph{Ubuntu and OSX}
 
-\begin{lstlisting}
+\begin{lstlisting}[language=bash]
 $ emacs Dockerfile
 \end{lstlisting}
 %$
 
 \paragraph{Windows}
 
-\begin{lstlisting}
+\begin{lstlisting}[language=bash]
 emacs Dockerfile
 \end{lstlisting}
 
@@ -192,7 +192,6 @@ minimum packages we are going to select an image including nginx, flask
 and uWSGI.
 
 \begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
 \item
   Nginx: An open source software for web serving capability.
 \item
@@ -216,19 +215,19 @@ Then we need to creat the main.py file inside the app folder.
 
 \paragraph{Ubuntu and OSX}
 
-\begin{lstlisting}
+\begin{lstlisting}[language=bash]
 emacs app/main.py
 \end{lstlisting}
 
 \paragraph{Windows}
 
-\begin{lstlisting}
+\begin{lstlisting}[language=bash]
 emacs app/main.py
 \end{lstlisting}
 
 Then add the following content.
 
-\begin{lstlisting}
+\begin{lstlisting}[language=python]
 from flask import Flask
 
 app = Flask(__name__)
@@ -255,7 +254,7 @@ After adding the content save and exit emacs.
 
 Now run the following commands.
 
-\begin{lstlisting}
+\begin{lstlisting}[language=bash]
 $ cd ~/cloudmesh/containers/docker-flask
 $ docker build -t sample-flask-rest-app .
 \end{lstlisting}
@@ -264,14 +263,14 @@ $ docker build -t sample-flask-rest-app .
 
 Run Powershell as administrator and replace with your username.
 
-\begin{lstlisting}
+\begin{lstlisting}[language=bash]
 cd C:\Users\<your_username>\cloudmesh\containers\docker-flask
 docker build -t sample-flask-rest-app .
 \end{lstlisting}
 
 If it builds successfully, you will get the following response
 
-\begin{lstlisting}
+\begin{lstlisting}[language=bash]
 $ docker build -t sample-flask-rest-app .
 Sending build context to Docker daemon  19.15MB
 Step 1/2: FROM tiangolo/uwsgi-nginx-flask:python2.7
@@ -293,7 +292,7 @@ Run the following commands to get the REST API hosted on
 
 \subsubsection{Ubuntu and OSX}
 
-\begin{lstlisting}
+\begin{lstlisting}[language=bash]
 $ docker run -p 80:80 -t sample-flask-rest-app
 \end{lstlisting}
 %$
@@ -303,7 +302,7 @@ $ docker run -p 80:80 -t sample-flask-rest-app
 In Windows powershell Run as adminstrator (use the previous powershell
 window)
 
-\begin{lstlisting}
+\begin{lstlisting}[language=bash]
 $ docker run -p 80:80 -t sample-flask-rest-app
 \end{lstlisting}
 %$
@@ -314,7 +313,7 @@ please allow that to run.
 It will take sometime to load the server once it is loaded and if it
 runs successfully you will see a response shown below.
 
-\begin{lstlisting}[basicstyle=\footnotesize]
+\begin{lstlisting}[language=bash]
 $ docker run -p 80:80 -t sample-flask-rest-app
 Checking for script in /app/prestart.sh
 Running script /app/prestart.sh
@@ -395,7 +394,7 @@ Go to this URL: \url{http://127.0.0.1:80}
 \paragraph{Additional INFO}
 
 
-\begin{lstlisting}[basicstyle=\tiny]
+\begin{lstlisting}[basicstyle=\tiny\ttfamily]
 $ docker ps -a
 CONTAINER ID IMAGE                     COMMAND                  CREATED             STATUS                   PORTS                         NAMES
 dc8cccf22216 35ffca69dcc3            "/entrypoint.sh /sta..." 4 minutes ago Up 4 minutes             0.0.0.0:80->80/tcp, 443/tcp   romantic_sammet
@@ -428,7 +427,7 @@ f7c6a4710ad2 prakhar1989/static-site "./wrapper.sh"           5 days ago        
 \paragraph{Deleting Docker Conatiner first and then remove Docker Image}
 
 
-\begin{lstlisting}[basicstyle=\tiny]
+\begin{lstlisting}[basicstyle=\tiny\ttfamily]
 $ docker images
 REPOSITORY                   TAG                 IMAGE ID            CREATED             SIZE
 sample-flask-rest-app        latest              8b3246425402        8 minutes ago       697MB
@@ -443,8 +442,10 @@ busybox                      latest              5b0d59026729        3 weeks ago
 nginx                        alpine              bb00c21b4edf        5 weeks ago         16.8MB
 hello-world                  latest              f2a91732366c        3 months ago        1.85kB
 prakhar1989/static-site      latest              f01030e1dcf3        2 years ago         134MB
+\end{lstlisting}
 
 
+\begin{lstlisting}[basicstyle=\tiny\ttfamily]
 $ docker ps -a
 CONTAINER ID IMAGE                     COMMAND                  CREATED             STATUS                   PORTS NAMES
 74b9b994c9bd sample-flask-rest-app   "/entrypoint.sh /sta..." 2 minutes ago  Exited (137) About a minute ago       infallible_mahavira
@@ -457,12 +458,16 @@ f7c6a4710ad2 prakhar1989/static-site "./wrapper.sh"           5 days ago     Exi
 350ec9a2609f busybox                 "sh"                     5 days ago     Exited (0) 5 days ago                 nifty_mahavira
 893cb11019f9 hello-world             "/hello"                 5 days ago     Exited (0) 5 days ago                 competent_spence
 1f90a411c746 hello-world             "/hello"                 11 days ago    Exited (0) 11 days ago                reverent_raman
+\end{lstlisting}
 
-
+\begin{lstlisting}[language=bash]
 $ docker rm 74b9b994c9bd
 74b9b994c9bd
+\end{lstlisting}
+%$ 
 
-
+\begin{rotate}
+\begin{lstlisting}[language=bash]
 $ docker ps -a
 CONTAINER ID IMAGE                     COMMAND                  CREATED             STATUS              PORTS NAMES
 dc8cccf22216 35ffca69dcc3            "/entrypoint.sh /sta..." 10 minutes ago Exited (137) 5 minutes ago       romantic_sammet
@@ -475,7 +480,11 @@ f7c6a4710ad2 prakhar1989/static-site "./wrapper.sh"           5 days ago     Exi
 893cb11019f9 hello-world             "/hello"                 5 days ago     Exited (0) 5 days ago            competent_spence
 1f90a411c746 hello-world             "/hello"                 11 days ago    Exited (0) 11 days ago           reverent_raman
 
+\end{lstlisting}
+%$ 
+\end{rotate}
 
+\begin{lstlisting}[language=bash]
 $ docker images
 REPOSITORY                 TAG       IMAGE ID     CREATED        SIZE
 sample-flask-rest-app      latest    8b3246425402 8 minutes ago  697MB
@@ -490,8 +499,10 @@ busybox                    latest    5b0d59026729 3 weeks ago    1.15MB
 nginx                      alpine    bb00c21b4edf 5 weeks ago    16.8MB
 hello-world                latest    f2a91732366c 3 months ago   1.85kB
 prakhar1989/static-site    latest    f01030e1dcf3 2 years ago    134MB
+\end{lstlisting}
+%$ 
 
-
+\begin{lstlisting}[language=bash]
 $ docker rmi 8b3246425402
 Untagged: sample-flask-rest-app:latest
 Deleted: sha256:8b3246425402b55aa5c4cf02cc5ad9ebd880b9fef639529b81495e778e3b3246
