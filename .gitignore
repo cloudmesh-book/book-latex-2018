@@ -3,6 +3,7 @@ _*
 .#*
 *.html
 
+*-dot2tex-*
 # LATEX FILES
 dest
 *.tdo

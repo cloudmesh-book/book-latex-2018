@@ -61,6 +61,9 @@ single: dest
 draft: dest
 	latexmk -jobname=draft $(FLAGS) -view=pdf draft
 
+dd: dest
+	latexmk -jobname=draft $(FLAGS) -pvc -view=pdf draft
+
 c: dest
 	latexmk -jobname=$(FILE) $(FLAGS) -pvc -view=pdf chameleon
 

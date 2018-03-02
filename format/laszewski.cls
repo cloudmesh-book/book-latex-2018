@@ -683,6 +683,7 @@ addtohook={%
         columns=fullflexible,
         breaklines=true,
         postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+        prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}}
 }
 
 \newcommand{\WHERE}[3]{$\square$~ #1~\ref{#2}. \nameref{#2} \hfill ~ #3 ~ \pageref{#2}\\}
