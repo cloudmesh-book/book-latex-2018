@@ -310,11 +310,16 @@ $ docker run -p 80:80 -t sample-flask-rest-app
 Here you may have to grant permission for using this port number. So
 please allow that to run.
 
-It will take sometime to load the server once it is loaded and if it
-runs successfully you will see a response shown below.
+It will take sometime to load the server once.
 
 \begin{lstlisting}[language=bash]
 $ docker run -p 80:80 -t sample-flask-rest-app
+\end{lstlisting}
+%$
+
+If it is loaded and if it runs successfully you will see a response similar to 
+
+\begin{lstlisting}[language=bash]
 Checking for script in /app/prestart.sh
 Running script /app/prestart.sh
 Running inside /app/prestart.sh, you could add migrations to this file, e.g.:
@@ -467,7 +472,6 @@ $ docker rm 74b9b994c9bd
 \end{lstlisting}
 %$ 
 
-\begin{rotate}
 \begin{lstlisting}[basicstyle=\tiny\ttfamily]
 $ docker ps -a
 CONTAINER ID IMAGE                     COMMAND                  CREATED             STATUS   PORTS NAMES
@@ -483,7 +487,6 @@ f7c6a4710ad2 prakhar1989/static-site "./wrapper.sh"           5d ago     Exited 
 
 \end{lstlisting}
 %$ 
-\end{rotate}
 
 \begin{lstlisting}[language=bash]
 $ docker images

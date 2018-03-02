@@ -238,4 +238,5 @@ dest:
 	mkdir -p dest/section/theory
 	mkdir -p dest/section/cluster/pi
 	mkdir -p dest/section/cluster/pi/images
-
+	mkdir -p dest/contrib
+	mkdir -p dest/tmp
