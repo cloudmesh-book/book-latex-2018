@@ -679,8 +679,11 @@ addtohook={%
 
 \lstset{language=python,
         style=code,
-        basicstyle=\small\ttfamily} 
-%        basicstyle=\small\ttfamily} 
+        basicstyle=\small\ttfamily,
+        columns=fullflexible,
+        breaklines=true,
+        postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+}
 
 \newcommand{\WHERE}[3]{$\square$~ #1~\ref{#2}. \nameref{#2} \hfill ~ #3 ~ \pageref{#2}\\}
 

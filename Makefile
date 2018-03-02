@@ -34,7 +34,6 @@ issues: clean dest
 	pdflatex issues
 	#latexmk -jobname=issues $(FLAGS) -view=pdf issues
 
-
 dot:
 	cd dot; dot -Tpdf gr.dot -o gr.pdf
 
@@ -58,6 +57,9 @@ google:
 
 single: dest
 	latexmk -jobname=single $(FLAGS) -pvc -view=pdf single
+
+draft: dest
+	latexmk -jobname=draft $(FLAGS) -view=pdf draft
 
 c: dest
 	latexmk -jobname=$(FILE) $(FLAGS) -pvc -view=pdf chameleon
