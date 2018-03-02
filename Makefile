@@ -63,10 +63,9 @@ draft: clean dest
 	curl -s https://raw.githubusercontent.com/cloudmesh-community/hid-sp18-503/master/cluster/sd-card-ubuntu.md > tmp/sd-card-ubuntu.md
 	curl -s https://raw.githubusercontent.com/cloudmesh-community/hid-sp18-602/master/cluster/sd-card-windows.md > tmp/sd-card-windows.md
 	curl -s https://raw.githubusercontent.com/cloudmesh-community/hid-sp18-421/master/cluster/ssh-keygen.md > tmp/ssh-keygen.md
-	curl -s https://raw.githubusercontent.com/cloudmesh-community/hid-sp18-405/master/cluster/pi-dhcp.md > tmp/pi-dhcp.md
 	curl -s https://raw.githubusercontent.com/cloudmesh-community/hid-sp18-412/master/cluster/readme-spark.md > tmp/readme-spark.md
-	curl -s https://raw.githubusercontent.com/cloudmesh-community/hid-sp18-526/master/cluster/readme-kube.md -o tmp/readme-kube.md
-
+	curl -s https://raw.githubusercontent.com/cloudmesh-community/hid-sp18-526/master/cluster/readme-kube.md > tmp/readme-kube.md
+	curl -s https://raw.githubusercontent.com/cloudmesh-community/hid-sp18-405/master/Cluster/pi-dhcp.md > tmp/pi-dhcp.md
 	bin/md-tmp-to-tex.py
 	latexmk -jobname=draft $(FLAGS) -view=pdf draft
 
@@ -156,6 +155,7 @@ clean:
 	rm -rf *.tdo
 	find . -name '*.aux' -delete
 	rm -fr _minted-*
+	rm -f tmp/*
 
 view:
 	open dest/$(FILE).pdf
