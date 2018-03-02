@@ -53,7 +53,7 @@ floating point number per line. The result file includes \textit{min,
     \centering
   \end{figure}
 
-\sub subsection{Base Location}
+\subsubsection{Base Location}
 
 The example is available at:
 
@@ -63,7 +63,8 @@ cd /cloudmesh/exer1
 
 \subsubsection{Input Files}
 
-A test input files are available under \textit{/cloudmesh/exer1/input_data}
+A test input files are available under
+\verb|/cloudmesh/exer1/input_data}|
 directory inside of the container.  The statistics values for this
 input are \textit{Min: 0.20 Max: 19.99 Avg: 9.51 StdDev: 5.55} for all
 input files.
@@ -132,7 +133,7 @@ Found 10 items
 
 We are ready to run the program to calculate values from text
 files. First, we simply run the program with a single input file to
-see how it works.  \textit{data_1000.txt} contains 1000 lines of
+see how it works.  \verb|data_1000.txt| contains 1000 lines of
 floats, we use this file here.
 
 \begin{lstlisting}
@@ -141,8 +142,8 @@ hadoop jar exer1.jar exercise.MinMaxAvgStd exer1_input/data_1000.txt exer1_outpu
 
 The command runs with input parameters which indicate a jar file (the
 program, exer1.jar), exercise.MinMaxAvgStd (package name.class name),
-input file path (exer1_input/data_1000.txt) and output file path
-(exer1_output_1000).
+input file path (\verb|exer1_input/data_1000.txt|) and output file path
+(\verb|exer1_output_1000|).
 
 The sample results that the program produces look like this:
 
