@@ -58,12 +58,12 @@ floating point number per line. The result file includes \textit{min,
 The example is available at:
 
 \begin{lstlisting}
-cd /root/exer1
+cd /cloudmesh/exer1
 \end{lstlisting}
 
 \subsubsection{Input Files}
 
-A test input files are available under \textit{/root/exer1/input_data}
+A test input files are available under \textit{/cloudmesh/exer1/input_data}
 directory inside of the container.  The statistics values for this
 input are \textit{Min: 0.20 Max: 19.99 Avg: 9.51 StdDev: 5.55} for all
 input files.
@@ -74,7 +74,7 @@ float point value ranging from 0.2 to 20.0.
 \subsubsection{Compilation}
 
 The source code file name is \textit{MinMaxAvgStd.java} which is
-available at \textit{/root/exer1/src/exercise/}.
+available at \textit{/cloudmesh/exer1/src/exercise/}.
 
 There are three functions in the code \textit{Map, Reduce and Main}
 where Map reads each line of a file and updates values to calculate
@@ -83,8 +83,8 @@ and standard deviation values at last.
 
 \begin{lstlisting}
 export HADOOP_CLASSPATH=`$HADOOP_PREFIX/bin/hadoop classpath`
-mkdir /root/exer1/dest
-javac -classpath $HADOOP_CLASSPATH -d /root/exer1/dest root/exer1/src/exercise/MinMaxAvgStd.java
+mkdir /cloudmesh/exer1/dest
+javac -classpath $HADOOP_CLASSPATH -d /cloudmesh/exer1/dest /cloudmesh/exer1/src/exercise/MinMaxAvgStd.java
 \end{lstlisting}
 
 These commands simply prepare compiling the example code and the
@@ -97,7 +97,7 @@ when Hadoop runs this example. This is useful because a jar file contains all
 necessary files to run a program.
 
 \begin{lstlisting}
-jar -cvf exer1.jar -C /root/exer1/dest/ /root/exer1/
+jar -cvf exer1.jar -C /cloudmesh/exer1/dest/ /cloudmesh/exer1/
 \end{lstlisting}
 
 \subsubsection{HDFS for Input/Output}
