@@ -156,6 +156,8 @@ clean:
 	find . -name '*.aux' -delete
 	rm -fr _minted-*
 	rm -f tmp/*
+	rm -f *-dot2tex-*
+	rm -f *.out
 
 view:
 	open dest/$(FILE).pdf
