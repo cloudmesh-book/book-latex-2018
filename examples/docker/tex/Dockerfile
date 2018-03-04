@@ -23,8 +23,8 @@ RUN add-apt-repository universe
 
 RUN apt-get install -qy \
     texlive-full \
-    biber
-
+    biber \
+    xpdf
 
 
 RUN git clone git://github.com/yyuu/pyenv.git .pyenv
