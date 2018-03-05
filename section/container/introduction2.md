@@ -21,7 +21,13 @@ true independence between applications and infrastructure and
 developers and IT ops to unlock their potential and creates a model
 for better collaboration and innovation.
 
-![Docker Containers](images/container-1.png)
+\TODO{TA: IMAGE DOES NOT EXIST}
+```
+![Docker Containers]()
+images/container-1.png
+```
+
+\TODO{TA: IMAGE REF DOES NOT WORK}
 
 Image Source [https://www.docker.com/sites/default/files/Package%20software%40x2.png](https://www.docker.com/sites/default/files/Package%20software%40x2.png])
 
