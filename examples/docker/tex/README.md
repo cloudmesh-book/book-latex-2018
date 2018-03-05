@@ -16,7 +16,9 @@ TBD
 
 ## Test if the book can be compiled
 
-make pdflatex
+    make pdflatex
+
+remember this only does one pdflatex to check the syntax, not compilet the book
 
 ## Compile the entire book 
 
