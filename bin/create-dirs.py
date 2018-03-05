@@ -26,10 +26,10 @@ for path, subdirs, files in os.walk('.'):
 d.remove('.')
 d = sorted(d)
 
-print (d)
-
 for entry in d:
     entry = entry.replace("./","./dest/")
-    print (entry)
-    os.makedirs(entry)
-    
+    print ("Creating directory:", entry)
+    try:
+        os.makedirs(entry)
+    except:
+        pass
