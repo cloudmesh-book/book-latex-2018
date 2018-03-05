@@ -79,7 +79,7 @@ void loop() {
 
 * http://www.keyestudio.com/keyestudio-easy-plug-learning-kit-for-arduino-super-makers.html
 
-![](easyplugkit.jpg)
+![](images/easyplugkit.jpg)
 
 
 Part | Number
