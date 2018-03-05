@@ -255,3 +255,6 @@ dest: setup
 	mkdir -p dest/section/cluster/pi/images
 	mkdir -p dest/contrib
 	mkdir -p dest/tmp
+	mkdir -p dest/section/msg
+	mkdir -p dest/section/data
+	mkdir -p dest/section/os
