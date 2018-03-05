@@ -13,7 +13,6 @@ piazza. Just as any textbook has many exercises, we are providing
 selected exercises for you as assignments. Not every exercise
 mentioned in a chapter has to be done.
 
-%\begin{comment}
 \begin{IU}
 There can not be any confusion which assignments have been
 issued, as they are all pinned in piazza and you can visit piazza.com
@@ -116,7 +115,6 @@ All assignments posted here are supposed to be conducted by you.
 
 \end{exercise}
 
-% ACCOUNT CREATION
 
 \subsection{Account Creation}
 
@@ -145,7 +143,7 @@ All assignments posted here are supposed to be conducted by you.
 \begin{exercise}
   {\bf Account Creation: chameleoncloud.org}. 
   
-  If you do not have a chameleoncloud account please go to 
+  If you do not have a chameleon cloud account please go to 
   \url{https://www.chameleoncloud.org} and apply for an
   account only. Do not apply for a project. Write down your account
   name and remember the password. You will need the account for
@@ -390,7 +388,7 @@ available by 12:00 pm est of the same day.
 \begin{exercise}
 
   {\bf Account Creation: github.com}. If you do not have a github.com
-  account, go to github.com and apply for a \utl{https://github.com}
+  account, go to github.com and apply for a \url{https://github.com}
   account. Write down your account name and remember the password. You
   will need the account for upcoming assignments.
 
@@ -483,9 +481,13 @@ provide the link to it in piazza. Please visit it:
 \url{https://piazza.com/class/jc9dcfnbi045kv?cid=34}
 \end{exercise}
 
-\subsection{Swagger}
+\subsection{Swagger REST Services}
+
+\subsubsection{PART A: Elementary Swagger Server}
+ 
 \begin{exercise}
-This is for residential students (The swagger preparation was mentioned last week in class):
+  This is for residential students (The swagger preparation was
+  mentioned last week in class):
  \begin{itemize}
 \item (A) you are expected to have done major portions of the Swagger code gen assignment this includes
 \subitem (1) pick of a resource you like to implement a rest service for
@@ -502,14 +504,16 @@ of this
 \smallskip
 \item (B) In addition to this I recommend that you
  
-\subitem (1) find on the network how to put rasbian on an SD card,
+\subitem (1) find on the network how to put Rasbian on an SD card,
 create your self an md file for this as this may be different for
 different operating systems.
 
  
-\subitem (2) download rasbian on your machine so you can burn it as you will get 5 sd cards
+\subitem (2) download rasbian on your machine so you can burn it as
+you will get 5 sd cards
  
-In the lab, those that finish most of the swagger service will switch to building a cloud cluster.
+In the lab, those that finish most of the swagger service will switch
+to building a cloud cluster.
  
 \subitem (3) in the lab you will be first thing change the password to
 each of them before you put them on the network. Maybe there is a way
@@ -517,7 +521,8 @@ to do this directly from your computer after you have put rasbian on
 the sd card. But I do not know if that's possible.
 
  
-\subitem (4) figure out how to configure rasbian without a monitor, while just using an SDcard and your laptop, write an md file
+\subitem (4) figure out how to configure Rasbian without a monitor,
+while just using an SDcard and your laptop, write an md file
 
  \end{itemize}
  
@@ -527,41 +532,49 @@ assignment is about openly sharing. Naturally, you should not wait
 till someone else does it, you should take leadership yourself.
 
  
-Naturally, focus on the swagger service before starting to get more involved with the cluster
+Naturally, focus on the swagger service before starting to get more
+involved with the cluster
+
 \end{exercise}
 
-\begin{exercise} {\bf Cloud and Big Data Rest Service with Swagger} due March 5, 2018 Spec before Feb 15, 2018
+\begin{exercise} {\bf Cloud and Big Data Rest Service with Swagger}
+  due March 5, 2018 Spec before Feb 15, 2018
 
 \begin{itemize}
      
-   \item (A) Read the Chapters about REST and Swagger. This includes Swagger specification and Swagger codegen. There
-         is also a video that introduces you to Swagger
-         \URL{https://youtu.be/0_Ub13py_K8}
+\item (A) Read the Chapters about REST and Swagger. This includes
+  Swagger specification and Swagger codegen. There is also a video
+  that introduces you to Swagger \URL{https://youtu.be/0_Ub13py_K8}
  
-   \item (B) Read the Document \URL{https://laszewski.github.io/papers/NIST.SP.1500-8-draft.pdf}
+\item (B) Read the Document
+  \URL{https://laszewski.github.io/papers/NIST.SP.1500-8-draft.pdf}
  
-We will be collaboratively developing a new version of this document while not using examples as in the previous
-document but swagger OpenAPI 2.0 specifications.
+  We will be collaboratively developing a new version of this document
+  while not using examples as in the previous document but swagger
+  OpenAPI 2.0 specifications.
  
-   \item (C) You will pick one of the existing resources or identify a
-     new resource that you would like to specify. Simply go to:
+\item (C) You will pick one of the existing resources or identify a
+  new resource that you would like to specify. Simply go to:
 
 \URL{https://docs.google.com/document/d/12FUtHlEzQwxc3hjyki3RbU0iMfBrcyoSMKeq3aEDPk/edit?usp=sharing
 } 
+
 and add your name to one of the resource. Make sure there is only one
 name for each resource even if you work in a team.
  
-   \item (D) For the resource, you chose you will be developing with
-     Swagger a useful REST service related to cloud computing and Big
-     Data.
+\item (D) For the resource, you chose you will be developing with
+  Swagger a useful REST service related to cloud computing and Big
+  Data.
 
  
  \end{itemize}
-TAs will provide more details as we will avoid that everyone develops the same service. 
+
+ TA's will provide more details as we will avoid that everyone
+ develops the same service.
  
-You will use this specification create a swagger python service and
-implement functions to enable a real implementation of the service
-that is useful.
+ You will use this specification create a swagger python service and
+ implement functions to enable a real implementation of the service
+ that is useful.
 
  
 Examples:
@@ -579,6 +592,151 @@ Examples:
 
 Additional resources are listed in the instructor answer. 
 \end{exercise}
+
+\subsubsection{PART B: Reproducable Swagger Services}
+
+\begin{exercise}
+It is important to be able to reproduce the Services and not just
+create a code that you can run. In order to do that we will only store
+the absolute minimum information in github and autogenerate the code
+via the yaml file, your controller and a Makefile that you will
+design.
+
+Naturally we needed you to have understood the Swagger codegen tool
+first, so you need to be familiar on how to create a swagger service.
+Now that you are we can continue with this step. THis will even
+include removing code that you uploaded to github.
+
+Thus, We like you to review the following and engage with us in online
+meetings if this is not clear. It is actually rather simple. This is
+used to prepare you for the way we expect you to deliver the final
+project. It also replicates the way we have taught you to compile your
+latex pdf document. Wait - what has latex to do with swagger services?
+Technically nothing conceptional we do
+
+ 
+\begin{itemize}
+\item make in paper dir -> produces latex document
+
+\item make in swagger dir-> produces swagger service
+
+\item and in future make in project dir -> produces project services
+\end{itemize}
+ 
+
+So we just use the same framework ... That is very convenient!
+
+Now let us get back to the swagger service generation:
+ 
+One of the goals of this project is to create a REPRODUCABLE framework
+for generating the services. It is not enough to just develop a
+swagger service. You will need to generate the service from a shell
+script and/or makefile. As both technologies are available on any
+computer including Windows it is your responsibility to make sure you
+have make and bash installed. And use them.
+
+Swagger-codegen applied to your yaml file will create a directory
+structure. THis directory structure is not to be checked into
+github. Instead you will check in the makefile or shell script (bash)
+that creates it.
+
+You will see in the controller dir a number of \verb|controller_*.py|
+files, you will copy them into your github dir. The names of the
+controller files can be automatically specified based on the content
+in your yaml file.
+
+ 
+
+Thus you will have a directory with the following contents, replace
+000 with the id you have
+
+ 
+\begin{lstlisting}
+hid-sp18-000/swagger/Makefile
+hid-sp18-000/swagger/conroller_a.py
+hid-sp18-000/swagger/conroller_b.py
+\end{lstlisting}
+ 
+
+We assume that swagger-codegen is a shell variable allowing you to run
+swagger-codegen.
+
+This could be different on different systems. You will be documenting
+this for your system. On OSX this is trivial as you just use brew to
+install and
+
+\begin{lstlisting}
+export SWAGGER-CODEGEN=swagger-codegen
+\end{lstlisting}
+ 
+will typically work. On other systems you may have to specify the jar
+file. You will be using an environment variable regardless which OS
+you are on
+
+If you use a Makefile you will be defining the following tags
+
+ 
+\begin{itemize}
+\item make clean -- removes the code generated
+
+\item make service -- creates the swagger service from the yaml file
+  and places the controllers in the appropriate directory
+
+\item make start  -- starts the service
+
+\item make stop -- stops the service
+
+\item make test -- executes a number of tests against the service
+\end{itemize}
+
+You are allowed as part of this use nose or any other unit test. 
+
+\end{exercise}
+
+\subsubsection{Swagger Container}
+
+STEP 3 generating Swagger RESt Containers
+
+ 
+
+After you have finished the STEP 2 in the Swagger series of exercises,
+YOu will now generate a container. However, you will neither check in
+the container in docker hub nor into github.
+
+ 
+
+Instead, you will generate a container with a Dockerfile. You will add
+to your makefile the tag
+
+ 
+\begin{lstlisting}
+make container -- which will generate the container form the
+                  Dockerfile. Your container will be named cloudmesh-<YOURTOPIC>
+\end{lstlisting}
+
+Where topic is how you named your service
+
+As we will start multiple services from multiple students you need to
+have a proper namespace in the yaml specification file THis may be
+different for different people. For example
+
+ 
+\begin{lstlisting}
+cloudmesh/var/<id>
+cloudmesh/aws/vm/<id>
+cloudmesh/google/vm/<id>
+cloudmesh/openstack/vm/<id>
+cloudmesh/filter/<id>
+\end{lstlisting}
+
+ 
+
+Naturally, if you have better url suggestions please integrate,
+however, we need a unique prefix for each service so if we were to
+combine them we can do that.
+
+Reply to this followup discussion
+
 
 \subsection{Technology Paper}
 \label{E:616-tech-paper}

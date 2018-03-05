@@ -3,35 +3,36 @@ MAINTAINER Gregor von Laszewski <laszewski@gmail.com>
 
 
 RUN apt-get update -q && apt-get install -qy \
-    build-essential \
+ build-essential \
+    python-dev \
+    python-pip \
+    libssl-dev \
+    zlib1g-dev \
+    libbz2-dev \
+    libreadline-dev \
+    libsqlite3-dev \
+    pandoc \
     wget \
     curl \
     emacs \
     git-core \
-    pandoc \
-    libssl-dev \
-    zlib1g-dev \
     software-properties-common
+
 
 RUN add-apt-repository universe
 
 RUN apt-get install -qy \
     texlive-full \
-    biber
+    biber \
+    xpdf
 
-RUN curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
 
-RUN echo 'export PATH="/root/.pyenv/bin:$PATH"' > .profile
-RUN echo 'eval "$(pyenv init -)"' >> .profile
-RUN echo 'eval "$(pyenv virtualenv-init -)"' >> .profile
+RUN git clone git://github.com/yyuu/pyenv.git .pyenv
+RUN git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
 
-RUN pwd
-
-RUN export PATH="/root/.pyenv/bin:$PATH"
-RUN eval "$(pyenv init -)"
-RUN eval "$(pyenv virtualenv-init -)"
-
-# RUN source .profile
+ENV HOME  /
+ENV PYENV_ROOT /.pyenv
+ENV PATH $PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
 
 RUN pyenv install 3.6.4
 RUN pyenv global 3.6.4
@@ -41,3 +42,5 @@ RUN git clone https://github.com/cloudmesh/book.git
 
 WORKDIR /book
 VOLUME ["/book"]
+
+RUN cd /book && pip install -r requirements.txt

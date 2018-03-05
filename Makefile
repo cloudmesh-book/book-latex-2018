@@ -58,10 +58,19 @@ google:
 single: dest
 	latexmk -jobname=single $(FLAGS) -pvc -view=pdf single
 
-draft: dest
+draft: clean dest
+	curl -s https://raw.githubusercontent.com/cloudmesh-community/hid-sp18-503/master/sd-card-ubuntu.md > tmp/sd-card-ubuntu.md
+	curl -s https://raw.githubusercontent.com/cloudmesh-community/hid-sp18-508/master/cluster/sd-card-osx.md > tmp/sd-card-osx.md
+	curl -s https://raw.githubusercontent.com/cloudmesh-community/hid-sp18-602/master/sd-card-windows.md > tmp/sd-card-windows.md
+	curl -s https://raw.githubusercontent.com/cloudmesh-community/hid-sp18-421/master/ssh-keygen.md > tmp/ssh-keygen.md
+	curl -s https://raw.githubusercontent.com/cloudmesh-community/hid-sp18-412/master/cluster/readme-spark.md > tmp/readme-spark.md
+	curl -s https://raw.githubusercontent.com/cloudmesh-community/hid-sp18-526/master/cluster/readme-kube.md > tmp/readme-kube.md
+	curl -s https://raw.githubusercontent.com/cloudmesh-community/hid-sp18-405/master/Cluster/pi-dhcp.md > tmp/pi-dhcp.md
+	bin/md-tmp-to-tex.py
 	latexmk -jobname=draft $(FLAGS) -view=pdf draft
 
 dd: dest
+	cd tmp; python ../bin/md-all-to-tex.py
 	latexmk -jobname=draft $(FLAGS) -pvc -view=pdf draft
 
 c: dest
@@ -146,6 +155,9 @@ clean:
 	rm -rf *.tdo
 	find . -name '*.aux' -delete
 	rm -fr _minted-*
+	rm -f tmp/*
+	rm -f *-dot2tex-*
+	rm -f *.out
 
 view:
 	open dest/$(FILE).pdf
@@ -238,4 +250,5 @@ dest:
 	mkdir -p dest/section/theory
 	mkdir -p dest/section/cluster/pi
 	mkdir -p dest/section/cluster/pi/images
-
+	mkdir -p dest/contrib
+	mkdir -p dest/tmp
