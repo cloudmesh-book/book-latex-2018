@@ -5,7 +5,7 @@ FILE=vonLaszewski-bigdata
 #FLAGS=-interaction nonstopmode  -file-line-error
 FLAGS=-shell-escape
 CLOUD=cloud
-FLAGS=-shell-escape -output-directory=dest -aux-directory=dest
+FLAGS=-shell-escape -output-directory=dest -aux-directory=dest --max-print-line=140
 
 
 DEFAULT=$(CLOUD)
@@ -15,13 +15,16 @@ LATEX=pdflatex
 #LATEX=pdfflatex
 #LATEX=pydflatex -k
 
-
 g: dest markdown
 	latexmk -jobname=$(FILE) $(FLAGS) -pvc -view=pdf $(FILE)
 
-once: dest markdown
+setup:
+	export max_print_line=1000
+
+
+once: clean dest markdown
 	latexmk -jobname=$(FILE) $(FLAGS) -view=pdf $(FILE)
-	make html
+	# make html
 
 abc:
 	latexmk -jobname=b $(FLAGS) -pvc -view=pdf b
@@ -43,7 +46,7 @@ markdown:
 test: dest markdown
 	pdflatex $(FILE)
 
-gg: dest markdown
+gg: setup dest markdown
 	pdflatex -shell-escape $(FILE)
 
 check:
@@ -185,7 +188,7 @@ size:
 watch:
 	latexmk -pvc -view=pdf ${FILE}
 
-dest:
+dest: setup
 	mkdir -p dest/format
 	mkdir -p dest/notebooks
 	mkdir -p dest/notebooks/dask
