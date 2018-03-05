@@ -2,12 +2,12 @@
 
 ## Build the image
 
-docker build -t cloudmesh-tex .
+    docker build -t cloudmesh-tex .
 
 
 ## Run the container in interactive mode
 
-docker run -it cloudmesh-tex bash
+    docker run -it cloudmesh-tex bash
 
 
 ## Upload the image to dockerhub
@@ -26,6 +26,6 @@ FOR THIS WE NEED TO CHNAGE THE MAKEFILE TO NOT DO REPETED COMPILES
 
 right now we can do make, but need to do something like 
 
-make once
+    make once
 
-that seems a nice name
+that seems a nice name - not yet working
