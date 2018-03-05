@@ -13,3 +13,17 @@ docker run -it cloudmesh-tex bash
 ## Upload the image to dockerhub
 
 TBD
+
+## Test if the book can be compiled
+
+make pdflatex
+
+## Compile the entire book 
+
+FOR THIS WE NEED TO CHNAGE THE MAKEFILE TO NOT DO REPETED COMPILES
+
+right now we can do make, but need to do something like 
+
+make once
+
+that seems a nice name
