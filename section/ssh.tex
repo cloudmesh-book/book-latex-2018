@@ -1,6 +1,7 @@
 \chapterimage{shell.jpg} 
 \chapter{SSH}
 \label{C:ssh}
+\index{ssh}
 
 If you do not know what ssh is we recommend that you
 \href{http://openssh.com/manual.html}{read up on it} . However, the
@@ -20,6 +21,7 @@ resources. This manual covers UNIX, Mac OS X, as well as Windows 10.
 
 
 \section{Generate a SSH key}\label{generate-a-ssh-key}
+\index{ssh-keygen}
 
 First we must generate a ssh key with the tool
 \href{http://linux.die.net/man/1/ssh-keygen}{ssh-keygen}. This program
@@ -140,6 +142,7 @@ Your identification has been saved with the new passphrase.
 \end{verbatim}
 
 \section{SSH Add and Agent}
+\index{ssh add}
 
 To not always type in your password, you can use \verb|ssh-add|.
 
@@ -174,10 +177,12 @@ To execute the command upon logout, place it in your
 
 
 \section{SSH Config}
+\index{ssh config}
 
 \TODO{describe ssh config}
 
 \section{SSH Port Forwarding}
+\index{ssh port forwarding}
 
 \TODO{describe port forwarding}
 
@@ -193,6 +198,7 @@ upload the public key
   \URL{http://docs.gitlab.com/ce/ssh/README.html}
 
 \section{Using SSH on Mac OS X}\label{using-ssh-on-mac-os-x}
+
 
 Mac OS X comes with an ssh client. In order to use it you need to open
 the \texttt{Terminal.app} application. Go to \texttt{Finder}, then click
@@ -294,6 +300,7 @@ You can selectively install from the cygwin setup terminal which
 software you like to use, obviously you may want to use ssh
 
 \subsection{SSH from putty}\label{S:putty}
+\index{putty}
 
 As you will see the process is somewhat cumbersome and when you
 compare it with the commandline tools available, we do recommend using
@@ -358,6 +365,7 @@ use the public key and upload it to systems you like to ligin to.
 
 
 \subsection{Chocolatey}
+\index{chocolatey}
 
 Another approach is to use it in Powershell with the help of
 chopolatey. Other options may be better suited for you and we leave it
@@ -481,6 +489,7 @@ security risks.
 
 
 \section{SSH to FutureSystems Resources}
+\index{ssh!Futuresystems}
 
 Next, you need to upload the key to the portal. You must be logged into
 the portal to do so.
