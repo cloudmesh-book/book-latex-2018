@@ -10,9 +10,6 @@ before_install:
 - docker run laszewski/cloudmesh-tex:0.0.1 /bin/sh -c "cd /book; git pull"
 
 script:
-  - export HOME=/
-  - export PYENV_ROOT=/.pyenv
-  - export PATH=$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
   - python --version
   - cd /book; git pull
   - cd /book; make travis
