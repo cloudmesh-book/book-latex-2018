@@ -279,6 +279,29 @@ $ ENV2
 $ ENV3
 \end{verbatim}
 
+\subsection{Updateing Python Version List}
+
+Pyenv maintains locally a list of available python versions. To see
+the list use the command
+
+\begin{lstlisting}
+pyenv install -l
+\end{lstlisting}
+
+To obtain the newest list please use the cmmand
+
+\begin{lstlisting}
+cd ~/.pyenv/plugins/python-build/../.. && git pull
+\end{lstlisting}
+
+Now when you call 
+
+\begin{lstlisting}
+pyenv install -l
+\end{lstlisting}
+
+You will see the updated list.
+
 \subsection{Instalation without
 pyenv}\label{instalation-without-pyenv-1}
 
