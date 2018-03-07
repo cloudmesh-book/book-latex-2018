@@ -8,7 +8,7 @@ Copied from:
 Keyestudio Easy-plug control board is a microcontroller board based on the ATmega328P-PU. It has 14 digital input/outputs (of which 6 can be used as PWM outputs), 6 analog inputs, a 16 MHz quartz crystal, a USB connection, a power jack, an ICSP header and a reset button. It contains everything needed to support the microcontroller; simply connect it to a computer with a USB cable or power it with a AC-to-DC adapter or battery to get started.You can tinker with your UNO without worrying too much about doing something wrong, worst case scenario you can replace the chip for a few dollars and start over again.
 For convenience of wire connection, we simplify pins GND and VCC into each plug, so you only need one wire to connect a module, no need to separately connect the VCC and GND. The pins on the original UNO are all redesigned into plug interface. On the board, you can find ports D2-D13, A0 to A5, an IIC port and a COM port. All in one simple plug.
 
-![](easyplug.png)
+![](images/easyplug.png)
 
 
 
