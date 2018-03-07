@@ -1,4 +1,5 @@
 # Python Libcloud
+\index{Python!libcloud}
 
 ## Install
 
@@ -37,6 +38,7 @@ Some advanced cloud features do not work.
 
 * https://libcloud.readthedocs.io/en/latest/supported_providers.html
 
+```
 Provider	list nodes	create node	reboot node	destroy node	list images	list sizes	deploy node
 Azure Virtual machines	yes	yes	yes	yes	yes	yes	yes
 Amazon EC2	yes	yes	yes	yes	yes	yes	yes
@@ -45,6 +47,7 @@ Libvirt	yes	no	yes	yes	no	no	no
 OpenStack	yes	no	yes	yes	yes	yes	no
 
 add trystack
+```
 
 ## Compute
 

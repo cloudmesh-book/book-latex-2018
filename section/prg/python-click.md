@@ -1,7 +1,8 @@
-Python Click
-============
+# Python Click
 
-Click allows developers to create composable command line interfaces.  It aims to simplify the the process of writing command line tools. Highlights include:
+Click allows developers to create composable command line interfaces.
+It aims to simplify the the process of writing command line
+tools. Highlights include:
 
 * arbitrary nesting of commands
 * automatic help page generation
@@ -9,7 +10,7 @@ Click allows developers to create composable command line interfaces.  It aims t
 
 The following example take from the clik Web page at
 
-* http://click.pocoo.org/5/
+* <http://click.pocoo.org/>
 
 illustrates the use of click
 
@@ -52,14 +53,12 @@ To obtain the man page you can say:
 
 
 
-Install
--------
+## Install
 
 	pip install click
 	pip install click-shell
 
-Click Shell
------------
+## Click Shell
 
 click-shell is an extension allowing to run click commands in a shell
 
@@ -75,8 +74,7 @@ click-shell is an extension allowing to run click commands in a shell
 
 	...
 
-Links
------
+## Links
 
-* http://click.pocoo.org/5
-* https://github.com/clarkperkins/click-shell
+* <http://click.pocoo.org>
+* <https://github.com/clarkperkins/click-shell>
