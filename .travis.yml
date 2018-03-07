@@ -1,59 +1,21 @@
 sudo: required
-dist: trusty
-language: python
-python:
-  - "3.6"
+
+services:
+  -docker
   
+language: python
+
 before_install:
-- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends 
-- sudo apt-get install python3
-- pyenv versions
-- pyenv global 3.6.3
-- sudo add-apt-repository ppa:jonathonf/texlive-2016
-
-addons:
-  apt:
-    packages:
-      - build-essential \
-      - python-dev \
-      - python-pip \
-      - libssl-dev \
-      - zlib1g-dev \
-      - libbz2-dev \
-      - libreadline-dev \
-      - libsqlite3-dev \
-      - pandoc \
-      - wget \
-      - curl \
-      - git-core \
-      - software-properties-common
-      - biber
-      - python3
-      - texlive-full
-      - texlive-fonts-recommended
-      - texlive-latex-extra
-      - texlive-fonts-extra
-      - dvipng
-      - texlive-latex-recommended
-      - latexmk
-
-install:
-  - sudo add-apt-repository universe
-  - python --version
-  - git clone git://github.com/yyuu/pyenv.git .pyenv
-  - git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
-  - pyenv install 3.6.4
-  - pyenv global 3.6.4
-  - python -m ensurepip
-
+- docker pull laszewski/cloudmesh-tex:0.0.1
+- docker run carlad/sinatra /bin/sh -c "cd /book; git pull"
 
 script:
   - export HOME=/
   - export PYENV_ROOT=/.pyenv
   - export PATH=$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
   - python --version
-  - git clone https://github.com/cloudmesh/book.git
-  - make travis
+  - cd /book; git pull
+  - cd /book; make travis
 
 #deploy:
 #  provider: releases

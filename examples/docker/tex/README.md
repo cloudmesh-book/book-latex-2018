@@ -29,3 +29,8 @@ right now we can do make, but need to do something like
     make once
 
 that seems a nice name - not yet working
+
+
+## Running from docker hub
+
+docker run -it laszewski/cloudmesh-tex:0.0.1
