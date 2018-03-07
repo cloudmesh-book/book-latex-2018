@@ -2,6 +2,7 @@
 
 \chapter{Linux}
 \label{C:linux}
+\index{Linux}
 
 \FILENAME
 
@@ -19,6 +20,8 @@ Laptops and was later on further developed by making it a full
 Operating system replacement for UNIX. 
 
 \section{Shell}
+\index{Shell}
+\index{Terminal}
 
 One of the most important features for us will be to access the
 computer with the help of a \textit{shell}. THe shell is typically run in
@@ -263,6 +266,7 @@ Ctrl + d & Logout of current session, similar to exit \\
 \end{tabular}
 
 \section{.bashrc and .bash\_profile}
+\index{.bashrc}
 
 Usage of a particular command and all the attributes associated with it,
 use `man' command. Avoid using \verb|rm -r| command to delete files
@@ -282,6 +286,7 @@ More Information
 
 \section{Makefile}
 \label{s:makefile}
+\index{Makefile}
 
 Makefiles allow developers to coordinate the execution of code
 compilations. This not only includes C or C++ code, but any
@@ -310,8 +315,13 @@ hello:
     @echo "Hello World"
 \end{lstlisting} 
 
-One of the best features of targets is that they can depend on other
-targets. Thus, iw we define 
+Important to remember is that the commands after a target are not
+indented just by spaces, but actually by a single TAB
+character. Editors such as emacs will be ideal to edit such Makefiles,
+while allowing syntax highlighting and easy manipulation of
+TABs. Naturally other editros will do that also. Please chose your
+editor of choice. One of the best features of targets is that they can
+depend on other targets. Thus, iw we define
 
 \begin{lstlisting} 
 hallo: hello
@@ -342,6 +352,12 @@ here we just use the most elementary makefiles.
 
 For more information we recommend you to find out about it on the internet.
 
+\subsubsection{Makefiles on Windows}
+\index{Makefile!Windows}
+
+Makefiles can easily be accessed also on windows while installing
+gitbash. Please reer to the internet or search in this handbook for
+more information about gitbash.
 
 \section{Exercises}
 
