@@ -144,3 +144,15 @@ Here you will get the following output in the terminal.
 
 ![Terminal Output](images/docker-spark-jupyter.png)
 
+Please copy the url shown at the end of the terminal output and go to
+that url in the browser.
+
+You will see the following output in the browser, (Use Google Chrome)
+
+![Jupyter Notebook in Browswer](images/docker-spark-jup-1.png)
+
+First navigate to the work folder. Let us create a new python file
+here.
+
+![Create a new python file](images/docker-spark-jup-2.png)
+
