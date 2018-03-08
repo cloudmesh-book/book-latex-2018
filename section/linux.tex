@@ -2,6 +2,7 @@
 
 \chapter{Linux}
 \label{C:linux}
+\index{Linux}
 
 \FILENAME
 
@@ -19,6 +20,8 @@ Laptops and was later on further developed by making it a full
 Operating system replacement for UNIX. 
 
 \section{Shell}
+\index{Shell}
+\index{Terminal}
 
 One of the most important features for us will be to access the
 computer with the help of a \textit{shell}. THe shell is typically run in
@@ -263,6 +266,7 @@ Ctrl + d & Logout of current session, similar to exit \\
 \end{tabular}
 
 \section{.bashrc and .bash\_profile}
+\index{.bashrc}
 
 Usage of a particular command and all the attributes associated with it,
 use `man' command. Avoid using \verb|rm -r| command to delete files
@@ -279,6 +283,85 @@ alias h='history'
 More Information
 
 \url{https://cloudmesh.github.io/classes/lesson/linux/refcards.html}
+
+\section{Makefile}
+\label{s:makefile}
+\index{Makefile}
+
+Makefiles allow developers to coordinate the execution of code
+compilations. This not only includes C or C++ code, but any
+translation from source to a final format. For us this could include
+the creation of PDF files from latex sources, creation of docker
+images, and the creation of cloud services and their deployment
+through simple workflows represented in makefiles, or the coordination
+of execution targets.
+
+As makefiles include a simple syntax allowing structural dependencies
+they can easily adapted to fulfill simple activities to be executed in
+repeated fashion by developers.
+
+An example of how to use Makefiles for docker is provided at
+\url{http://jmkhael.io/makefiles-for-your-dockerfiles/}.
+
+An example on how to use Makefiles for \LaTeX~is provided at
+\url{https://github.com/cloudmesh/book/blob/master/Makefile}.
+
+Makefiles include a number of rules that are defined by a target
+name. Let us define a target called hello that prints out the string
+``Hello World''.
+
+\begin{lstlisting} 
+hello:
+    @echo "Hello World"
+\end{lstlisting} 
+
+Important to remember is that the commands after a target are not
+indented just by spaces, but actually by a single TAB
+character. Editors such as emacs will be ideal to edit such Makefiles,
+while allowing syntax highlighting and easy manipulation of
+TABs. Naturally other editros will do that also. Please chose your
+editor of choice. One of the best features of targets is that they can
+depend on other targets. Thus, iw we define
+
+\begin{lstlisting} 
+hallo: hello
+    @echo "Hallo World"
+\end{lstlisting} 
+
+our makefile will first execute hello and than all commands in hallo.
+As you can see this can be very useful for defining simple
+dependencies. 
+
+In addition we can define variables in a makefile such as 
+
+\begin{lstlisting} 
+HELLO="Hello World"
+
+hello: 
+    @echo $(HELLO)
+\end{lstlisting} 
+%$
+
+and can use them in our text with \$ invocations.
+
+Moreover, in sophisticated Makefiles, we could even make the targets
+dependent on files and a target rouls could be defined that only
+compiles those files that have changed since our last invokation of
+the Makefile, safing potentially a lot of time. However, for our work
+here we just use the most elementary makefiles.
+
+For more information we recommend you to find out about it on the internet.
+A convenient refrence card sis available at~\url{http://www.cs.jhu.edu/~joanne/unixRC.pdf}.
+
+
+\subsubsection{Makefiles on Windows}
+\index{Makefile!Windows}
+
+Makefiles can easily be accessed also on windows while installing
+gitbash. Please reer to the internet or search in this handbook for
+more information about gitbash.
+
+
 
 \section{Exercises}
 
@@ -312,3 +395,4 @@ duplicates.
 \end{exercise}
 
 
+\

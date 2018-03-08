@@ -1,6 +1,7 @@
 \FILENAME
 
 \section{Python Installation}\label{python-installation}
+\index{Python!Install}
 
 Python is easy to install and very good instructions for most platforms
 can be found on the python.org Web page. We will be using Python 2.7.13
@@ -28,6 +29,7 @@ depends on you, but we highly recommend pyenv if you can.
 
 \subsubsection{Managing Multiple Python Versions with
 Pyenv}\label{S:managing-multiple-python-versions-with-pyenv}
+\index{pyenv}
 
 Python has several versions that are used by the community. This
 includes Python 2 and Python 3, but alls different management of the
@@ -219,11 +221,11 @@ the following commands:
 
 \begin{verbatim}
 $ pyenv virtualenv 2.7.13 ENV2
-$ pyenv virtualenv 3.6.2 ENV3
+$ pyenv virtualenv 3.6.4 ENV3
 \end{verbatim}
 
 In the example above, ENV2 would represent python 2.7.13 while ENV3
-would represent python 3.6.2. Often it is easier to type the alias
+would represent python 3.6.4. Often it is easier to type the alias
 rather than the explicit version.
 
 \paragraph{Set up the Shell}\label{set-up-the-shell}
@@ -279,12 +281,35 @@ $ ENV2
 $ ENV3
 \end{verbatim}
 
+\subsection{Updateing Python Version List}
+
+Pyenv maintains locally a list of available python versions. To see
+the list use the command
+
+\begin{lstlisting}
+pyenv install -l
+\end{lstlisting}
+
+To obtain the newest list please use the cmmand
+
+\begin{lstlisting}
+cd ~/.pyenv/plugins/python-build/../.. && git pull
+\end{lstlisting}
+
+Now when you call 
+
+\begin{lstlisting}
+pyenv install -l
+\end{lstlisting}
+
+You will see the updated list.
+
 \subsection{Instalation without
 pyenv}\label{instalation-without-pyenv-1}
 
 If you need to have more than one python version installed and do not
 want or can use pyenv, we recommend you download and install python
-2.7.13 and 3.6.2 from python.org
+2.7.13 and 3.6.4 from python.org
 (\url{https://www.python.org/downloads/})
 
 \subsubsection{Make sure pip is up to
@@ -404,8 +429,8 @@ pyenv versions
 system
 2.7.13
 2.7.13/envs/ENV2
-3.6.2
-3.6.2/envs/ENV3
+3.6.4
+3.6.4/envs/ENV3
 ENV2 
 ENV3
 * anaconda3-4.3.1 (set by PYENV_VERSION environment variable)
@@ -448,6 +473,7 @@ terminals to switch between python 2 and 3.
 \end{description}
 
 \subsubsection{virtualenv}\label{virtualenv}
+\index{virtualenv}
 
 environment while using virtualenv,. Documentation about it can be found
 at:

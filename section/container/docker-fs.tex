@@ -1,53 +1,88 @@
+% chktex-file 1
+% chktex-file 8
+% chktex-file 11
+% chktex-file 32
+
 \chapter{Running Docker on FutureSystems}\label{S:docker-fg}
+\index{Docker!FUturesystems}
+\index{Futuresystems!Docker}
 
 \FILENAME
 
-\section{Overview}\label{overview}
+\section{Overview}
+
+\begin{IU}
+
+This section is for IU students only that take classes with us.
+\end{IU}
 
 This documentation introduces how to run Docker container on
 FutureSystems. Currently we have deployed Docker swarm on Echo.
 
-\section{Getting Access}\label{getting-access}
+\section{Getting Access}
 
-You will need an account on FutureSystems. To verify, try to see if you
-can log into india.futuresystems.org. You need to be a member of a valid
+You will need an account on FutureSystems and be enrolled in an active
+project.  To verify, try to see if you can log into
+india.futuresystems.org. You need to be a member of a valid
 FutureSystems project, and had submitted an ssh public key via the
 FutureSystems portal.
 
-If your access to the india host has been verified, try to login to the
-docker swarm head node with the same username and key:
+\begin{IU}
+For 2018 you need to be in the following project:
 
-\begin{verbatim}
-ssh FS_USER@149.165.150.76
-\end{verbatim}
+\url{https://portal.futuresystems.org/project/537}
 
-\textbf{NOTE: If you have access to india but not the docker swarm
+\end{IU}
+
+If your access to the india host has been verified, try to login to
+the docker swarm head node. To conveniently do this let us define some
+Linux environment variables to simplify the access and the material
+presented here. YOu can place them even in your \verb|.bashrc| or
+\verb|.bash_profile| so the information gets populated whnever you start a
+new terminal.
+
+\begin{lstlisting}
+export ECHO=149.165.150.76
+export FS_USER=<put your futersystem here>
+\end{lstlisting}
+
+
+with the same username and key:
+
+\begin{lstlisting}
+ssh $FS_USER@$ECHO
+\end{lstlisting}
+
+However it is much more convenient to 
+
+\begin{NOTE}
+If you have access to india but not the docker swarm
 system, your project may not have been authorized to access the docker
 swarm cluster. Send a ticket to FutureSystems ticket system to request
-this.}
+this.
+\end{NOTE}
 
 Once logged in to the docker swarm head node, try to run:
 
-\begin{verbatim}
+\begin{lstlisting}
 docker run hello-world
-\end{verbatim}
+\end{lstlisting}
 
-to verify `docker run' works.
+to verify \verb|docker run| works.
 
-\section{Creating a service and deploy to the swarm
-cluster}\label{creating-a-service-and-deploy-to-the-swarm-cluster}
+\section{Creating a service and deploy to the swarm cluster}
 
-While `docker run' can start a container and you may even attach to its
+While \verb|docker run| can start a container and you may even attach to its
 console, the recommended way to use a docker swarm cluster is to create
 a service and have it run on the swarm cluster. The service will be
 scheduled to one or many number of the nodes of the swarm cluster, based
-on the configuration. It's also easy to scale up the service when more
+on the configuration. It is also easy to scale up the service when more
 swarm nodes are available. Docker swarm really makes it easier for
 service/application developers to focus on the functionality development
 but not worrying about how and where to bind the service to some
 resources/server. The deployment, access, and scaling up/down when
 necessary, are all managed transparently. Thus achieving the new
-paradigm of `serverless computing'.
+paradigm of \textit{serverless computing}.
 
 As an example, the following command creates a service and deploy it to
 the swarm cluster:
@@ -60,11 +95,12 @@ jupyter/datascience-notebook start-notebook.sh
 
 The NOTEBOOK\_PASS\_HASH can be generated in python:
 
-\begin{verbatim}
+\begin{lstlisting}
 >>> import IPython
 >>> IPython.lib.passwd("YOUR_SELECTED_PASSWROD")
 'sha1:52679cadb4c9:6762e266af44f86f3d170ca1......'
-\end{verbatim}
+\end{lstlisting}
+%$
 
 So pass through the string starting with 'sha1:......'.
 
@@ -76,8 +112,9 @@ service could be accessed from the Internet. In this example, you can
 then visit the URL:
 
 \begin{quote}
-\url{http://149.165.150.76:9001}
+\url{http://$ECHO:9001}
 \end{quote}
+%$
 
 to access the Jupyter notebook. Using the specified password when you
 create the service to login.
@@ -95,38 +132,38 @@ the time when the service was created.
 Some useful related commands:
 
 
-\begin{verbatim}
+\begin{lstlisting}
 docker service ls
-\end{verbatim}
+\end{lstlisting}
 
 lists the currently running services.
 
-\begin{verbatim}
+\begin{lstlisting}
 docker service ps notebook_test
-\end{verbatim}
+\end{lstlisting}
 
 lists the detailed info of the container where the service is running.
 
-\begin{verbatim}
+\begin{lstlisting}
 docker node ps NODE
-\end{verbatim}
+\end{lstlisting}
 
 lists all the running containers of a node.
 
-\begin{verbatim}
+\begin{lstlisting}
 docker node ls
-\end{verbatim}
+\end{lstlisting}
 
 lists all the nodes in the swarm cluster.
 
 To stop the service and the container:
 
-\begin{verbatim}
+\begin{lstlisting}
 docker service rm noteboot_test
-\end{verbatim}
+\end{lstlisting}
 
 
-\subsection{Create your own service}\label{create-your-own-service}
+\subsection{Create your own service}
 
 You can create your own service and run it. To do so, start from a base
 image, e.g., a ubuntu image from the docker cloud. Then you could:
@@ -158,10 +195,23 @@ be published. Alternatively you could publish the image internally to
 the swarm cluster.
 
 \paragraph{Publish an image privately within the swarm cluster}
-\label{publish-an-image-privately-within-the-swarm-cluster}
 
 \TODO{Fugang: create image for distribution}
 
 Once the image is published and available to the swarm cluster, you
 could start a new service from the image similar to the Jupyter Notebook
 example.
+
+\subsection{Exercises}
+
+\begin{exercise}
+
+Obtain an account on future systems.
+
+\end{exercise}
+
+\begin{exercise}
+
+Create a REST service with swagger codegen and run it on the echo cloud.
+
+\end{exercise}

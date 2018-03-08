@@ -1,18 +1,21 @@
-%---------------------------------------------------------------
+% chktex-file 1
+% chktex-file 8
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	PART
-%---------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \part{Preface}
 
-
-
-%---------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	CHAPTER
-%---------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapterimage{water.png} % Chapter heading image
 
 \chapter{Introduction}\label{S:p-intro}
+
+\FILENAME
 
 This document is the first one in a series of documents that are
 providing a comprehensive overview of Clouds, Big Data, and their
@@ -130,7 +133,7 @@ The bibtex entry for this document is
   built around Software Defined Systems on Clouds and Clusters. The
   analytics focuses on scalable parallelism.
 
-\item [Dr. Judy Qiu] is an Associate Professor in the School of
+\item [Judy Qiu] is an Associate Professor in the School of
   Informatics and Computing at Indiana University. Her research
   interests focus on data-intensive computing at the intersection of
   cloud and multicore technologies, with an emphasis on life science
@@ -173,14 +176,14 @@ this section
 
 \slides{Cloud}{Page 7}{Student Work 1}{https://drive.google.com/open?id=0B88HKpainTSfQU1uQmxZWHdWQ1k}
 
-\slides{Cloud}{Page 7}{Student Work 1 - pptx}{https://drive.google.com/open?id=0B88HKpainTSfb1ZhWG4zTEg0SVk}
+\slides{Cloud}{Page 7}{Student Work 1 (pptx)}{https://drive.google.com/open?id=0B88HKpainTSfb1ZhWG4zTEg0SVk}
 
 
 \video{Cloud}{10:03}{Student Work 2}{https://www.youtube.com/watch?v=DqaQ0kemmaw}
 
 \slides{Cloud}{Page 12}{Student Work 2}{https://drive.google.com/open?id=0B88HKpainTSfQU1uQmxZWHdWQ1k}
 
-\slides{Cloud}{Page 12}{Student Work 2 - pptx}{https://drive.google.com/open?id=0B88HKpainTSfb1ZhWG4zTEg0SVk}
+\slides{Cloud}{Page 12}{Student Work 2 (pptx)}{https://drive.google.com/open?id=0B88HKpainTSfb1ZhWG4zTEg0SVk}
 
 \section{Contributing}
 \index{Contributing}
@@ -283,9 +286,9 @@ vibhatha, vkodre, vlabeyko, xl41, yatinsharma7
 
 \subsubsection{Chameleon Cloud}
 
-\textit{Contributed by the Chamelon Team and Gregor von Laszewski}
+\textit{Contributed by the Chameleon Team and Gregor von Laszewski}
 
-Chapter~\ref{C:chameleon} focussing on Chameleon Cloud was coppied
+Chapter~\ref{C:chameleon} focussing on Chameleon Cloud was copied
 with permission from the chameleoncloud.org website on Jan 1st, 2018 and
 represents the contribution of the Chameleon project team, developed
 under the NSF grant 1743358, Collaborative Research: Chameleon: A
@@ -300,7 +303,7 @@ targeted for Indiana University.
 
 Chapter~\ref{c:mqtt} was contributed by Arnav and Gregor von
 Laszewski. The original version was written as part of i523 in Fall
-2017, but was signifcantly modified in Spring 2018.
+2017, but was significantly modified in Spring 2018.
 
 \section{Conventions}
 \index{Convention}
@@ -336,6 +339,40 @@ color of the links is blue.
 \item[Embedded URL:] This is an example for an embedded URL that
   points to the \href{https://github.com/cloudmesh/book/}{source on github}
 \end{description}
+
+\subsection{Variables}
+\index{Variables}
+\index{Variables!Shell}
+\index{Convention!Variables}
+\index{Shell!Variables}
+
+
+In some cases we need to communicate in programs and scripts the use of usernames 
+or IP addresses for compute resources. These are indicated in brackets such as
+
+\begin{lstlisting}
+<use your username>
+<use your ip address>
+\end{lstlisting}
+
+In these cases you need to replace the text including the brackets 
+with the desired information. In case they appear in shell scripts 
+you could also set them in the shell with 
+
+\begin{lstlisting}
+export USERNAME=<use your username>
+export IP=<use your ip address>
+\end{lstlisting}
+
+Make sure that you do not overwrite other environment variables, 
+so its a good practice to check if they are not already set while using 
+
+\begin{lstlisting}
+echo $USERNAME
+echo $IP
+\end{lstlisting}
+
+beforehand.
 
 \subsection{Boxes}
 
@@ -386,7 +423,28 @@ consequence that if a new version is available that you must double
 check the rest of the content in order not to overlook updates that
 have been provided by the developers.
 
+\subsection{Github and Travis and Pull Requests}
 
+The book is managed in github at the following location
+
+\url{https://github.com/cloudmesh/book/}
+
+All checkins are verified by travis
+
+\url{https://travis-ci.org/cloudmesh/book}
+
+YOu can improve any thing in the book by creating {\bf small} pull
+requests. Do not spend time to do large pull requests, limit them to a
+single file or in some cases to a paragraph. Small pull requests are
+much easier to review and integrate.
+
+\subsection{Github Issues}
+
+In case you do not want o create your own pull request, but like to
+report an isse, please use not only the section number to report the
+issue, but include the URL of the file to be changed which is provided
+in the bottom of the PDF version, describe how it is now, and how it
+should be changed.
 
 \section{Exercises}
 \bigskip

@@ -6,7 +6,7 @@ services:
 language: python
 
 before_install:
-- docker pull laszewski/cloudmesh-tex:0.0.1
+- docker pull laszewski/cloudmesh-tex:0.0.1 | cat
 
 script:
   - docker run laszewski/cloudmesh-tex:0.0.1 /bin/sh -c "cd /book; git pull; make clean; make once"
