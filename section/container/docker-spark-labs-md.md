@@ -180,6 +180,10 @@ in form of an array and we train the kmeans algorithm.
 ![Train KMeans](images/docker-spark-tut-2.png)
 
 In the final stage we put sample values and check the 
-predictions on the cluster.
+predictions on the cluster. In addition to that feed the data
+using SparseVector format and we add the kmeans initialization 
+mode, the error margin and the parallelization. We put the 
+step size as 5 for this example. In the previous one we didn't 
+specify any parameters. 
 
 ![Predict KMeans Clusters](images/docker-spark-tut-3.png)
