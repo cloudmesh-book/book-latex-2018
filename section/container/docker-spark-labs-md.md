@@ -78,14 +78,37 @@ started, copy and paste the following code in console line by line.
     counts.map(lambda x:x[1]).sum()
 
 
+## Docker Spark Machine Learning Examples 
+
 ### K-Means Example 
 
 First we need to pull the image from the Docker Hub :
 
     docker pull sequenceiq/spark-native-yarn
 
-It will take sometime to download the image. 
+It will take sometime to download the image. Now we have to run docker spark image interactively.
+
+	docker run -i -t -h sandbox sequenceiq/spark-native-yarn /etc/bootstrap.sh -bash
+	
+This will take you to the interactive mode. 
+
+Let's run a sample KMeans example. This is already built with Spark. 
+
+Here we specify the data data set from a local folder inside the image
+and we run the sample class KMeans in the sample package. The sample
+data set used is inside the sample-data folder. Spark has it's own
+format for machine learning datasets. Here the kmeans_data.txt file
+contains the KMeans dataset.
+
+	./bin/spark-submit --class sample.KMeans --master execution-context:org.apache.spark.tez.TezJobExecutionContext --conf update-classpath=true ./lib/spark-native-yarn-samples-1.0.jar /sample-data/kmeans_data.txt
 
 
-    
+If you run this successfully, you can get an output as shown here. 
 
+	Finished iteration (delta = 0.0)
+	Final centers:
+	DenseVector(0.15000000000000002, 0.15000000000000002, 0.15000000000000002)
+	DenseVector(9.2, 9.2, 9.2)
+	DenseVector(0.0, 0.0, 0.0)
+	DenseVector(9.05, 9.05, 9.05)
+	
