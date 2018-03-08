@@ -76,3 +76,16 @@ started, copy and paste the following code in console line by line.
     words = textFile.flatMap(lambda line:line.split())
     counts = words.map(lambda word:(word, 1)).reduceByKey(lambda x,y: x+y)
     counts.map(lambda x:x[1]).sum()
+
+
+### K-Means Example 
+
+First we need to pull the image from the Docker Hub :
+
+    docker pull sequenceiq/spark-native-yarn
+
+It will take sometime to download the image. 
+
+
+    
+
