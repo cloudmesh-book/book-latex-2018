@@ -77,6 +77,7 @@ started, copy and paste the following code in console line by line.
     counts = words.map(lambda word:(word, 1)).reduceByKey(lambda x,y: x+y)
     counts.map(lambda x:x[1]).sum()
 
+# Docker Spark Labs (5.35 PM EST, 2018/03/08)
 
 ## Docker Spark Examples 
 
