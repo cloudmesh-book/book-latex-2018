@@ -1,3 +1,8 @@
+% chktex-file 1
+% chktex-file 8
+% chktex-file 11
+% chktex-file 32
+
 \chapter{Running Docker on FutureSystems}\label{S:docker-fg}
 \index{Docker!FUturesystems}
 \index{Futuresystems!Docker}
@@ -44,9 +49,9 @@ export FS_USER=<put your futersystem here>
 
 with the same username and key:
 
-\begin{verbatim}
+\begin{lstlisting}
 ssh $FS_USER@$ECHO
-\end{verbatim}
+\end{lstlisting}
 
 However it is much more convenient to 
 
@@ -59,26 +64,26 @@ this.
 
 Once logged in to the docker swarm head node, try to run:
 
-\begin{verbatim}
+\begin{lstlisting}
 docker run hello-world
-\end{verbatim}
+\end{lstlisting}
 
-to verify `docker run' works.
+to verify \verb|docker run| works.
 
 \section{Creating a service and deploy to the swarm
 cluster}\label{creating-a-service-and-deploy-to-the-swarm-cluster}
 
-While `docker run' can start a container and you may even attach to its
+While \verb|docker run| can start a container and you may even attach to its
 console, the recommended way to use a docker swarm cluster is to create
 a service and have it run on the swarm cluster. The service will be
 scheduled to one or many number of the nodes of the swarm cluster, based
-on the configuration. It's also easy to scale up the service when more
+on the configuration. It is also easy to scale up the service when more
 swarm nodes are available. Docker swarm really makes it easier for
 service/application developers to focus on the functionality development
 but not worrying about how and where to bind the service to some
 resources/server. The deployment, access, and scaling up/down when
 necessary, are all managed transparently. Thus achieving the new
-paradigm of `serverless computing'.
+paradigm of \textit{serverless computing}.
 
 As an example, the following command creates a service and deploy it to
 the swarm cluster:
@@ -91,11 +96,11 @@ jupyter/datascience-notebook start-notebook.sh
 
 The NOTEBOOK\_PASS\_HASH can be generated in python:
 
-\begin{verbatim}
+\begin{lstlisting}
 >>> import IPython
 >>> IPython.lib.passwd("YOUR_SELECTED_PASSWROD")
 'sha1:52679cadb4c9:6762e266af44f86f3d170ca1......'
-\end{verbatim}
+\end{lstlisting}
 %$
 
 So pass through the string starting with 'sha1:......'.
@@ -128,35 +133,35 @@ the time when the service was created.
 Some useful related commands:
 
 
-\begin{verbatim}
+\begin{lstlisting}
 docker service ls
-\end{verbatim}
+\end{lstlisting}
 
 lists the currently running services.
 
-\begin{verbatim}
+\begin{lstlisting}
 docker service ps notebook_test
-\end{verbatim}
+\end{lstlisting}
 
 lists the detailed info of the container where the service is running.
 
-\begin{verbatim}
+\begin{lstlisting}
 docker node ps NODE
-\end{verbatim}
+\end{lstlisting}
 
 lists all the running containers of a node.
 
-\begin{verbatim}
+\begin{lstlisting}
 docker node ls
-\end{verbatim}
+\end{lstlisting}
 
 lists all the nodes in the swarm cluster.
 
 To stop the service and the container:
 
-\begin{verbatim}
+\begin{lstlisting}
 docker service rm noteboot_test
-\end{verbatim}
+\end{lstlisting}
 
 
 \subsection{Create your own service}\label{create-your-own-service}
