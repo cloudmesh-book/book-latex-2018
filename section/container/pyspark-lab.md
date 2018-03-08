@@ -1,15 +1,11 @@
-
-
 ```python
 import os
 os.getcwd()
 # owner of the pyspark notebook created the working directory as follows. 
 ```
+OUTPUT:
 
-
-
-
-    '/home/jovyan/work'
+	'/home/jovyan/work'
 
 
 
@@ -28,8 +24,7 @@ rdd.takeSample(False, 5)
 # run this multiple times and you will get different values as the output
 ```
 
-
-
+OUTPUT:
 
     [90, 783, 252, 162, 48]
 
@@ -46,7 +41,7 @@ from pyspark.mllib.linalg import SparseVector
 sc.version
 ```
 
-
+OUTPUT:
 
 
     '2.2.0'
@@ -70,20 +65,15 @@ model = KMeans.train(
 model.predict(array([0.0, 0.0])) == model.predict(array([1.0, 1.0]))
 ```
 
-
-
-
+OUTPUT:
     True
-
-
 
 
 ```python
 model.predict(array([8.0, 9.0]))
 ```
 
-
-
+OUTPUT:
 
     1
 
@@ -94,8 +84,7 @@ model.predict(array([8.0, 9.0]))
 model.predict(array([8.0, 9.0])) == model.predict(array([9.0, 8.0]))
 ```
 
-
-
+OUTPUT:
 
     True
 
@@ -106,8 +95,7 @@ model.predict(array([8.0, 9.0])) == model.predict(array([9.0, 8.0]))
 model.k
 ```
 
-
-
+OUTPUT:
 
     2
 
@@ -118,12 +106,9 @@ model.k
 model.computeCost(sc.parallelize(data))
 ```
 
-
-
+OUTPUT:
 
     2.0000000000000004
-
-
 
 
 ```python
@@ -152,32 +137,24 @@ model.predict(array([0., 1., 0.]))
 
 ```
 
-
-
+OUTPUT:
 
     0
-
-
-
 
 ```python
 model.predict(array([0., 0., 1.])) 
 ```
 
-
-
+OUTPUT:
 
     1
-
-
 
 
 ```python
 model.predict(sparse_data[0]) 
 ```
 
-
-
+OUTPUT:
 
     0
 
@@ -188,9 +165,8 @@ model.predict(sparse_data[0])
 model.predict(sparse_data[2]) 
 ```
 
-
-
-
-    1
+OUTPUT:
+	
+	1
 
 
