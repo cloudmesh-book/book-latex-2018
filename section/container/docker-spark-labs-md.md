@@ -198,3 +198,16 @@ to one cluster or not.
 ![Predict KMeans Clusters-2](images/docker-spark-tut-2.png)
 
 ![Predict KMeans Clusters-3](images/docker-spark-tut-3.png)
+
+
+### Stop Docker Container
+
+	docker stop spark
+	
+### Start Docker Container Again
+
+	docker start spark
+	
+### Remove Docker Container
+
+	docker rm spark
