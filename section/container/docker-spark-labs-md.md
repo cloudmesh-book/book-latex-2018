@@ -152,7 +152,17 @@ You will see the following output in the browser, (Use Google Chrome)
 ![Jupyter Notebook in Browswer](images/docker-spark-jup-1.png)
 
 First navigate to the work folder. Let us create a new python file
-here.
+here. Click python3 in the new menu. 
 
 ![Create a new python file](images/docker-spark-jup-2.png)
 
+Now add the following content in the new file. In Jupyter notebook, 
+you can enter a python command or python code and press
+
+	SHIFT + ENTER
+
+This will run the code interactively. 
+
+Now let's create the following content. 
+
+![Create a new python file](images/docker-spark-jup-3.png)
