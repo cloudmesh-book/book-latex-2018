@@ -337,6 +337,35 @@ color of the links is blue.
   points to the \href{https://github.com/cloudmesh/book/}{source on github}
 \end{description}
 
+\subsections{Variables}
+
+In some cases we need to communicate in programs and scripts the use of usernames 
+or IP addresses for compute resources. These are indicated in brackets such as
+
+\begin{lstlisting}
+<use your usereranme>
+<use your ip address>
+\end{lstlisting}
+
+In these cases you need to replace the text including the brackets 
+with the desired information. In case they appear in shell scripts 
+you could also set them in the shell with 
+
+\begin{lstlisting}
+export USERNAME=<use your usereranme>
+export IP=<use your ip address>
+\end{lstlisting}
+
+Make sure that you do not overwrite other environment variables, 
+so its a good practice to check if they are not already set while using 
+
+\begin{lstlisting}
+echo $USERNAME
+echo $IP
+\end{lstlisting}
+
+beforehand.
+
 \subsection{Boxes}
 
 \begin{NOTE}
