@@ -7,7 +7,7 @@ import os
 files = Path('section').glob('**/*.md')
 
 for f in files:
-    data = subprocess.check_output(["python3", "bin/md-to-tex.py",f]).decode("utf-8")
+    data = subprocess.check_output(["python3", "bin/md-to-tex.py",str(f)]).decode("utf-8")
 
     tex = str(f)
     tex = tex.replace(".md", ".tex")
