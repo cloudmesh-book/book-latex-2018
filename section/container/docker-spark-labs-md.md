@@ -177,7 +177,7 @@ import the necessary files.
 Next stage we use sample data set by creating them 
 in form of an array and we train the kmeans algorithm. 
 
-![Train KMeans](images/docker-spark-tut-2.png)
+![Train KMeans](images/docker-spark-tut-4.png)
 
 In the final stage we put sample values and check the 
 predictions on the cluster. In addition to that feed the data
@@ -186,4 +186,14 @@ mode, the error margin and the parallelization. We put the
 step size as 5 for this example. In the previous one we didn't 
 specify any parameters. 
 
-![Predict KMeans Clusters](images/docker-spark-tut-3.png)
+The predict term predicts the cluster id which it belongs to. 
+
+![Predict KMeans Clusters-1](images/docker-spark-tut-5.png)
+
+
+Then in the following way you can check whether two data points belong
+to one cluster or not. 
+
+![Predict KMeans Clusters-2](images/docker-spark-tut-2.png)
+
+![Predict KMeans Clusters-3](images/docker-spark-tut-3.png)
