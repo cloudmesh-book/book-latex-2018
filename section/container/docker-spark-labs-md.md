@@ -78,7 +78,7 @@ started, copy and paste the following code in console line by line.
     counts.map(lambda x:x[1]).sum()
 
 
-## Docker Spark Machine Learning Examples 
+## Docker Spark Examples 
 
 ### K-Means Example 
 
@@ -112,3 +112,35 @@ If you run this successfully, you can get an output as shown here.
 	DenseVector(0.0, 0.0, 0.0)
 	DenseVector(9.05, 9.05, 9.05)
 	
+### Join Example
+
+Run the following command to do a sample join operation on a given
+dataset. Here we use two datasets, namely join1.txt and
+join2.txt. Then we perform the join operation that we discussed in the
+theory section.
+
+	./bin/spark-submit --class sample.Join --master execution-context:org.apache.spark.tez.TezJobExecutionContext --conf update-classpath=true ./lib/spark-native-yarn-samples-1.0.jar /sample-data/join1.txt /sample-data/join2.txt
+	
+### Word  Count
+
+In this example the wordcount.txt will used to do the word count using
+multiple reducers. Number 1 at the end of the command determines the
+number of reducers. As spark can run multiple reducers, we can specify
+the number as a parameter to the programme.
+
+	./bin/spark-submit --class sample.WordCount --master execution-context:org.apache.spark.tez.TezJobExecutionContext --conf update-classpath=true ./lib/spark-native-yarn-samples-1.0.jar /sample-data/wordcount.txt 1
+
+
+## Interactive Examples
+
+Here we need a new image to work on. Let's run the following
+command. This will pull the necessary repositories from docker hub, as
+we don't have most of the dependencies related to it. This can take a
+few minutes to download everything.
+
+	docker run -it-p 8888:8888 -v $PWD:/cloudmesh/spark --name spark jupyter/pyspark-notebook
+	
+Here you will get the following output in the terminal. 
+
+![Terminal Output](images/docker-spark-jupyter.png)
+
