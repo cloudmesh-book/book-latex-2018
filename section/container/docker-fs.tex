@@ -1,6 +1,6 @@
 \chapter{Running Docker on FutureSystems}\label{S:docker-fg}
 \index{Docker!FUturesystems}
-\index{Futuresystems!Docker)
+\index{Futuresystems!Docker}
 
 \FILENAME
 
@@ -16,9 +16,9 @@ FutureSystems. Currently we have deployed Docker swarm on Echo.
 
 \section{Getting Access}\label{getting-access}
 
-You will need an account on FutureSystems and be enrolled in an active project. 
-To verify, try to see if you
-can log into india.futuresystems.org. You need to be a member of a valid
+You will need an account on FutureSystems and be enrolled in an active
+project.  To verify, try to see if you can log into
+india.futuresystems.org. You need to be a member of a valid
 FutureSystems project, and had submitted an ssh public key via the
 FutureSystems portal.
 
@@ -29,8 +29,12 @@ For 2018 you need to be in the following project:
 
 \end{IU}
 
-If your access to the india host has been verified, try to login to the
-docker swarm head node. To conveniently do this let us define some Linux environment variables to simplify the access and the material presented here. YOu can place them even in your .bashrc or .bash_profile so the information gets populated whnever you start a new terminal.
+If your access to the india host has been verified, try to login to
+the docker swarm head node. To conveniently do this let us define some
+Linux environment variables to simplify the access and the material
+presented here. YOu can place them even in your .bashrc or
+.bash_profile so the information gets populated whnever you start a
+new terminal.
 
 \begin{lstlisting}
 export ECHO=149.165.150.76
@@ -92,6 +96,7 @@ The NOTEBOOK\_PASS\_HASH can be generated in python:
 >>> IPython.lib.passwd("YOUR_SELECTED_PASSWROD")
 'sha1:52679cadb4c9:6762e266af44f86f3d170ca1......'
 \end{verbatim}
+%$
 
 So pass through the string starting with 'sha1:......'.
 
@@ -105,6 +110,7 @@ then visit the URL:
 \begin{quote}
 \url{http://$ECHO:9001}
 \end{quote}
+%$
 
 to access the Jupyter notebook. Using the specified password when you
 create the service to login.
