@@ -166,3 +166,20 @@ This will run the code interactively.
 Now let's create the following content. 
 
 ![Create a new python file](images/docker-spark-jup-3.png)
+
+Now let us do the following. 
+
+In the following stage we configure spark context and 
+import the necessary files. 
+
+![Initial Spark Program](images/docker-spark-tut-1.png)
+
+Next stage we use sample data set by creating them 
+in form of an array and we train the kmeans algorithm. 
+
+![Train KMeans](images/docker-spark-tut-2.png)
+
+In the final stage we put sample values and check the 
+predictions on the cluster.
+
+![Predict KMeans Clusters](images/docker-spark-tut-3.png)
