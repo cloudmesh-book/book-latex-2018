@@ -165,7 +165,7 @@ clean:
 view:
 	open dest/$(FILE).pdf
 
-publish: google
+publish: 
 	echo pdf document copied to google
 #	cp dest/$(FILE).pdf .
 #	cp $(FILE).pdf ~/github/laszewsk/papers/
@@ -173,6 +173,7 @@ publish: google
 #	cp $(FILE).pdf ~/github/laszewsk/laszewski.github.io/papers/$(FILE).pdf
 #	cd ~/github/laszewsk/laszewski.github.io/papers; git add $(FILE).pdf; git commit -m "update $(FILE)"; git push
 	make -f Makefile.publish
+	make -f Makefile google
 
 html:
 	mkdir -p ~/pdf
