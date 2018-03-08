@@ -77,6 +77,21 @@ started, copy and paste the following code in console line by line.
     counts = words.map(lambda word:(word, 1)).reduceByKey(lambda x,y: x+y)
     counts.map(lambda x:x[1]).sum()
 
+#### etc/hosts 
+The file has the following content with 16 words.
+
+    127.0.0.1	localhost
+    ::1	 localhost ip6-localhost ip6-loopback
+    fe00::0 ip6-localnet
+    ff00::0 ip6-mcastprefix
+    ff02::1 ip6-allnodes
+    ff02::2 ip6-allrouters
+    172.17.0.2	sandbox
+    
+    
+ 
+    
+
 # Docker Spark Labs (5.35 PM EST, 2018/03/08)
 
 ## Docker Spark Examples 
