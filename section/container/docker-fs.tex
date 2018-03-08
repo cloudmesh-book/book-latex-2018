@@ -1,30 +1,57 @@
 \chapter{Running Docker on FutureSystems}\label{S:docker-fg}
+\index{Docker!FUturesystems}
+\index{Futuresystems!Docker)
 
 \FILENAME
 
 \section{Overview}\label{overview}
+
+\begin{IU}
+
+This section is for IU students only that take classes with us.
+\end{IU}
 
 This documentation introduces how to run Docker container on
 FutureSystems. Currently we have deployed Docker swarm on Echo.
 
 \section{Getting Access}\label{getting-access}
 
-You will need an account on FutureSystems. To verify, try to see if you
+You will need an account on FutureSystems and be enrolled in an active project. 
+To verify, try to see if you
 can log into india.futuresystems.org. You need to be a member of a valid
 FutureSystems project, and had submitted an ssh public key via the
 FutureSystems portal.
 
+\begin{IU}
+For 2018 you need to be in the following project:
+
+\url{https://portal.futuresystems.org/project/537}
+
+\end{IU}
+
 If your access to the india host has been verified, try to login to the
-docker swarm head node with the same username and key:
+docker swarm head node. To conveniently do this let us define some Linux environment variables to simplify the access and the material presented here. YOu can place them even in your .bashrc or .bash_profile so the information gets populated whnever you start a new terminal.
+
+\begin{lstlisting}
+export ECHO=149.165.150.76
+export FS_USER=<put your futersystem here>
+\end{lstlisting}
+
+
+with the same username and key:
 
 \begin{verbatim}
-ssh FS_USER@149.165.150.76
+ssh $FS_USER@$ECHO
 \end{verbatim}
 
-\textbf{NOTE: If you have access to india but not the docker swarm
+However it is much more convenient to 
+
+\begin{NOTE}
+If you have access to india but not the docker swarm
 system, your project may not have been authorized to access the docker
 swarm cluster. Send a ticket to FutureSystems ticket system to request
-this.}
+this.
+\end{NOTE}
 
 Once logged in to the docker swarm head node, try to run:
 
@@ -76,7 +103,7 @@ service could be accessed from the Internet. In this example, you can
 then visit the URL:
 
 \begin{quote}
-\url{http://149.165.150.76:9001}
+\url{http://$ECHO:9001}
 \end{quote}
 
 to access the Jupyter notebook. Using the specified password when you
