@@ -6,9 +6,16 @@ import os
 
 files = Path('.').glob('**/images/')
 
+
 print("\\graphicspath{%")
+print("{.}%")
+
 for f in files:
-    print ("{",f,"}%", sep="")
+    if str(f) is "images":
+        print("{images/}%")
+    else:
+        d = str(f).replace("/images}","/}")
+        print ("{",d,"}%", sep="")
 
 print ("}")
 
