@@ -1,4 +1,4 @@
-# Amazon Web Services
+# Draft: Amazon Web Services
 \label{s:aws}
 
 ## AWS Products
@@ -63,7 +63,7 @@ AWS offers a number of compute related services.
 
 ### NoSQL with DynamoDB
 
-<https://aws.amazon.com/dynamodb/>
+* <https://aws.amazon.com/dynamodb/>
 
 ## App Integration
 
@@ -71,7 +71,19 @@ AWS offers a number of compute related services.
 
 ## Access from the Command Line
 
-<https://aws.amazon.com/cli/>
+	aws s3 <Command> [<Arg> ...]
+	aws ec2 <Command> [<Arg> ...]
+
+
+* <https://aws.amazon.com/cli/>
+* <https://docs.aws.amazon.com/cli/latest/reference/>
+
+* EC2: <https://docs.aws.amazon.com/cli/latest/reference/ec2/index.html>
+* S3: <https://docs.aws.amazon.com/cli/latest/reference/s3/index.html>
+
+### S3
+
+commands: cp, ls, mb, mv, presign, rb, rm, sync, website
 
 ## Access from python
 
