@@ -1,5 +1,6 @@
 # Draft: Amazon Web Services
 \label{s:aws}
+\index{AWS}
 
 ## AWS Products
 
