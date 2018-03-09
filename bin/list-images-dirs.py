@@ -13,7 +13,8 @@ notebooks = chain(Path('.').glob('notebooks/**/*.png'),
 
 s = set()
 for f in notebooks:
-    s.add(os.path.dirname(f))
+    s.add(os.path.dirname(f)+"/")
+    s.add(os.path.dirname(os.path.dirname(f))+"/")
 
 
 
@@ -29,7 +30,7 @@ for f in files:
         print ("{",d,"}%", sep="")
 
 for entry in s:
-    print ("{",entry,"}%", sep="")    
+    print ("{",entry,"}%", sep="")
 
         
 print ("}")
