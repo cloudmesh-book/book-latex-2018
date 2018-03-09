@@ -24,14 +24,14 @@ setup:
 graphicspath:
 	bin/list-images-dirs.py > graphicspath.tex
 
-once: setup clean dest markdown
+once: setup clean dest markdown graphicspath
 	latexmk -jobname=$(FILE) $(FLAGS) -view=pdf $(FILE)
 	# make html
 
 abc:
 	latexmk -jobname=b $(FLAGS) -pvc -view=pdf b
 
-travis: dest markdown
+travis: dest markdown graphicspath
 	latexmk -pdflatex='pdflatex -file-line-error -synctex=1' -jobname=$(FILE) $(FLAGS) -pdf $(FILE)
 
 issues: clean dest
@@ -48,7 +48,7 @@ markdown:
 test: dest markdown
 	pdflatex $(FILE)
 
-gg: setup dest markdown
+gg: setup dest markdown graphicspath
 	pdflatex -shell-escape $(FILE)
 
 check:
@@ -60,10 +60,10 @@ pdflatex:
 google:
 	gdrive update 1Mdd_TJcbXurJYRpG2gKCVqWmbhvED2Mp dest/vonLaszewski-bigdata.pdf
 
-single: dest
+single: dest graphicspath
 	latexmk -jobname=single $(FLAGS) -pvc -view=pdf single
 
-draft: clean dest
+draft: clean dest graphicspath
 	curl -s https://raw.githubusercontent.com/cloudmesh-community/hid-sp18-503/master/sd-card-ubuntu.md > tmp/sd-card-ubuntu.md
 	curl -s https://raw.githubusercontent.com/cloudmesh-community/hid-sp18-508/master/cluster/sd-card-osx.md > tmp/sd-card-osx.md
 	curl -s https://raw.githubusercontent.com/cloudmesh-community/hid-sp18-602/master/sd-card-windows.md > tmp/sd-card-windows.md
@@ -74,17 +74,17 @@ draft: clean dest
 	bin/md-tmp-to-tex.py
 	latexmk -jobname=draft $(FLAGS) -view=pdf draft
 
-dd: dest
+dd: dest graphicspath
 	cd tmp; python ../bin/md-all-to-tex.py
 	latexmk -jobname=draft $(FLAGS) -pvc -view=pdf draft
 
-c: dest
+c: dest graphicspath
 	latexmk -jobname=$(FILE) $(FLAGS) -pvc -view=pdf chameleon
 
-plain: dest
+plain: dest graphicspath
 	latexmk -jobname=$(FILE) $(FLAGS) -pvc -view=pdf plain
 
-cloud: dest markdown
+cloud: dest markdown graphicspath
 	$(LATEX) $(FLAGS) $(CLOUD)
 	makeindex $(CLOUD).idx -s format/StyleInd.ist
 	biber $(CLOUD)
@@ -95,7 +95,7 @@ skim: dest
 	echo $(DEFAULT)
 	open -a /Applications/skim.app $(DEFAULT).pdf
 
-all: dest makedown
+all: dest makedown graphicspath
 	$(LATEX) $(FLAGS) $(FILE)
 	makeindex $(FILE).idx -s format/StyleInd.ist
 	biber $(FILE)

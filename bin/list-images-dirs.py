@@ -3,8 +3,18 @@
 from pathlib import Path
 import subprocess
 import os
+from itertools import chain
 
 files = Path('.').glob('**/images/')
+notebooks = chain(Path('.').glob('notebooks/**/*.png'),
+                  Path('.').glob('notebooks/**/*.jpeg'),
+                  Path('.').glob('notebooks/**/*.jpg'))                      
+
+
+s = set()
+for f in notebooks:
+    s.add(os.path.dirname(f))
+
 
 
 print("\\graphicspath{%")
@@ -18,5 +28,9 @@ for f in files:
         d = d.replace("/images","/")
         print ("{",d,"}%", sep="")
 
+for entry in s:
+    print ("{",entry,"}%", sep="")    
+
+        
 print ("}")
 
