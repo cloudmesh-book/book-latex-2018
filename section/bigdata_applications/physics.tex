@@ -1,0 +1,332 @@
+
+
+\section{Physics Case Studies}\label{physics-case-study}
+
+\FILENAME
+
+This section starts by describing the LHC accelerator at CERN and
+evidence found by the experiments suggesting existence of a Higgs Boson.
+The huge number of authors on a paper, remarks on histograms and Feynman
+diagrams is followed by an accelerator picture gallery. The next unit is
+devoted to Python experiments looking at histograms of Higgs Boson
+production with various forms of shape of signal and various background
+and with various event totals. Then random variables and some simple
+principles of statistics are introduced with explanation as to why they
+are relevant to Physics counting experiments. The unit introduces
+Gaussian (normal) distributions and explains why they seen so often in
+natural phenomena. Several Python illustrations are given. Random
+Numbers with their Generators and Seeds lead to a discussion of Binomial
+and Poisson Distribution. Monte-Carlo and accept-reject methods. The
+Central Limit Theorem concludes discussion.
+
+\subsection{Looking for Higgs Particles, Bumps in Histograms,
+Experiments and Accelerators (Part
+1)}\label{looking-for-higgs-particles-bumps-in-histograms-experiments-and-accelerators-part-1}
+
+This unit is devoted to Python and Java experiments looking at
+histograms of Higgs Boson production with various forms of shape of
+signal and various background and with various event totals. The
+lectures use Python but use of Java is described.
+
+\slides{Physics}{Higgs}{20}{https://drive.google.com/open?id=0B8936_ytjfjmYXNoM3ZadGR6QlE}
+
+Files:
+HiggsClassI-Sloping.py \textless{}/files/python/physics/mr\_higgs/higgs\_classI\_sloping.py\textgreater{}\_
+
+\subsubsection{Looking for Higgs Particle and Counting
+Introduction}\label{looking-for-higgs-particle-and-counting-introduction}
+
+We return to particle case with slides used in introduction and stress
+that particles often manifested as bumps in histograms and those bumps
+need to be large enough to stand out from background in a statistically
+significant fashion.
+
+\video{Physics}{13:49}{Discovery of Higgs Particle}{https://www.youtube.com/watch?v=iaypHlgFyuU}
+
+We give a few details on one LHC experiment ATLAS. Experimental physics
+papers have a staggering number of authors and quite big budgets.
+Feynman diagrams describe processes in a fundamental fashion.
+
+\video{Physics}{7:38}{Looking for Higgs Particle and Counting Introduction II}{http://youtu.be/UAMzmOgjj7I}
+
+\subsubsection{Physics-Informatics Looking for Higgs Particle
+Experiments}\label{physics-informatics-looking-for-higgs-particle-experiments}
+
+We give a few details on one LHC experiment ATLAS. Experimental physics
+papers have a staggering number of authors and quite big budgets.
+Feynman diagrams describe processes in a fundamental fashion.
+
+\video{Physics}{9:29}{Looking for Higgs Particle Experiments}{http://youtu.be/BW12d780qT8}
+
+\subsubsection{Accelerator Picture Gallery of Big
+Science}\label{accelerator-picture-gallery-of-big-science}
+
+This lesson gives a small picture gallery of accelerators. Accelerators,
+detection chambers and magnets in tunnels and a large underground
+laboratory used fpr experiments where you need to be shielded from
+background like cosmic rays.
+
+\video{Physics}{11:21}{Accelerator Picture Gallery of Big Science}{http://youtu.be/WLJIxWWMYi8}
+
+\subsubsection{Resources}\label{resources}
+
+\begin{itemize}
+
+\item
+  \url{http://grids.ucs.indiana.edu/ptliupages/publications/Where\%20does\%20all\%20the\%20data\%20come\%20from\%20v7.pdf}
+\item
+  \url{http://www.sciencedirect.com/science/article/pii/S037026931200857X}
+\item
+  \url{http://www.nature.com/news/specials/lhc/interactive.html}
+\end{itemize}
+
+Looking for Higgs Particles: Python Event Counting for Signal and
+Background (Part 2)
+
+
+This unit is devoted to Python experiments looking at histograms of
+Higgs Boson production with various forms of shape of signal and various
+background and with various event totals.
+
+\slides{Physics}{Higgs II}{29}{https://drive.google.com/open?id=0B8936_ytjfjmUHRpV2g2V28walE}{PDF}
+
+Files:
+
+\begin{itemize}
+
+\item
+  HiggsClassI-Sloping.py \textless{}/files/python/physics/mr\_higgs/higgs\_classI\_sloping.py\textgreater{}
+\item
+  HiggsClassIII.py \textless{}/files/python/physics/number\_theory/higgs\_classIII.py\textgreater{}
+\item
+  HiggsClassIIUniform.py \textless{}/files/python/physics/mr\_higgs/higgs\_classII\_uniform.py\textgreater{}
+\end{itemize}
+
+\subsubsection{Physics Use Case II 1: Class
+Software}\label{physics-use-case-ii-1-class-software}
+
+We discuss how this unit uses Java and Python on both a backend server
+(FutureGrid) or a local client. WE point out useful book on Python for
+data analysis. This builds on technology training in Section 3.
+
+\video{Physics}{9:30}{Higgs Particle Events and Counting}{https://www.youtube.com/watch?v=L8j2qB4lSZ0}
+
+\begin{WARNING}
+This video contains Java information, but we are no longer using Java in
+this class.
+\end{WARNING}
+
+\subsubsection{Physics Use Case II 2: Event
+Counting}\label{physics-use-case-ii-2-event-counting}
+
+We define `'event counting'' data collection environments. We discuss
+the python and Java code to generate events according to a particular
+scenario (the important idea of Monte Carlo data). Here a sloping
+background plus either a Higgs particle generated similarly to LHC
+observation or one observed with better resolution (smaller measurement
+error).
+
+\video{Physics}{7:02}{Event Counting}{http://youtu.be/h8-szCeFugQ}
+
+\subsubsection{Physics Use Case II 3: With Python examples of Signal
+plus
+Background}\label{physics-use-case-ii-3-with-python-examples-of-signal-plus-background}
+
+This uses Monte Carlo data both to generate data like the experimental
+observations and explore effect of changing amount of data and changing
+measurement resolution for Higgs.
+
+\video{Physics}{7:33}{With Python examples of Signal plus Background}{http://youtu.be/bl2f0tAzLj4}
+
+\subsubsection{Physics Use Case II 4: Change shape of background \& num
+of Higgs
+Particles}\label{physics-use-case-ii-4-change-shape-of-background-num-of-higgs-particles}
+
+This lesson continues the examination of Monte Carlo data looking at
+effect of change in number of Higgs particles produced and in change in
+shape of background.
+
+\video{Physics}{7:01}{Change shape of background \& num of Higgs Particles}{http://youtu.be/bw3fd5cfQhk}
+
+\subsubsection{Resources}\label{resources-1}
+
+\begin{itemize}
+
+\item
+  Python for Data Analysis: Agile Tools for Real World Data By Wes
+  McKinney, Publisher: O'Reilly Media, Released: October 2012, Pages:
+  472.
+\item
+  \url{http://jwork.org/scavis/api/}
+\item
+  \url{https://en.wikipedia.org/wiki/DataMelt}
+\end{itemize}
+
+\subsection{Looking for Higgs Particles: Random Variables, Physics and
+Normal
+Distributions}\label{looking-for-higgs-particles-random-variables-physics-and-normal-distributions}
+
+We introduce random variables and some simple principles of statistics
+and explains why they are relevant to Physics counting experiments. The
+unit introduces Gaussian (normal) distributions and explains why they
+seen so often in natural phenomena. Several Python illustrations are
+given. Java is currently not available in this unit.
+
+\slides{Physics}{Higgs}{39}{https://drive.google.com/open?id=0B8936_ytjfjmNWhrS0xadk16SWM}
+
+HiggsClassIII.py \textless{}/files/python/physics/number\_theory/higgs\_classIII.py\textgreater{}
+
+\subsubsection{Statistics Overview and Fundamental Idea: Random
+Variables}\label{statistics-overview-and-fundamental-idea-random-variables}
+
+We go through the many different areas of statistics covered in the
+Physics unit. We define the statistics concept of a random variable.
+
+\video{Physics}{8:19}{Random variables and normal distributions}{https://www.youtube.com/watch?v=_sLGyt4qWWk}
+
+\subsubsection{Physics and Random
+Variables}\label{physics-and-random-variables}
+
+We describe the DIKW pipeline for the analysis of this type of physics
+experiment and go through details of analysis pipeline for the LHC ATLAS
+experiment. We give examples of event displays showing the final state
+particles seen in a few events. We illustrate how physicists decide
+whats going on with a plot of expected Higgs production experimental
+cross sections (probabilities) for signal and background.
+
+\video{Physics}{8:34}{Physics and Random Variables I}{http://youtu.be/Tn3GBxgplxg}
+
+\video{Physics}{5:50}{Physics and Random Variables II}{http://youtu.be/qWEjp0OtvdA}
+
+\subsubsection{Statistics of Events with Normal
+Distributions}\label{statistics-of-events-with-normal-distributions}
+
+We introduce Poisson and Binomial distributions and define independent
+identically distributed (IID) random variables. We give the law of large
+numbers defining the errors in counting and leading to Gaussian
+distributions for many things. We demonstrate this in Python
+experiments.
+
+\video{Physics}{11:25}{Statistics of Events with Normal Distributions}{http://youtu.be/LMBtpWOOQLo}
+
+\subsubsection{Gaussian Distributions}\label{gaussian-distributions}
+
+We introduce the Gaussian distribution and give Python examples of the
+fluctuations in counting Gaussian distributions.
+
+\video{Physics}{9:08}{Gaussian Distributions}{http://youtu.be/LWIbPa-P5W0}
+
+\subsubsection{Using Statistics}\label{using-statistics}
+
+We discuss the significance of a standard deviation and role of biases
+and insufficient statistics with a Python example in getting incorrect
+answers.
+
+\video{Physics}{14:02}{Using Statistics}{http://youtu.be/n4jlUrGwgic}
+
+\subsubsection{Resources}\label{resources-2}
+
+\begin{itemize}
+
+\item
+  \url{http://indico.cern.ch/event/20453/session/6/contribution/15?materialId=slides}
+\item
+  \url{http://www.atlas.ch/photos/events.html}
+\item
+  \url{https://cms.cern/}
+\end{itemize}
+
+\subsection{Looking for Higgs Particles: Random Numbers, Distributions
+and Central Limit Theorem (Part
+3)}\label{looking-for-higgs-particles-random-numbers-distributions-and-central-limit-theorem-part-3}
+
+We discuss Random Numbers with their Generators and Seeds. It introduces
+Binomial and Poisson Distribution. Monte-Carlo and accept-reject methods
+are discussed. The Central Limit Theorem and Bayes law concludes
+discussion. Python and Java (for student - not reviewed in class)
+examples and Physics applications are given.
+
+\slides{Physics}{Higgs III}{44}{https://drive.google.com/open?id=0B8936_ytjfjmTUxkZXVRRmlBSUk}{PDF}
+
+Files:
+
+\TODO{HiggsClassIII.py: /files/python/physics/calculated\_dice\_roll/higgs\_classIV\_seeds.py}
+
+\subsubsection{Generators and Seeds}\label{generators-and-seeds}
+
+We define random numbers and describe how to generate them on the
+computer giving Python examples. We define the seed used to define to
+specify how to start generation.
+
+\video{Physics}{6:28}{Higgs Particle Counting Errors}{https://www.youtube.com/watch?v=de4AQ9AFt54}
+
+\video{Physics}{7:10}{Generators and Seeds II}{http://youtu.be/9QY5qkQj2Ag}
+
+\subsubsection{Binomial Distribution}\label{binomial-distribution}
+
+We define binomial distribution and give LHC data as an example of where
+this distribution valid.
+
+\video{Physics}{12:38}{Binomial Distribution: }{http://youtu.be/DPd-eVI_twQ}
+
+\subsubsection{Accept-Reject}\label{accept-reject}
+
+We introduce an advanced method \textbf{accept/reject} for generating
+random variables with arbitrary distributions.
+
+\video{Physics}{5:54}{Accept-Reject}{http://youtu.be/GfshkKMKCj8}
+
+\subsubsection{Monte Carlo Method}\label{monte-carlo-method}
+
+We define Monte Carlo method which usually uses accept/reject method in
+typical case for distribution.
+
+\video{Physics}{2:23}{Monte Carlo Method}{http://youtu.be/kIQ-BTyDfOQ}
+
+\subsubsection{Poisson Distribution}\label{poisson-distribution}
+
+We extend the Binomial to the Poisson distribution and give a set of
+amusing examples from Wikipedia.
+
+\video{Physics}{4:37}{Poisson Distribution}{http://youtu.be/WFvgsVo-k4s}
+
+\subsubsection{Central Limit Theorem}\label{central-limit-theorem}
+
+We introduce Central Limit Theorem and give examples from Wikipedia.
+
+\video{Physics}{4:47}{Central Limit Theorem}{http://youtu.be/ZO53iKlPn7c}
+
+\subsubsection{Interpretation of Probability: Bayes v.
+Frequency}\label{interpretation-of-probability-bayes-v.-frequency}
+
+This lesson describes difference between Bayes and frequency views of
+probability. Bayes's law of conditional probability is derived and
+applied to Higgs example to enable information about Higgs from multiple
+channels and multiple experiments to be accumulated.
+
+\video{Physics}{12:39}{Interpretation of Probability}{http://youtu.be/jzDkExAQI9M}
+
+\subsubsection{Resources}\label{resources-3}
+
+\TODO{integrate physics-references.bib}
+
+\subsection{SKA Square Kilometer Array}
+
+
+Professor Diamond, accompanied by Dr. Rosie Bolton from the SKA
+Regional Centre Project gave a presentation at SC17 ``into the deepest
+reaches of the observable universe as they describe the SKA’s
+international partnership that will map and study the entire sky in
+greater detail than ever before.''
+
+\URL{http://sc17.supercomputing.org/presentation/?id=inspkr101&sess=sess263}
+
+A summary article about this effort is available at:
+
+\URL{https://www.hpcwire.com/2017/11/17/sc17-keynote-hpc-powers-ska-efforts-peer-deep-cosmos/}
+
+The video is hosted at 
+
+\URL{http://sc17.supercomputing.org/presentation/?id=inspkr101&sess=sess263}
+
+Start at about 1:03:00 (e.g. the one hour mark)
