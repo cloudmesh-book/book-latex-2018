@@ -21,8 +21,10 @@ g: dest markdown
 setup:
 	export max_print_line=1000
 
+graphicspath:
+	bin/list-images-dirs.py > graphicspath.tex
 
-once: clean dest markdown
+once: setup clean dest markdown
 	latexmk -jobname=$(FILE) $(FLAGS) -view=pdf $(FILE)
 	# make html
 

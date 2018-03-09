@@ -11,10 +11,11 @@ print("\\graphicspath{%")
 print("{.}%")
 
 for f in files:
-    if str(f) is "images":
+    d = str(f)
+    if d == "images":
         print("{images/}%")
     else:
-        d = str(f).replace("/images}","/}")
+        d = d.replace("/images","/")
         print ("{",d,"}%", sep="")
 
 print ("}")
