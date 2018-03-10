@@ -648,6 +648,9 @@ addtohook={%
 \newcommand{\slides}[4]{%
   \textit{ \hfill \href{#4}{#3 (#2)~\includegraphics[width=\baselineskip]{images/slide.png}}}\index{Slides!#1!#3 (#2)}
 }
+\newcommand{\sourcecode}[3]{%
+  \textit{ \hfill \href{https://github.com/cloudmesh/book/blob/master/#3}{#2~\includegraphics[width=\baselineskip]{images/code.png}}}\index{Code!#1!#2}
+}
 
 \DefineVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\footnotesize,xleftmargin=.5in}
 
