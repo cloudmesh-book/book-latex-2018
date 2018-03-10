@@ -4,12 +4,14 @@
 
 In this chapter we will be using some advanced Python features to
 enhance Cloudmesh that is supposed to easily manage multiple
-clouds. We will be explicitly using python 3 and do not worry about
-backwards compatibility.
+clouds. We will be explicitly using python 3 and do
+not worry about backwards compatibility.
 
-We will be developing as community such new features and integrate
-them at the end in an extensible package management system allowing to
-load in new features with pip.
+We will be developing it as community so that new features can be
+integrated and loaded on demand while adding an extensible package
+management system based on pythons shared namespace. To do so we will
+rely on \verb|cmd5| that includes a generate command to add new
+papackes on demand. We will not use all features of cmd5.
 
 We are trying to develop the following:
 
@@ -114,12 +116,12 @@ clouds:
 \end{verbatim}
 
 Important to note is that this file defines multiple clouds and uses
-TBD for password and username which you may want to change. However,
-we also would like to support a mode that when the password is defined
-to be TBD that it is asked from the terminal. This way we do not
-necessarily have to store the password here. In future we will enhance
-this file to be encrypted and decrypted with a password protected ssh
-key.
+the attribute value TBD for password and username which you may want
+to change. However, we also would like to support a mode that when the
+password is defined to be TBD that it is asked from the terminal. This
+way we do not necessarily have to store the password here. In future
+we will enhance this file to be encrypted and decrypted with a
+password protected ssh key.
 
 The file is ayaml file as the typical configuration in python is not
 suitable to easily store hierarchical data. YAML is also more readable
@@ -238,7 +240,7 @@ examples.
 When defining the following cloud context 
 
 \begin{lstlisting}{python}
-class Cloud:
+class Cloud (object):
     
     def __init__(self, name):
         self.name = name
