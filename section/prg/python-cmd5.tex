@@ -9,9 +9,9 @@ Python's CMD (\url{https://docs.python.org/2/library/cmd.html}) is a
 very useful package to create command line shells. However it does not
 allow the dynamic integration of newly defined commands. Furthermore,
 additions to CMD need to be done within the same source tree. To
-simplify developping commands by a number of people and to have a
+simplify developing commands by a number of people and to have a
 dynamic plugin mechnism, we developed cmd5. It is a rewrite on our
-ealier effords in cloudmesh client and cmd3.
+earlier efforts in cloudmesh client and cmd3.
 
 \subsection{Resources}
 
@@ -31,20 +31,20 @@ This is in detail documented in the Section section\_pyenv.
 
 \subsection{Installation from source}\label{installation-from-source}
 
-Cmd5 can easily deployed with pip:
+Cmd5 can be easily deployed with pip:
 
 \begin{verbatim}
 pip install cloudmesh.cmd5
 \end{verbatim}
 
-In case you like to generate easily new cmd 5 commands we also recommend
+In case you would like to generate easily new cmd5 commands we also recommend
 you install the cloudmesh sys command with:
 
 \begin{verbatim}
 pip install cloudmesh.sys
 \end{verbatim}
 
-In case you like to work with the source please cone the following
+In case you like to work with the source please clone the following
 directories from github:
 
 \begin{verbatim}
@@ -103,7 +103,7 @@ To see the list of commands you can say:
 cms> help
 \end{verbatim}
 
-To see the manula page for a specific command, please use:
+To see the manual page for a specific command, please use:
 
 \begin{verbatim}
 help COMMANDNAME
@@ -121,7 +121,7 @@ command that you like to create. This can easily be done while using the
 cms sys command generate mycommand
 \end{verbatim}
 
-It will download a template form cloudmesh called cloudmesh.bar and
+It will download a template from cloudmesh called cloudmesh.bar and
 generate a new directory cloudmesh.mycommand with all the needed files
 to create your own command and register it dynamically with cloudmesh.
 All you have to do is to cd into the directory and install the code:
@@ -178,7 +178,7 @@ class BarCommand(PluginCommand):
 \end{verbatim}
 
 An important difference to other CMD solutions is that our commands can
-leverage (besides the standrad definition), docopts as a way to define
+leverage (besides the standard definition), docopts as a way to define
 the manual page. This allows us to use arguments as dict and use simple
 if conditions to interpret the command. Using docopts has the advantage
 that contributors are forced to think about the command and its options
@@ -186,7 +186,7 @@ and document them from the start. Previously we did not use but argparse
 and click. However we noticed that for our contributors both systems
 lead to commands that were either not properly documented or the
 developers delivered ambiguous commands that resulted in confusion and
-wrong ussage by subsequent users. Hence, we do recommend that you use
+wrong usage by subsequent users. Hence, we do recommend that you use
 docopts for documenting cmd5 commands. The transformation is enabled by
 the @command decorator that generates a manual page and creates a proper
 help message for the shell automatically. Thus there is no need to
