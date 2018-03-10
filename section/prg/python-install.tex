@@ -20,7 +20,7 @@ the system installed Python.
 installs}\label{managing-custom-python-installs}
 
 Often you have your own computer and you do not like to change its
-environment to keep it in pristine condition. Python comes with mnay
+environment to keep it in pristine condition. Python comes with many
 libraries that could for example conflict with libraries that you have
 installed. To avoid this it is bets to work in an isolated python we can
 use tools such as virtualenv, pyenv or pyvenv for 3.6.4\footnote{check
@@ -28,7 +28,8 @@ use tools such as virtualenv, pyenv or pyvenv for 3.6.4\footnote{check
 depends on you, but we highly recommend pyenv if you can.
 
 \subsubsection{Managing Multiple Python Versions with
-Pyenv}\label{S:managing-multiple-python-versions-with-pyenv}
+Pyenv}
+\label{S:managing-multiple-python-versions-with-pyenv}
 \index{pyenv}
 
 Python has several versions that are used by the community. This
@@ -67,17 +68,17 @@ OSX}\label{disabeling-wrong-python-installs-on-osx}
 
 While working with students we have seen at times that they take other
 classes either at universities or online that teach them how to program
-in python. Unfortuanatley, although they seem to do that they often
-ignore to teach you how to properly install python. I just reachentl had
+in python. Unfortunately, although they seem to do that they often
+ignore to teach you how to properly install python. I just recently had
 a students that had installed python 7 times on his OSX machine, while
-another student had 3 different instalations, all of which confliced
+another student had 3 different installations, all of which confliced
 with each other as they were not set up properly.
 
 We recommend that you inspect if you have a files such as
 \textasciitilde{}/.bashrc or \textasciitilde{}/.bashrc\_profile in your
-ehome directory and identify if it activates various versions of python
+home directory and identify if it activates various versions of python
 on your computer. If so you could try to deactivate them while
-outcommenting the various versions with the \# character at the
+out-commenting the various versions with the \# character at the
 beginning of the line, start a new terminal and see if the terminal
 shell still works. Than you can follow our instructions here while using
 an install on pyenv.
@@ -95,7 +96,7 @@ $ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
 $ echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
 \end{verbatim}
 
-\paragraph{Instalation of Homebrew}\label{instalation-of-homebrew}
+\paragraph{Installation of Homebrew}\label{instalation-of-homebrew}
 
 Before installing anything on your computer make sure you have enough
 space. Use in the terminal the command:
@@ -281,7 +282,7 @@ $ ENV2
 $ ENV3
 \end{verbatim}
 
-\subsection{Updateing Python Version List}
+\subsection{Updating Python Version List}
 
 Pyenv maintains locally a list of available python versions. To see
 the list use the command
@@ -290,7 +291,7 @@ the list use the command
 pyenv install -l
 \end{lstlisting}
 
-To obtain the newest list please use the cmmand
+To obtain the newest list please use the command
 
 \begin{lstlisting}
 cd ~/.pyenv/plugins/python-build/../.. && git pull
@@ -304,16 +305,14 @@ pyenv install -l
 
 You will see the updated list.
 
-\subsection{Instalation without
-pyenv}\label{instalation-without-pyenv-1}
+\subsection{Installation without pyenv}
 
 If you need to have more than one python version installed and do not
 want or can use pyenv, we recommend you download and install python
 2.7.13 and 3.6.4 from python.org
 (\url{https://www.python.org/downloads/})
 
-\subsubsection{Make sure pip is up to
-date}\label{make-sure-pip-is-up-to-date}
+\subsubsection{Make sure pip is up to date}
 
 As you will want to install other packages, make sure pip is up to date:
 
@@ -461,16 +460,17 @@ $ pip install cloudmesh.cmd5
 $ pip install cloudmesh.sys
 \end{verbatim}
 
-\paragraph{Exercise}\label{exercise}
+\paragraph{Exercise}
 
-\begin{description}
-\item[Epyenv.1:]
+\begin{exercise}
 Write installation instructions for an operating system of your choice
 and add to this documentation.
-\item[Epyenv.2:]
+\end{exercise}
+
+\begin{exercise}
 Replicate the steps above, so you can type in ENV2 and ENV3 in your
 terminals to switch between python 2 and 3.
-\end{description}
+\end{exercise}
 
 \subsubsection{virtualenv}\label{virtualenv}
 \index{virtualenv}

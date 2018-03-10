@@ -13,7 +13,7 @@ Data}\label{set-up-directories-and-get-test-data}
 
 Data.gov is a government portal for open data and the
 \href{https://catalog.data.gov/dataset?organization_type=City+Government\&organization=city-of-bloomington\&_organization_limit=0}{city
-of Bloomington, Indiana makes available a number of datasets there}.
+  of Bloomington, Indiana makes available a number of datasets there}.
 
 We will use traffic citations data for 2016.
 
@@ -69,7 +69,7 @@ $ python
 If the first \texttt{import} statement seems confusing, take a look at
 the Python tutorial \textless{}python\_intro\textgreater{}. The next
 three \texttt{import} statements load each of the modules we will use in
-this example. The final line uses Pandas' \texttt{read\_csv} function to
+this example. The final line uses Pandas' \verb|read_csv| function to
 load the data into a Pandas \texttt{DataFrame} data structure.
 
 \subsubsection{Working with DataFrames}\label{working-with-dataframes}
@@ -114,9 +114,9 @@ dtype: object
 As you can see from the \texttt{columns} field, when the CSV file was
 read, the header line was used to populate the name of the columns in
 the \texttt{DataFrame}. In addition, you will notice that
-\texttt{read\_csv} correctly inferred the data type of some columns like
+\verb|read_csv| correctly inferred the data type of some columns like
 \emph{Age}, but not of others like \emph{Date Issued} and \emph{Time
-Issued}. \texttt{read\_csv} is a very customizable function and in
+Issued}. \verb|read_csv| is a very customizable function and in
 general, you can correct issues like this using the \texttt{dtype} and
 \texttt{converters} parameters. In this specific case, it makes more
 sense to combine the \emph{Date Issued} and \emph{Time Issued} columns
@@ -316,7 +316,7 @@ Pandas Cheat Sheet:
 
   \URL{https://www.scipy.org/}
 
-According to the SciPy Web page, ``SciPy (pronounced ``Sigh Pie'') is a
+According to the Web page, SciPy (pronounced \textit{Sigh Pie}) is a
 Python-based ecosystem of open-source software for mathematics, science,
 and engineering. In particular, these are some of the core packages:
 
@@ -368,7 +368,7 @@ Here are some examples from a previous class:
 \URL{https://github.com/bigdata-i523/hid231/blob/master/experiment/learning-jupyter/learning_jupyter_notebook.ipynb}
 
 \begin{exercise}\label{E:ipynb-export}
-Take these examples and cretae sections in latex that can be added to
+Take these examples and create sections in latex that can be added to
 the book. Describe the process. 
 
 1. export the ipynb as rst
@@ -445,17 +445,17 @@ It also allows to present the data in a table.
 \section{Parsing Data}
 
 Being able to parse data is an important activity in the data analysis
-process. Not all data may be following aspecific format and the data
+process. Not all data may be following a specific format and the data
 may need to be extracted.
 
 
 \subsection{notebook.md Parser}
 
 We are using a notebook.md to communicate what students have done
-throughout the semester. We like to make a simble cmd5 command that
+throughout the semester. We like to make a simple cmd5 command that
 parses the notebook.md file and check it upon correctness.
 
-An example for a notebook.md file is lokated here 
+An example for a notebook.md file is located here 
 
 \URL{https://raw.githubusercontent.com/bigdata-i523/sample-hid000/master/notebook.md}
 
@@ -463,7 +463,7 @@ The following code may inspire you
 
 \URL{https://github.com/bigdata-i523/hid203/tree/master/experiment}
 
-We like to implement the follwoing functionality and use docopts to
+We like to implement the following functionality and use docopts to
 document the command.
 
 \begin{lstlisting}
@@ -490,7 +490,7 @@ cms class notebook [--git=GITREPONAME] --history
   \label{E:notebook-md.2}
   How can this command be generalized to provide not only information
   for a student but to provide information for the class. Example: can
-  we identify prefered days of when the notebooks are checked in. Can
+  we identify preferred days of when the notebooks are checked in. Can
   we identify a list of students that have not updated the notebok for
   a week?  Can we identify the list of student s that have updated the
   notebook for a week? 
@@ -502,10 +502,10 @@ cms class notebook [--git=GITREPONAME] --history
 The Latex source of this class contains a macro to include videos.
 
 
-Given a LateX file, can you create a table that includes the names of
+Given a \LateX file, can you create a table that includes the names of
 all videos in that file and sums up the total viewing time. Previously
 the document was stored in RST and the code from a previous student
-may inspire you. Can you reqrite it in for LaTeX? 
+may inspire you. Can you recreate it for LaTeX? 
 
 \URL{https://github.com/bigdata-i523/hid107/blob/master/cloudmesh/bar/command/mycommand.py}
 
@@ -540,15 +540,15 @@ modern processor architectures.
 
 Dask provides a \textit{dynamic task scheduling} which is optimized for
 computation. It is similar to other frameworks such as Airflow, Luigi,
-Celery, or Make. HOwever it is specializing in optimized interactive
+Celery, or Make. However it is specializing in optimized interactive
 computational workloads.
 
 Furthermore, Dask targets Big Data \textit{collections} such as parallel
-arrays, dataframes, and lists. Thes ecollections ar commonly found in
+arrays, dataframes, and lists. These collections ar commonly found in
 NumPy, Pandas, or Python iterators to larger-than-memory or
 distributed environments. While using the Dask implementation we can
 replace the original imports from the appropriate framework, replace
-them with Dask imports and implicity use parallel collections that
+them with Dask imports and implicitly use parallel collections that
 utilize internally the dynamic task schedulers.
 
 More information can be found at:
@@ -556,8 +556,8 @@ More information can be found at:
 \URL{https://dask.pydata.org}
 
 \begin{exercise}
-Conduct a preformance study that showcases the difference of doing
-parallel calculations in Dask, claculations in a framework such as
+Conduct a performance study that showcases the difference of doing
+parallel calculations in Dask, calculations in a framework such as
 SciPy, and regular unthreaded python code.
 \end{exercise}
 

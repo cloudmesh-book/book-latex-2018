@@ -10,7 +10,7 @@ We will be developing it as community so that new features can be
 integrated and loaded on demand while adding an extensible package
 management system based on pythons shared namespace. To do so we will
 rely on \verb|cmd5| that includes a generate command to add new
-papackes on demand. We will not use all features of cmd5.
+packages on demand. We will not use all features of cmd5.
 
 We are trying to develop the following:
 
@@ -50,7 +50,7 @@ we like to point out that the configuration file must be stored in a
 particular location relative to the home directory. We store the file
 in \verb|~/.cloudmesh/class.yaml|. Additionally we store our cloud
 passwords in this file in cleartext and thus we must make sure our
-machine is not compromized and that we properly protect the file. On a
+machine is not compromised and that we properly protect the file. On a
 unix system you do this with:
 
 \begin{verbatim}
@@ -122,7 +122,7 @@ way we do not necessarily have to store the password here. In future
 we will enhance this file to be encrypted and decrypted with a
 password protected ssh key.
 
-The file is ayaml file as the typical configuration in python is not
+The file is a yaml file as the typical configuration in python is not
 suitable to easily store hierarchical data. YAML is also more readable
 than json so it provides a really good way of defining the
 configuration data. Problematic with yaml readers however are that
@@ -157,7 +157,7 @@ be an issue in future. Also when considering services such as mongodb
 they have to be started and properly secured. THis naturally can be
 done with containers. We also do not want to use large frameworks such
 as django which come with build in object models as they are not
-lightwight. Hence, we start we just use a file based sql
+lightweight. Hence, we start we just use a file based sql
 database as provided with sqlite3.
 
 \subsection{sqlite3}
@@ -226,10 +226,10 @@ with open('/tmp/gregor.txt', 'wt') as f:
 \end{lstlisting}
 
 If we look at this example it is desirable to develop at least two
-context for multicloud envireonments. The first is to manage virtual
+context for multicloud environments. The first is to manage virtual
 machines on named clouds and issue action on it, such as \textit{start, stop,
   suspend, resume, delete}. In the other context we like to issue
-such asction on named virtual machines.
+such action on named virtual machines.
 
 To illustrate what we have in mind, please take a look at our initial
 examples.
@@ -264,7 +264,7 @@ with Cloud(cloud) as c:
 \end{lstlisting}
 
 It is obvious that through this abstraction we can formulate a
-tempalted bahavior such as starting a virtual machine and through the
+templated behavior such as starting a virtual machine and through the
 switch of a ingle variable (\verb|cloud|) issue the command on other
 clouds.
 

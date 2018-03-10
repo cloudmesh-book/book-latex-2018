@@ -119,7 +119,7 @@ https://libcloud.readthedocs.io/en/latest/compute/examples.html
 
 https://libcloud.readthedocs.io/en/latest/compute/api.html
 
-##LOad balancers
+##Load balancers
 
 * Amazon application load balancing
 * Amazon Elastic load balancer
