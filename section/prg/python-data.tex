@@ -37,16 +37,21 @@ flavor = pickle.load( open( "data.p", "rb" ) )
 
 \subsection{Text Files}
 
+To read text files into a vaiable called content  you can use 
+
 \begin{verbatim}
 content = open(“filename.txt”, “r”).read() 
 \end{verbatim}
 
+You can also use the following code while using the convenient
+\verb|with| statement
+
 \begin{verbatim}
 with open('filename.txt','r') as file:
-    output = file.read()
+    content = file.read()
 \end{verbatim}
 
-To split up the files into an array you can do
+To split up the lines of the file into an array you can do
 
 \begin{verbatim}
 with open('filename.txt','r') as file:
@@ -54,15 +59,25 @@ with open('filename.txt','r') as file:
 \end{verbatim}
 
 
-In case the file is too big you will want to read the file line by
-line:
-
+This cam aslo be done with the build in \verb|readlines| function
 \begin{verbatim}
 lines = open('filename.txt','r').readlines()
 \end{verbatim}
 
+In case the file is too big you will want to read the file line by
+line:
+
+\begin{verbatim}
+with open('filename.txt','r') as file:
+    line = file.readline()
+    print (line)
+\end{verbatim}
+
 
 \subsection{CSV Files}
+
+Often data is contained in comma separated values (CSV) within a
+file. To read such files you can use the csv package.
 
 \begin{verbatim}
 import csv
@@ -72,14 +87,22 @@ for row in content:
     print row
 \end{verbatim}
 
-using pandas
+Using pandas you can read them as follows.
 
 \begin{verbatim}
 import pandas as pd
 df = pd.read_csv("example.csv") 
 \end{verbatim}
 
+There are many other modules and libraries that include CSV read
+functions. IN case you need to split a single line by comma, you may
+also use the \verb|split| function. HOwever, remember it swill split
+at every comma, including those contained in quotes. SO this method
+although looking originally convenient has limitations.
+
 \subsection{Excel spread sheets}
+
+Pandas contains a method to read Excel files
 
 \begin{verbatim}
 import pandas as pd
@@ -90,11 +113,29 @@ df = data.parse('Sheet1')
 
 \subsection{YAML}
 
+YAML is a very improtant format as it allows you easily to structure
+data in hierarchical fileds It is frequently used to coordinate
+programs while using yaml as the specification for configuration fils,
+but also data files. To read in a yaml file the following code can be
+used
+
 \begin{verbatim}
 import yaml
 with open('data.yaml', 'r') as f:
     content = yaml.load(f)
 \end{verbatim}
+
+The nice part is that this code can also be used to verify if a file
+is valid yaml. To write data out we can use
+
+\begin{verbatim}
+with open('data.yml', 'w') as f:
+    yaml.dump(data, f, default_flow_style=False)
+\end{verbatim}
+
+The flow style set to false formats the data in a nice readable
+fashion with indentations.
+
 
 \subsection{JSON}
 
@@ -106,9 +147,17 @@ with open('strings.json') as f:
 
 \subsection{XML}
 
-Please contribute a section.
+\TODO{Tutorial: Please contribute a XML python tutorial.}
 
 \subsection{RDF}
+
+To read RDF files you will need to install RDFlib with 
+
+\begin{verbatim}
+pip install rdflib
+\end{verbatim}
+
+This will than allow you to read RDF files
 
 \begin{verbatim}
 from rdflib.graph import Graph
@@ -116,6 +165,21 @@ g = Graph()
 g.parse("filename.rdf", format="format")
 for entry in g:
    print(entry)
+\end{verbatim}
+
+Good examples on using RDF are provided on the RDFlib Web page
+at~\url{https://github.com/RDFLib/rdflib}
+
+From the Web page we showcase also how to directly process RDF data
+from the Web
+
+\begin{verbatim}
+import rdflib
+g=rdflib.Graph()
+g.load('http://dbpedia.org/resource/Semantic_Web')
+
+for s,p,o in g:
+    print s,p,o
 \end{verbatim}
 
 \subsection{PDF}
@@ -147,9 +211,13 @@ If you know about other tools, let us know.
 
 \subsection{HTML}
 
-Beautiful soup
+A very powerful library to parse HTML Web pages is provided
+with~\url{https://www.crummy.com/software/BeautifulSoup/}
 
-please contribute a section
+More details about it are provided in teh documentation page
+\url{https://www.crummy.com/software/BeautifulSoup/bs4/doc/}
+
+\TODO{Students: beautiful soup contribuete tutorial}
 
 \subsection{ConfigParser}
 
@@ -213,10 +281,17 @@ methods \verb|encrypt| and \verb|decrypt|.
 
 \section{Database Access}\label{database-access}
 
-\TODO{Add mor conventional database access}
+\TODO{Students: define conventional database access tutorial}
 
 see: \url{https://www.tutorialspoint.com/python/python_database_access.htm}
 
+\section{SQLite}
+
+\TODO{Students: defineSQLite database access tutorial}
+
+\url{https://www.sqlite.org/index.html}
+
+\url{https://docs.python.org/3/library/sqlite3.html}
 
 \subsection{Exercises}
 
