@@ -1,6 +1,8 @@
 
 
-\chapter{Physics Case Studies}\label{physics-case-study}
+\chapter{Physics Case Studies}
+\index{Physics}
+
 
 \FILENAME
 
@@ -20,6 +22,7 @@ and Poisson Distribution. Monte-Carlo and accept-reject methods. The
 Central Limit Theorem concludes discussion.
 
 \section{Looking for Higgs Particles}
+\index{Higgs Particles}
 
 \subsection{Bumps in Histograms,  Experiments and Accelerators}
 
@@ -33,7 +36,7 @@ lectures use Python but use of Java is described.
 \sourcecode{Physics}{HiggsClassI-Sloping.py}{examples/physics/mr-higgs/higgs-classI-sloping.py}
 
 
-\subsection{Looking for Higgs Particle and Counting Introduction}
+\subsection{Particle Counting}
 
 We return to particle case with slides used in introduction and stress
 that particles often manifested as bumps in histograms and those bumps
@@ -48,8 +51,7 @@ Feynman diagrams describe processes in a fundamental fashion.
 
 \video{Physics}{7:38}{Looking for Higgs Particle and Counting Introduction II}{http://youtu.be/UAMzmOgjj7I}
 
-\subsection{Physics-Informatics Looking for Higgs Particle
-Experiments}\label{physics-informatics-looking-for-higgs-particle-experiments}
+\subsection{Experimental Facilities}
 
 We give a few details on one LHC experiment ATLAS. Experimental physics
 papers have a staggering number of authors and quite big budgets.
@@ -57,8 +59,7 @@ Feynman diagrams describe processes in a fundamental fashion.
 
 \video{Physics}{9:29}{Looking for Higgs Particle Experiments}{http://youtu.be/BW12d780qT8}
 
-\subsection{Accelerator Picture Gallery of Big
-Science}\label{accelerator-picture-gallery-of-big-science}
+\subsection{Accelerator Picture Gallery of Big Science}
 
 This lesson gives a small picture gallery of accelerators. Accelerators,
 detection chambers and magnets in tunnels and a large underground
@@ -112,10 +113,10 @@ Files:
 %this class.
 %\end{WARNING}%
 
-\subsection{Physics Use Case II 1: Event
-Counting}\label{physics-use-case-ii-2-event-counting}
+\subsection{Event Counting}
+\index{Event Counting}
 
-We define `'event counting'' data collection environments. We discuss
+We define \textit{event counting} data collection environments. We discuss
 the python and Java code to generate events according to a particular
 scenario (the important idea of Monte Carlo data). Here a sloping
 background plus either a Higgs particle generated similarly to LHC
@@ -124,9 +125,8 @@ error).
 
 \video{Physics}{7:02}{Event Counting}{http://youtu.be/h8-szCeFugQ}
 
-\subsection{Physics Use Case II 2: With Python examples of Signal
-plus
-Background}\label{physics-use-case-ii-3-with-python-examples-of-signal-plus-background}
+\subsection{Monte Carlo}
+\index{Monte Carlo}
 
 This uses Monte Carlo data both to generate data like the experimental
 observations and explore effect of changing amount of data and changing
@@ -134,12 +134,9 @@ measurement resolution for Higgs.
 
 \video{Physics}{7:33}{With Python examples of Signal plus Background}{http://youtu.be/bl2f0tAzLj4}
 
-\subsection{Physics Use Case II 3: Change shape of background \&
-  num of Higgs Particles}
-
 This lesson continues the examination of Monte Carlo data looking at
-effect of change in number of Higgs particles produced and in change in
-shape of background.
+effect of change in number of Higgs particles produced and in change
+in shape of background.
 
 \video{Physics}{7:01}{Change shape of background \& num of Higgs Particles}{http://youtu.be/bw3fd5cfQhk}
 
@@ -157,9 +154,8 @@ shape of background.
   \url{https://en.wikipedia.org/wiki/DataMelt}
 \end{itemize}
 
-\section{Looking for Higgs Particles: Random Variables, Physics and
-Normal
-Distributions}\label{looking-for-higgs-particles-random-variables-physics-and-normal-distributions}
+\subsection{Random Variables, Physics and
+  Normal Distributions}
 
 We introduce random variables and some simple principles of statistics
 and explains why they are relevant to Physics counting experiments. The
@@ -172,15 +168,16 @@ given. Java is currently not available in this unit.
 \sourcecode{Physics}{HiggsClassIII.py}{examples/physics/number-theory/higgs-classIII.py}
 
 \subsection{Statistics Overview and Fundamental Idea: Random
-Variables}\label{statistics-overview-and-fundamental-idea-random-variables}
+  Variables}
+\index{Random Variables}
 
 We go through the many different areas of statistics covered in the
 Physics unit. We define the statistics concept of a random variable.
 
 \video{Physics}{8:19}{Random variables and normal distributions}{https://www.youtube.com/watch?v=_sLGyt4qWWk}
 
-\subsection{Physics and Random
-Variables}\label{physics-and-random-variables}
+\subsection{Physics and Random Variables}
+
 
 We describe the DIKW pipeline for the analysis of this type of physics
 experiment and go through details of analysis pipeline for the LHC ATLAS
@@ -193,8 +190,8 @@ cross sections (probabilities) for signal and background.
 
 \video{Physics}{5:50}{Physics and Random Variables II}{http://youtu.be/qWEjp0OtvdA}
 
-\subsection{Statistics of Events with Normal
-Distributions}\label{statistics-of-events-with-normal-distributions}
+\subsection{Statistics of Events with Normal Distributions}
+\index{Normal Distributions}
 
 We introduce Poisson and Binomial distributions and define independent
 identically distributed (IID) random variables. We give the law of large
@@ -204,14 +201,16 @@ experiments.
 
 \video{Physics}{11:25}{Statistics of Events with Normal Distributions}{http://youtu.be/LMBtpWOOQLo}
 
-\subsection{Gaussian Distributions}\label{gaussian-distributions}
+\subsection{Gaussian Distributions}
+\index{Gaussian Distributions}
 
 We introduce the Gaussian distribution and give Python examples of the
 fluctuations in counting Gaussian distributions.
 
 \video{Physics}{9:08}{Gaussian Distributions}{http://youtu.be/LWIbPa-P5W0}
 
-\subsection{Using Statistics}\label{using-statistics}
+\subsection{Using Statistics}
+\index{Statistics}
 
 We discuss the significance of a standard deviation and role of biases
 and insufficient statistics with a Python example in getting incorrect
@@ -219,7 +218,7 @@ answers.
 
 \video{Physics}{14:02}{Using Statistics}{http://youtu.be/n4jlUrGwgic}
 
-\subsection{Resources}\label{resources-2}
+\subsection{Resources}
 
 \begin{itemize}
 
@@ -231,9 +230,8 @@ answers.
   \url{https://cms.cern/}
 \end{itemize}
 
-\section{Looking for Higgs Particles: Random Numbers, Distributions
-and Central Limit Theorem (Part
-3)}\label{looking-for-higgs-particles-random-numbers-distributions-and-central-limit-theorem-part-3}
+\subsection{Random Numbers, Distributions and Central Limit Theorem}
+\index{Central Limit Theorem}
 
 We discuss Random Numbers with their Generators and Seeds. It introduces
 Binomial and Poisson Distribution. Monte-Carlo and accept-reject methods
@@ -247,7 +245,9 @@ Files:
 
 \sourcecode{Physics}{HiggsClassIII.py}{examples/physics/calculated-dice-roll/higgs-classIV-seeds.py}
 
-\subsection{Generators and Seeds}\label{generators-and-seeds}
+\subsubsection{Generators and Seeds}
+\index{Generators}
+\index{Seeds}
 
 We define random numbers and describe how to generate them on the
 computer giving Python examples. We define the seed used to define to
@@ -257,42 +257,47 @@ specify how to start generation.
 
 \video{Physics}{7:10}{Generators and Seeds II}{http://youtu.be/9QY5qkQj2Ag}
 
-\subsection{Binomial Distribution}\label{binomial-distribution}
+\subsubsection{Binomial Distribution}
+\index{Binomial Distribution}
+
 
 We define binomial distribution and give LHC data as an example of where
 this distribution valid.
 
 \video{Physics}{12:38}{Binomial Distribution: }{http://youtu.be/DPd-eVI_twQ}
 
-\subsection{Accept-Reject}\label{accept-reject}
+\subsubsection{Accept-Reject}
 
 We introduce an advanced method \textbf{accept/reject} for generating
 random variables with arbitrary distributions.
 
 \video{Physics}{5:54}{Accept-Reject}{http://youtu.be/GfshkKMKCj8}
 
-\subsection{Monte Carlo Method}\label{monte-carlo-method}
+\subsubsection{Monte Carlo Method}
+\index{Monte Carlo Method}
 
 We define Monte Carlo method which usually uses accept/reject method in
 typical case for distribution.
 
 \video{Physics}{2:23}{Monte Carlo Method}{http://youtu.be/kIQ-BTyDfOQ}
 
-\subsection{Poisson Distribution}\label{poisson-distribution}
+\subsubsection{Poisson Distribution}
+\index{Poisson Distribution}
 
 We extend the Binomial to the Poisson distribution and give a set of
 amusing examples from Wikipedia.
 
 \video{Physics}{4:37}{Poisson Distribution}{http://youtu.be/WFvgsVo-k4s}
 
-\subsection{Central Limit Theorem}\label{central-limit-theorem}
+\subsubsection{Central Limit Theorem}
+\index{Central Limit Theorem}
 
 We introduce Central Limit Theorem and give examples from Wikipedia.
 
 \video{Physics}{4:47}{Central Limit Theorem}{http://youtu.be/ZO53iKlPn7c}
 
-\subsection{Interpretation of Probability: Bayes v.
-Frequency}\label{interpretation-of-probability-bayes-v.-frequency}
+\subsubsection{Interpretation of Probability: Bayes v.  Frequency}
+\index{Bayes}
 
 This lesson describes difference between Bayes and frequency views of
 probability. Bayes's law of conditional probability is derived and
@@ -301,11 +306,13 @@ channels and multiple experiments to be accumulated.
 
 \video{Physics}{12:39}{Interpretation of Probability}{http://youtu.be/jzDkExAQI9M}
 
-\subsection{Resources}\label{resources-3}
+\subsubsection{Resources}\label{resources-3}
 
 \TODO{integrate physics-references.bib}
 
-\section{SKA Square Kilometer Array}
+\section{SKA -- Square Kilometer Array}
+\index{Square Kilometer Array}
+\index{SKA}
 
 
 Professor Diamond, accompanied by Dr. Rosie Bolton from the SKA
@@ -325,3 +332,73 @@ The video is hosted at
 \URL{http://sc17.supercomputing.org/presentation/?id=inspkr101&sess=sess263}
 
 Start at about 1:03:00 (e.g. the one hour mark)
+
+
+\section{Radar}
+
+The changing global climate is suspected to have long-term effects on
+much of the world's inhabitants. Among the various effects, the rising
+sea level will directly affect many people living in low-lying coastal
+regions. While the ocean-s thermal expansion has been the dominant
+contributor to rises in sea level, the potential contribution of
+discharges from the polar ice sheets in Greenland and Antarctica may
+provide a more significant threat due to the unpredictable response to
+the changing climate. The Radar-Informatics unit provides a glimpse in
+the processes fueling global climate change and explains what methods
+are used for ice data acquisitions and analysis.
+
+\slides{Radar}{58}{Radar}{https://drive.google.com/open?id=0B8936_ytjfjmZ0VzZ0ZIenpUMTQ}
+
+\subsection{Introduction}
+
+This lesson motivates radar-informatics by building on previous
+discussions on why X-applications are growing in data size and why
+analytics are necessary for acquiring knowledge from large data. The
+lesson details three mosaics of a changing Greenland ice sheet and
+provides a concise overview to subsequent lessons by detailing
+explaining how other remote sensing technologies, such as the radar, can
+be used to sound the polar ice sheets and what we are doing with radar
+images to extract knowledge to be incorporated into numerical models.
+
+\video{Radar}{3:31}{Radar Informatics}{https://youtu.be/LXOncC2AhsI}
+
+\subsection{Remote Sensing}
+
+This lesson explains the basics of remote sensing, the characteristics
+of remote sensors and remote sensing applications. Emphasis is on image
+acquisition and data collection in the electromagnetic spectrum.
+
+\video{Radar}{6:43}{Remote Sensing}{https://youtu.be/TTrm9rmZySQ}
+
+\subsection{Ice Sheet Science}
+
+This lesson provides a brief understanding on why melt water at the base
+of the ice sheet can be detrimental and why it's important for sensors
+to sound the bedrock.
+
+\video{Radar}{1:00}{Ice Sheet Science}{https://youtu.be/rDpjMLguVBc}
+
+\subsection{Global Climate Change}
+
+This lesson provides an understanding and the processes for the
+greenhouse effect, how warming effects the Polar Regions, and the
+implications of a rise in sea level.
+
+\video{Radar}{2:51}{Global Climate Change}{https://youtu.be/f9hzzJX0qDs}
+
+\subsection{Radio Overview}
+
+This lesson provides an elementary introduction to radar and its
+importance to remote sensing, especially to acquiring information about
+Greenland and Antarctica.
+
+\video{Radar}{4:16}{Radio Overview}{https://youtu.be/PuI7F-RMKCI}
+
+\subsection{Radio Informatics}
+
+This lesson focuses on the use of sophisticated computer vision
+algorithms, such as active contours and a hidden markov model to support
+data analysis for extracting layers, so ice sheet models can accurately
+forecast future changes in climate.
+
+\video{Radar}{3:35}{Radio Informatics}{https://youtu.be/q3Pwyt49syE}
