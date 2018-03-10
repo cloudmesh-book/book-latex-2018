@@ -1,7 +1,7 @@
 
 
 
-\section{Technology for Big Data Applications and
+\chpater{Technology for Big Data Applications and
 Analytics}\label{technology-for-big-data-applications-and-analytics}
 
 \FILENAME
@@ -26,7 +26,7 @@ formulations of the basic matrix equations to finding leading
 eigenvector. The unit is concluded by a calculation of PageRank for
 general web pages by extracting the secret from Google.
 
-\subsection{Technologypi: K-means}\label{technologypi-k-means}
+\section{Technologypi: K-means}\label{technologypi-k-means}
 
 We use the K-means Python code in SciPy package to show real code for
 clustering. After a simple example we generate 4 clusters of distinct
@@ -47,7 +47,7 @@ Files:
 \sourcecode{K-means}{kmeans-extra.py}{examples/python/k-means/kmeans-extra.py}
 
 
-\subsubsection{K-means in Python}\label{k-means-in-python}
+\subsection{K-means in Python}\label{k-means-in-python}
 
 We use the K-means Python code in SciPy package to show real code for
 clustering and applies it a set of 85 two dimensional vectors --
@@ -58,7 +58,7 @@ varying sizes and centered at corners of a square in two dimensions. We
 formally give the K means algorithm better than before and make
 definition consistent with code in SciPy.
 
-\subsubsection{Analysis of 4 Artificial
+\subsection{Analysis of 4 Artificial
 Clusters}\label{analysis-of-4-artificial-clusters}
 
 We present clustering results on the artificial set of 1000 2D points
@@ -76,14 +76,14 @@ multiple minima and a hill between them. The lesson has both discussion
 of already produced results in slides and interactive use of Python for
 new runs.
 
-\subsection{Technology: MapReduce}\label{technology-mapreduce}
+\section{Technology: MapReduce}\label{technology-mapreduce}
 
 We describe the basic architecture of MapReduce and a homely example.
 The discussion of advanced topics includes extension to Iterative
 MapReduce from Indiana University called Twister and a generalized Map
 Collective model. Some measurements of parallel performance are given.
 
-\subsubsection{Introduction}\label{introduction}
+\subsection{Introduction}\label{introduction}
 
 This introduction uses an analogy to making fruit punch by slicing and
 blending fruit to illustrate MapReduce. The formal structure of
@@ -91,14 +91,14 @@ MapReduce and Iterative MapReduce is presented with parallel data
 flowing from disks through multiple Map and Reduce phases to be
 inspected by the user.
 
-\subsubsection{Advanced Topics}\label{advanced-topics}
+\subsection{Advanced Topics}\label{advanced-topics}
 
 This defines 4 types of MapReduce and the Map Collective model of Qiu.
 The Iterative MapReduce model from Indiana University called Twister is
 described and a few performance measurements on Microsoft Azure are
 presented.
 
-\subsection{Technology: Kmeans and MapReduce
+\section{Technology: Kmeans and MapReduce
 Parallelism}\label{technology-kmeans-and-mapreduce-parallelism}
 
 We modify the SciPy K-means code to support a MapReduce execution style
@@ -112,7 +112,7 @@ Files:
 
 \sourcecode{K-means}{ParallelKmeans}{examples/python/k-means/parallel-kmeans.py}
 
-\subsubsection{MapReduce Kmeans in
+\subsection{MapReduce Kmeans in
 Python}\label{mapreduce-kmeans-in-python}
 
 We modify the SciPy K-means code to support a MapReduce execution style
@@ -122,7 +122,7 @@ parallel but here the \emph{parallel} maps run sequentially. We stress
 that this simple 2 map version can be generalized to scalable
 parallelism.
 
-\subsection{Technology: PageRank}\label{technology-pagerank}
+\section{Technology: PageRank}\label{technology-pagerank}
 
 We use Python to Calculate PageRank from Web Linkage Matrix showing
 several different formulations of the basic matrix equations to finding
@@ -136,13 +136,13 @@ Files:
 \sourcecode{K-means}{pagerank2.py}{examples/python/page-rank/pagerank2.py}
 
 
-\subsubsection{Calculate PageRank from Web Linkage
+\subsection{Calculate PageRank from Web Linkage
 Matrix}\label{calculate-pagerank-from-web-linkage-matrix}
 
 We take two simple matrices for 6 and 8 web sites respectively to
 illustrate the calculation of PageRank.
 
-\subsubsection{Calculate PageRank of a Real
+\subsection{Calculate PageRank of a Real
 Page}\label{calculate-pagerank-of-a-real-page}
 
 This tiny lesson presents a Python code that finds the Page Rank that
