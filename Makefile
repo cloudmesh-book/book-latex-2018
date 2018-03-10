@@ -163,6 +163,7 @@ clean:
 	rm -f tmp/*
 	rm -f *-dot2tex-*
 	rm -f *.out
+	bin/md-clean-tex.py
 
 view:
 	open dest/$(FILE).pdf
