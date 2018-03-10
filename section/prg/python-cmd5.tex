@@ -10,7 +10,7 @@ very useful package to create command line shells. However it does not
 allow the dynamic integration of newly defined commands. Furthermore,
 additions to CMD need to be done within the same source tree. To
 simplify developing commands by a number of people and to have a
-dynamic plugin mechnism, we developed cmd5. It is a rewrite on our
+dynamic plugin mechanism, we developed cmd5. It is a rewrite on our
 earlier efforts in cloudmesh client and cmd3.
 
 \subsection{Resources}
@@ -26,8 +26,9 @@ The source code for cmd5 is located in github:
 \subsection{Creating a Python Development
 Environment}\label{creating-a-python-development-environment}
 
-We recommend that you use a virtualenv either with virtualenv or pyenv.
-This is in detail documented in the Section section\_pyenv.
+We recommend that you use a virtualenv either with virtualenv or
+pyenv.  This is in detail documented in the
+Section~\ref{S:managing-multiple-python-versions-with-pyenv} .
 
 \subsection{Installation from source}\label{installation-from-source}
 
@@ -190,11 +191,11 @@ wrong usage by subsequent users. Hence, we do recommend that you use
 docopts for documenting cmd5 commands. The transformation is enabled by
 the @command decorator that generates a manual page and creates a proper
 help message for the shell automatically. Thus there is no need to
-introduce a sepaarte help method as would normally be needed in CMD
+introduce a separate help method as would normally be needed in CMD
 while reducing the effort it takes to contribute new commands in a
 dynamic fashion.
 
-\subsection{Excersises}
+\subsection{Exercises}
 
 \begin{exercise}
 \label{E:CMD5.1:}
