@@ -778,7 +778,9 @@ Originally published at
 
 \noindent \url{https://github.com/cloudmesh/classes}\\
 
-\noindent \url{https://tinyurl.com/vonLaszewski-handbook}\\
+\noindent \url{http://cyberaide.org/papers/vonLaszewski-bigdata.pdf} \\
+
+%\noindent \url{https://tinyurl.com/vonLaszewski-handbook}\\
 
 
 %\begin{comment}
