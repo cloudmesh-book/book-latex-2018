@@ -41,7 +41,7 @@
 \usepackage{tikz}
 \usepackage{currfile}
 \usepackage{comment}
-\usepackage{shorttoc}
+\usepackage[tight]{shorttoc}
 \usepackage{todonotes}
 \usepackage{fancyvrb}
 \usepackage{parskip}
