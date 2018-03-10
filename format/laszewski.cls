@@ -767,12 +767,14 @@ sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centerin
 ~\vfill
 \thispagestyle{empty}
 
-\noindent Copyright \copyright\ 2017\\
+\noindent Copyright \copyright\ 2017, 2018\\
 \AUTHOR \\
 
 \noindent \EMAIL \\ % Copyright notice
 
 % \noindent \textsc{Indiana University}\\ % Publisher
+
+Originally published at
 
 \noindent \url{https://github.com/cloudmesh/classes}\\
 
