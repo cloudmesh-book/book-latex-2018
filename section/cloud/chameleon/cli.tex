@@ -1,5 +1,5 @@
 \section{Chameleon OpenStack}
-\label{chameleon-openstack}
+\label{s:chameleon-openstack}
 \index{Chameleon!Openstack}
 
 OpenStack on Chameleon delivers KVM based compute resources to
@@ -100,7 +100,7 @@ mkdir -p ~/.cloudmesh/chameleon
 The easiest way is to download a template from pur book with 
 
 \begin{lstlisting}
-https://raw.githubusercontent.com/cloudmesh/book/master/examples/chameleon/cc-openrc.sh
+wget https://raw.githubusercontent.com/cloudmesh/book/master/examples/chameleon/cc-openrc.sh -O ~/.cloudmesh/chameleon/cc-openrc.sh
 \end{lstlisting}
 
 The cc-openrc.sh looks as follows:
@@ -112,7 +112,7 @@ Please make sur to replace
 chameleon cloud username. Now whenever you need top access chameleon
 cloud you can use the command
 
-\begin{lstlisting}
+\begin{lstlisting}[language=bash]
 source ~/.cloudmesh/chameleon/cc-openrc.sh
 \end{lstlisting}
 
@@ -123,7 +123,7 @@ use for VMS and keys as we are using a shared project. This way we can
 see which VMS and which keys have been uploaded and keep the names of
 them unique.
 
-\begin{lstlisting}
+\begin{lstlisting}[language=bash]
 export CC_PROJECT=CH-819337
 export CC_PREFIX=albert-111
 \end{lstlisting}
@@ -141,19 +141,19 @@ project number and find \textbf{Access \& Security} on the left menu.
 The Access \& Security page has tabs and choose \textbf{API Access} to
 download credentials on a local machine. Click \textbf{Download
   OpenStack RC File} to download \textit{CH-\$PROJECTID-openrc.sh}
-file on your machine (see \ref{F:cc-gui}). Every time you use nova
+file on your machine (see Figure \ref{F:cc-gui}). Every time you use nova
 command line tools, the file should be loaded on your terminal.
 
 
 \begin{figure}[!htbp]
   \centering 
-  \includegraphics[width=8cm,height=8cm]{section/cloud/chameleon/images/openstack-chameleon-openrc.png}
+  \includegraphics[width=0.6\columnwidth]{section/cloud/chameleon/images/openstack-chameleon-openrc.png}
   \caption{Access and Security GUI}
   \label{F:cc-gui}
 \end{figure}
 
 
-\begin{lstlisting}
+\begin{lstlisting}[language=bash]
 mkdir -p ~/.cloudmesh/chameleon
 mv ~/Downloads/CH-$CC_PROJECT-openrc.sh ~/.cloudmesh/chameleon/cc-openrc.sh
 \end{lstlisting}
@@ -162,14 +162,14 @@ mv ~/Downloads/CH-$CC_PROJECT-openrc.sh ~/.cloudmesh/chameleon/cc-openrc.sh
 Just as in the previous section please add the following to your
 openrc.sh file while adapting it appropriately.
 
-\begin{lstlisting}
+\begin{lstlisting}[language=bash]
 export CC_PROJECT=CH-819337
 export CC_PREFIX=albert-111
 \end{lstlisting}
 
 Once you \textit{source} the file, you can use nova command line tools
 without sourcing it again.  The environment variables are enabled
-while your terminal is alive. IN case you have not stored the original
+while your terminal is alive. In case you have not stored the original
 RC file in the Downloads folder, please copy it from that location
 instead.
 
@@ -178,7 +178,7 @@ instead.
 OpenStack provides a commandline tool called \textit{nova} to manage
 virtual machines. To install it please use the command
 
-\begin{lstlisting}
+\begin{lstlisting}[language=bash]
 pip install python-openstackclient
 \end{lstlisting}
 
@@ -186,21 +186,23 @@ To see if your configuration works and the command is installed, make
 sure you have the \verb|cc-openrc.sh| file and sourced it. Than issue
 the command
 
-\begin{lstlisting}
+\begin{lstlisting}[language=bash]
 $ nova image-list
 \end{lstlisting}
 %$
 
 You will see an output similar to 
 
+\begin{tiny}
 \begin{lstlisting}
-+--------------------------------------+------------------+--------+---------+
-| ID                                   | Name             | Status | Server  |
-+--------------------------------------+------------------+--------+---------+
-| be46bd5a-c4a5-4495-ad30-356186d8ff04 | CC-C7-autologin  | ACTIVE |         |
-| 1fe5138b-300b-4b30-8d22-e728abbd7773 | CC-CentOS7       | ACTIVE |         |
++----------------------------------+------------------+--------+---------+
+| ID                               | Name             | Status | Server  |
++----------------------------------+------------------+--------+---------+
+| be46bd5a-c4a5-4495-ad30-35618... | CC-C7-autologin  | ACTIVE |         |
+| 1fe5138b-300b-4b30-8d22-e7287... | CC-CentOS7       | ACTIVE |         |
 ...
 \end{lstlisting}
+\end{tiny}
 
 \subsection{Creating SSH keys}
 
@@ -208,8 +210,8 @@ Naturally you will need an ssh key.  If you do not have an existing
 SSH keypair, you can create one. Please see Section~\ref{C:ssh} for
 more details:
 
-\begin{lstlisting}
-ssh-keygen -t rsa -C mail@example.edu
+\begin{lstlisting}[language=bash]
+ssh-keygen -t rsa -C albert@example.edu
 \end{lstlisting}
 %$
 
@@ -219,26 +221,26 @@ Once you have completed the installation of nova, you also need to
 register a ssh keypair with openstack to be able to log into the
 virtual machines that you start. To register your public key, use:
 
-\begin{lstlisting}
-nova keypair-add --pub-key $HOME/ssh/id_rsa.pub $CCPREFIX-key
+\begin{lstlisting}[language=bash]
+nova keypair-add --pub-key ~/.ssh/id_rsa.pub $CC_PREFIX-key
 \end{lstlisting}
 %$ 
 
 Once you register your key, you can confirm if your key registration
 has been successful by listing the keys:
 
-\begin{lstlisting}
+\begin{lstlisting}[language=bash]
 nova keypair-list
 \end{lstlisting}
 
 You will see an output similar to:
 
 \begin{lstlisting}
-+---------------+-------------------------------------------------+
-| Name          | Fingerprint                                     |
-+---------------+-------------------------------------------------+
-| $CCPREFIX-key | cf:04:06:aa:8b:76:af:77:aa:0a:b5:87:ff:0f:ba:97 |
-+---------------+-------------------------------------------------+
++----------------+-------------------------------------------------+
+| Name           | Fingerprint                                     |
++------_---------+-------------------------------------------------+
+| $CC_PREFIX-key | cf:04:06:aa:8b:76:af:77:aa:0a:b5:87:ff:0f:ba:97 |
++----------------+-------------------------------------------------+
 \end{lstlisting}
 %$
 
@@ -251,8 +253,8 @@ base image and a server size we will use with a name. We use
 \textit{CC-Ubuntu16.04} base image in this tutorial which is an
 official Ubuntu 16.04 image provided by Chameleon project.
 
-\begin{lstlisting}
-nova boot --image CC-Ubuntu16.04 --key-name $CCPREFIX-key --flavor m1.small $CCPREFIX-01
+\begin{lstlisting}[language=bash]
+nova boot --image CC-Ubuntu16.04 --key-name $CC_PREFIX-key --flavor m1.small $CC_PREFIX-01
 \end{lstlisting}
 
 where the 01 indicates the instance number. Note that we will be
@@ -278,11 +280,11 @@ via SSH.
 \begin{tiny}
 \begin{lstlisting}
  nova floating-ip-create ext-net
- +--------------------------------------+----------------+-----------+----------+---------+
- | Id                                   | IP             | Server Id | Fixed IP | Pool    |
- +--------------------------------------+----------------+-----------+----------+---------+
- | 13dc309e-9a82-45af-8a9a-7fbd74f4aec6 | 129.114.111.37 | -         | -        | ext-net |
- +--------------------------------------+----------------+-----------+----------+---------+
+ +---------------+----------------+-----------+----------+---------+
+ | Id            | IP             | Server Id | Fixed IP | Pool    |
+ +---------------+----------------+-----------+----------+---------+
+ | 13dc309e- ... | 129.114.111.37 | -         | -        | ext-net |
+ +---------------+----------------+-----------+----------+---------+
 \end{lstlisting}
 \end{tiny}
 
@@ -290,7 +292,7 @@ Now we have a IP address to assign to a VM instance. In this tutorial,
 we will associate \textit{129.114.111.37} to our
 albert-111-01 VM instance by:
 
-\begin{lstlisting}
+\begin{lstlisting}[language=bash]
 nova floating-ip-associate albert-111-01 129.114.111.37
 \end{lstlisting}
 
@@ -299,14 +301,16 @@ instance.  Confirm \textit{ACTIVE} state in your VM to get access.
 
 \begin{tiny}
 \begin{lstlisting}
-| f19e0ba1-9b76-46f4-896f-378983ab2aa3 | albert-111-01 | ACTIVE  | - | Running  | $CCPROJECT-net=192.168.0.13, 129.114.111.37 |
+| f19e1... | albert-111-01 | ACTIVE | - | Running | $CC_PROJECT-net= |
+|          |                        |   |         |    192.168.0.13, |
+|          |                        |   |         |   129.114.111.37 |
 \end{lstlisting}
 \end{tiny}
 %$
 
 where 111 is the number from your hid and 01 is the instance number
 
-\begin{lstlisting}
+\begin{lstlisting}[language=bash]
 ssh cc@129.114.111.37
 \end{lstlisting}
 
@@ -319,9 +323,13 @@ If you completed your work on your VM instance, you have to terminate
 your VM and release a floating IP address associated with. For
 example, we terminate our first instance and the IP address by:
 
-\begin{lstlisting}
-nova delete $CCPREFIX-01
+\begin{lstlisting}[language=bash]
+nova delete $CC_PREFIX-01
 nova floating-ip-delete 129.114.111.37
 \end{lstlisting}
 %$
+
+Please note that when using delete you will delete the VM. In case you
+still need to use it use \verb|stop| and to restart it use
+\verb|start| instead.
 
