@@ -3,7 +3,7 @@
 \index{Chameleon!Openstack}
 
 OpenStack on Chameleon delivers KVM based compute resources to
-provision Linux virtual machines. It provides various image types on
+provision virtual machines. It provides various image types on
 which we can deploy tools and software needed for the class and
 projects. We will you through the basic steps of getting access to
 OpenStack Chameleon cloud under the class allocation. Next, we will
@@ -78,18 +78,6 @@ in use. Shutting down the VM is similar and avoids that you
 unnecessarily use resources that others could use in a shared
 environment.
 
-\subsection{Environment Variables}
-
-To simplify the documentation it is beneficial to set two shell
-variables. The first one is \verb|CC_PROJECT|, that specifies the project
-number. The second one is a prefix that you will use for VMS and keys
-as we are using a shared project. This way we can see which VMS and
-which keys have been uploaded and keep the names of them unique.
-
-\begin{lstlisting}
-export CC_PROJECT=CH-819337
-export CC_PREFIX=albert-111
-\end{lstlisting}
 
 \subsection{OpenStack RC File}
 
@@ -97,15 +85,22 @@ We will use the Nova command line tools for Chameleon OpenStack and to
 authorize our account on the command line tools. To do so, you will
 need an openstack RC file. 
 
+
 \subsubsection{Creating OpenStack RC via the editor}
 
 The easiest way is to create this file by hand while copying the
 following lines into the file
-~/.cloudmesh/chameleon/cc-openrc.sh. Make sure that you place the file
-in a location you easily be found:
+\verb|~/.cloudmesh/chameleon/cc-openrc.sh|. Make sure that you place
+the file in a location you easily be found:
 
 \begin{lstlisting}
 mkdir -p ~/.cloudmesh/chameleon
+\end{lstlisting}
+
+The easiest way is to download a template from pur book with 
+
+\begin{lstlisting}
+https://raw.githubusercontent.com/cloudmesh/book/master/examples/chameleon/cc-openrc.sh
 \end{lstlisting}
 
 The cc-openrc.sh looks as follows:
@@ -114,16 +109,29 @@ The cc-openrc.sh looks as follows:
 
 Please make sur to replace
 \verb|<put your chameleon cloud username here>| with your
-chameleoncloud username. Now whnever you need top access chameleon
-cloudl you can use the command
+chameleon cloud username. Now whenever you need top access chameleon
+cloud you can use the command
 
 \begin{lstlisting}
 source ~/.cloudmesh/chameleon/cc-openrc.sh
 \end{lstlisting}
 
+To simplify the configuration and documentation, we have included two
+shell environment variables. The first one is \verb|CC_PROJECT|, that
+specifies the project number. The second one is a prefix that you will
+use for VMS and keys as we are using a shared project. This way we can
+see which VMS and which keys have been uploaded and keep the names of
+them unique.
+
+\begin{lstlisting}
+export CC_PROJECT=CH-819337
+export CC_PREFIX=albert-111
+\end{lstlisting}
+
 \subsubsection{Creating OpenStack RC via the GUI}
 
-Alternatively you can obtain the OpenStack RC file with the OpenStack
+In case you do not want to use the commandline option to obtain an RC
+sample, you can obtain the OpenStack RC file with the OpenStack
 Dashboard.
 
 \url{https://openstack.tacc.chameleoncloud.org/dashboard}
@@ -151,13 +159,21 @@ mv ~/Downloads/CH-$CCPROJECT-openrc.sh ~/.cloudmesh/chameleon/cc-openrc.sh
 \end{lstlisting}
 %$
 
+Just as in the previous section please add the following to your
+openrc.sh file while adapting it appropriately.
+
+\begin{lstlisting}
+export CC_PROJECT=CH-819337
+export CC_PREFIX=albert-111
+\end{lstlisting}
+
 Once you \textit{source} the file, you can use nova command line tools
 without sourcing it again.  The environment variables are enabled
 while your terminal is alive. IN case you have not stored the original
 RC file in the Downloads folder, please copy it from that location
 instead.
 
-\subsection{CLI to Virtual Machines}
+\subsection{CLI to Manage Virtual Machines}
 
 OpenStack provides a commandline tool called \textit{nova} to manage
 virtual machines. To install it please use the command
@@ -189,9 +205,8 @@ You will see an output similar to
 \subsection{Creating SSH keys}
 
 Naturally you will need an ssh key.  If you do not have an existing
-SSH keypair, you can create one, but you also must go back to the
-keypair registration in Section ???.
-
+SSH keypair, you can create one. Please see Section~\ref{C:ssh} for
+more details:
 
 \begin{lstlisting}
 ssh-keygen -t rsa -C mail@example.edu
@@ -251,12 +266,11 @@ address which is also called floating IP address. A floating IP allows
 you to get access to this VM from the internet. Note that chameleon
 has a limited number of floating IP addresses and it is best to return
 them if not in use. If chameleon runs out of floating IP adresses,
-please submit a ticket to chameleon.
-However in amny cases the VM may only need a an internal IP address as a
-default. IN case you need to access others, you could even tunnel all
-connections through a single flaoting IP. naturally this would limit
-data transfers in and out of chameleon, but is a recommended way to
-deal with limited flaoting IPs.
+please submit a ticket to chameleon. However in many cases the VM may
+only need a an internal IP address as a default. In case you need to
+access others, you could even tunnel all connections through a single
+floating IP. naturally this would limit data transfers in and out of
+chameleon, but is a recommended way to deal with limited floating IPs.
 
 Let us showcase how to associate a floating IP address and access it
 via SSH.
