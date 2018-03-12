@@ -12,22 +12,27 @@ contain float numbers.
 
 \subsection{Draft: Creating the Hadoop Container}
 
-\TODO{Hyungro: Please provide the Dockerfile and explain how to create
-  the Docker image locally. Than use that image to do the next
-  examples.}
-
-
 \subsection{Hadoop from Docker}
 
-We use a Docker image from Docker Hub:
-(\url{https://hub.docker.com/r/lee212/e222/}) The base image is from
-sequenceiq/hadoop and the example with input data is added for this
-tutorial.
+Build a docker image by Dockerfile from:
+
+\begin{lstlisting}
+mkdir hadoop
+cd hadoop
+wget https://raw.githubusercontent.com/cloudmesh/book/master/examples/docker/hadoop/Dockerfile
+docker build -t cloudmesh/hadoop .
+\end{lstlisting}
+
+%We use a Docker image from Docker Hub:
+%(\url{https://hub.docker.com/r/lee212/e222/}) The base image is from
+%sequenceiq/hadoop and the example with input data is added for this
+%tutorial.
 
 \subsection{Start a Hadoop container}
 
 \begin{lstlisting}
-docker run -it lee212/e222 /etc/bootstrap.sh -bash
+docker run -it cloudmesh/hadoop /etc/bootstrap.sh -bash
+%docker run -it lee212/e222 /etc/bootstrap.sh -bash
 \end{lstlisting}
 
 It may take a few minutes at first to download image layers which are
