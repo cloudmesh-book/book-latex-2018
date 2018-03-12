@@ -1,22 +1,35 @@
+
 # Review
+
 
 index.md
 
 ## Files that are completed
 
+container.tex
+docker-kubernetes-installation.tex
+docker-rest.tex
+docker-hadoop.tex -> Hyungro: under development
+docker-spark.tex -> Bo created image uses some image, can image created
+
+
+
 docker-fs.tex
 kubernetes-fs.md
-docker-rest.tex
 
 docker.tex -> docker-local.tex
 * wrong filename
 * its about installing docker locally
 * may be finished if we woudl integrate 
 
-container.tex
-
-
 ## Files in draft
+
+docker-kubernetes.md - replicated of something in docker-kubernetes-instalation.tex
+
+
+
+
+docker.tex
 
 
 docker-hadoop-labs.tex
