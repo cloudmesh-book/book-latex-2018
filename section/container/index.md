@@ -33,12 +33,6 @@ docker-spark-labs.tex
 
 docker-spark-section.tex
 
-introduction.tex
-* some early notes, are they integrated?
-
-introduction2-deprecated.tex
-* obviously deprecated, s we suld mive to deprecated folder
-
 introduction2.md
 * some notes on docker
 * includes also kubernetes
@@ -50,3 +44,8 @@ minikube.md
 pyspark-lab.md
 docker-echo.md
 docker-spark.md 
+
+
+notes.tex
+* some early notes, are they integrated?
+
