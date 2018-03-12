@@ -33,14 +33,13 @@ docker-spark-labs.tex
 
 docker-spark-section.tex
 
-introduction2.md
+docker-kubernetes.md
 * some notes on docker
 * includes also kubernetes
 * not sure if ready for distribution
 
 ## Files that do not follow manual conventions
 
-minikube.md
 pyspark-lab.md
 docker-echo.md
 docker-spark.md 
