@@ -161,12 +161,19 @@ snapshots are shown below.
 \lstinputlisting[language=Java]{section/icloud/assignment/exercise2/PageRankMap.java}
 \lstinputlisting[language=Java]{section/icloud/assignment/exercise2/PageRankReducer.java}
 
+\section{Docker Hadoop}
+Docker container is available to run PageRank on the Hadoop container image.
+
+\begin{lstlisting}[language=bash]
+sudo docker run -it lee212/e222:pagerank /etc/bootstrap.sh -bash
+\end{lstlisting}
+
 \subsection*{Edit}
 The sketch code is stored within the provided VirtualBox image. Use Eclipse or
 linux text editor vi/vim to add your code.
 
 \begin{lstlisting}[language=bash]
-$ cd /root/MoocHomeworks/HadoopPageRank/
+$ cd /cloudmesh/pagerank
 $ vim src/indiana/cgl/hadoop/pagerank/PageRankMap.java
 $ vim src/indiana/cgl/hadoop/pagerank/PageRankReduce.java
 \end{lstlisting}
@@ -180,16 +187,14 @@ Standard error messages such as compile errors, execution errors, etc. will be
 redirected on the screen. Debug them based on the returned messages.
 
 \begin{lstlisting}[language=bash]
-$ cd /root/MoocHomeworks/HadoopPageRank/
+$ cd /cloudmesh/pagerank
 # usage: ./compileAndExecHadoopPageRank.sh [PageRank Input File][Number of Urls][Number Of Iterations]
 $ ./compileAndExecHadoopPageRank.sh PageRankDataGenerator/pagerank5000g50.input.0 5000 1
 \end{lstlisting}
 
-\TODO{Hyungro: fix filenames with exercise not project}
-
 \subsection*{View the result}
-The result is generated as /root/hbaseMoocAntProject/output/project2.txt. 
+The result is generated in /cloudmesh/pagerank/output.pagerank/
 \begin{lstlisting}[language=bash]
-$ cd /root/MoocHomeworks/HadoopPageRank/
-$ cat output/*
+$ cd /cloudmesh/pagerank
+$ cat output.pagerank/*
 \end{lstlisting}
