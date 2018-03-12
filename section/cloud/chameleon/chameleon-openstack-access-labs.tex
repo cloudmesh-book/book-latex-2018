@@ -41,6 +41,22 @@ The instructor (PI) will authorize you to join a project. Once you
 have approved, you can start to launch a new VM instance on Chameleon
 OpenStack.
 
+\subsection{Environment Variables}
+
+To simplify the documentation it is beneficial to set two shell
+variables. The first one is CCPROJECT, that specifies the project
+number.
+The second one is a prefix that you will use for VMS and keys as we ar
+eusing a shared project. This way we can see which VMS and which keys
+have been uploaded and keep the names of them unique.
+
+\begin{lstlisting}
+export CCPROJECT=CH-819337
+export CCPREFIX=albert-111
+\end{lstlisting}
+
+
+
 \subsection{OpenStack RC File}
 
 We will use Nova command line tools for Chameleon OpenStack and to
@@ -57,6 +73,8 @@ the left menu.  The Access \& Security page has tabs and choose
 \textbf{Download OpenStack RC File} to download
 \textit{CH-\$PROJECTID-openrc.sh} file on your machine.
 
+\TODO{TA: REPLACE IMAGE WITH LSTISTING}
+
   \begin{figure}[!htbp]
     \includegraphics[width=8cm,height=8cm]{section/cloud/chameleon/images/openstack-chameleon-openrc.png}
     \centering
@@ -66,10 +84,15 @@ the left menu.  The Access \& Security page has tabs and choose
   OpenStack.  Everytime you use nova command line tools, the file
   should be loaded on your terminal.
 
+
+
+
+
+
 \begin{lstlisting}
 mkdir ~/cloudmesh/chameleon
-mv CH-\$PROJECTID-openrc.sh ~/cloudmesh/chameleon
-source ~/cloudmesh/chameleon/CH-\$PROJECTID-openrc.sh
+mv CH-$CCPROJECT-openrc.sh ~/cloudmesh/chameleon
+source ~/cloudmesh/chameleon/CH-$CCPROJECT-openrc.sh
 \end{lstlisting}
 
 Once you \textit{source} the file, you can use nova command line tools
@@ -94,11 +117,11 @@ nova image-list
 
 \begin{lstlisting}
 \$ nova image-list
-+--------------------------------------+--------------------------------------------------+--------+--------------------------------------+
-| ID                                   | Name                                             | Status | Server                               |
-+--------------------------------------+--------------------------------------------------+--------+--------------------------------------+
-| be46bd5a-c4a5-4495-ad30-356186d8ff04 | CC-C7-autologin                                  | ACTIVE |                                      |
-| 1fe5138b-300b-4b30-8d22-e728abbd7773 | CC-CentOS7                                       | ACTIVE |                                      |
++--------------------------------------+------------------+--------+---------+
+| ID                                   | Name             | Status | Server  |
++--------------------------------------+------------------+--------+---------+
+| be46bd5a-c4a5-4495-ad30-356186d8ff04 | CC-C7-autologin  | ACTIVE |         |
+| 1fe5138b-300b-4b30-8d22-e728abbd7773 | CC-CentOS7       | ACTIVE |         |
 ...
 \end{lstlisting}
 
@@ -111,8 +134,9 @@ Once you have completed Nova CLI installation, SSH keypair registration is
 required unless you already have one.
 
 \begin{lstlisting}
-nova keypair-add --pub-key \$HOME/ssh/id_rsa.pub \$USER-chameleon-key
+nova keypair-add --pub-key $HOME/ssh/id_rsa.pub $CCPREFIX-key
 \end{lstlisting}
+%$ 
 
 Once you register your key, you can confirm the registration by:
 
@@ -123,42 +147,57 @@ nova keypair-list
 The sample output looks like:
 
 \begin{lstlisting}
-+----------------------+-------------------------------------------------+
-| Name                 | Fingerprint                                     |
-+----------------------+-------------------------------------------------+
-| albert-chameleon-key | cf:04:06:aa:8b:76:af:77:aa:0a:b5:87:ff:0f:ba:97 |
-+----------------------+-------------------------------------------------+
++-------------+-------------------------------------------------+
+| Name        | Fingerprint                                     |
++-------------+-------------------------------------------------+
+| $CCPREFIX-key | cf:04:06:aa:8b:76:af:77:aa:0a:b5:87:ff:0f:ba:97 |
++-------------+-------------------------------------------------+
 \end{lstlisting}
 
-Note that if you do not have an existing SSH keypair, you can create
-one by: and go back to the keypair registration step above to complete
-the registration on OpenStack.
+where 111 is the number from your hid.  Naturally you will need an ssh
+key.  If you do not have an existing SSH keypair, you can create one,
+but you also must go back to the keypair registration step that we
+described earlier.
 
 \begin{lstlisting}
-ssh-keygen -t rsa -C \$USER-chameleon-key
+ssh-keygen -t rsa -C $CCPREFIX-key
 \end{lstlisting}
 
 
 \subsection{Start a new VM instance}
 
-The \textit{nova boot} simple command will start a VM instance with
-some parameters to specify which base image and a server size we will
-use with a name. We use \textit{CC-Ubuntu16.04} base image in this
-tutorial which is an official Ubuntu 16.04 image provided by Chameleon
-project.
+To start new instances you can use the \textit{nova boot} command. It
+will start a VM instance. You can use some parameters to specify which
+base image and a server size we will use with a name. We use
+\textit{CC-Ubuntu16.04} base image in this tutorial which is an
+official Ubuntu 16.04 image provided by Chameleon project.
 
 \begin{lstlisting}
-nova boot --image CC-Ubuntu16.04 --key-name \$USER-chameleon-key --flavor m1.small \$USER-myfirst-instance
+nova boot --image CC-Ubuntu16.04 --key-name $CCPREFIX-key --flavor m1.small $CCPREFIX-01
 \end{lstlisting}
+
+where the 01 indicates the instance number. Note that we will be
+terminating and deleting any VM in our project that does not follow
+this naming convention.
 
 \subsection{Floating IP Address}
 
-If your new VM instance is up and running, it needs external ip
-address (floating IP address) to get access from your local
-machine. The new instance only has an internal IP address as a
-default. We will associate a floating IP address here to get SSH
-access to a VM instance.
+If your new VM instance is up and running, it needs an external ip
+address which is also called floating IP address. A floating IP allows
+you to get access to this VM from the internet. Note that chameleon
+has a limited number of floating IP addresses and it is best to return
+them if not in use. If chameleon runs out of floating IP adresses,
+please submit a ticket to chameleon.
+However in amny cases the VM may only need a an internal IP address as a
+default. IN case you need to access others, you could even tunnel all
+connections through a single flaoting IP. naturally this would limit
+data transfers in and out of chameleon, but is a recommended way to
+deal with limited flaoting IPs.
 
+Let us showcase how to associate a floating IP address and access it
+via SSH.
+
+\begin{tiny}
 \begin{lstlisting}
  nova floating-ip-create ext-net
  +--------------------------------------+----------------+-----------+----------+---------+
@@ -167,22 +206,27 @@ access to a VM instance.
  | 13dc309e-9a82-45af-8a9a-7fbd74f4aec6 | 129.114.111.37 | -         | -        | ext-net |
  +--------------------------------------+----------------+-----------+----------+---------+
 \end{lstlisting}
+\end{tiny}
 
 Now we have a IP address to assign to a VM instance. In this tutorial,
 we will associate \textit{129.114.111.37} to our
-\$USER-myfirst-instance VM instance by:
+albert-111-01 VM instance by:
 
 \begin{lstlisting}
-nova floating-ip-associate \$USER-myfirst-instance 129.114.111.37
+nova floating-ip-associate albert-111-01 129.114.111.37
 \end{lstlisting}
 
 Once you completed this step, you are now able to SSH into your VM
 instance.  Confirm \textit{ACTIVE} state in your VM to get access.
 
+\begin{tiny}
 \begin{lstlisting}
-| f19e0ba1-9b76-46f4-896f-378983ab2aa3 | albert-myfirst-instance       | ACTIVE  | -          | Running     | CH-819337-net=192.168.0.13, 129.114.111.37 |
+| f19e0ba1-9b76-46f4-896f-378983ab2aa3 | albert-111-01 | ACTIVE  | - | Running  | $CCPROJECT-net=192.168.0.13, 129.114.111.37 |
 \end{lstlisting}
+\end{tiny}
+%$
 
+where 111 is the number from your hid and 01 is the instance number
 
 \begin{lstlisting}
 ssh cc@129.114.111.37
@@ -198,7 +242,7 @@ your VM and release a floating IP address associated with. For
 example, we terminate our first instance and the IP address by:
 
 \begin{lstlisting}
-nova delete \$USER-myfirst-intance
+nova delete $CCPREFIX-01
 nova floating-ip-delete 129.114.111.37
 \end{lstlisting}
 
