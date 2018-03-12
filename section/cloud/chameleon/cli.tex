@@ -2,24 +2,29 @@
 \label{chameleon-openstack}
 \index{Chameleon!Openstack}
 
-OpenStack on Chameleon provides plenty of compute resources to
-provision Linux virtual machines with various server types thus we can
-deploy tools and software needed for the class and projects. This
-hands-on tutorial is to walk through a basic step of getting access to
-OpenStack Chameleon cloud under the class allocation and to provide
-introduction to command line tools which are flexible and powerful
-once it is mastered. Web interface, OpenStack Horizon is offered but
-the class does not recommend to use it intensively because it has
-limited to utilize cloud computing resources and it is difficult to
-resolve issues when their are technical problems. Command line tools
-generate full debugging messages if necessary.
+OpenStack on Chameleon delivers KVM based compute resources to
+provision Linux virtual machines. It provides various image types on
+which we can deploy tools and software needed for the class and
+projects. We will you through the basic steps of getting access to
+OpenStack Chameleon cloud under the class allocation. Next, we will
+introduce you to the command line tools which you can use in your
+projects. Naturally using the GUI for your projects is not sufficient
+as setting up your environment will need steps to be executed by hand
+which is not sufficient. It is a goal of this class that you create
+your environment ins a reproducible fashion via scripts.  Hence,
+although the Web interface called OpenStack Horizon is initially
+attractive, we should make sure to move on to the commandline
+interfaces.  Furthermore, it is often difficult to resolve technical
+issues as the command line tools generate full debugging messages in
+case of issues and copy and past into helo windows is much easier and
+efficient than copy and past incomplete screenshots.
 
 
 \subsection{Outages}
 
-Any computer system maay undergo maintenance. Before filing tickets
-with Chameleon cloud, make sure that the cloud is operationa. Outagaes
-are postesed at 
+Any computer system may undergo maintenance. Before filing tickets
+with Chameleon cloud, make sure that the cloud is operational. Outages
+are posted at 
 
 \url{https://www.chameleoncloud.org/user/outages/}
 
@@ -37,99 +42,142 @@ The register web page is available at:
 
 \url{https://www.chameleoncloud.org/user/register/}
 
-For more details, please als consult the chameleon chapter in the handbook.
+For more details, please als consult the chameleon chapter in the
+handbook.
 
 \subsection{Join a Project}
 
-The active project is required to use allocated compute resources to
-the project.  Each class has a particular project number to use. Ask
-details on Piazza, or instructor. Otherwise use the following
-information to join a project:
+An active project is required to access compute resources.  Each class
+has a particular project number that you will need to write down as
+you will use it to interact with the system. The information is
+given out by the instructor. 
+
+For the Spring-18 classes including i524, e516, and e616 please use
+the following project number:
 
 \begin{lstlisting}
-Spring 2018: CH-819337
+CH-819337
 \end{lstlisting}
 
-The instructor (PI) will authorize you to join a project. Once you
-have approved, you can start to launch a new VM instance on Chameleon
-OpenStack.
+However, before you can access it the instructor (in our class Dr. von
+Laszewski) needs to authorize you to use the project. For this you
+have filled out an account survey in piazza. The most common errors we
+see are that students provide us with the wrong user name or have not
+applied for a chameleon account. Once the instructor has added you,
+you will be able to use VM's on Chameleon cloud. 
+
+\subsection{Usage Restriction}
+
+As using VM's in a shared environment cost resources, you are
+{\underline\bf REQUIRED} to shut down your resources after you are not
+using them anymore. Furthermore, before the class is over and we
+assign grades you must terminate your instances and free all ip
+addresses. Remember that any running VM is just like you were running
+a real computer. I am sure you close the lid of your laptop when not
+in use. Shutting down the VM is similar and avoids that you
+unnecessarily use resources that others could use in a shared
+environment.
 
 \subsection{Environment Variables}
 
 To simplify the documentation it is beneficial to set two shell
-variables. The first one is CCPROJECT, that specifies the project
-number.
-The second one is a prefix that you will use for VMS and keys as we ar
-eusing a shared project. This way we can see which VMS and which keys
-have been uploaded and keep the names of them unique.
+variables. The first one is \verb|CC_PROJECT|, that specifies the project
+number. The second one is a prefix that you will use for VMS and keys
+as we are using a shared project. This way we can see which VMS and
+which keys have been uploaded and keep the names of them unique.
 
 \begin{lstlisting}
-export CCPROJECT=CH-819337
-export CCPREFIX=albert-111
+export CC_PROJECT=CH-819337
+export CC_PREFIX=albert-111
 \end{lstlisting}
-
-
 
 \subsection{OpenStack RC File}
 
-We will use Nova command line tools for Chameleon OpenStack and to
-authorize our account on the command line tools, we need to obtain the
-openstack RC file from the openstack web interface. Login to the
-following page with your chameleon account:
+We will use the Nova command line tools for Chameleon OpenStack and to
+authorize our account on the command line tools. To do so, you will
+need an openstack RC file. 
 
+\subsubsection{Creating OpenStack RC via the editor}
+
+The easiest way is to create this file by hand while copying the
+following lines into the file
+~/.cloudmesh/chameleon/cc-openrc.sh. Make sure that you place the file
+in a location you easily be found:
+
+\begin{lstlisting}
+mkdir -p ~/.cloudmesh/chameleon
+\end{lstlisting}
+
+The cc-openrc.sh looks as follows:
+
+\lstinputlisting[language=bash]{examples/chameleon/cc-openrc.sh}
+
+Please make sur to replace
+\verb|<put your chameleon cloud username here>| with your
+chameleoncloud username. Now whnever you need top access chameleon
+cloudl you can use the command
+
+\begin{lstlisting}
+source ~/.cloudmesh/chameleon/cc-openrc.sh
+\end{lstlisting}
+
+\subsubsection{Creating OpenStack RC via the GUI}
+
+Alternatively you can obtain the OpenStack RC file with the OpenStack
+Dashboard.
 
 \url{https://openstack.tacc.chameleoncloud.org/dashboard}
 
-Confirm your project number and find \textbf{Access \& Security} on
-the left menu.  The Access \& Security page has tabs and choose
-\textbf{API Access} to download credentials on a local machine. Click
-\textbf{Download OpenStack RC File} to download
-\textit{CH-\$PROJECTID-openrc.sh} file on your machine.
-
-\TODO{TA: REPLACE IMAGE WITH LSTISTING}
-
-  \begin{figure}[!htbp]
-    \includegraphics[width=8cm,height=8cm]{section/cloud/chameleon/images/openstack-chameleon-openrc.png}
-    \centering
-  \end{figure}
-
-This file contains REST API URLs that we use for Chameleon
-OpenStack.  Everytime you use nova command line tools, the file
-should be loaded on your terminal.
+Login and chose your project number for this project.  Confirm your
+project number and find \textbf{Access \& Security} on the left menu.
+The Access \& Security page has tabs and choose \textbf{API Access} to
+download credentials on a local machine. Click \textbf{Download
+  OpenStack RC File} to download \textit{CH-\$PROJECTID-openrc.sh}
+file on your machine (see \ref{F:cc-gui}). Every time you use nova
+command line tools, the file should be loaded on your terminal.
 
 
-
-
+\begin{figure}[!htbp]
+  \centering 
+  \includegraphics[width=8cm,height=8cm]{section/cloud/chameleon/images/openstack-chameleon-openrc.png}
+  \caption{Access and Security GUI}
+  \label{F:cc-gui}
+\end{figure}
 
 
 \begin{lstlisting}
-mkdir ~/cloudmesh/chameleon
-mv CH-$CCPROJECT-openrc.sh ~/cloudmesh/chameleon
-source ~/cloudmesh/chameleon/CH-$CCPROJECT-openrc.sh
+mkdir -p ~/.cloudmesh/chameleon
+mv ~/Downloads/CH-$CCPROJECT-openrc.sh ~/.cloudmesh/chameleon/cc-openrc.sh
 \end{lstlisting}
+%$
 
 Once you \textit{source} the file, you can use nova command line tools
 without sourcing it again.  The environment variables are enabled
-while your terminal is alive.
+while your terminal is alive. IN case you have not stored the original
+RC file in the Downloads folder, please copy it from that location
+instead.
 
-\subsection{PIP Nova installation}
+\subsection{CLI to Virtual Machines}
 
-OpenStack provides \textit{nova} command line tools written by Python
-which we will use in this tutorial. Run the following command to
-install nova CLI on your machine.
+OpenStack provides a commandline tool called \textit{nova} to manage
+virtual machines. To install it please use the command
 
 \begin{lstlisting}
 pip install python-openstackclient
 \end{lstlisting}
 
-Try nova command to see if it installed successfully:
+To see if your configuration works and the command is installed, make
+sure you have the \verb|cc-openrc.sh| file and sourced it. Than issue
+the command
 
 \begin{lstlisting}
-nova image-list
+$ nova image-list
 \end{lstlisting}
+%$
+
+You will see an output similar to 
 
 \begin{lstlisting}
-\$ nova image-list
 +--------------------------------------+------------------+--------+---------+
 | ID                                   | Name             | Status | Server  |
 +--------------------------------------+------------------+--------+---------+
@@ -138,43 +186,46 @@ nova image-list
 ...
 \end{lstlisting}
 
-The sample output messages look like above, if your installation is correctly
-done.
+\subsection{Creating SSH keys}
+
+Naturally you will need an ssh key.  If you do not have an existing
+SSH keypair, you can create one, but you also must go back to the
+keypair registration in Section ???.
+
+
+\begin{lstlisting}
+ssh-keygen -t rsa -C mail@example.edu
+\end{lstlisting}
+%$
 
 \subsection{KeyPair Registration}
 
-Once you have completed Nova CLI installation, SSH keypair registration is
-required unless you already have one.
+Once you have completed the installation of nova, you also need to
+register a ssh keypair with openstack to be able to log into the
+virtual machines that you start. To register your public key, use:
 
 \begin{lstlisting}
 nova keypair-add --pub-key $HOME/ssh/id_rsa.pub $CCPREFIX-key
 \end{lstlisting}
 %$ 
 
-Once you register your key, you can confirm the registration by:
+Once you register your key, you can confirm if your key registration
+has been successful by listing the keys:
 
 \begin{lstlisting}
 nova keypair-list
 \end{lstlisting}
 
-The sample output looks like:
+You will see an output similar to:
 
 \begin{lstlisting}
-+-------------+-------------------------------------------------+
-| Name        | Fingerprint                                     |
-+-------------+-------------------------------------------------+
++---------------+-------------------------------------------------+
+| Name          | Fingerprint                                     |
++---------------+-------------------------------------------------+
 | $CCPREFIX-key | cf:04:06:aa:8b:76:af:77:aa:0a:b5:87:ff:0f:ba:97 |
-+-------------+-------------------------------------------------+
++---------------+-------------------------------------------------+
 \end{lstlisting}
-
-where 111 is the number from your hid.  Naturally you will need an ssh
-key.  If you do not have an existing SSH keypair, you can create one,
-but you also must go back to the keypair registration step that we
-described earlier.
-
-\begin{lstlisting}
-ssh-keygen -t rsa -C $CCPREFIX-key
-\end{lstlisting}
+%$
 
 
 \subsection{Start a new VM instance}
@@ -245,7 +296,7 @@ where 111 is the number from your hid and 01 is the instance number
 ssh cc@129.114.111.37
 \end{lstlisting}
 
-Note that \textit{cc} is login name your your VM if you start a VM
+Note that \textit{cc} is login name your VM if you start a VM
 with the official Chameleon cloud image.
 
 \subsection{Termination of VM Instance}
@@ -258,5 +309,5 @@ example, we terminate our first instance and the IP address by:
 nova delete $CCPREFIX-01
 nova floating-ip-delete 129.114.111.37
 \end{lstlisting}
-
+%$
 
