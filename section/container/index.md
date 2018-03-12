@@ -8,18 +8,13 @@ docker-fs.tex
 kubernetes-fs.md
 docker-rest.tex
 
-docker.tex
+docker.tex -> docker-local.tex
 * wrong filename
 * its about installing docker locally
 * may be finished if we woudl integrate 
 
-
-
-## Files with questions
-
 container.tex
-* Why do we have Container C and Container D
-* What happened to container A and Container B
+
 
 ## Files in draft
 
