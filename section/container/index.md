@@ -35,9 +35,7 @@ docker-kubernetes.md
 * includes also kubernetes
 * not sure if ready for distribution
 
-## Files that do not follow manual conventions
-
-pyspark-lab.md
+## NOTES
 
 notes.tex
 * some early notes, are they integrated?
