@@ -49,4 +49,4 @@ introduction2.md
 minikube.md
 pyspark-lab.md
 docker-echo.md
-docker-spark-labs-md.md replaced by docker-spark-labs.tex ?
+docker-spark.md 
