@@ -41,7 +41,6 @@ docker-kubernetes.md
 ## Files that do not follow manual conventions
 
 pyspark-lab.md
-docker-echo.md
 docker-spark.md 
 
 
