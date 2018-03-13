@@ -29,6 +29,29 @@
 \maketitle
 
 
+\chapterimage{container.png} 
+\part{Cloud Container Technologies}
+
+\input{section/container/container}
+
+\input{section/container/docker-intro}
+\input{section/container/docker-local}
+\input{section/container/docker-fs}
+
+\chapterimage{rest.png} % Chapter heading image
+\input{section/container/docker-rest}
+
+\chapterimage{container.png} % Chapter heading image
+\input{section/container/kubernetes-intro}
+\input{section/container/kubernetes-fs}
+
+\input{section/container/docker-hadoop}
+\input{section/container/docker-spark.tex}
+
+\input{section/container/notex.tex}
+
+
+
 %\input{section/msg/mqtt}
 %\input{section/doc/book-format}
 %\input{section/container/kubernetes-fs}
@@ -70,7 +93,7 @@
 \end{comment}
 
 %Application sections
-%\begin{comment}
+\begin{comment}
 \include{section/bigdata/applications/health}
 \include{section/bigdata/applications/lifestyle}
 \include{section/bigdata/applications/physics}
@@ -80,7 +103,7 @@
 \include{section/bigdata/applications/usecases}
 \include{section/bigdata/applications/web}
 \include{section/bigdata/applications/clustering}
-%\end{comment}
+\end{comment}
 
 %\include{section/container/docker}
 %\include{section/container/docker-fs}
@@ -91,5 +114,40 @@
 
 
 %----------------------------------------------------------------------------------------
+
+\cite{www-sharelatex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapterimage{water.png} 
+\chapter*{Bibliography}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Bibliography}}
+
+%------------------------------------------------
+
+%\section*{Articles}
+%\addcontentsline{toc}{section}{Articles}
+%\printbibliography[heading=bibempty,type=article]
+
+%------------------------------------------------
+
+%\section*{Books}
+%\addcontentsline{toc}{section}{Books}
+%\printbibliography[heading=bibempty,type=book]
+
+\section*{References}
+\printbibliography[heading=bibempty]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	INDEX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cleardoublepage
+\phantomsection
+\setlength{\columnsep}{0.75cm}
+\addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}}
+\printindex
+
 
 \end{document}

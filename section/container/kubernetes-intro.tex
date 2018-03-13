@@ -3,10 +3,10 @@
 
 \FILENAME
 
-\section{Introduction to Kubernetes}
+\chapter{Introduction to Kubernetes}
 \index{Kubernetes}
 
-\subsection{Topics Covered and Learning
+\section{Topics Covered and Learning
 Outcome}\label{topics-covered-and-learning-outcome-1}
 
 \begin{itemize}
@@ -37,7 +37,7 @@ Outcome}\label{topics-covered-and-learning-outcome-1}
   With an interactive online tutorial
 \end{itemize}
 
-\subsection{What is Kubernetes?}\label{what-is-kubernetes}
+\section{What is Kubernetes?}\label{what-is-kubernetes}
 
 Kubernetes is an open-source platform designed to automate deploying,
 scaling, and operating application containers.
@@ -72,7 +72,7 @@ Kubernetes is
   auto-scaling
 \end{itemize}
 
-\subsection{What are containers?}\label{what-are-containers}
+\section{What are containers?}\label{what-are-containers}
 
 \begin{figure}[htbp]
 \centering
@@ -83,9 +83,9 @@ Kubernetes is
 Image source:
 \url{https://d33wubrfki0l68.cloudfront.net/e7b766e0175f30ae37f7e0e349b87cfe2034a1ae/3e391/images/docs/why_containers.svg}
 
-\subsection{Basic Units}\label{basic-units}
+\section{Basic Units}\label{basic-units}
 
-\subsubsection{Pods}\label{pods}
+\subsection{Pods}\label{pods}
 
 A pod (as in a pod of whales or pea pod) is a group of one or more
 containers (such as Docker containers), with shared storage/network, and
@@ -96,14 +96,14 @@ more application containers which are relatively tightly coupled. In
 a pre-container world, they would have executed on the same physical or
 virtual machine.
 
-\subsubsection{Services}\label{services}
+\subsection{Services}\label{services}
 
 Service is an abstraction which defines a logical set of Pods and a
 policy by which to access them. Sometimes they are called a
 micro-service. The set of Pods targeted by a Service is (usually)
 determined by a Label Selector.
 
-\subsubsection{Deployments}\label{deployments}
+\subsection{Deployments}\label{deployments}
 
 A Deployment controller provides declarative updates for Pods and
 ReplicaSets. You describe a desired state in a Deployment object, and
@@ -112,7 +112,7 @@ at a controlled rate. You can define Deployments to create new
 ReplicaSets, or to remove existing Deployments and adopt all their
 resources with new Deployments.
 
-\subsection{Minikube}
+\section{Minikube}
 \index{Kubernetes!Minikube}
 
 \begin{enumerate}
@@ -122,14 +122,14 @@ resources with new Deployments.
   minikube hello-minikube
 \end{enumerate}
 
-\subsubsection{\texorpdfstring{Install
+\subsection{\texorpdfstring{Install
 \texttt{minikube}}{Install minikube}}\label{install-minikube}
 
 \paragraph{OSX}\label{osx}
 
-\begin{verbatim}
+\begin{lstlisting}[language=bash]
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.25.0/minikube-darwin-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
-\end{verbatim}
+\end{lstlisting}
 
 \paragraph{Windows 10}\label{windows-10}
 
@@ -151,41 +151,41 @@ same directory.
 
 \paragraph{Linux}\label{linux}
 
-\begin{verbatim}
+\begin{lstlisting}[language=bash]
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.25.0/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
-\end{verbatim}
+\end{lstlisting}
 
 Installing KVM2 is important for Ubuntu distributions
 
-\begin{verbatim}
+\begin{lstlisting}[language=bash]
 $ sudo apt install libvirt-bin qemu-kvm
 $ sudo usermod -a -G libvirtd $(whoami)
 $ newgrp libvirtd
-\end{verbatim}
+\end{lstlisting}
 
 We are going to run minikube using KVM2 libraries instead of virtualbox
 libraries for windows installation.
 
 Then install the drivers for KVM2,
 
-\begin{verbatim}
+\begin{lstlisting}[language=bash]
 $ curl -LO https://storage.googleapis.com/minikube/releases/latest/docker-machine-driver-kvm2 && chmod +x docker-machine-driver-kvm2 && sudo mv docker-machine-driver-kvm2 /usr/bin/
-\end{verbatim}
+\end{lstlisting}
 
-\subsubsection{Start a cluster using
+\subsection{Start a cluster using
 Minikube}\label{start-a-cluster-using-minikube}
 
 \paragraph{OSX Minikube Start}\label{osx-minikube-start}
 
-\begin{verbatim}
+\begin{lstlisting}[language=bash]
 $ minikube start
-\end{verbatim}
+\end{lstlisting}
 
 \paragraph{Ubuntu Minikube Start}\label{ubuntu-minikube-start}
 
-\begin{verbatim}
+\begin{lstlisting}[language=bash]
 minikube start --vm-driver=kvm2
-\end{verbatim}
+\end{lstlisting}
 
 \paragraph{Windows 10 Minikube Start}\label{windows-10-minikube-start}
 
@@ -195,72 +195,71 @@ as administrator. If you are an administrator it will run automatically
 but if you are not please make sure you provide the admin login
 information in the pop up.
 
-\begin{verbatim}
+\begin{lstlisting}[language=bash]
 $ cd  C:\Users\<username>\Documents\cloudmesh
 $ .\minikube.exe start --vm-driver="virtualbox"
-\end{verbatim}
+\end{lstlisting}
 
-\subsubsection{Create a deployment}\label{create-a-deployment}
+\subsection{Create a deployment}\label{create-a-deployment}
 
-\begin{verbatim}
+\begin{lstlisting}[language=bash]
 $ kubectl run hello-minikube --image=k8s.gcr.io/echoserver:1.4 --port=8080
-\end{verbatim}
+\end{lstlisting}
 
-\subsubsection{Expose the service}\label{expose-the-service}
+\subsection{Expose the service}\label{expose-the-service}
 
-\begin{verbatim}
+\begin{lstlisting}[language=bash]
 $ kubectl expose deployment hello-minikube --type=NodePort
-\end{verbatim}
+\end{lstlisting}
 
-\subsubsection{Check running status}\label{check-running-status}
+\subsection{Check running status}\label{check-running-status}
 
 This step is to make sure you have a pod up and running.
 
-\begin{verbatim}
+\begin{lstlisting}[language=bash]
 $ kubectl get pod
-\end{verbatim}
+\end{lstlisting}
 
-\subsubsection{Call service api}\label{call-service-api}
+\subsection{Call service api}\label{call-service-api}
 
-\begin{verbatim}
+\begin{lstlisting}[language=bash]
 $ curl $(minikube service hello-minikube --url)
-\end{verbatim}
+\end{lstlisting}
 
-\subsubsection{Take a look from
+\subsection{Take a look from
 Dashboard}\label{take-a-look-from-dashboard}
 
-\begin{verbatim}
+\begin{lstlisting}[language=bash]
 $ minikube dashboard
-\end{verbatim}
+\end{lstlisting}
 
 If you want to get an interactive dashboard,
 
-\begin{verbatim}
+\begin{lstlisting}[language=bash]
 $ .\minikube.exe dashboard --url=true
 http://192.168.99.101:30000
-\end{verbatim}
+\end{lstlisting}
 
 Browse to http://192.168.99.101:30000 in your web browser and it will
 provide a GUI dashboard regarding minikube.
 
-\subsubsection{Delete the service and
+\subsection{Delete the service and
 deployment}\label{delete-the-service-and-deployment}
 
-\begin{verbatim}
+\begin{lstlisting}[language=bash]
 $ kubectl delete service hello-minikube
 $ kubectl delete deployment hello-minikube
-\end{verbatim}
+\end{lstlisting}
 
-\subsubsection{Stop the cluster}\label{stop-the-cluster}
+\subsection{Stop the cluster}\label{stop-the-cluster}
 
 For all platforms we can use the following command.
 
-\begin{verbatim}
+\begin{lstlisting}[language=bash]
 $ minikube stop
-\end{verbatim}
+\end{lstlisting}
 
-\subsection{Interactive Tutorial
-Online}\label{interactive-tutorial-online}
+\section{Interactive Tutorial Online}
 
 \begin{itemize}
 
