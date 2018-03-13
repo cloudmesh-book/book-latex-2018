@@ -68,7 +68,7 @@ floating point number per line. The result file includes \textit{min,
 
 
   \begin{figure}[!htbp]
-    \includegraphics[width=8cm,height=8cm]{section/container/images/docker-hadoop-1.png}
+    \includegraphics[width=0.9\textwidth]{section/container/images/docker-hadoop-1.png}
     \centering
   \end{figure}
 
@@ -112,9 +112,9 @@ compiled class files are generated at the \textit{dest} location.
 
 \subsection{Archiving Class Files}
 
-Jar command tool helps archiving classes in a single file which will be used
-when Hadoop runs this example. This is useful because a jar file contains all
-necessary files to run a program.
+Jar command tool helps archiving classes in a single file which will
+be used when Hadoop runs this example. This is useful because a jar
+file contains all necessary files to run a program.
 
 \begin{lstlisting}
 jar -cvf exer1.jar -C /cloudmesh/exer1/dest/ /cloudmesh/exer1/
@@ -136,16 +136,16 @@ If uploading is completed, you may see file listings like:
 
 \begin{lstlisting}
 Found 10 items
--rw-r--r--   1 root supergroup      13942 2018-02-28 23:16 exer1_input/data_1000.txt
--rw-r--r--   1 root supergroup     139225 2018-02-28 23:16 exer1_input/data_10000.txt
--rw-r--r--   1 root supergroup      27868 2018-02-28 23:16 exer1_input/data_2000.txt
--rw-r--r--   1 root supergroup      41793 2018-02-28 23:16 exer1_input/data_3000.txt
--rw-r--r--   1 root supergroup      55699 2018-02-28 23:16 exer1_input/data_4000.txt
--rw-r--r--   1 root supergroup      69663 2018-02-28 23:16 exer1_input/data_5000.txt
--rw-r--r--   1 root supergroup      83614 2018-02-28 23:16 exer1_input/data_6000.txt
--rw-r--r--   1 root supergroup      97490 2018-02-28 23:16 exer1_input/data_7000.txt
--rw-r--r--   1 root supergroup     111451 2018-02-28 23:16 exer1_input/data_8000.txt
--rw-r--r--   1 root supergroup     125337 2018-02-28 23:16 exer1_input/data_9000.txt
+-rw-r--r-- 1 root supergroup  13942 2018-02-28 23:16 exer1_input/data_1000.txt
+-rw-r--r-- 1 root supergroup 139225 2018-02-28 23:16 exer1_input/data_10000.txt
+-rw-r--r-- 1 root supergroup  27868 2018-02-28 23:16 exer1_input/data_2000.txt
+-rw-r--r-- 1 root supergroup  41793 2018-02-28 23:16 exer1_input/data_3000.txt
+-rw-r--r-- 1 root supergroup  55699 2018-02-28 23:16 exer1_input/data_4000.txt
+-rw-r--r-- 1 root supergroup  69663 2018-02-28 23:16 exer1_input/data_5000.txt
+-rw-r--r-- 1 root supergroup  83614 2018-02-28 23:16 exer1_input/data_6000.txt
+-rw-r--r-- 1 root supergroup  97490 2018-02-28 23:16 exer1_input/data_7000.txt
+-rw-r--r-- 1 root supergroup 111451 2018-02-28 23:16 exer1_input/data_8000.txt
+-rw-r--r-- 1 root supergroup 125337 2018-02-28 23:16 exer1_input/data_9000.txt
 \end{lstlisting}
 
 \subsection{Run Program with a Single Input File}
