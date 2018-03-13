@@ -6,38 +6,24 @@
 \chapter{Introduction to Kubernetes}
 \index{Kubernetes}
 
-\section{Topics Covered and Learning
-Outcome}\label{topics-covered-and-learning-outcome-1}
+\section{Topics Covered and Learning Outcome}
 
 \begin{itemize}
-
-\item
-  What is Kubernetes?
-\item
-  What are containers?
-\item
-  Cluster components in Kubernetes
-\item
-  Basic Units in Kubernetes
-\item
-  Run an example with Minikube
-\item
-  Interactive online tutorial
-\item
-  Have a solid understanding of Containers and Kubernetes
-\item
-  Understand the CLuster components of Kubernetes
-\item
-  Understand the terminology of Kubernetes
-\item
-  Gain practical experience with kubernetes
-\item
-  With minikube
-\item
-  With an interactive online tutorial
+\item What is Kubernetes?
+\item What are containers?
+\item Cluster components in Kubernetes
+\item Basic Units in Kubernetes
+\item Run an example with Minikube
+\item Interactive online tutorial
+\item Have a solid understanding of Containers and Kubernetes
+\item Understand the CLuster components of Kubernetes
+\item Understand the terminology of Kubernetes
+\item Gain practical experience with kubernetes
+\item With minikube
+\item With an interactive online tutorial
 \end{itemize}
 
-\section{What is Kubernetes?}\label{what-is-kubernetes}
+\section{What is Kubernetes?}
 
 Kubernetes is an open-source platform designed to automate deploying,
 scaling, and operating application containers.
@@ -47,32 +33,24 @@ With Kubernetes, you can:
 
 \begin{itemize}
 
-\item
-  Deploy your applications quickly and predictably.
-\item
-  Scale your applications on the fly.
-\item
-  Roll out new features seamlessly.
-\item
-  Limit hardware usage to required resources only.
-\item
-  Run applications in public and private clouds.
+\item Deploy your applications quickly and predictably.
+\item Scale your applications on the fly.
+\item Roll out new features seamlessly.
+\item Limit hardware usage to required resources only.
+\item Run applications in public and private clouds.
 \end{itemize}
 
 Kubernetes is
 
 \begin{itemize}
 
-\item
-  Portable: public, private, hybrid, multi-cloud
-\item
-  Extensible: modular, pluggable, hookable, composable
-\item
-  Self-healing: auto-placement, auto-restart, auto-replication,
+\item Portable: public, private, hybrid, multi-cloud
+\item Extensible: modular, pluggable, hookable, composable
+\item Self-healing: auto-placement, auto-restart, auto-replication,
   auto-scaling
 \end{itemize}
 
-\section{What are containers?}\label{what-are-containers}
+\section{What are containers?}
 
 \begin{figure}[htbp]
 \centering
@@ -83,47 +61,44 @@ Kubernetes is
 Image source:
 \url{https://d33wubrfki0l68.cloudfront.net/e7b766e0175f30ae37f7e0e349b87cfe2034a1ae/3e391/images/docs/why_containers.svg}
 
-\section{Basic Units}\label{basic-units}
+\section{Terminology}
 
-\subsection{Pods}\label{pods}
+\begin{description}
 
-A pod (as in a pod of whales or pea pod) is a group of one or more
-containers (such as Docker containers), with shared storage/network, and
-a specification for how to run the containers. A pod's contents are
-always co-located and co-scheduled, and run in a shared context. A pod
-models an application-specific \textit{logical host}. It contains one or
-more application containers which are relatively tightly coupled. In
-a pre-container world, they would have executed on the same physical or
-virtual machine.
+\item[Pods:]\index{Pods} A pod (as in a pod of whales or pea pod) is a
+  group of one or more containers (such as Docker containers), with
+  shared storage/network, and a specification for how to run the
+  containers. A pod's contents are always co-located and co-scheduled,
+  and run in a shared context. A pod models an application-specific
+  \textit{logical host}. It contains one or more application
+  containers which are relatively tightly coupled. In a pre-container
+  world, they would have executed on the same physical or virtual
+  machine.
 
-\subsection{Services}\label{services}
+\item[Services:]\index{Kuberneted!Services} Service is an abstraction
+  which defines a logical set of Pods and a policy by which to access
+  them. Sometimes they are called a micro-service. The set of Pods
+  targeted by a Service is (usually) determined by a Label Selector.
 
-Service is an abstraction which defines a logical set of Pods and a
-policy by which to access them. Sometimes they are called a
-micro-service. The set of Pods targeted by a Service is (usually)
-determined by a Label Selector.
+\item[Deployments:]\index{Kuberneted!Deplyments} A Deployment
+  controller provides declarative updates for Pods and
+  ReplicaSets. You describe a desired state in a Deployment object,
+  and the Deployment controller changes the actual state to the
+  desired state at a controlled rate. You can define Deployments to
+  create new ReplicaSets, or to remove existing Deployments and adopt
+  all their resources with new Deployments.
 
-\subsection{Deployments}\label{deployments}
-
-A Deployment controller provides declarative updates for Pods and
-ReplicaSets. You describe a desired state in a Deployment object, and
-the Deployment controller changes the actual state to the desired state
-at a controlled rate. You can define Deployments to create new
-ReplicaSets, or to remove existing Deployments and adopt all their
-resources with new Deployments.
+\end{description}
 
 \section{Minikube}
 \index{Kubernetes!Minikube}
 
 \begin{enumerate}
-\item
-  minikube installation
-\item
-  minikube hello-minikube
+\item minikube installation
+\item minikube hello-minikube
 \end{enumerate}
 
-\subsection{\texorpdfstring{Install
-\texttt{minikube}}{Install minikube}}\label{install-minikube}
+\subsection{Install minikube}
 
 \paragraph{OSX}\label{osx}
 
@@ -171,23 +146,24 @@ Then install the drivers for KVM2,
 \begin{lstlisting}[language=bash]
 $ curl -LO https://storage.googleapis.com/minikube/releases/latest/docker-machine-driver-kvm2 && chmod +x docker-machine-driver-kvm2 && sudo mv docker-machine-driver-kvm2 /usr/bin/
 \end{lstlisting}
+%$
 
-\subsection{Start a cluster using
-Minikube}\label{start-a-cluster-using-minikube}
+\subsection{Start a cluster using Minikube}
 
-\paragraph{OSX Minikube Start}\label{osx-minikube-start}
+\paragraph{OSX Minikube Start}
 
 \begin{lstlisting}[language=bash]
 $ minikube start
 \end{lstlisting}
+%$
 
-\paragraph{Ubuntu Minikube Start}\label{ubuntu-minikube-start}
+\paragraph{Ubuntu Minikube Start}
 
 \begin{lstlisting}[language=bash]
 minikube start --vm-driver=kvm2
 \end{lstlisting}
 
-\paragraph{Windows 10 Minikube Start}\label{windows-10-minikube-start}
+\paragraph{Windows 10 Minikube Start}
 
 In this case you must run Windows PowerShell as administrator. For
 this search for the application in search and right click and click Run
@@ -200,19 +176,19 @@ $ cd  C:\Users\<username>\Documents\cloudmesh
 $ .\minikube.exe start --vm-driver="virtualbox"
 \end{lstlisting}
 
-\subsection{Create a deployment}\label{create-a-deployment}
+\subsection{Create a deployment}
 
 \begin{lstlisting}[language=bash]
 $ kubectl run hello-minikube --image=k8s.gcr.io/echoserver:1.4 --port=8080
 \end{lstlisting}
 
-\subsection{Expose the service}\label{expose-the-service}
+\subsection{Expose the service}
 
 \begin{lstlisting}[language=bash]
 $ kubectl expose deployment hello-minikube --type=NodePort
 \end{lstlisting}
 
-\subsection{Check running status}\label{check-running-status}
+\subsection{Check running status}
 
 This step is to make sure you have a pod up and running.
 
@@ -220,14 +196,13 @@ This step is to make sure you have a pod up and running.
 $ kubectl get pod
 \end{lstlisting}
 
-\subsection{Call service api}\label{call-service-api}
+\subsection{Call service api}
 
 \begin{lstlisting}[language=bash]
 $ curl $(minikube service hello-minikube --url)
 \end{lstlisting}
 
-\subsection{Take a look from
-Dashboard}\label{take-a-look-from-dashboard}
+\subsection{Take a look from Dashboard}
 
 \begin{lstlisting}[language=bash]
 $ minikube dashboard
@@ -243,15 +218,14 @@ http://192.168.99.101:30000
 Browse to http://192.168.99.101:30000 in your web browser and it will
 provide a GUI dashboard regarding minikube.
 
-\subsection{Delete the service and
-deployment}\label{delete-the-service-and-deployment}
+\subsection{Delete the service and deployment}
 
 \begin{lstlisting}[language=bash]
 $ kubectl delete service hello-minikube
 $ kubectl delete deployment hello-minikube
 \end{lstlisting}
 
-\subsection{Stop the cluster}\label{stop-the-cluster}
+\subsection{Stop the cluster}
 
 For all platforms we can use the following command.
 

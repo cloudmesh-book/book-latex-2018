@@ -4,7 +4,7 @@
 
 \FILENAME
 
-\section{Apache Spark with Docker}\label{s:apache-spark-with-docker}
+\section{Draft: Apache Spark with Docker}\label{s:apache-spark-with-docker}
 
 \subsection{Pull Image from Docker
 Repository}
@@ -67,6 +67,7 @@ spark-submit --class org.apache.spark.examples.SparkPi --master yarn-client --dr
 \begin{lstlisting}
 spark-submit --class org.apache.spark.examples.SparkPi --master yarn-client --driver-memory 1g --executor-memory 1g --executor-cores 1 $SPARK_HOME/lib/spark-examples-1.6.0-hadoop2.6.0.jar 10000
 \end{lstlisting}
+%$
 
 \subsection{Write a Word-Count Application with Spark RDD}
 
@@ -176,6 +177,7 @@ to download everything.
 \begin{lstlisting}
 docker run -it-p 8888:8888 -v $PWD:/cloudmesh/spark --name spark jupyter/pyspark-notebook
 \end{lstlisting}
+%$
 
 Here you will get the following output in the terminal.
 
@@ -229,7 +231,7 @@ necessary files.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.7\textwidth]{images/docker-spark-tut-1.png}
+\includegraphics[width=1.0\textwidth]{images/docker-spark-tut-1.png}
 \caption{Initial Spark Program}
 \end{figure}
 
@@ -277,8 +279,7 @@ to one cluster or not.
 docker stop spark
 \end{lstlisting}
 
-\subsubsection{Start Docker Container
-Again}
+\subsubsection{Start Docker Container Again}
 
 \begin{lstlisting}
 docker start spark

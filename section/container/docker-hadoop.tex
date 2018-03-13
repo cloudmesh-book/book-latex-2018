@@ -7,7 +7,7 @@
 
 \FILENAME
 
-\section{Apache Hadoop using Docker}
+\chapter{Apache Hadoop using Docker}
 
 
 In this section we will explore the 
@@ -17,9 +17,9 @@ WordCount but simple calculations are added e.g.\ minimum, maximum,
 average and standard deviation values using several input files which
 contain float numbers.
 
-\subsection{Draft: Creating the Hadoop Container}
+\section{Draft: Creating the Hadoop Container}
 
-\subsection{Hadoop from Docker}
+\section{Hadoop from Docker}
 
 Build a docker image by Dockerfile from:
 
@@ -35,7 +35,7 @@ docker build -t cloudmesh/hadoop .
 %sequenceiq/hadoop and the example with input data is added for this
 %tutorial.
 
-\subsection{Start a Hadoop container}
+\section{Start a Hadoop container}
 
 \begin{lstlisting}
 docker run -it cloudmesh/hadoop /etc/bootstrap.sh -bash
@@ -45,13 +45,13 @@ docker run -it cloudmesh/hadoop /etc/bootstrap.sh -bash
 It may take a few minutes at first to download image layers which are
 about 847MB\@.
 
-\subsection{Statistical Example with Hadoop}       
+\section{Statistical Example with Hadoop}       
 
 After a container is launched, the interactive shell prompt is given
 to run hadoop application which we have an example to get
 Min/Max/Avg/Std values by analyzing input text files.
 
-\subsubsection{Description}
+\subsection{Description}
 
 In a nutshell, this Hadoop program reads multiple files from HDFS and
 provides calculated values. We walk through every step from compiling
@@ -72,7 +72,7 @@ floating point number per line. The result file includes \textit{min,
     \centering
   \end{figure}
 
-\subsubsection{Base Location}
+\subsection{Base Location}
 
 The example is available at:
 
@@ -80,7 +80,7 @@ The example is available at:
 cd /cloudmesh/exer1
 \end{lstlisting}
 
-\subsubsection{Input Files}
+\subsection{Input Files}
 
 A test input files are available under
 \verb|/cloudmesh/exer1/input_data}|
@@ -91,7 +91,7 @@ input files.
 10 files contain 55000 lines to process and each line is a random
 float point value ranging from 0.2 to 20.0.
 
-\subsubsection{Compilation}
+\subsection{Compilation}
 
 The source code file name is \textit{MinMaxAvgStd.java} which is
 available at \textit{/cloudmesh/exer1/src/exercise/}.
@@ -110,7 +110,7 @@ javac -classpath $HADOOP_CLASSPATH -d /cloudmesh/exer1/dest /cloudmesh/exer1/src
 These commands simply prepare compiling the example code and the
 compiled class files are generated at the \textit{dest} location.
 
-\subsubsection{Archiving Class Files}
+\subsection{Archiving Class Files}
 
 Jar command tool helps archiving classes in a single file which will be used
 when Hadoop runs this example. This is useful because a jar file contains all
@@ -120,7 +120,7 @@ necessary files to run a program.
 jar -cvf exer1.jar -C /cloudmesh/exer1/dest/ /cloudmesh/exer1/
 \end{lstlisting}
 
-\subsubsection{HDFS for Input/Output}
+\subsection{HDFS for Input/Output}
 
 The input files need to be uploaded to HDFS as Hadoop runs this example by
 reading input files from HDFS.
@@ -148,7 +148,7 @@ Found 10 items
 -rw-r--r--   1 root supergroup     125337 2018-02-28 23:16 exer1_input/data_9000.txt
 \end{lstlisting}
 
-\subsubsection{Run Program with a Single Input File}
+\subsection{Run Program with a Single Input File}
 
 We are ready to run the program to calculate values from text
 files. First, we simply run the program with a single input file to
@@ -241,7 +241,7 @@ The sample results that the program produces look like this:
 The second line of the following logs indicates that the number of
 input files is 1.
 
-\subsubsection{Result for Single Input File}
+\subsection{Result for Single Input File}
 
 We reads results from HDFS by:
 
@@ -258,7 +258,7 @@ Avg:    10.225467263249385
 Std:    5.679809322880863
 \end{lstlisting}
 
-\subsubsection{Run Program with Multiple Input Files}
+\subsection{Run Program with Multiple Input Files}
 
 The first run was done pretty quickly (1440 milliseconds took
 according to the sample result above) because the input file size was
@@ -355,7 +355,7 @@ number of input files to process is 10, see the line two below:
 \end{lstlisting}
 
 
-\subsubsection{Result for Multiple Files}
+\subsection{Result for Multiple Files}
 
 \begin{lstlisting}
 hadoop fs -cat exer1_output_all/part-r-00000
@@ -370,7 +370,7 @@ Avg:    9.514884854468903
 Std:    5.553921579413547
 \end{lstlisting}
 
-\subsection{Conclusion}
+\section{Conclusion}
 
 The example program of calculating some values by reading multiple
 files shows how Map/Reduce is written by a Java programming language
