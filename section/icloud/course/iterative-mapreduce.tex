@@ -144,8 +144,8 @@ the Twister program, which uses the combine output method and determines
 at the end of every iteration whether to stop or continue with further
 iterations. The master node in Twister is the Twister Driver, and the
 slave nodes are Twister Daemons. Twister stores I/O data in partition
-files. Three MapReduce patterns in Twister: 1) Large input data, reduced
-in the end; 2) Data size is constant; 3) Data volume increases after
+files. Three MapReduce patterns in Twister: (1) Large input data, reduced
+in the end; (2) Data size is constant; (3) Data volume increases after
 MapReduce execution. Data Manipulation Tool handles data loading and
 uses metadata to keep track of data in partitions. Twister employs
 static scheduling. Fault tolerance is reserved for failures that
