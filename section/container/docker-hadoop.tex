@@ -1,3 +1,10 @@
+% chktex-file 1
+% chktex-file 36
+% chktex-file 25
+% chktex-file 13
+% chktex-file 8
+% chktex-file 26
+
 \FILENAME
 
 \section{Apache Hadoop using Docker}
@@ -6,7 +13,7 @@
 In this section we will explore the 
 Map/Reduce framework using Hadoop provided through a Docker
 container. The example that we use in this session is similar to
-WordCount but simple calculations are added e.g. minimum, maximum,
+WordCount but simple calculations are added e.g.\ minimum, maximum,
 average and standard deviation values using several input files which
 contain float numbers.
 
@@ -36,7 +43,7 @@ docker run -it cloudmesh/hadoop /etc/bootstrap.sh -bash
 \end{lstlisting}
 
 It may take a few minutes at first to download image layers which are
-about 847MB.
+about 847MB\@.
 
 \subsection{Statistical Example with Hadoop}       
 
@@ -48,7 +55,7 @@ Min/Max/Avg/Std values by analyzing input text files.
 
 In a nutshell, this Hadoop program reads multiple files from HDFS and
 provides calculated values. We walk through every step from compiling
-Java source code to reading a output file from HDFS. The idea of this
+Java source code to reading a output file from HDFS\@. The idea of this
 exercise is to get you started with Hadoop and the MapReduce
 concept. You may seen the WordCount from Hadoop official website or
 documentation and this example has a same functions (Map/Reduce)
@@ -161,13 +168,13 @@ The sample results that the program produces look like this:
 
 \begin{lstlisting}
 18/02/28 23:48:50 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
-18/02/28 23:48:50 INFO input.FileInputFormat: Total input paths to process : 1
+18/02/28 23:48:50 INFO input.FileInputFormat: Total input paths to process: 1
 18/02/28 23:48:50 INFO mapreduce.JobSubmitter: number of splits:1
 18/02/28 23:48:50 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1519877569596_0002
 18/02/28 23:48:51 INFO impl.YarnClientImpl: Submitted application application_1519877569596_0002
 18/02/28 23:48:51 INFO mapreduce.Job: The url to track the job: http://f5e82d68ba4a:8088/proxy/application_1519877569596_0002/
 18/02/28 23:48:51 INFO mapreduce.Job: Running job: job_1519877569596_0002
-18/02/28 23:48:56 INFO mapreduce.Job: Job job_1519877569596_0002 running in uber mode : false
+18/02/28 23:48:56 INFO mapreduce.Job: Job job_1519877569596_0002 running in uber mode: false
 18/02/28 23:48:56 INFO mapreduce.Job:  map 0% reduce 0%
 18/02/28 23:49:00 INFO mapreduce.Job:  map 100% reduce 0%
 18/02/28 23:49:05 INFO mapreduce.Job:  map 100% reduce 100%
@@ -275,13 +282,13 @@ number of input files to process is 10, see the line two below:
 
 \begin{lstlisting}
 18/02/28 23:17:18 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
-18/02/28 23:17:18 INFO input.FileInputFormat: Total input paths to process : 10
+18/02/28 23:17:18 INFO input.FileInputFormat: Total input paths to process: 10
 18/02/28 23:17:18 INFO mapreduce.JobSubmitter: number of splits:10
 18/02/28 23:17:18 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1519877569596_0001
 18/02/28 23:17:19 INFO impl.YarnClientImpl: Submitted application application_1519877569596_0001
 18/02/28 23:17:19 INFO mapreduce.Job: The url to track the job: http://f5e82d68ba4a:8088/proxy/application_1519877569596_0001/
 18/02/28 23:17:19 INFO mapreduce.Job: Running job: job_1519877569596_0001
-18/02/28 23:17:24 INFO mapreduce.Job: Job job_1519877569596_0001 running in uber mode : false
+18/02/28 23:17:24 INFO mapreduce.Job: Job job_1519877569596_0001 running in uber mode: false
 18/02/28 23:17:24 INFO mapreduce.Job:  map 0% reduce 0%
 18/02/28 23:17:32 INFO mapreduce.Job:  map 40% reduce 0%
 18/02/28 23:17:33 INFO mapreduce.Job:  map 60% reduce 0%
