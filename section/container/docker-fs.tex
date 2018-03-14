@@ -2,21 +2,22 @@
 % chktex-file 8
 % chktex-file 11
 % chktex-file 32
+% chktex-file 18
+% chktex-file 25
+% chktex-file 36
 
-\chapter{Running Docker on FutureSystems}\label{S:docker-fg}
-\index{Docker!FUturesystems}
+\chapter{Docker and Docker Swarm on FutureSystems}\label{S:docker-fg}
+\index{Docker!Futuresystems}
 \index{Futuresystems!Docker}
 
 \FILENAME
-
-\section{Overview}
 
 \begin{IU}
 
 This section is for IU students only that take classes with us.
 \end{IU}
 
-This documentation introduces how to run Docker container on
+This section introduces how to run Docker container on
 FutureSystems. Currently we have deployed Docker swarm on Echo.
 
 \section{Getting Access}
@@ -109,7 +110,7 @@ runs a script to start the service inside the container with necessary
 parameters. The option ``-p 9001:8888'' maps the service port inside the
 container (8888) to an external port of the cluster node (9001) so the
 service could be accessed from the Internet. In this example, you can
-then visit the URL:
+then visit the URL\@:
 
 \begin{quote}
 \url{http://$ECHO:9001}
@@ -196,8 +197,6 @@ the swarm cluster.
 
 \paragraph{Publish an image privately within the swarm cluster}
 
-\TODO{Fugang: create image for distribution}
-
 Once the image is published and available to the swarm cluster, you
 could start a new service from the image similar to the Jupyter Notebook
 example.
@@ -205,13 +204,9 @@ example.
 \subsection{Exercises}
 
 \begin{exercise}
-
 Obtain an account on future systems.
-
 \end{exercise}
 
 \begin{exercise}
-
 Create a REST service with swagger codegen and run it on the echo cloud.
-
-\end{exercise}
+ \end{exercise}

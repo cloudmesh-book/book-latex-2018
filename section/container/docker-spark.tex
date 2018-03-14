@@ -1,4 +1,10 @@
-\section{Apache Spark with Docker}\label{s:apache-spark-with-docker}
+% chktex-file 1
+% chktex-file 18
+% chktex-file 25
+
+\FILENAME
+
+\section{Draft: Apache Spark with Docker}\label{s:apache-spark-with-docker}
 
 \subsection{Pull Image from Docker
 Repository}
@@ -31,7 +37,7 @@ docker run -d -h sandbox sequenceiq/spark:1.6.0 -d
 \subsection{Run Spark}
 
 After a container is launched, we can run Spark in the following two
-modes: 1) yarn-client and 2) yarn-cluster. The differences between the
+modes: (1) yarn-client and (2) yarn-cluster. The differences between the
 two modes can be found here:
 https://spark.apache.org/docs/latest/running-on-yarn.html
 
@@ -61,6 +67,7 @@ spark-submit --class org.apache.spark.examples.SparkPi --master yarn-client --dr
 \begin{lstlisting}
 spark-submit --class org.apache.spark.examples.SparkPi --master yarn-client --driver-memory 1g --executor-memory 1g --executor-cores 1 $SPARK_HOME/lib/spark-examples-1.6.0-hadoop2.6.0.jar 10000
 \end{lstlisting}
+%$
 
 \subsection{Write a Word-Count Application with Spark RDD}
 
@@ -170,12 +177,13 @@ to download everything.
 \begin{lstlisting}
 docker run -it-p 8888:8888 -v $PWD:/cloudmesh/spark --name spark jupyter/pyspark-notebook
 \end{lstlisting}
+%$
 
 Here you will get the following output in the terminal.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.7\textwidth]{images/docker-spark-jupyter.png}
+\includegraphics[width=1.0\textwidth]{images/docker-spark-jupyter.png}
 \caption{Terminal Output}
 \end{figure}
 
@@ -186,7 +194,7 @@ You will see the following output in the browser, (Use Google Chrome)
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.7\textwidth]{images/docker-spark-jup-1.png}
+\includegraphics[width=1.0\textwidth]{images/docker-spark-jup-1.png}
 \caption{Jupyter Notebook in Browswer}
 \end{figure}
 
@@ -195,7 +203,7 @@ Click python3 in the new menu.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.7\textwidth]{images/docker-spark-jup-2.png}
+\includegraphics[width=1.0\textwidth]{images/docker-spark-jup-2.png}
 \caption{Create a new python file}
 \end{figure}
 
@@ -212,7 +220,7 @@ Now let's create the following content.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.7\textwidth]{images/docker-spark-jup-3.png}
+\includegraphics[width=1.0\textwidth]{images/docker-spark-jup-3.png}
 \caption{Create a new python file}
 \end{figure}
 
@@ -223,7 +231,7 @@ necessary files.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.7\textwidth]{images/docker-spark-tut-1.png}
+\includegraphics[width=1.0\textwidth]{images/docker-spark-tut-1.png}
 \caption{Initial Spark Program}
 \end{figure}
 
@@ -232,7 +240,7 @@ and we train the kmeans algorithm.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.7\textwidth]{images/docker-spark-tut-4.png}
+\includegraphics[width=1.0\textwidth]{images/docker-spark-tut-4.png}
 \caption{Train KMeans}
 \end{figure}
 
@@ -246,7 +254,7 @@ The predict term predicts the cluster id which it belongs to.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.7\textwidth]{images/docker-spark-tut-5.png}
+\includegraphics[width=1.0\textwidth]{images/docker-spark-tut-5.png}
 \caption{Predict KMeans Clusters-1}
 \end{figure}
 
@@ -255,13 +263,13 @@ to one cluster or not.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.7\textwidth]{images/docker-spark-tut-2.png}
+\includegraphics[width=1.0\textwidth]{images/docker-spark-tut-2.png}
 \caption{Predict KMeans Clusters-2}
 \end{figure}
-
+ 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.7\textwidth]{images/docker-spark-tut-3.png}
+\includegraphics[width=1.0\textwidth]{images/docker-spark-tut-3.png}
 \caption{Predict KMeans Clusters-3}
 \end{figure}
 
@@ -271,8 +279,7 @@ to one cluster or not.
 docker stop spark
 \end{lstlisting}
 
-\subsubsection{Start Docker Container
-Again}
+\subsubsection{Start Docker Container Again}
 
 \begin{lstlisting}
 docker start spark

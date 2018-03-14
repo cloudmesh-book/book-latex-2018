@@ -1,9 +1,9 @@
 # Using Kubernetes on FutureSystems
 \label{s:kubernetes-fs}
+\index{Kubernetes!Futuresystems}
+\index{Futuresystems!Kubernetes}
 
-## Overview
-
-This documentation introduces you on how to use the Kubernetes cluster
+This section introduces you on how to use the Kubernetes cluster
 on FutureSystems.  Currently we have deployed kubernetes on our
 cluster called *echo*.
 

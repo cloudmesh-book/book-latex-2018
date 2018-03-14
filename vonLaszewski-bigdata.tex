@@ -22,8 +22,8 @@
 \newcommand{\EMAIL}{laszewski@gmail.com}
 \newcommand{\LOCATION}{%
 ~\\
+\url{http://cyberaide.org/papers/vonLaszewski-bigdata.pdf} \\
 \url{http://cyberaide.org/papers/vonLaszewski-bigdata.html} \\
-\url{http://cyberaide.org/papers/vonLaszewski-bigdata.pdf}
 %\url{https://tinyurl.com/vonLaszewski-handbook}
 }
 
@@ -181,15 +181,27 @@
 \include{section/msg/mqtt}
 \include{section/msg/graphql}
 
+\chapterimage{container.png} 
 \part{Cloud Container Technologies}
 
-\TODO{move all section includes here for releasable container lectures}
+\input{section/container/container}
 
-\include{section/container/container}
+\input{section/container/docker-intro}
+\input{section/container/docker-local}
+\input{section/container/docker-fs}
 
-\include{section/container/docker-kubernetes-installation}
+\chapterimage{rest.png} % Chapter heading image
+\input{section/container/docker-rest}
 
-\include{section/container/docker-fs}
+\chapterimage{container.png} % Chapter heading image
+\input{section/container/kubernetes-intro}
+\input{section/container/kubernetes-fs}
+
+\input{section/container/docker-hadoop}
+\input{section/container/docker-spark.tex}
+
+\input{section/container/notex.tex}
+
 
 \part{Cloud Virtual Machine Technologies}
 
@@ -249,10 +261,7 @@
 
 
 
-\part{Draft Chapters and Parts}
-
-
-\include{part/container-draft}
+\part{------- Draft Chapters and Parts -------}
 
 
 \part{Draft: Operating System}
