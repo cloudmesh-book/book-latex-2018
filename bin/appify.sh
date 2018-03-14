@@ -1,90 +1,28 @@
 #!/bin/bash
 
-#
-# appify -- convert your non-interactive shell script into a Mac OS X application
-# Copyright (C) 2010  Adam Backstrom
-# 
-# This program is free software; you can redistribute it and/or
-# modify it under the terms of the GNU General Public License
-# as published by the Free Software Foundation; either version 2
-# of the License, or (at your option) any later version.
-# 
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-# 
-# You should have received a copy of the GNU General Public License
-# along with this program; if not, write to the Free Software
-# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
-#
-
-args=$(getopt h $*)
-
-function usage {
-    echo "Usage: $0 [-h] script.sh target.app"
-    exit 2
-}
-
-if [ $? != 0 ]; then
-    usage
-fi
-
-set -- $args
-for i ; do
-    case "$i"
-    in
-        -h) usage ; shift ;;
-        --) shift ; break ;;
-    esac
-done
-
-if [ $# != 2 ]; then
-    usage
-fi
-
-SCRIPT=$1
-TARGET=$2
-
-if [ -d "$TARGET" ]; then
-    echo "$TARGET exists, exiting" 1>&2
-    exit 3
-fi
-
-SCRIPTSIZE=$(ls -l "$SCRIPT" | awk '{print $5}')
-
-if [ $SCRIPTSIZE -lt 28 ]; then
-    echo -e "Script smaller than size allowed by OS. Please pad to 28 characters." 1>&2
-    exit 4
-fi
-
-#
-# done checking args; create the app
-#
-
-mkdir -p "$TARGET/Contents/MacOS"
-mkdir -p "$TARGET/Contents/Resources"
-
-cat <<EOF >"$TARGET/Contents/Info.plist"
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-    <key>CFBundleExecutable</key>
-    <string>run.sh</string>
-    <key>CFBundleIconFile</key>
-    <string></string>
-    <key>CFBundleInfoDictionaryVersion</key>
-    <string>1.0</string>
-    <key>CFBundlePackageType</key>
-    <string>APPL</string>
-    <key>CFBundleSignature</key>
-    <string>????</string>
-    <key>CFBundleVersion</key>
-    <string>1.0</string>
-</dict>
-</plist>
+if [ "$1" = "-h" -o "$1" = "--help" -o -z "$1" ]; then cat <<EOF
+appify v3.0.1 for Mac OS X - http://mths.be/appify
+Creates the simplest possible Mac app from a shell script.
+Appify takes a shell script as its first argument:
+    `basename "$0"` my-script.sh
+Note that you cannot rename appified apps. If you want to give your app
+a custom name, use the second argument:
+    `basename "$0"` my-script.sh "My App"
+Copyright (c) Thomas Aylott <http://subtlegradient.com/>
+Modified by Mathias Bynens <http://mathiasbynens.be/>
 EOF
+exit; fi
 
-cp "$SCRIPT" "$TARGET/Contents/MacOS/run.sh"
-chmod 755 "$TARGET/Contents/MacOS/run.sh"
+APPNAME=${2:-$(basename "$1" ".sh")}
+DIR="$APPNAME.app/Contents/MacOS"
+
+if [ -a "$APPNAME.app" ]; then
+	echo "$PWD/$APPNAME.app already exists :("
+	exit 1
+fi
+
+mkdir -p "$DIR"
+cp "$1" "$DIR/$APPNAME"
+chmod +x "$DIR/$APPNAME"
+
+echo "$PWD/$APPNAME.app"
