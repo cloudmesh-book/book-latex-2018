@@ -317,8 +317,8 @@ Could we improve this entry to achieve your best? We observe:
 
 \begin{enumerate}
 \item
-  The author field has a wrong entry as the , is to be replaced by an
-  and.
+  The author field has a wrong entry as the \verb|,| is to be replaced by an
+  \verb|and|.
 \item
   The author field has authors and thus must not have a \{\{ \}\}
 \item
@@ -329,7 +329,7 @@ Could we improve this entry to achieve your best? We observe:
 Let us investigate a bit more while searching for the title. We find
 
 \begin{enumerate}
-\def\labelenumi{\Alph{enumi})}
+\def\labelenumi{\Alph{enumi}}
 \item
   \url{https://www.google.com/url?sa=t\&rct=j\&q}=\&esrc=s\&source=web\&cd=1\&ved=0ahUKEwj\_ytSA-PDRAhUH8IMKHaomC-oQFggaMAA\&url=https\%3A\%2F\%2Fresearch.google.com\%2Farchive\%2Fsawzall-sciprog.pdf\&usg=AFQjCNHSSfKBwbxVAVPQ0td4rTjitKucpA\&sig2=vbiVzi36B3gGFjIzlUKBDA\&bvm=bv.146073913,d.amc
 \item
@@ -338,17 +338,17 @@ Let us investigate a bit more while searching for the title. We find
   \url{http://dl.acm.org/citation.cfm?id=1239658}
 \end{enumerate}
 
-Let us look at A)
+Let us look at (A)
 
 As you can see from the url this is actually some redirection to a google
 web page which probably is replaced by B as its from google research. So
-let us look at B)
+let us look at (B)
 
 Now when you look at the link we find the url
 \url{https://research.google.com/archive/sawzall-sciprog.pdf} which
 redirects you to the PDF paper.
 
-When we go to B) we find surprisingly a bibtex entry as follows:
+When we go to (B) we find surprisingly a bibtex entry as follows:
 
 \begin{verbatim}
 @article{61,
@@ -362,11 +362,11 @@ When we go to B) we find surprisingly a bibtex entry as follows:
 }
 \end{verbatim}
 
-Now we could say let us be satisfied, but C) seems to be even more
+Now we could say let us be satisfied, but (C) seems to be even more
 interesting as its from a major publisher. So lats just make sure we
-look at C)
+look at (C)
 
-If you go to C, you find under the colored box entitled Tools and
+If you go to (C), you find under the colored box entitled Tools and
 Resources a link called \textbf{bibtex}. Thus it seems a good idea to
 click on it. This will give you:
 
@@ -394,8 +394,8 @@ click on it. This will give you:
 Now we seem to be at a position to combine our search result as neither
 entry is sufficient. As the doi number properly specifies a paper (look
 up what a doi is) we can replace the url with one that we find online,
-such as the one we found in A) Next we see that all field sin B are
-already covered in C, so we take C) and add the url. Now as the label is
+such as the one we found in (A) Next we see that all field sin B are
+already covered in C, so we take (C) and add the url. Now as the label is
 great and uniform for ACM, but for us a bit less convenient as its
 difficult to remember, we just change it while for example using
 authors, title, and year information. let us also make sure to do mostly
@@ -994,7 +994,7 @@ replaced with dashes or removed completely.
 The month of publication or, if unpublished, the month of creation. Use
 three-letter abbreviations for this field in order to account for
 languages that do not capitalize month names. Additional information for
-the day can be included as follows: aug \#``\textasciitilde{}10,''
+the day can be included as follows: \verb|aug#~``10,''|
 \item[publisher:]
 The publisher's name
 \item[series:]
@@ -1109,7 +1109,7 @@ see:
 
 We do not know what needs to be done in case you need to make changes to
 the references. Please report back your experiences. To avoid issues we
-recommend that you use LaTeX. and not MSWord.
+recommend that you use \LaTeX~and not MSWord.
 
 \subsubsection{BibTex4Word}
 \index{bibtex4word}

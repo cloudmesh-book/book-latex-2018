@@ -222,7 +222,7 @@ convert LaTeX to mathematical formulas.
 
 Often researchers may be initially overwhelmed with all the features
 that \LaTeX~provides. However, it is much simpler than you initially
-believe. In Chapter ?? we introduced you towards using an article
+believe. In our \LaTeX~sections we introduced you towards using an article
 template. As a template is provided you can just look at the elements
 in that article and modify or copy them while adapting the
 content. Thus, it is more like filling out a form. You do not have to
@@ -371,23 +371,21 @@ never worry about the placement as LaTeX does typically a very
 good job of doing this.:
 
 \begin{verbatim}
-In Figure~\ref{F:flow} we show a black and white graph about ... .
+In Figure~\ref{F:flow} we show a black and white graph about \ldots
 
 \begin{figure}[htb]
   \includegraphics[width=1.0\columnwidth]{images/gregor.png}
-  \caption{A demonstration in the scalability of PDF images.}
-  \label{F:flow}
+  \caption{A demonstration in the scalability of PDF images.}\label{F:flow}
 \end{figure}
 \end{verbatim}
 
 Which results in the following:
 \begin{quote}
-In Figure~\ref{F:flow} we show a black and white graph about ... .
+In Figure~\ref{F:flow} we show a black and white graph about \ldots
 
 \begin{figure}[htb]
   \includegraphics[width=1.0\columnwidth]{images/i523-overview.pdf}
-  \caption{A demonstration in the scalability of PDF images.}
-  \label{F:flow}
+  \caption{A demonstration in the scalability of PDF images.}\label{F:flow}
 \end{figure}
 \end{quote}
 
@@ -448,12 +446,11 @@ included in latex as shown in Table~\ref{T:elements}.
 \begin{center}
 \begin{tabular}{ c c c }
  column1  & column2  & column3 \\
-\hline
-\hline
+\toprule
  element1 & element2 & element3 \\ 
  element4 & element5 & element6 \\  
  element7 & element8 & element9 \\
-\hline
+\bottomrule
 \end{tabular}
 \end{center}
 \end{table}
@@ -465,12 +462,11 @@ included in latex as shown in Table~\ref{T:elements}.
 \begin{center}
 \begin{tabular}{ c c c }
  column1  & column2  & column3 \\
-\hline
-\hline
+\toprule
  element1 & element2 & element3 \\ 
  element4 & element5 & element6 \\  
  element7 & element8 & element9 \\
-\hline
+\bottomrule
 \end{tabular}
 \end{center}
 \end{table}
@@ -584,12 +580,12 @@ $ A_{m,n} =
 
 To produce high quality images the programs PowerPoint and omnigraffle
 on OSX are recommended. When using powerpoint please keep the image
-ratio to 4x3 as they produce nice size graphics which you also can use
+ratio to $4\times 3$ as they produce nice size graphics which you also can use
 in your presentations. When using other rations they may not fit in
 presentations and thus you may increase unnecessarily your work. We do
 not recommend vizio as it is not universally available and produces
 images that in case you have to present them in a slide presentation
-does not easily reformat if you do not use 4x3 aspect ratio.
+does not easily reformat if you do not use $4\times 3$ aspect ratio.
 
 Naturally, graphics should be provided in SVG or PDF format so they can
 scale well when we look at the final PDF. Including PNG, gif, or jpeg
@@ -732,7 +728,7 @@ so you do not block other people from editing the paragraph.
 Unfortunately, many useful features got lost in the new google docs.
 However, it is great to collaborate quickly online, share thoughts and
 even write your latex documents together if you like (just copy your
-work in a file offline and use latex to compile it ;-) )
+work in a file offline and use latex to compile it).
 
 The biggest issue we have with Google Docs is that it does not allow the
 support of 2 column formats, that the bibliography integration is
@@ -781,8 +777,7 @@ on OSX for \LaTeX.
 
 \begin{figure}[!htb]
   \centering\includegraphics[width=8cm]{images/aquamacs.png}
-  \caption{Aquamacs}
-  \label{F:aquamacs}
+  \caption{Aquamacs}\label{F:aquamacs}
 \end{figure}
 
 
@@ -808,8 +803,7 @@ version.
 
 \begin{figure}[!htb]
   \centering\includegraphics[width=8cm]{images/lyx.png}
-  \caption{Lyx}
-  \label{F:lyx}
+  \caption{Lyx}\label{F:lyx}
 \end{figure}
 
 Using the ACM templates is documented here:
@@ -1026,7 +1020,7 @@ author= {{National Institute of Health}},
   another common issue in data science.
 \item
   do not use \textbar{} \& and other latex characters in bibtex
-  references, instead use , and the word and
+  references, instead use \verb|,| and the word \verb|and|
 \item
   If you need to use \_ it is \_ but if you use urls leave them as is
 \item
@@ -1110,8 +1104,7 @@ sudo make install
 \index{lacheck}
 \index{\LaTeX!lacheck}
 
-Lacheck allows to finding common mistakes in \LaTeX~
-documents. We recommend that you use it to check your latex files.
+Lacheck allows to finding common mistakes in \LaTeX~documents. We recommend that you use it to check your latex files.
 
 You can invoke it as follows
 
