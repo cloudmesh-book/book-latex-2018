@@ -21,8 +21,8 @@ reproducibility; publishing an appliance used to obtain experimental
 results will go a long way to allowing others to reproduce and build on
 your research easily.
 
-To deploy distributed applications on several~Chameleon instances,
-complex appliances combine an~image and a~template describing how the
+To deploy distributed applications on several Chameleon instances,
+complex appliances combine an image and a template describing how the
 cluster should be configured and contextualized. You can read more about
 them in the
 \href{https://www.chameleoncloud.org/docs/complex-appliances/}{Complex
@@ -31,7 +31,7 @@ Appliances documentation}.
 \subsubsection{What is the Appliance Catalog?}\label{what-is-the-chameleon-appliance-catalog}
 
 \href{https://www.chameleoncloud.org/appliances/}{The Chameleon
-Appliance Catalog}~is a repository that allows users to discover,
+Appliance Catalog} is a repository that allows users to discover,
 publish, and share appliances. The appliance catalog contains useful
 images of both bare metal and virtual machine appliances supported by
 the Chameleon team as well appliances contributed by users.
@@ -41,11 +41,11 @@ the Chameleon team as well appliances contributed by users.
 The new Appliance Catalog allows you to easily publish and share your
 own appliances so that others can discover them and use them either to
 reproduce the research of others or as a basis for their own research.
-~Before creating your own appliance it is advisable to review other
+ Before creating your own appliance it is advisable to review other
 appliances on
-the~\href{https://www.chameleoncloud.org/appliances/}{Chameleon
-Appliance Catalog}~in order to get an idea of the categories you will
-want to contribute and what others have done.~
+the \href{https://www.chameleoncloud.org/appliances/}{Chameleon
+Appliance Catalog} in order to get an idea of the categories you will
+want to contribute and what others have done. 
 
 Once you are ready to proceed, an appliance can be contributed to
 Chameleon in the following steps:
@@ -69,7 +69,7 @@ Chameleon in the following steps:
   appliance, but may want to provide all three.
 \item
   Go to
-  the~\href{https://www.chameleoncloud.org/appliances/create/}{Appliance
+  the \href{https://www.chameleoncloud.org/appliances/create/}{Appliance
   Catalog Create Appliance web form}, fill out, and submit the form. Be
   prepared to provide the following information: a descriptive name
   (this sometimes requires some thought!), author and support contact,
@@ -89,23 +89,23 @@ enter your template instead in the dedicated text box.
 
 As always, if you encounter any problems or want to share with us
 additional improvements we should do to the process, please don't
-hesitate to~\href{https://www.chameleoncloud.org/help/}{submit a
-ticket}.~
+hesitate to \href{https://www.chameleoncloud.org/help/}{submit a
+ticket}. 
 
 \subsubsection{How can I manage an appliance on Appliance
 Catalog?}\label{how-can-i-manage-an-appliance-on-chameleon-appliance-catalog}
 
-If you are the owner of the appliance,~you can edit~the appliance
-data,~such as the description or the support information. Browse to the
+If you are the owner of the appliance, you can edit the appliance
+data, such as the description or the support information. Browse to the
 appliance that you want to edit and view its Details page. At the top
 right of the page is an Edit button. You will be presented with the same
 web form as when creating the appliance, pre-filled with the appliances
 current information. Make changes as necessary and click Save at the
 bottom of the page.
 
-And finally, you can delete appliances you had made available.~{Browse
-to the appliance that you want to delete~and click Edit on the
-Appliance~Details page. At the bottom of the page is a Delete button.
+And finally, you can delete appliances you had made available. {Browse
+to the appliance that you want to delete and click Edit on the
+Appliance Details page. At the bottom of the page is a Delete button.
 You will be asked to confirm once more that you do want to delete this
 appliance}. After confirming, the appliance will be removed and no
 longer listed on the Appliance Catalog.
@@ -115,7 +115,7 @@ appliance?}\label{why-are-there-different-image-ids-for-kvmtacc-chitacc-and-chiu
 
 The three clouds forming the Chameleon testbed are fully separated, each
 having its own Glance image repository. The same appliance
-image~uploaded to the three clouds will produce three different image
+image uploaded to the three clouds will produce three different image
 IDs.
 
 In addition, it is sometimes needed to customize an appliance image for
@@ -123,14 +123,14 @@ each site, resulting in slightly different image files.
 
 \subsubsection{Can I use another operating system on bare-metal?}\label{can-i-useubuntudebian-oranother-operating-system-rather-than-centos-on-bare-metal}
 
-The recommended appliance for Chameleon is CentOS 7~(supported by
+The recommended appliance for Chameleon is CentOS 7 (supported by
 Chameleon staff), or appliances built on top of it.\\
-These appliances provide~Chameleon-specific customizations, such as
-login using the~cc account, the~cc-checks utility to verify hardware
+These appliances provide Chameleon-specific customizations, such as
+login using the cc account, the cc-checks utility to verify hardware
 against our resource registry, gathering of metrics, etc.
 
-Since 2016, we also provide and~support Ubuntu 14.04 and
-16.04~appliances with the same functionality.
+Since 2016, we also provide and support Ubuntu 14.04 and
+16.04 appliances with the same functionality.
 
 \subsection{Bare Metal Troubleshooting}\label{bare-metal-troubleshooting}
 
@@ -160,11 +160,11 @@ help desk}.
 \subsubsection{Why are my OpenStack KVM instances failing to
 launch?}\label{why-are-my-openstack-kvm-instances-failing-to-launch}
 
-If you get an error stating that~\textbf{No valid host was found}, it
+If you get an error stating that \textbf{No valid host was found}, it
 might be caused by a lack of resources in the cloud. The Chameleon staff
 continuously monitors the utilization of the testbed, but there might be
 times when no more resources are available. If the error persists,
-please~\href{https://www.chameleoncloud.org/user/help/}{open a ticket
+please \href{https://www.chameleoncloud.org/user/help/}{open a ticket
 with our help desk}.
 
 \subsubsection{Why can't I ping or SSH to my
@@ -172,24 +172,24 @@ instance?}\label{why-cant-i-ping-or-ssh-to-my-instance}
 
 While the possibility that the system is being taking over by nanites
 should not be discounted too easily, it is always prudent to first
-check~for the~following issues:
+check for the following issues:
 
 \begin{itemize}
 \item
-  Do you have a floating IP associated with your instance?~By default,
+  Do you have a floating IP associated with your instance? By default,
   instances do not have publicly-accessible IP addresses assigned. See
   the \textbf{Managing Virtual Machine Instances} section in the
   \href{https://www.chameleoncloud.org/docs/user-guides/openstack-kvm-user-guide/}{User
   Guide}.
 \item
-  Does your security group allow incoming ICMP (e.g. ping) traffic?~By
+  Does your security group allow incoming ICMP (e.g. ping) traffic? By
   default, firewall rules do not allow ping to your instances. If you
   wish to enable it, see the \textbf{Firewall (Access Security)} section
   in the
   \href{https://www.chameleoncloud.org/docs/user-guides/openstack-kvm-user-guide/}{User
   Guide}.
 \item
-  Does your security group allow incoming SSH (TCP port 22) traffic?~By
+  Does your security group allow incoming SSH (TCP port 22) traffic? By
   default, firewall rules do not allow SSH to your instances. If you
   wish to enable it, see the \textbf{Firewall (Access Security)} section
   in the
@@ -197,8 +197,8 @@ check~for the~following issues:
   Guide}.
 \end{itemize}
 
-~If none of these~solve~your problem,
-please~\href{https://www.chameleoncloud.org/user/help/}{open a ticket
-with our help desk}, and send~us the results of the above (and any
+ If none of these solve your problem,
+please \href{https://www.chameleoncloud.org/user/help/}{open a ticket
+with our help desk}, and send us the results of the above (and any
 evidence of nanites you find as well).
 

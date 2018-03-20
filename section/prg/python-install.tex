@@ -75,7 +75,7 @@ another student had 3 different installations, all of which confliced
 with each other as they were not set up properly.
 
 We recommend that you inspect if you have a files such as
-\textasciitilde{}/.bashrc or \textasciitilde{}/.bashrc\_profile in your
+\verb|~/.bashrc| or \verb|~/.bashrc_profile| in your
 home directory and identify if it activates various versions of python
 on your computer. If so you could try to deactivate them while
 out-commenting the various versions with the \# character at the
@@ -174,8 +174,8 @@ If you see a response pyenv is installed and you can proceed with the
 next steps.
 
 \begin{description}
-\item[Please remember whenever you modify .bashrc or]
-.bash\_profile you need to start a new terminal.
+\item[Please remember whenever you modify \verb|.bashrc| or]
+\verb|.bash_profile| you need to start a new terminal.
 \end{description}
 
 \paragraph{Install Different Python
@@ -232,7 +232,7 @@ rather than the explicit version.
 \paragraph{Set up the Shell}\label{set-up-the-shell}
 
 To make all work smoothly from your terminal, you can include the
-following in your .bashrc files:
+following in your \verb|.bashrc| files:
 
 \begin{verbatim}
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
@@ -267,7 +267,7 @@ now easy. Simply use the following commands:
 \end{verbatim}
 
 To make it even easier, you can add the following lines to your
-.bash\_profile file:
+\verb|.bash_profile| file:
 
 \begin{verbatim}
 alias ENV2="pyenv activate ENV2"
@@ -388,7 +388,7 @@ pyenv install anaconda3-4.3.1
 \end{verbatim}
 
 To switch more easily we recommend that you use the following in your
-.bash\_profile file:
+\verb|.bash_profile| file:
 
 \begin{verbatim}
 alias ANA="pyenv activate anaconda3-4.3.1"
@@ -447,7 +447,7 @@ To activate it you can now use:
 $ pyenv ANA
 \end{verbatim}
 
-However, anaconda may modify your .bashrc or .bash\_profile files and ,
+However, anaconda may modify your \verb|.bashrc| or \verb|.bash_profile| files and
 may result in incompatibilities with other python versions. For this
 reason we recommend not to use it. If you find ways to get it to work
 reliably with other versions, please let us know and we update this
@@ -508,6 +508,6 @@ To activate it you can use the command:
 $ source ~/ENV/bin/activate
 \end{verbatim}
 
-you can put this command in your .bashrc or .bash\_profile files so you
+you can put this command in your \verb|.bashrc| or \verb|.bash_profile| files so you
 do not forget to activate it. Instructions for this can be
-found in our lesson on Linux \textless{}bashrc\textgreater{}.
+found in our lesson on Linux \verb|bashrc|.

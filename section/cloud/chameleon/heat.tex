@@ -20,7 +20,7 @@ clusters with ``one click''. This tool requires not just a simple image
 (i.e., appliance) but also a document, called a template, that contains
 the information needed to orchestrate the deployment and configuration
 of such clusters. We call this image + template combination
-complex~appliance because it consists of more than just the image (i.e.,
+complex appliance because it consists of more than just the image (i.e.,
 appliance).
 
 \subsection{Supporting Complex Appliances}
@@ -41,7 +41,7 @@ hostname in the fstab file. As you can tell from this description,
 images used for complex appliances are typically configured such that
 they can be booted into any role required on the one-click cluster we
 are booting; in this case the image will have both the software for NFS
-server node and client~node.
+server node and client node.
 
 Since complex appliances in Chameleon are currently implemented using
 the \href{https://wiki.openstack.org/wiki/Heat}{OpenStack Heat}
@@ -89,9 +89,9 @@ steps:
   Catalog} and identify the appliance you want to launch. In our case
   you can go straight to the
   \href{https://www.chameleoncloud.org/appliances/25/}{NFS
-  share~appliance}; click on it to open its details page. You will see a
+  share appliance}; click on it to open its details page. You will see a
   ``Launch'' button and a ``Get Template'' button. Follow the ``Get
-  Template'' link and copy its url to the clipboard --~you will need it
+  Template'' link and copy its url to the clipboard -- you will need it
   in the following steps.
 \item
   Click on the ``Launch Complex Appliance at CHI@TACC'' or ``Launch
@@ -114,7 +114,7 @@ We will deploy the NFS appliance described earlier; it will consist of a
 server node and two client nodes. Change the template source field to
 URL, and paste the URL of the
 \href{https://www.chameleoncloud.org/appliances/api/appliances/25/template}{NFS
-share~template} (if you don't have it in your clipboard anymore you will
+share template} (if you don't have it in your clipboard anymore you will
 need to go back to the appliance and get it by clicking on ``Get
 template'' again).
 
@@ -147,8 +147,8 @@ visualization of the deployed resources, as pictured below. The single
 machine inside a circle represents the NFS server instance. The rack of
 machine represents the group of NFS client instances (in this case, a
 group composed of two instances). The server's floating IP (the public
-IP assigned to a resource) is represented by an IP in a circle; an~IP in
-a circle is also used to represent the association of the IP with~the
+IP assigned to a resource) is represented by an IP in a circle; an IP in
+a circle is also used to represent the association of the IP with the
 NFS server instance (not the greatest idea to use the same symbol for
 both the IP and the association -- we agree but can't do much about it
 at the moment). Blow off some steam by dragging the visualization across
@@ -160,9 +160,9 @@ You can now ssh to the server using the floating IP just as you do with
 regular instances (use the cc account). The client does not have a
 floating IP attached to it (as per the visualization above) but you can
 connect to it via the server node with the client's private IP (connect
-to the server with \texttt{ssh\ -A}~to enable the SSH agent forwarding
+to the server with \texttt{ssh\ -A} to enable the SSH agent forwarding
 after loading your key to your SSH agent
-with~\texttt{ssh-add\ \textless{}path-to-your-key\textgreater{}}).
+with \texttt{ssh-add\ \textless{}path-to-your-key\textgreater{}}).
 
 You can find out the information about the IPs and other things if you
 click the ``Overview'' tab and look in the ``Outputs'' section. Under
@@ -206,7 +206,7 @@ section you can see four resources defined:
 \item
   nfs\_server\_floating\_ip
 \item
-  nfs\_server~
+  nfs\_server 
 \item
   nfs\_server\_ip\_association
 \item
@@ -246,8 +246,8 @@ will generally provide additional parameters to customize other
 properties of the cluster, such as its size, as in this example.
 
 Outputs are declared similarly to parameters: they each have a name, an
-optional~description, and a value. They allow to return information from
-the~stack to the user.
+optional description, and a value. They allow to return information from
+the stack to the user.
 
 \begin{footnotesize}
 \begin{verbatim}
@@ -348,20 +348,20 @@ outputs:
 Customizing an existing template is a good way to start developing your
 own. We will use a simpler template than the previous example to start
 with: it is
-the~\href{https://www.chameleoncloud.org/appliances/26/}{Hello World
+the \href{https://www.chameleoncloud.org/appliances/26/}{Hello World
 complex appliance}.
 
 First, delete the stack you launched, because we will need all three
 nodes to be free. To do this, go back to the Project \textgreater{}
 Orchestration \textgreater{} Stacks page, select your stack, and then
 click on the red ``Delete Stacks'' button. You will be asked to confirm,
-so click on the blue~``Delete Stacks'' button.
+so click on the blue ``Delete Stacks'' button.
 
 \includegraphics[width=\columnwidth]{images/chameleon/Delete-Stacks.png}
 
 The template for the
 \href{https://www.chameleoncloud.org/appliances/26/}{Hello World complex
-appliance}~is~reproduced below. It is similar to the NFS share
+appliance} is reproduced below. It is similar to the NFS share
 appliance, except that it deploys only a single client. You can see that
 it has four resources defined:
 
@@ -459,9 +459,9 @@ Download this template from the
 appliance details page} to your local machine, and open it in your
 favorite text editor.
 
-We will customize~the template to add a second NFS~client by creating a
+We will customize the template to add a second NFS client by creating a
 new resource called another\_nfs\_client. Add the following text to your
-template inside the resources section.~Make sure to respect the level of
+template inside the resources section. Make sure to respect the level of
 indentation, which is important in YAML.
 
 \begin{footnotesize}
@@ -487,24 +487,24 @@ indentation, which is important in YAML.
 \end{verbatim}
 \end{footnotesize}
 
-Now, launch a new~stack~with this~template. Since the customized
+Now, launch a new stack with this template. Since the customized
 template is only on your computer and cannot be addressed by a URL, use
 the ``Direct Input'' method instead and copy/paste the content of the
-customized template.~The resulting topology view is shown below:~as you
+customized template. The resulting topology view is shown below: as you
 can see, the two client instances are shown separately since each one is
 defined as a separate resource in the template.
 
 \includegraphics[width=\columnwidth]{images/chameleon/NFS-Two-Clients_lFGgizN.png}
 
-You may have realized~already that while adding just one additional
-client instance~was easy, launching more of them would require to copy /
+You may have realized already that while adding just one additional
+client instance was easy, launching more of them would require to copy /
 paste blocks of YAML many times while ensuring that the total count is
 correct. This would be easy to get wrong, especially when dealing with
 tens or hundreds of instances.
 
 So instead, we leverage another construct from Heat: resource groups.
 Resource groups allow to define one kind of resource and request it to
-be created any~number of times.
+be created any number of times.
 
 Remove the nfs\_client and another\_client resources from your
 customized template, and replace them with the following:
@@ -563,9 +563,9 @@ outputs:
 \end{verbatim}
 \end{footnotesize}
 
-You can get outputs in the ``Overview'' tab of the Stack~Details page.
-If you want to use~the command line, install \texttt{python-heatclient}
-and use~the \texttt{heat\ output-list} and \texttt{heat\ output-show}
+You can get outputs in the ``Overview'' tab of the Stack Details page.
+If you want to use the command line, install \texttt{python-heatclient}
+and use the \texttt{heat\ output-list} and \texttt{heat\ output-show}
 commands, or get a full list in the information returned by
 \texttt{heat\ stack-show}.
 
@@ -603,10 +603,10 @@ text to the parameters section:
 \end{footnotesize}
 
 Inside the resource group definition,
-change~\texttt{count:\ 2}~to~\texttt{count:\ \{\ get\_param:\ nfs\_client\_count\ \}}~to
+change \texttt{count:\ 2} to \texttt{count:\ \{\ get\_param:\ nfs\_client\_count\ \}} to
 retrieve and use the parameter we just defined. When you launch this
 template, you will see that an additional parameter allows you to define
-the number of client instances, like in the NFS share~appliance.
+the number of client instances, like in the NFS share appliance.
 
 At this stage, we have fully recreated the NFS share appliance starting
 from the Hello World one! The next section will explain how to write a
@@ -638,15 +638,15 @@ valid version of HOT (Heat Orchestration Template). Chameleon bare-metal
 supports any HOT version up to 2015-10-15, which corresponds to
 OpenStack Liberty. The
 \href{http://docs.openstack.org/developer/heat/template_guide/hot_spec.html\#hot-spec-template-version}{Heat
-documentation}~lists~all available~versions and their features.~We
-recommended that you always use the latest supported~version to have
+documentation} lists all available versions and their features. We
+recommended that you always use the latest supported version to have
 access to all supported features:
 
 \texttt{heat\_template\_version:\ 2015-10-15}
 
 \subsubsection{Description}\label{description}
 
-While not mandatory, it is good practice to describe what ~is deployed
+While not mandatory, it is good practice to describe what  is deployed
 and configured by your template. It can be on a single line:
 
 \begin{footnotesize}
@@ -714,7 +714,7 @@ selected. For example, \texttt{custom\_constraint:\ glance.image}
 restricts the image selection to an available OpenStack image, while
 providing a pre-filled selection box in the web interface.
 \href{http://docs.openstack.org/developer/heat/template_guide/hot_spec.html\#parameter-constraints}{More
-details about constraints}~are available in the Heat documentation.
+details about constraints} are available in the Heat documentation.
 
 \subsubsection{Outputs}\label{outputs}
 
@@ -742,7 +742,7 @@ template and return them in the proper format to the user.
 appliances}\label{sharing-new-complex-appliances}
 
 If you have written your own complex appliances
-or~substantially~customized an existing one, we would love if you shared
+or substantially customized an existing one, we would love if you shared
 them with our user community!
 
 The process is very similar to regular appliances: log into the
@@ -787,7 +787,7 @@ these pattern will be possible:
   mechanism (not managed by Heat) for the server to contact the clients.
 \end{itemize}
 
-This limitation was already apparent in our NFS share~appliance: this is
+This limitation was already apparent in our NFS share appliance: this is
 why the server instance exports the file system to all bare-metal
 instances on Chameleon, because it doesn't know which specific IP
 addresses are allocated to the clients.
@@ -811,7 +811,7 @@ This contextualization is performed with several Heat resources:
 
 \begin{itemize}
 \item
-  \texttt{OS::Heat::SoftwareConfig}.~This resource describes code to run
+  \texttt{OS::Heat::SoftwareConfig}. This resource describes code to run
   on an instance. It can be configured with inputs and provide outputs.
 \item
   \texttt{OS::Heat::SoftwareDeployment}. This resource applies a
