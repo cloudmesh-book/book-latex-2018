@@ -1,4 +1,4 @@
-
+% chktex-file 44
 
 \chapter{Linux}
 \label{C:linux}
@@ -96,9 +96,9 @@ name of the command.
   less \emph{a} & print paged content of file \emph{a}\\
   head -5 \emph{a} & Display first 5 lines of file \emph{a}\\
   tail -5 \emph{a} & Display last 5 lines of file \emph{a}\\
-  du -hs . & show in human readable form the space used by the current
+  \verb|du -hs .| & show in human readable form the space used by the current
              directory\\
-  df -h & show the details of the disk file system \\
+  \verb|df -h| & show the details of the disk file system \\
   wc \textit{filename}&  counts the word in a file \\
   sort \textit{filename} &  sorts the file \\
   uniq \textit{filename} &  displays only uniq entries in the file \\
@@ -151,9 +151,9 @@ name of the command.
   \hline
   \multicolumn{2}{|l|}{\cellcolor{blue!15} Search Commands}\\
   \hline
-  fgrep ``text'' filename &  searches the text in the given file \\
-  grep -R ``xyz'' . & recursively searches for xyz in all files \\
-  find . -name ``*.py'' &  find all files with .py at the end \\
+  \verb|fgrep "text" filename| &  searches the text in the given file \\
+  \verb|grep -R "xyz" .| & recursively searches for xyz in all files \\
+  \verb|find . -name "*.py"| &  find all files with \verb|.py| at the end \\
   & \\
 
   %\hline
@@ -265,7 +265,7 @@ Ctrl + y & Paste from the special clipboard \\
 Ctrl + d & Logout of current session, similar to exit \\
 \end{tabular}
 
-\section{.bashrc and .bash\_profile}
+\section{\verb|.bashrc| and \verb|.bash_profile|}
 \index{.bashrc}
 
 Usage of a particular command and all the attributes associated with it,
