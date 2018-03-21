@@ -1,4 +1,6 @@
-\FILENAME
+% chktex-file 1
+
+\FILENAME\
 
 \section{Basic Emacs}
 \label{C:emacs}
@@ -40,12 +42,12 @@ Here are some other ways on what to do if you have accidentally
 pressed a wrong key:
 
 \begin{itemize}
-\item C-g If you pressed a prefix key (e.g. C-x) or you invoked
+\item \verb|C-g| If you pressed a prefix key (e.g. \verb|C-x|) or you invoked
 a command which is now prompting you for input (e.g. Find file:
-\ldots{}), type C-g, repeatedly if necessary, to cancel. C-g also
+\ldots{}), type \verb|C-g|, repeatedly if necessary, to cancel. \verb|C-g| also
 cancels a long-running operation if it appears that Emacs has frozen.
 
-\item C-/ If you executed a command and Emacs has modified your buffer, use C-/ to
+\item \verb|C-/| If you executed a command and Emacs has modified your buffer, use \verb|C-/| to
 undo that change. 
 \end{itemize}
 
@@ -56,8 +58,8 @@ To save the current file say
 Key & Description\tabularnewline
 \midrule
 \endhead
-C-x C-w & Write the buffer to file \tabularnewline
-C-x C-s & Write the buffer to file and quit Emacs \tabularnewline
+\verb|C-x C-w| & Write the buffer to file \tabularnewline
+\verb|C-x C-s| & Write the buffer to file and quit Emacs \tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -70,10 +72,10 @@ following key combinations:
 Key & Description\tabularnewline
 \midrule
 \endhead
-C-f & Forward one character\tabularnewline
-C-n & Next line\tabularnewline
-C-b & Back one character\tabularnewline
-C-p & Previous line\tabularnewline
+\verb|C-f| & Forward one character\tabularnewline
+\verb|C-n| & Next line\tabularnewline
+\verb|C-b| & Back one character\tabularnewline
+\verb|C-p| & Previous line\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -84,16 +86,16 @@ Here are some ways to move around in larger increments:
 Key & Description\tabularnewline
 \midrule
 \endhead
-C-a & Beginning of line\tabularnewline
-M-f & Forward one word\tabularnewline
-M-a & Previous sentence\tabularnewline
-M-v & Previous screen\tabularnewline
-M-\textless{} & Beginning of buffer\tabularnewline
-C-e & End of line\tabularnewline
-M-b & Back one word\tabularnewline
-M-e & Next sentence\tabularnewline
-C-v & Next screen\tabularnewline
-M-\textgreater{} & End of buffer\tabularnewline
+\verb|C-a| & Beginning of line\tabularnewline
+\verb|M-f| & Forward one word\tabularnewline
+\verb|M-a| & Previous sentence\tabularnewline
+\verb|M-v| & Previous screen\tabularnewline
+\verb|M-<| & Beginning of buffer\tabularnewline
+\verb|C-e| & End of line\tabularnewline
+\verb|M-b| & Back one word\tabularnewline
+\verb|M-e| & Next sentence\tabularnewline
+\verb|C-v| & Next screen\tabularnewline
+\verb|M->| & End of buffer\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -104,7 +106,7 @@ You can jump directly to a particular line number in a buffer:
 Key & Description\tabularnewline
 \midrule
 \endhead
-M-g g & Jump to specified line\tabularnewline
+\verb|M-g| g & Jump to specified line\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -115,8 +117,8 @@ Searching is easy with the following commands
 Key & Description\tabularnewline
 \midrule
 \endhead
-C-s & Incremental search forward\tabularnewline
-C-r & Incremental search backward\tabularnewline
+\verb|C-s| & Incremental search forward\tabularnewline
+\verb|C-r| & Incremental search backward\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -127,7 +129,7 @@ Replace
 Key & Description\tabularnewline
 \midrule
 \endhead
-M-\% & Query replace\tabularnewline
+\verb|M-|\% & Query replace\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -138,7 +140,7 @@ Killing (``cutting'') text
 Key & Description\tabularnewline
 \midrule
 \endhead
-C-k & Kill line\tabularnewline
+\verb|C-k| & Kill line\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -149,7 +151,7 @@ Yanking
 Key & Description\tabularnewline
 \midrule
 \endhead
-C-y & Yanks last killed text\tabularnewline
+\verb|C-y| & Yanks last killed text\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -185,10 +187,10 @@ the buffer.'' modes are typically activated by ending such as \verb|.py|,
 Key & Description\tabularnewline
 \midrule
 \endhead
-M-x python-mode & Mode for editing Python files\tabularnewline
-M-x auto-fill-mode & Wraps your lines automatically when they get longer
+\verb|M-x python-mode| & Mode for editing Python files\tabularnewline
+\verb|M-x auto-fill-mode| & Wraps your lines automatically when they get longer
 than 70 characters.\tabularnewline
-M-x flyspell-mode & Highlights misspelled words as you type.\tabularnewline
+\verb|M-x flyspell-mode| & Highlights misspelled words as you type.\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -238,7 +240,7 @@ emacs -nw
 \end{verbatim}
 
 This you can log in to a remote computer and if it has emacs
-installed. use it in the terminal. This would replace editors such as
+installed. Use it in the terminal. This would replace editors such as
 vi, vim, nano, pico or others that work in a terminal.
 
 \subsection{\LaTeX~and Emacs}
@@ -251,7 +253,7 @@ changed. However, a collection of information about additional
 
 Of interest are for example also 
 
-* M-x flyspell-mode: allowing to do spell checking in the window
+* \verb|M-x flyspell-mode|: allowing to do spell checking in the window
 * predictive mode: https://www.emacswiki.org/emacs/PredictiveMode
 * preview latex
 * whizzy tex

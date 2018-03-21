@@ -1,4 +1,6 @@
-\FILENAME
+% chktex-file 8
+
+\FILENAME\
 
 \section{Writing a Scientific Article or Conference Paper}
 \label{S:writing}
@@ -256,7 +258,7 @@ A checklist with a subset of these issues that you can add to your draft is avai
     label of the item you want to cite, either in report.bib or in
     report.tex
   \item Urls in citations are never placed in howpublished, instead we
-    use url = \{ \}. howpublished is just used for a text sting such
+    use url = \{ \}. \verb|howpublished| is just used for a text sting such
     as Web Page, Blog, Repository and others like that. Do not use
     just the word Web, as it could be a Web Site or a Web Page. You
     need to be specific.
@@ -317,7 +319,7 @@ A checklist with a subset of these issues that you can add to your draft is avai
      and included the citation.
    \item The \verb|\cite{}| command must not be in the beginning of
      the sentence or paragraph, but in the end, before the period
-     mark. example: \ldots a library called Message Passing
+     mark. Example: \ldots a library called Message Passing
      Interface (MPI) [7]. 
    \item Put a space between the citation mark and the previous word
      or better use  \verb|~|.
@@ -337,7 +339,7 @@ The following errors are very often found and must be avoided.
       to put around a word that you like to emphasize.
     \item Generally we do not us {\bf bold fett} text. Instead use
       \textit{em}.
-    \item Erroneous use of quotation marks, i.e. use \verb|``quotes''|,
+    \item Erroneous use of quotation marks, i.e.\ use \verb|``quotes''|,
        but not the double quote that you find on your keyboard such as
        \verb|" "|.
     \item When using the characters \& \# \% \_ put a backslash before
@@ -468,7 +470,7 @@ modify easily. The template is located at
 As the format may have been updated over time it does not hurt to
 revisit it and compare with your README.md and make corrections. It is
 important that you follow the format and not eliminate the lines with
-the three quotes. The text in the quotes is actually yaml. yaml is a
+the three quotes. The text in the quotes is actually yaml. Yaml is a
 data format the any data scientist must know. If you do not, you can
 look it up. However, if you follow our rules you should be good. If you
 find a rule missing for our purpose, let us know. We like to keep it
@@ -485,27 +487,26 @@ Simple rules:
 
   delete that as your directory name does not have sample- in it.
 \item do not ignore where the author is to be placed, it is in a list
+  starting with a \verb|-|
 
-  starting with a -
-\item there is always a space after a -
+\item there is always a space after a \verb|-|
 
 \item do not introduce empty lines
 
 \item do not use TAB and make sure your editor does not bay accident
-
   automatically creates tabs. This is probably the most frequent error
   we see.
+
 \item do not use any \verb|: & _| in the attribute text including titles
 
 \item an object defined in the README.md must have on a single type
-
-  field.  for example in the project section. Make sure you select
+  field.  For example in the project section. Make sure you select
   only one type and delete the other
+
 \item in case you have long paragraphs you can use the \textgreater{}
-
   after the abstract
-\item Once you understood how the README.md works, please delete the
 
+\item Once you understood how the README.md works, please delete the
   comment section.
 \item Add a chapter topic that your paper belongs to
 

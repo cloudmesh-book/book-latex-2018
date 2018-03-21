@@ -1,7 +1,8 @@
 % chktex-file 36
 % chktex-file 9
+% chktex-file 8
 
-\FILENAME
+\FILENAME\
 
 \section{Integrating Bibliographies}
 \label{S:bibliographies}
@@ -10,7 +11,7 @@
 \index{biber}
 
 Bibliography management in \LaTeX\ is one of the many features that
-motivate many researchers to make \LaTeX the tool of choice to write
+motivate many researchers to make \LaTeX\ the tool of choice to write
 academic papers. There are numerous bibliography styles available that
 allow easy adaptation to differen journal and proceedings style. As
 such, it includes styles for bibliographies formated in ACM and IEEE
@@ -47,14 +48,14 @@ pdflatex  file
 
 
 \begin{IU}
-At IU you are required to use our template. which includes a Makefile
+At IU you are required to use our template, which includes a Makefile
 and either calls the above three commands or used latexmk
 \end{IU}
 
-The reason for the multiple execution of the latex program is to update
+The reason for the multiple execution of the \LaTeX\ program is to update
 all cross-references correctly. In case you are not interested in
 updating the library every time in the writing progress just postpone it
-till the end. Missing citations are viewed as {[}?{]}.
+till the end. Missing citations are viewed as \verb|[?]|.
 
 Two programs stand out when managing bibliographies: emacs and jabref:
 
@@ -70,7 +71,7 @@ use jabref as it is free and runs on all platforms.
   location in this section. Add them to the bib file.}
 
 Practical experience with many generations of students shows that
-\textit{jabref} is a very simple to use bibliography manager for LaTeX and
+\textit{jabref} is a very simple to use bibliography manager for \LaTeX\ and
 other systems. It can create a multitude of bibliography file formats
 and allows upload in other online bibliography managers.
 
@@ -211,7 +212,7 @@ Thus we find in our example
 \verb|  Author =     {Gonzalez, Jose and Lindsay, Jeff},|
 
 \begin{WARNING}
-Please note the word and between authors. and not a comma, commas are
+Please note the word and between authors and not a comma. Commas are
 only used to distinguish between lastname and firstname.
 \end{WARNING}
 
@@ -401,7 +402,7 @@ such as the one we found in (A) Next we see that all field sin B are
 already covered in C, so we take (C) and add the url. Now as the label is
 great and uniform for ACM, but for us a bit less convenient as its
 difficult to remember, we just change it while for example using
-authors, title, and year information. let us also make sure to do mostly
+authors, title, and year information. Let us also make sure to do mostly
 lowercase in the label just as a convention. Thus our entry looks like:
 
 \begin{verbatim}
@@ -573,7 +574,7 @@ Let us look at it and we find two entries:
 So let us look at the entry and see how to get a better one for our
 purpose and combine them. When using jabref, you see optional and
 required fields, we want to add as many as possible, regardless if
-optional or required, so Let us do that (We write it here in ASCII as it
+optional or required, so Let us do that. We write it here in ASCII as it
 is easier to document and can also be done in emacs:
 
 \begin{verbatim}
