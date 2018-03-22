@@ -1,21 +1,17 @@
 \section{Installation of Hadoop}\label{hadoop-local-installation}
 
 In this section we use Hadoop 3.0.0 and we install Hadoop locally in
-Ubuntu 16.04.
-
-\subsection{Instalation}
-
-In this section we will document how to install Hadoop along with the Yarn
+Ubuntu 16.04. We also describe the instalation of the Yarn
 resource manager. We assume that you have ssh, and rsync installed.
 
-\subsubsection{Prerequisits}
+\subsection{Prerequisits}
 
 \begin{lstlisting}
 sudo apt-get install ssh
 sudo apt-get install rsync
 \end{lstlisting}
 
-\subsubsection{User and User Group Creation}
+\subsection{User and User Group Creation}
 
 For security reasons we will install hadoop in a particular user and
 user group. We will use the following
@@ -26,12 +22,10 @@ sudo adduser --ingroup hadoop_group hduser1
 sudo adduser hduser sudo
 \end{lstlisting}
 
-%\footnote{Q for TAs: why are we using hduser and not just hduser?}
-
 These steps will provide sudo privileges to the created hduser
 user and add the user to the group \verb|hadoop_group|.
 
-\subsubsection{Configuring SSH}
+\subsection{Configuring SSH}
 
 \begin{NOTE}
   Here we configure SSH key for the local user to install hadoop with a ssh-key.
@@ -103,7 +97,7 @@ The key's randomart image is:
 
 You have successfully configured ssh.
 
-\subsubsection{Install Java}
+\subsection{Install Java}
 
 If you are already logged into su, you can skip the next command:
 
@@ -132,7 +126,7 @@ wget http://mirrors.sonic.net/apache/hadoop/common/hadoop-3.0.0/hadoop-3.0.0.tar
 tar -xzvf hadoop-3.0.0.tar.gz
 \end{lstlisting}
 
-\subsubsection{Add Environmental
+\subsection{Add Environmental
 Variables}\label{add-environmental-variables}
 
 In Ubuntu the environmental variables are setup in a file called bashrc
