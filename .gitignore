@@ -5,6 +5,7 @@ _*
 
 *-dot2tex-*
 # LATEX FILES
+single_tb.tex
 dest
 *.tdo
 *.fls
