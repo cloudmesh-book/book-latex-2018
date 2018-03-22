@@ -1,8 +1,6 @@
 # Twister2 Examples
 
-\FILENAME\
-
-\TODO{TA: complete}
+\TODO{TA: complete twister 2}
 
 In this section we will be discussing some examples from Twister2
 Framework.
