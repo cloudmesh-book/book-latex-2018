@@ -2,13 +2,15 @@
 
 In this section we use Hadoop 3.0.0 and we install Hadoop locally in
 Ubuntu 16.04. We also describe the instalation of the Yarn
-resource manager. We assume that you have ssh, and rsync installed.
+resource manager. We assume that you have ssh, and rsync installed and
+use emacs as editor. 
 
 \subsection{Prerequisits}
 
 \begin{lstlisting}
 sudo apt-get install ssh
 sudo apt-get install rsync
+sudo apt-get install emacs
 \end{lstlisting}
 
 \subsection{User and User Group Creation}
@@ -97,7 +99,7 @@ The key's randomart image is:
 
 You have successfully configured ssh.
 
-\subsection{Install Java}
+\subsection{Installation of Java}
 
 If you are already logged into su, you can skip the next command:
 
@@ -114,7 +116,7 @@ wget -c --header "Cookie: oraclelicense=accept-securebackup-cookie" "http://down
 tar xvzf jdk-8u161-linux-x64.tar.gz
 \end{lstlisting}
 
-\subsection{Installation Of Hadoop}\label{installation-of-hadoop}
+\subsection{Installation of Hadoop}\label{installation-of-hadoop}
 
 First we will take a look on how to install Hadoop 2.6.0 on Ubuntu
 16.04. We may need a prior folder structure to do the installation
@@ -126,8 +128,7 @@ wget http://mirrors.sonic.net/apache/hadoop/common/hadoop-3.0.0/hadoop-3.0.0.tar
 tar -xzvf hadoop-3.0.0.tar.gz
 \end{lstlisting}
 
-\subsection{Add Environmental
-Variables}\label{add-environmental-variables}
+\subsection{Hadoop Environment Variables}
 
 In Ubuntu the environmental variables are setup in a file called bashrc
 at it can be accessed the following way
@@ -143,8 +144,9 @@ export YARN_HOME=$HADOOP_HOME
 export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
 export PATH=$HADOOP_HOME/bin:$JAVA_HOME/bin:$PATH
 \end{lstlisting}
+%$
 
-In Emacs to save the file Ctrl+X+S and Ctrl+X+C to exit. After editing
+In Emacs to save the file \verb|Ctrl-X-S| and \verb|Ctrl-X-C| to exit. After editing
 you must update the variables in the system.
 
 \begin{lstlisting}
