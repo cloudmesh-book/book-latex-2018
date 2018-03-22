@@ -4,23 +4,32 @@
 
 In this section we will discuss how to install Spark 2.3.0 in Ubuntu 16.04.
 
-\subsection{Pre-requisites}
+\subsection{Prerequisits}
 
-\subsubsection{Install Java 8}
+We assume that you have ssh, and rsync installed and
+use emacs as editor. 
+
+\begin{lstlisting}
+sudo apt-get install ssh
+sudo apt-get install rsync
+sudo apt-get install emacs
+\end{lstlisting}
+
+\subsection{Installation of Java}
 
 First download Java 8.
 
 \begin{lstlisting}
- mkdir -p ~/cloudmesh/bin
- cd ~/cloudmesh/bin
- wget -c --header "Cookie: oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u161-b12/2f38c3b165be4555a1fa6e98c45e0808/jdk-8u161-linux-x64.tar.gz"
- tar xvzf jdk-8u161-linux-x64.tar.gz
+mkdir -p ~/cloudmesh/bin
+cd ~/cloudmesh/bin
+wget -c --header "Cookie: oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u161-b12/2f38c3b165be4555a1fa6e98c45e0808/jdk-8u161-linux-x64.tar.gz"
+tar xvzf jdk-8u161-linux-x64.tar.gz
 \end{lstlisting}
 
 Then add the environmental variables to the bashrc file. 
 
 \begin{lstlisting}
- emacs ~/.bashrc
+emacs ~/.bashrc
 \end{lstlisting}
 
 \begin{lstlisting}
@@ -37,16 +46,17 @@ Source the bashrc file after adding the environmental variables.
 \subsection{Install Spark with Hadoop}\label{s:s:install-spark-with-hadoop}
 
 \begin{NOTE}
-  Here we use Spark packaged with Hadoop and Spark uses Hadoop 2.7.0
-  in the packaged version. But for plain Hadoop exercises we use
-  Hadoop 3.0.0.
+  Here we use Spark packaged with Hadoop. In this package Spark uses
+  Hadoop 2.7.0 in the packaged version. Note that in
+  Section~\ref{s:hadoop-local-installation} we use for the vanilla
+  Hadoop instalation Hadoop 3.0.0.
 \end{NOTE}
 
 Create the base directories and go to the directory.
 
 \begin{lstlisting}
-  mkdir -p ~/cloudmesh/bin
-  cd ~/cloudmesh/bin
+mkdir -p ~/cloudmesh/bin
+cd ~/cloudmesh/bin
 \end{lstlisting}
   
 Then download Spark 2.3.0 as follows. 
@@ -58,16 +68,16 @@ wget https://www.apache.org/dyn/closer.lua/spark/spark-2.3.0/spark-2.3.0-bin-had
 Now extract the file,
 
 \begin{lstlisting}
-  tar xzf spark-2.3.0-bin-hadoop2.7.tgz
-  mv spark-2.3.0-bin-hadoop2.7 spark-2.3.0
+tar xzf spark-2.3.0-bin-hadoop2.7.tgz
+mv spark-2.3.0-bin-hadoop2.7 spark-2.3.0
 \end{lstlisting}
 
-\subsubsection{Set Up Environment Variables}
+\subsection{Spark Environment Variables}
 
 Open up bashrc file and add environmental variables as follows.
 
 \begin{lstlisting}
-  emacs ~/.bashrc  
+emacs ~/.bashrc  
 \end{lstlisting}
 
 Go to the last line and add the following content.
