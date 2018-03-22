@@ -2,8 +2,31 @@
 
 \subsection{YAML}
 
-\URL{https://en.wikipedia.org/wiki/YAML}
+The term \emph{YAML} stand for ``YAML Ain't Markup
+Language''. According to the Web Page at 
 
+\URL{http://yaml.org/}
+
+``YAML is a human friendly data serialization standard for all
+programming languages.'' There are multiple versions of YAML existing
+and one needs to take care of that your software supports the right
+version. The current version is YAML 1.2.
+
+YAML is often used for configuration and in many cases can also be
+used as XML replacement. Important is tat YAM in contrast to XML
+removes the tags while replacing them with indentation. This has
+naturally the advantage that it is mor easily to read, however, the
+format is strict and needs to adher to proper indentation. Thus it is
+important that you check your YAML files for correctness, either by
+writing for example a python program that read your yaml file, or an
+online YAML checker such as provided at 
+
+\URL{http://www.yamllint.com/}
+
+An example on how to use yaml in python is provided in
+Figure~\ref{F:yaml}. Please note that YAML is a superset of JSON.
+
+\begin{figure}[htb]
 \begin{lstlisting}
 import os
 import sys
@@ -20,6 +43,13 @@ try:
 except:
    print("YAML file is not valid.")
 \end{lstlisting}
+\caption{Python YAML example}\label{F:yaml}
+\end{figure}
+
+Additional Resources: 
+
+\URL{https://en.wikipedia.org/wiki/YAML}
+
 
 
 \subsection{JSON}
