@@ -1,0 +1,131 @@
+\begin{figure}[p]
+\begin{center}
+\begin{adjustbox}{height=0.9\textheight}
+\begin{footnotesize}
+\forestset{
+  skan tree/.style={
+    for tree={
+      drop shadow,
+      text width=3cm,
+      grow'=0,
+      rounded corners,
+      draw,
+      top color=white,
+      bottom color=blue!20,
+      edge={Latex-},
+      child anchor=parent,
+      %parent anchor=children,
+      anchor=parent,
+      tier/.wrap pgfmath arg={tier ##1}{level()},
+      s sep+=2.5pt,
+      l sep+=2.5pt,
+      edge path'={
+        (.child anchor) -- ++(-10pt,0) -- (!u.parent anchor)
+      },
+      node options={ align=center },
+    },
+    before typesetting nodes={
+      for tree={
+        content/.wrap value={\strut ##1},
+      },
+    },
+  },
+}
+\begin{forest}
+  skan tree
+  [E516
+    [Assignments
+       [Accounts (\ref{a:accounts})
+           [Futuresystems
+           Github
+           Chameleon Cloud
+           IU google (\ref{E:e616-iu-google-services})
+           Piazza, \nred]
+       ] 
+       [Survey (\ref{a:survey-entry})]
+       [Writing Assignments
+         [Bio (\ref{a:616-bio}), \nred]
+         [Plagiarizm (\ref{S:plagiarism}) , \nred]
+         [Project Report (\ref{E:project}), \nred]
+         [Tutorial (\ref{E:616-tutorial}), \nred]         
+         [2 p. Paper (\ref{E:616-tech-paper}), \nred]
+         [Abstracts (\ref{E:616-new-tech-abstract}), \nred]
+       ]
+       [Programming Assignments
+          [REST (\ref{E:rest-eve})(\ref{E:REST-a})(\ref{E:REST-swagger})]
+          [Project (\ref{E:project}), \nred]
+       ]
+    ]
+    [Scientific Writing (\ref{p:writing})
+      [\LaTeX (\ref{C:latex})
+         [bibtex (\ref{C:bibtex})\\
+         jabref (\ref{s:jabref})\\
+         \LaTeX~(\ref{C:latex}), \ngreen]
+      ]
+    ]
+    [Prerequisits Review
+       [Python (\ref{C:python})
+          [Language (\ref{C:python-language}), \ngreen]
+          [pyenv (\ref{C:python-install})\\
+           pip (\ref{C:python-install}), \ngreen]
+       ]
+       [Advanced Python (\ref{P:python-advanced})
+          [Numpy (\ref{s:numpy})\\
+           Scipy (\ref{s:scipy})\\
+           OpenCV (\ref{c:opencv}), \ngrey]
+          [Face Detection (\ref{c:face})
+           Fingerprint (\ref{c:python-fingerprint}), \ngrey]
+          [CMD5 (\ref{C:python-cmd5}), \ngrey]
+       ]
+       [ssh (\ref{C:ssh})
+          [Keys (\ref{s:generate-a-ssh-key}), \ngreen]
+       ]
+       [Linux (\ref{C:linux})
+          [Commands (\ref{c:linux-commands}), \ngreen]
+       ]
+    ]
+    [IaaS
+       [VM (\ref{?})
+           [Virtual Box (\ref{S:virtual-box}), \ngreen]
+           [Openstack (\ref{C:chameleon}), \ngreen]
+           [QEMU (\ref{?}), \ngrey]
+           [KVM (\ref{?}), \ngrey]
+       ]
+       [Container (\ref{p:container})(\ref{c:container})
+           [Docker (\ref{s:motivation-docker})\\
+            Docker Swarm (\ref{s:motivation-docker})\\
+            Kubernetes (\ref{s:motivation-docker-kubernetes}), \ngreen]
+       ]
+    ]
+    [PaaS
+        [MapReduce (\ref{p:mapreduce})
+           [Hadoop (\ref{c:hadoop})\\
+            Spark (\ref{c:spark}), \ngreen]
+           [Harp (\ref{s:harp})\\
+            Twister (\ref{s:twister}), \ngreen]
+        ]
+        [Servers (\ref{p:servertech})
+           [REST (\ref{c:rest}), \ngreen]
+           [MQTT (\ref{c:mqtt}), \ngreen]
+        ]
+    ]
+    [SaaS
+        [e616\\
+         Applications (\ref{p:bigdata})(\ref{s:nist-usecase})
+           [Physics (\ref{c:physics}), \nwhite]
+           [Helath Care (\ref{c:health-informatics}), \nwhite]
+           [Life Style (\ref{c:e-commerce}), \nwhite]
+           [Sensors (\ref{s:a-sensors}), \nwhite]
+           [Sports (\ref{c:sports}), \nwhite]
+           [Web Search \\
+            Text Minining (\ref{s:web-search-and-text-mining}), \nwhite]
+        ]
+    ]
+  ]
+\end{forest}
+\end{footnotesize}
+\end{adjustbox}
+\end{center}
+\caption{E516 class structure.}
+\label{F:graph-e516}
+\end{figure}
