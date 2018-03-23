@@ -40,11 +40,10 @@ export PATH=$JAVA_HOME/bin:$PATH
 Source the bashrc file after adding the environmental variables.
 
 \begin{lstlisting}
-source ~/.bashrc
-java -version
+  source ~/.bashrc
 \end{lstlisting}
 
-\subsection{Installation of Spark with Hadoop}
+\subsection{Install Spark with Hadoop}\label{s:s:install-spark-with-hadoop}
 
 \begin{NOTE}
   Here we use Spark packaged with Hadoop. In this package Spark uses
@@ -120,10 +119,137 @@ Type in expressions to have them evaluated.
 Type :help for more information.
 \end{lstlisting}
 
+\begin{NOTE}
+  Please check the console LOGS and find the port number on which the
+  Spark Web UI is hosted. It will show something like:
+
+  Spark context Web UI available at: <some url>
+\end{NOTE}
+
 Then take a look the following address in the browser.
 \begin{lstlisting}
 http://localhost:4041
 \end{lstlisting}
 
 If you see the Spark Dashboard, then you can realize you have installed Spark
-successfully. 
+successfully.
+
+\subsection{Install Spark With Custom Hadoop}
+
+Installing Spark with pre-existing Hadoop version is favorable, if you
+want to use the latest features from the latest Hadoop version or when
+you need a specific Hadoop version depending on the external
+dependencies to your project.
+
+First we need to download the Spark packaged without Hadoop.
+
+\begin{lstlisting}
+  mkdir -p ~/cloudmesh/bin
+  cd ~/cloudmesh/bin
+\end{lstlisting}
+  
+Then download Spark 2.3.0 as follows. 
+
+\begin{lstlisting}
+wget http://mirrors.ibiblio.org/apache/spark/spark-2.3.0/spark-2.3.0-bin-without-hadoop.tgz
+\end{lstlisting}
+
+Now extract the file,
+
+\begin{lstlisting}
+  tar xzf spark-2.3.0-bin-without-hadoop.tgz  
+\end{lstlisting}
+
+Then add the environmental variables,
+
+\begin{NOTE}
+  If you have already installed Spark with Hadoop by following section
+  \ref{s:s:install-spark-with-hadoop} please update the current SPARK
+  HOME variable with the new path.
+\end{NOTE}
+
+\begin{lstlisting}
+  emacs ~/.bashrc  
+\end{lstlisting}
+
+Go to the last line and add the following content.
+
+\begin{lstlisting}
+export SPARK_HOME=~/cloudmesh/bin/spark-2.3.0-bin-without-hadoop
+export PATH=$SPARK_HOME/bin:$PATH
+\end{lstlisting}  
+
+Source the bashrc file.
+
+\begin{lstlisting}
+source ~/.bashrc
+\end{lstlisting}
+
+\subsection{Configuring Hadoop}
+
+Now we must add the current Hadoop version that we are using for
+Spark. Open up a new terminal and then run the following.
+
+\begin{lstlisting}
+cd $SPARK_HOME
+\end{lstlisting}
+
+\begin{lstlisting}
+  cd conf
+  cp spark-env.sh.template spark-evn.sh
+\end{lstlisting}
+
+Now we need to add a new line to show the current path to
+hadoop installation. Add the following variable in to the
+spark-env.sh file.
+
+\begin{lstlisting}
+  emacs spark-env.sh
+  export SPARK_DIST_CLASSPATH=$($HADOOP_HOME/bin/hadoop classpath)
+\end{lstlisting}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/spark-hadoop.png}
+\caption{Spark Web UI - Hadoop Path}
+\end{figure}
+
+
+\subsection{Test Spark Installation}
+
+Open up a new terminal and then run the following command.
+
+\begin{lstlisting}
+spark-shell
+\end{lstlisting}
+
+If it has been configured properly, it will display the following content.
+
+\begin{lstlisting}
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+Spark context Web UI available at http://149-160-230-133.dhcp-bl.indiana.edu:4040
+Spark context available as 'sc' (master = local[*], app id = local-1521732740077).
+Spark session available as 'spark'.
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  '_/
+   /___/ .__/\_,_/_/ /_/\_\   version 2.3.0
+      /_/
+         
+Using Scala version 2.11.8 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_151)
+Type in expressions to have them evaluated.
+Type :help for more information.
+\end{lstlisting}
+
+Then take a look the following address in the browser.
+\begin{lstlisting}
+http://localhost:4040
+\end{lstlisting}
+
+\begin{NOTE}
+  Please check the console LOGS and find the port number on which the
+  Spark Web UI is hosted. It will show something like:
+  Spark context Web UI available at: <some url>
+\end{NOTE}
+
