@@ -15,7 +15,7 @@ LATEX=pdflatex
 #LATEX=pdfflatex
 #LATEX=pydflatex -k
 
-g: dest markdown
+g: dest markdown graphicspath
 	latexmk -jobname=$(FILE) $(FLAGS) -pvc -view=pdf $(FILE)
 
 setup:
