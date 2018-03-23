@@ -1,12 +1,12 @@
-
 \begin{figure}[p]
+\begin{center}
 \begin{adjustbox}{height=0.9\textheight}
 \begin{footnotesize}
 \forestset{
   skan tree/.style={
     for tree={
       drop shadow,
-      text width=2cm,
+      text width=3cm,
       grow'=0,
       rounded corners,
       draw,
@@ -35,7 +35,7 @@
   skan tree
   [E616
     [Administration
-       [Accounts
+       [Accounts (\ref{?})
            [Futuresystems
            Github
            Chameleon Cloud
@@ -43,80 +43,83 @@
            Piazza, \nred]
        ] 
     ]
-    [Scientific Writing
+    [Scientific Writing (\ref{p:writing})
       [Assignments
-        [Project Report, \nred]
-        [2 p. Paper, \nred]
-        [Abstracts, \nred]
+        [Plagiarizm (\ref{S:plagiarism}), \nred]
+        [Project Report (\ref{?}), \nred]
+        [2 p. Paper (\ref{?}), \nred]
+        [Abstracts (\ref{?}), \nred]
       ]
-      [\LaTeX
-         [bibtex\\
-         jabref \ref{s:a}\\
-         \LaTeX, \ngreen]
+      [\LaTeX (\ref{C:latex})
+         [bibtex (\ref{C:bibtex})\\
+         jabref (\ref{s:jabref})\\
+         \LaTeX~(\ref{C:latex}), \ngreen]
       ]
     ]
     [Prerequisits Review
-       [Python
-          [Language, \ngreen]
-          [pyenv \\
-           pip, \ngreen]
+       [Python (\ref{C:python})
+          [Language (\ref{C:python-language}), \ngreen]
+          [pyenv (\ref{C:python-install})\\
+           pip (\ref{C:python-install}), \ngreen]
        ]
-       [Advanced Python
-          [Numpy\\
-           Scipy\\
-           OpenCV, \ngrey]
-          [Face Detection
-           Fingerprint, \ngrey]
-          [CMD5, \ngrey]
+       [Advanced Python (\ref{P:python-advanced})
+          [Numpy (\ref{?})\\
+           Scipy (\ref{?})\\
+           OpenCV (\ref{?}), \ngrey]
+          [Face Detection (\ref{?})
+           Fingerprint (\ref{?}), \ngrey]
+          [CMD5 (\ref{?}), \ngrey]
        ]
-       [ssh
-          [Keys, \ngreen]
+       [ssh (\ref{C:ssh})
+          [Keys (\ref{s:generate-a-ssh-key}), \ngreen]
        ]
        [Linux (\ref{C:linux})
-          [Commands, \ngreen]
+          [Commands (\ref{c:linux-commands}), \ngreen]
        ]
     ]
     [IaaS
-       [VM
-           [Virtual Box, \ngreen]
-           [Openstack, \ngreen]
-           [QEMU, \ngrey]
-           [KVM, \ngrey]
+       [VM (\ref{?})
+           [Virtual Box (\ref{?}), \ngreen]
+           [Openstack (\ref{C:chameleon}), \ngreen]
+           [QEMU (\ref{?}), \ngrey]
+           [KVM (\ref{?}), \ngrey]
        ]
-       [Container
-           [Docker \\
-            Docker Swarm \\
-            Kubernetes, \ngreen]
+       [Container (\ref{p:container})
+           [Docker (\ref{?})\\
+            Docker Swarm (\ref{?})\\
+            Kubernetes (\ref{?}), \ngreen]
        ]
     ]
     [PaaS
-        [MapReduce
+        [MapReduce (\ref{p:mapreduce})
            [E516\\
-            Hadoop \\
-            Spark, \nwhite]
+            Hadoop (\ref{c:hadoop})\\
+            Spark (\ref{c:spark}), \nwhite]
            [E516\\
-            Harp\\
-            Twister, \nwhite]
+            Harp (\ref{s:harp})\\
+            Twister (\ref{s:twister}), \nwhite]
         ]
-        [Servers
-           [REST, \ngreen]
-           [MQTT, \ngreen]
+        [Servers (\ref{p:servertech})
+           [REST (\ref{c:rest}), \ngreen]
+           [MQTT (\ref{?}), \ngreen]
         ]
     ]
     [SaaS
-        [Applications
-           [Physics, \ngreen]
-           [Helath Care, \ngreen]
-           [Life Style, \ngreen]
-           [Sensors, \ngreen]
-           [Sports, \ngreen]
-           [Web Search\\
-            Text Minining, \ngreen]
+        [Applications (\ref{p:bigdata})(\ref{s:nist-usecase})
+           [Physics (\ref{c:physics}), \ngreen]
+           [Helath Care (\ref{c:health-informatics}), \ngreen]
+           [Life Style (\ref{c:e-commerce}), \ngreen]
+           [Sensors (\ref{s:a-sensors}), \ngreen]
+           [Sports (\ref{c:sports}), \ngreen]
+           [Web Search \\
+            Text Minining (\ref{s:web-search-and-text-mining}), \ngreen]
         ]
     ]
   ]
 \end{forest}
 \end{footnotesize}
 \end{adjustbox}
-\caption{E616 an I524 class structure.}\label{F:graph-e616}
+\end{center}
+\caption{E616 an I524 class structure.}
+\label{F:graph-e616}
 \end{figure}
