@@ -1,4 +1,5 @@
 # ssh-gegen
+# HIDs - hid-sp18-502,hid-sp18-421
 
 1. First generate SSH keys on main computer that will be used to connect to the
    raspberry Pi cluster.
