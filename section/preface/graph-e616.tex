@@ -34,22 +34,29 @@
 \begin{forest}
   skan tree
   [E616
-    [Administration
-       [Accounts (\ref{?})
+    [Assignments
+       [Accounts (\ref{a:accounts})
            [Futuresystems
            Github
            Chameleon Cloud
-           IU google
+           IU google (\ref{E:e616-iu-google-services})
            Piazza, \nred]
        ] 
+       [Survey (\ref{a:survey-entry})]
+       [Writing Assignments
+         [Bio (\ref{a:616-bio}), \nred]
+         [Plagiarizm (\ref{S:plagiarism}) , \nred]
+         [Project Report (\ref{E:project}), \nred]
+         [Tutorial (\ref{E:616-tutorial}), \nred]         
+         [2 p. Paper (\ref{E:616-tech-paper}), \nred]
+         [Abstracts (\ref{E:616-new-tech-abstract}), \nred]
+       ]
+       [Programming Assignments
+          [REST (\ref{E:rest-eve})(\ref{E:REST-a})(\ref{E:REST-swagger})]
+          [Project (\ref{E:project}), \nred]
+       ]
     ]
     [Scientific Writing (\ref{p:writing})
-      [Assignments
-        [Plagiarizm (\ref{S:plagiarism}), \nred]
-        [Project Report (\ref{?}), \nred]
-        [2 p. Paper (\ref{?}), \nred]
-        [Abstracts (\ref{?}), \nred]
-      ]
       [\LaTeX (\ref{C:latex})
          [bibtex (\ref{C:bibtex})\\
          jabref (\ref{s:jabref})\\
@@ -63,12 +70,12 @@
            pip (\ref{C:python-install}), \ngreen]
        ]
        [Advanced Python (\ref{P:python-advanced})
-          [Numpy (\ref{?})\\
-           Scipy (\ref{?})\\
-           OpenCV (\ref{?}), \ngrey]
-          [Face Detection (\ref{?})
-           Fingerprint (\ref{?}), \ngrey]
-          [CMD5 (\ref{?}), \ngrey]
+          [Numpy (\ref{s:numpy})\\
+           Scipy (\ref{s:scipy})\\
+           OpenCV (\ref{c:opencv}), \ngrey]
+          [Face Detection (\ref{c:face})
+           Fingerprint (\ref{c:python-fingerprint}), \ngrey]
+          [CMD5 (\ref{C:python-cmd5}), \ngrey]
        ]
        [ssh (\ref{C:ssh})
           [Keys (\ref{s:generate-a-ssh-key}), \ngreen]
@@ -79,15 +86,15 @@
     ]
     [IaaS
        [VM (\ref{?})
-           [Virtual Box (\ref{?}), \ngreen]
+           [Virtual Box (\ref{S:virtual-box}), \ngreen]
            [Openstack (\ref{C:chameleon}), \ngreen]
            [QEMU (\ref{?}), \ngrey]
            [KVM (\ref{?}), \ngrey]
        ]
-       [Container (\ref{p:container})
-           [Docker (\ref{?})\\
-            Docker Swarm (\ref{?})\\
-            Kubernetes (\ref{?}), \ngreen]
+       [Container (\ref{p:container})(\ref{c:container})
+           [Docker (\ref{s:motivation-docker})\\
+            Docker Swarm (\ref{s:motivation-docker})\\
+            Kubernetes (\ref{s:motivation-docker-kubernetes}), \ngreen]
        ]
     ]
     [PaaS
@@ -101,7 +108,7 @@
         ]
         [Servers (\ref{p:servertech})
            [REST (\ref{c:rest}), \ngreen]
-           [MQTT (\ref{?}), \ngreen]
+           [MQTT (\ref{c:mqtt}), \ngreen]
         ]
     ]
     [SaaS
