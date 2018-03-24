@@ -1,4 +1,4 @@
-# Apache Avro (with Python) Tutorial
+# Python Apache Avro 
 
 hid-sp18-405 
 
