@@ -1,6 +1,6 @@
 # Apache Avro (with Python) Tutorial
 
-## hid-sp18-405 
+hid-sp18-405 
 
 ## Remarks
 * This tutorial illustrates using Avro to serialize and deserialize data
