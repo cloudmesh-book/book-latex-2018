@@ -1,4 +1,4 @@
-## Install docker on raspberry pi
+# Install Docker on a Raspberry Pi
 
 hid-sp18-503
 
