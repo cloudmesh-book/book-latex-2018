@@ -1,5 +1,7 @@
 # PI DHCP Server Tutorial
- 
+## hid-sp18-405 
+
+## Overview
 This is a tutorial for setting up Dynamic Host Configuration Protocol (DHCP) server on a
 Raspberry Pi Cluster. The OS on these Pi's is RASPBIAN STRETCH WITH DESKTOP released on 
 2017-11-29. 
