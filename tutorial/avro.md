@@ -2,12 +2,17 @@
 
 hid-sp18-405 
 
-## Remarks
-* This tutorial illustrates using Avro to serialize and deserialize data
-* The main example is borrowed from [Apache Avro 1.8.2 Getting Started (Python)](http://avro.apache.org/docs/1.8.2/gettingstartedpython.html) and using Python2
-* For each part of this tutorial, instructions corresponding to Python3 is also mentioned
-* Avro Python library does not support code generation, while Avro used with Java supports code generation, see [Apache Avro™ 1.8.2 Getting Started (Java)](http://avro.apache.org/docs/1.8.2/gettingstartedjava.html) for details
-* Avro provides a convenient way to represent complex data structures within a Hadoop MapReduce job. Detail is in [Apache Avro™ 1.8.2 Hadoop MapReduce guide](http://avro.apache.org/docs/1.8.2/mr.html)
+*describe here what is abache Avro. Use a technology abstract or write a new one.*
+
+Avro provides a convenient way to represent complex data structures within a Hadoop MapReduce job. Detail is in [Apache Avro 1.8.2 Hadoop MapReduce guide](http://avro.apache.org/docs/1.8.2/mr.html)
+
+We illustrate using Avro to serialize and deserialize data. The main example is borrowed from 
+
+[Apache Avro 1.8.2 Getting Started (Python)](http://avro.apache.org/docs/1.8.2/gettingstartedpython.html) 
+
+We are using Python 2. but for each part instructions corresponding to Python3 are also mentioned.
+
+The Avro Python library does not support code generation, while Avro used with Java supports code generation, see [Apache Avro 1.8.2 Getting Started (Java)](http://avro.apache.org/docs/1.8.2/gettingstartedjava.html) for details
 
 ## Introduction
 
