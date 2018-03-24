@@ -32,27 +32,27 @@ Avro implementations for C, C++, C#, Java, PHP, Python, and Ruby can be download
 
 ## Download, Unzip and Install
 
-* One can download and unzip the file *avro-1.8.2.tar.gz* from [here](http://mirrors.ocf.berkeley.edu/apache/avro/avro-1.8.2/py/)
+One can download and unzip the file *avro-1.8.2.tar.gz* from [here](http://mirrors.ocf.berkeley.edu/apache/avro/avro-1.8.2/py/)
 
-* To unzip, using linux:
+To unzip, using linux:
     
         tar xvf avro-1.8.2.tar.gz
 
-  using MacOS:
+using MacOS:
 
         gunzip -c avro-1.8.2.tar.gz | tar xopf -
 
-* cd into the directory and install using the following:
+cd into the directory and install using the following:
 
         cd avro-1.8.2
         python setup.py install
 
-* To check successful installation, import avro in python without error message: 
+To check successful installation, import avro in python without error message: 
     
         python
         >>> import avro
 
-* This above instruction is for Python2. If one is using Python3, download *avro-python3-1.8.2.tar.gz* from [here](http://mirrors.sonic.net/apache/avro/avro-1.8.2/py3/)m the unzip and install procedure is the same.
+This above instruction is for Python2. If one is using Python3, download *avro-python3-1.8.2.tar.gz* from [here](http://mirrors.sonic.net/apache/avro/avro-1.8.2/py3/)m the unzip and install procedure is the same.
 
 ## Defining a schema
 
@@ -86,20 +86,21 @@ The following piece of python code illustrates serialization of some data
         writer.close()
 
 The code does the following:
-* imports required modules
-* reads the schema *user.avsc* (make sure that the schema file is placed in the same directory as the python code)
-* create a *DataFileWriter* called writer, for writing serialized items to a data file on disk
-* use *DataFileWriter.append()* to add data points to the data file. Avro records are represented as Python dicts.
+
+* Imports required modules
+* Reads the schema *user.avsc* (make sure that the schema file is placed in the same directory as the python code)
+* Create a *DataFileWriter* called writer, for writing serialized items to a data file on disk
+* Use *DataFileWriter.append()* to add data points to the data file. Avro records are represented as Python dicts.
 * The resulting data file saved on the disk is named *users.avro*
 * This above instruction is for Python2. If one is using Python3, change
         schema = avro.schema.parse(open("user.avsc", "rb").read())
-to:
+  to:
         schema = avro.schema.Parse(open("user.avsc", "rb").read())
-since the method name has a different case in Python3.
+  since the method name has a different case in Python3.
 
 ## Deserializing
 
-The following piece of python code illustrates deserialization 
+The following python code illustrates deserialization 
 
         from avro.datafile import DataFileReader
         from avro.io import DatumReader
@@ -110,10 +111,13 @@ The following piece of python code illustrates deserialization
         reader.close()
 
 The code does the following:
-* imports required modules
+
+* Imports required modules
 * Use *DatafileReader* to read the serilaized data file *users.avro*, it is an iterator
-* returns the data in a python dict
-* This above instruction is for Python2. If one is using Python3, change **print user** to **print (user)**, that is the syntax change in Python.
+* Returns the data in a python dict
+* This above instruction is for Python2. If one is using Python3, change **print user** to **print (user)**, that is 
+  the syntax change in Python.
+  *rewrite so it works for python 2 and 3 using future*
 
 The output should look like:
 
