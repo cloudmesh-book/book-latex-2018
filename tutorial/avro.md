@@ -4,7 +4,7 @@ hid-sp18-405
 
 *describe here what is abache Avro. Use a technology abstract or write a new one.*
 
-Avro provides a convenient way to represent complex data structures within a Hadoop MapReduce job. Detail is in [Apache Avro 1.8.2 Hadoop MapReduce guide](http://avro.apache.org/docs/1.8.2/mr.html)
+Avro provides a convenient way to represent complex data structures within a Hadoop MapReduce job. Details about Avro are documented in [Apache Avro 1.8.2 Hadoop MapReduce guide](http://avro.apache.org/docs/1.8.2/mr.html)
 
 We illustrate using Avro to serialize and deserialize data. The main example is borrowed from 
 
@@ -121,6 +121,10 @@ The output should look like:
         writer.append({"name": "Ben", "favorite_number": 7, "favorite_color": "red"})
 
 
+## Resources
+
+*put your links here*
+*create bibtex citations and add them to tutorials/refernces.bib*
 
 
 
