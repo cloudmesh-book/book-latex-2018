@@ -36,13 +36,13 @@ The information which is passed from DHCP Server to its clients includes:
 If you want to get an introduction about the logical process followed by a DHCP service, please 
 follow [this link](https://www.raspberrypi.org/learning/networking-lessons/lesson-3/plan/)
 
-## Choose the Pi for DHCP server
+## Setting up the DHCP server
 
 Choose one of the Pi's as the DHCP server, using the Pi with hostname *red00* as an example here. 
 Log into this Pi and open a terminal. The following steps are all processed in the terminal of
 this chosen Pi.
 
-## Software installation
+### Software installation
 
 The first step is to install a package dhcpd, which is a popular DHCP server for the Pi. In the 
 terminal
@@ -53,7 +53,7 @@ terminal
 At the end of the installation process, the DHCP server daemon will be started and it will 
 **fail**, because the configuration has not been done. It will get fixed in later steps.
 
-## Configure the DHCP server
+### Configure the DHCP server
 
 The configuration file for the DHCP server is at */etc/dhcp/dhcpd.conf* 
 Start the editing process with *nano* as follows: 
@@ -89,7 +89,7 @@ server IP address or you can use public DNS Services such as Google's, which are
 
 Finally, Save your changes to the file with `Ctrl-O` and exit nano with `Ctrl-X`.
 
-## Change the interface of DHCP service 
+### Change the interface of DHCP service 
 
 Now you need to tell the DHCP service the interface to hand out addresses on. Edit the following
 file:
@@ -106,7 +106,7 @@ And change the last line to:
     
         INTERFACES="eth0"
 
-## Set static IP Address for the server
+### Set static IP Address for the server
 
 The next step is to set a static IP address on the Raspberry pi as this won't be able to start 
 the DHCP service without it. We use *nano* to edit the file at */etc/network/interfaces*:
@@ -132,14 +132,14 @@ Now this Raspberry Pi will now always have the IP address 192.168.2.1. You can d
  by entering the command *ifconfig*; the IP address should be shown on the second line just after 
  *inet addr*.
  
-## Restart the DCHP service
+### Restart the DCHP service
 
 Finally, to complete the set-up, restart the DHCP service by the following command:
         
         sudo service isc-dhcp-server stop
         sudo service isc-dhcp-server start
         
-## Checking the currently leased addresses
+### Checking the currently leased addresses
 
 Run the following command to check the currently assigned addresses: 
 
