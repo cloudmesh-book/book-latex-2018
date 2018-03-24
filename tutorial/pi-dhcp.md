@@ -20,29 +20,30 @@ and [link5](https://askubuntu.com/questions/265504/how-to-monitor-dhcp-leased-ip
 
 The Dynamic Host Configuration Protocol (DHCP) enables any of the computers on the local area
 network (LAN) to be given a network configuration automatically as soon as the boot process on the
-machine gets underway. Most routers are capable of this function. This function can also be 
-carried out by a server computer, although almost any of your computers can fulfil the role. The
-other computers which are configured to take advantage of this service are called DHCP Clients,
-and need to have their networking setup configured to use DHCP.
+machine gets underway. Instead of using a router, we use one of the raspbery PI's to fulfill this function. 
+The other Pi's are configured in such a way that the serve as clients and obtain the network address form our raspberry providing the addresses. They are DHCP Clients, and need to have their networking setup configured to use DHCP.
 
-In the case here, one of the five Pi's in the cluster (hostname: red00) will be set to be the 
-DHCP server, and the rest four with hostnames red01, red02, red03, red04 will then be DHCP 
+Hence, we set up one of the five Pi's in the cluster (hostname: red00) to be the 
+DHCP server, and the rest four with Pi's with the names red01, red02, red03, red04 will then be DHCP 
 clients. 
 
-The information which can be passed from DHCP Server to its clients includes:
-- a suitable IP Address, either permanently or leased for a defined period;
-- the address of your router (aka gateway);
-- an address of one or more Domain Name Servers (DNS) within or outwith your LAN or both
+The information which is passed from DHCP Server to its clients includes:
+
+* a suitable IP Address, either permanently or leased for a defined period;
+* the address of your router (aka gateway);
+* an address of one or more Domain Name Servers (DNS) within or outwith your LAN or both
 
 If you want to get an introduction about the logical process followed by a DHCP service, please 
 follow [this link](https://www.raspberrypi.org/learning/networking-lessons/lesson-3/plan/)
 
 ## Choose the Pi for DHCP server
-choose one of the Pi's as the DHCP server, using the Pi with hostname *red00* as an example here
-. Log into this Pi and open a terminal. The following steps are all processed in the terminal of
- this chosen Pi.
+
+Choose one of the Pi's as the DHCP server, using the Pi with hostname *red00* as an example here. 
+Log into this Pi and open a terminal. The following steps are all processed in the terminal of
+this chosen Pi.
 
 ## Software installation
+
 The first step is to install a package dhcpd, which is a popular DHCP server for the Pi. In the 
 terminal
     
@@ -53,6 +54,7 @@ At the end of the installation process, the DHCP server daemon will be started a
 **fail**, because the configuration has not been done. It will get fixed in later steps.
 
 ## Configure the DHCP server
+
 The configuration file for the DHCP server is at */etc/dhcp/dhcpd.conf* 
 Start the editing process with *nano* as follows: 
 
@@ -80,13 +82,15 @@ may have two ranges such as
         range 192.168.2.100 192.168.2.120
         range 192.168.2.150 192.168.2.200
     to refrain the DHCP server from handling out some of the addresses (from 121 to 149)
+    
 - domain-name-server:  If you have a DNS service for machines on your LAN, enter the
 server IP address or you can use public DNS Services such as Google's, which are at 8.8.8.8. and
  8.8.4.4.
 
-Finally, Save your changes to the file with *[Ctrl]+O* and exit nano with *[Ctrl]+X*.
+Finally, Save your changes to the file with `Ctrl-O` and exit nano with `Ctrl-X`.
 
 ## Change the interface of DHCP service 
+
 Now you need to tell the DHCP service the interface to hand out addresses on. Edit the following
 file:
         
@@ -103,6 +107,7 @@ And change the last line to:
         INTERFACES="eth0"
 
 ## Set static IP Address for the server
+
 The next step is to set a static IP address on the Raspberry pi as this won't be able to start 
 the DHCP service without it. We use *nano* to edit the file at */etc/network/interfaces*:
 
@@ -128,12 +133,14 @@ Now this Raspberry Pi will now always have the IP address 192.168.2.1. You can d
  *inet addr*.
  
 ## Restart the DCHP service
+
 Finally, to complete the set-up, restart the DHCP service by the following command:
         
         sudo service isc-dhcp-server stop
         sudo service isc-dhcp-server start
         
 ## Checking the currently leased addresses
+
 Run the following command to check the currently assigned addresses: 
 
         cat /var/lib/dhcp/dhcpd.leases
@@ -211,6 +218,7 @@ which would give a cleaner look such as:
         b8:27:eb:9a:55:13  192.168.2.101   red02          2018-02-25 21:56:12 -NA-  
         
 ## Configure fixed IP’s for clients
+
 It is always handy to have the dhcp server assign fixed addresses to each node in the cluster so
 that it is easy to remember the node by IP addresses. For instance next node in the cluster is 
 red01 and it would be helpful to have a fixed IP for example 192.168.2.50. 
@@ -252,6 +260,7 @@ the result would be:
 red01 is no longer in the list because it is assigned a fixed-address 192.168.2.50
 
 ### Checking the currently leased addresses for fixed IP clients
+
 In several of the sources listed at the beginning, they have a command to check the currently 
 leased addresses for fixed IP clients:
         
