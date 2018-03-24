@@ -1,16 +1,15 @@
 # PI DHCP Server Tutorial
-## hid-sp18-405 
 
-## Overview
-This is a tutorial for setting up Dynamic Host Configuration Protocol (DHCP) server on a
+* Min Chen (hid-sp18-405)
+* Bertolt Sobolik (hid-sp18-419)
+
+We describe how to set up **D**ynamic **H**ost **C**onfiguration **P**rotocol (DHCP) server on a
 Raspberry Pi Cluster. The OS on these Pi's is RASPBIAN STRETCH WITH DESKTOP released on 
 2017-11-29. 
 
 ## Acknowledgement
-* This tutorail was created on 02/25/2018 by Min Chen (hid-sp18-405)
-* The cluster was set up by Bertolt Sobolik (hid-sp18-419) and we were working in a group to 
-build a spark cluster using 5 Raspberry Pi's.
-* The steps and instruction in this tutorial is combined from several web resources: 
+
+The steps and instruction presented here are combined from several web resources: 
 [link1](https://www.raspberrypi.org/learning/networking-lessons/lesson-3/plan/),
 [link2](http://my-music.mine.nu/images/rpi_raspbianwheezy_dhcp_server.pdf),
 [link3](https://tekmarathon.com/2017/02/16/hadoop-and-spark-installation-on-raspberry-pi-3-cluster-part-3/),
@@ -18,6 +17,7 @@ build a spark cluster using 5 Raspberry Pi's.
 and [link5](https://askubuntu.com/questions/265504/how-to-monitor-dhcp-leased-ip-address).
 
 ## Introduction
+
 The Dynamic Host Configuration Protocol (DHCP) enables any of the computers on the local area
 network (LAN) to be given a network configuration automatically as soon as the boot process on the
 machine gets underway. Most routers are capable of this function. This function can also be 
