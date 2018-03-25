@@ -572,7 +572,21 @@ addtohook={%
 \fi
 }
 }
+%----------------------------------------------------------------------------------------
+% INCLUDE FOREST PACKAGE
+%----------------------------------------------------------------------------------------
 
+
+\usepackage{forest}
+\usepackage{hyperref}
+\usepackage{adjustbox}
+
+\usetikzlibrary{arrows.meta,shadows}
+
+\newcommand{\ngreen}{bottom color=green!20}
+\newcommand{\ngrey}{bottom color=gray!20}
+\newcommand{\nred}{bottom color=red!20}
+\newcommand{\nwhite}{bottom color=white!20}
 %----------------------------------------------------------------------------------------
 % remove pandoc commands
 %----------------------------------------------------------------------------------------

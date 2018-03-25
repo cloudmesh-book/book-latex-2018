@@ -33,4 +33,4 @@ that seems a nice name - not yet working
 
 ## Running from docker hub
 
-docker run -it laszewski/cloudmesh-tex:0.0.1
+    docker run -it laszewski/cloudmesh-tex:0.0.1
