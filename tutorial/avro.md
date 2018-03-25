@@ -1,38 +1,14 @@
 # Python Apache Avro 
 
-hid-sp18-405 
+Min Chen (hid-sp18-405) 
 
-*describe here what is abache Avro. Use a technology abstract or write a new one.*
+Apache Avro is a data serialization system, which provides rich data structures, remote procedure call (RPC), a container file to store persistent data and simple integration with dynamic languages~\cite{hid-sp18-405-tutorial-Avro-doc}. Avro depends on schemas, which are defined with JSON. This facilitates implementation in other languages that have the JSON libraries. The key advantages of Avro are schema evolution - Avro will handle the missing/extra/modified fields, dynamic typing - serialization and deserialization without code generation, untagged data - data encoding and faster data processing by allowing data to be written without overhead.
 
-Avro provides a convenient way to represent complex data structures within a Hadoop MapReduce job. Details about Avro are documented in [Apache Avro 1.8.2 Hadoop MapReduce guide](http://avro.apache.org/docs/1.8.2/mr.html)
-
-We illustrate using Avro to serialize and deserialize data. The main example is borrowed from 
-
-[Apache Avro 1.8.2 Getting Started (Python)](http://avro.apache.org/docs/1.8.2/gettingstartedpython.html) 
-
-We are using Python 2. but for each part instructions corresponding to Python3 are also mentioned.
-
-The Avro Python library does not support code generation, while Avro used with Java supports code generation, see [Apache Avro 1.8.2 Getting Started (Java)](http://avro.apache.org/docs/1.8.2/gettingstartedjava.html) for details
-
-## Introduction
-
-[Apache Avro](http://avro.apache.org/) is a data serialization system, which provides the following features:
-* Rich data structures.
-* A compact, fast, binary data format.
-* A container file, to store persistent data.
-* Remote procedure call (RPC).
-* Simple integration with dynamic languages. 
-
-Avro relies on schemas, which are defined with JSON . This facilitates implementation in languages that already have JSON libraries.
-
-Avro provides functionality similar to systems such as [Thrift](http://thrift.apache.org/), [Protocol Buffers](https://github.com/google/protobuf), etc. Avro differs from these systems in 3 aspects, namely *Dynamic typing*, 
-*Untagged data* and *No manually-assigned field IDs*. Detailed explanation can be found [here](http://avro.apache.org/docs/1.8.2/)
-
-Avro implementations for C, C++, C#, Java, PHP, Python, and Ruby can be downloaded from the [Apache Avro Releases page](http://avro.apache.org/releases.html). This tutorial will use **Python** with the release **Avro 1.8.2** as an exmaple. 
+The following steps illustrate using Avro to serialize and deserialize data with example modified from Apache Avro 1.8.2 Getting Started (Python)~\cite{hid-sp18-405-tutorial-Avro-python}.
 
 ## Download, Unzip and Install
 
-One can download and unzip the file *avro-1.8.2.tar.gz* from [here](http://mirrors.ocf.berkeley.edu/apache/avro/avro-1.8.2/py/)
+The zipped installation file *avro-1.8.2.tar.gz* could be downloaded from [here](http://mirrors.ocf.berkeley.edu/apache/avro/avro-1.8.2/py/)
 
 To unzip, using linux:
     
@@ -52,23 +28,25 @@ To check successful installation, import avro in python without error message:
         python
         >>> import avro
 
-This above instruction is for Python2. If one is using Python3, download *avro-python3-1.8.2.tar.gz* from [here](http://mirrors.sonic.net/apache/avro/avro-1.8.2/py3/)m the unzip and install procedure is the same.
+This above instruction is for Python2. The Python3 counterpart, *avro-python3-1.8.2.tar.gz* could be downloaded from [here](http://mirrors.sonic.net/apache/avro/avro-1.8.2/py3/) and the unzip and install procedure is the same.
 
 ## Defining a schema
 
-Use a simple schema,(from [Avro doc](http://avro.apache.org/docs/1.8.2/gettingstartedpython.html)) as an example: paste the following lines into an empty text file with the name it *user.avsc*
+Use a simple schema for students contributed in cloudmesh as an example: paste the following lines into an empty text file with the name it *student.avsc*
 
-        {"namespace": "example.avro",
-        "type": "record",
-        "name": "User",
-        "fields": [
+        {"namespace": "cloudmesh.avro",
+         "type": "record",
+         "name": "Student",
+         "fields": [
             {"name": "name", "type": "string"},
-            {"name": "favorite_number",  "type": ["int", "null"]},
-            {"name": "favorite_color", "type": ["string", "null"]}
+            {"name": "hid",  "type": "string"},
+            {"name": "age", "type": ["int", "null"]},
+            {"name": "project_name", "type": ["string", "null"]}
             ]
         }
 
-This schema defines a record representing a hypothetical user, for more information on schema files and how to specify name and type of a record can be found at  [record specification](http://avro.apache.org/docs/1.8.2/spec.html#schema_record)
+This schema defines a record representing a hypothetical student, which is defined to be a record with the name *Student* and 4 fields, namely name, hid, age and project name. The type of each of the field needs to be provided. If any field is optional, one could use the list including *null* to define the type as shown in age and project name in the example schema. Further, a namespace *cloudmesh.avro* is also defined, which together with the name attribute defines the full name of the schema (cloudmesh.avro.Student in this case).
+
 
 ## Serializing 
 
@@ -78,24 +56,27 @@ The following piece of python code illustrates serialization of some data
         from avro.datafile import DataFileWriter
         from avro.io import DatumWriter
 
-        schema = avro.schema.parse(open("user.avsc", "rb").read())
+        schema = avro.schema.parse(open("student.avsc", "rb").read())
 
-        writer = DataFileWriter(open("users.avro", "wb"), DatumWriter(), schema)
-        writer.append({"name": "Alyssa", "favorite_number": 256})
-        writer.append({"name": "Ben", "favorite_number": 7, "favorite_color": "red"})
+        writer = DataFileWriter(open("students.avro", "wb"), DatumWriter(), schema)
+        writer.append({"name": "Min Chen", "hid": "hid-sp18-405", "age": 29,
+               "project_name": "hadoop with docker"})
+        writer.append({"name": "Ben Smith", "hid": "hid-sp18-309",
+               "project_name": "spark with docker"})
+        writer.append({"name": "Alice Johnson", "hid": "hid-sp18-208", "age": 27})
         writer.close()
 
 The code does the following:
 
 * Imports required modules
-* Reads the schema *user.avsc* (make sure that the schema file is placed in the same directory as the python code)
+* Reads the schema *student.avsc* (make sure that the schema file is placed in the same directory as the python code)
 * Create a *DataFileWriter* called writer, for writing serialized items to a data file on disk
 * Use *DataFileWriter.append()* to add data points to the data file. Avro records are represented as Python dicts.
-* The resulting data file saved on the disk is named *users.avro*
+* The resulting data file saved on the disk is named *students.avro*
 * This above instruction is for Python2. If one is using Python3, change
-        schema = avro.schema.parse(open("user.avsc", "rb").read())
+        schema = avro.schema.parse(open("student.avsc", "rb").read())
   to:
-        schema = avro.schema.Parse(open("user.avsc", "rb").read())
+        schema = avro.schema.Parse(open("student.avsc", "rb").read())
   since the method name has a different case in Python3.
 
 ## Deserializing
@@ -105,34 +86,38 @@ The following python code illustrates deserialization
         from avro.datafile import DataFileReader
         from avro.io import DatumReader
 
-        reader = DataFileReader(open("users.avro", "rb"), DatumReader())
-        for user in reader:
-            print user
+        reader = DataFileReader(open("students.avro", "rb"), DatumReader())
+        for student in reader:
+        print (student)
         reader.close()
 
 The code does the following:
 
 * Imports required modules
-* Use *DatafileReader* to read the serilaized data file *users.avro*, it is an iterator
+* Use *DatafileReader* to read the serilaized data file *students.avro*, it is an iterator
 * Returns the data in a python dict
-* This above instruction is for Python2. If one is using Python3, change **print user** to **print (user)**, that is 
-  the syntax change in Python.
-  *rewrite so it works for python 2 and 3 using future*
 
 The output should look like:
 
-        writer.append({"name": "Alyssa", "favorite_number": 256})
-        writer.append({"name": "Ben", "favorite_number": 7, "favorite_color": "red"})
+        {'name': 'Min Chen', 'hid': 'hid-sp18-405', 
+        'age': 29, 'project_name': 'hadoop with docker'}
+        {'name': 'Ben Smith', 'hid': 'hid-sp18-309',
+         'age': None, 'project_name': 'spark with docker'}
+        {'name': 'Alice Johnson', 'hid': 'hid-sp18-208',
+         'age': 27, 'project_name': None}
 
 
 ## Resources
 
-*put your links here*
-*create bibtex citations and add them to tutorials/refernces.bib*
+* The steps and instructions are modified from [Apache Avro 1.8.2 Getting Started](http://avro.apache.org/docs/1.8.2/gettingstartedpython.html)
 
+* The Avro Python library does not support code generation, while Avro used with Java supports code generation, see [Apache Avro 1.8.2 Getting Started (Java)](http://avro.apache.org/docs/1.8.2/gettingstartedjava.html) for details
 
+* Avro provides a convenient way to represent complex data structures within a Hadoop MapReduce job. Details about Avro are documented in [Apache Avro 1.8.2 Hadoop MapReduce guide](http://avro.apache.org/docs/1.8.2/mr.html)
 
+* Avro implementations for C, C++, C#, Java, PHP, Python, and Ruby can be downloaded from the [Apache Avro Releases page](http://avro.apache.org/releases.html). 
 
+* For more information on schema files and how to specify name and type of a record can be found at [record specification](http://avro.apache.org/docs/1.8.2/spec.html#schema_record)
 
 
 
