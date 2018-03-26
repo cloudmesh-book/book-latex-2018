@@ -16,7 +16,7 @@ One way is to use the Docker command line tool. You could open an terminal and r
 
         docker search centos
 
-and here is the first several lines of the result:
+and here are the first several lines of the result:
 
         | NAME                            | DESCRIPTION                  | STAR | OFFICIAL | AUTOMATED |
         |---------------------------------|------------------------------|------|----------|-----------|
