@@ -1,4 +1,4 @@
-\documentclass{format/laszewski} 
+\documentclass{format/laszewski}
 
 \newcommand{\TITLE}{Lecture Notes\\Introduction to Cloud Computing}
 \newcommand{\SUBTITLE}{Theory and Practice}
@@ -21,7 +21,7 @@
 \maketitle
 
 
-\chapterimage{container.png} 
+\chapterimage{container.png}
 
 \part{MapReduce}
 \chapterimage{elephant.jpeg}
@@ -33,6 +33,7 @@
 
 \include{section/mapreduce/spark-lectures}
 \include{section/mapreduce/spark-installation}
+%\include{section/mapreduce/spark-streaming}
 
 \chapter{Draft: Harp}
 \label{c:harp}
@@ -46,7 +47,7 @@
 
 \include{section/mapreduce/twister2-example}
 
-\begin{comment}
+%being{comment}
 \part{Cloud Container Technologies}
 
 \input{section/container/container}
@@ -64,10 +65,15 @@
 
 \input{section/container/docker-hadoop}
 \input{section/container/docker-spark}
+\input{section/container/qemu-kvm}
 
 \input{section/container/exercise}
 
-\end{comment}
+% \end{comment}
+
+\part{Aritificial Intelligence}
+
+\input{section/ai/ai}
 
 %\input{section/msg/mqtt}
 %\input{section/doc/book-format}
@@ -75,7 +81,7 @@
 %\input{section/container/docker-rest}
 
 %\markdownInput{section/container/minikube.md}
- 
+
 %\include{section/helps/book-compile}
 %\include{section/rest/rest}
 %\include{section/rest/swagger-codegen}
@@ -135,7 +141,7 @@
 \cite{www-sharelatex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapterimage{water.png} 
+\chapterimage{water.png}
 \chapter*{Bibliography}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \addcontentsline{toc}{chapter}{\textcolor{ocre}{Bibliography}}
