@@ -4,7 +4,11 @@ from pathlib import Path
 import subprocess
 import os
 
-files = Path('section').glob('**/*.md')
+from itertools import chain
+
+files = chain(Path('section').glob('**/*.md'),
+              Path('tutorial').glob('**/*.md') )
+
 
 
 for md in files:
