@@ -1,8 +1,8 @@
-# Creates pseudo distributed hadoop 2.7.1
+# Creates pseudo distributed hadoop 2.7.5
 #
 FROM tianon/centos:6.5
 
-ADD Centos-Source.repo /etc/yum.repos.d/Centos-Source.repo
+ADD conf/Centos-Source.repo /etc/yum.repos.d/Centos-Source.repo
 
 RUN yum update -y
 
@@ -37,10 +37,10 @@ RUN cp /root/.ssh/id_rsa.pub /root/.ssh/authorized_keys
 
 
 # java
-RUN curl -LO 'http://download.oracle.com/otn-pub/java/jdk/7u71-b14/jdk-7u71-linux-x64.rpm' -H 'Cookie: oraclelicense=accept-securebackup-cookie'
-RUN rpm -i jdk-7u71-linux-x64.rpm
-RUN rm jdk-7u71-linux-x64.rpm
-
+RUN curl -LO 'http://download.oracle.com/otn-pub/java/jdk/8u161-b12/2f38c3b165be4555a1fa6e98c45e0808/jdk-8u161-linux-x64.rpm' -H 'Cookie: oraclelicense=accept-securebackup-cookie' && \
+	rpm -i jdk-8u161-linux-x64.rpm && \
+	rm jdk-8u161-linux-x64.rpm
+	
 ENV JAVA_HOME /usr/java/default
 ENV PATH $PATH:$JAVA_HOME/bin
 RUN rm /usr/bin/java && ln -s $JAVA_HOME/bin/java /usr/bin/java
@@ -50,8 +50,8 @@ RUN mkdir -p /tmp/native
 RUN curl -L https://github.com/sequenceiq/docker-hadoop-build/releases/download/v2.7.1/hadoop-native-64-2.7.1.tgz | tar -xz -C /tmp/native
 
 # hadoop
-RUN curl -s http://www.eu.apache.org/dist/hadoop/common/hadoop-2.7.1/hadoop-2.7.1.tar.gz | tar -xz -C /usr/local/
-RUN cd /usr/local && ln -s ./hadoop-2.7.1 hadoop
+RUN curl -s http://mirrors.ocf.berkeley.edu/apache/hadoop/common/hadoop-2.7.5/hadoop-2.7.5.tar.gz | tar -xz -C /usr/local/
+RUN cd /usr/local && ln -s ./hadoop-2.7.5 hadoop
 
 ENV HADOOP_PREFIX /usr/local/hadoop
 ENV HADOOP_COMMON_HOME /usr/local/hadoop
@@ -69,12 +69,12 @@ RUN mkdir $HADOOP_PREFIX/input
 RUN cp $HADOOP_PREFIX/etc/hadoop/*.xml $HADOOP_PREFIX/input
 
 # pseudo distributed
-ADD core-site.xml.template $HADOOP_PREFIX/etc/hadoop/core-site.xml.template
+ADD conf/core-site.xml.template $HADOOP_PREFIX/etc/hadoop/core-site.xml.template
 RUN sed s/HOSTNAME/localhost/ /usr/local/hadoop/etc/hadoop/core-site.xml.template > /usr/local/hadoop/etc/hadoop/core-site.xml
-ADD hdfs-site.xml $HADOOP_PREFIX/etc/hadoop/hdfs-site.xml
+ADD conf/hdfs-site.xml $HADOOP_PREFIX/etc/hadoop/hdfs-site.xml
 
-ADD mapred-site.xml $HADOOP_PREFIX/etc/hadoop/mapred-site.xml
-ADD yarn-site.xml $HADOOP_PREFIX/etc/hadoop/yarn-site.xml
+ADD conf/mapred-site.xml $HADOOP_PREFIX/etc/hadoop/mapred-site.xml
+ADD conf/yarn-site.xml $HADOOP_PREFIX/etc/hadoop/yarn-site.xml
 
 RUN $HADOOP_PREFIX/bin/hdfs namenode -format
 
@@ -82,7 +82,7 @@ RUN $HADOOP_PREFIX/bin/hdfs namenode -format
 RUN rm -rf /usr/local/hadoop/lib/native
 RUN mv /tmp/native /usr/local/hadoop/lib
 
-ADD ssh_config /root/.ssh/config
+ADD conf/ssh_config /root/.ssh/config
 RUN chmod 600 /root/.ssh/config
 RUN chown root:root /root/.ssh/config
 
@@ -94,7 +94,7 @@ RUN chown root:root /root/.ssh/config
 #
 # ADD supervisord.conf /etc/supervisord.conf
 
-ADD bootstrap.sh /etc/bootstrap.sh
+ADD conf/bootstrap.sh /etc/bootstrap.sh
 RUN chown root:root /etc/bootstrap.sh
 RUN chmod 700 /etc/bootstrap.sh
 
