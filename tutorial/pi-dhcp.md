@@ -9,31 +9,22 @@ We describe how to set up **D**ynamic **H**ost **C**onfiguration **P**rotocol (D
 Raspberry Pi Cluster. The OS on these Pi's is RASPBIAN STRETCH WITH DESKTOP released on 
 2017-11-29. 
 
-## Acknowledgement
-
-The steps and instruction presented here are combined from several web resources: 
-[link1](https://www.raspberrypi.org/learning/networking-lessons/lesson-3/plan/),
-[link2](http://my-music.mine.nu/images/rpi_raspbianwheezy_dhcp_server.pdf),
-[link3](https://tekmarathon.com/2017/02/16/hadoop-and-spark-installation-on-raspberry-pi-3-cluster-part-3/),
-[link4](https://blog.monotok.org/setup-raspberry-pi-dhcp-server/),
-and [link5](https://askubuntu.com/questions/265504/how-to-monitor-dhcp-leased-ip-address).
-
 ## Introduction
 
-The Dynamic Host Configuration Protocol (DHCP) enables any of the computers on the local area
+``The Dynamic Host Configuration Protocol (DHCP) enables any of the computers on the local area
 network (LAN) to be given a network configuration automatically as soon as the boot process on the
-machine gets underway. Instead of using a router, we use one of the raspbery PI's to fulfill this function. 
-The other Pi's are configured in such a way that the serve as clients and obtain the network address form our raspberry providing the addresses. They are DHCP Clients, and need to have their networking setup configured to use DHCP.
+machine gets underway'' \cite{hid-sp18-405-tutorial-pidhcp-pdf}. Instead of using a router, we use one of the raspbery PI's to fulfill this function. 
+The other Pi's are configured in such a way that the serve as clients and obtain the network address form our raspberry providing the addresses. They are DHCP Clients, and to use DHCP they need to have their networking setup properly configured.
 
 Hence, we set up one of the five Pi's in the cluster (hostname: red00) to be the 
 DHCP server, and the rest four with Pi's with the names red01, red02, red03, red04 will then be DHCP 
 clients. 
 
-The information which is passed from DHCP Server to its clients includes:
+The information which is passed from DHCP Server to its clients includes\cite{hid-sp18-405-tutorial-pidhcp-pdf}:
 
-* a suitable IP Address, either permanently or leased for a defined period;
-* the address of your router (aka gateway);
-* an address of one or more Domain Name Servers (DNS) within or outwith your LAN or both
+* a suitable IP Address;
+* the address of your router;
+* an address of one or more Domain Name Servers (DNS)
 
 If you want to get an introduction about the logical process followed by a DHCP service, please 
 follow [this link](https://www.raspberrypi.org/learning/networking-lessons/lesson-3/plan/)
@@ -74,15 +65,13 @@ following lines to the file */etc/dhcp/dhcpd.conf*:
             option domain-name-servers 8.8.8.8;
         }
 Note: The subnet and netmask are IP values required for assisting communications across your LAN.
-- subnet: you can obtain the IP Address of a computer on your LAN using the Linux ifconfig
-command. Take the *Inet Addr* value and replace its final octet with a zero to get your subnet;
-- netmask: the value given above should be fine for your netmask;
-- range: this is the range of IP Addresses (from - to) for serving to clients by this DHCP Service.
-If you have more than one DHCP Server on your LAN ensure that their ranges do not overlap; You 
-may have two ranges such as 
+- subnet: ``you can obtain the IP Address of a computer on your LAN using the Linux ifconfig
+command: take the *Inet Addr* value and replace its final octet with a zero to get your subnet'' \cite{hid-sp18-405-tutorial-pidhcp-pdf};
+- range: this is the range of IP Addresses distributed by this DHCP Service. You may have two ranges such as 
         
         range 192.168.2.100 192.168.2.120
         range 192.168.2.150 192.168.2.200
+
     to refrain the DHCP server from handling out some of the addresses (from 121 to 149)
     
 - domain-name-server:  If you have a DNS service for machines on your LAN, enter the
@@ -126,9 +115,7 @@ If you have a line like:
 
         iface eth0 inet dhcp
         
-be sure to comment it out. This line tells the Raspberry Pi to try and get an IP address from a 
-DHCP server for the interface eth0. So essentially this is making it a DHCP client, but we want 
-to make this a DHCP server so this line must be disabled.
+be sure to disable this line. It is used to set up the Pi as a DHCP client, however, we want this Pi to be a DHCP server.
 
 Now this Raspberry Pi will now always have the IP address 192.168.2.1. You can double-check this
  by entering the command *ifconfig*; the IP address should be shown on the second line just after 
@@ -221,7 +208,7 @@ which would give a cleaner look such as:
         
 ## Configure fixed IP's for clients
 
-It is always handy to have the dhcp server assign fixed addresses to each node in the cluster so
+It is sometimes needed to have the dhcp server assign fixed addresses to each node in the cluster so
 that it is easy to remember the node by IP addresses. For instance next node in the cluster is 
 red01 and it would be helpful to have a fixed IP for example 192.168.2.50. 
  
@@ -235,11 +222,7 @@ To do this, we modify the */etc/dhcp/dhcpd.conf* by:
             fixed-address 192.168.2.50;
         }
  
- Notice that *b8:27:eb:42:c9:e9* is the so-called MAC Address of the Ethernet interface (network
-adapter) of the machine which you wish to name node100. It provides a hardware reference on the
-client for the server to use in network communications.You can find the MAC Address(es) of the 
-Ethernet interface(s) on any computer using the *ifconfig* command. You may also notice that the
- previous two commands of checking the currently leased addresses will also provide MAC Addresses.
+ Notice that *b8:27:eb:42:c9:e9* is the so-called MAC Address of the Ethernet interface (network adapter) of the machine which you wish to name red01. ``It provides a hardware reference on the client for the server to use in network communications.You can find the MAC Address(es) of the Ethernet interface(s) on any computer using the *ifconfig* command''\cite{hid-sp18-405-tutorial-pidhcp-pdf}. You may also notice that the previous two commands of checking the currently leased addresses will also provide MAC Addresses.
  
 **Warning**: if you wish to have your DHCP Server award a fixed IP Address it should be one outside
 the DHCP normally assigned range of IP Addresses.
@@ -263,10 +246,16 @@ red01 is no longer in the list because it is assigned a fixed-address 192.168.2.
 
 ### Checking the currently leased addresses for fixed IP clients
 
-In several of the sources listed at the beginning, they have a command to check the currently 
-leased addresses for fixed IP clients:
+To check the currently leased addresses for fixed IP clients:
         
         cat /var/lib/dhcp/dhclient.eth0.leases
-        
-**However, this does not work on the cluster in our case, I am still trying to figure out how to 
-do this.**
+
+
+## Resources
+
+The steps and instruction presented here are combined from several web resources: 
+* [Lesson 3 - Dynamic Host Configuration Protocol (DHCP)](https://www.raspberrypi.org/learning/networking-lessons/lesson-3/plan/) \cite{hid-sp18-405-tutorial-pidhcp-lesson3}
+* [Configuring the Raspberry Pi as a DHCP Server under Raspbian Wheezy](http://my-music.mine.nu/images/rpi_raspbianwheezy_dhcp_server.pdf) \cite{hid-sp18-405-tutorial-pidhcp-pdf}
+* [Hadoop and Spark Installation on Raspberry Pi-3 Cluster](https://tekmarathon.com/2017/02/16/hadoop-and-spark-installation-on-raspberry-pi-3-cluster-part-3/) \cite{hid-sp18-405-tutorial-pidhcp-hadoopinstall}
+* [Setup Raspberry pi as a dhcp server](https://blog.monotok.org/setup-raspberry-pi-dhcp-server/) \cite{hid-sp18-405-tutorial-pidhcp-setup}
+

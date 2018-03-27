@@ -7,31 +7,29 @@
 
 \label{s:dockerhub}\index{Dockerhub}
 
-Docker Hub~\cite{hid-sp18-405-tutorial-dockerhub-overview} ``is a
-cloud-based registry service which allows users to link to code
-repositories, build their own images and test them, stores manually
-pushed images, and links to Docker Cloud so they can deploy images to
-their hosts.''  There are both public and private
-repositories. Companies could have a private repository for use within
-their own organization, whereas public images can be used by anyone.
+Docker Hub ``is a cloud-based registry service'' which provides a 
+``centralized resource for container image discovery, distribution and 
+change management, user and team collaboration, and workflow automation 
+throughout the development 
+pipeline''~\cite{hid-sp18-405-tutorial-dockerhub-overview}. There are both 
+private and public repositories. Private repository can only be used by people 
+within their own organization.
 
-``There are thousands of images published on DockerHub. DockerHub is
-hardcoded into Docker as the default registry, so when you run the
-docker pull command against any image, it will be downloaded from Docker
-Hub''~\cite{hid-sp18-405-tutorial-dockerhub-blog-use}. ``It provides a
-centralized resource for container image discovery, distribution and
-change management, user and team collaboration, and workflow automation
-throughout the development pipeline''
-\cite{hid-sp18-405-tutorial-dockerhub-overview}.
+Docker Hub is ``hardcoded into Docker as the default registry'', which means 
+that the docker pull command will initialize the download automatically from 
+Docker Hub~\cite{hid-sp18-405-tutorial-dockerhub-blog-use}. It allows users 
+to download (pull), build, test and store their images for easy deployment on 
+any host they may have~\cite{hid-sp18-405-tutorial-dockerhub-overview}.
 
-\subsection{Create Docker ID and Log In You could create a Docker ID on the}
 
-Log-in is not necessary for pulling Docker images from the Hub but
-necessary for push images. However when you want to store images on
-Docker hub you need to create an account.  To create an account on
-Docker Hub, please visit the \href{https://hub.docker.com/}{Docker Hub
-  main page}. The free service will give you only one private Docker Hub
-Repository. In case you need more, you will need to upgrade to a paid plan.
+\subsection{Create Docker ID and Log In }
+
+Log-in is not necessary for pulling Docker images from the Hub but 
+necessary for push images. However when you want to store images on 
+Docker hub you need to create an account.  To create an account on Docker 
+Hub, please visit the \href{https://hub.docker.com/}{Docker Hub main page}. 
+The free service will give you only one private Docker Hub Repository. In case 
+you need more, you will need to upgrade to a paid plan.
 
 For the rest of the tutorial we assume that you use the environment
 variable DUSER to indicate you username. It is easiset if you set it
@@ -241,7 +239,7 @@ followed:
   to Use DockerHub} \cite{hid-sp18-405-tutorial-dockerhub-blog-use}
 
 \item \href{https://rominirani.com/docker-tutorial-series-part-4-docker-hub-b51fb545dd8e}{Docker
-  Tutorial Series}\cite{docker-tutorial-series-part-4}
+  Tutorial Series}\cite{hid-sp18-405-tutorial-dockerhub-series-part-4}
 \end{itemize}
 
 
