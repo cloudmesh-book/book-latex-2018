@@ -2,6 +2,7 @@
 _*
 .#*
 *.html
+*.class
 
 *-dot2tex-*
 # LATEX FILES
