@@ -14,5 +14,6 @@ for f in files:
     print ("convert:",  f, "->", tex)
 
     with open(tex, "w") as output:
-        output.write("\\MDNAME\n")
+        output.write("\\MDNAME\\")
+        output.write("\n")
         output.write(data)

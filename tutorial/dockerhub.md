@@ -1,9 +1,6 @@
 # Docker Hub
 
-\label{s:dockerhub}
-\index{Dockerhub}
-
-Min Chen (hid-sp18-405) improvements by Gregor von Laszewski
+\label{s:dockerhub}\index{Dockerhub}
 
 Docker Hub is a cloud-based registry service which allows users to
 link to code repositories, build their own images and test them,
@@ -48,14 +45,14 @@ following command searches for centOS images:
 
 	docker search centos
 
-and here are the first several lines of the result:
+you will see output similar to:
 
-	| NAME                            | DESCRIPTION                  | STAR | OFFICIAL | AUTOMATED |
-    |---------------------------------|------------------------------|------|----------|-----------|
-    | centos                          | The official build of CentOS | 4130 | [OK]     |           |
-    | ansible/centos7-ansible         | Ansible on Centos7           | 105  |          | [OK]      |
-    | imagine10255/centos6-lnmp-php56 | centos6-lnmp-php56           | 40   |          | [OK]      |
-
+	| NAME            | DESCRIPTION        | STAR | OFFICIAL | AUTOMATED |
+    |-----------------|--------------------|------|----------|-----------|
+    | centos          | official CentOS    | 4130 | [OK]     |           |
+    | ansible/centos7 | Ansible on Centos7 | 105  |          | [OK]      |
+    ...
+    
 Notice that the records are sorted by STAR in reverse order. Official
 repositories are public, certified repositories from vendors and
 contributors to Docker. They contain Docker images from vendors like
@@ -146,29 +143,29 @@ To push an image to the repository created, the following steps could be followe
 
 * Tag the image
 
-        docker tag 1f26a5f7a1b4 $DUSER/cloudtechnology:firsttry
+        docker tag 1f26a5f7a1b4 $DUSER/cloudmesh:firsttry
 
   In general, a good choice for a tag is something that will help
   you understand what this container should be used in conjunction
   with, or what it represents.
 
-* Now the list of images becomes:
+* Now the list of images will look something like
         
-        | REPOSITORY             | TAG      | IMAGE ID     | CREATED     | SIZE   |
-        |------------------------|----------|--------------|-------------|--------|
-        | cloudmesh-nlp          | latest   | 1f26a5f7a1b4 | 10 days ago | 1.79GB |
-        | $DUSER/cloudtechnology | firsttry | 1f26a5f7a1b4 | 10 days ago | 1.79GB |
-        | centos                 | latest   | 26cb1244b171 | 2 weeks ago | 195MB  |
-        | centos                 | latest   | 2d194b392dd1 | 2 weeks ago | 195MB  |
+        | REPOSITORY       | TAG      | IMAGE ID     | CREATED  | SIZE   |
+        |------------------|----------|--------------|----------|--------|
+        | cloudmesh-nlp    | latest   | 1f26a5f7a1b4 | 10 d ago | 1.79GB |
+        | $DUSER/cloudmesh | firsttry | 1f26a5f7a1b4 | 10 d ago | 1.79GB |
+        | centos           | latest   | 26cb1244b171 | 2 w ago  |  195MB |
+        | centos           | latest   | 2d194b392dd1 | 2 w ago  |  195MB |
 
 
 * Push the image to the repository
         
-        docker push $DUSER/cloudtechnology
+        docker push $DUSER/cloudmesh
 
   It shows something similar to: 
 
-        The push refers to repository [docker.io/$DUSER/cloudtechnology]
+        The push refers to repository [docker.io/$DUSER/cloudmesh]
         18f9479cfc2c: Pushed 
         e9ddee98220b: Pushed 
         1d3522002590: Pushed 
@@ -186,9 +183,10 @@ To push an image to the repository created, the following steps could be followe
         a94e0d5a7c40: Mounted from library/ubuntu 
         firsttry: digest: sha256:305b0f911077d9d6aab4b447b... size: 3463
 
-  Now the image is available on Docker Hub and everyone can pull it since it is a public repository by using command: 
+  Now the image is available on Docker Hub and everyone can pull it
+  since it is a public repository by using command:
 
-        docker pull $DUSER/cloudtechnology
+        docker pull $DUSER/cloudmesh
 
 ## Resources
 
