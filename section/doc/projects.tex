@@ -9,20 +9,24 @@
 
 The objective of the project is to define a clear problem statement
 and create a framework to address that problem. This framework must
-include a docker packaged service including a machine learning
-algorithm which works on a particular dataset providing clustered,
-clasified or regression outputs to the user. The final objective is to
-obtain results in form of graphs or tabular mode. In selecting a
-dataset, you can use a dataset from a public dataset like
-\URL{https://archive.ics.uci.edu/ml/datasets.html} and pick a suitable
-dataset according to your problem statement. Final results must be
-exposed via a REST service. For instance if it is a classification
-problem, the should have the capability of entering a new test data
-set or single data point (meaning a single record) via a REST API endpoint
-and get the expected output in form of a JSON object. UI creation is an
-optional task. This is the overall expectation of the project. 
+include a docker packaged service that includes all necessary
+dependencies necessary to perform the analysis. For example if you are
+using a machine learning algorithm your docker packaged service will
+include the machine learning algorithm which works on a particular
+dataset providing clustered ,classified or regression outputs to the
+user. The final objective is to obtain results in form of graphs or
+tabular mode. In selecting a dataset, you can use a dataset from a
+public dataset like 
+\URL{https://archive.ics.uci.edu/ml/datasets.html}
+and pick a suitable dataset according to your problem statement. Final
+results must be exposed via a REST service. For instance if it is a
+classification problem, the should have the capability of entering a
+new test data set or single data point (meaning a single record) via a
+REST API endpoint and get the expected output in form of a JSON
+object. UI creation is an optional task. This is the overall
+expectation of the project.
 
-\subsection{Delivarables}
+\subsection{Deliverables}
 
 \begin{itemize}
 \item Finding a Data Set Size(A good judgement of the datasize would
@@ -76,20 +80,23 @@ steps in data cleaning and data processing, refer the section
 
 The objective of the project is to define a clear problem statement
 and create a framework to address that problem. This framework must
-include a docker packaged service including a machine learning
-algorithm which works on a particular dataset providing clustered,
-clasified or regression outputs to the user. The final objective is to
-obtain results in form of graphs or tabular mode. In selecting a
-dataset, you can use a dataset from a public dataset like
-\URL{https://archive.ics.uci.edu/ml/datasets.html} and pick a suitable
-dataset according to your problem statement. Final results must be
-exposed via a REST service. For instance if it is a classification
-problem, the should have the capability of entering a new test data
-set or single data point (meaning a single record) via a REST API endpoint
-and get the expected output in form of a JSON object. UI creation is an
-optional task. This is the overall expectation of the project. 
+include a docker packaged service that includes all necessary
+dependencies necessary to perform the analysis. For example if you are using a
+machine learning algorithm your docker packaged service will include the
+machine learning algorithm which works on a particular dataset
+providing clustered ,classified or regression outputs to the user. The
+final objective is to obtain results in form of graphs or tabular
+mode. In selecting a dataset, you can use a dataset from a public
+dataset like \URL{https://archive.ics.uci.edu/ml/datasets.html} and
+pick a suitable dataset according to your problem statement. Final
+results must be exposed via a REST service. For instance if it is a
+classification problem, the should have the capability of entering a
+new test data set or single data point (meaning a single record) via a
+REST API endpoint and get the expected output in form of a JSON
+object. UI creation is an optional task. This is the overall
+expectation of the project. 
 
-\subsection{Delivarables}
+\subsection{Deliverables}
 
 \begin{itemize}
 \item Finding a Data Set Size(A good judgement of the datasize would
@@ -103,7 +110,8 @@ optional task. This is the overall expectation of the project.
   and this way must be explicitly discussed with Professor Gregor. :
   (Estimated Time 5 days)
 \item Swagger or Flask  Rest Service  to send  a sample data  set and  get output
-  (terminal output is enough): (Estimated Time 1 day) (Completing with Swagger Bonus points)
+  (terminal output is enough): (Estimated Time 1 day) (Completing with
+  Swagger Bonus points)
 \item Take results in a constant environment (ex: Chameleon Cloud or
   your PC) provide system configuration: (Estimated Time 2 days)
 \item Create a Makefile with running, setting up, sample test case
@@ -142,20 +150,23 @@ steps in data cleaning and data processing, refer the section
 
 The objective of the project is to define a clear problem statement
 and create a framework to address that problem. This framework must
-include a docker packaged service including a machine learning
-algorithm which works on a particular dataset providing clustered,
-clasified or regression outputs to the user. The final objective is to
-obtain results in form of graphs or tabular mode. In selecting a
-dataset, you can use a dataset from a public dataset like
-\URL{https://archive.ics.uci.edu/ml/datasets.html} and pick a suitable
-dataset according to your problem statement. Final results must be
-exposed via a REST service. For instance if it is a classification
-problem, the should have the capability of entering a new test data
-set or single data point (meaning a single record) via a REST API endpoint
-and get the expected output in form of a JSON object. UI creation is an
-optional task. This is the overall expectation of the project. 
+include a docker packaged service that includes all necessary
+dependencies necessary to perform the analysis. For example if you are
+using a machine learning algorithm your docker packaged service will
+include the machine learning algorithm which works on a particular
+dataset providing clustered ,classified or regression outputs to the
+user. The final objective is to obtain results in form of graphs or
+tabular mode. In selecting a dataset, you can use a dataset from a
+public dataset like \URL{https://archive.ics.uci.edu/ml/datasets.html}
+and pick a suitable dataset according to your problem statement. Final
+results must be exposed via a REST service. For instance if it is a
+classification problem, the should have the capability of entering a
+new test data set or single data point (meaning a single record) via a
+REST API endpoint and get the expected output in form of a JSON
+object. UI creation is an optional task. This is the overall
+expectation of the project.
 
-\subsection{Delivarables}
+\subsection{Deliverables}
 
 \begin{itemize}
 \item Finding a Data Set Size(A good judgement of the datasize would
@@ -210,7 +221,7 @@ For the final project in this class you need to do the following.
 \item Find a dataset : Sample Data Repositories
   \URL{https://archive.ics.uci.edu/ml/datasets.html}
 \item Select a suitable dataset.
-\item Use Scikit Learn Library to run Machine Learning algorithsm
+\item Use Scikit Learn Library to run Machine Learning algorithm
   depending on your problem.
 \item Do some classifications, clustering or a regression calculation
   using a machine learning algorithm.
@@ -243,7 +254,7 @@ First you need to clean up the data. For instance consider the following data po
 
 The expected output for this set of features is the age 32.
 
-In your programme first you need to separate age column to a seaparte
+In your programme first you need to separate age column to a separate
 file like y.csv and keep features in a file called, x.csv.
 \begin{lstlisting}
 Features: Private, 205019, Assoc-acdm, 12, Never-married, Sales, Not-in-family, Black, Male, 0, 0, 50, United-States, <=50K
@@ -273,11 +284,11 @@ in form of the original data format.
 
 \begin{lstlisting}
 User Input: Private, 205019, Assoc-acdm, 12, Never-married, Sales, Not-in-family, Black, Male, 0, 0, 50, United-States, <=50K
-Expected Ouput : 12
-Predicted Ouput : 12.5
+Expected Output : 12
+Predicted Output : 12.5
 \end{lstlisting}
 
-This way you can compare the accuarcy of your training model.
+This way you can compare the accuracy of your training model.
 
 
 \subsection{Deliverables}
