@@ -1,6 +1,9 @@
 # Docker Hub
 
-Min Chen (hid-sp18-405) 
+\label{s:dockerhub}
+\index{Dockerhub}
+
+Min Chen (hid-sp18-405) improvements by Gregor von Laszewski
 
 Docker Hub is a cloud-based registry service which allows users to
 link to code repositories, build their own images and test them,
@@ -27,6 +30,13 @@ necessary for pulling Docker images from the Hub but necessary for
 push images. After registration, you get one free private Docker Hub
 Repository. Upgrade to a paid plan is needed if you need more private
 repositories.
+
+For the rest of the tutorial we assume that you use the environment
+fariable DUSER to indicate you username
+
+It is easiset if you set it in your shell with
+
+    export DUSER=<PUT YOUR DOCKER USERNAME HERE> 
 
 ## Searching for Docker Images
 
@@ -88,8 +98,10 @@ The results show:
     | centos     | 6      | 2d194b392dd1 | 2 weeks ago | 195MB |
 
 
-## Create Repositories
-In order to push images to Docker Hub, you need to have a repository created. 
+## Create Repositories
+
+In order to push images to Docker Hub, you need to have a repository
+created.
 
 When you first create a Docker Hub user, you see a *Get started with
 Docker Hub* screen, from which you can click directly into *Create
@@ -99,15 +111,15 @@ in your Docker ID namespace, or that of any organization that you are
 in the owners team \cite{hid-sp18-405-tutorial-dockerhub-repository}.
 
 As an example, we created a repository cloudtechnology with the name
-space minchen57. Hence the full name is minchen57/cloudtechnology
+space `$DUSER`. Hence the full name is `$DUSER`/cloudtechnology
 
+## Pushing Images
 
-## Pushing Images
 To push an image to the repository created, the following steps could be followed:
 
 * Log into Docker Hub from the command line by specifying the username
 
-        docker login --username=minchen57
+        docker login --username=$DUSER
 
    Enter the password when prompted. If everything worked you will 
    get a message similar to:
@@ -120,39 +132,43 @@ To push an image to the repository created, the following steps could be followe
 
   the result looks similar to:
 
+  \begin{adjustbox}
+
         | REPOSITORY    | TAG    | IMAGE ID     | CREATED     | SIZE   |
         |---------------|--------|--------------|-------------|--------|
         | cloudmesh-nlp | latest | 1f26a5f7a1b4 | 10 days ago | 1.79GB |
         | centos        | latest | 26cb1244b171 | 2 weeks ago | 195MB  |
         | centos        | latest | 2d194b392dd1 | 2 weeks ago | 195MB  |
 
-   and the image with ID 1f26a5f7a1b4 is the one to push to Docker Hub.
+  \end{adjustbox}
+
+  and the image with ID 1f26a5f7a1b4 is the one to push to Docker Hub.
 
 * Tag the image
 
-        docker tag 1f26a5f7a1b4 minchen57/cloudtechnology:firsttry
+        docker tag 1f26a5f7a1b4 $DUSER/cloudtechnology:firsttry
 
-   In general, a good choice for a tag is something that will help
-   you understand what this container should be used in conjunction
-   with, or what it represents.
+  In general, a good choice for a tag is something that will help
+  you understand what this container should be used in conjunction
+  with, or what it represents.
 
 * Now the list of images becomes:
         
-        | REPOSITORY                | TAG      | IMAGE ID     | CREATED     | SIZE   |
-        |---------------------------|----------|--------------|-------------|--------|
-        | cloudmesh-nlp             | latest   | 1f26a5f7a1b4 | 10 days ago | 1.79GB |
-        | minchen57/cloudtechnology | firsttry | 1f26a5f7a1b4 | 10 days ago | 1.79GB |
-        | centos                    | latest   | 26cb1244b171 | 2 weeks ago | 195MB  |
-        | centos                    | latest   | 2d194b392dd1 | 2 weeks ago | 195MB  |
+        | REPOSITORY             | TAG      | IMAGE ID     | CREATED     | SIZE   |
+        |------------------------|----------|--------------|-------------|--------|
+        | cloudmesh-nlp          | latest   | 1f26a5f7a1b4 | 10 days ago | 1.79GB |
+        | $DUSER/cloudtechnology | firsttry | 1f26a5f7a1b4 | 10 days ago | 1.79GB |
+        | centos                 | latest   | 26cb1244b171 | 2 weeks ago | 195MB  |
+        | centos                 | latest   | 2d194b392dd1 | 2 weeks ago | 195MB  |
 
 
 * Push the image to the repository
         
-        docker push minchen57/cloudtechnology
+        docker push $DUSER/cloudtechnology
 
   It shows something similar to: 
 
-        The push refers to repository [docker.io/minchen57/cloudtechnology]
+        The push refers to repository [docker.io/$DUSER/cloudtechnology]
         18f9479cfc2c: Pushed 
         e9ddee98220b: Pushed 
         1d3522002590: Pushed 
@@ -172,7 +188,7 @@ To push an image to the repository created, the following steps could be followe
 
   Now the image is available on Docker Hub and everyone can pull it since it is a public repository by using command: 
 
-        docker pull minchen57/cloudtechnology
+        docker pull $DUSER/cloudtechnology
 
 ## Resources
 
