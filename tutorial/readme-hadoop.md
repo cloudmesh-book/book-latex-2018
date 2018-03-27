@@ -32,7 +32,7 @@ d>Now, we need to check if we are able to connect to the rasberry pi from the di
 
 We use this command to identify the etho ipaddress returned via `ifconfig` command. We connect the same ethernet to a laptop and do the ssh to the respective raspberry pi 1 ip address to check if the ssh has been successfully enabled.
 
-e> Next repeat the steps from the a to d on all other 4 Rasberry pi’s.
+e> Next repeat the steps from the a to d on all other 4 Rasberry pi's.
 
 
 	HostNames

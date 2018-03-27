@@ -12,16 +12,23 @@ MapReduce framework.
 
 Deliverables
 
-You are required to turn in the following items in a zip file (username HadoopPageRank.zip) in this assignment:
-• The source code of Hadoop PageRank you implemented.
-• Technical report (username HadoopPageRank report.docx) that contains:
-• The description of the main steps and data flow in your program.
-• The output file (username HadoopPageRank output.txt) which contains the first 10 urls along with
+You are required to turn in the following items in a zip file
+(username HadoopPageRank.zip) in this assignment:
+
+\begin{itemize}
+\item The source code of Hadoop PageRank you implemented.
+\item Technical report (username HadoopPageRank report.docx) that contains:
+\item The description of the main steps and data flow in your program.
+\item The output file (username HadoopPageRank output.txt) which contains the first 10 urls along with
 their ranks.
+\end{itemize}
+xs
 Evaluation
 The point total for this project is 10, where the distribution is as follows:
-• Completeness of your code and output (7 points)
-• Correctness of written report (3 points)
+\begin{itemize}
+\item Completeness of your code and output (7 points)
+\item Correctness of written report (3 points)
+\end{itemize}
 1 What is PageRank?
 The web search engine is a typical distributed system on the Internet. It is designed to search for information
 on the World Wide Web. The search results are generally presented in a list of results and are often called
@@ -81,12 +88,14 @@ P R(V )
 L(v)
 (2)
 Hadoop PageRank DataFlow
-In this project, we have provided a sketch code which contains three MapReduce jobs for you to implement:
-• CreateGraph (done): add one column, ’initial pagerank value’, to the input pagerank adjacency matrix
+In this project, we have provided a sketch code which contains three
+MapReduce jobs for you to implement:
+
+\item CreateGraph (done): add one column, ’initial pagerank value’, to the input pagerank adjacency matrix
 (AM). Then pass it to the PageRank program to calculate the pagerank values.
-• PageRank (your implementation): take the transformed AM matrix and calculate pagerank values for
+\item PageRank (your implementation): take the transformed AM matrix and calculate pagerank values for
 all pages.
-• Cleanup Results: remove the targetUrls column and output (sourceUrl, pagerank value) as the
+\item Cleanup Results: remove the targetUrls column and output (sourceUrl, pagerank value) as the
 final result.
 The detail dataflow can be seen in Figure 2. Part 1 and Part 3 are given as full solutions in this pipeline;
 you will implement the 2nd part of the PageRank program.
