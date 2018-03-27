@@ -1,41 +1,41 @@
-\MDNAME\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% DO NOT MODIFY THIS FILE
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\FILENAME\
+
+\TODO{Min: please check the entire chapter for proper citation and quoting}
+
 
 \section{Docker Hub}
 
 \label{s:dockerhub}\index{Dockerhub}
 
-Docker Hub is a cloud-based registry service which allows users to link
-to code repositories, build their own images and test them, stores
-manually pushed images, and links to Docker Cloud so they can deploy
-images to their hosts \cite{hid-sp18-405-tutorial-dockerhub-overview}.
-There are both public and private repositories. Companies could have a
-private repository for use within their own organization, whereas public
-images can be used by anyone.
+Docker Hub~\cite{hid-sp18-405-tutorial-dockerhub-overview} ``is a
+cloud-based registry service which allows users to link to code
+repositories, build their own images and test them, stores manually
+pushed images, and links to Docker Cloud so they can deploy images to
+their hosts.''  There are both public and private
+repositories. Companies could have a private repository for use within
+their own organization, whereas public images can be used by anyone.
 
-There are thousands of images published on DockerHub. DockerHub is
+``There are thousands of images published on DockerHub. DockerHub is
 hardcoded into Docker as the default registry, so when you run the
 docker pull command against any image, it will be downloaded from Docker
-Hub \cite{hid-sp18-405-tutorial-dockerhub-blog-use}. It provides a
+Hub''~\cite{hid-sp18-405-tutorial-dockerhub-blog-use}. ``It provides a
 centralized resource for container image discovery, distribution and
 change management, user and team collaboration, and workflow automation
-throughout the development pipeline
+throughout the development pipeline''
 \cite{hid-sp18-405-tutorial-dockerhub-overview}.
 
 \subsection{Create Docker ID and Log In You could create a Docker ID on the}
 
-\href{https://hub.docker.com/}{Docker Hub main page}. Log-in is not
-necessary for pulling Docker images from the Hub but necessary for push
-images. After registration, you get one free private Docker Hub
-Repository. Upgrade to a paid plan is needed if you need more private
-repositories.
+Log-in is not necessary for pulling Docker images from the Hub but
+necessary for push images. However when you want to store images on
+Docker hub you need to create an account.  To create an account on
+Docker Hub, please visit the \href{https://hub.docker.com/}{Docker Hub
+  main page}. The free service will give you only one private Docker Hub
+Repository. In case you need more, you will need to upgrade to a paid plan.
 
 For the rest of the tutorial we assume that you use the environment
-fariable DUSER to indicate you username
-
-It is easiset if you set it in your shell with
+variable DUSER to indicate you username. It is easiset if you set it
+in your shell with
 
 \begin{lstlisting}
 export DUSER=<PUT YOUR DOCKER USERNAME HERE> 
@@ -58,26 +58,25 @@ you will see output similar to:
 \begin{lstlisting}
 | NAME            | DESCRIPTION        | STAR | OFFICIAL | AUTOMATED |
 |-----------------|--------------------|------|----------|-----------|
-| centos          | official CentOS    | 4130 | [OK]     |           |
+| centos          | Official CentOS    | 4130 | [OK]     |           |
 | ansible/centos7 | Ansible on Centos7 | 105  |          | [OK]      |
 ...
 \end{lstlisting}
 
-Notice that the records are sorted by STAR in reverse order. Official
-repositories are public, certified repositories from vendors and
-contributors to Docker. They contain Docker images from vendors like
-Canonical, Oracle, and Red Hat that you can use as the basis to build
-your applications and services. There is one official repository in this
-list, the first one, \emph{centos}.
+Official repositories are public, certified repositories from vendors
+and contributors to Docker. They contain Docker images from vendors
+like Canonical, Oracle, and Red Hat that you can use as the basis to
+build your applications and services. There is one official repository
+in this list, the first one, \emph{centos}.
 
-The other way is to search via the Web Search box at the top of the
+The other way is to search via the \emph{Web Search Box} at the top of the
 Docker web page by typing the keyword. The search results can be sorted
 by number of stars, number of pulls, and whether it is an official
 image. Then for each search result, you can verify the information of
 the image by clicking the \emph{details} button to make sure this is the
 right image that fits your needs.
 
-\#\#~Pulling Images
+\subsection{Pulling Images}
 
 A particular image (take centos as an example) could be pulled using the
 following command:
@@ -232,16 +231,17 @@ followed:
 \item
   The offical
   \href{https://docs.docker.com/docker-hub/\#use-official-repositories}{Overview
-  of Docker Hub}
+  of Docker Hub} \cite{hid-sp18-405-tutorial-dockerhub-overview}
 \item
   Information about using docker repositories can be found at
   \href{https://docs.docker.com/docker-hub/repos/}{Repositories on
-  Docker Hub}
+  Docker Hub} \cite{hid-sp18-405-tutorial-dockerhub-repository}
 \item
-  There are some blogs discussing the use of Docker Hub, for example,
-  \href{https://www.linux.com/blog/learn/intro-to-linux/2018/1/how-use-dockerhub}{How
-  to Use DockerHub},
-  \href{https://rominirani.com/docker-tutorial-series-part-4-docker-hub-b51fb545dd8e}{Docker
-  Tutorial Series}
+   \href{https://www.linux.com/blog/learn/intro-to-linux/2018/1/how-use-dockerhub}{How
+  to Use DockerHub} \cite{hid-sp18-405-tutorial-dockerhub-blog-use}
+
+\item \href{https://rominirani.com/docker-tutorial-series-part-4-docker-hub-b51fb545dd8e}{Docker
+  Tutorial Series}\cite{docker-tutorial-series-part-4}
 \end{itemize}
+
 
