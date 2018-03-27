@@ -206,7 +206,7 @@ which would give a cleaner look such as:
         b8:27:eb:60:b8:8e  192.168.2.100   red03          2018-02-25 21:56:11 -NA-                
         b8:27:eb:9a:55:13  192.168.2.101   red02          2018-02-25 21:56:12 -NA-  
         
-## Configure fixed IP’s for clients
+## Configure fixed IP's for clients
 
 It is sometimes needed to have the dhcp server assign fixed addresses to each node in the cluster so
 that it is easy to remember the node by IP addresses. For instance next node in the cluster is 
