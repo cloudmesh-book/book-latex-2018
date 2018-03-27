@@ -6,9 +6,17 @@
 \newcommand{\EMAIL}{laszewski@gmail.com}
 \newcommand{\LOCATION}{URL}
 
-\addbibresource{bib/bibliography.bib} % BibTeX bibliography file
-\addbibresource{bib/refs-jabref.bib} % BibTeX bibliography file
+%---------------------------------------
+%	BIBLIOGRAPHY AND INDEX
+%-----------------------------------------------------------------------------
+
+\addbibresource{bib/bibliography.bib}
+\addbibresource{bib/refs-jabref.bib}
+\addbibresource{bib/refs-mqtt.bib}
+\addbibresource{tutorial/references.bib}
 \defbibheading{bibempty}{}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % IMAGE DIRECTORIES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -23,8 +31,18 @@
 
 \chapterimage{container.png}
 
+\part{Docker Ecosystem}
 
-\include{tutorial/dockerhub}
+\chapter{Dockerhub}
+
+\input{tutorial/dockerhub}
+
+\begin{comment}
+\part{Class Projects}
+
+\input{section/doc/projects.tex}
+\end{comment}
+
 
 \begin{comment}
 \part{MapReduce}
@@ -53,7 +71,7 @@
 
 \end{comment}
 
-%being{comment}
+\begin{comment}
 \part{Cloud Container Technologies}
 
 \input{section/container/container}
@@ -75,11 +93,12 @@
 
 \input{section/container/exercise}
 
-% \end{comment}
 
 \part{Aritificial Intelligence}
 
 \input{section/ai/ai}
+
+\end{comment}
 
 %\input{section/msg/mqtt}
 %\input{section/doc/book-format}
@@ -99,10 +118,6 @@
 %\include{section/assignments}
 %\include{section/cluster/pi/setup}
 %\include{section/doc/book-format}
-
-\part{Class Projects}
-
-\input{section/doc/projects.tex}
 
 
 
@@ -170,6 +185,7 @@
 %\printbibliography[heading=bibempty,type=book]
 
 \section*{References}
+
 \printbibliography[heading=bibempty]
 
 

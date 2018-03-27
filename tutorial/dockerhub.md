@@ -129,15 +129,11 @@ To push an image to the repository created, the following steps could be followe
 
   the result looks similar to:
 
-  \begin{adjustbox}
-
         | REPOSITORY    | TAG    | IMAGE ID     | CREATED     | SIZE   |
         |---------------|--------|--------------|-------------|--------|
         | cloudmesh-nlp | latest | 1f26a5f7a1b4 | 10 days ago | 1.79GB |
         | centos        | latest | 26cb1244b171 | 2 weeks ago | 195MB  |
         | centos        | latest | 2d194b392dd1 | 2 weeks ago | 195MB  |
-
-  \end{adjustbox}
 
   and the image with ID 1f26a5f7a1b4 is the one to push to Docker Hub.
 
