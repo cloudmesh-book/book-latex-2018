@@ -5,31 +5,13 @@
 
 Min Chen (hid-sp18-405) improvements by Gregor von Laszewski
 
-Docker Hub is a cloud-based registry service which allows users to
-link to code repositories, build their own images and test them,
-stores manually pushed images, and links to Docker Cloud so they can
-deploy images to their
-hosts \cite{hid-sp18-405-tutorial-dockerhub-overview}. There are both
-public and private repositories. Companies could have a private
-repository for use within their own organization, whereas public
-images can be used by anyone.
+``Docker Hub is a cloud-based registry service which provides a centralized resource for container image discovery, distribution and change management, user and team collaboration, and workflow automation throughout the development pipeline'' \cite{hid-sp18-405-tutorial-dockerhub-overview}. There are both public and private repositories. Private repository can only be used by people within their own organization.
 
-There are thousands of images published on DockerHub. DockerHub is
-hardcoded into Docker as the default registry, so when you run the
-docker pull command against any image, it will be downloaded from
-Docker Hub \cite{hid-sp18-405-tutorial-dockerhub-blog-use}. It
-provides a centralized resource for container image discovery,
-distribution and change management, user and team collaboration, and
-workflow automation throughout the development
-pipeline \cite{hid-sp18-405-tutorial-dockerhub-overview}.
+``Docker Hub is hardcoded into Docker as the default registry'', which means that the docker pull command will initialize the download automatically from Docker Hub \cite{hid-sp18-405-tutorial-dockerhub-blog-use}. It allows users to download, build, test and store their images for easy deployment on any host they may have \cite{hid-sp18-405-tutorial-dockerhub-overview}.
 
-## Create Docker ID and Log In You could create a Docker ID on the
+## Create Docker ID and Log In 
 
-[Docker Hub main page](https://hub.docker.com/). Log-in is not
-necessary for pulling Docker images from the Hub but necessary for
-push images. After registration, you get one free private Docker Hub
-Repository. Upgrade to a paid plan is needed if you need more private
-repositories.
+You could create a Docker ID on the [Docker Hub main page](https://hub.docker.com/). Log-in is not necessary for pulling Docker images from the Hub but necessary for push images. After registration, you get one free private Docker Hub Repository. Upgrade to a paid plan is needed if you need more private repositories.
 
 For the rest of the tutorial we assume that you use the environment
 fariable DUSER to indicate you username
