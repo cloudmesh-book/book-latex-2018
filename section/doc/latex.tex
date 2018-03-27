@@ -1198,8 +1198,8 @@ helpful. Important is that you not only check teh tex file, but also
 the bib file.
 
 \begin{lstlisting}
-perl -ane '{ if(m/[[:^ascii:]]/) { print  } }' filename.tex
-perl -ane '{ if(m/[[:^ascii:]]/) { print  } }' filename.bib
+perl -ane "{ if(m/[[:^ascii:]]/) { print  } }" filename.tex
+perl -ane "{ if(m/[[:^ascii:]]/) { print  } }" filename.bib
 \end{lstlisting}
 
 \subsection{References}
