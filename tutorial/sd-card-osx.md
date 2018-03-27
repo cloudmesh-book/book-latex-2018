@@ -44,6 +44,6 @@ than the folder itself.
 list of OSes that are available to install will be displayed.
 
 ** Resources
-* Instructions for using NOOBS are from [NOOBS](https://www.raspberrypi.org/documentation/installation/noobs.md) \cite{hid-sp18-405-tutorial-sd-car-osx-noob}
+* Instructions for using NOOBS are from [NOOBS](https://www.raspberrypi.org/documentation/installation/noobs.md) \cite{hid-sp18-405-tutorial-sd-car-osx-noob}.
 
-* Instructions without NOOBS are from [INSTALLING OPERATING SYSTEM IMAGES](https://www.raspberrypi.org/documentation/installation/installing-images/) \cite{{hid-sp18-405-tutorial-sd-car-osx-nonoob}
+* Instructions without NOOBS are from [INSTALLING OPERATING SYSTEM IMAGES](https://www.raspberrypi.org/documentation/installation/installing-images/) \cite{{hid-sp18-405-tutorial-sd-car-osx-nonoob}.

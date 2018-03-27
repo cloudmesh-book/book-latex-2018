@@ -2,9 +2,9 @@
 
 Min Chen (hid-sp18-405) 
 
-Apache Avro is a data serialization system, which provides rich data structures, remote procedure call (RPC), a container file to store persistent data and simple integration with dynamic languages~\cite{hid-sp18-405-tutorial-avro-doc}. Avro depends on schemas, which are defined with JSON. This facilitates implementation in other languages that have the JSON libraries. The key advantages of Avro are schema evolution - Avro will handle the missing/extra/modified fields, dynamic typing - serialization and deserialization without code generation, untagged data - data encoding and faster data processing by allowing data to be written without overhead.
+Apache Avro is a data serialization system, which provides rich data structures, remote procedure call (RPC), a container file to store persistent data and simple integration with dynamic languages \cite{hid-sp18-405-tutorial-avro-doc}. Avro depends on schemas, which are defined with JSON. This facilitates implementation in other languages that have the JSON libraries. The key advantages of Avro are schema evolution - Avro will handle the missing/extra/modified fields, dynamic typing - serialization and deserialization without code generation, untagged data - data encoding and faster data processing by allowing data to be written without overhead.
 
-The following steps illustrate using Avro to serialize and deserialize data with example modified from Apache Avro 1.8.2 Getting Started (Python)~\cite{hid-sp18-405-tutorial-avro-python}.
+The following steps illustrate using Avro to serialize and deserialize data with example modified from Apache Avro 1.8.2 Getting Started (Python) \cite{hid-sp18-405-tutorial-avro-python}.
 
 ## Download, Unzip and Install
 
@@ -109,15 +109,13 @@ The output should look like:
 
 ## Resources
 
-* The steps and instructions are modified from [Apache Avro 1.8.2 Getting Started](http://avro.apache.org/docs/1.8.2/gettingstartedpython.html)
+* The steps and instructions are modified from [Apache Avro 1.8.2 Getting Started (Python)](http://avro.apache.org/docs/1.8.2/gettingstartedpython.html) \cite{hid-sp18-405-tutorial-avro-python}.
 
-* The Avro Python library does not support code generation, while Avro used with Java supports code generation, see [Apache Avro 1.8.2 Getting Started (Java)](http://avro.apache.org/docs/1.8.2/gettingstartedjava.html) for details
+* The Avro Python library does not support code generation, while Avro used with Java supports code generation, see [Apache Avro 1.8.2 Getting Started (Java)](http://avro.apache.org/docs/1.8.2/gettingstartedjava.html) \cite{hid-sp18-405-tutorial-avro-java}.
 
-* Avro provides a convenient way to represent complex data structures within a Hadoop MapReduce job. Details about Avro are documented in [Apache Avro 1.8.2 Hadoop MapReduce guide](http://avro.apache.org/docs/1.8.2/mr.html)
+* Avro provides a convenient way to represent complex data structures within a Hadoop MapReduce job. Details about Avro are documented in [Apache Avro 1.8.2 Hadoop MapReduce guide](http://avro.apache.org/docs/1.8.2/mr.html) \cite{hid-sp18-405-tutorial-avro-mapreduce}.
 
-* Avro implementations for C, C++, C#, Java, PHP, Python, and Ruby can be downloaded from the [Apache Avro Releases page](http://avro.apache.org/releases.html). 
-
-* For more information on schema files and how to specify name and type of a record can be found at [record specification](http://avro.apache.org/docs/1.8.2/spec.html#schema_record)
+* For more information on schema files and how to specify name and type of a record can be found at [record specification](http://avro.apache.org/docs/1.8.2/spec.html#schema_record) \cite{hid-sp18-405-tutorial-avro-record}.
 
 
 
