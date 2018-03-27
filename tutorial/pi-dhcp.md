@@ -66,7 +66,7 @@ following lines to the file */etc/dhcp/dhcpd.conf*:
         }
 Note: The subnet and netmask are IP values required for assisting communications across your LAN.
 - subnet: ``you can obtain the IP Address of a computer on your LAN using the Linux ifconfig
-command: take the *Inet Addr* value and replace its final octet with a zero to get your subnet''\cite{hid-sp18-405-tutorial-pidhcp-pdf};
+command: take the *Inet Addr* value and replace its final octet with a zero to get your subnet'' \cite{hid-sp18-405-tutorial-pidhcp-pdf};
 - range: this is the range of IP Addresses distributed by this DHCP Service. You may have two ranges such as 
         
         range 192.168.2.100 192.168.2.120
@@ -254,8 +254,8 @@ To check the currently leased addresses for fixed IP clients:
 ## Resources
 
 The steps and instruction presented here are combined from several web resources: 
-[link1](https://www.raspberrypi.org/learning/networking-lessons/lesson-3/plan/),
-[link2](http://my-music.mine.nu/images/rpi_raspbianwheezy_dhcp_server.pdf),
-[link3](https://tekmarathon.com/2017/02/16/hadoop-and-spark-installation-on-raspberry-pi-3-cluster-part-3/),
-[link4](https://blog.monotok.org/setup-raspberry-pi-dhcp-server/),
-and [link5](https://askubuntu.com/questions/265504/how-to-monitor-dhcp-leased-ip-address).
+* [Lesson 3 - Dynamic Host Configuration Protocol (DHCP)](https://www.raspberrypi.org/learning/networking-lessons/lesson-3/plan/) \cite{hid-sp18-405-tutorial-pidhcp-lesson3},
+* [Configuring the Raspberry Pi as a DHCP Server under Raspbian Wheezy](http://my-music.mine.nu/images/rpi_raspbianwheezy_dhcp_server.pdf) \cite{hid-sp18-405-tutorial-pidhcp-pdf},
+* [Hadoop and Spark Installation on Raspberry Pi-3 Cluster](https://tekmarathon.com/2017/02/16/hadoop-and-spark-installation-on-raspberry-pi-3-cluster-part-3/) \cite{hid-sp18-405-tutorial-pidhcp-hadoopinstall},
+* [Setup Raspberry pi as a dhcp server](https://blog.monotok.org/setup-raspberry-pi-dhcp-server/) \cite{hid-sp18-405-tutorial-pidhcp-setup}
+

@@ -16,8 +16,6 @@
 LITE. The first one was downloaded (full version)
 
 ### Writing an image to the SD card 
-
-(some steps are copied from [instructions](https://www.raspberrypi.org/documentation/installation/installing-images/))
 * Followed the instructions at the beginning, download and install [Etcher](https://etcher.io/)
 * Connect an SD card reader with the SD card inside 
 * Open Etcher and select from hard drive the Raspberry Pi .img or  .zip file to write to the SD 
@@ -34,7 +32,6 @@ card.
 
 ### How to install NOOBS on an SD card
 
-(some steps are copied from [instructions](https://www.raspberrypi.org/documentation/installation/noobs.md))
 Once you've downloaded the NOOBS zip file, you'll need to copy the contents to a formatted SD 
 card on your computer. Here are the detailed steps: 
 * Format an SD card which is 8GB or larger as FAT. 
@@ -45,3 +42,8 @@ a folder; if this is the case, then please copy across the files from inside the
 than the folder itself.
 * On first boot, the *RECOVERY* FAT partition will be automatically resized to a minimum, and a 
 list of OSes that are available to install will be displayed.
+
+** Resources
+* Instructions for using NOOBS are from [NOOBS](https://www.raspberrypi.org/documentation/installation/noobs.md) \cite{hid-sp18-405-tutorial-sd-car-osx-noob}
+
+* Instructions without NOOBS are from [INSTALLING OPERATING SYSTEM IMAGES](https://www.raspberrypi.org/documentation/installation/installing-images/) \cite{{hid-sp18-405-tutorial-sd-car-osx-nonoob}
