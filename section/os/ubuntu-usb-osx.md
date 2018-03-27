@@ -146,9 +146,9 @@ The next section is untested and needs verification.
 To boot from the USB stick, you need to restart or power-on the Mac
 with the USB stick inserted while you press the Option/alt key.
 
-The launch ‘Startup Manager' will be started showing a list of bootable
+The launch *Startup Manager* will be started showing a list of bootable
 devices connected to the machine. Your USB stick should appear as
-gold/yellow and labelled ‘EFI Boot'. USe your curser keys to move to
+gold/yellow and labelled *EFI Boot*. Use your curser keys to move to
 the most right EFI boot device in that list (likely the USB stick) and
 press ENTER. YOu can also use the mouse.
 
@@ -202,10 +202,10 @@ to drag the iso into it for burning. Etcher can be found at
 As this is an application from unidentified developers (not registered
 in the apple store), you need to enable it after downloading.
 To do so, you can 
-enable the ‘App
-Store and identified developers' in the ‘Security & Privacy' pane in
+enable the *App
+Store and identified developers* in the *Security and Privacy* pane in
 the System Preferences. IN case you get a warning about running the
-application, click ‘Open Anyway' in the same pane.
+application, click *Open Anyway* in the same pane.
 
 ![](images/49647529d8a4f32b.png)
 
@@ -260,8 +260,8 @@ it has finished, Etcher will report on the successful process.
 
 \begin{WARNING}
 
-After the write process has completed, macOS may inform you that ‘The
-disk you inserted was not readable by this computer'. Don't select
+After the write process has completed, macOS may inform you that *The
+disk you inserted was not readable by this computer*. Don't select
 Initialise. Instead, select Eject and remove the USB device.
 
 \end{WARNING}

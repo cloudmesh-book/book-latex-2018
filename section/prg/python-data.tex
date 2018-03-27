@@ -40,7 +40,7 @@ flavor = pickle.load( open( "data.p", "rb" ) )
 To read text files into a variable called content  you can use 
 
 \begin{verbatim}
-content = open(“filename.txt”, “r”).read() 
+content = open('filename.txt', 'r').read() 
 \end{verbatim}
 
 You can also use the following code while using the convenient
@@ -81,7 +81,7 @@ file. To read such files you can use the csv package.
 
 \begin{verbatim}
 import csv
-with open(‘data.csv’, ‘rb’) as f:
+with open('data.csv', 'rb') as f:
    contents = csv.reader(f)
 for row in content:
     print row

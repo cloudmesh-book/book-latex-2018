@@ -159,6 +159,7 @@ clean:
 	rm -rf dest
 	rm -rf *.tdo
 	find . -name '*.aux' -delete
+	find . -name ".#*" -delete
 	rm -fr _minted-*
 	rm -f tmp/*
 	rm -f *-dot2tex-*
