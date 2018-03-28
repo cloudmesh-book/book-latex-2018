@@ -19,7 +19,7 @@ Begin the download with the following command
 	   
 Unzip the tar file of the spark
 	
-   tar -xzf spark-2.3.0-bin-hadoop2.7.tgz
+    tar -xzf spark-2.3.0-bin-hadoop2.7.tgz
 	   
 Move the spark that is extracted to the directory /opt/
 		
