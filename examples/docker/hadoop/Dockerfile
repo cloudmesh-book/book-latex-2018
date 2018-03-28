@@ -3,8 +3,8 @@
 FROM tianon/centos:6.5
 
 ADD conf/Centos-Source.repo /etc/yum.repos.d/Centos-Source.repo
-RUN yum install -y yum-plugin-ovl
-
+# Overlay yum patch
+RUN rpm --rebuilddb && yum install -y yum-plugin-ovl
 
 RUN yum update -y
 
