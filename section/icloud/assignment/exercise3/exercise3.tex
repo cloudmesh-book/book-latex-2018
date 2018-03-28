@@ -1,4 +1,6 @@
-\section*{Hadoop Blast}
+\section{Hadoop Blast}
+/FILENAME/
+
  
 By this point you should have gone over the sections concerning Hadoop Setup
 and a few Hadoop programs. Now you are going to blend these applications by
@@ -10,7 +12,7 @@ using the programming
 interfaces of the Hadoop MapReduce framework. Note that this application is
 written in "Map-Only" fashion, which means no reduce code is necessary.
 
-\subsection*{Deliverables} 
+\subsection{Deliverables} 
 
 You are required to turn in the following items in a zip file
 (username\_HadoopBlast.zip)
@@ -47,7 +49,7 @@ You are required to turn in the following items in a zip file
 \end{itemize}
 
 
-\subsection*{Evaluation} 
+\subsection{Evaluation} 
 
 The point total for this exercise is 3, where the distribution is as follows:
 \begin{itemize} 
@@ -55,7 +57,7 @@ The point total for this exercise is 3, where the distribution is as follows:
 \item	Correctness of written report (2 points)
 \end{itemize}
 
-\subsection*{Introduction}   
+\subsection{Introduction}   
 
 Hadoop-Blast is an advanced Hadoop program which helps BLAST, a bioinformatics
 application, to utilize the computing capability of Hadoop. This exercise shows
@@ -110,7 +112,7 @@ and file dependencies are stored in the local disk, we call an external java
 process and execute the Blast binary with the correct parameters. Finally, the
 output FASTA file of Blast binary will be uploaded back to HDFS.
 
-\subsection*{Sketch for Hadoop Blast}
+\subsection{Sketch for Hadoop Blast}
 You need to complete one file in the provided pacakge inside
 "cgl/hadoop/apps/runner": RunnerMap.java. Code snapshots are shown below.
 
@@ -122,7 +124,7 @@ look into the DataAnalysis.java.
 \lstinputlisting[language=Java]{section/icloud/assignment/exercise3/DataAnalysis.java}
 
 
-\subsection*{Edit}
+\subsection{Edit}
 The sketch code is stored within the provided VirtualBox image. Use linux text
 editor vi/vim to add your code.
 
@@ -131,7 +133,7 @@ $ cd /root/MoocHomeworks/HadoopBlast/
 $ vim src/cgl/hadoop/apps/runner/RunnerMap.java
 \end{lstlisting}
 
-\subsection*{Compile and run your code}
+\subsection{Compile and run your code}
 Use the same one-click script compileAndExecHadoopBlast.sh as in prior
 homework. Standard error messages such as compile errors, execution errors,
 etc. will be redirected on the screen. Follow the same debugging format.
@@ -141,7 +143,7 @@ $ cd /root/MoocHomeworks/HadoopBlast/
 $ ./compileAndExecHadoopBlast.sh 
 \end{lstlisting}
 
-\subsection*{View the result} 
+\subsection{View the result} 
 The result is generated at
 /root/MoocHomeworks/HadoopBlast/output/HDFS\_blast\_output . There should be 4
 output FASTA files with .fa extension

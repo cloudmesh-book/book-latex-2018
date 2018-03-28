@@ -1,4 +1,6 @@
-\section*{HBase WordCount}
+\section{HBase WordCount}
+/FILENAME/
+
 
 \TODO{Hyungro: fix hyperlinks, use exercise instead or project where
   appropriate}
@@ -19,10 +21,10 @@ version we will supply to you.
 \end{figure}
 
 
-\subsection*{Deliverables}  
+\subsection{Deliverables}  
 Zip your source code and report in a file named username\_exercise4.zip
 
-\subsection*{Evaluation} 
+\subsection{Evaluation} 
 
 The point total for this exercise is 1.5, where the distribution is as follows:
 \begin{itemize} 
@@ -32,12 +34,12 @@ The point total for this exercise is 1.5, where the distribution is as follows:
 \end{itemize}
  
 
-\subsection*{Prerequisites}
+\subsection{Prerequisites}
 You will need to load data to HBase before trying this assignment. Please follow
 \textbf{instructions in HBase} for more information. 
 
 
-\subsection*{Introduction}
+\subsection{Introduction}
 
 WordCount is a simple program which counts the number of occurrences of each
 word in a given text input dataset. It fits very well with the map/reduce
@@ -50,7 +52,7 @@ In this homework and the next homework (Building an Inverted Index) we use the
 same source code, which can be found in:
 \textit{/root/MoocHomeworks/HBaseWordCount}.
 
-\subsubsection*{Clueweb09 dataset}
+\subsubsection{Clueweb09 dataset}
 We are using the ClueWeb09 dataset, which was created to support research on
 information retrieval and related human language technologies. It consists of
 about 1 billion webpages in ten languages that were collected in January and
@@ -73,7 +75,7 @@ Links}), the differences are that data is stored on HBase and URI is the
 the text content.
 
 
-\subsubsection*{Mapper, Reducer and Main Program }
+\subsubsection{Mapper, Reducer and Main Program }
 
 Now we are going to implement the HBase WordCount. Our implementation consists
 of three main parts:
@@ -85,7 +87,7 @@ of three main parts:
  \end{itemize}
  
  
-\subsubsection*{Mapper}
+\subsubsection{Mapper}
 A Mapper overrides the map function from the Class
 "org.apache.hadoop.hbase.mapreduce.TableMapper$<$Text, LongWritable$>$" which
 provides $<$key, value$>$ pairs as the input. A Mapper implementation may
@@ -118,7 +120,7 @@ static class WcMapper extends TableMapper<Text, LongWritable> {
 }
 \end{lstlisting}
 
-\subsubsection*{Reducer}
+\subsubsection{Reducer}
 A Reducer collects the intermediate $<$key, value$>$ output from multiple map
 tasks and assembles a single result. Here, the reducer function will sum up the
 occurrence of each word to pairs as $<$word, occurrenc$e>$, then write it back
@@ -151,7 +153,7 @@ public static class WcReducer extends TableReducer<Text, LongWritable, Immutable
      }
 }
  \end{lstlisting}
-\subsubsection*{Main program }
+\subsubsection{Main program }
 The main function has been provided as standard initialization, although you
 can modify it to suit your own style. Hint: the provided code is designed for
 using put operations in the reducer content.write() function. Before writing
@@ -162,7 +164,7 @@ the codes, please read the HBase MapReduce tutorial first
 
 %\lstinputlisting[language=Java]{RunnerMap.java}
 
-\subsection*{Edit}
+\subsection{Edit}
  The sketch code is stored within the provided VirtualBox image Environment
  Setup. You may use linux text editor vi/vim to add your code.
 
@@ -171,7 +173,7 @@ $ cd /root/MoocHomeworks/HBaseWordCount/
 $ vim src/iu/pti/hbaseapp/clueweb09/WordCountClueWeb09.java
 uend{lstlisting}
  
-\subsection*{Compile and run your code}
+\subsection{Compile and run your code}
 For your convenience, we have provided a one-click script
 compileAndExecWordCount.sh for compiling and execution. Standard error messages
 such as "compile errors, execution errors, etc." will be redirected on the
@@ -182,7 +184,7 @@ $ cd /root/MoocHomeworks/HBaseWordCount
 $ ./compileAndExecWordCount.sh
 \end{lstlisting}
  
-\subsection*{View the result}  
+\subsection{View the result}  
 The result is generated as
 /root/MoocHomeworks/HBaseWordCount/output/project1.txt. 
 
@@ -191,7 +193,7 @@ $ cd /root/MoocHomeworks/HBaseWordCount
 $ cat output/project1.txt
 \end{lstlisting}
 
-\subsection*{Useful Links}
+\subsection{Useful Links}
 \begin{itemize}
   \item \href{http://hbase.apache.org/}{HBase official website}\hypertarget{link_exercise4}
   \item \href{http://lemurproject.org/clueweb09}{Clueweb09 dataset}

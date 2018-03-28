@@ -1,23 +1,25 @@
-\section*{Test Search Engine}
+\section{Test Search Engine}
+
+/FILENAME/
 
 After having familiarized yourself with the ``HBase Building an Inverted
 Index'' homework and ``PageRank algorithms'' homework, you are ready to use
 these applications to test the search engine function from the packaged
 executable.
 
-\subsection*{Deliverables}
+\subsection{Deliverables}
 Zip your source code, library, and results in a file named
 username@test-search-engine.zip. Please submit this file to the Canvas
 Assignments page.
 
-\subsection*{Evaluation}
+\subsection{Evaluation}
 The point total for this exercise is 6, where the distribution is as follows:
 \begin{itemize}
 \item Completeness of your code (5 points)
 \item Correct output (1 points)
 \end{itemize}
 
-\subsection*{Search Engine Implementation}
+\subsection{Search Engine Implementation}
 Before we test the search engine, we need to write the PageRank output to the
 HBase clueWeb09PageRankTable.
 
@@ -50,7 +52,7 @@ $ vim src/iu/pti/hbaseapp/clueweb09/SearchEngineTester.java
 
 \lstinputlisting[language=Java]{section/icloud/assignment/exercise6/SearchEngineTester.java}
 
-\section*{Compile and Run the Program}
+\section{Compile and Run the Program}
 \begin{lstlisting}[language=bash]
 $ cd /root/MoocHomeworks/HBaseInvertedIndexing/
 $ vim src/iu/pti/hbaseapp/clueweb09/SearchEngineTester.java
@@ -68,5 +70,5 @@ $ ./bin/hadoop jar lib/cglHBaseMooc.jar  iu.pti.hbaseapp.clueweb09.SearchEngineT
 $ ./bin/hadoop jar lib/cglHBaseMooc.jar  iu.pti.hbaseapp.clueweb09.SearchEngineTester get-page-snapshot 00000113548 |  grep snapshot
 \end{lstlisting}
 
-\subsection*{What is next?}
+\subsection{What is next?}
 Congratulations, you have finished the search engine exercise!

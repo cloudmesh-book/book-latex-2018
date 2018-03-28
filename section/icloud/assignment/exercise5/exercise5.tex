@@ -1,4 +1,6 @@
-\section*{HBase FreqIndexBuilder}
+\section{HBase FreqIndexBuilder}
+/FILENAME/
+
 
 \TODO{Hyungro: fix exercise and replace project where appropriate.}
 
@@ -16,7 +18,7 @@ clueWeb09IndexTable. Figure 1 shows the schema of clueWeb09IndexTable.
 \caption{clueWeb09IndexTable table schema for storing term frequencies and their related documentId}
 \end{figure}
 
-\subsection*{Deliverables}
+\subsection{Deliverables}
 Zip your source code, results and report in a file named
 username\_exercise5.zip. Submit this file to the Canvas submission page.
 
@@ -25,21 +27,21 @@ username\_exercise5.zip. Submit this file to the Canvas submission page.
 \item A written report describing the main steps
 \end{itemize}
 
-\subsection*{Evaluation}
+\subsection{Evaluation}
 The point total for this exercise is 3, where the distribution is as follows:
 \begin{itemize}
 \item Completeness of your code and output (2 points)
 \item Correctness of written report (1 points)
 \end{itemize}
 
-\subsection*{Introduction}
+\subsection{Introduction}
 HBase FreqIndexBuilder is an advanced WordCount program which counts the number
 of occurrences of each word in a given text input dataset and also stores the
 related document name (identification number) as HBase inverted index records.
 These Inverted indices for text data are built for supporting efficient
 searches in a huge set of text data.
 
-\subsection*{What is Inverted Index?}
+\subsection{What is Inverted Index?}
 Figure 2 shows an example of an inverted index. For a given set of documents,
 each composed of a series of terms (words), it records the following
 information: for each term, which subset of documents contains it in their
@@ -62,7 +64,7 @@ ClueWeb09 dataset.
 \caption{A sample inverted index}
 \end{figure}
 
-\subsection*{Mapper and Main Program}
+\subsection{Mapper and Main Program}
 Now we are going to implement the HBase FreqIndexBuilder program. As opposed to
 WordCount, our implementation only consists of two main parts:
 
@@ -72,12 +74,12 @@ WordCount, our implementation only consists of two main parts:
 \end{itemize}
 This type of application is called ?Map-Only? parallel application.
 
-\subsubsection*{Mapper}
+\subsubsection{Mapper}
 A Mapper overrides the ``map'' function from the Class ``org.apache.hadoop.hbase.mapreduce.TableMapper\\
 \textless Text, LongWritable\textgreater'', which provides \textless key, value\textgreater pairs as the input. A Mapper implementation may output \textless key,value\textgreater pairs using the provided Context.
 \textless key, value\textgreater of this map function is \textless rowkey, content\textgreater, where the key is the rowkey of an HBase record related to a specified URI, and the content is the stored text of that URI. Your Map task should output \textless word, \textless docId, frequency\textgreater\textgreater for each word in the content of text.
 
-\subsubsection*{Pseudocode}
+\subsubsection{Pseudocode}
 \begin{lstlisting}[language=Java]
 void Map(key, value) {
     for each word x in the content of a hbase record:
@@ -85,16 +87,16 @@ void Map(key, value) {
 }
 \end{lstlisting}
 
-\subsubsection*{Detailed implementation}
+\subsubsection{Detailed implementation}
 \lstinputlisting[language=Java]{section/icloud/assignment/exercise5/FibMapper.java}
 
-\subsection*{Main Program}
+\subsection{Main Program}
 Again, the main function has been provided as standard initialization, and you
 may modify it to fit your own style. See the examples of using
 TableMapReduceUtil.initTableMapperJob and
 TableMapReduceUtil.initTableReducerJob.
 
-\subsection*{Edit, compile and run your code}
+\subsection{Edit, compile and run your code}
 The sketch code is stored within the provided VirtualBox image. You can use
 linux text editor vi/vim to add your code.
 
@@ -105,7 +107,7 @@ $ cd /root/MoocHomeworks/HBaseInvertedIndexing/
 $ ./compileAndExecFreqIndexBuilderClueWeb.sh
 \end{lstlisting}
 
-\section*{View the result}
+\section{View the result}
 The result is generated as /root/hbaseMoocAntProject/output/project2.txt. 
 \begin{lstlisting}[language=bash]
 $ cd /root/MoocHomeworks/HBaseInvertedIndexing/
