@@ -218,20 +218,24 @@ steps in data cleaning and data processing, refer the section
 For the final project in this class you need to do the following.
 
 \begin{itemize}
-\item Find a dataset : Sample Data Repositories
+\item Find a dataset : A sample data repository can be found at the
+  link below however you are free to use data from elsewhere, like
+  scikit learn libraries. 
   \URL{https://archive.ics.uci.edu/ml/datasets.html}
-\item Select a suitable dataset.
 \item Use Scikit Learn Library to run Machine Learning algorithm
   depending on your problem.
 \item Do some classifications, clustering or a regression calculation
   using a machine learning algorithm.
 \item Use the results from classification to draw charts. You can use
   matplotlib to do this.
+\item Use REST api to tun ML algorithm i.e. in k-means the user
+  should be able to change the cluster number (k) through a RESTful
+  service.
 \item Use Flask Rest API to expose the data to the viewers. So people
   can send a data set and get the outputs as a json object.
 \end{itemize}
 
-
+\begin{comment}
 \subsection{Simple Explained Project}\label{s:e222-proj-exp}
 
 First select a simple data set like Adult data set from the above Data
@@ -289,30 +293,29 @@ Predicted Output : 12.5
 \end{lstlisting}
 
 This way you can compare the accuracy of your training model.
-
+\end{comment}
 
 \subsection{Deliverables}
 
 \begin{itemize}
-\item Finding a Data Set (A good judgement of datasize would be 10MB < datasize < 100MB): (Estimated Time 1 hour)
-\item Cleaned Up Data Set: (Estimated Time 0.5 Week)
-\item Scikit Learn ML Algorithm Application: (Estimated Time 1 Week)
+\item Find and clean up data set 
+\item Scikit Learn ML Algorithm Application to cleaned up data set
 \item Clustering or Regression or Classification results in Graphical
-  Format (Matplotlib) (GUI not needed, save graphs as png): (Estimated
-  Time 10 hours)
+  Format (Matplotlib) (GUI not needed, save graphs as png)
+\item Flask Rest service to tune ML algorithm
 \item Flask  Rest Service  to send  a sample data  set and  get output
-  (terminal output is enough): (Estimated Time 1 day) (Optional : Bonus
-  points)
+  (terminal output is enough)
 \item Create a Makefile with running, setting up, sample test case
-  running commands: (Estimated Time 1 hour)
-\item requirement.txt file for pip installation: (Estimated Time < 1 hour)
-\item Package with Docker: (Estimated Time 1 hour)
-\item 4 Page Report including (Abstract, Introduction, Project
+  running commands
+\item requirement.txt file for pip installation
+\item Package with Docker
+\item Report including (Abstract, Introduction, Project
   Procedure, Technology Usage, Results, Work Distribution (if you have
-  team members): (30 hours)
+  team members)
 \end{itemize}
 
-Total Estimated Time : 3 weeks.
+The remainder of this semester will be used to complete this
+project. 
 
 \subsubsection{Grading Scheme}
 

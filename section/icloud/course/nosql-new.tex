@@ -7,10 +7,10 @@
 
 \section{RDBMS vs. NoSQL}
 
-A discussion of relational database manamgement systems (RDBMS)
+A discussion of relational database management systems (RDBMS)
 compared to NoSQL data storage systems is presented. This discussion
 includes an evolution of data storage systems, limitations with RDBMS
-in terms of scaliability and how NoSQL fits into the picture in terms
+in terms of scalability and how NoSQL fits into the picture in terms
 of big data. 
   
 \video{Cloud}{9:22}{RDBMS vs. NoSQL}{https://www.youtube.com/watch?v=dJunqER9lb8}
@@ -23,20 +23,66 @@ of big data.
 
 Clouds have arisen as an answer to the data demands of social media.
 Three major programs for NoSQL are BigTable, Dynamo, and CAP theory.
-NoSQL is not meant to replace SQL, but to tackle the large-data
-problems SQL is not well equipped to handle. SQL ACID transactions are
-Atomic, Consistent, Isolated, and Durable. Consistency can be either
-strong (ACID) or weak (BASE). CAP theorem offers Consistency,
-Availability, and Partition tolerance, only two of which can coexist
-for a shared-data system. NoSQL comes in two varieties, each with pros
-and cons: Key-Value or schema-less. Common advantages of NoSQL include
-their being open source and fault tolerant.
+More recently mongoDB has emerged as a leader in NoSQL databases and
+will also be discussed. NoSQL is not meant to replace SQL, but to
+tackle the large-data problems SQL is not well equipped to handle. SQL
+ACID transactions are Atomic, Consistent, Isolated, and
+Durable. Consistency can be either strong (ACID) or weak (BASE). CAP
+theorem offers Consistency, Availability, and Partition tolerance,
+only two of which can coexist for a shared-data system. NoSQL comes in
+two varieties, each with pros and cons: Key-Value or
+schema-less. Common advantages of NoSQL include their being open
+source and fault tolerant. The number of NoSQL databases makes it
+impossible to simply split them into Key-Value and schema-less
+categories, instead they can generally be placed in one of the three
+categories being document model, graph model and key-value and wide
+column models. 
+
 
 \video{Cloud}{10:31}{NoSQL Characteristics}{https://www.youtube.com/watch?v=BjtTDiKhqk8}
 
 \slides{Cloud}{Page 11}{NoSQL Characteristics}{https://drive.google.com/open?id=0B88HKpainTSfaDFNbjNiMm44bnc}
 
 \slides{Cloud}{Page 11}{NoSQL Characteristics - pptx}{https://drive.google.com/open?id=0B88HKpainTSfNnQ5SEVKTm1tRk0}
+
+\subsection{Document Model}
+Relational databases store data in rows and columns, the class of
+NoSQL databases that fall into the document model store data as
+documents. Typically these documents are in JSON format and provide a
+straight forward way to model data that parallels object oriented
+programing where each document is an object. Each document stores one
+or more fields and within the field a value is stored in the form of
+an array, string date etc. In comparison to relational databases that
+distribute the records across columns that are connected with keys the
+document model sotres records and their associated data in a single
+document. A key advantage to this model is that is reduces the need
+for JOIN operations that can be computationally expensive. Two
+examples of document databases are MongoDB and CouchDB. 
+
+\subsection{Graph Model}
+As the name implies graph databases exploit the properties of graph
+structures and represent data through nodes and edges. Graph databases
+are useful for exploring the relationships of the components that make
+up an application by representing the data as a network of
+relationships. Graph databases can be useful for exploring social
+network connections, topologies of networks and supply chains. Two
+examples of graph databases are Neo4j and Graph.  
+
+\subsection{Key-Value and Wide Column Models} 
+Key-value stores are the most basic type on NoSQL databases as every
+item is stored as an attribute name or key paired with its value. In
+this model the value is not interpretable by the system as data can
+only be queried by the key. Key-value type databases do not enforce a
+set schema for key-value pairs making these database useful for
+unstructured and polymorphic data. In contrast to key-value stores,
+wide-column store data in distributed variable-dimensional sorted
+map where each record is stored as columns. These columns can be
+grouped into families and or columns can be distributed to several
+column families. Each column family has a primary key that can be
+queried in order to retrieve the data.  
+
+\URL{https://www.mongodb.com/collateral/top-5-considerations-when-evaluating-nosql-databases}
+
 
 \section{BigTable}
 
@@ -81,11 +127,24 @@ HBase and connecting to it.
   pptx}{https://drive.google.com/open?id=0B88HKpainTSfNnQ5SEVKTm1tRk0}
 
 \section{Draft: MongoDB}
-\TODO{Include MongoDB section, leverage tech abstracts}
+MongoDB belongs to the documnet model described above. Within a
+typical MongoDB server there are often multiple databases. Each
+database is a physical container of collections with its own set of
+files within the file system. A collection is a set of MongoDB
+documents similar to a typical relational database table. In MongoDB
+databases the collections are not required to follow a schema allowing
+documents in the same collection to have different fields. Some of
+the main advantages of MongoDB are its ease of scalability, lack of
+complex joins, schema-less, use of internal memory and the support for
+dynamic queriers. 
+
+\URL{https://www.tutorialspoint.com/mongodb/mongodb_quick_guide.htm}
+
+
 
 \section{Indexing Applications}
 
-The setup of a search engine is breifly discussed using a diagram that
+The setup of a search engine is briefly discussed using a diagram that
 contains the core components of a search engine. Google's search engine
 contains three key technologies: Google File System, BigTable, and
 MapReduce. However, research into big data remains difficult owing to
@@ -100,7 +159,7 @@ query, analysis, and visualization.
 
 \slides{Cloud}{Page 1}{Indexing Applications - pptx}{https://drive.google.com/open?id=0B88HKpainTSfZkJpLTNIbDJ1dVU}
 
-\section{Draft: Related Work}
+\section{Related Work}
 
 Indexing improves efficiency in querying data subsets and analysis.
 Indices can be single (B+, Hash) or multi-dimensional (R, Quad). Four
@@ -115,7 +174,7 @@ topics. Customizability of indexing among NoSQL databases is desirable.
 
 \slides{Cloud}{Page 11}{Related Work - pptx}{https://drive.google.com/open?id=0B88HKpainTSfZkJpLTNIbDJ1dVU}
 
-\section{Draft: Indexamples}
+\section{Indexamples}
 
 Mapping between metadata and raw index data is the essential issue
 with indexing. Examples are shown for HBase, Riak, and MongoDB. An
@@ -130,7 +189,7 @@ timestamps, text, or retweet status.
 
 \slides{Cloud}{Page 15}{Indexamples - pptx}{https://drive.google.com/open?id=0B88HKpainTSfZkJpLTNIbDJ1dVU}
 
-\section{Draft: Indexing 101}
+\section{Indexing 101}
 
 User-defined index allows a user to select the fields used in their
 search. Data records are indexed or un-indexed. Index structure is
@@ -151,7 +210,7 @@ superior for large-scale data.
 
 \slides{Cloud}{Page 20}{Indexing 101 - pptx}{https://drive.google.com/open?id=0B88HKpainTSfZkJpLTNIbDJ1dVU}
 
-\section{Draft: Social Media Searches}
+\section{Social Media Searches}
 
 The Truthy Project archives social media data by way of metadata memes.
 Some problems faced in analyzing this data include its large volume,
@@ -165,7 +224,7 @@ A diagram displays an indexing setup for social media data with YARN.
 
 \slides{Cloud}{Page 28}{Social Media Searches - pptx}{https://drive.google.com/open?id=0B88HKpainTSfZkJpLTNIbDJ1dVU}
 
-\section{Draft: Analysis Algorithms}
+\section{Analysis Algorithms}
 
 Another method of use for inverted indices is in analysis algorithms.
 The mathematics involved in this is explored, as well as how it
