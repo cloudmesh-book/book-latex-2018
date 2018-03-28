@@ -11,8 +11,9 @@ This tutorial is for Raspbian Stretch.
 
 Each cluster consists of:
 
-- 1 head node ([setup](head)) (recommend following the instructions here first)
-- 4 compute nodes
+* 1 head node ([setup](head)) (recommend following the instructions
+  here first)
+* 4 compute nodes
 
 ## Configuration
 
