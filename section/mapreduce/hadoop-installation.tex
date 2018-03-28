@@ -20,7 +20,7 @@ user group. We will use the following
 
 \begin{lstlisting}
 sudo addgroup hadoop_group
-sudo adduser --ingroup hadoop_group hduser1
+sudo adduser --ingroup hadoop_group hduser
 sudo adduser hduser sudo
 \end{lstlisting}
 
@@ -124,8 +124,8 @@ properly.
 
 \begin{lstlisting}
 cd ~/cloudmesh/bin/
-wget http://mirrors.sonic.net/apache/hadoop/common/hadoop-3.0.0/hadoop-3.0.0.tar.gz
-tar -xzvf hadoop-3.0.0.tar.gz
+wget http://mirrors.sonic.net/apache/hadoop/common/hadoop-3.0.1/hadoop-3.0.1.tar.gz
+tar -xzvf hadoop-3.0.1.tar.gz
 \end{lstlisting}
 
 \subsection{Hadoop Environment Variables}
@@ -139,7 +139,7 @@ emacs ~/.bashrc
 
 \begin{lstlisting}
 export JAVA_HOME=~/cloudmesh/bin/jdk1.8.0_161
-export HADOOP_HOME=~/cloudmesh/bin/hadoop-3.0.0
+export HADOOP_HOME=~/cloudmesh/bin/hadoop-3.0.1
 export YARN_HOME=$HADOOP_HOME
 export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
 export PATH=$HADOOP_HOME/bin:$JAVA_HOME/bin:$PATH
