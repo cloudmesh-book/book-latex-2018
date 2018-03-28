@@ -6,6 +6,8 @@ _*
 *.iso
 *.rpm
 *.class
+*.exe
+*.o
 
 *-dot2tex-*
 # LATEX FILES
