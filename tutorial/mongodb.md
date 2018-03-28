@@ -3,6 +3,9 @@
 
 **THIS IS A DRAFT AND NOT COMPLETED YET**
 
+* status: 0
+* feedback: 1
+
 Some steps are copied from <https://www.tutorialspoint.com/mongodb/mongodb_environment.htm/>
 
 
