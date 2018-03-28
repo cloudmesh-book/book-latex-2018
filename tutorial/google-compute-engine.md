@@ -4,8 +4,8 @@ In order to create a VM on Google Compute Engine one must have a
 Google Account. You can sign up for one
 [here](https://accounts.google.com/SignUp?hl=en).
 
-Next, you will need to [sign up for Google Cloud
-Platform](https://console.cloud.google.com/freetrial?authuser=1&page=0). As
+Next, you will need to
+[sign up for Google Cloud Platform](https://console.cloud.google.com/freetrial?authuser=1&page=0). As
 of this writing, Google is offering a free trial that includes $300
 worth of credits that expire one year from signup, but you will need
 to provide billing information (either a credit card or bank details)
@@ -23,6 +23,7 @@ The following instructions are adapted from
 [here](https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu?authuser=1).
 
 You will need to have `curl` installed. You can install it with:
+
 ```bash
 sudo apt install curl
 ```
