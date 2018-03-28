@@ -3,6 +3,9 @@ _*
 .#*
 *.html
 *.class
+*.iso
+*.rpm
+*.class
 
 *-dot2tex-*
 # LATEX FILES
