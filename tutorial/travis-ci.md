@@ -6,7 +6,7 @@ status: 70
 
 ### Repository Build status 
 
-[![Build Status](https://travis-ci.org/seashiva94/hid-sp18-503.svg?branch=master)](https://travis-ci.org/seashiva94/hid-sp18-503)
+[![Build Status](images/hid-sp18-503.png)](https://travis-ci.org/seashiva94/hid-sp18-503)
 
 Travis Continuous Integration (Travis CI) is a continuous integration
 service that synchronizes with github.  It allows developers to

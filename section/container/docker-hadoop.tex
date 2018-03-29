@@ -118,7 +118,8 @@ when Hadoop runs this example. This is useful because a jar file contains all
 necessary files to run a program.
 
 \begin{lstlisting}
-jar -cvf exer1.jar -C /cloudmesh/exer1/dest/ /cloudmesh/exer1/
+cd /cloudmesh/exer1
+jar -cvf exer1.jar -C ./dest/ .
 \end{lstlisting}
 
 \subsection{HDFS for Input/Output}
@@ -249,7 +250,7 @@ input files is 1.
 We reads results from HDFS by:
 
 \begin{lstlisting}
-doop fs -cat exer1_output_1000/part-r-00000
+hadoop fs -cat exer1_output_1000/part-r-00000
 \end{lstlisting}
 
 The sample output looks like:
