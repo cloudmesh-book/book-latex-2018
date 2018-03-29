@@ -5,11 +5,11 @@ contains examples to run Hadoop such as statistics like WordCount and PageRank.
 
 ## Build
 
-docker build -t cloudmesh/hadoop .
+`docker build -t cloudmesh/hadoop .`
 
 ## Run
 
-docker run -it cloudmesh/hadoop /etc/bootstrap.sh -bash
+`docker run -it cloudmesh/hadoop /etc/bootstrap.sh -bash`
 
 ## Statistics
 
