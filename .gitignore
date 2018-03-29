@@ -8,6 +8,7 @@ _*
 *.class
 *.exe
 *.o
+.idea
 
 *-dot2tex-*
 # LATEX FILES
@@ -35,13 +36,19 @@ dest
 *.fls
 *.tdo
 *.listing
+*.lof
+*.cb
+*.cb2
+*.lb
 *--
+
 .idea
 # Byte-compiled / optimized / DLL files
 /_book/
 __pycache__/
 *.py[cod]
 *$py.class
+dist
 
 # C extensions
 *.so
@@ -100,3 +107,13 @@ target/
 
 #Ipython Notebook
 .ipynb_checkpoints
+
+# Editor
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+paper/report.pdf
+
+
