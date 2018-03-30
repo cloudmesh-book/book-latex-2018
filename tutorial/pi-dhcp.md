@@ -39,7 +39,7 @@ includes\cite{hid-sp18-405-tutorial-pidhcp-pdf}:
 
 If you want to get an introduction about the logical process followed
 by a DHCP service, please follow
-[this link](https://www.raspberrypi.org/learning/networking-lessons/lesson-3/plan/)
+[this link](<https://www.raspberrypi.org/learning/networking-lessons/lesson-3/plan/>) \cite{hid-sp18-405-tutorial-pidhcp-lesson3}
 
 ## Setting up the DHCP server
 
@@ -109,7 +109,7 @@ addresses on. Edit the following file:
         
     sudo nano /etc/default/isc-dhcp-server
         
-Find the following section (most likely at the end of the file):
+Find the following section:
     
     # On what interfaces should the DHCP server (dhcpd) serve DHCP requests?
     #       Separate multiple interfaces with spaces, e.g. "eth0 eth1".
@@ -261,9 +261,9 @@ To do this, we modify the */etc/dhcp/dhcpd.conf* by:
  also notice that the previous two commands of checking the currently
  leased addresses will also provide MAC Addresses.
  
-**Warning**: if you wish to have your DHCP Server award a fixed IP
+**Warning**: ``if you wish to have your DHCP Server award a fixed IP
 Address it should be one outside the DHCP normally assigned range of
-IP Addresses.
+IP Addresses'' \cite{hid-sp18-405-tutorial-pidhcp-pdf}.
 
 Another thing to notice is that the previous two commands of checking
 the currently leased addresses does not include the clients given a
@@ -296,8 +296,8 @@ To check the currently leased addresses for fixed IP clients:
 The steps and instruction presented here are combined from several web
 resources:
 
-* [Lesson 3 - Dynamic Host Configuration Protocol (DHCP)](https://www.raspberrypi.org/learning/networking-lessons/lesson-3/plan/) \cite{hid-sp18-405-tutorial-pidhcp-lesson3}
-* [Configuring the Raspberry Pi as a DHCP Server under Raspbian Wheezy](http://my-music.mine.nu/images/rpi_raspbianwheezy_dhcp_server.pdf) \cite{hid-sp18-405-tutorial-pidhcp-pdf}
-* [Hadoop and Spark Installation on Raspberry Pi-3 Cluster](https://tekmarathon.com/2017/02/16/hadoop-and-spark-installation-on-raspberry-pi-3-cluster-part-3/) \cite{hid-sp18-405-tutorial-pidhcp-hadoopinstall}
-* [Setup Raspberry pi as a dhcp server](https://blog.monotok.org/setup-raspberry-pi-dhcp-server/) \cite{hid-sp18-405-tutorial-pidhcp-setup}
+* [Lesson 3 - Dynamic Host Configuration Protocol (DHCP)](<https://www.raspberrypi.org/learning/networking-lessons/lesson-3/plan/>) \cite{hid-sp18-405-tutorial-pidhcp-lesson3}
+* [Configuring the Raspberry Pi as a DHCP Server under Raspbian Wheezy](<http://my-music.mine.nu/images/rpi_raspbianwheezy_dhcp_server.pdf>) \cite{hid-sp18-405-tutorial-pidhcp-pdf}
+* [Hadoop and Spark Installation on Raspberry Pi-3 Cluster](<https://tekmarathon.com/2017/02/16/hadoop-and-spark-installation-on-raspberry-pi-3-cluster-part-3/>) \cite{hid-sp18-405-tutorial-pidhcp-hadoopinstall}
+* [Setup Raspberry pi as a dhcp server](<https://blog.monotok.org/setup-raspberry-pi-dhcp-server/>) \cite{hid-sp18-405-tutorial-pidhcp-setup}
 

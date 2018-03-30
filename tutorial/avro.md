@@ -21,7 +21,7 @@ data with example modified from Apache Avro 1.8.2 Getting Started
 
 The zipped installation file *avro-1.8.2.tar.gz* could be downloaded
 from
-[here](http://mirrors.ocf.berkeley.edu/apache/avro/avro-1.8.2/py/)
+[here](<http://mirrors.ocf.berkeley.edu/apache/avro/avro-1.8.2/py/>)
 
 To unzip, using linux:
     
@@ -44,7 +44,7 @@ message:
 
 This above instruction is for Python2. The Python3 counterpart,
 *avro-python3-1.8.2.tar.gz* could be downloaded from
-[here](http://mirrors.sonic.net/apache/avro/avro-1.8.2/py3/) and the
+[here](<http://mirrors.sonic.net/apache/avro/avro-1.8.2/py3/>) and the
 unzip and install procedure is the same.
 
 ## Defining a schema
@@ -150,22 +150,19 @@ The output should look like:
 ## Resources
 
 * The steps and instructions are modified from
-  [Apache Avro 1.8.2 Getting Started (Python)](http://avro.apache.org/docs/1.8.2/gettingstartedpython.html)
+  [Apache Avro 1.8.2 Getting Started (Python)](<http://avro.apache.org/docs/1.8.2/gettingstartedpython.html>)
   \cite{hid-sp18-405-tutorial-avro-python}.
-
 * The Avro Python library does not support code generation, while Avro
   used with Java supports code generation, see
-  [Apache Avro 1.8.2 Getting Started (Java)](http://avro.apache.org/docs/1.8.2/gettingstartedjava.html)
+  [Apache Avro 1.8.2 Getting Started (Java)](<http://avro.apache.org/docs/1.8.2/gettingstartedjava.html>)
   \cite{hid-sp18-405-tutorial-avro-java}.
-
 * Avro provides a convenient way to represent complex data structures
   within a Hadoop MapReduce job. Details about Avro are documented in
-  [Apache Avro 1.8.2 Hadoop MapReduce guide](http://avro.apache.org/docs/1.8.2/mr.html)
+  [Apache Avro 1.8.2 Hadoop MapReduce guide](<http://avro.apache.org/docs/1.8.2/mr.html>)
   \cite{hid-sp18-405-tutorial-avro-mapreduce}.
-
 * For more information on schema files and how to specify name and
   type of a record can be found at
-  [record specification](http://avro.apache.org/docs/1.8.2/spec.html#schema_record)
+  [record specification](<http://avro.apache.org/docs/1.8.2/spec.html#schema_record>)
   \cite{hid-sp18-405-tutorial-avro-record}.
 
 

@@ -10,18 +10,24 @@ if [ -f dist/HadoopPageRankMooc.jar ]
 then
     echo "jar is reaty to run a program!"
 else
-    echo "There may be errors in your source code, please check the debug message."
-    exit 255
+    echo "jar not found, compling now!"
+    export HADOOP_CLASSPATH=`$HADOOP_PREFIX/bin/hadoop classpath`
+	mkdir /cloudmesh/pagerank/dist
+	find /cloudmesh/pagerank/src/indiana/cgl/hadoop/pagerank/ -name "*.java"|xargs  javac -classpath $HADOOP_CLASSPATH -d /cloudmesh/pagerank/dist
+	cd dist
+	jar -cvf HadoopPageRankMooc.jar -C . .
+	cd ..
 fi
 
 # run pageRank
 
-$HADOOP_PREFIX/bin/hadoop dfs -mkdir input.pagerank
-$HADOOP_PREFIX/bin/hadoop dfs -put $1 input.pagerank
-$HADOOP_PREFIX/bin/hadoop jar dist/HadoopPageRankMooc.jar indiana.cgl.hadoop.pagerank.HadoopPageRank input.pagerank output.pagerank $2 $3
+export PATH=$PATH:/$HADOOP_PREFIX/bin
+hadoop fs -mkdir input.pagerank
+hadoop fs -put $1 input.pagerank
+hadoop jar dist/HadoopPageRankMooc.jar indiana.cgl.hadoop.pagerank.HadoopPageRank input.pagerank output.pagerank $2 $3
 
 # capture the standard output
 rm -rf output.pagerank
-$HADOOP_PREFIX/bin/hadoop dfs -get output.pagerank .
+hadoop fs -get output.pagerank .
 
 echo "PageRank Finished execution, see results in output.pagerank/ directory."
