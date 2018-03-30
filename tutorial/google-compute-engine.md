@@ -22,42 +22,65 @@ start various Google Cloud Platform services in the console.
 The following instructions are adapted from
 [here](https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu?authuser=1).
 
-You will need to have `curl` installed. You can install it with:
+You will need to have *curl* installed. You can install it with:
 
-```bash
+```
 sudo apt install curl
 ```
 
 
-First you need to install the gcloud SDK: ```bash export
-CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)" echo "deb
-http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee
--a /etc/apt/sources.list.d/google-cloud-sdk.list curl
-https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key
-add - sudo apt-get update && sudo apt-get install google-cloud-sdk ```
-Next, initialize the SDK with: ```bash gcloud init ``` This will open
-a web browser and prompt you to log in to your account. If you don't
-have a browser installed or are doing a headless setup, you can use
-the following command instead: ```bash gcloud init --console-only ```
+First you need to install the gcloud SDK: 
+
+``` 
+export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)" 
+echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" \
+    | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list 
+curl https://packages.cloud.google.com/apt/doc/apt-key.gpg \
+    | sudo apt-key add - 
+sudo apt-get update && sudo apt-get install google-cloud-sdk 
+```
+
+Next, initialize the SDK with: 
+
+``` 
+gcloud init 
+``` 
+
+This will open a web browser and prompt you to log in to your account. 
+If you don't have a browser installed or are doing a headless setup, 
+you can use the following command instead: 
+
+``` 
+gcloud init --console-only 
+```
+
 This will display a link in your terminal that you must copy and paste
 into a browser. The browser will return a verification code for you to
 type into the terminal.
 
 After you have logged in, the terminal will prompt you to select a
 project or create a new one. Project IDs must be unique. If you pick
-one like `test-vm` it will fail. If you start again with: ```bash
-gcloud init ``` You will be prompted to pick up where you left off or
+one like *test-vm* it will fail. If you start again with: 
+
+```
+gcloud init 
+``` 
+
+You will be prompted to pick up where you left off or
 create a new configuration.
 
 After selecting a project, you will be asked if you want to configure
 a default Compute Region and Zone. If you do not, configuration is
 complete.
 
-# Create an Instance
+## Create an Instance
 
 You can create an instance with the following command (where <name of
-instance> is the name of the instance you want to create): ```bash
-gcloud compute instances create <name of instance> ```
+instance> is the name of the instance you want to create): 
+
+```
+gcloud compute instances create <name of instance> 
+```
 
 If you have not set up a default Compute Region and Zone, you will be
 prompted to select one from the 45 possibly zones, so it is probably
@@ -66,15 +89,21 @@ instance in before you type the command. For example, if you want to
 create an instance called *foo* in *us-central1-a* (which is in Iowa),
 you would enter:
 
-```bash gcloud compute instances create foo --zone=us-central-1a ```
-This will create an n1-standard-1 instance with one CPU and 3.75 GB of
+```
+gcloud compute instances create foo --zone=us-central-1a 
+```
+
+This will create an *n1-standard-1* instance with one CPU and 3.75 GB of
 memory, which costs about $25 a month. If you leave it running, you
 will burn through a lot of your free credits for nothing. You can stop
 it with:
 
-```bash gcloud compute instances stop foo --zone=us-central-1a ```
+``` 
+gcloud compute instances stop foo --zone=us-central-1a 
+```
 
-A full list of all the options for the `gcloud compute instances`
+A full list of all the options for the **gcloud compute instances**
 command is
 [here](https://cloud.google.com/sdk/gcloud/reference/compute/instances/).
 
+\TODO Add reference section and convert inline links to proper references.
