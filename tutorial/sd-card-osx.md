@@ -3,15 +3,15 @@
 hid-sp18-405 hid-sp18-508
 
 ## Overview
-* The instruction followed is at [instructions](https://www.raspberrypi
-.org/documentation/installation/installing-images/)
+
+* The instruction followed is at [instructions](<https://www.raspberrypi.org/documentation/installation/installing-images/>)
 * Operating system: MacOS
 
 ## Method1 - Without using NOOBS
 
 ### Download 
 
-* Download page is [here](https://www.raspberrypi.org/downloads/)
+* Download page is [here](<https://www.raspberrypi.org/downloads/>)
 * Choose Raspbian instead of NOOBS
 * Within raspbian, there are two versions, RASPBIAN STRETCH WITH
   DESKTOP and RASPBIAN STRETCH LITE. The first one was downloaded
@@ -20,7 +20,7 @@ hid-sp18-405 hid-sp18-508
 ### Writing an image to the SD card 
 
 * Followed the instructions at the beginning, download and install
-  [Etcher](https://etcher.io/)
+  [Etcher](<https://etcher.io/>)
 * Connect an SD card reader with the SD card inside
 * Open Etcher and select from hard drive the Raspberry Pi .img or .zip
   file to write to the SD card.
@@ -33,7 +33,7 @@ hid-sp18-405 hid-sp18-508
 
 ### Download
 
-* download page is [here](https://www.raspberrypi.org/downloads/noobs/)
+* download page is [here](<https://www.raspberrypi.org/downloads/noobs/>)
 
 ### How to install NOOBS on an SD card
 
@@ -55,9 +55,8 @@ detailed steps:
 ## Resources
 
 * Instructions for using NOOBS are from
-  [NOOBS](https://www.raspberrypi.org/documentation/installation/noobs.md)
+  [NOOBS](<https://www.raspberrypi.org/documentation/installation/noobs.md>)
   \cite{hid-sp18-405-tutorial-sd-car-osx-noob}.
-
 * Instructions without NOOBS are from
-  [INSTALLING OPERATING SYSTEM IMAGES](https://www.raspberrypi.org/documentation/installation/installing-images/)
+  [INSTALLING OPERATING SYSTEM IMAGES](<https://www.raspberrypi.org/documentation/installation/installing-images/>)
   \cite{{hid-sp18-405-tutorial-sd-car-osx-nonoob}.
