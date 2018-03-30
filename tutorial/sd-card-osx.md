@@ -1,13 +1,21 @@
 # Install Raspbian on an SD card using MacOS
 
-hid-sp18-405 hid-sp18-508
+* Min Chen (hid-sp18-405)
+* Yue Guo (hid-sp18-508)
 
 ## Overview
 
-* The instruction followed is at [instructions](<https://www.raspberrypi.org/documentation/installation/installing-images/>)
+* This section aims at provding instructions for installing a Raspberry Pi operating system, **Raspbian** on an SD card. This SD card can then be used to boot up a Rasperry Pi with the operating system the card carried. 
+* Another computer with an SD card reader is needed and we assume the operating system of this computer is **MacOS**.
+* The general instruction followed is at [INSTALLING OPERATING SYSTEM IMAGES](<https://www.raspberrypi.org/documentation/installation/installing-images/>) \cite{hid-sp18-405-tutorial-sd-car-osx-general}.
+* Section ~\ref{s:nonoob} follows [INSTALLING OPERATING SYSTEM IMAGES](<https://www.raspberrypi.org/documentation/installation/installing-images/>) \cite{hid-sp18-405-tutorial-sd-car-osx-nonoob}. 
+* Section ~\ref{s:noob} follows [NOOBS](<https://www.raspberrypi.org/documentation/installation/noobs.md>) \cite{hid-sp18-405-tutorial-sd-car-osx-noob}.
 * Operating system: MacOS
 
+
 ## Method1 - Without using NOOBS
+
+~\label{s:nonoob}
 
 ### Download 
 
@@ -30,6 +38,8 @@ hid-sp18-405 hid-sp18-508
 
 
 ## Method2 - Using NOOBS
+
+~\label{s:noob}
 
 ### Download
 
@@ -54,9 +64,12 @@ detailed steps:
 
 ## Resources
 
+* General instructions: 
+  [INSTALLING OPERATING SYSTEM IMAGES](<https://www.raspberrypi.org/documentation/installation/installing-images/>) 
+  \cite{hid-sp18-405-tutorial-sd-car-osx-general}.
 * Instructions for using NOOBS are from
   [NOOBS](<https://www.raspberrypi.org/documentation/installation/noobs.md>)
   \cite{hid-sp18-405-tutorial-sd-car-osx-noob}.
 * Instructions without NOOBS are from
   [INSTALLING OPERATING SYSTEM IMAGES](<https://www.raspberrypi.org/documentation/installation/installing-images/>)
-  \cite{{hid-sp18-405-tutorial-sd-car-osx-nonoob}.
+  \cite{hid-sp18-405-tutorial-sd-car-osx-nonoob}.
