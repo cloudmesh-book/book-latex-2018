@@ -12,14 +12,14 @@ hid-sp18-503
   The last part (p1 or 1 respectively) is the partition number.
 * Note down the name of the sd card (without the partition)
 * Unmount the card so that the card can not be read from or written to
-* Run 
+* Run the following command: 
 
   ```unmount dev/mmcblk0p1``` 
 
   Make sure to use correct name for the card
 * If your card has multiple partitions unmount all partitions
 * Next write the image to the sd card.
-* Run 
+* Run the following command:
 
   ```dd bs=4M if=<path to .img> of=/dev/mmcblk0 status=progress conv=fsunc```
   
@@ -29,7 +29,7 @@ hid-sp18-503
 ### Checking that the image was written properly
 
 * Dreate an image again from the sd card
-* Run 
+* Run the following command:
 
   ```dd bs=4M if=/dev/sdX of=from-sd-card.img```
   
@@ -38,7 +38,7 @@ hid-sp18-503
   ```truncate --reference <original raspbian image> from-sd-card.img```
   
 * Run diff to see if the two files are same
-* Run 
+* Run the following command:
 
   ```diff -s from-sd-card.img <odiginal raspbian image>```
   
