@@ -26,9 +26,8 @@ memory.
 Please report back to us if you found useful packages and tools for
 the PI.
 
-VERSION B:
+# VERSION B: Pi Docker
 
-# Pi Docker
 Docker is a tool that allows you to deploy applications inside of software 
 containers. It is a method of packaging software, to include not only your 
 code, but also other components such as a full file system, system tools, 
