@@ -227,7 +227,7 @@ In the example above, ENV2 would represent python 2.7.13 while ENV3
 would represent python 3.6.4. Often it is easier to type the alias
 rather than the explicit version.
 
-\paragraph{Set up the Shell}\label{set-up-the-shell}
+\paragraph{Set up the Shell}\label{s:set-up-the-shell}
 
 To make all work smoothly from your terminal, you can include the
 following in your \verb|.bashrc| files:
@@ -302,6 +302,33 @@ pyenv install -l
 \end{lstlisting}
 
 You will see the updated list.
+
+\subsection{Updating to a new version of Python with pyenv}
+
+Naturally pyyhon itself evolves and new versions will become available
+via pyenv. To facilitate such a new version you need to first install
+it. into pyenv. Let us assume you had an old version of python
+installed onto the ENV3 environment. Than you need to execute the
+following steps:
+
+\begin{lstlisting}
+pyenv deactivate
+pyenv uninstall ENV3
+pyenv install 3.6.4
+pyenv virtualenv 3.6.4 ENV3
+\begin{lstlisting}
+
+In case you get an error, you may have to update xcode as follows and
+try again:
+
+\begin{lstlisting}
+xcode-select --install
+\end{lstlisting}
+
+
+After you installed it you can activate it by typing
+\verb|ENV3|. Naturally this requires that you added it to your bash
+environment as discussed in Section~\ref{s:set-up-the-shell}.
 
 \subsection{Installation without pyenv}
 
