@@ -25,6 +25,35 @@ Keywords: Docker, REST Service, Spark
  \slides{Practice on AI}{40}{REST services}{https://drive.google.com/file/d/1pD4zbrFKkS7d6SsxIw33NIoDHQLIedXn/view?usp=sharing}
 % \video{AI}{11:01}{REST services}{}
 
+\section{Draft: k-NN}
+
+k-NN is a non-paramteric statistics, which means there is no
+assumption made about the distribution of the data. Additionally the
+distribution is not assumed to be fixed i.e. the distribution may
+change through time. These realxed assumptions make non-paramteric
+tests exteremly valuable when applied to real-world data as a vast
+majority of real world data have dynamic distributions though
+time--climate data comes to mind. Non-paramtric data is often ordinal
+which means the variables have an inherhent categorigcal order with
+unknown distances between the categories. A common example of a
+non-parametric statistical test is the sign test where values are
+assigned a positive or negative sign based on being above or below the
+median. In k-NN predictions are made about unknown values by matching
+the unknown values with simialar known values. Naturally the
+determination of 'similar' is of fundamental importance. This is done
+through the application of the euclidian distance calculation. 
+
+${d(\mathbf{i},\mathbf{j})} = {d(\mathbf{j},\mathbf{i})} =
+\sqrt{{(i_1-j_2)^2} +} $
+${(a+b)}^2 = a^2 + 2ab + b^{c+2}$
+
+ 
+
+We will an idepth example using a dataset from the Natiaonal
+Basketball Associateed (NBA) from 2014, naturally there are more up to
+date datasets but as sports analytics becomes a significant market
+more and more data is becoming propitary. 
+
 \begin{comment}
 \section{Draft: Deep Learning}
 
