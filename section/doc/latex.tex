@@ -568,16 +568,23 @@ $ A_{m,n} =
   \includegraphics[width=6cm]{images/doc/acm.png}
   \hfill
   \includegraphics[width=6cm]{images/doc/ieee.png}
-\caption{The look of the ACM and IEEE format templates}
+\caption{The look of the ACM and IEEE format templates}\label{F:acm-ieee}
 \end{figure}
 
-\begin{itemize}
 
-\item
-  \url{http://www.acm.org/publications/proceedings-template}
-\item
-  \url{https://www.ieee.org/conferences_events/conferences/publishing/templates.html}
-\end{itemize}
+The official ACM \LaTeX~template is located at:
+
+  \URL{http://www.acm.org/publications/proceedings-template}
+
+Additional documentation for the ACM class is provided at
+
+  \URL{https://www.acm.org/binaries/content/assets/publications/consolidated-tex-template/acmart.pdf}
+
+The official IEEE template is located at:
+
+  \URL{https://www.ieee.org/conferences_events/conferences/publishing/templates.html}
+
+Figure \ref{F:acm-ieee} shows the first page of these formats.
 
 \subsection{Generating and Managing Images}\label{generating-images}
 
@@ -1081,8 +1088,8 @@ for Linux and OSX. More information can be found at
 \URL{www.latex2html.org}
 
 \begin{WARNING}
-At this time the inastallation via brew install of latex2html is
-broken. Instead one needs to conduct the insalation from source.
+At this time the installation via brew install of latex2html is
+broken. Instead one needs to conduct the installation from source.
 
 \begin{verbatim}
 brew install latex2html
@@ -1142,8 +1149,8 @@ For a manual page use
 chktex --help
 \end{lstlisting}
 
-When using it some errors and wrnings can be ignored, while others
-should be considerd. Supported featured mantiond on the Web page
+When using it some errors and warnings can be ignored, while others
+should be considered. Supported features mentioned on the Web page
 include:
 ``
 \begin{itemize}
@@ -1191,11 +1198,11 @@ For more details see
 
 \URL{http://baruch.ev-en.org/proj/chktex/}
 
-\subsection{Chacking For Non-ASCII Charaters}
+\subsection{Checking For Non-ASCII Charaters}
 
 To create the most portable \LaTeX~we recommend that you avoid
-non-ASCII c haracters and replace them with the appropreate
-\LaTeX~symbol. To find the characters a program such as thsi coudl be
+non-ASCII characters and replace them with the appropriate
+\LaTeX~symbol. To find the characters a program such as this could be
 helpful. Important is that you not only check the tex file, but also
 the bib file.
 
@@ -1203,6 +1210,24 @@ the bib file.
 perl -ane "{ if(m/[[:^ascii:]]/) { print  } }" filename.tex
 perl -ane "{ if(m/[[:^ascii:]]/) { print  } }" filename.bib
 \end{lstlisting}
+
+\subsection{Cloudmesh LaTeX Quote Checker}\label{s:latex-quote-checker}
+
+As part of this class we developed a simple checker that checks for
+quotes. THe script is located at 
+
+\URL{https://github.com/cloudmesh-community/hid-sample/blob/master/bin/check-quotes.py}
+
+It is invoked with 
+
+\begin{verbatim}
+check-quotes.py filename.tex
+\end{verbatim}
+
+In case you have other checks you like to add, please help us improve
+this script.
+
+
 
 \subsection{References}
 \index{Latex!other documentation}
