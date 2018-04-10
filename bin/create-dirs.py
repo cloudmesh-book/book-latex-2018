@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import glob
 from pprint import pprint
 import os
