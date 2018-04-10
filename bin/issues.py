@@ -1,12 +1,18 @@
+#!/usr/bin/env python
+
 import json
 from pprint import pprint
 import os
 
-os.system("curl -s https://api.github.com/repos/cloudmesh/book/issues > issues.json")
+issues = []
+for i in range(1,4):
+    os.system("curl -s https://api.github.com/repos/cloudmesh/book/issues?page={page} > issues.json".format(page=i))    
+    file = open("issues.json", "r")
+    data = file.read()
+    part_issues = json.loads(data)
+    issues = issues + part_issues
 
-file = open("issues.json", "r")
-data = file.read()
-issues = json.loads(data)
+# pprint (len(issues))
 
 
 def assignee(issue):
@@ -17,15 +23,19 @@ def assignee(issue):
         pass
     return name
 
+count = 0
+
 if len(issues) > 0:
     print("\section{Github Issues}")
     print("\\begin{center}")    
-    print("\\begin{tabular}{llll}")
-    print ("Status & No & title & Assignee\\\\")
+    print("\\begin{longtable}{lllll}")
+    print ("Count & Status & No & title & Assignee\\\\")
     print ("\hline")
     for issue in issues:
+        count = count + 1
+        issue['count'] = count
         if issue['state'] == 'open':
-            line = "{state} & \href{{{html_url}}}{{{number}}} & {title} & ".format(**issue) + str(assignee(issue)) + "\\\\"
+            line = "{count} & {state} & \href{{{html_url}}}{{{number}}} & {title} & ".format(**issue) + str(assignee(issue)) + "\\\\"
             print (line)
-    print("\\end{tabular}")
+    print("\\end{longtable}")
     print("\\end{center}")    
