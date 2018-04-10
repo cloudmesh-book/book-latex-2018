@@ -77,7 +77,7 @@ stripe is fast or not. This particular friend knows nothing about cars
 so decided to put analytics to work. Since a Mustang has roughly 300
 horse power the closet car in our dataset to this is the Tesla
 Roadster and since the Tesla is fast we would predict the Mustang to
-be fast. Remember this is comepltely dependent on the authors initial
+be fast. Remember this is completely dependent on the authors initial
 classification of wether a car is fast or not. Clearly the Lamborghini
 and the Bugatti are fast but maybe the Tesla is not fast therefore
 giving an incorrect answer. An example calculation using the Mustang
@@ -90,8 +90,8 @@ We were able to determine the closest, or first nearest neighbor by
 inspection of this data, however with a more robust dataset this may
 not be the case. In these situations to find the nearest neighbor the
 euclidian distance is calculated for every unique row entry and then
-ordered from smallest to largest distances, naturally the samllest
-distances are the most simialr. You may notice that the values of
+ordered from smallest to largest distances, naturally the smallest
+distances are the most similar. You may notice that the values of
 horsepower are significantly larger in magnitude than the values
 associated with racing stripes. This could be problematic in many real
 world scenarios where the columns associated with large values don't
@@ -108,24 +108,25 @@ prediction about the Mustang would be given the data provided what
 about 3, 4  nearest neighbors? 
 \end{exercise}
 
-\begin{exercise} Calculate the Eucliudian Distances for all five row
+\begin{exercise} Calculate the Euclidian Distances for all five row
   entries with respect to the Mustang.
 \end{exercise}
 
 \begin{exercise} Normalize the data and recalculate the first and
-  second nearest neighbors with respect to the Mustang. Does anyhthing
+  second nearest neighbors with respect to the Mustang. Does anything
   change? 
 \end{exercise}
 
  
 
-In order to see k-NN in action we will look at an idepth example using
+In order to see k-NN in action we will look at an in depth example using
 a dataset from the National Basketball Associated (NBA) from 2013,
 naturally there are more up to date datasets but as sports analytics
 becomes a significant market more and more data is becoming
 proprietary. This example will pick an NBA player and determine the
 most similar NBA player in the dataset to the selected player using
-k nearest neighbors. 
+k nearest neighbors. The following is set up for you to execute in a
+python command prompt line by line for instructional purposes.  
 
 \begin{lstlisting}
 #This code was adopted from Dataquest - K nearest neighbors in Python:
@@ -147,10 +148,10 @@ print(nba.columns.values)
 
 Now we need to select a player from the dataset, we will then
 determine the most similar player to our selected player. Analysis
-like this is becoming more and more prevelent in professional sports
+like this is becoming more and more prevalent in professional sports
 due to the large amounts of money invested in players. Scouts may use
 this type of analysis to determine who a given prospect is most
-simialr too. This following bit of code selects a player from the
+similar too. This following bit of code selects a player from the
 dataset. Notice that the column player is first selected followed by
 the player name.  
 
@@ -159,7 +160,7 @@ selected_player = nba[nba["player"] == "LastName FirstName"].iloc[0]
 \end{lstlisting} 
 
 The next step is to remove any non-numeric columns from our analysis
-since we are using the euclidian distance to calcualte proximatey and
+since we are using the euclidian distance to calculate proximity and
 strings can not be evaluated in such a way. One thing you can do if
 you have columns that have values like yes and no is assign zeros and
 ones accordingly. In our case we will only select the columns with
@@ -174,7 +175,7 @@ numeric_columns = ['age', 'g', 'gs', 'mp', 'fg', 'fga', 'fg.', 'x3p',
 We now have everything we need to calculate the euclidian distance,
 there are built in functions available in python to calculate this
 however we will define our own as it is a straight forward
-compuation. It is also good practice to define your own functions
+computation. It is also good practice to define your own functions
 whenever possible. 
 
 \begin{lstlisting}
@@ -197,12 +198,12 @@ selected_player_distance = nba.apply(euclidean_distance, axis=1)
 \end{lstlisting} 
 
 For sake of argument we will assume that all the data columns have
-equal predictive cababilities so we wish to normalize. This will often
+equal predictive capabilities so we wish to normalize. This will often
 be the case with sports statistics as total points and field goal
-percentage vary in magnitiude signifcantly but total points does not
-neccsarily hold more predictive power than field goal percentage. In
+percentage vary in magnitude significantly but total points does not
+necessarily hold more predictive power than field goal percentage. In
 order to normalize we again most only select the the numeric columns
-and text columns can not be normaized in the way described above. 
+and text columns can not be normalized in the way described above. 
 
 
 \begin{lstlisting}
@@ -214,17 +215,17 @@ nba_normalized = (nba_numeric - nba_numeric.mean()) / nba_numeric.std()
 
 We can now use built in functions to calculate the nearest
 neighbors in order to compare to our results attained from the above
-exercesie. In case you did not notice the selected\_plater\_distance
-array is an array that lists all the eclidian distances. We will use
+exercise. In case you did not notice the selected\_plater\_distance
+array is an array that lists all the Euclidean distances. We will use
 this later to see if the same result is obtained by using the built in
-functions. First we will import the necsesary libraries shown below. 
+functions. First we will import the necessary libraries shown below. 
 
  \begin{lstlisting}
 from scipy.spatial import distance
 \end{lstlisting} 
 
-If you insepcted the the selected\_player\_distance array you would have
-noticed that there were several NaN's present this was due to haveing
+If you inspected the the selected\_player\_distance array you would have
+noticed that there were several NaN's present this was due to having
 an incomplete dataset and must be avoided. The following bit of code
 will replace all NA entries with zeros. 
 
@@ -262,6 +263,250 @@ most_similar_to_player
 \end{lstlisting} 
 
 The most similar player to your selected player should appear. 
+
+\section{Draft: Example Project with SVM}
+
+The following code is set up as an example project and will show how
+to use a RESTful service to download data. Additionally the
+differences between a dynamic and static API will be showcased. First
+we begin by importing the approbate libraries. 
+
+\begin{lstlisting}
+import requests
+from flask import Flask
+import numpy as np
+from sklearn.externals.joblib import Memory
+from sklearn.datasets import load_svmlight_file
+from sklearn.svm import SVC
+from os import listdir
+from flask import Flask, request
+\end{lstlisting} 
+
+Next we define three functions required to run this example: a
+function to download the data; a function to partition the data; and a
+function to get the data into the appropriate format once downloaded. 
+
+\begin{lstlisting}
+app = Flask(__name__)
+
+def download_data(url, filename):
+    r = requests.get(url, allow_redirects=True)
+    open(filename, 'wb').write(r.content)
+
+def data_partition(filename, ratio):
+    file = open(filename,'r')
+    training_file=filename+'_train'
+    test_file=filename+'_test'
+    data = file.readlines()
+    count = 0
+    size = len(data)
+    ftrain =open(training_file,'w')
+    ftest =open(test_file,'w')
+    for line in data:
+        if(count< int(size*ratio)):
+            ftrain.write(line)
+        else:
+            ftest.write(line)
+        count = count + 1        
+
+def get_data(filename):
+    data = load_svmlight_file(filename)
+    return data[0], data[1]
+\end{lstlisting} 
+
+Defining the first API endpoint with the following lines of code will
+allow the user to expose the API. Prove this to yourself by opening a
+browser, preferably google, and following the url below the code.
+
+\begin{lstlisting}
+@app.route('/')
+def index():
+    return "Demo Project!"
+
+if __name__ == '__main__':
+    app.run(debug=True)
+\end{lstlisting} 
+
+\URL{http://127.0.0.1:5000/}
+
+The first API endpoint we will define is the endpoint to download the
+data, which is done by the following lines of code. Note the url is
+hardcoded into this portion of the code as passing urls to an API is
+not good practice.  
+
+\begin{lstlisting}
+@app.route('/api/download/data')
+def download():
+    url =
+    'https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/multiclass/glass.scale'
+    download_data(url=url, filename='iris.scale')
+    return "Data Downloaded"
+\end{lstlisting} 
+
+The following three api endpoints use the data pration and get data
+functions defined above. The partition function splits the datasets
+into two sections--testing and training. In this example the testing
+portion of the dataset is 20 \% and the training is 80 \% of the
+dataset. Later we will explore how to make this part dynamic, allowing
+the user to choose the partitioning percentage. 
+
+\begin{lstlisting}
+@app.route('/api/data/partition')
+def partition():
+    data_partition('iris.scale',0.8)
+    return "Successfully Partitioned"
+
+@app.route('/api/get/data/test')
+def gettestdata():
+    Xtest, ytest = get_data("iris.scale_test")
+    
+    return "Return Xtest and Ytest arrays"
+    
+@app.route('/api/get/data/train')
+def gettraindata():
+    Xtrain, ytrain = get_data("iris.scale_train")
+    
+    return "Return Xtrain and Ytrain arrays"
+\end{lstlisting} 
+
+The last bit of code is the implementation of SVM into a RESTful API
+endpoint. Again this is static and all parameters needed to tune the
+algorithm are hardcoded. It will be worth your time to extrapolate
+the discussion below about dynamic APIs in order to make these
+parameters tunable by the user through the url. 
+
+\begin{lstlisting}
+@app.route('/api/experiment/svm')
+def svm():
+    Xtrain, ytrain = get_data("iris.scale_train")
+    Xtest, ytest = get_data("iris.scale_test")
+
+    clf = SVC(gamma=0.001, C=100, kernel='linear')
+    clf.fit(Xtrain, ytrain)
+
+    test_size = Xtest.shape[0]
+    accuarcy_holder = []
+    for i in range(0, test_size):
+        prediction = clf.predict(Xtest[i])
+        print("Prediction from SVM: "+str(prediction)+", Expected
+        Label : "+str(ytest[i]))
+        accuarcy_holder.append(prediction==ytest[i])
+
+    correct_predictions = sum(accuarcy_holder)
+    print(correct_predictions)
+    total_samples = test_size
+    accuracy =
+    float(float(correct_predictions)/float(total_samples))*100
+    print("Prediction Accuracy: "+str(accuracy))
+    return "Prediction Accuracy: "+str(accuracy)
+\end{lstlisting} 
+
+In order to run this you need to make a directory in a location of
+your choice and create a file called main.py that has the code listed
+above in it. Then simply type the following command in a terminal
+where you have navigated to the location of the directory that your
+created. 
+
+\begin{lstlisting}
+python main.py
+\end{lstlisting} 
+ 
+A continuous version of main.py is provided below for ease of
+use. Please be careful when copying and pasting as additional
+characters may show up, this was noticed in the url sections. 
+
+\begin{lstlisting}
+import requests
+from flask import Flask
+import numpy as np
+from sklearn.externals.joblib import Memory
+from sklearn.datasets import load_svmlight_file
+from sklearn.svm import SVC
+from os import listdir
+from flask import Flask, request
+
+app = Flask(__name__)
+
+def download_data(url, filename):
+    r = requests.get(url, allow_redirects=True)
+    open(filename, 'wb').write(r.content)
+
+def data_partition(filename, ratio):
+    file = open(filename,'r')
+    training_file=filename+'_train'
+    test_file=filename+'_test'
+    data = file.readlines()
+    count = 0
+    size = len(data)
+    ftrain =open(training_file,'w')
+    ftest =open(test_file,'w')
+    for line in data:
+        if(count< int(size*ratio)):
+            ftrain.write(line)
+        else:
+            ftest.write(line)
+        count = count + 1        
+
+def get_data(filename):
+    data = load_svmlight_file(filename)
+    return data[0], data[1]
+
+@app.route('/')
+def index():
+    return "Demo Project!"
+
+@app.route('/api/download/data')
+def download():
+    url =
+    'https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/multiclass/glass.scale'
+    download_data(url=url, filename='iris.scale')
+    return "Data Downloaded"
+
+@app.route('/api/data/partition')
+def partition():
+    data_partition('iris.scale',0.8)
+    return "Successfully Partitioned"
+
+@app.route('/api/get/data/test')
+def gettestdata():
+    Xtest, ytest = get_data("iris.scale_test")
+    
+    return "Return Xtest and Ytest arrays"
+
+@app.route('/api/get/data/train')
+def gettraindata():
+    Xtrain, ytrain = get_data("iris.scale_train")
+    
+    return "Return Xtrain and Ytrain arrays"
+
+@app.route('/api/experiment/svm')
+def svm():
+    Xtrain, ytrain = get_data("iris.scale_train")
+    Xtest, ytest = get_data("iris.scale_test")
+
+    clf = SVC(gamma=0.001, C=100, kernel='linear')
+    clf.fit(Xtrain, ytrain)
+
+    test_size = Xtest.shape[0]
+    accuarcy_holder = []
+    for i in range(0, test_size):
+        prediction = clf.predict(Xtest[i])
+        print("Prediction from SVM: "+str(prediction)+", Expected
+        Label : "+str(ytest[i]))
+        accuarcy_holder.append(prediction==ytest[i])
+
+    correct_predictions = sum(accuarcy_holder)
+    print(correct_predictions)
+    total_samples = test_size
+    accuracy =
+    float(float(correct_predictions)/float(total_samples))*100
+    print("Prediction Accuracy: "+str(accuracy))
+    return "Prediction Accuracy: "+str(accuracy)
+
+if __name__ == '__main__':
+    app.run(debug=True)
+\end{lstlisting}
+
 
 \begin{comment}
 \section{Draft: Deep Learning}
