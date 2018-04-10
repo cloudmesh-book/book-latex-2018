@@ -1,11 +1,11 @@
-\chapter{Draft: Artifical Intelligence}
+\chapter{Draft: Artificial Intelligence}
 \label{c:ai}
 \index{Artificial-Intelligence}
 
 \FILENAME\
 
 %
-% Miao will be developing leture material for the rest of the semester
+% Miao will be developing lecture material for the rest of the semester
 % for this. Every week lecture material and labs for e222
 %
 
@@ -19,7 +19,7 @@ Keywords: clustering, kNN, Markov Model
 
 %\url{https://onedrive.live.com/view.aspx?cid=9384db89dd1152fa&page=view&resid=9384DB89DD1152FA!1564&parId=9384DB89DD1152FA!1551&app=PowerPoint}
 
-\section{Lab:Pracitice on AI}
+\section{Lab:Practice on AI}
 Keywords: Docker, REST Service, Spark
 
  \slides{Practice on AI}{40}{REST services}{https://drive.google.com/file/d/1pD4zbrFKkS7d6SsxIw33NIoDHQLIedXn/view?usp=sharing}
@@ -27,32 +27,241 @@ Keywords: Docker, REST Service, Spark
 
 \section{Draft: k-NN}
 
-k-NN is a non-paramteric statistics, which means there is no
+k-NN is a non-parametric statistics, which means there is no
 assumption made about the distribution of the data. Additionally the
 distribution is not assumed to be fixed i.e. the distribution may
-change through time. These realxed assumptions make non-paramteric
-tests exteremly valuable when applied to real-world data as a vast
+change through time. These relaxed assumptions make non-parametric
+tests extremely valuable when applied to real-world data as a vast
 majority of real world data have dynamic distributions though
-time--climate data comes to mind. Non-paramtric data is often ordinal
-which means the variables have an inherhent categorigcal order with
+time--climate data comes to mind. Non-Parametric data is often ordinal
+which means the variables have an inherent categorical order with
 unknown distances between the categories. A common example of a
 non-parametric statistical test is the sign test where values are
 assigned a positive or negative sign based on being above or below the
 median. In k-NN predictions are made about unknown values by matching
-the unknown values with simialar known values. Naturally the
+the unknown values with similar known values. Naturally the
 determination of 'similar' is of fundamental importance. This is done
-through the application of the euclidian distance calculation. 
-
+through the application of the euclidian distance calculation given by
+the following equation: 
 ${d(\mathbf{i},\mathbf{j})} = {d(\mathbf{j},\mathbf{i})} =
-\sqrt{{(i_1-j_2)^2} +} $
-${(a+b)}^2 = a^2 + 2ab + b^{c+2}$
+\sqrt{{(i_1 - j_1)^2 + (i_2 - j_2)^2 +... (i_n - j_n)^2 } }  =
+\sqrt{\sideset{}{}\sum_{n=1}^n(i_n - j_n)^2}$
+Now to illustrate an example of calculating similarity we put this
+equation to work by exploring if a car is fast or not by using
+~\ref{T:fast-cars}. Lets pretend we know nothing about cars and are
+asked if we think a Chevy Corvette is fast or not.  
+
+\begin{table}[htb]
+\caption{Car make and model with associated horsepower, whether the
+  vehicle has a racing stripe and if the author thinks the car is fast
+or not}\label{T:fast-cars}
+\bigskip
+\begin{center}
+\begin{tabular}{ c c c c c }
+ Car Name  & Horsepower (HP)  & Racing Stripe (Yes or No) & Fast (Yes
+                                                           or No) \\
+\toprule
+ Toyota Prius & 120 & 0 & 0 \\ 
+ Tesla Roadster& 288 & 0 & 1 \\  
+ Bugatti  Veyron& 1200 & 1 & 1 \\
+ Honda Civic & 158 & 1 & 0 \\
+ Lamborghini Aventador & 695 & 1 & 1 \\
+
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+Now lets say our friend wants to know if a Ford Mustang with a racing
+stripe is fast or not. This particular friend knows nothing about cars
+so decided to put analytics to work. Since a Mustang has roughly 300
+horse power the closet car in our dataset to this is the Tesla
+Roadster and since the Tesla is fast we would predict the Mustang to
+be fast. Remember this is comepltely dependent on the authors initial
+classification of wether a car is fast or not. Clearly the Lamborghini
+and the Bugatti are fast but maybe the Tesla is not fast therefore
+giving an incorrect answer. An example calculation using the Mustang
+and the Tesla is given below: 
+
+${d(\mathbf{i},\mathbf{j})}  =
+\sqrt{{(300 - 288)^2 + (1 - 0)^2 } }  = 12.04 $
+
+We were able to determine the closest, or first nearest neighbor by
+inspection of this data, however with a more robust dataset this may
+not be the case. In these situations to find the nearest neighbor the
+euclidian distance is calculated for every unique row entry and then
+ordered from smallest to largest distances, naturally the samllest
+distances are the most simialr. You may notice that the values of
+horsepower are significantly larger in magnitude than the values
+associated with racing stripes. This could be problematic in many real
+world scenarios where the columns associated with large values don't
+have as direct of an impact as horsepower does on the variable we are
+trying to predict, in our case a car being fast. In the case where
+each column value has equal predictive power data normalization should
+be performed. This is the process of centering each column to a mean
+of 0 and a standard deviation of 1. This is done by taking the column
+means and subtracting the column means from each column entry and
+dividing by the column standard deviation. 
+
+\begin{exercise} Determine for yourself if we use 2 nearest neighbors what the
+prediction about the Mustang would be given the data provided what
+about 3, 4  nearest neighbors? 
+\end{exercise}
+
+\begin{exercise} Calculate the Eucliudian Distances for all five row
+  entries with respect to the Mustang.
+\end{exercise}
+
+\begin{exercise} Normalize the data and recalculate the first and
+  second nearest neighbors with respect to the Mustang. Does anyhthing
+  change? 
+\end{exercise}
 
  
 
-We will an idepth example using a dataset from the Natiaonal
-Basketball Associateed (NBA) from 2014, naturally there are more up to
-date datasets but as sports analytics becomes a significant market
-more and more data is becoming propitary. 
+In order to see k-NN in action we will look at an idepth example using
+a dataset from the National Basketball Associated (NBA) from 2013,
+naturally there are more up to date datasets but as sports analytics
+becomes a significant market more and more data is becoming
+proprietary. This example will pick an NBA player and determine the
+most similar NBA player in the dataset to the selected player using
+k nearest neighbors. 
+
+\begin{lstlisting}
+#This code was adopted from Dataquest - K nearest neighbors in Python:
+#A tutorial written by: Vik Paruchuri
+import pandas
+import math
+with open("/path/to/the/nba_2013.csv", 'r') as csvfile:
+    nba = pandas.read_csv(csvfile)
+\end{lstlisting}
+
+The above portion of code uses pandas to open the downloaded csv file
+and name it nba, naturally you could name the file anything. If you
+want to view the columns in the csv file the following command can be
+used.
+
+\begin{lstlisting}
+print(nba.columns.values)
+\end{lstlisting} 
+
+Now we need to select a player from the dataset, we will then
+determine the most similar player to our selected player. Analysis
+like this is becoming more and more prevelent in professional sports
+due to the large amounts of money invested in players. Scouts may use
+this type of analysis to determine who a given prospect is most
+simialr too. This following bit of code selects a player from the
+dataset. Notice that the column player is first selected followed by
+the player name.  
+
+\begin{lstlisting}
+selected_player = nba[nba["player"] == "LastName FirstName"].iloc[0]
+\end{lstlisting} 
+
+The next step is to remove any non-numeric columns from our analysis
+since we are using the euclidian distance to calcualte proximatey and
+strings can not be evaluated in such a way. One thing you can do if
+you have columns that have values like yes and no is assign zeros and
+ones accordingly. In our case we will only select the columns with
+numeric values. 
+
+\begin{lstlisting}
+numeric_columns = ['age', 'g', 'gs', 'mp', 'fg', 'fga', 'fg.', 'x3p',
+'x3pa', 'x3p.', 'x2p', 'x2pa', 'x2p.', 'efg.', 'ft', 'fta', 'ft.',
+'orb', 'drb', 'trb', 'ast', 'stl', 'blk', 'tov', 'pf', 'pts']
+\end{lstlisting} 
+
+We now have everything we need to calculate the euclidian distance,
+there are built in functions available in python to calculate this
+however we will define our own as it is a straight forward
+compuation. It is also good practice to define your own functions
+whenever possible. 
+
+\begin{lstlisting}
+def euclidean_distance(row):
+    """
+    Define our own euclidean distance function
+    """
+    euc_distance = 0
+    for k in numeric_columns:
+        euc_distance += (row[k] - selected_player[k]) ** 2
+    return math.sqrt(euc_distance)
+\end{lstlisting} 
+
+Applying our function using the following command will determine the
+euclidian distance between the selected player and all other players
+in the dataset. 
+
+\begin{lstlisting}
+selected_player_distance = nba.apply(euclidean_distance, axis=1)
+\end{lstlisting} 
+
+For sake of argument we will assume that all the data columns have
+equal predictive cababilities so we wish to normalize. This will often
+be the case with sports statistics as total points and field goal
+percentage vary in magnitiude signifcantly but total points does not
+neccsarily hold more predictive power than field goal percentage. In
+order to normalize we again most only select the the numeric columns
+and text columns can not be normaized in the way described above. 
+
+
+\begin{lstlisting}
+nba_numeric = nba[numeric_columns]
+#apply normalization formula described above using built in python math
+#functions for the mean and standard deviation
+nba_normalized = (nba_numeric - nba_numeric.mean()) / nba_numeric.std()
+\end{lstlisting} 
+
+We can now use built in functions to calculate the nearest
+neighbors in order to compare to our results attained from the above
+exercesie. In case you did not notice the selected\_plater\_distance
+array is an array that lists all the eclidian distances. We will use
+this later to see if the same result is obtained by using the built in
+functions. First we will import the necsesary libraries shown below. 
+
+ \begin{lstlisting}
+from scipy.spatial import distance
+\end{lstlisting} 
+
+If you insepcted the the selected\_player\_distance array you would have
+noticed that there were several NaN's present this was due to haveing
+an incomplete dataset and must be avoided. The following bit of code
+will replace all NA entries with zeros. 
+
+ \begin{lstlisting}
+nba_normalized.fillna(0, inplace=True)
+\end{lstlisting} 
+
+Using the built in euclidian distance to determine the euclidian
+distances of all players in the data set to our selected player.
+
+ \begin{lstlisting}
+ player_normalized = nba_normalized[nba["player"] == "LastName FirstName"]
+ euclidean_distances = nba_normalized.apply(lambda row:
+   distance.euclidean(row, player_normalized), axis=1)
+\end{lstlisting} 
+
+Here we create a data frame to hold the distances and then sort the
+values from lowest to highest. Since our player will naturally be in
+the dataset the selected player will be the lowest value, therefore
+the second lowest value is associated with the player most closely
+related to our selected player.
+
+\begin{lstlisting}
+distance_frame = pandas.DataFrame(data={"dist": euclidean_distances,
+  "idx": euclidean_distances.index})
+distance_frame.sort_values("dist", inplace=True)
+second_smallest = distance_frame.iloc[1]["idx"]
+most_similar_to_player = nba.loc[int(second_smallest)]["player"]
+\end{lstlisting} 
+
+In the python prompt type: 
+
+\begin{lstlisting}
+most_similar_to_player 
+\end{lstlisting} 
+
+The most similar player to your selected player should appear. 
 
 \begin{comment}
 \section{Draft: Deep Learning}
@@ -63,11 +272,11 @@ This section will explore the make up of time-series (TS) data, and
 the fundamental concepts needed to analyze TS date. More importantly
 why simple linear regression models cannot be used. 
 \subsection{Why is TS Data Important?}
-This section will explore the application and relavence of TS data
-with repspect to big-data. 
+This section will explore the application and relevance of TS data
+with respect to big-data. 
 \subsection{Forecasting TS data}
 This section will explore TS forecasting methods such as the ARIMA
 model, ARCH/GARCH model, Vector Autoregression model, LSTM model and
-NARX Networks...time permitting ELMAN and JORDAN netowrks. 
+NARX Networks...time permitting ELMAN and JORDAN networks. 
  
 \end{comment}
