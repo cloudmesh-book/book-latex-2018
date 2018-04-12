@@ -27,13 +27,13 @@ Keywords: Docker, REST Service, Spark
 
 \section{Draft: k-NN}
 
-k-NN is a non-parametric statistics, which means there is no
+k-NN is a non-parametric statistical method meaning there is no
 assumption made about the distribution of the data. Additionally the
 distribution is not assumed to be fixed i.e. the distribution may
 change through time. These relaxed assumptions make non-parametric
 tests extremely valuable when applied to real-world data as a vast
-majority of real world data have dynamic distributions though
-time--climate data comes to mind. Non-Parametric data is often ordinal
+majority of real-world data have dynamic distributions though
+time, climate data is an obvious example. Non-Parametric data is often ordinal
 which means the variables have an inherent categorical order with
 unknown distances between the categories. A common example of a
 non-parametric statistical test is the sign test where values are
@@ -98,16 +98,17 @@ horsepower are significantly larger in magnitude than the values
 associated with racing stripes. This could be problematic in many real
 world scenarios where the columns associated with large values don't
 have as direct of an impact as horsepower does on the variable we are
-trying to predict, in our case a car being fast. In the case where
+trying to predict--a car being fast. In the case where
 each column value has equal predictive power data normalization should
 be performed. This is the process of centering each column to a mean
-of 0 and a standard deviation of 1. This is done by taking the column
+of zero (0) and a standard deviation of one (1). This is done by taking the column
 means and subtracting the column means from each column entry and
 dividing by the column standard deviation. 
 
 \begin{exercise} Determine for yourself if we use 2 nearest neighbors what the
 prediction about the Mustang would be given the data provided what
-about 3, 4  nearest neighbors? 
+about 3, 4  nearest neighbors? What is the maximum number of k-nearest
+neighbors we could have given the dataset in ~\ref{T:fast-cars} ?
 \end{exercise}
 
 \begin{exercise} Calculate the Euclidian Distances for all five row
@@ -217,7 +218,7 @@ nba_normalized = (nba_numeric - nba_numeric.mean()) / nba_numeric.std()
 
 We can now use built in functions to calculate the nearest
 neighbors in order to compare to our results attained from the above
-exercise. In case you did not notice the selected\_plater\_distance
+exercise. In case you did not notice the selected\_player\_distance
 array is an array that lists all the Euclidean distances. We will use
 this later to see if the same result is obtained by using the built in
 functions. First we will import the necessary libraries shown below. 
@@ -507,6 +508,46 @@ def svm():
 
 if __name__ == '__main__':
     app.run(debug=True)
+\end{lstlisting}
+
+Asmentioned above these these are examples of static API endpoints. In
+many scenarios having a dynamic API would be prefered. Lets explore
+the data partition endpoint and modify the code for the static version
+to make a dynamic version. Below is the function definition for the
+dynamic version of the data\_partion function, and not much has
+changed. The only change made was that stings were appended to the
+testing and training file names for convienece. The ratio will match
+the user defined ratio entered through the url.   
+
+\begin{lstlisting}
+def data_partition(filename, ratio):
+    file = open(filename,'r')
+    training_file=filename+'_train_'+str(ratio)
+    test_file=filename+'_test_'+ str(ratio)
+    data = file.readlines()
+    count = 0
+    size = len(data)
+    ftrain =open(training_file,'w')
+    ftest =open(test_file,'w')
+    for line in data:
+        if(count< int(size*ratio)):
+            ftrain.write(line)
+        else:
+            ftest.write(line)
+        count = count + 1 
+\end{lstlisting}
+
+Now for defining the endpoint, naturally it starts the same way as the
+static version however now we must add a part that allows for the user
+to enter values. This is done by use of brackets < text >. 
+
+\begin{lstlisting}
+@app.route('/api/data/partition/<filename>/ratio/<ratio>')
+def partition(filename,ratio):
+    ratio = float(ratio)
+    path='data/'+filename
+    data_partition(path,ratio)
+    return "Successfully Partitioned"
 \end{lstlisting}
 
 
