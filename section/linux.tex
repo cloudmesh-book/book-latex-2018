@@ -111,27 +111,37 @@ name of the command.
   gunzip &  (assignment) \\
   bzip2 &  (assignment) \\
   bunzip2 &  (assignment) \\
-  clear & \\
-  touch & \\
-  who & \\
-  whoami & \\
-  echo & \\
-  data & \\
-  logout & \\
-  exit & \\
-  kill & \\
-  ps & \\
-  sleep & \\
-  uptime & \\
-  time & \\
+  clear & clears the terminal screen \\
+  touch \textit{filename} & change file access and modification times
+  or if file does not exist creates file \\
+  who & displays a list of users that are curretnly logged on, for
+  each user the login name, date \& time of login, tty name, and
+  hostname if not local are displayed\\
+  whoami & displays the users effective id see also id \\
+  echo -n \textit{string} & write specified arguments to standard output \\
+  date & displays or sets date \& time, when invoked without arguments
+  the current date and time are displayed\\
+  logout & exit a given session\\
+  exit & when issued at the shell promt the shell will exit and
+  terminate any running jobs within the shell\\
+  kill & terminate or signal a process by sending a signal to the
+  specified process usually by the pid  \\
+  ps & displays a header line followed by all processes that have
+  controlling terminals\\
+  sleep & suspends execution for an interval of time specified in seconds \\
+  uptime & displays how long the system has been running \\
+  time  \emph{command} & times the command execution in seconds\\
   date & \\
-  find & \\
-  diff & \\
-  hostname & \\
-  which & \\
-  tail & \\
-  head & \\
-  top & \\
+  find \textit{ / [-name] file-name.txt} &
+  searchs a specificed path or directary with a given expression that
+  tells the find utility what to find, if used as shown the find
+  utility woud search the entire drive for a file named file-name.txt\\
+  diff & compares files line by line \\
+  hostname & prints the name of the current host system \\
+  which & locates a program file in the users path \\
+  tail & displays the last part of the file \\
+  head & displays the first lines of a file \\
+  top & displays a sorted list of system processes \\
   locate \textit{filename} & \\
   grep & \\
   chmod ug+rw \textit{filename} & \\
