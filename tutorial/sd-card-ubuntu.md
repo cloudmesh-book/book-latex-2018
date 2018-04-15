@@ -2,7 +2,7 @@
 
 hid-sp18-503
 
-* In the file explorer, right clichk on the sd card and format the sd card
+* In the file explorer, right click on the sd card and format the sd card
 * Run ```df -h``` to list all the drives in the computer
 * Insert the sd card and run the command again
 * Now a new entry will be listed which is the sd card
@@ -40,6 +40,6 @@ hid-sp18-503
 * Run diff to see if the two files are same
 * Run the following command:
 
-  ```diff -s from-sd-card.img <odiginal raspbian image>```
+  ```diff -s from-sd-card.img <original raspbian image>```
   
 * Diff should say that the two files are same
