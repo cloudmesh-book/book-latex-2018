@@ -117,3 +117,23 @@ A full list of all the options for the **gcloud compute instances**
 command is
 [here](https://cloud.google.com/sdk/gcloud/reference/compute/instances/)~\cite{hid-sp18-419-tutorial-gce-reference}.
 
+## Creating and Downloading Credentials for the Default Service Account
+To create a service account, use the following command:
+```
+gcloud iam service-accounts create <account> 
+```
+A display name can be created for the account with the `--display-name` option.
+The account created will be associated with an iam email address in the form: 
+* `<account>@<project>.iam.gserveiceaccount.com`
+To download credentials for this account use the command:
+```
+gcloud iam service-accounts keys create <file> --iam-account <iam email address>
+```
+followed by the name and path where you want the key (e.g. ~/key.json will create 
+a file named `key.json` in the home directory. 
+
+Google's documentation of the account creation process is [here](https://cloud.google.com/iam/docs/creating-managing-service-accounts).
+Documentation of the key generation process is [here](https://cloud.google.com/iam/docs/creating-managing-service-account-keys).
+Accounts and keys can also be created on the Google Cloud Platform site or via the API.
+
+
