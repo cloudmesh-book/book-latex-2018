@@ -1,18 +1,11 @@
 # PI DHCP Server Tutorial
 
-\TODO{Min, Bertholt: could som of the actions not be done when we burn
-the SD Cards. E.g. I wonder if i plugin an SDcard can we not set up
-all the file actions. Also even whne we are locally on the machine, as
-this is the first install, could we not just copy or cat the
-information into the right files. Maybe we can werie a cmd5 command
-cms pi dhcp ... to make this easy?}
-
 * Min Chen (hid-sp18-405)
 * Bertolt Sobolik (hid-sp18-419)
 
 We describe how to set up **D**ynamic **H**ost **C**onfiguration
-**P**rotocol (DHCP) server on a Raspberry Pi Cluster. The OS on these
-Pi's is RASPBIAN STRETCH WITH DESKTOP released on 2017-11-29.
+**P**rotocol (DHCP) server on a Raspberry Pi Cluster by hand. 
+The OS on these Pi's is RASPBIAN STRETCH WITH DESKTOP released on 2017-11-29.
 
 ## Introduction
 
