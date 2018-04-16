@@ -7,8 +7,9 @@ this is the first install, could we not just copy or cat the
 information into the right files. Maybe we can werie a cmd5 command
 cms pi dhcp ... to make this easy?}
 
+## Note: This tutorial aims at providing some introduction to DHCP and also how to set it up on Pi clusters by hand. The automation (i.e. include the set-up directly in the image) will be provided by Bertolt in a separate tutorial.
+
 * Min Chen (hid-sp18-405)
-* Bertolt Sobolik (hid-sp18-419)
 
 We describe how to set up **D**ynamic **H**ost **C**onfiguration
 **P**rotocol (DHCP) server on a Raspberry Pi Cluster. The OS on these
