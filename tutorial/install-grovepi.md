@@ -1,9 +1,14 @@
+# Enable remote access
+
+enable vnc
+enable ssh
+
 # Install GrovePi
 
 Do not install the Grovepi shield yet
 
-   sudo apt-get update
-   sudo apt-get install emacs -y
+	sudo apt-get update
+	sudo apt-get install emacs -y
 	cd /home/pi/Desktop
 	sudo git clone https://github.com/DexterInd/GrovePi
 	cd /home/pi/Desktop/GrovePi/Script
@@ -47,8 +52,23 @@ You will see output such as
 	('x =', 497, ' y =', 513, ' Rx =', 10.583501006036217, ' Ry =', 9.941520467836257, ' click =', 0)
 
 
- 
-# New kernel has a bug
+# Making the board LED blink
+
+The green LED can be made blinking as follows in root
+
+	echo 1 > /sys/class/leds/led0/brightness
+	echo 0 > /sys/class/leds/led0/brightness
+
+THis can also be done via a file and if combined witth an uploades key into authorized_keys, we can controll them via ssh
+
+	ssh pi@red03 "echo 1 > led; sudo cp led /sys/class/leds/led0/brightness"		
+	ssh pi@red03 "echo 0 > led; sudo cp led /sys/class/leds/led0/brightness"
+
+# Find PIs on the network
+
+	arp -a | fgrep "b8:27:eb"
+
+# (obsolete as the above works) New kernel has a bug
 
 Run this
 
@@ -56,12 +76,9 @@ Run this
 
 # Enable remote access
  
-enable vnc
-enable ssh
 
-# Install Emacs
 
-	sudo apt-get install emacs
+
 
 # Set up Grove PI
 
