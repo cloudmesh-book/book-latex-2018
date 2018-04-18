@@ -157,7 +157,7 @@ print(plt.style.available)
 An example of using a predefined style is shown below. 
 
 \begin{lstlisting}
-print(plt.style.use('seaborn'))
+plt.style.use('seaborn')
 \end{lstlisting}
 
 Up to this point we have only showcased how to display figures through
@@ -166,6 +166,7 @@ figures. One example is Bokeh, the following lines can be entered in a
 python shell and the figure is outputted to a browser. 
 
 \begin{lstlisting}
+from bokeh.io import show
 from bokeh.plotting import figure
 
 x_values = [1, 2, 3, 4, 5]
@@ -173,4 +174,5 @@ y_values = [6, 7, 2, 3, 6]
 
 p = figure()
 p.circle(x=x_values, y=y_values)
+show(p)
 \end{lstlisting}
