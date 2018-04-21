@@ -18,6 +18,9 @@ LATEX=pdflatex
 g: dest markdown graphicspath
 	latexmk -jobname=$(FILE) $(FLAGS) -pvc -view=pdf $(FILE)
 
+boat: dest markdown graphicspath
+	latexmk -jobname=boat $(FLAGS) -pvc -view=pdf boat
+
 setup:
 	export max_print_line=1000
 
