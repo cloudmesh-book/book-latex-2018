@@ -47,3 +47,27 @@ Example:
 These steps can be found at
 
 * <https://www.dexterindustries.com/howto/auto-run-python-programs-on-the-raspberry-pi/>
+
+# Using rc.local to run at boot
+
+Another way is to run a command while adding it to
+`etc/rc.local`. This file contains typically a command
+
+    exit 0
+
+at the end of the file. It indicates that the start was successful. To
+add a command it is besst to write a shell script, put it in a path
+you like and execute is in the background, so that `rc.local` can
+complete.
+
+Make sure you use an absolute path to the location of the script.
+In case you want to kill the script after boouting, you have to look
+for the script name with
+
+    ps -aux
+
+and kill it by pid, or provide a unique name and use the command
+
+    killall <your uniquename>
+
+

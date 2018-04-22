@@ -95,7 +95,7 @@ name of the command.
   cp \emph{a} \emph{b} & copy file \emph{a} to \emph{b} \\
   mv \emph{a} \emph{b} & move/rename file \emph{a} to \emph{b}\\
   cat \emph{a} & print content of file\emph{a}\\
-  cat -n &  (assignment) \\
+  cat -n \textit{filename}&  print content of file\emph{a} with line numbers\\
   less \emph{a} & print paged content of file \emph{a}\\
   head -5 \emph{a} & Display first 5 lines of file \emph{a}\\
   tail -5 \emph{a} & Display last 5 lines of file \emph{a}\\
@@ -107,10 +107,10 @@ name of the command.
   uniq \textit{filename} &  displays only uniq entries in the file \\
   tar -xvf \textit{dir} &  tars up a compressed version of the directory \\
   rsync &  (assignment) \\
-  gzip &  (assignment) \\
-  gunzip &  (assignment) \\
-  bzip2 &  (assignment) \\
-  bunzip2 &  (assignment) \\
+  gzip  \textit{filename}&  compresses the file \\
+  gunzip  \textit{filename}& compresses the file \\
+  bzip2 \textit{filename} &  compresses  the file with block-sorting \\
+  bunzip2 \textit{filename} &  uncompresses  the file with block-sorting \\
   clear & clears the terminal screen \\
   touch \textit{filename} & change file access and modification times
   or if file does not exist creates file \\
@@ -131,7 +131,6 @@ name of the command.
   sleep & suspends execution for an interval of time specified in seconds \\
   uptime & displays how long the system has been running \\
   time  \emph{command} & times the command execution in seconds\\
-  date & \\
   find \textit{ / [-name] file-name.txt} &
   searchs a specificed path or directary with a given expression that
   tells the find utility what to find, if used as shown the find
@@ -142,15 +141,19 @@ name of the command.
   tail & displays the last part of the file \\
   head & displays the first lines of a file \\
   top & displays a sorted list of system processes \\
-  locate \textit{filename} & \\
-  grep & \\
-  chmod ug+rw \textit{filename} & \\
+  locate \textit{filename} & finds the path of a file\\
+  grep \textit{'word'} \textit{filename} & finds all lines with the
+  word in it\\
+  grep -v \textit{'word'} \textit{filename} & finds all lines without the
+  word in it\\
+  chmod ug+rw \textit{filename} & change file modes or Access Control
+  Lists. In this example user and group are changed to read and write\\
   chown & \\
-  history & \\
+  history & a buildin command to list the past commands\\
   sudo & \\
   su & \\
-  uname & \\
-  set -o emacs & \\
+  uname & print the operating system name\\
+  set -o emacs & tells the shell to use Emacs commands.\\
   & \\
   
   %\hline
@@ -407,5 +410,18 @@ duplicates.
   so which? Create a pull request for them. 
 \end{exercise}
 
+begin{exercise}
+\label{E:Linux.5} Write a section expplaining chmod
+\end{exercise}
 
-\
+begin{exercise}
+\label{E:Linux.6} Write a section expplaining chown
+\end{exercise}
+
+begin{exercise}
+\label{E:Linux.7} Write a section expplaining su and sudo
+\end{exercise}
+
+begin{exercise}
+\label{E:Linux.8} Write a section explaining cron, at, and crontab
+\end{exercise}
