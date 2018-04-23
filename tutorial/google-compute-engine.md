@@ -125,6 +125,15 @@ gcloud iam service-accounts create <account>
 A display name can be created for the account with the `--display-name` option.
 The account created will be associated with an iam email address in the form: 
 * `<account>@<project>.iam.gserveiceaccount.com`
+
+To grant a `viewer` role to this account:
+
+```
+gcloud projects add-iam-policy-binding <project>\
+    --member=serviceAccount:<account>@<project>.iam.gserviceaccount.com\
+    --role=roles/viewer
+```
+
 To download credentials for this account use the command:
 ```
 gcloud iam service-accounts keys create <file> --iam-account <iam email address>
