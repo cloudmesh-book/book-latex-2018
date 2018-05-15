@@ -1,5 +1,6 @@
 ## Detect display automatically
 
+|      |
 | ---: |
 | [Edit](https://github.com/cloudmesh/book/blob/master/cloud-clusters/chapters/raspberry/config-display.md) |
 
