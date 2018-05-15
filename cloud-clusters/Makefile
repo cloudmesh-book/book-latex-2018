@@ -6,7 +6,7 @@ INDEX=contents.md\
 			references.md
 
 epub:
-	pandoc -f markdown+smart --toc --number-sections --epub-embed-font='fonts/*.ttf' --bibliography refernces.bib  --csl=ieee-with-url.csl -o book.epub metadata.txt $(INDEX)
+	pandoc -f markdown+smart -f markdown+emoji --toc --number-sections --epub-embed-font='fonts/*.ttf' --bibliography refernces.bib  --csl=ieee-with-url.csl -o book.epub metadata.txt $(INDEX)
 
 
 html:
