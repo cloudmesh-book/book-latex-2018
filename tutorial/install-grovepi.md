@@ -3,9 +3,11 @@
 enable vnc
 enable ssh
 
+
+
 # Install GrovePi
 
-Do not install the Grovepi shield yet
+**WARNING:** Do not install the Grovepi shield yet
 
 	sudo apt-get update
 	sudo apt-get install emacs -y
@@ -16,13 +18,13 @@ Do not install the Grovepi shield yet
 	sudo ./install.sh
 	sudo reboot
 
-Now we install grovepi
+After the reboot we install the following
 
 	sudo pip install grovepi
 	sudo shutdown -h now
 	
 	
-put the grove shield on and power on
+**ONlY NOW put the grove shield on and power on**
 
 check 
 
@@ -51,6 +53,35 @@ You will see output such as
 	('x =', 496, ' y =', 513, ' Rx =', 10.625, ' Ry =', 9.941520467836257, ' click =', 0)
 	('x =', 497, ' y =', 513, ' Rx =', 10.583501006036217, ' Ry =', 9.941520467836257, ' click =', 0)
 
+# tkinter
+
+You can install tkinter as follows
+
+	sudo apt-get install python-tk
+	sudo apt autoremove
+
+# install cloudmesh.pi
+
+	sudo apt-get install python-dev python-setuptools
+	sudo apt-get install libjpeg-dev -y
+	pip install Pillow
+	mkdir ~/github
+	cd ~/github
+	git clone git@github.com:cloudmesh/cloudmesh.pi.git
+	git checkout dev
+	pip install -e .
+
+The last command allows us to modify the code and have it directly working. This will take quite a while as it installs numpy also.
+
+# motor
+
+<https://cdn-learn.adafruit.com/downloads/pdf/adafruit-16-channel-servo-driver-with-raspberry-pi.pdf>
+
+	cd ~/github
+	git clone https://github.com/adafruit/Adafruit_Python_PCA9685.git
+	cd Adafruit_Python_PCA9685
+	sudo python setup.py install
+	sudo python3 setup.py install
 
 # Making the board LED blink
 

@@ -1,0 +1,13 @@
+---
+title:
+- type: main
+  text: Cloud Clusters
+creator:
+- role: author
+  text: Gregor von Laszewski
+description: Practical creation of cloud clusters
+rights: Commercial
+language: en-US
+stylesheet: epub.css
+cover-image: cover.jpg
+...
