@@ -6,7 +6,7 @@ creator:
 - role: author
   text: Gregor von Laszewski
 description: Practical creation of cloud clusters
-rights: Commercial
+rights: (c) Gregor von Laszewski, 2018
 language: en-US
 stylesheet: epub.css
 cover-image: cover.jpg

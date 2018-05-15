@@ -1,5 +1,9 @@
+INDEX=contents.md\
+      chapters/raspberry/README.md\
+      chapters/raspberry/motherboard-led.md
+
 epub:
-	pandoc -f markdown+smart --toc --epub-embed-font='fonts/*.ttf' --bibliography refernces.bib  --csl=ieee.csl -o book.epub metadata.txt contents.md
+	pandoc -f markdown+smart --toc --epub-embed-font='fonts/*.ttf' --bibliography refernces.bib  --csl=ieee.csl -o book.epub metadata.txt $(INDEX)
 
 
 html:
