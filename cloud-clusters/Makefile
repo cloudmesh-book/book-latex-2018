@@ -1,4 +1,5 @@
-INDEX=contents.md\
+INDEX=preface.md\
+      contents.md\
       chapters/linux/linux.md\
       chapters/raspberry/README.md\
       chapters/raspberry/motherboard-led.md\
