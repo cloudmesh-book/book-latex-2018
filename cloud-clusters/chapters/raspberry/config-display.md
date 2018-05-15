@@ -1,4 +1,7 @@
 ## Detect display automatically
+
+[Edit](https://github.com/cloudmesh/book/blob/master/cloud-clusters/chapters/raspberry/config-display.md)
+
 [This file](https://raw.githubusercontent.com/cloudmesh/cloudmesh.pi/master/displaydetect.py) can automatically
 detect and set the display for the pi. Following these steps to enable this feature.
 1. Install the display detect script. Run this as root:
