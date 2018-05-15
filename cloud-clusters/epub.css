@@ -2,7 +2,7 @@
   font-family: OpenSans;
   font-style: normal;
   font-weight: normal;
-  src:url("OpenSans-Regular.ttf");
+  src:url("EPUB/fonts/OpenSans-Regular.ttf");
 }
 
 @font-face {
@@ -43,9 +43,9 @@
 body {
   margin: 1%;
   text-align: justify;
-  font-size: small;
+  font-size: x-small;
   font-family: OpenSans;
-  line-height: 1.75;
+  line-height: 1.0;
 }
 code { font-family: monospace; }
 h1 { text-align: left; color: #333; }
