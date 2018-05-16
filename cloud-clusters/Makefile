@@ -14,6 +14,7 @@ INDEX=\
  ./chapters/raspberry/config-display.md\
  ./chapters/raspberry/motherboard-led.md\
  ./chapters/run-at-boot.md\
+ ./chapters/pi-now.md
  ./chapters/pi-docker.md\
  ./chapters/pi-dockerswarm.md\
  ./chapters/references.md\
