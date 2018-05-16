@@ -1,10 +1,16 @@
-# Install Raspbian on an SD card  [:cloud:](https://github.com/cloudmesh/book/blob/master/cloud-clusters/sd-card.md)
+## Install Raspbian on an SD card  [:cloud:](https://github.com/cloudmesh/book/blob/master/cloud-clusters/sd-card.md)
 
-For many projects we need to install an Operating system on an SD card. We have chose the OS **Raspbian** as it is widely supported. Other OS have recently been added to the available OSes for the PI, but we will at thsi time not consider them here. 
+For many projects we need to install an Operating system on an SD
+card. We have chose the OS **Raspbian** as it is widely
+supported. Other OS have recently been added to the available OSes for
+the PI, but we will at thsi time not consider them here.
 
-To install the OS on an SD Card you will need another computer. We describe next the process if you have either a MAC or an Linux ubuntu machine. If you have other OSes and like to contribute, please add your suggestions.
+To install the OS on an SD Card you will need another computer. We
+describe next the process if you have either a MAC or an Linux ubuntu
+machine. If you have other OSes and like to contribute, please add
+your suggestions.
 
-## OSX
+### OSX
 
 First, we assume you have Etcher installed on your OSX machine
 
@@ -12,7 +18,8 @@ First, we assume you have Etcher installed on your OSX machine
   <https://etcher.io/>
 
 
-Next, you need to dowload the image and place it in a directory. We recommend to keep it in the `~/Download` directory.
+Next, you need to download the image and place it in a directory. We
+recommend to keep it in the `~/Download` directory.
 
 1. Download the image from <https://downloads.raspberrypi.org/raspbian_latest>
 
@@ -23,7 +30,7 @@ Once the image is downloaded you copy it with etcher onto the SD-card.
 3. Attach the card reader to the computer
 
 4. Open Etcher and select the downloaded `.img` or `.zip`
-   file which you will likeley find in the `~/Download` folder if you
+   file which you will likely find in the `~/Download` folder if you
    followed our previous steps
 
 5. Select the SD card to write the image to.
@@ -31,7 +38,7 @@ Once the image is downloaded you copy it with etcher onto the SD-card.
 6. Review selections and click *Flash!* to begin writing data to the SD
   card.
 
-## Ubuntu
+### Ubuntu
 
 * In the file explorer, right click on the sd card and format the sd card
 * Run
@@ -62,7 +69,7 @@ Once the image is downloaded you copy it with etcher onto the SD-card.
   Make sure `if=` contains the path to image and `of=` contains the name 
   of the sd card otherwise you may ruin your hard disk
 
-### Checking that the image was written properly
+#### Checking that the image was written properly
 
 * Create an image again from the sd card
 * Run the following command:
@@ -80,24 +87,29 @@ Once the image is downloaded you copy it with etcher onto the SD-card.
   
 * Diff should say that the two files are same
 
-## Excercise
+### Excercise
 
 E.SD-Card.1
 
-> Improve the Unbuntu SD-card documentation
+> Improve the Ubuntu SD-card documentation
 
 E.SD-Card.2
 
-> coudl a script be written that does the entire process via a python
+> Could a script be written that does the entire process via a python
 > or shell command in Ubuntu.
 
 E.SD-Card.2
 
-> coudl a script be written that does the entire process via a python
+> Could a script be written that does the entire process via a python
 > or shell command in OSX?
 
 E.SD-Card.3
 
-> coudl a script be written that does the entire process via a python
+> could a script be written that does the entire process via a python
 > or shell command in gitbash?
+
+E.SD-Card.4
+
+> In general the ubuntu documentation is complex, how can it be
+> simplified?
 

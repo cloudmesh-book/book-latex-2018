@@ -8,6 +8,6 @@ creator:
 description: Practical creation of cloud clusters
 rights: (c) Gregor von Laszewski, 2018
 language: en-US
-stylesheet: epub.css
-cover-image: cover.jpg
+stylesheet: template/epub.css
+cover-image: template/cover.jpg
 ...
