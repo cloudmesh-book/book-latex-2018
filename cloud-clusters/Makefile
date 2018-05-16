@@ -1,5 +1,6 @@
 
 INDEX=\
+ ./chapters/ssh-keygen.md\
  ./chapters/preface.md\
  ./chapters/contributors.md\
  ./README.md\

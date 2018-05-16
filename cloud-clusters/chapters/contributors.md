@@ -5,6 +5,9 @@ your name missing, please let us know or better create a pull request,
 and we add you.
 
 * Detect screen: Fugang Wang
-* SD Card, Ubuntu: Arnav
+
+We like to thank the following contributors:
+
+* Arnav, Min Chen, Yue Guo
 
 

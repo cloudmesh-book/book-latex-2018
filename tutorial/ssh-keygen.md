@@ -1,22 +1,22 @@
 # Adding a Public keys to a Raspbery Pi.
 
-hid-sp18-502
-
-hid-sp18-421
-
-status: 10%
+TODO: This documentation has been done wrongly as we asked to place
+the key on the card without using a PI. E.g. by manipulating the file
+system  via an external PC.
 
 ## SD Card method
 
-In this method we copy the public key on the SD card
+TODO: THIs statement is wrong and not conducted: In this method we
+copy the public key on the SD card
 
-\TODO{hid-sp18-421, hid-sp18-502, Is it possible to do this while
-plugging in the SD card and add the key there. The provided solution
-is not scalable.}
+\TODO{Is it possible to do this while plugging in the SD card and add
+the key there. The provided solution is not scalable.}
 
 ## Network Connected Method
 
 In this method we assume the PI is connected to the network
+
+TODO: THIS IS NOT WHAT WE ASK YOU DO
 
 
 ## Copying the public key by hand
