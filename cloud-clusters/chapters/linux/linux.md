@@ -1,10 +1,18 @@
-Linux
-=====
+# Linux [:cloud:](https://github.com/cloudmesh/book/blob/master/cloud-clusters/chapters/linux/linux.md)
 
-[:pencil2:](https://github.com/cloudmesh/book/blob/master/cloud-clusters/chapters/linux/linux.md)
+Now that you have Linux or a Linux like environment (such as `gitbash`)
+on your computer it is time to learn a number of useful commands to
+interact with the system.
 
-History
--------
+In order for this task to enhance your knowledge you are encouraged to
+find additional material and are required to complete the table of
+useful Linux commands. You will do this as team and create pull
+requests improving and completing this documentation. The TAs will
+provide a mapping between students and commands to be documented. If
+you find additional commands that aught to be listed here, please add.
+
+
+## History
 
 LINUX is a reimplementation by the community of UNIX which was developed
 in 1969 by Ken Thompson and Dennis Ritchie of Bell Laboratories and
@@ -16,8 +24,7 @@ initially targeted for PC's. This made it possible to run it on Laptops
 and was later on further developed by making it a full Operating system
 replacement for UNIX.
 
-Shell
------
+## Shell
 
 One of the most important features for us will be to access the computer
 with the help of a *shell*. The shell is typically run in what is called
@@ -30,12 +37,14 @@ came up with a google query. This is not an endorsement for the material
 we point to, but could be a worth while read for someone that has no
 experience in Shell programming:
 
-\URL{http://linuxcommand.org/lc3_learning_the_shell.php}
+<http://linuxcommand.org/lc3_learning_the_shell.php>
+
 Certainly you are welcome to use other resources that may suite you
 best. We will however summarize in table form a number of useful
 commands that you may als find even as a RefCard.
 
-\URL{http://www.cheat-sheets.org/\#Linux}
+<http://www.cheat-sheets.org/#Linux>
+
 We provide in
 Table T:shell-commands\]](#T:shell-commands){reference-type="ref"
 reference="T:shell-commands"} a number of useful commands that you want
@@ -140,8 +149,7 @@ command.
 | scp                               | (assignment)                      |
 | sftp                              | (assignment)                      |
 
-Multi-command execution
------------------------
+## Multi-command execution
 
 One of the important features is that one can execute multiple commands
 in the shell.
@@ -158,8 +166,7 @@ To execute command 1 in the background use
 
     command1 &
 
-Keyboard Shortcuts
-------------------
+## Keyboard Shortcuts
 
 These shortcuts will come in handy. Note that many overlap with emacs
 short cuts.
@@ -178,8 +185,7 @@ short cuts.
 |  Ctrl + y   | Paste from the special clipboard |
 |  Ctrl + d   | Logout of current session, similar to exit |
 
-bashrc and bash_profile
-------------------------
+## bashrc and bash_profile
 
 Usage of a particular command and all the attributes associated with it,
 use 'man' command. Avoid using `rm -r` command to delete files
@@ -197,8 +203,7 @@ More Information
 
 <https://cloudmesh.github.io/classes/lesson/linux/refcards.html>
 
-Makefile {#s:makefile}
---------
+## Makefile
 
 Makefiles allow developers to coordinate the execution of code
 compilations. This not only includes C or C++ code, but any translation
@@ -263,14 +268,13 @@ For more information we recommend you to find out about it on the
 internet. A convenient refrence card sis available
 at <http://www.cs.jhu.edu/~joanne/unixRC.pdf>.
 
-#### Makefiles on Windows
+### Makefiles on Windows
 
 Makefiles can easily be accessed also on windows while installing
 gitbash. Please reer to the internet or search in this handbook for more
 information about gitbash.
 
-Exercises
----------
+## Exercises
 
 E.Linux.1
 

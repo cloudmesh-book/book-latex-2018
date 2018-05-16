@@ -1,14 +1,15 @@
-# Preface
+# Preface [:cloud:](https://github.com/cloudmesh/book/blob/master/cloud-clusters/preface.md)
 
 This collection of documents will help in creating cloud based clusters
 
+
 ## Notation
 
-:pencil2:
+:cloud:
 
-> If you click on the pencil, you can go directly to the document in github that contains the next content. This is copnvenient to fix errors or make additions to the content.
+> If you click on the :cloud: in a heading, you can go directly to the document in github that contains the next content. This is copnvenient to fix errors or make additions to the content.
 
-bash
+$
 
 > Content in bash is marked with verbatim text and a dollar sign
 >
@@ -18,4 +19,15 @@ bash
 
 [@las14cloudmeshmultiple]
 
-> Refernces are indicated with a number and are included in the refernce chapter.
+> Refernces are indicated with a number and are included in the
+> refernce chapter [@las14cloudmeshmultiple]
+
+---
+
+:bulb: *Notes are indicated with a bulb and are wriiten in itallic and suroundd by bars* 
+
+---
+
+:clapper:
+
+> Movies are indicated with a :clapper:

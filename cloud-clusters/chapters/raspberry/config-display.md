@@ -1,8 +1,6 @@
-## Detect display automatically for Field Work
+## Automatic Display Detection [:cloud:](https://github.com/cloudmesh/book/blob/master/cloud-clusters/chapters/raspberry/config-display.md)
 
-[:pencil2:](https://github.com/cloudmesh/book/blob/master/cloud-clusters/chapters/raspberry/config-display.md)
-
-# Purpose 
+### Purpose 
 
 In case you like to use the Raspberry Pi in your office, at home, or
 in the field, you may find yourself in a situation where different
@@ -15,7 +13,7 @@ detect the resolution based on the monitor attached. Once detected the
 config file will be rewritten if necessary and the Pi will be rebooted
 with the correct resolution in the configuration file.
 
-# How it works
+### How it works
 
 To achieve this we have developed the file 
 
@@ -70,13 +68,13 @@ integrate it in the Rasbian OS please follow these steps
 
 Now you can go in the filed and use the monitor of your choice
 
-## Adding new monitors
+### Adding new monitors
 
 1. Look at the monitor name
 2. look at the prefered resolution
 3. create an new elif in the switch
 
-## Exercises
+### Exercises
 
 E.Display.1:
 
