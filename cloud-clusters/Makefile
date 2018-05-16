@@ -1,8 +1,12 @@
 
 INDEX=\
  ./chapters/modify-pi-image.md\
+ ./chapters/ssh/ssh.md\
+ ./chapters/ssh/ssh-config.md\
+ ./chapters/ssh/ssh-port-forwarding.md\
+ ./chapters/ssh/ssh-keygen.md\
+ ./chapters/pi-passwordreset.md\
  ./chapters/pxe.md\
- ./chapters/ssh-keygen.md\
  ./chapters/preface.md\
  ./chapters/contributors.md\
  ./README.md\

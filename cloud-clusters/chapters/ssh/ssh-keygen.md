@@ -1,4 +1,4 @@
-## Using ssh-keys
+## Using ssh-keys :o:
 
 In many services we need to use SSH keys to securely communicate with
 them. To generate one use the command:
