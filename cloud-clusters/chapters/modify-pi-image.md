@@ -30,7 +30,7 @@ on a Mac shared drive.
 
 ---
 
-First create a directory and download the latest build of Rasbian Lite. The last step is to download a script that is located at 
+First create a directory and download the [latest build of Rasbian Lite](https://downloads.raspberrypi.org/raspbian_lite_latest). The last step is to download a script that is located at 
 
 * <https://github.com/cloudmesh-community/hid-sp18-419/blob/master/project-code/pi-config/make-pi-images.py>
 
@@ -52,7 +52,7 @@ $ sudo python make-pi-images.py 2018-03-13-raspbian-stretch-lite.img
 ```
 
 NOTE: the most current build of Raspbian Lite at the time of writing
-is in the command below.  You will need to replace it with the name of
+is in the previous command.  You will need to replace it with the name of
 the current file that came out of the zip archive.
 
 The customized image will be in a subdirectory called
