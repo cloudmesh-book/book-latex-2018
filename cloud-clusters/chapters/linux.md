@@ -24,7 +24,7 @@ initially targeted for PC's. This made it possible to run it on Laptops
 and was later on further developed by making it a full Operating system
 replacement for UNIX.
 
-## Shell
+## Shell :o:
 
 One of the most important features for us will be to access the computer
 with the help of a *shell*. The shell is typically run in what is called

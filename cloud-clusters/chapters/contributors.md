@@ -6,8 +6,9 @@ and we add you.
 
 * Detect screen: Fugang Wang
 
-We like to thank the following contributors:
+We like to thank the following contributors in alphabetical order by
+lastname, firstname
 
-* Arnav, Min Chen, Yue Guo
+* Arnav; Chen, Min; Guo, Yue  ; Sobolik; Bertolt
 
 

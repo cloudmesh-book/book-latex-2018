@@ -1,5 +1,7 @@
 
 INDEX=\
+ ./chapters/modify-pi-image.md\
+ ./chapters/pxe.md\
  ./chapters/ssh-keygen.md\
  ./chapters/preface.md\
  ./chapters/contributors.md\
