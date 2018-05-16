@@ -52,7 +52,7 @@ $ sudo python make-pi-images.py 2018-03-13-raspbian-stretch-lite.img
 ```
 
 NOTE: the most current build of Raspbian Lite at the time of writing
-is in the command below.  You will need to replace it with the name of
+is in the previous command.  You will need to replace it with the name of
 the current file that came out of the zip archive.
 
 The customized image will be in a subdirectory called
