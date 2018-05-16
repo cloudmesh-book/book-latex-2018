@@ -19,3 +19,10 @@ TODO
 ## Other Parallel Execution
 
 TODO
+
+
+* <https://www.rittmanmead.com/blog/2014/12/linux-cluster-sysadmin-parallel-command-execution-with-pdsh/>
+* <https://www.linux.com/news/parallel-ssh-execution-and-single-shell-control-them-all>
+* <https://www.tecmint.com/using-dsh-distributed-shell-to-run-linux-commands-across-multiple-machines/>
+* <https://github.com/vallard/psh>
+* <https://github.com/karrick/psh/blob/master/psh>
