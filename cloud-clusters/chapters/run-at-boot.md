@@ -45,7 +45,7 @@ To use crontab follow these steps
    of the file
 
    ```
-   @reeboot [command to run program]
+   @reboot <command>
    ```
 
 
