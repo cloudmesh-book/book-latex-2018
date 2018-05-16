@@ -1,5 +1,5 @@
 
-## Spark on a Raspberry PI cluster
+## Spark on a Raspberry PI cluster :o:
 
 TODO:
 
