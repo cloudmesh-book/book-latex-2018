@@ -15,6 +15,8 @@ INDEX=\
  ./chapters/raspberry/motherboard-led.md\
  ./chapters/run-at-boot.md\
  ./chapters/pi-now.md\
+ ./chapters/pi-assemble-cluster.md\
+ ./chapters/pi-configure-cluster.md\
  ./chapters/pi-docker.md\
  ./chapters/pi-dockerswarm.md\
  ./chapters/references.md\
