@@ -30,7 +30,11 @@ on a Mac shared drive.
 
 ---
 
-First create a directory and download the latest build of Rasbian Lite:
+First create a directory and download the latest build of Rasbian Lite. The last step is to download a script that is located at 
+
+* <https://github.com/cloudmesh-community/hid-sp18-419/blob/master/project-code/pi-config/make-pi-images.py>
+
+Please look at the details of this script as it uses some fairly advanced features.
 
 ```
 $ mkdir os-images
@@ -41,15 +45,11 @@ $ cd os-images
 $ wget https://github.com/cloudmesh-community/hid-sp18-419/blob/master/project-code/pi-config/make-pi-images.py) 
 ```
 
-Next run this command. The script is at
-*
-<https://github.com/cloudmesh-community/hid-sp18-419/blob/master/project-code/pi-config/make-pi-images.py>
-
+To run the make-pi-images.py script execute the following command
 
 ```
 $ sudo python make-pi-images.py 2018-03-13-raspbian-stretch-lite.img
 ```
-
 
 NOTE: the most current build of Raspbian Lite at the time of writing
 is in the command below.  You will need to replace it with the name of
@@ -60,18 +60,33 @@ The customized image will be in a subdirectory called
 to remove the `mountpoint` directory and move the
 `make-pi-images.pyoutput`.
 
-### Gregor: pi-cluster-config.yaml
+#### TODO: Automated Cluster SD-Card Script :o:
 
-    data:
-       images:
-           dexter: https://sourceforge.net/projects/dexterindustriesraspbianflavor/files/latest/download
-           rasbian: https://downloads.raspberrypi.org/raspbian_lite_latest
-       hostname: red
-           start: 0001
-           end:   0005
-       ssh: enable
-       sshkey: ~/.ssh/id_rsa.pub
-       passwd:  readline 
+---
+
+:warning: This is just an idea and has not been implemented
+
+---
+
+First we are creating a configuration file that describes our cluster. It is written in yaml and loos as follows:
+
+```yaml
+data:
+   images:
+       dexter: https://sourceforge.net/projects/dexterindustriesraspbianflavor/files/latest/download
+       rasbian: https://downloads.raspberrypi.org/raspbian_lite_latest
+   hostname: red
+       start: 0001
+       end:   0005
+       lead:  0000
+       range: 0002-0004 
+   ssh: enable
+   sshkey: ~/.ssh/id_rsa.pub
+   passwd:  readline 
+```
+       
+The meaning of the attributes is rather simple. Under images we specify a number of images that we could chose and are downloaded onto the computer that burns the SD-cards if they are not present. The cluster base hostname is defined by the attribute `hostname` and the first workernode to be specified has the postfix defined by start. We define the last number also in the yaml file, while we will look between the start and the end number. The number of leading blanks is defined by the start and end numbers. A special node called `lead` is specified that is the lead noded and all worker nodes are accesible by this lead node. Furthermore. the lead node will be used to monitor the cluster. If the start number includes the lead ode the lead node will be configured. The attribute range specifies which SD-cards are configured. Note this could be a subset of the entire cluster defined by start and end.
+       
        
 ### Gregor: Manual page cmd5 may be easier than click.
 
