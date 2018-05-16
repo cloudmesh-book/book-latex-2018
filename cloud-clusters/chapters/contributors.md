@@ -9,6 +9,10 @@ and we add you.
 We like to thank the following contributors in alphabetical order by
 lastname, firstname
 
-* Arnav; Chen, Min; Guo, Yue  ; Sobolik; Bertolt
+* Arnav;
+  Chen, Min;
+  Guo, Yue;
+  Kugan, Uma;
+  Sobolik; Bertolt
 
 

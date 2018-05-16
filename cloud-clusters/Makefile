@@ -1,11 +1,8 @@
 
 INDEX=\
  ./chapters/modify-pi-image.md\
- ./chapters/ssh/ssh.md\
- ./chapters/ssh/ssh-config.md\
- ./chapters/ssh/ssh-port-forwarding.md\
- ./chapters/ssh/ssh-keygen.md\
  ./chapters/pi-passwordreset.md\
+ ./chapters/ssh/ssh.md\
  ./chapters/pxe.md\
  ./chapters/preface.md\
  ./chapters/contributors.md\
@@ -17,6 +14,7 @@ INDEX=\
  ./chapters/raspberry/config-display.md\
  ./chapters/raspberry/motherboard-led.md\
  ./chapters/run-at-boot.md\
+ ./chapters/pi-docker.md\
  ./chapters/references.md\
 
 MARKDOWN-OPTIONS=-f markdown+smart -f markdown+emoji
