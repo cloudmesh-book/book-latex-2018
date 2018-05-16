@@ -1,40 +1,66 @@
 
-## Tutorial to setup Spark on a Raspberry PI cluster
+## Spark on a Raspberry PI cluster
 
-### Install Spark with Hadoop preinstalled
+TODO:
 
-This tutorial provides step-by-step guide to install Spark cluster on a pre-installed hadoop on a cluster of raspberry pi.
+- [ ] The tutorial contains some issues
+- [ ] It should leverage the NoW setup
+- [ ] A per node setup is used instead of a scripted setup
+- [x] The original text contained too many sections which has been changed
+- [ ] Some text in teh later part is unclear
 
-### Hadoop Setup
+We provide step-by-step instructions on insalling a Spark cluster on
+a pre-installed hadoop on a cluster of raspberry pi. To start we
+assume you have Haddop installed. THis is achieved by following the
+instructions provided 
+in
 
-Follow the turorial in [[handbook](http://cyberaide.org/papers/vonLaszewski-bigdata.pdf)] to install Haddop on Pi cluster provided in the handbook and verify that hadoop is properly installed, once done proceed with following steps. 	
-```bash 
-cd ~
+* <http://cyberaide.org/papers/vonLaszewski-bigdata.pdf>
+
+to
+install Haddop on Pi cluster. Verify that the cluster is properly
+installed. After that proceed by going to the home directory
+
+```bash
+    $ cd ~
 ```
 
-### Download the most recent version from below website
+
+### Download 
+
+Download the most recent version from the Apache website (we use here
+version 2.3.0).
+
+---
+
+:warning: *if a newer version is available, your task will be to use the
+newer version and create a new updated set of instructions. At this
+time the newest version is 2.3.0. Please double check.*
+
+---
 
 * [[Apache Spark](https://www.apache.org/dyn/closer.lua/spark/spark-2.3.0/spark-2.3.0-bin-hadoop2.7.tgz)] 
 
 Run the command
+
 ```bash 
 wget http://apache.claz.org/spark/spark-2.3.0/spark-2.3.0-bin-hadoop2.7.tgz 
 ```
 
 ### Installation
 
-#### Create the folder for storing spark install files
+Create the folder for storing spark install files
 
 ```bash 
 sudo mkdir -p /opt/spark-2.3.0
 sudo chown -R hduser:hadoop /opt/spark-2.3.0 
 ```
 
-#### Unzip the tar fle into desitnaiton folder
+Unzip the tar fle into desitnaiton folder
 
 ```bash tar -xzf spark-2.3.0-bin-hadoop2.7.tgz -C /opt/spark-2.3.0 --strip-components=1 ```
 
-#### Update PATH
+Update the `PATH` variable
 
 ```bash 
 echo "export SPARK_HOME=/opt/spark-2.3.0" >> ~\.bashrc
@@ -43,19 +69,20 @@ echo "export PATH=$PATH:$SPARK_HOME/sbin" >> ~\.bashrc
 source ~/.bashrc 
 ```
 
-#### Copy the template from spark-env.sh.template to spark-env.sh
+Copy the template from `spark-env.sh.template` to `spark-env.sh`
 
 ```bash 
 cp $SPARK_HOME/spark-env.sh.template $SPARK_HOME/spark-env.sh 
 ```
 
-### Edit spark-env.sh file to change configurations
+Edit spark-env.sh file to change configurations
+
 
 ```bash 
 vi $SPARK_HOME/spark-env.sh 
 ```
 
-#### Edit slaves file on master node
+Edit slaves file on master node
 
 ```bash 
 cd $SPARK_HOME/conf
@@ -70,15 +97,30 @@ SPARK_MASTER_HOST = 169.254.24.132
 SPARK_WORKER_MEMORY = 512m
 ```
 
+---
+
+:warning: *it is possible to write a script doing this*
+
+---
+
+
 Add below hostnames to the file
 
 * pimaster (hostname of master node)
-* pislave (hostname of slave node)
-* pislave02 (hostname of other slave ndoes)
+* pislave01 (hostname of worker slave 01)
+* pislave02 (hostname of worker slave 02)
+
+---
+
+:warning: *it is possible to write a script doing this*
+
+---
 
 ### Test Setup	
 
-Run spark-shell from command line and if you see something like this 
+Run `spark-shell` from the command line. You will have succeded if you
+see something like this
+
 ```bash 
 Welcome to
       ____              __
@@ -90,24 +132,36 @@ Welcome to
 Using Scala version 2.11.8 (Java HotSpot(TM) Client VM, Java 1.8.0_65)
 ```
 
-### Repeat above steps on all worker/slave nodes
-### Alternative to running above steps for each worker node
-Run the below command on each worked ndoe to create spark directory 
+Repeat above steps on all worker/slave nodes
+
+:warning: it is unclear which steps these are
+
+Alternative to running above steps for each worker node, you can run
+the the following command on each worked node to create spark directory
+
 ```bash 
 sudo mkdir -p /opt/spark-2.3.0`
 sudo chown -R hduser:hadoop /opt/spark-2.3.0
 ```
 
-Run below command on master node for each slave node
+Run next you can copy the configuration as follows:
+
 ``` bash
 rsync -avxP /opt/spark-2.3.0 hduser@pislave:/opt
 ```
-Run the above command only after creating the /opt/spark-2.3.0 on all worker nodes
+
+Run the previous command only after creating the /opt/spark-2.3.0 on
+all worker nodes
+
 ```bash 
 sudo mkdir -p /opt/spark-2.3.0
 sudo chown -R hduser:hadoop /opt/spark-2.3.0
 ```
-#### Set home and PATH on all worked nodes
+
+:warning: this seems duplicated
+
+Next you need to set the spark home and add it to your path on all
+worker nodes
 
 ```bash 
 echo "export SPARK_HOME=/opt/spark-2.3.0"
@@ -115,18 +169,20 @@ echo "export PATH=$PATH:$SPARK_HOME/bin"
 source ~/.bashrc
 ```
 
-### Start the spark server and workers
+Finally you need to start the spark server and workers by running the
+master command on the master and the salve command on the slaves
 
-#### Run the below commands on master node to start master and worker nodes
+Run this on the master:
 
 ```bash 
 $SPARK_HOME/sbin/start_master.sh 
 ```
+Run this on the slave:
 
 ```bash 
 $SPARK_HOME/sbin/start_slaves.sh 
 ```
 
-### Login to below URL to see if spark master and all workers are running 
+To test it out use the following URL:
 
 ```http://master_host_name:8080```
