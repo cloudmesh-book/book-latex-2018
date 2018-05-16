@@ -19,6 +19,7 @@ INDEX=\
  ./chapters/pi-configure-cluster.md\
  ./chapters/pi-docker.md\
  ./chapters/pi-dockerswarm.md\
+ ./chapters/pi-spark.md\
  ./chapters/references.md\
 
 MARKDOWN-OPTIONS=-f markdown+smart -f markdown+emoji
