@@ -90,7 +90,7 @@ cp slaves.template slaves
 vi slaves
 ``` 
 
-Update below configurations
+Update the configurations
 
 ```
 SPARK_MASTER_HOST = 169.254.24.132
@@ -104,7 +104,7 @@ SPARK_WORKER_MEMORY = 512m
 ---
 
 
-Add below hostnames to the file
+Add the hostnames to the file
 
 * pimaster (hostname of master node)
 * pislave01 (hostname of worker slave 01)
