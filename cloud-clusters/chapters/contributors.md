@@ -11,6 +11,7 @@ lastname, firstname
 
 * Arnav;
   Chen, Min;
+  Goutham, Arra;
   Guo, Yue;
   Kugan, Uma;
   Sobolik; Bertolt

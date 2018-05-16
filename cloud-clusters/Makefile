@@ -15,6 +15,7 @@ INDEX=\
  ./chapters/raspberry/motherboard-led.md\
  ./chapters/run-at-boot.md\
  ./chapters/pi-docker.md\
+ ./chapters/pi-dockerswarm.md\
  ./chapters/references.md\
 
 MARKDOWN-OPTIONS=-f markdown+smart -f markdown+emoji

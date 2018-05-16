@@ -1,12 +1,25 @@
 # Docker on a Pi
 
 Docker is a tool that allows you to deploy applications inside of
-software containers. It is a method of packaging software, to include
-not only your code, but also other components such as a full file
-system, system tools, services, and libraries. This can be useful for
-the Raspberry Pi because it allows users to run applications without
-lot of steps, as long as the application is packaged inside of a
-Docker image. You simply install Docker and run the container.
+software containers.  A container allows a developer to package the
+application along with dependencies associated with it and put all in
+a box which is an isolated environment so that the underlying host
+operating system is completely abstracted from the application running
+inside the box.
+
+It is a method of packaging software, to include not only your code,
+but also other components such as a full file system, system tools,
+services, and libraries. This can be useful for the Raspberry Pi
+because it allows users to run applications without lot of steps, as
+long as the application is packaged inside of a Docker image. You
+simply install Docker and run the container.
+
+Key benefits of Docker include
+
+* Portability
+* Density
+* Scalability
+* Security
 
 
 ## Installation 
