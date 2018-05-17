@@ -33,7 +33,7 @@ INDEX=\
 MARKDOWN-OPTIONS=-f markdown+smart -f markdown+emoji --indented-code-classes=bash,python,yaml
 CSL=--csl=template/ieee-with-url.csl
 FORMAT=--toc --number-sections
-FONTS=--epub-embed-font='fonts/**.ttf'
+FONTS=--epub-embed-font='fonts/*.ttf'
 BIB=--bibliography references.bib
 CSS=--css=template/epub.css
 

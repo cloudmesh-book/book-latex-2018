@@ -193,10 +193,10 @@ recursively. A good way to avoid accidental deletion is to include the
 following in your `.bash_profile` file:
 
 ```bash
-    alias e=open_emacs
-    alias rm='rm -i'
-    alias mv='mv -i' 
-    alias h='history'
+alias e=open_emacs
+alias rm='rm -i'
+alias mv='mv -i' 
+alias h='history'
 ```
 
 More Information

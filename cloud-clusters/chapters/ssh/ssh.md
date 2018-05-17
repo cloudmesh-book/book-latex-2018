@@ -29,7 +29,6 @@ Once you enter the passphrase and hit Enter, your public and private key will be
 stored in the `~/.ssh` folder. The following files will be created:
 
 * `id_rsa.pub`, which is your public key
-
 * `id_rsa`, which is your private key
 
 ---
@@ -57,13 +56,10 @@ adds the following default files if they do exist:
 
 * `~/.ssh/identity` - Contains the protocol version 1 RSA authentication
   identity of the user.
-
 * `~/.ssh/id_rsa` - Contains the protocol version 1 RSA authentication
   identity of the user.
-
 * `~/.ssh/id_dsa` - Contains the protocol version 2 DSA authentication
   identity of the user.
-
 * `~/.ssh/id_ecdsa` - Contains the protocol version 2 ECDSA
   authentication identity of the user.
 
@@ -93,37 +89,18 @@ password vault.
 
 `ssh-add` accepts the following command line options:
 
-* `-c`: Causes a confirmation to be requested from the user every time
-        the added identities are used for authentication. The
-        confirmation is requested using ssh-askpass.
-
-* `-D:` Deletes all identities from the agent.
-
-* `-d:` Deletes the given identities from the agent. The private key
-        files for the identities to be deleted should be listed on the
-        command line.
-
-* `-e` pkcs11: Remove key provided by pkcs11
-
-* `-L`: Lists public key parameters of all identities currently
-     represented by the agent.
-
-* `-l`: Lists fingerprints of all identities currently represented by
-     the agent.
-
-* `-s` pkcs11: Add key provided by pkcs11.
-
-* `-t` life: Sets the maximum time the agent will keep the given
-             key. After the timeout expires, the key will be
-             automatically removed from the agent. The default value
-             is in seconds, but can be suffixed for m for minutes, h
-             for hours, d for days, or w for weeks.
-
-* `-X`: Unlocks the agent. This asks for a password to unlock.
-
-* `-x`: Locks the agent. This asks for a password; the password is
-        required for unlocking the agent. When the agent is locked, it
-        cannot be used for authentication.
+| Option  | Description |
+| :-- | :------------- |
+| `-c`| Causes a confirmation to be requested from the user every time the added identities are used for authentication. The confirmation is requested using ssh-askpass. |
+| `-D` | Deletes all identities from the agent. |
+| `-d` | Deletes the given identities from the agent. The private key files for the identities to be deleted should be listed on the command line.|
+| `-e`  pkcs11 | Remove key provided by pkcs11 |
+| `-L` | Lists public key parameters of all identities currently represented by the agent. |
+| `-l` | Lists fingerprints of all identities currently represented by the agent. |
+| `-s` pkcs11 |  Add key provided by pkcs11. |
+| `-t` life | Sets the maximum time the agent will keep the given key. After the timeout expires, the key will be  automatically removed from the agent. The default value is in seconds, but can be suffixed for m for minutes, h for hours, d for days, or w for weeks. |
+| `-X` | Unlocks the agent. This asks for a password to unlock. |
+| `-x` | Locks the agent. This asks for a password; the password is required for unlocking the agent. When the agent is locked, it cannot be used for authentication. |
 
 ## ssh config :o:
 
@@ -139,9 +116,7 @@ ssh command gets the configuration data from the below three mentioned
 sources in the order they are stated:
   
 * command line options 
-
 * user-specific configuration file (`~/.ssh/config`)
-    
 * system-wide configuration file (`/etc/ssh/ssh_config`)
 
 Generating a key pair provides you with two long string of characters:
