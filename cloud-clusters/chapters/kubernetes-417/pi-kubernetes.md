@@ -1,4 +1,4 @@
-# Raspberry Pi Kubernetes Cluster :o:
+# Raspberry Pi Kubernetes Cluster (B) :o:
 
 This tutorial will guide the steps towards setting up a Kubernetes Pi cluster.
 The steps are:

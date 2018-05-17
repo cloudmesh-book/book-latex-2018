@@ -19,12 +19,11 @@ INDEX=\
  ./chapters/pi-configure-cluster.md\
  ./chapters/pi-docker.md\
  ./chapters/pi-dockerswarm.md\
- ./chapters/pi-spark.md\
-
-INDEX=\
  ./chapters/kubernetes-526/readme-kube.md\
  ./chapters/kubernetes-417/pi-kubernetes.md\
- ./chapters/references.md\
+ ./chapters/pi-spark.md\
+ ./chapters/references.md
+
 
 MARKDOWN-OPTIONS=-f markdown+smart -f markdown+emoji
 CSL=--csl=template/ieee-with-url.csl

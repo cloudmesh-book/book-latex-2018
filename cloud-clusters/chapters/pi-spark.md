@@ -1,5 +1,4 @@
-
-## Spark on a Raspberry PI cluster :o:
+# Raspberry PI Spark Cluster :o:
 
 TODO:
 
@@ -26,7 +25,7 @@ installed. After that proceed by going to the home directory
 ```
 
 
-### Download 
+## Download 
 
 Download the most recent version from the Apache website (we use here
 version 2.3.0).
@@ -47,7 +46,7 @@ Run the command
 wget http://apache.claz.org/spark/spark-2.3.0/spark-2.3.0-bin-hadoop2.7.tgz 
 ```
 
-### Installation
+## Installation
 
 Create the folder for storing spark install files
 
@@ -116,7 +115,7 @@ Add the hostnames to the file
 
 ---
 
-### Test Setup	
+## Test Setup	
 
 Run `spark-shell` from the command line. You will have succeded if you
 see something like this

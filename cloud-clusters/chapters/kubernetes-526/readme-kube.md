@@ -1,4 +1,4 @@
-# Raspberry Pi Kubernetes Cluster :o:
+# Raspberry Pi Kubernetes Cluster (A) :o:
 
 ## Hardware
 
