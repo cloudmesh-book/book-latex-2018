@@ -4,6 +4,7 @@ INDEX=\
  ./chapters/preface.md\
  ./chapters/contributors.md\
  ./README.md\
+ ./all.md
 
 
 MARKDOWN-OPTIONS=-f markdown+smart -f markdown+emoji --indented-code-classes=bash,python,yaml
@@ -13,8 +14,12 @@ FONTS=--epub-embed-font='fonts/*.ttf'
 BIB=--bibliography references.bib
 CSS=--css=template/epub.css
 
-epub:
+epub: 
 	pandoc $(MARKDOWN-OPTIONS)  $(FORMAT) $(FONTS) $(BIB)  $(CSL) $(CSS) -o book.epub metadata.txt $(INDEX)
+
+
+tech:
+	cat chapters/tech/*.md > all.md
 
 
 html:
