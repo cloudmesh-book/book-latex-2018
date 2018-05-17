@@ -3,8 +3,8 @@ title:
 - type: main
   text: Cloud Clusters
 creator:
-- role: author
-  text: Gregor von Laszewski
+- role: editor
+  text: Editor Gregor von Laszewski
 description: Practical creation of cloud clusters
 rights: (c) Gregor von Laszewski, 2018
 language: en-US

@@ -27,14 +27,15 @@ and call make in the source dir
     $ mkdir -p ~/githum/cloudmesh
     $ cd ~/githum/cloudmesh
     $ git clone https://github.com/cloudmesh/book.git
-    $ cd book
+    $ cd bookcloud-clusters
     $ make
 ```
-To look at the book, open the text with your favorite e-book reader
 
-### Bugs
+To look at the book, open the text with your favorite e-book
+reader. On OSX you can say
 
-- [ ] embedding the fonts does not yet work
-- [ ] embedding emojis as images does not work
+```bash
+    $ open book.epub
+```
 
 
