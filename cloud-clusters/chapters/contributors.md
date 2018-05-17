@@ -11,10 +11,12 @@ lastname, firstname
 
 * Arnav;
   Chen, Min;
+  Gianlupi, Juliano 
   Goutham, Arra;
   Guo, Yue;
   Kaul, Naveen
   Kugan, Uma;
   Sobolik; Bertolt
+  Whitson, Tim 
 
 
