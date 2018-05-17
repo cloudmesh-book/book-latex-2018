@@ -1,9 +1,6 @@
 
 INDEX=\
- ./chapters/modify-pi-image.md\
- ./chapters/pi-passwordreset.md\
- ./chapters/ssh/ssh.md\
- ./chapters/pxe.md\
+ ./chapters/todo.md\
  ./chapters/preface.md\
  ./chapters/contributors.md\
  ./README.md\
@@ -11,10 +8,14 @@ INDEX=\
  ./chapters/raspberry/README.md\
  ./chapters/sd-card.md\
  ./chapters/linux.md\
+ ./chapters/ssh/ssh.md\
  ./chapters/raspberry/config-display.md\
  ./chapters/raspberry/motherboard-led.md\
  ./chapters/run-at-boot.md\
  ./chapters/pi-now.md\
+ ./chapters/modify-pi-image.md\
+ ./chapters/pi-passwordreset.md\
+ ./chapters/pxe.md\
  ./chapters/pi-assemble-cluster.md\
  ./chapters/pi-configure-cluster.md\
  ./chapters/pi-docker.md\

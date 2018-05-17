@@ -22,12 +22,18 @@ $
 > Refernces are indicated with a number and are included in the
 > refernce chapter [@las14cloudmeshmultiple]
 
+
+:clapper:
+
+> Movies are indicated with a :clapper:
+
+:o:
+
+> Chapters marked with an :o: are not yet complete or have some issue
+> that we know about. THese chapters need to be fixed.
+
 ---
 
 :bulb: *Notes are indicated with a bulb and are wriiten in itallic and suroundd by bars* 
 
 ---
-
-:clapper:
-
-> Movies are indicated with a :clapper:
