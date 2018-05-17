@@ -4,14 +4,16 @@ INDEX=\
  ./chapters/preface.md\
  ./chapters/contributors.md\
  ./README.md\
- ./all.md
+ ./all.md\
+ ./incomming.md
+
 
 
 MARKDOWN-OPTIONS=-f markdown+smart -f markdown+emoji --indented-code-classes=bash,python,yaml
 CSL=--csl=template/ieee-with-url.csl
 FORMAT=--toc --number-sections
 FONTS=--epub-embed-font='fonts/*.ttf'
-BIB=--bibliography references.bib
+BIB=--bibliography all.bib
 CSS=--css=template/epub.css
 
 epub: 
@@ -20,6 +22,9 @@ epub:
 
 tech:
 	cat chapters/tech/*.md > all.md
+	find incomming/*.md | xargs -I{} sh -c "cat {}; echo ''" >  incomming.md
+	cat incomming/*.bib > incomming.bib
+	cat references.bib incomming.bib > all.bib
 
 
 html:
