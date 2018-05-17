@@ -1,4 +1,4 @@
-# Raspberry Pi Kubernetes Cluster
+# Raspberry Pi Kubernetes Cluster :o:
 
 This tutorial will guide the steps towards setting up a Kubernetes Pi cluster.
 The steps are:
@@ -47,8 +47,10 @@ The windown can be launched by
 
 command i the terminal or by:
 
-    sudo nano /etc/hostname
-
+```
+    $ sudo nano /etc/hostname
+```
+    
 static IP similarly can be given by
 
 :warning: TODO: sentence incomplete
@@ -103,7 +105,10 @@ effect.
     sudo systemctl start ssh
     ```
 
-  With the static ip setup and ssh enabled you should be able to ssh in to the Pi. For passwordless acess setup the SSH key as   per the following step
+  With the static ip setup and ssh enabled you should be able to ssh
+  in to the Pi. For passwordless acess setup the SSH key as per the
+  following step
+
 * Generate the ssh key; make sure you give a passcode:
         ```
           ssh-keygen -t rsa 
@@ -113,7 +118,7 @@ effect.
   
 ## Cluster setup
 
-  * Inastall Docker
+First install Dockerwith 
   
   ``
   curl -sSL get.docker.com | sh && \
@@ -125,63 +130,73 @@ effect.
   sudo usermod -aG docker pi
   ``
   
-  * Turn off swap:
+Next turn off swap:
+  
   ```
   sudo dphys-swapfile swapoff && \
   sudo dphys-swapfile uninstall && \
   sudo update-rc.d dphys-swapfile remove
   ```
-* Edit /boot/cmdline.txt and add the following with a space [no new line]
-``
+
+Now Edit /boot/cmdline.txt and add the following with a space
+[no new line]
+
+```
 cgroup_enable=cpuset cgroup_memory=1
-``
-* setup kubeadm
+```
+
+Setup kubeadm with
   
-  ```
-  curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add - && \
+```
+  $ curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add - && \
   echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list && \
   sudo apt-get update -q && \
   sudo apt-get install -qy kubeadm
-  ```
+```
   
-  The process till now stays the same for both workes and master
+The process till now stays the same for both workes and master
   
 ## Master setup
   
-  In the master node initiate the master:
+In the master node initiate the master:
   
-  ```
-  sudo kubeadm init --token-ttl=0 --apiserver-advertise-address=<internal master ip>
-  ```
+```
+    $ sudo kubeadm init --token-ttl=0 --apiserver-advertise-address=<internal master ip>
+```
   
-  This will initiate the kubectl head. At the end of the this process, there should be an echo with the following text. Save   
-  this join token as you will joining the workers later:
+This will initiate the kubectl head. At the end of the this process,
+there should be an echo with the following text. Save this join token
+as you will joining the workers later:
 
-  ```
-  kubeadm join --token <token> --discovery-token-ca-cert-hash <ca hash>
-  ```
+```
+    $ kubeadm join --token <token> --discovery-token-ca-cert-hash <ca hash>
+```
 
-  Once the master is initiated, now set up the kubectl admin config
+Once the master is initiated, now set up the kubectl admin config
 
-  ```
+```
   mkdir -p $HOME/.kube
   sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
   sudo chown $(id -u):$(id -g) $HOME/.kube/config
-  ```
-  * The final step is setting up the networking. I have used weave.
-  ```
+```
+
+The final step is setting up the networking. I have used weave.
+
+```
   kubectl apply -f \
  "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
- ```
+```
   
 ## Worker setup
   
-  After Kubernetes installation, join the workers using the saved join token.
+After Kubernetes installation, join the workers using the saved join token.
   
-  Use `get nodes` in the master to check the status
+Use `get nodes` in the master to check the status
   
   `kubectl get pods --namespace=kube-system` can be used to check the pod status of the cluster
   
-  # Troubleshooting 
-  During the development of this tytorial its been experienced that Kubernetes cluster needs atleast one master and three worker nodes.
-  Using less resources will lead to slow processor
+## Troubleshooting 
+
+During the development of this tytorial its been experienced that
+Kubernetes cluster needs atleast one master and three worker nodes.
+Using less resources will lead to slow processor
