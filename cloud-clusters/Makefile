@@ -30,14 +30,15 @@ INDEX=\
  ./chapters/references.md
 
 
-MARKDOWN-OPTIONS=-f markdown+smart -f markdown+emoji
+MARKDOWN-OPTIONS=-f markdown+smart -f markdown+emoji --indented-code-classes=bash,python,yaml
 CSL=--csl=template/ieee-with-url.csl
 FORMAT=--toc --number-sections
-FONTS=--epub-embed-font='fonts/*.ttf'
+FONTS=--epub-embed-font='fonts/**.ttf'
 BIB=--bibliography references.bib
+CSS=--css=template/epub.css
 
 epub:
-	pandoc $(MARKDOWN-OPTIONS)  $(FORMAT) $(FONTS) $(BIB)  $(CSL) -o book.epub metadata.txt $(INDEX)
+	pandoc $(MARKDOWN-OPTIONS)  $(FORMAT) $(FONTS) $(BIB)  $(CSL) $(CSS) -o book.epub metadata.txt $(INDEX)
 
 
 html:
