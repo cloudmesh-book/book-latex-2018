@@ -52,6 +52,8 @@ Step 6: Install Docker on each node
         
 Step 7: Creating the swarm
 
+
+
 * create swarm on a single node (this node will be a manager node) 
 
   * ssh into the node and run this command
@@ -78,7 +80,7 @@ Step 7: Creating the swarm
 Next, run
 
 ```bash
-  $ sudo docker swarm join --token SWMTKN-abc...worker...xyz 
+  $ sudo docker swarm join --token SWMTKN-abc...worker...xyz HOST
 ```
   
 `IP Address of the node` to join node as a worker
@@ -91,4 +93,32 @@ sudo docker node ls
 
 command to check the status all the 
 nodes.
+
+
+## TODO
+
+
+:warning: this should be automatized with a yaml file and a python
+script. Get in contact with Gregor
+
+```yaml
+master: <IP>
+worker:
+- <ip01>
+- <ip02>
+- <ip03>
+```
+
+cms swarm create [--config cms-swarm.yaml]
+
+* uses .yaml in the current dir, or in ~/.cloudmesh
+
+cms swarm kill
+
+* kills the swarm
+
+cms swarm ls
+
+* gives details about the swarm
+
 

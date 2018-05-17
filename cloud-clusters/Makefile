@@ -23,6 +23,10 @@ INDEX=\
  ./chapters/kubernetes-526/readme-kube.md\
  ./chapters/kubernetes-417/pi-kubernetes.md\
  ./chapters/pi-spark.md\
+ ./chapters/pi/slurm.md\
+ ./chapters/pi/setup.md\
+ ./chapters/pi/software.md\
+ ./chapters/pi/cluster.md\
  ./chapters/references.md
 
 
