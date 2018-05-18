@@ -10,11 +10,11 @@ by the developers for writing queries to avoid the learning curve of new
 language. To fill this gap Google came up with Dremel. It is a
 interactive ad hoc query system that lets the user query the large
 dataset providing them results with much faster speed compared to
-traditional technologies [@hid-sp18-523-www-dremel]. "By combining
+traditional technologies [@hid-sp18-523-www-dremel]. ``By combining
 multi-level execution trees and columnar data layout, it is capable of
 running aggregation queries over trillion-row tables in
-seconds" [@hid-sp18-523-www-dremel]. "Dremel is capable of scaling up to
-thousands of CPUs and petabytes of data" [@hid-sp18-523-www-dremel].
+seconds'' [@hid-sp18-523-www-dremel]. ``Dremel is capable of scaling up to
+thousands of CPUs and petabytes of data'' [@hid-sp18-523-www-dremel].
 MapReduce framework and technologies thar are built over it such as Pig,
 Hive etc has latency issue between running the job and getting output.
 Dremel on the other hand took a different approach, it uses execution

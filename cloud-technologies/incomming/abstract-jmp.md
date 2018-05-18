@@ -1,7 +1,7 @@
 JMP
 ===
 
-JMP, commonly referred to as "Jump", is an enterprise level statistical
+JMP, commonly referred to as *Jump*, is an enterprise level statistical
 analysis tool developed by SAS. The JMP software package is designed to
 handle every data-involved stage from the initial acquisition of data to
 the final presentation of findings. JMP was first released in 1989 and

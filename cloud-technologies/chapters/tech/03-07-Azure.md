@@ -14,7 +14,7 @@ Microsoft Corporation (MSFT) markets its cloud products under the
 \textit{Azure} brand name. At its most basic, Azure acts as an
 \textit{infrastructure- as-a-service} (IaaS) provider.  IaaS virtualizes
 hardware components, a key differentiation from other \textit{-as-a-service}
-products. IaaS ``abstract[s] the user from the details of
+products. IaaS ``abstracts the user from the details of
 infrastructure like physical computing resources, location, data
 partitioning, scaling, security, backup,
 etc'' [@www-wikipedia-cloud].

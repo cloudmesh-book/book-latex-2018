@@ -1,7 +1,7 @@
 Redis
 =====
 
-"Redis is an open source (BSD licensed), in-memory data structure store,
+``Redis is an open source (BSD licensed), in-memory data structure store,
 used as a database, cache and message broker. It supports data
 structures such as strings, hashes, lists, sets, sorted sets with range
 queries, bitmaps, hyperloglogs and geospatial indexes with radius
@@ -18,5 +18,5 @@ dumping the dataset to disk every once in a while, or by appending each
 command to a log. Redis also supports trivial-to-setup master-slave
 asynchronous replication, with very fast non-blocking first
 synchronization, auto-reconnection with partial resynchronization on net
-split" [@hid-sp18-520-Redis]. Redis is No SQL database, supports Key
+split'' [@hid-sp18-520-Redis]. Redis is No SQL database, supports Key
 value databases by mapping its key to type of values.

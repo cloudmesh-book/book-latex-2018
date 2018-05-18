@@ -12,8 +12,8 @@ Hive, Pig, and Rya.
 
 Accumulo is a distributed storage system for data, which is simpler than
 a typical key-value pair system. Each record in Accumulo has the
-following properties: "Key", "Value", "Row ID", "Column", "Timestamp",
-"Family", "Qualifier", and "Visibility". The records are stored across
+following properties: *Key*, *Value*, *Row ID*, *Column*, *Timestamp*,
+*Family*, *Qualifier*, and *Visibility*. The records are stored across
 many machines, with Accumolo keeping track of the properties. A monitor
 is also provided for information on the current states of the system. A
 garbage collector, tablet server (table partition manager), and tracer

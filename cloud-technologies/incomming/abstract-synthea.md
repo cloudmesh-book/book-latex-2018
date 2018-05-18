@@ -1,4 +1,4 @@
-Synthea
+Synthea :o:
 =======
 
 Synthea [@hid-sp18-526-www-synthea] is an open-source medical patient
@@ -13,7 +13,7 @@ large-scale health analysis. The data underlying these models are
 generated based on current academic research. Therefore, the data can
 also be used to run analysis on the synthetic patients.
 
-According to its website, Synthea is useful for "Academic Research", the
-"Health IT Industry", and "Policy Formation". Synthea is a product of
+According to its website, Synthea is useful for Academic Research, the
+Health IT Industry, and Policy Formation. Synthea is a product of
 MITRE Corporation written in Java, and supports both C-CDA and FHIR
 formats. It can also generate graphs using Graphviz.

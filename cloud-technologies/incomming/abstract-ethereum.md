@@ -1,10 +1,10 @@
 Ethereum
 ========
 
-Ethereum is an open-source, public, distributed computing that "runs
+Ethereum is an open-source, public, distributed computing that ``runs
 smart contracts: applications that run exactly as programmed without any
 possibility of downtime, censorship, fraud or third-party
-interference" [@hid-sp18-506-EthereumOrg].
+interference'' [@hid-sp18-506-EthereumOrg].
 
 A smart contract is a computer protocol intended to digitally
 facilitate, verify, or enforce the negotiation or performance of a

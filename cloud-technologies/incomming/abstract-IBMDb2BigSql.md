@@ -9,8 +9,8 @@ data and analsying data across data warehouses and also Hadoop.
 It is a well formed hybrid engine that lets you get data by querying
 Hadoop using SQL. It gives you the flexibilty of having a single
 database connection or make queries to different data sources such as
-"HDFS, RDBMS, NoSql databases, object stores and
-WebHDFS." [@IBM; @DB2; @Bi; @Sql] One of the most important feature of
+``HDFS, RDBMS, NoSql databases, object stores and
+WebHDFS.'' [@IBM; @DB2; @Bi; @Sql] One of the most important feature of
 this Big Sql is that it provides low latency. This makes data retrival
 easier in complex business systems. It also provides high performance,
 security, SQL compatibility and federation capabilities to your data

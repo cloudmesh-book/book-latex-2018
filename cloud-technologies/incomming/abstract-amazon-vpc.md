@@ -3,8 +3,8 @@ Amazon VPC
 
 A VPC is part of the AWS infrastructure that is logically isolated and
 spans a whole entire region of AWS to which the instances were created.
-"It is one of the most used and famous services inside the Amazon Web
-Services suite" [@hid-sp18-512-amazon-vpc-a]. It provides the
+``It is one of the most used and famous services inside the Amazon Web
+Services suite'' [@hid-sp18-512-amazon-vpc-a]. It provides the
 possibility of assigning specific IP addresses, subnets, and network
 rules when establishing communication with other resources within and
 out of the infrastructure. This way, the traffic between instances of

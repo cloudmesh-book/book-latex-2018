@@ -13,9 +13,9 @@ format [@hid-sp18-420-amazon-S3-FAQ].
 One of the important features of using S3 is that it offers a highly
 durable, scalable, and secure destination for backing up and archiving
 critical data [@hid-sp18-420-amazon-S3]. As per AWS documentation,
-"Amazon S3 is designed to deliver 99.999999999% durability, and it is
+``Amazon S3 is designed to deliver 99.999999999% durability, and it is
 used to store data for millions of applications used by market leaders
-in every industry" [@hid-sp18-420-amazon-S3].
+in every industry'' [@hid-sp18-420-amazon-S3].
 
 Amazon S3 provides versioning capability to provide even further
 protection for stored data. It is easy to define lifecycle rules to

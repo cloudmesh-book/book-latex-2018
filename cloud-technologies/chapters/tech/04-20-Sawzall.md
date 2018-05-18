@@ -35,16 +35,16 @@ virtual receptacle, generally some type of aggregator.  In another
 example of pursuing language simplicity and parallelization, the
 aggregators remain separate from the formal Sawzall language (they are
 written in C++) because ``some of the aggregation algorithms are
-sophisticated and best implemented in a native language [and] [m]ore
-important[ly] drawing an explicit line between filtering and
+sophisticated and best implemented in a native language and more
+importantly drawing an explicit line between filtering and
 aggregation enables a high degree of parallelism, even though it hides
 the parallelism from the language itself'' [@pike05sawzall].
 
 Important components of the Sawzall language include: \textit{szl},
 the binary containing the code compiler and byte-code interpreter that
 executes the program; the \textit{libszl} library, which compiles and
-executes Sawzall programs ``[w]hen szl is used as part of another
-program, e.g. in a [map-reduce] program''; the Sawzall language
+executes Sawzall programs ``When szl is used as part of another
+program, e.g. in a map-reduce program''; the Sawzall language
 plugin, designated \textit{protoc\_gen\_szl}, which generates Sawzall
 code when run in conjunction with Google's own \textit{protoc}
 protocol compiler; and libraries for intrinsic functions as well as

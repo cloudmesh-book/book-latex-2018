@@ -2,9 +2,9 @@ Kubernetes
 ==========
 
 Kubernetes is an open-source platform designed to automate deploying,
-scaling, and operating application containers. "The name Kubernetes
+scaling, and operating application containers. ``The name Kubernetes
 originates from Greek, meaning helmsman or pilot, and is the root of
-governor and cybernetic" [@hid-sp18-510-web-Kubernetes]. Kubernetes is
+governor and cybernetic'' [@hid-sp18-510-web-Kubernetes]. Kubernetes is
 capable of scheduling and running application containers on both
 physical or virtual clusters. Kubernetes allows developers to design
 applications that are agnostic of underlying architecture and allows
