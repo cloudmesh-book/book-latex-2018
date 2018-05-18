@@ -1,8 +1,8 @@
 
 INDEX=\
- ./chapters/todo.md\
- ./chapters/preface.md\
- ./chapters/contributors.md\
+ ./template/todo.md\
+ ./template/preface.md\
+ ./template/contributors.md\
  ./README.md\
  ./template/technologies.md\
  ./all.md\
