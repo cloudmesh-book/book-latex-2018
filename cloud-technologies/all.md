@@ -1,4 +1,4 @@
-# ODE
+## ODE
 
 
 |          |                        |
@@ -25,7 +25,7 @@ one based on the JBI standard. It also supports both long and short
 living process executions for orchestrating services for
 applications [@www-ode-web].
 
-# ActiveBPEL
+## ActiveBPEL
 
 
 |          |                        |
@@ -50,7 +50,7 @@ and to integrate web services into a larger
 application [@www-bpel].
 
 
-# Airavata :o:
+## Airavata :o:
 
 
 |          |                        |
@@ -75,7 +75,7 @@ SEAGrid [@www-seagrid] and GenApp [@www-genapp]).
 
 
 
-# Pegasus :o:
+## Pegasus :o:
 
 
 |          |                        |
@@ -106,7 +106,7 @@ gravitational wave physics and others.
 
 
 
-# Kepler
+## Kepler
 
 
 |          |                        |
@@ -131,7 +131,7 @@ sources to create a \textit{scientific workflow}. Overall, the Kepler helps
 users share and reuse data, workflow, and components developed by the
 scientific community to address common needs [@www-kepler].
 
-# Swift
+## Swift
 
 
 |          |                        |
@@ -161,7 +161,7 @@ safety. Apple has invested considerable effort in aggressive
 optimization that can flatten out method calls and accessors to
 eliminate this overhead to handle performance issues.
       
-# Taverna :o:
+## Taverna :o:
 
 
 |          |                        |
@@ -192,7 +192,7 @@ of Taverna is explained in [@taverna-paper].
 
 
 
-# Triana
+## Triana
 
 
 |          |                        |
@@ -221,7 +221,7 @@ window has the added advantage of being able to zoom in on particular
 features.  Triana is specially useful for automating the repetitive
 tasks, like finding-and-replacing a character or a string.
    
-# Trident :o:
+## Trident :o:
 
 
 |          |                        |
@@ -265,7 +265,7 @@ described as similar to
 
 
 
-# BioKepler :o:
+## BioKepler :o:
 
 
 |          |                        |
@@ -290,7 +290,7 @@ called
 
 
     
-# Galaxy :o:
+## Galaxy :o:
 
 
 |          |                        |
@@ -322,7 +322,7 @@ the project documents for Ansible Galaxy [@www-github-galaxy].
 
 
 
-# Jupyter and IPython :o:
+## Jupyter and IPython :o:
 
 
 |          |                         |
@@ -366,7 +366,7 @@ documents are internally JSON files and are saved with the .ipynb
 extension. Since JSON is a plain text format, they can be
 version-controlled and shared with colleagues [@www-jupyter-6].
 
-# Dryad :o:
+## Dryad :o:
 
 
 |          |                        |
@@ -403,7 +403,7 @@ MPI etc.
 
 
     
-# Naiad :o:
+## Naiad :o:
 
 
 |          |                        |
@@ -444,7 +444,7 @@ enforce a single high-level programming model.
 
 
     
-# Oozie :o:
+## Oozie :o:
 
 
 |          |                        |
@@ -478,7 +478,7 @@ vendors [@paper-Oozie].
 
 
 
-# Tez
+## Tez
 
 
 |          |                        |
@@ -514,7 +514,7 @@ API's which lets user define structure for the computation and Runtime
 API's which contain the logic or code that needs to be executed in
 each transformation or task.
 
-# Google FlumeJava :o:
+## Google FlumeJava :o:
 
 
 |          |                        |
@@ -559,7 +559,7 @@ deletes them once they are no longer in use.
 
 
 
-# Crunch :o:
+## Crunch :o:
 
 
 |          |                        |
@@ -590,7 +590,7 @@ maintains timing statistics automatically.
 
 
 
-# Cascading :o:
+## Cascading :o:
 
 
 |          |                        |
@@ -618,7 +618,7 @@ Cascading Benefits
 
 
 
-# Askalon
+## Askalon
 
 
 |          |                        |
@@ -654,7 +654,7 @@ integration of various services. By default, the Heterogeneous
 Earliest Finish Time (HEFT) is used as the primary scheduling
 algorithm.
 
-# Scalding
+## Scalding
 
 
 |          |                        |
@@ -666,7 +666,7 @@ algorithm.
 
 
 
-# e-Science Central :o:
+## e-Science Central :o:
 
 |          |                        |
 | -------- | ---------------------- |
@@ -725,7 +725,7 @@ demonstrates how e-Science Central
 
 
 
-# Azure Data Factory :o:
+## Azure Data Factory :o:
 
 
 |          |                        |
@@ -756,7 +756,7 @@ web data, sensor data and geo-spatial data.
 
 
 
-# Google Cloud Dataflow :o:
+## Google Cloud Dataflow :o:
 
 
 |          |                           |
@@ -786,7 +786,7 @@ infrastructure [@www-GoogleLiveStream].
 
 
     
-# NiFi (NSA) :o:
+## NiFi (NSA) :o:
 
 
 |          |                        |
@@ -813,7 +813,7 @@ controlled with a drag and a drop.  NiFi was initially developed by
 NSA (called Niagarafiles) using the concepts of flow-based programming
 and latter submitted to Apache Software foundation [@www-forbes].
 
-# Jitterbit :o:
+## Jitterbit :o:
 
 
 |          |                        |
@@ -852,7 +852,7 @@ Salesforce.
 
 
 
-# Talend :o:
+## Talend :o:
 
 
 |          |                        |
@@ -881,7 +881,7 @@ cloud on premise data.
 
 
 
-# Pentaho
+## Pentaho
 
 
 |          |                        |
@@ -908,7 +908,7 @@ help in changing the path that the organizations follow to run their
 business. From spark and hadoop to noSQL, pentaho transforms big data
 into big insights.
 
-# Apatar :o:
+## Apatar :o:
 
 
 |          |                        |
@@ -922,7 +922,7 @@ into big insights.
 
 
 
-# Docker Compose :o:
+## Docker Compose :o:
 
 
 |          |                        |
@@ -967,7 +967,7 @@ swarm can be scaled upto 1000 Nodes or upto 50,000 containers
 
 
     
-# KeystoneML
+## KeystoneML
 
 
 |          |                        |
@@ -997,7 +997,7 @@ plus,advanced math And is Integrated with new BDAS technologies:
 Velox, ml-matrix, soon Planck, TuPAQ and Sample Clean [@spark].
 
 
-# Mahout :o:
+## Mahout :o:
 
 
 |          |                           |
@@ -1021,7 +1021,7 @@ Velox, ml-matrix, soon Planck, TuPAQ and Sample Clean [@spark].
 
 
 
-# MLlib
+## MLlib
 
 
 |          |                           |
@@ -1045,7 +1045,7 @@ of learning settings. MLlib library includes Java, Scala and Python
 APIs and is released as a part of Spark project under the Apache 2.0
 license [@MLlib-article].
 
-# MLbase :o:
+## MLbase :o:
 
 
 |          |                           |
@@ -1077,7 +1077,7 @@ and [@mlbasepub3].
 
 
 
-# DataFu :o:
+## DataFu :o:
 
 
 |          |                           |
@@ -1106,7 +1106,7 @@ a common scheme for partitioning temporal data.
 
 
 
-# R :o:
+## R :o:
 
 
 |          |                           |
@@ -1137,7 +1137,7 @@ modeling and visualization. It's strength lies in analyzing data using
 its rich library but falls short when working with very large datasets
 [@book-R].
     
-# pbdR :o:
+## pbdR :o:
 
 
 |          |                           |
@@ -1162,7 +1162,7 @@ while pbdRMpi uses manager/worker parallelism.
 
 
 
-# Bioconductor :o:
+## Bioconductor :o:
 
 
 |          |                           |
@@ -1201,7 +1201,7 @@ Bioconductor also has tools to process genomic annotation data.
 
 
 
-# ImageJ
+## ImageJ
 
 
 |          |                           |
@@ -1223,7 +1223,7 @@ imaging to radiological image processing.  ImageJ's plugin
 architecture and built-in development environment has made it a
 popular platform for teaching image processing [@www-imagej].
 
-# OpenCV
+## OpenCV
 
 
 |          |                           |
@@ -1244,7 +1244,7 @@ as it is enabled with OpenCL (Open Computing
 Language) [@www-opencv]. OpenCV 3.2 is the latest version of the
 software that is currently available [@opencv-version].
 
-# Scalapack
+## Scalapack
 
 
 |          |                           |
@@ -1272,7 +1272,7 @@ computation. ScaLAPACK routines are based on block-partitioned
 algorithms in order to minimize the frequency of data movement between
 different levels of the memory hierarchy.
     
-# PetSc :o:
+## PetSc :o:
 
 
 |          |                           |
@@ -1286,7 +1286,7 @@ different levels of the memory hierarchy.
 
 
 
-# PLASMA MAGMA :o:
+## PLASMA MAGMA :o:
 
 
 |          |                           |
@@ -1333,7 +1333,7 @@ heterogeneous components
 
 
 
-# Azure Machine Learning
+## Azure Machine Learning
 
 
 |          |                           |
@@ -1362,7 +1362,7 @@ provides option to deploy the machine learning algorithm as ready to
 consume APIs that can be reused in future with minimal effort and can
 also be published.
     
-# Google Prediction API \& Translation API
+## Google Prediction API \& Translation API
 
 
 |          |                                          |
@@ -1405,7 +1405,7 @@ or detailed articles and documents. There's also standard edition
 which is tailored for short, real-time conversations
 [@www-translation].
 
-# mlpy :o:
+## mlpy :o:
 
 
 |          |                           |
@@ -1439,7 +1439,7 @@ modeling.
 
 
 
-# scikit-learn
+## scikit-learn
 
 
 |          |                           |
@@ -1466,7 +1466,7 @@ models provided by scikit-learn include clustering, cross-validation,
 dimensionality reduction, parameter tuning, feature selection and
 extraction.
 
-# PyBrain :o:
+## PyBrain :o:
 
 
 |          |                           |
@@ -1505,7 +1505,7 @@ networks.
 
 
     
-# CompLearn
+## CompLearn
 
 
 |          |                           |
@@ -1532,7 +1532,7 @@ environments [@comp1]. Complearn provides immediate to access
 every core functionality in all the major languages as it is designed
 to be extensible.
 
-# DAAL (Intel) :o:
+## DAAL (Intel) :o:
 
 
 |          |                           |
@@ -1564,7 +1564,7 @@ decision making.
 
     
     
-# Caffe
+## Caffe
 
 
 |          |                           |
@@ -1590,7 +1590,7 @@ GPU It is being used bu academic research projects, startup
 prototypes, and even large-scale industrial applications in vision,
 speech, and multimedia.
     
-# Torch
+## Torch
 
 
 |          |                           |
@@ -1615,7 +1615,7 @@ build hardware implementation for data flows like those found in
 neural networks.
     
     
-# Theano
+## Theano
 
 
 |          |                           |
@@ -1643,7 +1643,7 @@ cases where many different expressions are there and each of them is
 evaluated just once, Theano can minimize the amount of compilation and
 analyses overhead [@www-theano].
     
-# DL4j
+## DL4j
 
 
 |          |                           |
@@ -1670,7 +1670,7 @@ trained in parallel via iterative reduce, which works on Hadoop-YARN
 and on Spark. Deeplearning4j also integrates with CUDA kernels to
 conduct pure GPU operations, and works with distributed GPUs.
   
-# H2O
+## H2O
 
 
 |          |                           |
@@ -1697,7 +1697,7 @@ MapReduce, HortonWorks.  It can be used on cloud computing
 environments such as Amazon and Microsoft Azure [@www-H2O-wiki].
 
 
-# IBM Watson :o:
+## IBM Watson :o:
 
 
 |          |                           |
@@ -1732,7 +1732,7 @@ well\cite{www-ibmwatson}.
 
 
     
-# Oracle PGX
+## Oracle PGX
 
 
 |          |                           |
@@ -1757,7 +1757,7 @@ toolkit for graph analysis.
 Graphs can be loaded from various sources
 like SQL and NoSQL databases, Apache Spark and Hadoop [@www-ora].
     
-# GraphLab :o:
+## GraphLab :o:
 
 
 |          |                           |
@@ -1785,7 +1785,7 @@ at large scale.
 
 
     
-# GraphX
+## GraphX
 
 
 |          |                           |
@@ -1824,7 +1824,7 @@ GraphX provides:
     It gets developed as a part of Apache Spark project. It thus gets
     tested and updated with each Spark release.
     
-# IBM System G
+## IBM System G
 
 
 |          |                           |
@@ -1853,7 +1853,7 @@ etc [@IBMSystemGPaper].
     in a distributed environment and it is planned that future
     versions would support it.
     
-# GraphBuilder (Intel) :o:
+## GraphBuilder (Intel) :o:
 
 
 |          |                           |
@@ -1886,7 +1886,7 @@ Finally being an open source there is a possibility of adding a load
 of functionalities by various contributors [@graphbuilder].
 
     
-# TinkerPop
+## TinkerPop
 
 
 |          |                           |
@@ -1915,7 +1915,7 @@ Scala, Go, SQL and SPARQL. It is capable to adhere with small graph
 which requires a single machine or massive graphs that can only be
 possible with large cluster of machines, without changing the code.
 
-# Parasol
+## Parasol
 
 
 |          |                           |
@@ -1938,7 +1938,7 @@ drug design (CAD).  The program has organized a number of workshops
 and conferences in the areas such as software, intelligent systems,
 and parallel architecture.
     
-# Dream:Lab :o:
+## Dream:Lab :o:
 
 
 |          |                           |
@@ -1966,7 +1966,7 @@ system [@denero].
 
 
     
-# Google Fusion Tables :o:
+## Google Fusion Tables :o:
 
 
 |          |                           |
@@ -2001,7 +2001,7 @@ the data along with geospatial information as well.
 
 
 
-# CINET :o:
+## CINET :o:
 
 
 |          |                           |
@@ -2044,7 +2044,7 @@ by several universities, researchers and analysist.
 
 
 
-# NWB :o:
+## NWB :o:
 
 
 |          |                           |
@@ -2074,7 +2074,7 @@ within the broader scientific and research communities.
 
 
   
-# Elasticsearch :o:
+## Elasticsearch :o:
 
 
 |          |                           |
@@ -2122,7 +2122,7 @@ returns output through Kibana visualizations
 
 
     
-# Kibana
+## Kibana
 
 
 |          |                           |
@@ -2152,7 +2152,7 @@ to quickly create and share dynamic dashboards that display changes to
 Elasticsearch queries in real
 time [@www-kibana-5] [@www-kibana-6].
 
-# Logstash
+## Logstash
 
 
 |          |                           |
@@ -2177,7 +2177,7 @@ output plugins, with many native codecs further simplifying the
 ingestion process. Logstash accelerates your insights by harnessing a
 greater volume and variety of data.
   
-# Graylog
+## Graylog
 
 
 |          |                           |
@@ -2215,7 +2215,7 @@ also add certain trigger conditions that shall alert the system about
 performance issues, failed logins or exceptions in the flow of the
 application.
     
-# Splunk
+## Splunk
 
 
 |          |                           |
@@ -2240,7 +2240,7 @@ in response to the demand for comprehensible and actionable data
 reporting for executives outside a company's IT
 department [@www-splunk].
     
-# Tableau :o:
+## Tableau :o:
 
 
 |          |                           |
@@ -2271,7 +2271,7 @@ analytics.
 
 
 
-# D3.js
+## D3.js
 
 
 |          |                           |
@@ -2296,7 +2296,7 @@ is very fast, supports large datasets and dynamic behaviours involving
 interaction and animation.
 
     
-# three.js
+## three.js
 
 
 |          |                           |
@@ -2319,7 +2319,7 @@ camera. In addition to these three features, we can add animation,
 lights (ambience,spot lights, shadows), objects (lines, ribbons,
 particles), geometry etc [@www-threejs-webpage].
     
-# Potree :o:
+## Potree :o:
 
 
 |          |                           |
@@ -2345,7 +2345,7 @@ in geographical features are across time [@potree-paper-2].
 
 
     
-# DC.js :o:
+## DC.js :o:
 
 
 |          |                           |
@@ -2375,7 +2375,7 @@ seriesChart.
 
 
       
-# TensorFlow :o:
+## TensorFlow :o:
 
 
 |          |                           |
@@ -2411,7 +2411,7 @@ on 2015-11-09 under the Apache 2.0 open source license.
 
 
     
-# CNTK
+## CNTK
 
 
 |          |                           |
@@ -2440,7 +2440,7 @@ through its own model description language
 11 Release
 
 
-# Google App Engine
+## Google App Engine
 
 
 |          |                                |
@@ -2476,7 +2476,7 @@ uses a SQL like syntax called the GQL (Google Query Language) which
 works with non-relational databases when compared to
 SQL [@www-wiki-appengine].
     
-# AppScale
+## AppScale
 
 
 |          |                                |
@@ -2501,7 +2501,7 @@ and multimode deployment, which will help with large, dataset or
 CPU. AppScale allows to deploy app in thee main mode i.e. dev/test,
 production and customize deployment [@www-appscale-deployment].
 
-# Red Hat OpenShift :o:
+## Red Hat OpenShift :o:
 
 
 |          |                                |
@@ -2534,7 +2534,7 @@ options.
 
 
     
-# Heroku :o:
+## Heroku :o:
 
 
 |          |                                |
@@ -2562,7 +2562,7 @@ platforms.
 
 
 
-# Aerobatic :o:
+## Aerobatic :o:
 
 
 |          |                                |
@@ -2587,7 +2587,7 @@ has free plan and pro plan options for customers.
 
 
 
-# AWS Elastic Beanstalk
+## AWS Elastic Beanstalk
 
 
 |          |                                |
@@ -2627,7 +2627,7 @@ environment.
 > high-performance execution environment for Amazon EC2 Cloud
 > computing'' [@www-amazon-elastic-beanstalk].
 
-# Azure :o:
+## Azure :o:
 
 
 |          |                                |
@@ -2668,7 +2668,7 @@ regions}, throughout the world [@www-azure-msft].
 
 
 
-# Cloud Foundry :o:
+## Cloud Foundry :o:
 
 
 |          |                                |
@@ -2695,7 +2695,7 @@ deployment cycle time.
 
 
 
-# Pivotal
+## Pivotal
 
 
 |          |                                |
@@ -2719,7 +2719,7 @@ Marketplace. It also offers performance monitoring, active health
 monitoring, unified log streaming, web console built for team-based
 agile development [@pivotal-www].
 
-# IBM BlueMix :o:
+## IBM BlueMix :o:
 
 
 |          |                                |
@@ -2733,7 +2733,7 @@ agile development [@pivotal-www].
 
 
 
-#  (Ninefold) :o:
+##  (Ninefold) :o:
 
 
 |          |                                |
@@ -2750,7 +2750,7 @@ services since January 30, 2016 [@www-ninefoldSite].
 
 
 
-# Jelastic
+## Jelastic
 
 
 |          |                                |
@@ -2778,7 +2778,7 @@ automated vertical scaling, application lifecycle management, and
 availability from multiple hosting providers around the
 world [@www-jelastic-1].
 
-# Stackato :o:
+## Stackato :o:
 
 
 |          |                                |
@@ -2807,7 +2807,7 @@ cloud computing platform.
 
  
     
-# appfog :o:
+## appfog :o:
 
 
 |          |                                |
@@ -2836,7 +2836,7 @@ them [@tweney].
 
 
     
-# CloudBees
+## CloudBees
 
 
 |          |                                |
@@ -2862,7 +2862,7 @@ assuring less risk for sharing sensitive information. It implies the
 task of getting the platform accessed by every user using the feature
 \textit{Jenkins Sprawl} [@www-cloudbees-webpage].
 
-# Engine Yard :o:
+## Engine Yard :o:
 
 
 |          |                                |
@@ -2908,7 +2908,7 @@ other users [@www-engineyard].
 
 
 
-#  (CloudControl)
+##  (CloudControl)
 
 
 |          |                                |
@@ -2922,7 +2922,7 @@ other users [@www-engineyard].
 
 No Longer active as of Feb. 2016 [@www-wiki]
 
-# dotCloud :o:
+## dotCloud :o:
 
 
 |          |                                |
@@ -2940,7 +2940,7 @@ dotCloud services were shutdown on February
 
     
 
-# Dokku :o:
+## Dokku :o:
 
 
 |          |                                |
@@ -2954,7 +2954,7 @@ dotCloud services were shutdown on February
 
 
 
-# OSGi :o:
+## OSGi :o:
 
 
 |          |                                |
@@ -2968,7 +2968,7 @@ dotCloud services were shutdown on February
 
 
 
-# HUBzero
+## HUBzero
 
 
 |          |                                |
@@ -2991,7 +2991,7 @@ simulation runs on the Grid infrastructure without having to download
 or compile any code. It is a unique framework with simulation and
 social networking capabilities [@hubzeropaper2010].
 
-# OODT
+## OODT
 
 
 |          |                                |
@@ -3014,7 +3014,7 @@ different, distributed software systems, metadata and data. OODT is
 written in the Java, and through its REST API used in other languages
 including Python [@www-oodt2].
      
-# Agave
+## Agave
 
 
 |          |                                |
@@ -3046,7 +3046,7 @@ shall read the JSON file, formalize the parameters, execute the user
 program and dump the output to the requested
 destination [@agave-paper].
 
-# Atmosphere :o:
+## Atmosphere :o:
 
 
 |          |                                |
@@ -3079,7 +3079,7 @@ by users can be shared among different members as and when
 required [@www-at2].
 
 
-# Kite
+## Kite
 
 
 |          |                        |
@@ -3109,7 +3109,7 @@ editor and enables programmers to search for opensource codes to
 implement in their codes. It even provides relavant examples/syntax
 and also tries to spot errors in the programs [@kite-wired].
      
-# Hive :o:
+## Hive :o:
 
 
 |          |                        |
@@ -3137,7 +3137,7 @@ query compilation, optimization and data exploration [@www-hive].
 
 
 
-# HCatalog :o:
+## HCatalog :o:
 
 
 |          |                        |
@@ -3151,7 +3151,7 @@ query compilation, optimization and data exploration [@www-hive].
 
 
 
-# Tajo :o:
+## Tajo :o:
 
 
 |          |                        |
@@ -3190,7 +3190,7 @@ engine for executing the queries assigned to them.
 
      
 
-# Shark :o:
+## Shark :o:
 
 
 |          |                        |
@@ -3240,7 +3240,7 @@ analysis system performs query processing and complex analytics
 (iterative Machine learning) at scale and efficiently recovers from
 the failures.
 
-# Phoenix :o:
+## Phoenix :o:
 
 
 |          |                        |
@@ -3290,7 +3290,7 @@ string [@www-phoenix-bighadoop].
 
 
 
-# Impala
+## Impala
 
 
 |          |                        |
@@ -3335,7 +3335,7 @@ vertical manner [@www-impala-beginner]. When Parquet queries the
 dataset it only reads the column split part files rather than reading
 the entire dataset as compared to Hive.
      
-# MRQL :o:
+## MRQL :o:
 
 
 |          |                        |
@@ -3367,7 +3367,7 @@ projects [@www-apacheincubator].
 
 
 
-# SAP HANA :o:
+## SAP HANA :o:
 
 
 |          |                        |
@@ -3394,7 +3394,7 @@ ensures high data availability, data protection and data quality.
 
    
 
-# HadoopDB
+## HadoopDB
 
 
 |          |                        |
@@ -3422,7 +3422,7 @@ a shared-nothing cluster of machines [@www-hadoopdb].
  while achieving superior performance on structured data analysis
  workloads.
      
-# PolyBase :o:
+## PolyBase :o:
 
 
 |          |                        |
@@ -3475,7 +3475,7 @@ operating on the external data.
 
 
 
-# Pivotal HD/Hawq :o:
+## Pivotal HD/Hawq :o:
 
 
 |          |                        |
@@ -3502,7 +3502,7 @@ and integrated Apache MADlib for machine learning
 
 
      
-# Presto :o:
+## Presto :o:
 
 
 |          |                        |
@@ -3524,7 +3524,7 @@ Stinger [@presto-paper-2014].
 
 
 
-# Google Dremel
+## Google Dremel
 
 
 |          |                        |
@@ -3548,7 +3548,7 @@ seconds. Dremel can be use for a variety of jobs including analyzing
 web-crawled documents, detecting e-mail spam, working through
 application crash reports.
 
-# Google BigQuery :o:
+## Google BigQuery :o:
 
 
 |          |                        |
@@ -3592,7 +3592,7 @@ rows [@www-bigquery-columnar-storage].
 
 
      
-# Amazon Redshift
+## Amazon Redshift
 
 
 |          |                        |
@@ -3616,7 +3616,7 @@ PostgresSQL 9.x with capability to handle analytics workloads on
 large- scale dataset stored by a column-oriented DBMS
 principle [@www-wiki-red].
 
-# Drill :o:
+## Drill :o:
 
 
 |          |                        |
@@ -3645,7 +3645,7 @@ focused on non-relational datastores, including Hadoop and NoSQL
 
 
 
-# Kyoto Cabinet :o:
+## Kyoto Cabinet :o:
 
 
 |          |                        |
@@ -3674,7 +3674,7 @@ database size can be up to 8EB (9.22e18 bytes).
 
 
 
-# Pig :o:
+## Pig :o:
 
 
 |          |                        |
@@ -3688,7 +3688,7 @@ database size can be up to 8EB (9.22e18 bytes).
 
 
 
-# Sawzall :o:
+## Sawzall :o:
 
 
 |          |                        |
@@ -3752,7 +3752,7 @@ Sawzall's associated aggregation functionality
 
 
 
-# Google Cloud DataFlow :o:
+## Google Cloud DataFlow :o:
 
 
 |          |                           |
@@ -3785,7 +3785,7 @@ to batch and stream data processes.
 
 
      
-# Summingbird :o:
+## Summingbird :o:
 
 
 |          |                        |
@@ -3839,7 +3839,7 @@ modes of distributed processing [@boykin2014summingbird].
 
 
      
-# Lumberyard :o:
+## Lumberyard :o:
 
 
 |          |                        |
@@ -3867,7 +3867,7 @@ server tech, but if you're using a third-party provider, it has to be
 Amazon [@what].
 
 
-# Storm
+## Storm
 
 
 |          |         |
@@ -3896,7 +3896,7 @@ unit that processes data and produces a new output stream. An output
 stream from a bolt can be given as an input to another
 bolt [@www-storm-home-concepts].
      
-# S4 :o:
+## S4 :o:
 
 
 |          |         |
@@ -3933,7 +3933,7 @@ independent modules.
 
 
      
-# Samza
+## Samza
 
 
 |          |         |
@@ -3972,7 +3972,7 @@ to run in. Samza works with Apache YARN, which supports Hadoop's
 security model, and resource isolation through Linux
 CGroups [@www-samza-4] [@www-samza-3].
 
-# Granules
+## Granules
 
 
 |          |          |
@@ -3996,7 +3996,7 @@ Map reduce framework.  Its application domains include hand writing
 recognition, bio informatics and computer brain
 interface [@www-granules].
 
-# Neptune :o:
+## Neptune :o:
 
 
 |          |             |
@@ -4010,7 +4010,7 @@ interface [@www-granules].
 
 
 
-# Google MillWheel
+## Google MillWheel
 
 
 |          |                  |
@@ -4037,7 +4037,7 @@ mind. In practice, we find that MillWheel's unique combination of
 scalability, fault tolerance, and a versatile programming
 model [@millwheel-paper].
 
-# Amazon Kinesis :o:
+## Amazon Kinesis :o:
 
 
 |          |                    |
@@ -4079,7 +4079,7 @@ highly available.
 
 
 
-# LinkedIn :o:
+## LinkedIn :o:
 
 
 |          |          |
@@ -4114,7 +4114,7 @@ products like *People You May Know*. Voldemort stores the data in
 key-value form [@www-linkedinquora]. LinkedIn has exposed REST API to
 get the user data [@www-linkedindevelopers].
 
-# Twitter Heron :o:
+## Twitter Heron :o:
 
 
 |          |                   |
@@ -4148,7 +4148,7 @@ the scheduler depending on resource availability.
 
 
 
-# Databus :o:
+## Databus :o:
 
 
 |          |             |
@@ -4162,7 +4162,7 @@ the scheduler depending on resource availability.
 
 
 
-# Facebook Puma/Ptail/Scribe/ODS
+## Facebook Puma/Ptail/Scribe/ODS
 
 
 |          |                                |
@@ -4219,7 +4219,7 @@ on average and when the last flush completes, then only a new batch
 starts to avoid the contention issues, which makes it fairly real
 time.
      
-# Azure Stream Analytics :o:
+## Azure Stream Analytics :o:
 
 
 |          |                            |
@@ -4251,7 +4251,7 @@ development project available on github [@www-github-azure].
 
 
      
-# Floe :o:
+## Floe :o:
 
 
 |          |          |
@@ -4265,7 +4265,7 @@ development project available on github [@www-github-azure].
 
 
 
-# Spark Streaming :o:
+## Spark Streaming :o:
 
 
 |          |                     |
@@ -4296,7 +4296,7 @@ server [@www-apache-spark-stream].
 
 
      
-# Flink Streaming :o:
+## Flink Streaming :o:
 
 
 |          |                     |
@@ -4310,7 +4310,7 @@ server [@www-apache-spark-stream].
 
 
 
-# DataTurbine :o:
+## DataTurbine :o:
 
 
 |          |                 |
@@ -4342,7 +4342,7 @@ allows algorithms to run close to sensors.
 
 
 
-# Hadoop
+## Hadoop
 
 
 |          |                                                      |
@@ -4374,7 +4374,7 @@ abstractions and JAR files needed to start Hadoop
  [@www-wikihadoop].
 
 
-# Spark :o:
+## Spark :o:
 
 
 |          |                                                      |
@@ -4410,7 +4410,7 @@ processing is restricted.
 In cases where latency is the most crucial aspect we can get
 better results using Apache Storm [@www-spark].
      
-# Twister :o:
+## Twister :o:
 
 
 |          |                                                      |
@@ -4440,7 +4440,7 @@ computations [@www-twister2] [@www-twister3] [@paper-twister].
 
 
 
-# MR-MPI :o:
+## MR-MPI :o:
 
 
 |          |                                                      |
@@ -4463,7 +4463,7 @@ interface the library can also be called from Fortrain.
 
 
 
-# Stratosphere (Apache Flink)
+## Stratosphere (Apache Flink)
 
 
 |          |                                                      |
@@ -4485,7 +4485,7 @@ streaming the default implementation and batch jobs running as
 special-case versions of streaming application [@www-flink].
 
 
-# Reef :o:
+## Reef :o:
 
 
 |          |                                                      |
@@ -4512,7 +4512,7 @@ but designed specifically for configuring distributed systems.
 
 
      
-# Disco :o:
+## Disco :o:
 
 
 |          |                                                      |
@@ -4563,7 +4563,7 @@ OpenStack [@www-discodescribed-discoabstractionlayer].
 
 
 
-# Hama
+## Hama
 
 
 |          |                                                      |
@@ -4586,7 +4586,7 @@ etc. Hama provides a message passing interface and each superstep in
 BSP is faster than a full job execution in MApReduce framework, such
 as Hadoop [@book-hama].
      
-# Giraph :o:
+## Giraph :o:
 
 
 |          |                                                      |
@@ -4609,7 +4609,7 @@ it's developed in Java) [@www-apache-giraph-fb].
 
 
    
-# Pregel :o:
+## Pregel :o:
 
 
 |          |                                                      |
@@ -4623,7 +4623,7 @@ it's developed in Java) [@www-apache-giraph-fb].
 
 
 
-# Pegasus
+## Pegasus
 
 
 |          |                                                      |
@@ -4637,7 +4637,7 @@ it's developed in Java) [@www-apache-giraph-fb].
 
 See Section~\ref{S:pegasus}.
 
-# Ligra
+## Ligra
 
 
 |          |                                                      |
@@ -4669,7 +4669,7 @@ over a hundred billion edges in the shared memory systems that are
 large enough for any of the graphs reported in the paper
 [@ligra-paper-2].
 
-# GraphChi
+## GraphChi
 
 
 |          |                                                      |
@@ -4691,7 +4691,7 @@ GraphLab. GraphChi brings web-scale graph computation, such as
 analysis of social networks, available to anyone with a modern laptop
 
      
-# Galois :o:
+## Galois :o:
 
 
 |          |                                                      |
@@ -4725,7 +4725,7 @@ and Java.
 
 
      
-# Medusa-GPU :o:
+## Medusa-GPU :o:
 
 
 |          |                                                      |
@@ -4757,7 +4757,7 @@ graph systems [@www-medusa].
 
 
 
-# MapGraph :o:
+## MapGraph :o:
 
 
 |          |                                                      |
@@ -4771,7 +4771,7 @@ graph systems [@www-medusa].
 
 
 
-# Totem :o:
+## Totem :o:
 
 
 |          |                                                      |
@@ -4795,7 +4795,7 @@ cost effective manner [@www-netsyslab].
 
 
 
-# point-to-point
+## point-to-point
 
 
 |          |                                         |
@@ -4806,7 +4806,7 @@ cost effective manner [@www-netsyslab].
 | keywords | Inter process communication Collectives |
 
 
-#  (a) publish-subscribe: MPI :o:
+##  (a) publish-subscribe: MPI :o:
 
 
 |          |                                         |
@@ -4820,7 +4820,7 @@ cost effective manner [@www-netsyslab].
 
      see \URL{http://www.slideshare.net/Foxsden/high-performance-processing-of-streaming-data}
      
-#  (b) publish-subscribe: Big Data :o:
+##  (b) publish-subscribe: Big Data :o:
 
 
 |          |                                         |
@@ -4860,7 +4860,7 @@ scenarios.
 
 
 
-# HPX-5 :o:
+## HPX-5 :o:
 
 
 |          |                                         |
@@ -4898,7 +4898,7 @@ via [@www-hpx-5-user-guide].
 
    
    
-# Argo BEAST HPX-5 BEAST PULSAR
+## Argo BEAST HPX-5 BEAST PULSAR
 
 
 |          |                                         |
@@ -4912,7 +4912,7 @@ via [@www-hpx-5-user-guide].
 
      Search on the internet was not successsful.
      
-# Harp :o:
+## Harp :o:
 
 
 |          |                                         |
@@ -4937,7 +4937,7 @@ down to static assets for hosting behind any valid HTTP server.
 
 
      
-# Netty :o:
+## Netty :o:
 
 
 |          |                                         |
@@ -4968,7 +4968,7 @@ resource management, pooling and reuse and low memory copying.
 
 
      
-# ZeroMQ :o:
+## ZeroMQ :o:
 
 
 |          |                                         |
@@ -5006,7 +5006,7 @@ systems.
 
 
 
-# ActiveMQ :o:
+## ActiveMQ :o:
 
 
 |          |                                         |
@@ -5030,7 +5030,7 @@ value on top of this specifications. ActiveMQ is used in many
 scenarios such as heterogeneous application integration, as a
 replacement for RPC and to loosen the coupling between applications.
      
-# RabbitMQ   :o:
+## RabbitMQ   :o:
 
 
 |          |                                         |
@@ -5091,7 +5091,7 @@ messaging model\cite{ampq-article}.  AMPQ is described as follows
 
 
 
-# NaradaBrokering :o:
+## NaradaBrokering :o:
 
 
 |          |                                         |
@@ -5130,7 +5130,7 @@ WS-Reliability [@www-narada-features].
 
 
      
-# QPid :o:
+## QPid :o:
 
 
 |          |                                         |
@@ -5144,7 +5144,7 @@ WS-Reliability [@www-narada-features].
 
 
 
-# Kafka :o:
+## Kafka :o:
 
 
 |          |                                         |
@@ -5183,7 +5183,7 @@ pipelines where data is transferred between systems or
 applications. Kafka can also be used by applications that transform
 real time incoming data [@www-kafka].
 
-# Kestrel
+## Kestrel
 
 
 |          |                                         |
@@ -5217,7 +5217,7 @@ these servers together, with no cross communication, and pick a server
 at random whenever you do a set or get, you end up with a reliable,
 loosely ordered message queue [@git-kestrel].
 
-# JMS
+## JMS
 
 
 |          |                                         |
@@ -5250,7 +5250,7 @@ is known to the consumer. The other communication domain is
 publish/subscribe model, where one message can have multiple
 receivers [@www-jms-oracle-docs].
 
-# AMQP :o:
+## AMQP :o:
 
 
 |          |                                         |
@@ -5277,7 +5277,7 @@ AMQP protocol.
 
 
 
-# Stomp :o:
+## Stomp :o:
 
 
 |          |                                         |
@@ -5291,7 +5291,7 @@ AMQP protocol.
 
 
 
-# MQTT :o:
+## MQTT :o:
 
 
 |          |                                         |
@@ -5320,7 +5320,7 @@ sensors [@www-floodnet].
 
 
 
-# Marionette Collective :o:
+## Marionette Collective :o:
 
 
 |          |                                         |
@@ -5351,7 +5351,7 @@ requests.
 
 
      
-# Public Cloud: Amazon SNS :o:
+## Public Cloud: Amazon SNS :o:
 
 
 |          |                                         |
@@ -5392,7 +5392,7 @@ with other AWS services such as Amazon SQS, Amazon EC2 and Amazon S3.
 
 
 
-# Lambda
+## Lambda
 
 
 |          |                                         |
@@ -5424,7 +5424,7 @@ workload.Billing for AWS Lambda is based on the number of times the
 code executes and in 100 ms increments of the duration of the
 processing.
 
-# Google Pub Sub
+## Google Pub Sub
 
 
 |          |                                         |
@@ -5454,7 +5454,7 @@ features, it provides some others as well, like the usage of RESTful
 APIs, end-to-end acknowledgement, replicated storage,
 etc [@www-google-pub-sub-features].
      
-# Azure Queues
+## Azure Queues
 
 
 |          |                                         |
@@ -5482,7 +5482,7 @@ efficient solution for managing workflows and tasks. The messages can
 remain in the queue up to 7 days, and afterwards, they will be deleted
 automatically.
 
-# Event Hubs :o:
+## Event Hubs :o:
 
 
 |          |                                         |
@@ -5509,7 +5509,7 @@ for Big Data.
 
 
 
-# Gora (general object from NoSQL) :o:
+## Gora (general object from NoSQL) :o:
 
 
 |          |                                      |
@@ -5554,7 +5554,7 @@ write integration tests.
 
 
 
-# Memcached :o:
+## Memcached :o:
 
 
 |          |                            |
@@ -5581,7 +5581,7 @@ your system where you have less memory than you need.
 
 
      
-# Redis :o:
+## Redis :o:
 
 
 |          |                            |
@@ -5630,7 +5630,7 @@ Ruby-on-Rails etc.
 
 
 
-# LMDB (key value) :o:
+## LMDB (key value) :o:
 
 
 |          |                            |
@@ -5663,7 +5663,7 @@ performance [@www-lmdb].
 
 
 
-# Hazelcast
+## Hazelcast
 
 
 |          |                            |
@@ -5687,7 +5687,7 @@ applications. It has APIs for many programing languages including
 Python, Java, Scala, C++, .NET and Node.js and supports any binary
 languages through an Open Binary Client Protocol [@www-wikihazel].
 
-# Ehcache
+## Ehcache
 
 
 |          |                            |
@@ -5709,7 +5709,7 @@ two- phase commit and recovery for transactions. It's developed and
 maintained by Terracotta and is available under Apache 2.0 license.
 It conforms to Java caching standard JSR 107.
 
-# Infinispan
+## Infinispan
 
 
 |          |                            |
@@ -5741,7 +5741,7 @@ analytics and (6) MapReduce Implementstion in the In-Memory Data
 Grid. It is also used in research and academia as a framework for
 distribution execution and storage [@infinispan_wikipedia].
      
-# VoltDB
+## VoltDB
 
 
 |          |                            |
@@ -5770,7 +5770,7 @@ to ingest data, analyze data, and act on data in milliseconds,
 allowing users to create per-person, real-time
 experiences [@www-voltdb].
 
-# H-Store :o:
+## H-Store :o:
 
 
 |          |                            |
@@ -5810,7 +5810,7 @@ single-node system.
 
 
 
-# Hibernate
+## Hibernate
 
 
 |          |                           |
@@ -5841,7 +5841,7 @@ SQL statements at runtime. It is database independent. For batch
 processing it is advisable to use JDBC over
 Hibernate [@www-hibernate].
 
-# OpenJPA :o:
+## OpenJPA :o:
 
 
 |          |                           |
@@ -5874,7 +5874,7 @@ License 2.0.
 
 
 
-# EclipseLink :o:
+## EclipseLink :o:
 
 
 |          |                           |
@@ -5900,7 +5900,7 @@ for storing java object into relational database.
 
 
      
-# DataNucleus :o:
+## DataNucleus :o:
 
 
 |          |                           |
@@ -5934,7 +5934,7 @@ layer [@www-DataNucleusPerformance].
 
 
      
-# ODBC/JDBC
+## ODBC/JDBC
 
 
 |          |                           |
@@ -5963,7 +5963,7 @@ databases. JDBC can be used for ODBC compliant databases by using a
 JDBC-to-ODBC bridge.
 
 
-# UIMA :o:
+## UIMA :o:
 
 
 |          |                  |
@@ -5999,7 +5999,7 @@ records [@www-uima-slideshare].
 
 
      
-# Tika
+## Tika
 
 
 |          |                  |
@@ -6023,7 +6023,7 @@ records [@www-uima-slideshare].
 
 
 
-# Oracle :o:
+## Oracle :o:
 
 
 |          |                      |
@@ -6047,7 +6047,7 @@ of Oracle is Oracle Database 12c Release 1: 12.1 (Patch set as of June
 
 
 
-# DB2
+## DB2
 
 
 |          |                      |
@@ -6080,7 +6080,7 @@ other programming languages. DB2 also supports integration into the
 Eclipse and Visual Studio integrated development
 environments [@www-DB2Wiki].
 
-# SQL Server :o:
+## SQL Server :o:
 
 
 |          |                      |
@@ -6115,7 +6115,7 @@ available in below editions
 
 
 
-# SQLite :o:
+## SQLite :o:
 
 
 |          |                      |
@@ -6154,7 +6154,7 @@ needs [@sqlitewhentouse].
 
 
      
-# MySQL :o:
+## MySQL :o:
 
 
 |          |                      |
@@ -6179,7 +6179,7 @@ table [@howmysql].
 
 
      
-# PostgreSQL
+## PostgreSQL
 
 
 |          |                      |
@@ -6223,7 +6223,7 @@ querying Big Data systems like Cassandra and Hadoop.  The TABLESAMPLE
 clause allows quick statistical sample generation of huge tables
 without any need to sort them [@www-postgreSQL-features].
 
-# CUBRID :o:
+## CUBRID :o:
 
 
 |          |                      |
@@ -6250,7 +6250,7 @@ web-application development.
 
 
 
-# Galera Cluster :o:
+## Galera Cluster :o:
 
 
 |          |                      |
@@ -6278,7 +6278,7 @@ failover scenarios (zero downtime).
 
 
 
-# SciDB :o:
+## SciDB :o:
 
 
 |          |                      |
@@ -6309,7 +6309,7 @@ of caching some of them in the main memory.
 
 
 
-# Rasdaman :o:
+## Rasdaman :o:
 
 
 |          |                      |
@@ -6338,7 +6338,7 @@ fields.
 
 
      
-# Apache Derby :o:
+## Apache Derby :o:
 
 
 |          |                      |
@@ -6373,7 +6373,7 @@ Machine) [@www-derbymanual].
 
 
       
-# Pivotal Greenplum
+## Pivotal Greenplum
 
 
 |          |                      |
@@ -6404,7 +6404,7 @@ master node parses, optimizes an SQL query and dispatch it to all
 segment nodes. Therefore, it provides powerful and rapid analytics on
 petabyte scale data volumes [@pivotal_wikipedia].
      
-# Google Cloud SQL :o:
+## Google Cloud SQL :o:
 
 
 |          |                      |
@@ -6429,7 +6429,7 @@ RAM [@www-cloud-sql-google-faq].
 
 
       
-# Azure SQL :o:
+## Azure SQL :o:
 
 
 |          |                      |
@@ -6443,7 +6443,7 @@ RAM [@www-cloud-sql-google-faq].
 
 
 
-# Amazon RDS :o:
+## Amazon RDS :o:
 
 
 |          |                      |
@@ -6477,7 +6477,7 @@ and MySQL memcached support.
 
 
      
-# Google F1
+## Google F1
 
 
 |          |                      |
@@ -6508,7 +6508,7 @@ hierarchical schema model with structured data types and through smart
 application design.
      
 
-# IBM dashDB :o:
+## IBM dashDB :o:
 
 
 |          |                      |
@@ -6536,7 +6536,7 @@ to variousBI or analytic tools [@www-ibm-analytics.com].
 
 
        
-# N1QL :o:
+## N1QL :o:
 
 
 |          |                      |
@@ -6550,7 +6550,7 @@ to variousBI or analytic tools [@www-ibm-analytics.com].
 
 
 
-# BlinkDB :o:
+## BlinkDB :o:
 
 
 |          |                      |
@@ -6564,7 +6564,7 @@ to variousBI or analytic tools [@www-ibm-analytics.com].
 
 
 
-# Spark SQL
+## Spark SQL
 
 
 |          |                      |
@@ -6592,7 +6592,7 @@ same time, it scales to thousands of nodes and multi hour queries
 using the Spark engine, which provides full mid-query fault tolerance.
 
 
-# Lucene :o:
+## Lucene :o:
 
 
 |          |            |
@@ -6616,7 +6616,7 @@ independent.
 
 
 
-# Solr :o:
+## Solr :o:
 
 
 |          |          |
@@ -6630,7 +6630,7 @@ independent.
 
 
 
-# Solandra :o:
+## Solandra :o:
 
 
 |          |              |
@@ -6657,7 +6657,7 @@ Cassandra [@github-solandra2].
 
 
     
-# Voldemort :o:
+## Voldemort :o:
 
 
 |          |               |
@@ -6697,7 +6697,7 @@ not sufficient and were quickly saturated that stall the database.
 
 
      
-# Riak :o:
+## Riak :o:
 
 
 |          |          |
@@ -6723,7 +6723,7 @@ only in later. REST APIs are available for these databases.
 
 
 
-# ZHT :o:
+## ZHT :o:
 
 
 |          |         |
@@ -6759,7 +6759,7 @@ to obtain fault tolerance among others [@Li].
 
 
      
-# Berkeley DB :o:
+## Berkeley DB :o:
 
 
 |          |                 |
@@ -6792,7 +6792,7 @@ Amazon.com and open-source projects such as Apache and Linux.
 
 
 
-# Kyoto/Tokyo Cabinet :o:
+## Kyoto/Tokyo Cabinet :o:
 
 
 |          |                         |
@@ -6831,7 +6831,7 @@ provide effective backup procedures.
 
 
      
-# Tycoon :o:
+## Tycoon :o:
 
 
 |          |            |
@@ -6856,7 +6856,7 @@ the same time.
 
 
      
-# Tyrant :o:
+## Tyrant :o:
 
 
 |          |            |
@@ -6883,7 +6883,7 @@ server than Tokyo Tyrant [@www-kyoto-tycoon].
 
 
 
-# MongoDB
+## MongoDB
 
 
 |          |         |
@@ -6918,7 +6918,7 @@ storage engines natively support backup of complete data. For
 incremental backups one can use MongoRocks that is a third party tool
 developed by Facebook.
 
-# Espresso :o:
+## Espresso :o:
 
 
 |          |              |
@@ -6952,7 +6952,7 @@ timeline consistent change capture stream.
 
 
 
-# CouchDB :o:
+## CouchDB :o:
 
 
 |          |             |
@@ -6985,7 +6985,7 @@ basis of Couchbase, Inc's Couchbase Server
 
 
 
-# Couchbase Server :o:
+## Couchbase Server :o:
 
 
 |          |                      |
@@ -7051,7 +7051,7 @@ license alternatives [@www-quora-cbs].
 
 
 
-# IBM Cloudant
+## IBM Cloudant
 
 
 |          |              |
@@ -7073,7 +7073,7 @@ being redundantly distributed over multiple
 machines [@www-ibm-cloudant].
    
 
-# Pivotal Gemfire
+## Pivotal Gemfire
 
 
 |          |                 |
@@ -7107,7 +7107,7 @@ configurations enable the user to scale horizontally between different
 distributed systems spread over a wide geographical network
 [@www-gemfire].
      
-# HBase :o:
+## HBase :o:
 
 
 |          |           |
@@ -7137,7 +7137,7 @@ Adobe, Netflix etc.
 
 
 
-# Google Bigtable
+## Google Bigtable
 
 
 |          |                 |
@@ -7161,7 +7161,7 @@ Spanner, a distributed NewSQL database also developed by Google
 2015, Bigtable has been available to the public as Cloud Bigtable
 [@www-wikibigtable].
 
-# LevelDB :o:
+## LevelDB :o:
 
 
 |          |             |
@@ -7189,7 +7189,7 @@ interface.
 
 
 
-# Megastore and Spanner :o:
+## Megastore and Spanner :o:
 
 
 |          |                           |
@@ -7234,7 +7234,7 @@ all their apps seamlessly on spanner infrastructure.
 
 
 
-# Accumulo
+## Accumulo
 
 
 |          |          |
@@ -7260,7 +7260,7 @@ certain properties of the data, such as organization, availability,
 and integrity, across many commodity-class
 machines [@apache-accumulo].
 
-# Cassandra :o:
+## Cassandra :o:
 
 
 |          |               |
@@ -7287,7 +7287,7 @@ key. It has its own
 
 
 
-# RYA :o:
+## RYA :o:
 
 
 |          |         |
@@ -7315,7 +7315,7 @@ data fast and easy [@apacherya].
 
 
      
-# Sqrrl :o:
+## Sqrrl :o:
 
 
 |          |           |
@@ -7329,7 +7329,7 @@ data fast and easy [@apacherya].
 
 
 
-# Neo4J :o:
+## Neo4J :o:
 
 
 |          |           |
@@ -7360,7 +7360,7 @@ copies of data in their local database.
 
 
      
-# graphdb :o:
+## graphdb :o:
 
 
 |          |             |
@@ -7393,7 +7393,7 @@ employ the concepts of nodes, edges and properties.
 
 
      
-# Yarcdata :o:
+## Yarcdata :o:
 
 
 |          |              |
@@ -7435,7 +7435,7 @@ SPARQL [@paper-lee2015graph].
 
 
 
-# AllegroGraph :o:
+## AllegroGraph :o:
 
 
 |          |                  |
@@ -7473,7 +7473,7 @@ be queried [@www-Allegrow].
 
 
 
-# Blazegraph :o:
+## Blazegraph :o:
 
 
 |          |                |
@@ -7509,7 +7509,7 @@ Scatter) model as a service.
 
 
 
-# Facebook Tao :o:
+## Facebook Tao :o:
 
 
 |          |                  |
@@ -7537,7 +7537,7 @@ presents a single unified API that makes the entire system appear like
 
 
 
-# Titan:db :o:
+## Titan:db :o:
 
 
 |          |              |
@@ -7564,7 +7564,7 @@ optimal for smaller graphs.
 
 
 
-# Jena :o:
+## Jena :o:
 
 
 |          |          |
@@ -7595,7 +7595,7 @@ to work with.  The ontology layer enables one to work with triples.
 
 
 
-# Sesame :o:
+## Sesame :o:
 
 
 |          |            |
@@ -7627,7 +7627,7 @@ optimal solution for the processor.
 
 
      
-# Public Cloud: Azure Table :o:
+## Public Cloud: Azure Table :o:
 
 
 |          |                               |
@@ -7668,7 +7668,7 @@ storage.
 
 
 
-# Amazon Dynamo :o:
+## Amazon Dynamo :o:
 
 
 |          |                   |
@@ -7697,7 +7697,7 @@ DynamoDB. Amazon has listed all the limits in a web page titled
 
 
 
-# Google DataStore
+## Google DataStore
 
 
 |          |                  |
@@ -7738,7 +7738,7 @@ optimally suited to provide, including high-performance at a very
 large scale and high-reliability [@www-google-datastore].
 
 
-# iRODS :o:
+## iRODS :o:
 
 
 |          |                 |
@@ -7772,7 +7772,7 @@ access data hosted on a remote Zone [@github-irods-www].
 
 
 
-# NetCDF
+## NetCDF
 
 
 |          |                 |
@@ -7801,7 +7801,7 @@ compatibility with existing application software and data archives
 \cite{paper-netCDF}.  NetCDF consists of: (a) A conceptual data model
 (b) A set of binary data formats (c) A set of APIs for C/Fortran/Java
 
-# CDF :o:
+## CDF :o:
 
 
 |          |                 |
@@ -7842,7 +7842,7 @@ and IBM's Data Explorer (XP).
 
 
 
-# HDF :o:
+## HDF :o:
 
 
 |          |                 |
@@ -7856,7 +7856,7 @@ and IBM's Data Explorer (XP).
 
 
 
-# OPeNDAP :o:
+## OPeNDAP :o:
 
 
 |          |                 |
@@ -7869,7 +7869,7 @@ and IBM's Data Explorer (XP).
 
 
 
-# FITS :o:
+## FITS :o:
 
 
 |          |                 |
@@ -7897,7 +7897,7 @@ on Hadoop using FITS [@paper-fits-2011].
 
 
 
-# RCFile :o:
+## RCFile :o:
 
 
 |          |                 |
@@ -7927,7 +7927,7 @@ analysis systems developed in Facebook and Yahoo!
 
 
 
-# ORC
+## ORC
 
 
 |          |                 |
@@ -7955,7 +7955,7 @@ stripe, the columns are separated from each other so the reader can
 read just the columns that are required [@www-orc-docs].
 
      
-# Parquet
+## Parquet
 
 
 |          |                 |
@@ -7979,7 +7979,7 @@ Apache Thrift framework which increases its flexibility to work with a
 number of programming languages like C++, Java, Python, PHP, etc.
      
 
-# BitTorrent :o:
+## BitTorrent :o:
 
 
 |          |                |
@@ -8011,7 +8011,7 @@ Few popular bittorrent client in $\mu$Torrent, qBittorrent.
 
 
 
-# HTTP
+## HTTP
 
 
 |          |                |
@@ -8022,7 +8022,7 @@ Few popular bittorrent client in $\mu$Torrent, qBittorrent.
 | keywords | Data Transport |
 
 
-# FTP :o:
+## FTP :o:
 
 
 |          |                |
@@ -8054,7 +8054,7 @@ access the files from the server.
 
 
      
-# SSH :o:
+## SSH :o:
 
 
 |          |                |
@@ -8083,7 +8083,7 @@ SSH [@www-openssh-wiki].
 
 
 
-# Globus Online (GridFTP) :o:
+## Globus Online (GridFTP) :o:
 
 
 |          |                             |
@@ -8112,7 +8112,7 @@ reliability.
 
 
 
-# Flume
+## Flume
 
 
 |          |                |
@@ -8135,7 +8135,7 @@ operation on the stream that can transform the stream in some manner,
 which could be to compress or uncompress data, modify data by adding
 or removing pieces of information, and more [@ibm-flume].
 
-# Sqoop
+## Sqoop
 
 
 |          |                |
@@ -8159,7 +8159,7 @@ a relational database. Sqoop is supported in many different business
 integration suits like Informatica Big Data Management, Pentaho Data
 Integration, Microsoft BI Suite and Couchbase [@sqoop-wiki].
 
-# Pivotal GPLOAD/GPFDIST :o:
+## Pivotal GPLOAD/GPFDIST :o:
 
 
 |          |                            |
@@ -8195,7 +8195,7 @@ gpfdist [@patent-google-gpf].
 
 
 
-# Mesos :o:
+## Mesos :o:
 
 
 |          |                             |
@@ -8233,7 +8233,7 @@ action* [@book-mesos-Ignazio-2016].
 
 
 
-# Yarn :o:
+## Yarn :o:
 
 
 |          |                             |
@@ -8270,7 +8270,7 @@ resource [@www-HadoopApache].
 
 
 
-# Helix :o:
+## Helix :o:
 
 
 |          |                             |
@@ -8298,7 +8298,7 @@ better data quality [@www-ibm-helix-paper].
 
 
       
-# Llama
+## Llama
 
 
 |          |                             |
@@ -8328,7 +8328,7 @@ of Llama was to help the researchers working in algorithm selection,
 algorithm portfolios, etc. and can be just used as a tool for
 designing the systems [@lla1].
      
-# Google Omega :o:
+## Google Omega :o:
 
 
 |          |                             |
@@ -8342,7 +8342,7 @@ designing the systems [@lla1].
 
 
 
-# Facebook Corona
+## Facebook Corona
 
 
 |          |                             |
@@ -8383,7 +8383,7 @@ snapshot of the cluster for making the scheduling decisions. Corona is
 used as an integral part of the Facebook's data infrastructure and is
 helping power big data analytics for teams across the company.
      
-# Celery :o:
+## Celery :o:
 
 
 |          |                             |
@@ -8416,7 +8416,7 @@ helping power big data analytics for teams across the company.
 
 
      
-# HTCondor :o:
+## HTCondor :o:
 
 
 |          |                             |
@@ -8455,7 +8455,7 @@ workstations.
 
 
      
-# SGE :o:
+## SGE :o:
 
 
 |          |                             |
@@ -8492,7 +8492,7 @@ Institute of Technology,Ranger at the Texas Advanced Computing Center
 
 
 
-# OpenPBS
+## OpenPBS
 
 
 |          |                             |
@@ -8519,7 +8519,7 @@ jobs are never lost, and jobs continue to run despite failures. It is
 built upon a Flexible Plugin Framework which simplifies administration
 with enhanced visibility and extensibility [@openpbs-www].
 
-# Moab
+## Moab
 
 
 |          |                             |
@@ -8542,7 +8542,7 @@ predictive capabilities evaluate the impact of future orchestration
 decisions across diverse workload domains (HPC, HTC, Big Data, and
 Cloud VMs)\cite{www-moab}.
 
-# Slurm :o:
+## Slurm :o:
 
 
 |          |                             |
@@ -8577,7 +8577,7 @@ Solaris [@www-slurmPlatformsSite] [@www-slurm].
 
 
      
-# Torque :o:
+## Torque :o:
 
 
 |          |                             |
@@ -8591,7 +8591,7 @@ Solaris [@www-slurmPlatformsSite] [@www-slurm].
 
 
 
-# Globus Tools :o:
+## Globus Tools :o:
 
 
 |          |                             |
@@ -8618,7 +8618,7 @@ strategies based on the Globus Toolkit [@www-about-globus].
 
 
 
-# Pilot Jobs
+## Pilot Jobs
 
 
 |          |                             |
@@ -8646,7 +8646,7 @@ typically acquired by a placeholder job and they relayed to the
 workloads [@www-pilot-job-paper-2016].
 
 
-# HDFS
+## HDFS
 
 
 |          |              |
@@ -8671,7 +8671,7 @@ access to a file in HDFS, Name Node service responds with the Data
 Node locations for the respective individual data blocks that
 constitute the whole of the requested file\cite{www-hdfs}.
 
-# Swift :o:
+## Swift :o:
 
 
 |          |              |
@@ -8685,7 +8685,7 @@ constitute the whole of the requested file\cite{www-hdfs}.
 
 
 
-# Haystack :o:
+## Haystack :o:
 
 
 |          |              |
@@ -8720,7 +8720,7 @@ data, data exposed through REST API in JSON format.
 
 
 
-# f4
+## f4
 
 
 |          |              |
@@ -8747,7 +8747,7 @@ reduced effective-replication-factor from 3.6 to either 2.8 or 2.1
 [@paper-f4].
 
      
-# Cinder
+## Cinder
 
 
 |          |              |
@@ -8778,7 +8778,7 @@ and provides end users with a self-service API to request and consume
 those resources without requiring any knowledge of where their storage
 is actually deployed or on what type of device [@wiki-Cinder].
      
-# Ceph :o:
+## Ceph :o:
 
 
 |          |              |
@@ -8819,7 +8819,7 @@ Swift.
 
 
 
-# FUSE :o:
+## FUSE :o:
 
 
 |          |              |
@@ -8858,7 +8858,7 @@ storage on Copy.com), mtpfs (To mount MTP devices) etc.
 
 
 
-# Gluster :o:
+## Gluster :o:
 
 
 |          |              |
@@ -8872,7 +8872,7 @@ storage on Copy.com), mtpfs (To mount MTP devices) etc.
 
 
 
-# Lustre :o:
+## Lustre :o:
 
 
 |          |              |
@@ -8901,7 +8901,7 @@ Earth today are powered by the Lustre file system.
 
 
      
-# IBM Spectrum Scale, formerly GPFS :o:
+## IBM Spectrum Scale, formerly GPFS :o:
 
 
 |          |                                       |
@@ -8933,7 +8933,7 @@ restores, and private clouds [@www-spectrumscale].
 
 
 
-# GFFS :o:
+## GFFS :o:
 
 
 |          |              |
@@ -8962,7 +8962,7 @@ Gateway.
 
 
      
-# Public Cloud: Amazon S3 :o:
+## Public Cloud: Amazon S3 :o:
 
 
 |          |                             |
@@ -8997,7 +8997,7 @@ the cloud.
 
 
   
-# Azure Blob :o:
+## Azure Blob :o:
 
 
 |          |                |
@@ -9047,7 +9047,7 @@ them [@www-azure-3].
 
 
 
-# Google Cloud Storage :o:
+## Google Cloud Storage :o:
 
 
 |          |                          |
@@ -9080,7 +9080,7 @@ unique in a bucket.
 
 
 
-# Cloudmesh :o:
+## Cloudmesh :o:
 
 
 |          |                  |
@@ -9100,7 +9100,7 @@ of classes taught at Indiana University.
 
 
 
-# Libvirt :o:
+## Libvirt :o:
 
 
 |          |                  |
@@ -9124,7 +9124,7 @@ as Linux, FreeBSD, Mac OS, and Windows OS.
 
 
      
-# Libcloud :o:
+## Libcloud :o:
 
 
 |          |                  |
@@ -9154,7 +9154,7 @@ platforms. Libcloud supports Python 2, Python 3 and PyPy.
 
 
      
-# JClouds :o: :o:
+## JClouds :o: :o:
 
 
 |          |                  |
@@ -9210,7 +9210,7 @@ environments.  Key components of jcloud are:
 
 
 
-# TOSCA
+## TOSCA
 
 
 |          |                  |
@@ -9223,7 +9223,7 @@ environments.  Key components of jcloud are:
 
 
 
-# OCCI :o:
+## OCCI :o:
 
 
 |          |                  |
@@ -9296,7 +9296,7 @@ process is deprecated and will be removed from the next major version
 
 
    
-# CDMI :o:
+## CDMI :o:
 
 
 |          |                  |
@@ -9333,7 +9333,7 @@ on CDMI can be found on SNIA web page [@www-cdmiwebsite].
 
 
 
-# Whirr
+## Whirr
 
 
 |          |                  |
@@ -9359,7 +9359,7 @@ clusters. It uses low level API libraries to work with providers which
 was mentioned in the [@www-slideshare-ApacheWhirr].
 
      
-# Saga
+## Saga
 
 
 |          |                  |
@@ -9401,7 +9401,7 @@ provides interoperability by allowing the same application code to run
 on multiple grids and also communicate with applications running on
 others [@saga-paper].
 
-# Genesis
+## Genesis
 
 
 |          |                  |
@@ -9414,7 +9414,7 @@ others [@saga-paper].
 
 
 
-# Docker (Machine, Swarm)
+## Docker (Machine, Swarm)
 
 
 |          |                         |
@@ -9456,7 +9456,7 @@ Docker Engine.
 Docker Swarm can be scaled up to 1000 Nodes or up
 to 50,000 containers
      
-# Puppet :o:
+## Puppet :o:
 
 
 |          |            |
@@ -9492,7 +9492,7 @@ License 2.0 after that [@www-puppet-wiki-puppet].
 
 
   
-# Chef :o:
+## Chef :o:
 
 
 |          |          |
@@ -9517,7 +9517,7 @@ products for the companies which need it [@www-chef-commercial].
 
 
 
-# Ansible :o:
+## Ansible :o:
 
 
 |          |             |
@@ -9549,7 +9549,7 @@ LDAP, and other centralized authentication management systems.
 
 
 
-# SaltStack :o:
+## SaltStack :o:
 
 
 |          |               |
@@ -9578,7 +9578,7 @@ treats the master as the source)
 
 
      
-# Boto
+## Boto
 
 
 |          |        |
@@ -9607,7 +9607,7 @@ accessing the attributes.  Boto3 also comes with 'waiters'. Waiters
 are used for polling status changes in AWS, automatically. Boto3 has
 these waiters for both the APIs - client as well as resource.
      
-# Cobbler
+## Cobbler
 
 
 |          |         |
@@ -9634,7 +9634,7 @@ change the information contained in a kickstart template (definition),
 either by passing variables called ksmeta or by using so-called
 snippets.
 
-# Xcat :o:
+## Xcat :o:
 
 
 |          |          |
@@ -9658,7 +9658,7 @@ systems. [@www-03ibm]
 
 
      
-# Razor :o:
+## Razor :o:
 
 
 |          |           |
@@ -9689,7 +9689,7 @@ controlling the node.
 
 
 
-# Juju :o:
+## Juju :o:
 
 
 |          |          |
@@ -9714,7 +9714,7 @@ whole infrastructure.
 
 
 
-# Foreman :o:
+## Foreman :o:
 
 
 |          |             |
@@ -9728,7 +9728,7 @@ whole infrastructure.
 
 
 
-# OpenStack Heat :o:
+## OpenStack Heat :o:
 
 
 |          |                    |
@@ -9764,7 +9764,7 @@ resources to make the template generic.
 
 
 
-# Sahara :o:
+## Sahara :o:
 
 
 |          |            |
@@ -9788,7 +9788,7 @@ Interface available as part of OpenStack Dashboard.
 
 
 
-# Rocks :o:
+## Rocks :o:
 
 
 |          |           |
@@ -9813,7 +9813,7 @@ and many other institution for their projects.
 
 
 
-# Cisco Intelligent Automation for Cloud
+## Cisco Intelligent Automation for Cloud
 
 
 |          |                                        |
@@ -9840,7 +9840,7 @@ range from underlying infrastructure to anything-as-a-service by
 allowing its users to evaluate, transform and deploy the IT and
 business services in a way they desire.
 
-# Ubuntu MaaS :o:
+## Ubuntu MaaS :o:
 
 
 |          |                 |
@@ -9854,7 +9854,7 @@ business services in a way they desire.
 
 
 
-# Facebook Tupperware
+## Facebook Tupperware
 
 
 |          |                     |
@@ -9884,7 +9884,7 @@ switched to Linux Containers (LXC) .The configuration for the
 container is done by a specific config file written in a dialect of
 python by the owner of the process.
 
-# AWS OpsWorks
+## AWS OpsWorks
 
 
 |          |              |
@@ -9908,7 +9908,7 @@ various layers. Amazon Elastic Cloud Compute (EC2) instances or other
 resources can be deployed and configured in each layer of AWS OpsWorks
 Stacks [@www-awsopsworks].
 
-# OpenStack Ironic :o:
+## OpenStack Ironic :o:
 
 
 |          |                      |
@@ -9941,7 +9941,7 @@ services.
 
 
      
-# Google Kubernetes :o:
+## Google Kubernetes :o:
 
 
 |          |                       |
@@ -9977,7 +9977,7 @@ like auto-restart and auto-scaling.
 
 
      
-# Buildstep
+## Buildstep
 
 
 |          |           |
@@ -10003,7 +10003,7 @@ the new container.  The resulting build app can be run with Docker
 using docker build -t your\_app\_name
 command. [@github-buildstep].
 
-# Gitreceive :o:
+## Gitreceive :o:
 
 
 |          |            |
@@ -10035,7 +10035,7 @@ following:
 > Integrate custom systems into your workflow (d) Build your own
 > Heroku e)Push code anywhere'' [@lindsay2016].
      
-# OpenTOSCA
+## OpenTOSCA
 
 
 |          |           |
@@ -10056,7 +10056,7 @@ OASIS TOSCA packaging format CSAR, Cloud Service ARchive.  The key
 tasks of OpenTOSCA, are to operate management operations, run plans,
 and manage state of the TOSCA [@openTOSCA-paper].
      
-# Winery :o:
+## Winery :o:
 
 
 |          |            |
@@ -10102,7 +10102,7 @@ plication'' [@winery-paper-2013].
 
      
 
-# CloudML
+## CloudML
 
 
 |          |         |
@@ -10141,7 +10141,7 @@ deployment of multiple cloud application, according to its cloud.
 These two abstract approach help CloudML to achieve the multi-cloud
 application support [@www-cloudmlwiki].
 
-# Blueprints :o:
+## Blueprints :o:
 
 
 |          |                |
@@ -10183,7 +10183,7 @@ Blueworks Live are both simple to use in a collaborative manner,
 > ``capabilities to implement more complex models.''
 
 
-# Terraform :o:
+## Terraform :o:
 
 
 |          |               |
@@ -10213,7 +10213,7 @@ creating applications and implementing the infrastructures. Terraform
 is mainly used to manage cloud based and SaaS infrastructure, it also
 supports Docker and VMWare vSphere.
      
-# DevOpSlang
+## DevOpSlang
 
 
 |          |            |
@@ -10242,7 +10242,7 @@ abstraction levels may be combined consistently such as a 'deploy'
 operation consisting of actions on the level of Unix shell commands
 and actions using portable Chef cookbooks [@DevOpSlang].
 
-# Any2Api :o:
+## Any2Api :o:
 
 
 |          |             |
@@ -10285,7 +10285,7 @@ puppet. It can also be very useful in writing microservices where
 services talk to each other using well defined APIs.
 
 
-# Xen
+## Xen
 
 
 |          |                                         |
@@ -10315,7 +10315,7 @@ security patches without rebooting the system) and KCONFIG support
 (compilation support to create a lighter version for requirements such
 as embedded systems) [@www-xen-fl].
           
-# KVM
+## KVM
 
 
 |          |                                         |
@@ -10340,7 +10340,7 @@ extensions (VT-x) or an AMD-V. It supports 32 and 64 bit guests on a
 systems are Solaris, Linux, Windows and BSD
 Unix [@www-KVM-webpage].
 
-# QEMU :o:
+## QEMU :o:
 
 
 |          |                                         |
@@ -10378,7 +10378,7 @@ several GUI front-ends for QEMU like virt-manager and gnome-box.
 
 
 
-# Hyper-V :o:
+## Hyper-V :o:
 
 
 |          |                                         |
@@ -10404,7 +10404,7 @@ PC as the hardware virtualization component of the client editions of
 Windows NT. A server computer running Hyper-V can be configured to
 expose individual virtual machines to one or more networks.
 
-# VirtualBox :o:
+## VirtualBox :o:
 
 
 |          |                                         |
@@ -10418,7 +10418,7 @@ expose individual virtual machines to one or more networks.
 
 
 
-# OpenVZ :o:
+## OpenVZ :o:
 
 
 |          |                                         |
@@ -10470,7 +10470,7 @@ better server and live migrate your container to it, then increase its
 limits.
 
 
-# LXC :o:
+## LXC :o:
 
 
 |          |                                         |
@@ -10497,7 +10497,7 @@ technologies.The basis for docker development is also
 LXC. [@www-infoworld]. Linux containers would work on the major
 distributions of linux this would not work on Microsoft Windows.
   
-# Linux-Vserver :o:
+## Linux-Vserver :o:
 
 
 |          |                                         |
@@ -10535,7 +10535,7 @@ allowing guest process to run concurrently on SMP systems. No
 additional overhead of network virtualization.  These few advantages
 of Linux-VServer.
 
-# OpenStack :o:
+## OpenStack :o:
 
 
 |          |                                         |
@@ -10564,7 +10564,7 @@ business to build Amazon-like cloud services in their own data
 centers.OpenStack is licensed under the Apache 2.0 license
 \cite{www-apache-license}
   
-# OpenNebula :o:
+## OpenNebula :o:
 
 
 |          |                                         |
@@ -10589,7 +10589,7 @@ projects [@www-opennebula-wiki]. More about OpenNebula can be
 found in the following paper that is published at ieee computer
 society [@paper-opennebula]
      
-# Eucalyptus
+## Eucalyptus
 
 
 |          |                                         |
@@ -10619,7 +10619,7 @@ intranet. Sensitive data remains entirely secure from external
 interference behind the enterprise firewall [@www-eucalyptus].
 
      
-# Nimbus :o:
+## Nimbus :o:
 
 
 |          |                                         |
@@ -10648,7 +10648,7 @@ for deploying instances across multiple clouds and monitoring those
 instance.  Nimbus platform supports Nimbus, Open Stack, Amazon and
 several other clouds.
 
-# CloudStack :o:
+## CloudStack :o:
 
 
 |          |                                         |
@@ -10675,7 +10675,7 @@ agnostic, snapshot management, usage metering, network management
 (VLAN's, security groups), virtual routers, firewalls, load balancers
 and multi-role support. [@www-cloudstack-wikipedia]
     
-# CoreOS :o:
+## CoreOS :o:
 
 
 |          |                                         |
@@ -10701,7 +10701,7 @@ has commercial products Kubernetes and CoreOS stack. In CoreOS linux
 service discovery is achieved by etcd, applications are run on Docker
 and process management is achieved by fleet.
 
-# rkt :o:
+## rkt :o:
 
 
 |          |                                         |
@@ -10732,7 +10732,7 @@ environments. rkt is open source and is written in the Go programming
 language [@www-github/rkt].
 
      
-# VMware ESXi
+## VMware ESXi
 
 
 |          |                                         |
@@ -10761,7 +10761,7 @@ command line interfaces are available on the local console of the
 server [@vmware-esxi].
      
      
-# vSphere and vCloud :o:
+## vSphere and vCloud :o:
 
 
 |          |                                         |
@@ -10789,7 +10789,7 @@ for disaster recovery, site networking and security.  Additionally, a
 management suite that can give a visual of the infrastructure to
 determine where potential issues might arise.
      
-# Amazon :o:
+## Amazon :o:
 
 
 |          |                                         |
@@ -10829,7 +10829,7 @@ worldwide. [@www-aws]
 
      {\bf Improve: all of them need bibentries}
      
-# Azure
+## Azure
 
 
 |          |                                         |
@@ -10840,7 +10840,7 @@ worldwide. [@www-aws]
 | keywords | IaaS Management from HPC to hypervisors |
 
 
-# Google and other public Clouds
+## Google and other public Clouds
 
 
 |          |                                         |
@@ -10874,7 +10874,7 @@ with the usage of the same shared infrastructure [@goo3]. Windows
 Azure services platform, Amazon elastic compute cloud and Sun cloud
 are few examples of public clouds.
      
-# Networking: Google Cloud DNS :o:
+## Networking: Google Cloud DNS :o:
 
 
 |          |                                         |
@@ -10904,7 +10904,7 @@ service locator, TXT text record.
 
 
 
-# Amazon Route 53
+## Amazon Route 53
 
 
 |          |                                         |
@@ -10930,7 +10930,7 @@ domain names and arranging DNS health checks to monitor the
 server [@www-amar53].
 
 
-# Ambari :o:
+## Ambari :o:
 
 
 |          |            |
@@ -10957,7 +10957,7 @@ provides documentation about Ambari, including a quick start guide for
 installing a cluster with Ambari. [@www-github-ambari] provides
 the project documents for ambari on github.
      
-# Ganglia
+## Ganglia
 
 
 |          |            |
@@ -10987,7 +10987,7 @@ robust, has been ported to an extensive set of operating systems and
 processor architectures, and is currently in use on thousands of
 clusters around the world, handling clusters with 2000 nodes.
      
-# Nagios [@www-nagios :o:]
+## Nagios [@www-nagios :o:]
 
 
 |          |                          |
@@ -11015,7 +11015,7 @@ flexible. [@nagios-paper-2012] Besides its open source components,
 Nagios also has commercial products to serve needing clients.
 
 
-# Inca :o:
+## Inca :o:
 
 
 |          |            |
@@ -11057,7 +11057,7 @@ running for more than a decade and has been very stable. Overall Inca
 provides a solid monitoring system which not only monitors but also
 detects problems very early on.
 
-# Security and Privacy
+## Security and Privacy
 
 
 |          |                      |
@@ -11069,7 +11069,7 @@ detects problems very early on.
 
 
 
-# InCommon :o:
+## InCommon :o:
 
 
 |          |              |
@@ -11096,7 +11096,7 @@ collaboration which is happening on a globa scale.  Currently any two
 and four year higher education institution that is accredited is
 eligble for joining InCommon.
 
-# Eduroam
+## Eduroam
 
 
 |          |            |
@@ -11128,7 +11128,7 @@ access to internet across 70 countries and tens of thousands of access
 points worldwide [@www-eduroam].
 
 
-# OpenStack Keystone :o:
+## OpenStack Keystone :o:
 
 
 |          |                        |
@@ -11157,7 +11157,7 @@ rearchitected to allow for expansion to support proxying external
 services and AuthN/AuthZ mechanisms such as oAuth, SAML and openID in
 future versions [@www-keystone].
 
-# LDAP
+## LDAP
 
 
 |          |            |
@@ -11192,7 +11192,7 @@ from a user takes responsibility for the request, passing it to other
 DSAs as necessary, but ensuring a single coordinated response for the
 user.
 
-# Sentry :o:
+## Sentry :o:
 
 
 |          |            |
@@ -11220,7 +11220,7 @@ user.
 
 
 
-# Sqrrl
+## Sqrrl
 
 
 |          |            |
@@ -11231,7 +11231,7 @@ user.
 | keywords | Monitoring |
 
 
-# OpenID :o:
+## OpenID :o:
 
 
 |          |            |
@@ -11257,7 +11257,7 @@ etc. are accepting the OpenIDs [@ope2]. It is an open source and
 not owned by anyone. Anyone can use OpenID or be an OpenID provider
 and there is no need for an individual to be approved.
 
-# SAML OAuth
+## SAML OAuth
 
 
 |          |            |
@@ -11290,7 +11290,7 @@ creates a session for the user in the target application and allows
 the user to get direct access once it receives the authorization
 message from a known identity provider.
 
-# Distributed Coordination
+## Distributed Coordination
 
 
 |          |                          |
@@ -11303,7 +11303,7 @@ message from a known identity provider.
 
 
 
-# Google Chubby :o:
+## Google Chubby :o:
 
 
 |          |                   |
@@ -11327,7 +11327,7 @@ project. ZooKeeper used a Paxos-variant protocol Zab for solving the
 distributed consensus problem.  Google stack and Facebook stack both
 use versions of zookeeper.
      
-# Zookeeper :o:
+## Zookeeper :o:
 
 
 |          |               |
@@ -11354,7 +11354,7 @@ notified of any change [@www-zoo-ibm]. The performance of the
 ZooKeeper is optimum for read-dominant workloads. It's maintained by
 Apache and is open-source.
 
-# Giraffe
+## Giraffe
 
 
 |          |            |
@@ -11382,7 +11382,7 @@ fault-tolerance. Finally, Giraffe also facilitates hierarchical data
 organization and in-memory storage for high throughput and low
 latency.
      
-# JGroups
+## JGroups
 
 
 |          |            |
@@ -11395,7 +11395,7 @@ latency.
 
 
 
-# MQTT
+## MQTT
 
 
 |          |                            |
@@ -11407,7 +11407,7 @@ latency.
 
 
 
-# Avro
+## Avro
 
 
 |          |                            |
@@ -11430,7 +11430,7 @@ dynamic typing - serialization and deserialization without code
 generation, untagged data - data encoding and faster data processing
 by allowing data to be written without overhead.
      
-# Thrift :o:
+## Thrift :o:
 
 
 |          |                            |
@@ -11455,7 +11455,7 @@ originally developed at Facebook, it was open sourced in April 2007
 and entered the Apache Incubator in May, 2008. It became an Apache TLP
 in October, 2010. [@www-thrift]
      
-# Protobuf :o:
+## Protobuf :o:
 
 
 |          |                            |
@@ -11482,7 +11482,7 @@ python.
 
 
 
-# Snort :o:
+## Snort :o:
 
 
 |          |                               |
@@ -11514,7 +11514,7 @@ monitor network traffic and analyze it against a rule set defined by
 the user. The program will then perform a specific action based on
 what has been identified.
 
-# Fiddler
+## Fiddler
 
 
 |          |                               |
@@ -11536,7 +11536,7 @@ stack is automatically directed to the proxy at runtime, but any
 browser or Web application (and most mobile devices) can be configured
 to route its traffic through Fiddler [@www-fiddler].
 
-# Zeppelin :o:
+## Zeppelin :o:
 
 
 |          |                               |
@@ -11559,7 +11559,7 @@ JDBC. It also supports adding new language backend. Zeppelin also lets
 users to collaborate by sharing their Notebooks, Paragraph and has
 option to broadcast any changes in realtime.
 
-# Open MPI :o:
+## Open MPI :o:
 
 
 |          |                               |
@@ -11584,7 +11584,7 @@ production-quality MPI implementation, including support for all of
 MPI-2, multiple concurrent user threads, and multiple options for
 handling process and network failures.
 
-# Apache Tomcat :o:
+## Apache Tomcat :o:
 
 
 |          |                               |
@@ -11606,7 +11606,7 @@ jasper. The most stable version of Apache Tomcat server is version
 platform or OS like Windows, UNIX, AIX or SOLARIS etc. It is basically
 an integral part of many java based web application.
 
-# Apache Beam :o:
+## Apache Beam :o:
 
 
 |          |                               |
@@ -11636,7 +11636,7 @@ contributor, champions the project. [@www-talend-apachebeam] It
 should be grouped with the technologies in the \textit{Interoperability}
 section.
 
-# Cloudability :o:
+## Cloudability :o:
 
 
 |          |                               |
@@ -11659,7 +11659,7 @@ financial system. [@www-cloudability]
 
 
 
-# CUDA :o:
+## CUDA :o:
 
 
 |          |                               |
@@ -11687,7 +11687,7 @@ compression of files.  It is also usedd for distributed calculations,
 face recognition and distributed computing. [@www-cuda-wikipedia]
     
 
-# Blaze :o:
+## Blaze :o:
 
 
 |          |                               |
@@ -11715,7 +11715,7 @@ write their queries in a unified way that does not have to change
 because the data is stored in another format or a different
 data-store. [@www-blaze]
 
-# CDAP :o:
+## CDAP :o:
 
 
 |          |                               |
@@ -11750,7 +11750,7 @@ Hadoop, Cloudera Hadoop, Hortonworks Hadoop and Amazon EMR.  CDAP
 sample apps [@github-cdap-sample-apps] provide explain how to
 implement apps on CDAP platform.
 
-# Apache Arrow :o:
+## Apache Arrow :o:
 
 
 |          |                               |
@@ -11771,7 +11771,7 @@ such a Java, C, C++, Python and it is anticipated that languages will
 be added as it grows.  It is still in early development but has
 released a 0.1.0 build.
 
-# OpenRefine
+## OpenRefine
 
 
 |          |                               |
@@ -11799,7 +11799,7 @@ dataset are stored in a project and can be replayed on another
 dataset. It has a huge community with lots of contributors meaning
 that the software is constantly getting better and better.
 
-# Apache OODT :o:
+## Apache OODT :o:
 
 
 |          |                               |
@@ -11835,7 +11835,7 @@ highly distributed, scalable data platforms that can process large
 amounts of data. OODT technology is used in NASA's Jet Propulsion
 Labatory.
 
-# Omid :o:
+## Omid :o:
 
 
 |          |                               |
@@ -11865,7 +11865,7 @@ until a review indicates that the project meets the standards of other
 ASF projects [@www-apacheincubator]
 
 
-# Apache Ant
+## Apache Ant
 
 
 |          |                               |
@@ -11897,7 +11897,7 @@ tasks. Ant is written in Java. Users of Ant can develop their own
 > Apache Ivy. The Apache Ant project is part of the Apache Software
 > Foundation [@ant-www].
 
-# LXD :o:
+## LXD :o:
 
 
 |          |                               |
@@ -11919,7 +11919,7 @@ migration. [@www-lxd-lists-linux]. It was build with aim of
 providing VM like virtualization with container like
 performance. [@www-lxd-ubuntu]
 
-# Wink :o:
+## Wink :o:
 
 
 |          |                               |
@@ -11944,7 +11944,7 @@ Apache CXF which uses other Apache components like commons-codec,
 commons-logging, Apache-Abdera. Apache wink will simply web services
 development using one single standard.
 
-# Apache Apex
+## Apache Apex
 
 
 |          |                               |
@@ -11981,7 +11981,7 @@ of compute operators like Machine Learning, Stats and Math, Pattern
 Marching, Query and Scripting, Stream manipulators, Parsers and UI \&
 Charting operators [@www-apacheapexblog].
 
-# Apache Knox :o:
+## Apache Knox :o:
 
 
 |          |                               |
@@ -12033,7 +12033,7 @@ support for new and custom Apache Hadoop REST APIs to be added to the
 Knox gateway quickly and easily. [@knox] This technology would be
 best placed under the interoperability category.
 
-# Apache Apex
+## Apache Apex
 
 
 |          |                               |
@@ -12066,7 +12066,7 @@ setup. With different connectors and the ease of adding more
 connectors, Apex easily integrates with an existing
 dataflow [@apex-ease].
 
-# Robot Operating System (ROS)
+## Robot Operating System (ROS)
 
 
 |          |                               |
@@ -12108,7 +12108,7 @@ user interfaces, such as tele-operation and sensor data
 display [@www-software-categories].
 
 
-# Apache Flex :o:
+## Apache Flex :o:
 
 
 |          |                               |
@@ -12131,7 +12131,7 @@ display it visually allowing users to drill down into the data for
 deeper insight and even change the data and have it automatically
 updated on the back end [@wiki-flex].
 
-# Apache Ranger :o:
+## Apache Ranger :o:
 
 
 |          |                               |
@@ -12161,7 +12161,7 @@ filtering and dynamic data masking are most important features of
 Apache Ranger. Ranger also provides centralized auditing of user acces
 and security related administrative actions.
      
-# Google Cloud Machine Learning :o:
+## Google Cloud Machine Learning :o:
 
 
 |          |                                   |
@@ -12195,7 +12195,7 @@ provides two important things:
   hardware configuration and resource
   management [@www-googlecloudoverview].
 
-# Karajan
+## Karajan
 
 
 |          |                               |

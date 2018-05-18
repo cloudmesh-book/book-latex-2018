@@ -4,8 +4,11 @@ INDEX=\
  ./chapters/preface.md\
  ./chapters/contributors.md\
  ./README.md\
+ ./template/technologies.md\
  ./all.md\
- ./incomming.md
+ ./template/incomming.md\
+ ./incomming.md\
+ ./template/refernces.md
 
 
 

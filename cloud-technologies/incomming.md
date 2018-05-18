@@ -1,5 +1,5 @@
 AWS API Gateway
-===============
+---------------
 
 The AWS API Gateway [@hid-sp18-518-AWS-APIGateway] is used to manage
 multiple RESTful services in a defined way. You can set up the API
@@ -11,7 +11,7 @@ authentication/authorization controls, define the lifecycle for the
 services and even track transactions for uses like billing.
 
 AWS DeepLens
-============
+------------
 
 AWS DeepLens is the world's first wireless high definition video camera
 which is optimized for Deep Learning. It comes with computer vision
@@ -46,7 +46,7 @@ Custom built for deep learning
 :   
 
 Amazon Fargate
-==============
+--------------
 
 AWS Fargate is a technology built on top of Amazon elastic container
 services and Kubernetes services. It provides container management where
@@ -79,7 +79,7 @@ Key features of Amazon Fargate:
  [@hid-sp18-522-fargate]
 
 Amazon Lightsail
-================
+----------------
 
 Amazon Lightsail is amazon virtual server. It provides virtual private
 servers which are pre-configured with storage where applications can be
@@ -100,7 +100,7 @@ Each instance of Lightsail gets a private IP address and a public IP
 address which are accessible over web. [@hid-sp18-522-lightsail]
 
 Amazon Glacier
-==============
+--------------
 
 Amazon Glacier is an online file storage web service provided by Amazon
 which can be used for data archiving and
@@ -133,7 +133,7 @@ Glacier set up. User can upload and retrieve data programmatically in
 later phases.
 
 Amazon RDS
-==========
+----------
 
 Amazon RDS [@hid-sp18-420-amazon-RDS] stands for Amazon Relational
 Database Service. Amazon RDS gives access to MySQL, MariaDB, Oracle, SQL
@@ -160,7 +160,7 @@ database to a replicated secondary database in case of any failure. This
 replicated secondary database in sync with primary database.
 
 Amazon Redshift
-===============
+---------------
 
 Amazon Redshift is a product of amazon mainly designed as
 datawarehouse service center that fully manages data warehousing and
@@ -192,7 +192,7 @@ its adoption -
 
 
 Amazon S3
-=========
+---------
 
 Amazon S3 is a simple storage service which mainly focuses on a
 highly-scalable, reliable, and low-latency data storage infrastructure
@@ -223,7 +223,7 @@ only for what the usage is. But price vary as per the chosen region of
 S3.
 
 Apache Atlas
-============
+------------
 
 Apache atlas is the novel adaptable platform which incorporates the
 center set of the functional administration services. The Apache atlas
@@ -255,7 +255,7 @@ by consuming these change
 events [@hid-sp18-412-Apache_Atlas_architecture].
 
 Apache Avro
-===========
+-----------
 
 Avro [@hid-sp18-421-AvroCloud] is a framework for data serialization,
 where serialization is a process of translating object or data structure
@@ -272,7 +272,7 @@ Avro differs from similar systems like Thrift, Protocol Buffers by
 schema evaluation, untagged data and dynamic typing.
 
 Apache Chukwa
-=============
+-------------
 
 Chukwa [@hid-sp-421-ChukwaCloud] is a data collection system built on
 top of Hadoop to monitor large distributed file systems. It collects
@@ -284,7 +284,7 @@ MapReduce jobs. It provides interface to analyse and display
 results [@hid-sp-421-ChukwaComponents].
 
 Apache Whirr
-============
+------------
 
 Apache Whirr provides collection of libraries for running cloud services
 in a neutral way. Whirr began as a set of shell scripts for running
@@ -295,7 +295,7 @@ It defines the layout of clusters, It also has scripts to run operations
 to start, stop and terminate new clusters [@hid-sp18-421-whirrCloud].
 
 Apache Zookeeper
-================
+----------------
 
 Zookeeper is a open source centralized service that enables
 synchronization across cluster. It is also designed to maintain naming,
@@ -308,7 +308,7 @@ the entire cluster which is how it provides centralized
 infrastructure [@hid-sp18-421-zookeeper].
 
 Apache BigTop
-=============
+-------------
 
 BigTop [@hid-sp18-421-BigTopCloud] is Apache Foundation project for
 comprehensive packaging, testing and configuration of bigdata
@@ -318,7 +318,7 @@ integrated smoke testing framework. BigTop provides vagrant recipes, raw
 images and docker recipes to deploy Hadoop from zero.
 
 CensOS Project
-==============
+--------------
 
 The CensOS Project is a open source project that was developped over the
 Red Hat Linux system, it is a well maintained open source projects with
@@ -339,7 +339,7 @@ of the development community is expanding, the functionality of the
 CensOS Project will be more advanced in the future.
 
 CloudTrail
-==========
+----------
 
 The AWS CloudTrail [@hid-sp18-518-CloudTrail] service is an activity
 recording service provided by Amazon Web Services. The service allows
@@ -350,7 +350,7 @@ The data is written into an S3 bucket via JSON and would include
 attributes lik user, IP address, timestamp and the action the user took.
 
 CloudWatch
-==========
+----------
 
 The AWS CloudWatch [@hid-sp18-518-CloudWatch] service is the monitoring
 service provided by Amazon Web Services. Everything from metrics for
@@ -365,7 +365,7 @@ collect logs from your Windows and Linux instances and if you develop an
 API for your application, it can pull from there as well.
 
 Cloudlet
-========
+--------
 
 A cloudlet is technique or mechanism by which the cloud capabilities and
 its wonderful storage,data processing and data analysis power is brought
@@ -397,7 +397,7 @@ bring the cloud closer to the Non powerful devices.
 > micro-cloud'' [@hid-sp18-410-wikiCloudlet]
 
 Cognito
-=======
+-------
 
 The AWS Cognito [@hid-sp18-518-Cognito] service is used to federate your
 user registration and their ability to sign into your services. The
@@ -408,7 +408,7 @@ services. The service is intended to be used in conjuction with AWS IAM
 and STS.
 
 CouchDB
-=======
+-------
 
 CouchDB[@hid-sp18-515-www-couchdb] is a database designed for web, which
 use JSON as the file format to store data. You can use web browser to
@@ -426,7 +426,7 @@ eventually consistent. CouchDB puts your data safely with the
 fault-tolerant storage engine.
 
 ELK Stack
-=========
+---------
 
 ELK is one of most powerful and scalable BigData solutions in the
 current market and is indeed doing pretty good. It can solve many
@@ -454,7 +454,7 @@ a wonderful open source that has collaborated solution for most of
 problems dealing with BigData and cloud.
 
 Edge Computing
-==============
+--------------
 
 Edge computing is a network architecture concept where in the cloud
 computing capabilities are carried out at the edge of cellular network
@@ -491,7 +491,7 @@ would be really useful and saviour for scenarios where offloading to
 cloud is considered costly.
 
 FoundationBenchmarks
-====================
+--------------------
 
 The AWS Foundation Benchmarks [@hid-sp18-518-FoundationBenchmarks]
 project is a repository of Python scripts that can be used to evaluate
@@ -504,7 +504,7 @@ and many other places that are commonly left open by default or
 accident.
 
 Google Cloud Platform - Big data solutions
-==========================================
+------------------------------------------
 
 The Google Big data solutions is a part of Google Cloud Platform
 services; it offers special service on data analyzes and other data
@@ -525,7 +525,7 @@ data solution is also an advantage, since it saves users time and lower
 the cost of data searching [@GoogleCP_BDS].
 
 Google Cloud Platform - Cloud Dataproc
-======================================
+--------------------------------------
 
 The Cloud Dataproc is a part of Google Cloud Platform services. It is a
 efficient, not sophisticated, and well managed cloud service for
@@ -545,7 +545,7 @@ APIs. The richness of the development tools could lower a company cost
 significantly [@GoogleCP_CD].
 
 HBase
-=====
+-----
 
 Apache HBase[@hid-sp18-515-www-hbase]is a distributed, scalable, big
 data store, Hadoop database. You can use Apache HBase when you need
@@ -565,7 +565,7 @@ SQL layers for HBase and JDBC drivers that can be integrated with a
 variety of analytics and business intelligence applications.
 
 HPCC Systems
-============
+------------
 
 HPCC (High Performance computer cluster) systems are open source tool
 which offers the BigData related services. HPCC contains tools that deal
@@ -585,7 +585,7 @@ computing mechanism of the system and the massive cloud computing
 platform bring the HPCC system supercomputing capability [@HPCC].
 
 Apache Hadoop
-=============
+-------------
 
 The Apache Hadoop [@hid-sp18-515-www-hadoop] is an open-source software
 designed for reliable, scalable, distributed computing. The Apache
@@ -606,7 +606,7 @@ management. 4. Hadoop MapReduce: A YARN-based system for parallel
 processing of large data sets.
 
 Hyperledger Burrow
-==================
+------------------
 
 Hyperledger Burrow [@hid-sp18-414-Behlendorf] is an open sourced
 smart-contract interpreter which was built to meet the requirements of
@@ -625,7 +625,7 @@ market. [@hid-sp18-414-Hyperledger_Burrow] [^1]
 [^1]: citation wrongly placed
 
 Hyperledger Fabric
-==================
+------------------
 
 Hyperledger Fabric is one of the oldest and most well known of all the
 Linux foundation Hyperledger projects. Initially created by IBM and
@@ -648,7 +648,7 @@ differing industry/sectors to contribute to this open source platform is
 key to it's success.
 
 Hyperledger Indy
-================
+----------------
 
 Another one of the newer developments from Hyperledger, Hyperledger Indy
 is all about providing independent digital identities across blockchains
@@ -678,7 +678,7 @@ As Behlendorf states,
 
 
 Hyperledger Iroha
-=================
+-----------------
 
 Hyperledger Iroha is an open source, mobile focused blockchain platform.
 The Japanese startup, Soramitsu in partnership with Hitachi started the
@@ -704,7 +704,7 @@ As stated by the Linux Foundation,
 
 
 Hyperledger Sawtooth
-====================
+--------------------
 
 Hyperledger Sawtooth is an open source, blockchain platform which can be
 used to build distributed ledger applications. It's main application is
@@ -735,7 +735,7 @@ interesting distributed ledger technology:
 > and more.'' [@hid-sp18-414-Linux_Foundation_Sawtooth]
 
 IBM Big Replicate
-=================
+-----------------
 
 To make Hadoop deployment enterprise-class, easy data replication is
 required to support critical business applications that depend on
@@ -756,7 +756,7 @@ Distributed File System using Big Replicate via the standard HDFS
 URI[@hid-sp18-408-IBMBigReplicate].
 
 IBM Db2 Big Sql :o:
-===============
+---------------
 
 **citation labels do not have spaces**
 
@@ -786,7 +786,7 @@ make use of easier and faster data processing in Apache Spark, it can be
 integrated with Spark[@hid-sp18-408-IBMDB2BigSql].
 
 Intel Cloud Finder
-==================
+------------------
 
 Intel Cloud finder is an enterprise level solution for choosing cloud
 service provider. It helps the customers seeking help for cloud service
@@ -809,7 +809,7 @@ until Intel makes this tool open to public as this looks to be
 proprietary tool.
 
 Jelastic
-========
+--------
 
 Jelastic is a cloud service provider which combines platform as a
 service and container as a service in a single package.
@@ -834,7 +834,7 @@ Redis, Neo4j, MongoDB, Cassandra, CouchDB and
 OrientDB[@hid-sp18-408-JelasticWiki].
 
 OpenNN
-======
+------
 
 
 
@@ -869,7 +869,7 @@ OpenNN
 
 
 Oracle Nosql Database
-=====================
+---------------------
 
 Oracle NoSQL Database[@hid-sp18-515-www-oraclenosql] is a scalable,
 distributed NoSQL database, designed to provide highly reliable,
@@ -891,7 +891,7 @@ Edition \* - Oracle Database Enterprise Edition Commercial License
 Community Edition - Open source license.
 
 PostgreSQL
-==========
+----------
 
 PostgreSQL, often refered as Postgres [@hid-sp18-420-PostgreSQL_About],
 is an open source, object-relational database management system.
@@ -916,7 +916,7 @@ type. It also supports storage of binary large objects, including
 pictures, sounds, or video [@hid-sp18-420-PostgreSQL_About].
 
 PyTorch
-=======
+-------
 
 
 
@@ -953,7 +953,7 @@ run time.
 
 
 Qubole Data Service
-===================
+-------------------
 
 Qubole is a data services company who offers cloud services, data
 management, and data system security to companies. The BigData Platform
@@ -974,7 +974,7 @@ could be done by different solutions, in order to match the biggest
 profit [@QDS].
 
 RabbitMQ
-========
+--------
 
 RabbitMQ technology is open source message broker, which supports
 multiple messaging protocols. It has many features such as asynchronous
@@ -1011,7 +1011,7 @@ messages to multiple users.
 
 
 Ranger
-======
+------
 
 Apache Ranger[@hid-sp18-515-www-ranger] is a framework to enable,
 monitor and manage comprehensive data security across the Hadoop
@@ -1035,7 +1035,7 @@ control, etc. 5. Centrally audit user access and management operations
 (security-related) in all Hadoop components.
 
 Redis
-=====
+-----
 
 
 
@@ -1063,7 +1063,7 @@ Redis is No SQL database, supports Key
 value databases by mapping its key to type of values.
 
 TensorFlow
-==========
+----------
 
 
 > ``TensorFlow is an open source software library for numerical
@@ -1086,7 +1086,7 @@ mobile and embedded platforms. It has lot of API to support complex
 computations and algorithms.
 
 Teradata Intellibase
-====================
+--------------------
 
 Teradata Intellibase provides a compact environment to perform data
 warehousing, data exploration in an iterative way and advanced analytics
@@ -1112,7 +1112,7 @@ are dual multi-core Intel Xeon
 Processors[@hid-sp18-408-TeradataIntellibase].
 
 Teradata Kylo
-=============
+-------------
 
 Kylo is a data lake management software management platform. It is open
 source and provides features like data ingestion with data clensing and
@@ -1135,7 +1135,7 @@ combination of Kylo and Nifi enables data owners to create new data
 feeds[@hid-sp18-408-TeradataKylo].
 
 The GO Programming Language
-===========================
+---------------------------
 
 Go is an open source programming language developed by team of Google
 Robert Griesemer, Rob Pike and Ken Thompson. Its easy to build simple,
@@ -1174,7 +1174,7 @@ Key features of GO Language are:
  [@hid-sp18-522-golanguage]
 
 AlibabaCloud
-============
+------------
 
 Alibaba Cloud is a tech giant which provides cloud computing services to
 support both international customers and their own internal business
@@ -1192,7 +1192,7 @@ networking and also cloud-based mobile-device operating
 systems [@hid-sp18-406-AlibabaCloud].
 
 Alluxio
-=======
+-------
 
 Alluxio is open source project under Apache License 2.0. [@alluxio]
 Applications only has to connect with Alluxio to access data stored in
@@ -1206,7 +1206,7 @@ between big data applications and traditional storage systems , and
 expands the set of workloads available to utilize the data.
 
 Amazon Aurora
-=============
+-------------
 
 Amazon's Aurora is a relational database that is compatible with MySQL
 and PostgreSQL that puts together performance and availability of
@@ -1223,7 +1223,7 @@ designed to reduce Input/Output operations and costs so that resources
 can be available.
 
 Amazon CloudFront
-=================
+-----------------
 
 A Content Delivery Network is a *globally distributed network of
 webservers* [@hid-sp18-512-amazon-cloudfront-b] over the internet at
@@ -1254,7 +1254,7 @@ This also includes plans for constructing 14 other zones in the coming
 future.
 
 Amazon DynamoDB
-===============
+---------------
 
 NoSQL refers to a non-relational database the provides high performance
 and using various data models such as document, key-value, graph, and
@@ -1270,7 +1270,7 @@ worry about the burdens of operating distributed services such as
 hardware setup, configurations and software patches.
 
 Amazon VPC
-==========
+----------
 
 A VPC is part of the AWS infrastructure that is logically isolated and
 spans a whole entire region of AWS to which the instances were created.
@@ -1294,7 +1294,7 @@ simplicity, advanced security, and all the scalability and reliability
 of AWS [@hid-sp18-512-amazon-vpc]
 
 Amazon EC2
-==========
+----------
 
 Amazon Elastic Compute Cloud (Amazon EC2) [@www-amazonec2]is a web
 service provided by Amazon.com. It is a system that allows users to rent
@@ -1318,7 +1318,7 @@ together to provide high security.
 
 
 Amazon Elastic Beanstalk
-========================
+------------------------
 
 AWS Elastic Beanstalk [@hid-sp18-420-amazon-elastic-beanstalk] is a
 managed service used for application deployment and management. Using
@@ -1344,7 +1344,7 @@ resources they have used to store and run the applications such as EC2,
 S3, RDS or any other resources used.
 
 Amazon Machine Learning
-=======================
+-----------------------
 
 AmazonML is a service for machine learning that makes it possible to
 design and build applications that can be used for prediction,
@@ -1370,7 +1370,7 @@ provide the resources for faster development of sophisticated models.
 > models.'' [@hid-sp18-512-amazonml-a]
 
 Ansible
-=======
+-------
 
 Ansible is a widely popular open-source tool used for automation of
 configuration management, application deployment. Ansible is popular
@@ -1407,7 +1407,7 @@ Playbooks:
     in YAML.
 
 Apache Accumulo
-===============
+---------------
 
 Based on Google's BigTable design, Apache has their own data store
 called Accumulo[@hid-sp18-526-www-apache-accumulo]. Accumulo overlays
@@ -1428,7 +1428,7 @@ garbage collector, tablet server (table partition manager), and tracer
 (for timing) are also included as well as iterators for data management.
 
 Apache Ambari
-=============
+-------------
 
 Ambari is a software to manage Hadoop environment efficiently by
 providing services like managing, monitoring and provisioning to the
@@ -1449,7 +1449,7 @@ shows cluster health and cluster status, also by collecting different
 metrics like Job status, Maps slots utilization, garbage collection.
 
 Apache Ignite
-=============
+-------------
 
 Apache Ignite is an in-memory distributed database, caching, and
 processing platform for transactional, analytical, and streaming
@@ -1472,7 +1472,7 @@ acceleration, all in one well-integrated in-memory data
 fabric [@hid-sp18-501-GridGain].
 
 Apache Impala
-=============
+-------------
 
 Apache Impala acts as analytic database for Apache Hadoop. Impala can be
 used from many open source distributions like Cloudera, MapR, Oracle and
@@ -1490,7 +1490,7 @@ works on data stored and run in Apache Hadoop clusters.
 
 
 Apache Phoenix
-==============
+--------------
 
 Apache Phoenix[@hid-sp18-526-www-apache-phoenix] is an open-source
 database engine by Apache that works in tandem with Hadoop and HBase.
@@ -1511,7 +1511,7 @@ download the Phoenix jar file. Phoenix is currently used by many large
 corporations such as eBay, Salesforce, and Bloomberg.
 
 Apache CloudStack
-=================
+-----------------
 
 Apache CloudStack is an open source that provides a highly scalable and
 available cloud management platform for IT Enterprises and service
@@ -1548,7 +1548,7 @@ system.
 Scalability [@hid-sp18-417-cloudstack-scaling][]{label="F:cloudstack-scalabuility"}](images/hid-sp18-417-cloudstack.png){width="\textwidth"}
 
 Apache Couch DB
-===============
+---------------
 
 Apache Couch DB is a NoSQL database which uses document instead of
 tables to store the data. It simplifies the interaction with application
@@ -1562,7 +1562,7 @@ and totally reliable framework. It also supports Map-reduce
 operations [@hid-sp18-502-ApacheCouchDB].
 
 Apache Curator
-==============
+--------------
 
 Apache Curator framework initially developed by NetFlix. In July 2007
 this framework has been open sourced to GitHub.
@@ -1597,7 +1597,7 @@ default it supports high availability and disater recovery and no signle
 point of failure in the enterprise [@hid-sp18-514-nirmataCurator]
 
 Apache Delta Cloud
-==================
+------------------
 
 Apache DeltaCloud was developed in collaboration between Apache
 Foundation and Redhat to provide a programming application that will
@@ -1627,7 +1627,7 @@ lack of popularity RedHat withdrew the sponsorship ultimately resulting
 in the termination of the project.
 
 Apache Drill
-============
+------------
 
 Apache Drill is an open-source framework for distributing computing on
 applications handling data-intensive analysis. It is the open-source
@@ -1640,7 +1640,7 @@ storage file formats including Parquet, JSON, CSV, and TSV in
 MapR-XD [@hid-sp18-404-Drill2017].
 
 Apache Geode
-============
+------------
 
 Apache Geode is an in-memory distributed data management platform that
 provides real-time, consistent access to data-intensive application
@@ -1671,7 +1671,7 @@ Spring Cache [@hid-sp18-514-geodespringcache], and
 Python [@hid-sp18-514-geodepython].
 
 Apache Karaf
-============
+------------
 
 Apache Karaf is a lightweight enterprise application container. This
 container can be used as a standalone server. It also supports the run
@@ -1698,7 +1698,7 @@ For more details on setup, configuration, deployment and download,
 please refer index.
 
 Apache Kylin
-============
+------------
 
 Apache Kylin is an Distributed Analytics Engine which has the capability
 to query massive SQL data at sub-second speed. It is an Big Data
@@ -1709,7 +1709,7 @@ storage enable the query engine to achieve high speed data quering on
 tables that contain 10+ billion records.
 
 Apache Mahout
-=============
+-------------
 
 Apache Mahout is commericial platform built for scalable implementation
 of machine learning algorithms. It has support for Apache Spark
@@ -1721,7 +1721,7 @@ available commercially is still in its development
 stage.[@hid-sp18-411-apachemahout].
 
 Apache Mesos
-============
+------------
 
 Apache Mesos is the distributed systems kernel built similarly to the
 Linux kernel, but runs on a different level [@hid-sp18-404-Apache2018].
@@ -1732,7 +1732,7 @@ framework handling infrastructure scheduling
 operations [@hid-sp18-404-Mesos2018].
 
 Apatar
-======
+------
 
 Apatar [@hid-sp18-402-www-apatar] is a data integration tool which
 provides the capability to work with data across different systems and
@@ -1772,7 +1772,7 @@ loading, post data load processing like archival, indexing, aggregation
 and scheduling and event management.
 
 AppFog
-======
+------
 
 AppFog which acts as platform-as-a-Service (Paas) is developed on the
 basis of the Cloud Foundry by Century Link. It empowers developers to
@@ -1801,7 +1801,7 @@ existing application using the *Cloud Foundry's User Provided Service
 Capability* [@hid-sp18-412-century_link_appfog].
 
 Appscale
-========
+--------
 
 Appscale developed with the objective of releasing, sending and scaling
 the Google App Engine applications over the public and private systems
@@ -1827,7 +1827,7 @@ to combine the existing platform with the other novel
 technologies [@hid-sp18-412-git_appscale].
 
 Apttus
-======
+------
 
 Apttus provide various products for Customer Relationship Management
 (CRM) and use artificial intelligence (AI) to maximize the customer
@@ -1850,7 +1850,7 @@ customer as Quote-to-Cash is heart of the business. Apttus provide both
 on premise and cloud products [@hid-sp18-511-apttus].
 
 ArangoDB
-========
+--------
 
 ArangoDB is a NoSQL database system used to support multiple data models
 against a single backend engine. ArangoDB supports three main models
@@ -1868,7 +1868,7 @@ popularity for native multi-model databases such as ArangoDB
 [@hid-sp18-416-www-graphdb-blog].
 
 Amazon Athena
-=============
+-------------
 
 Amazon Athena [@hid-sp18-521-athena-faq] is a service from AWS that
 allows the user to analyze their data stored on Amazon S3 using SQL
@@ -1888,7 +1888,7 @@ is great for fast on demand querying, but can be used for complex joins,
 window functions and arrays as well.
 
 AtomSphere
-==========
+----------
 
 Boomi AtomSphere is basically an integration platform that supports all
 application integration processes between cloud platforms, SaaS and
@@ -1903,7 +1903,7 @@ the integration. It can dedicate
 
 
 AWS CodeStar
-============
+------------
 
 AWS CodeStar is a developer tool used to develop projects and easily
 deploy on AWS cloud. It includes all of the tools and services needed
@@ -1919,7 +1919,7 @@ project team directly from the AWS CodeStar
 console[@hid-sp18-602-www-awscodestar-blog].
 
 Azure Blob Storage
-==================
+------------------
 
 Microsoft Azure BLOB storage service can be used to store and retrieve
 Binary Large Objects (BLOBs), or what are more commonly known as
@@ -1950,7 +1950,7 @@ files and running the concurrent uploads. A Block BLOB has a maximum
 size of 200 GB [@hid-sp18-501-RedGate]
 
 Azure Cosmos DB
-===============
+---------------
 
 Azure Cosmos DB is a globally-distributed data service that allows
 elastically scaling throughput and storage across any number of
@@ -1966,7 +1966,7 @@ is that it does not have a relational data
 model [@hid-sp18-501-Stackify]
 
 Azure
-=====
+-----
 
 Azure can support different kinds of operatring systems and programming
 language, which is cloud services that developers can used to get their
@@ -1987,7 +1987,7 @@ Besides, lots of choices can pick in the cloud with Azure.
 
 
 Backblaze
-=========
+---------
 
 Backblaze is a cloud backup service [@hid-sp18-601-www-bblaze-about],
 providing solutions to business [@hid-sp18-601-www-bblaze-business] and
@@ -2000,7 +2000,7 @@ amount of data is to much to be downloaded Backblaze offers a service to
 mail a encripted flash drive or hard drive instead.
 
 BigML
-=====
+-----
 
 BigML [@hid-sp18-504-cloudacad-bigml] is a Machine Learning platform
 focused on delivering a wide range of ML solutions, while aiming to
@@ -2022,7 +2022,7 @@ possible to convert these models into procedural code that is offered in
 various different languages and formats [@hid-sp18-504-cloudacad-bigml].
 
 Blockchain
-==========
+----------
 
 A blockchain is a continuously growing list of linked records, called
 blocks. The most recent transactions are recorded and added to it in
@@ -2064,7 +2064,7 @@ form of identification and there are billions of them in the world.
 Blockchain is here to stay.
 
 IBM BlueMix
-===========
+-----------
 
 BlueMix is a cloud developed by IBM to provide platform as a service s
 (PaaS) to build enterprise level application. In 2017, IBM merged
@@ -2086,7 +2086,7 @@ subscription. It provides various deployment options as on-premises,
 dedicated private cloud or public cloud [@hid-sp18-402-www-ibm].
 
 BMC Multi-Cloud
-===============
+---------------
 
 Cloud service introduced a new concept in how to manage IT application
 and the infrastructure cost and as it matured more, many businesses
@@ -2109,7 +2109,7 @@ migration to the cloud as well as provides migration plan and simulates
 forecast annual cost [@hid-sp18-402-bmc].
 
 Caffe
-=====
+-----
 
 Caffe is a deep learning framework developed by Berkeley AI Research.
 Caffe is optimized for research experiments and industrial applications.
@@ -2120,7 +2120,7 @@ picture pattern recognition, text parsing, and speech
 composition [@hid-sp18-404-jia2014caffe].
 
 Apache Carbondata
-=================
+-----------------
 
 As the amount of data we have increases storing and performing analytics
 of this data becomes increasingly difficult. Apache carbondata is an
@@ -2140,7 +2140,7 @@ deleting them and performing queries on these
 tables [@hid-sp18-503-www-carbondata-mgmt].
 
 Cascading
-=========
+---------
 
 Cascading is an open source data processing project started in early
 2008. Cascading functions as a work flow workhorse within the Apache
@@ -2158,7 +2158,7 @@ capabilities [@hid-sp18-507-MapR].The open source platform an all
 extensions are available through the Apache Public License.
 
 Clive
-=====
+-----
 
 Clive is an open-source, distributed operating system written in Go by
 the Laboratorio De Sistemas at Universidad Rey Juan Carlos in
@@ -2175,7 +2175,7 @@ released in 1992[@hid-sp18-419-www-about-plan9], and NIX, a
 
 
 Clojure
-=======
+-------
 
 Clojure [@hid-sp18-413-clojure] is a fully functional scripting
 language. Although it is a complied programming language, all its
@@ -2190,7 +2190,7 @@ mutual exclusion and dwarves berserkers and Clojure handles them by
 implementing three tools called futures, delays and promises.
 
 Cloud AutoML
-============
+------------
 
 Cloud AutoML is an innovative tool with simple graphical user interface
 to train and test users custom machine learning
@@ -2211,7 +2211,7 @@ Disney and Zoological Society of London are actively using AutoML
 Vision [@hid-sp18-602-wwww-cloudautoml-blog].
 
 CloudHub
-========
+--------
 
 CloudHub is a cloud-based integration platform by MuleSoft which is
 mainly used for connecting SaaS, cloud and local applications and
@@ -2227,7 +2227,7 @@ CloudHub has a REST API which can perform
 tasks such as manage, monitor and scale applications.
 
 Microsoft Cognitive Toolkit
-===========================
+---------------------------
 
 The Microsoft Cognitive Toolkit (CNTK) is an open-source project that
 can be used for implementing distributed deep learning commercially. Per
@@ -2251,7 +2251,7 @@ both Windows and Linux operating systems.
 > as Python and C\#'' [@hid-sp18-510-kd-cntk].
 
 ConnectTheDots
-==============
+--------------
 
 ConnectTheDots is a Microsoft Open source Technology project which makes
 it possible to [@Azure-IoT] connect IoT devices and sensors to the
@@ -2265,7 +2265,7 @@ to collect data from devices that cannot, or should not, target the
 cloud directly
 
 Databricks
-==========
+----------
 
 Azure Databricks is founded as an open source project by Microsoft in
 collaboration with and the creators of Apache Spark and Databricks
@@ -2289,7 +2289,7 @@ data using Azure Active Directory integration, role-based controls,
 SLAs, etc. [@hid-sp18-409-www-databricks].
 
 Datalab
-=======
+-------
 
 Cloud Datalab [@hid-sp18-504-google-datalab] is an open source tool part
 of the Google Cloud Platform suite which focuses on delivering analytic,
@@ -2313,7 +2313,7 @@ once this is deployed as an App Engine application and cloud services
 are utilized [@hid-sp18-504-techcrunch-datalab].
 
 Datameer
-========
+--------
 
 Datameer is self service, schema free Big Data Analytics tool which
 provides end to end analytics. Datameer, a data analytics application
@@ -2333,7 +2333,7 @@ provides end to end solution from data extraction, profiling, cleansing,
 transforming, merging, securing and finally visualization.
 
 DBI
-===
+---
 
 DBI is a package for R that provides a common interface to databases for
 R programmers to use [@hid-sp18-403-R-dbi]. This allows R to access data
@@ -2345,7 +2345,7 @@ are handled through connectivity packages, such as
 *odbc* [@hid-sp18-403-rstudio-odbc].
 
 DBplyr
-======
+------
 
 DBPlyr is the bridge between R's immensly popular tidyverse, and the DBI
 data connection family [@hid-sp18-403-tidy-dbplyr]. The package allows
@@ -2360,7 +2360,7 @@ meaning that almost no data is transferred into local memory until it is
 explicitly asked for.
 
 Data Virtualization
-===================
+-------------------
 
 Data Virtualization is a modern approach of data integration.Denodo is a
 data virtualization platform [@denodo] which provides agile, high
@@ -2373,7 +2373,7 @@ by imposing data model governance.Denodo platform can be used for many
 use cases covering operational and analytics functions.
 
 Distributed Machine Learning Tool Kit
-=====================================
+-------------------------------------
 
 Distributed Machine Learning Tool Kit, or otherwise known as
 DMTK [@hid-sp18-504-dmtk], is a scalable collection of distributed
@@ -2404,7 +2404,7 @@ tasks such as speech recognition and computer
 vision [@hid-sp18-504-msresearch].
 
 docker
-======
+------
 
 Docker is an open platform for developers and sysadmins to build, ship,
 and run distributed applications, whether on laptops, data center VMs,
@@ -2420,7 +2420,7 @@ host computer. This gives a significant performance boost and reduces
 the size of the application  [@hid-sp18-513-opensource].
 
 Dokku
-=====
+-----
 
 Dokku [@hid-sp18-402-www-dokku] is a Platform as a Service (PaaS) that
 runs on a single server which helps build and manage the lifecycle of
@@ -2436,7 +2436,7 @@ developers can concentrate more on application
 logic [@hid-sp18-402-www-dokkuG].
 
 Drake
-=====
+-----
 
 Drake is an R package focused on reproducible research and
 high-performance computing [@hid-sp18-403-R-drake]. It is an R-centric
@@ -2452,7 +2452,7 @@ enables higher performance computing, by allowing users to build
 multiple targets at once, elevating R past its single threaded default.
 
 Google Dremel
-=============
+-------------
 
 With vast amount of publicly available data over the internet/cloud,
 there was a need of technological system/framework that is deployed on
@@ -2482,7 +2482,7 @@ engine based on on aggregating trees algorithm that provides output
 almost realtime for queries.
 
 Druid
-=====
+-----
 
 Druid is a high-performance, column-oriented, distributed datastore
 written in Java. Druid can be used to analyze large volumes of real time
@@ -2498,7 +2498,7 @@ been identified as a very fast analytics database for fast real-time
 applications [@hid-sp18-416-www-fast-dataanalytics-druid-blog].
 
 IBM Data Science Experience
-===========================
+---------------------------
 
 IBM has compiled data science tools in one location, called Data Science
 Experience. This one location provides access to the IBM Cloud, and
@@ -2515,7 +2515,7 @@ Science Experience. Tools such as PixieDust and Brunel are available,
 without programming experience[@hid-sp18-525-dsx].
 
 Apache Edgent
-=============
+-------------
 
 The number of connected devices are constantly increasing. Many of the
 devices that form the internet of thingss (IoT) are sensors, or devices
@@ -2538,7 +2538,7 @@ platform, and allows custom message hubs as
 well [@hid-sp18-503-www-edgent-docs].
 
 Elasticsearch
-=============
+-------------
 
 The central engine to the Elastic product line, Elasticsearch is a
 distributed, RESTful search engine designed to grow with growing data.
@@ -2560,7 +2560,7 @@ JavaScript, and more [@hid-sp18-507-Elasticsearch]. DB-Engines, a
 
 
 Amazon EMR
-==========
+----------
 
 Amazon EMR [@hid-sp18-521-AmazonEMR] is a Hadoop framework that allows
 the user to process data on the AWS platform using their EC2 technology
@@ -2577,7 +2577,7 @@ through a web service interface or you can also use the AWS Management
 Console to launch and monitor your clusters.
 
 ESRI
-====
+----
 
 Environmental Systems Research Institute (ESRI) offers geospatial
 related data services and process online through its proprietary API.
@@ -2586,7 +2586,7 @@ demographic data, a dynamic world atlas, and multiple data sets in a
 open-data resource [@hid-sp18-505-ESRI2018].
 
 Ethereum
-========
+--------
 
 Ethereum is an open-source, public, distributed computing that
 
@@ -2620,7 +2620,7 @@ applications. Big companies and government institutions are investing in
 the blockchain technology and Ethereum can play a major role in it.
 
 Firebase
-========
+--------
 
 Firebase is an open source project found by James Tamplin and Andrew Lee
 in 2011 and later acquired by Google in
@@ -2642,7 +2642,7 @@ Android and iOS mobile application is recently identified as the most
 famous feature of firebase cloud services.
 
 Firepad
-=======
+-------
 
 Firepad is an open source real-time collaborative code and text editing
 cloud platform found by Google in 2016 and licensed under
@@ -2665,7 +2665,7 @@ successful applications which utilizes
 Firepad [@hid-sp18-409-www-databricks]
 
 Fission
-=======
+-------
 
 Fission [@hid-sp18-521-FissionBlog] is an open source, serverless
 framework for Kubernetes. It allows you to create HTTP services on
@@ -2683,7 +2683,7 @@ only languages supported for it right now are NodeJS, PHP, Go, C\# and
 Python.
 
 Fluentd
-=======
+-------
 
 Fluentd is a data collector used by many organizations such as Amazon,
 Microsoft, and Google[@hid-sp18-526-www-fluentd]. It is open source and
@@ -2703,7 +2703,7 @@ their logging layer in conjuction with Google BigQuery. The Fluentd
 project also includes *Fluent Bit* which is a data forwarding system.
 
 Future Grid
-===========
+-----------
 
 Future Grid wroks through four ways, which contains Connect, Configure,
 Deploy and Learn [@www-futuregrid].
@@ -2731,7 +2731,7 @@ Steve Avery said,
 
 
 Google Genomics
-===============
+---------------
 
 With the size of medical data getting increased exponentially from
 petabytes to exabytes rapidly, Google came up with Google Genomics as
@@ -2764,7 +2764,7 @@ databases [@hid-sp18-523-www-genomics].
 
 
 Gephi
-=====
+-----
 
 Gephi [@hid-sp18-402-gephi] is an open source software for visualization
 and exploration for all kind of graphs and network. It is a useful tool
@@ -2790,7 +2790,7 @@ extended using built-in plugin center. It is supported on Windows, Mac
 OS X, Linux platforms [@hid-sp18-402-gephiF].
 
 GitHub Developer
-================
+----------------
 
 GitHub is a software management platform that offers free and fee-based
 services that can be used for managing source code for software
@@ -2803,7 +2803,7 @@ OpenRefine [@hid-sp18-505-OpenRefine2018] is a reference to a variety of
 data sources that are open for public use [@hid-sp18-505-GitHub2018].
 
 Apache Gobblin
-==============
+--------------
 
 As the amount of data increases and its sources become numerous, it gets
 difficult to integrate this data to solve a specific problem. Apache
@@ -2822,7 +2822,7 @@ integration jobs on any mode of Gobblin
 deployment [@hid-sp18-503-www-gobblin-docs].
 
 Google BigQuery
-===============
+---------------
 
 Google BigQuery is a cloud-based big data analytics web service for
 processing very large read-only data sets. BigQuery can analyze data on
@@ -2837,7 +2837,7 @@ It also allows the capture and analysis of data in real-time using its
 powerful streaming ingestion [@hid-sp18-501-GoogleCP_BQ].
 
 Google Docs
-===========
+-----------
 
 Google Docs is a free office suite offered by
 Google [@hid-sp18-601-www-gdoc-about]. It is a part of Google Drive,
@@ -2847,7 +2847,7 @@ users to edit the same file. While it has apps in Android and iOS it
 only has PC programs on Chrome Books.
 
 Google App Engine
-=================
+-----------------
 
 Google App Engine, generally called App Engine is a Platform as a
 service cloud solution (PaaS). It lets you build and run applications on
@@ -2873,7 +2873,7 @@ in sandbox with prespecified runtime environment of supported language
 then its instances are run in Python runtime.
 
 Cloud Bigtable
-==============
+--------------
 
 Cloud Bigtable is googles NoSQL big data storage service. This is
 currently used by google itself for their own services like search
@@ -2886,7 +2886,7 @@ performance of millions of transactions per
 second [@hid-sp18-502-GoogleCloudBigtable].
 
 Google Compute Engine
-=====================
+---------------------
 
 As an infrastructure as a service Google Compute Engine (GCE) provides
 scalable, high performance virtual machines to their
@@ -2906,7 +2906,7 @@ claims to be cost effective and environmentally friendly compared to its
 competitors like Amazon Web Services.
 
 Google Firebase
-===============
+---------------
 
 Google Firebase is an Commercial cloud based platform that provides
 users with the capability to build mobile applications for various
@@ -2919,7 +2919,7 @@ features. This platform is also available free of cost with limited
 functionalities for individual users.
 
 Google Load Balancing
-=====================
+---------------------
 
 Google Cloud Load Balancing is a high performance, scalable load
 balancing, which has state of the art auto scaling feature which
@@ -2932,7 +2932,7 @@ enables users to integrate any of these flavors easily through a single
 interface.
 
 Google Stackdriver
-==================
+------------------
 
 With increasing cloud-based applications it is hard for Devops engineers
 to keep track of performance, availability and issues associated with
@@ -2947,7 +2947,7 @@ capabilities, which ultimately enables users to find and fix issues
 faster[@hid-sp18-602-www-google-stackdriver-main].
 
 Apache Gossip
-=============
+-------------
 
 Many of the applications that are cloud based and require a huge amount
 of computation or data storage in the back end, use cloud based
@@ -2966,7 +2966,7 @@ the need to broadcast from every node to every other node in the cluster
 [@hid-sp18-503-www-gossip-wiki].
 
 GraphQL
-=======
+-------
 
 Data services have been an important component in the evolution of the
 information age. In the early 2000s data-based web services relied
@@ -2995,7 +2995,7 @@ REST architecture.
 
 
 AWS Greengrass
-==============
+--------------
 
 AWS Greengrass [@hid-sp18-521-Greengrass] is a product that allows a
 developer to create serverless code residing on AWS that can then be run
@@ -3013,7 +3013,7 @@ trained and optimized model to new data, before sending the
 appropriately filtered data back to the cloud.
 
 H20
-===
+---
 
 
 
@@ -3041,7 +3041,7 @@ online sales are using H2O platform for their machine learning and AI
 related research.
 
 HCatalog
-========
+--------
 
 HCatalog, which was originally known as Howl, is a component shipped
 with Hive that manages storage and tables. Its purpose is to simplify
@@ -3053,7 +3053,7 @@ called WebHCat (originally Templeton) is also
 available [@hid-sp18-419-www-hc-wiki].
 
 Heroku
-======
+------
 
 Heroku, an open cloud platform provides developers a stage where they
 can develop and deploy their applications. It is a Platform as a service
@@ -3079,7 +3079,7 @@ deployment. PostgreSQL, MongoDB, Redis and Cloudant are common database
 choices of Heroku [@hid-sp18-415-www-heroku].
 
 Hue
-===
+---
 
 Hue or Hadoop User Interface is an open source tool licensed under
 Apache v2 license. It sits on top of the data at the visualization layer
@@ -3099,7 +3099,7 @@ is available in all major Hadoop distributions such as Cloudera,
 Hortonworks, MapR and AWS [@hid-sp18-517-Hue-wiki].
 
 IBM Cloud
-=========
+---------
 
 In 2017, IBM fully committed to cloud computing. IBM BlueMix is now IBM
 Cloud. The changes go far beyond the name. The new platform gives IBM a
@@ -3120,7 +3120,7 @@ becoming the most known product IBM offers, and it is a major componet
 of IBM Cloud[@hid-sp18-525-cloud].
 
 ID2020
-======
+------
 
 ID2020 is a new software tool sponsored by the United Nations. It will
 let millions of refugees and other without documents whip out a phone or
@@ -3156,7 +3156,7 @@ storage that we traditionally use for big data. Blockchain still has a
 lot of untapped potential.
 
 IICS
-====
+----
 
 Informatica provides various products in data integration and data
 warehousing domain. Informatica provide on premise products for Big
@@ -3176,7 +3176,7 @@ data processing and all the infrastructure related activities will be
 taken care by cloud [@hid-sp18-511-iics].
 
 Instabug
-========
+--------
 
 Instabug is a cloud service provider which provides in-app feedback,
 user surveys, bug reporting, and crash reporting for mobile
@@ -3197,7 +3197,7 @@ Buzzfeed, Kik and Nextdoor are few famous applications which uses
 Instabug for bug and crash reporting[@hid-sp18-409-www-instabug].
 
 Jaspersoft
-==========
+----------
 
 Jaspersoft is a Business Intelligence (BI) platform that provides its
 customers with highly interactive reports, analytics and dashboards.
@@ -3234,7 +3234,7 @@ Jaspersoft is a gold partner with MySQL and was recently acquired by
 TIBCO in April 28, 2014 [@hid-sp18-516-www-wiki-jasperreports].
 
 JavaScript
-==========
+----------
 
 JavaScript is a ubiquitous programming language with an enormous number
 of uses. It is best known as the language used to createweb
@@ -3247,7 +3247,7 @@ rendering web content. As an object-oriented language, JavaScript has
 unlimited potential as a programming platform[@hid-sp18-525-java].
 
 JMP
-===
+---
 
 JMP, commonly referred to as *Jump*, is an enterprise level statistical
 analysis tool developed by SAS. The JMP software package is designed to
@@ -3265,7 +3265,7 @@ analytics and predictive modeling with cross-validation--available for
 14,900 USD [@hid-sp18-507-JMPPro].
 
 Kafka
-=====
+-----
 
 Kafka is an open source distributed streaming platform that belongs to
 the Apache Hadoop family. It is mainly used in data ingestion and
@@ -3282,7 +3282,7 @@ of Kafka are website activity tracking, messaging and log
 aggregation [@hid-sp18-517-ApacheKafka].
 
 Keras
-=====
+-----
 
 
 
@@ -3306,7 +3306,7 @@ method, do regularization of neural network with techniques such as
 dropout, etc..
 
 KNIME
-=====
+-----
 
 KNIME Analytics Platform [@hid-sp18-504-pred-knime] (otherwise known as
 Konstanz Information Miner) is an open source platform focused on
@@ -3332,7 +3332,7 @@ Hadoop data, to be included in the same pipeline workflow and provide
 data and tool blending capabilities [@hid-sp18-504-knime].
 
 Kubernetes
-==========
+----------
 
 Kubernetes is an open-source platform designed to automate deploying,
 scaling, and operating application containers.
@@ -3355,7 +3355,7 @@ can be used across a wide variety of
 workloads [@hid-sp18-510-wiki-Kubernetes].
 
 Kudu
-====
+----
 
 Apache Kudu was designed to fit into the Hadoop ecosystem and it serves
 as the storage layer that enables fast analytics on fast
@@ -3370,7 +3370,7 @@ advantage of next generation hardware and in-memory
 processing [@hid-sp18-517-ApacheKudu].
 
 Kylin
-=====
+-----
 
 Apache Kylin is an Online analytical processing or OLAP engine developed
 specially for Big Data applications. Analysts around the world today use
@@ -3388,7 +3388,7 @@ and HDFS stores intermediate files during cube building
 process [@hid-sp18-517-ApacheKylin].
 
 LightGBM
-========
+--------
 
 
 > ``A fast, distributed, high performance gradient boosting(GBDT,
@@ -3412,7 +3412,7 @@ it is gaining popularity in Machine Learning community and people are
 using this in their Kaggle machine learning projects.
 
 Lingual
-=======
+-------
 
 Lingual is a free, open source project designed to build Big Data
 applications on Apache Hadoop [@hid-sp18-516-www-drivenio-lingual]. All
@@ -3449,7 +3449,7 @@ enabling fast and simple Big Data application development on Apache
 Hadoop [@hid-sp18-516-www-drivenio-lingual].
 
 LinkedIn WhereHows
-==================
+------------------
 
 LinkedIn WhereHows is a open source project carried out by the LinkedIn
 Data team. The project works by creating a central repository and portal
@@ -3469,7 +3469,7 @@ data: *where* is the data, and *how* is it produced and
 consumed [@hid-sp18-405-githubwiki-wherehows].
 
 Linode
-======
+------
 
 Linode is a cloud service provider. It provide compute, storage and
 networking services on demand. Linode provide SSD Storage which is
@@ -3488,7 +3488,7 @@ Linode offer different billing plans and customer can select the plan as
 per their requirement [@hid-sp18-511-linode].
 
 Logicalglue
-===========
+-----------
 
 Logicalglue [@hid-sp18-413-logicalglue] is a predictive analystics
 software that is mostly targeted towards insurance sector. It employs
@@ -3502,7 +3502,7 @@ realtime. This model accurately works on complete lifecycle of a project
 right from customers acquisition to closure.
 
 Lumify
-======
+------
 
 Lumify is an open source project developed at US national security
 contractor Altamira, with key features indlucing big data fusion,
@@ -3527,7 +3527,7 @@ These cloud technologies allow for greater flexibility and usability of
 Lumify.
 
 Apache Mahout
-=============
+-------------
 
 Apache Mahout, an Apache Software Foundation project, is a distributed
 Scala DSL based linear algebra framework designed to aid mathematicians,
@@ -3549,7 +3549,7 @@ core algorithms primarily contain implementations for clustering,
 classification, and Collaborative filtering [@hid-sp18-510-wiki-Mahout].
 
 MapBox
-======
+------
 
 MapBox is a geospatial data and location platform for multiple
 application forms. The MapBox platform provides services and features
@@ -3562,7 +3562,7 @@ proprietary platform MapBox offers free services and access for limited
 use [@hid-sp18-505-MapBox2018].
 
 MariaDB
-=======
+-------
 
 MariaDB is an open source relational database. It has 12 million users
 worldwide and one of the fastest growing databases in the
@@ -3599,7 +3599,7 @@ to support enterprise needs from OLTP to
 analytics [@hid-sp18-516-www-mariadb].
 
 Mesosphere
-==========
+----------
 
 Mesosphere is an Datacenter Operating Platform for data-intensive
 applications. It is based on the Apache Mesos
@@ -3615,7 +3615,7 @@ with Amazon AWS and Microsoft Azure.
 [^1]: Please can you elaborate?
 
 Metron
-======
+------
 
 Apache Metron is yet another open source project that serves as a big
 data solution for CyberSecurity applications. It provides a framework to
@@ -3640,7 +3640,7 @@ Information technology service management systems to provide
 traceability [@hid-sp18-517-metron-hortonworks].
 
 Apache Milagro
-==============
+--------------
 
 As an increasing number of connected devices communicate data with each
 other, data security must be taken into account. Apache Milagro is a
@@ -3661,7 +3661,7 @@ lifecycle is a part of ythe crypto system
 itself [@hid-sp18-503-www-milagro-docs].
 
 mLab
-====
+----
 
 **citation is place wrong. check how to cite**
 
@@ -3678,7 +3678,7 @@ monitoring, web-based management tools, and expert
 support [@hid-sp18-406-mLab].
 
 MonetDB
-=======
+-------
 
 MonetDB is an open-source, column oriented database system. MonetDB
 mainly targets being a backend database for business oriented
@@ -3700,7 +3700,7 @@ contribution to the IT industry from the
 Dutch [@hid-sp18-416-www-monetdb-dutch].
 
 MongoDB
-=======
+-------
 
 MongoDB is document database that belongs to the NoSQL family of
 databases. MongoDB is free and open-source, published under the GNU
@@ -3713,7 +3713,7 @@ by distributing the data across the cluster of
 machines [@hid-sp18-517-MongoDB-intro].
 
 Morpheus
-========
+--------
 
 Morpheus provides cloud and hybrid cloud solutions to improve the
 efficiency of continuous development and integration life cycles by
@@ -3739,7 +3739,7 @@ managed by the policies defined and uploaded by the authorized roles in
 the system.
 
 Microsoft Visual Studio
-=======================
+-----------------------
 
 Microsoft Visual Studio (MVS), community edition, is an open source
 
@@ -3760,7 +3760,7 @@ same time. MVS connects to windows AZURE making it portable for
 developers [@hid-sp18-415-wikipedia-org].
 
 neo4j
-=====
+-----
 
 Neo4j is a graph database developed by Neo4j, Inc. It is an
 ACID-compliant transactional database with graph storage and processing
@@ -3780,7 +3780,7 @@ to REST API to work with programming languages such as Java, Spring,
 Scala etc.
 
 Neptune
-=======
+-------
 
 Neptune is a graph database service that was announced at the AWS
 Re:INVENT conference in November of 2017 [@hid-sp18-419-www-tc_neptune].
@@ -3793,7 +3793,7 @@ open source graph APIs. One can choose Gremlin or the W3C standard
 Resource Description Framework model [@hid-sp18-419-www-aws-neptune].
 
 Netflix
-=======
+-------
 
 Netflix offers a big-data platform that has both data and services that
 can be used to access data as well as processing tools (algorithms) that
@@ -3805,7 +3805,7 @@ independently on other non-Netflix data
 sets [@hid-sp18-505-Netflix2018].
 
 Apache NiFi
-===========
+-----------
 
 Apache NiFi, which is short for NiagaraFiles, is a open source software
 project from the Apache Software Foundation designed to automate the
@@ -3830,7 +3830,7 @@ include: Web-based user interface, Highly configurable, Data Provenance,
 Designed for extension and Secure [@hid-sp18-405-www-nifi].
 
 Node.js
-=======
+-------
 
 Node.js is a JavaScript runtime that provides a scalable option for
 net-work applications. Node.js requires less system resources to perform
@@ -3842,7 +3842,7 @@ Node.js, and the two often compliment each other, on opposite sides of a
 transaction [@hid-sp18-525-nodejs].
 
 ODBC
-====
+----
 
 Odbc is an R package which allows connectivity to commercial databases,
 such as Oracle, and MS SQL Server [@hid-sp18-403-R-odbc]. It also
@@ -3853,7 +3853,7 @@ wrapper around the c++ ODBC bindings, it is faster than any other common
 database connecter [@hid-sp18-403-rstudio-odbc].
 
 OneDrive
-========
+--------
 
 Microsoft's OneDrive is a data storage service
  [@hid-sp18-601-www-odrive-website]. It allows accessibility to files
@@ -3862,7 +3862,7 @@ functions and integration with Microsoft Office. It's intended audience
 is both personal users and companies.
 
 Oozie
-=====
+-----
 
 Apache Oozie is a workflow scheduler to manage Hadoop jobs. Workflows
 are defined as a collection of control flow and action nodes in a
@@ -3878,7 +3878,7 @@ able to leverage the existing Hadoop machinery for load balancing,
 fail-over, etc [@hid-sp18-513-oozie].
 
 Openchain
-=========
+---------
 
 Openchain is a blockchain ledger technology designed to be built in
 seconds and deployed on an enterprise scale for the purposes of managing
@@ -3898,7 +3898,7 @@ enforcing it's own trust-approver validation
 hierarchy [@hid-sp18-507-Coindesk].
 
 OpenDaylight
-============
+------------
 
 OpenDaylight is an open source Software Defined Networks (SDN)
 controller[@hid-sp18-419-www-opendaylight]. SDN separates network
@@ -3914,7 +3914,7 @@ Microsoft and VMware have since left the
 project[@hid-sp18-419-www-sdx-odl].
 
 OpenNebula
-==========
+----------
 
 OpenNebula is a useful opensource that enables seamless management and
 control of different cloud systems. The tools can be used for a cloud
@@ -3947,7 +3947,7 @@ solid support system to the new and existing users as well as continuous
 feedback becomes vital in the research and growth of the project.
 
 Open Refine
-===========
+-----------
 
 OpenRefine is a useful open source that is used for data visualization
 and analysis. Its predominantly used for cleaning messy data and
@@ -3965,7 +3965,7 @@ that is available to be downloaded.
 
 
 openVZ
-======
+------
 
 OpenVZ is a container-based virtualization for Linux [@www-openvz].
 OpenVZ is mainly composed of three parts: the kernel, an set of tools
@@ -3980,7 +3980,7 @@ currently does not include any GUI-based applications. It may not be
 suitable for those who are afraid of a shell prompt.
 
 Oracle Big Data Cloud Service
-=============================
+-----------------------------
 
 Oracle Big Data Cloud Service is an automated service that provides a
 high-powered environment tailor-made for advancing businesses'
@@ -4001,7 +4001,7 @@ models using R that run in parallel on Hadoop, and accelerated using
 Spark) [@hid-sp18-501-OracleCloud]
 
 Oracle Coherence - DataGrid
-===========================
+---------------------------
 
 Oracle Coherence is an In-Memory Data Grid, data management platform for
 application objects that are shared across one or multiple distributed
@@ -4041,7 +4041,7 @@ Oracle coherence can be integrated from Spring based distributed
 applications as well [@hid-sp18-514-CoherenceSpringInt].
 
 Orange
-======
+------
 
 Orange [@hid-sp18-504-orange] is a data mining, visualization, and
 machine learning toolkit based on Python 3. This software is developed
@@ -4074,7 +4074,7 @@ widget sets. It is also possible to create custom widgets and include
 them in an Orange workflow [@hid-sp18-504-wiki-orange].
 
 OrientDB
-========
+--------
 
 
 
@@ -4102,7 +4102,7 @@ respect to there properties. It maintains class relation using
 documents and links in document model.
 
 Owncloud
-========
+--------
 
 OwnCloud has made its significant impact in providing client-server
 software services for creating file hosting services and also to use
@@ -4116,7 +4116,7 @@ providing features such as online document editing, and contact
 synchronization [@hid-sp18-406-Owncloud].
 
 Paxata
-======
+------
 
 One of the most important and time consuming job of data scientist is to
 clean and prepare data from multiple sources in a format that it can be
@@ -4132,7 +4132,7 @@ Paxata gives anyone ability to run data analytics on big data sets in a
 short amount of time.
 
 Pig
-===
+---
 
 Pig is a part of the Apache Hadoop ecosystem consisting of a scripting
 language called Pig Latin and a compiler that produces Map-Reduce
@@ -4148,7 +4148,7 @@ favored by programmers and researchers, whereas Hive is preferred by
 data analysts[@hid-sp18-419-www-dezyre-pig].
 
 Pivotal
-=======
+-------
 
 Pivotal is a developer of cloud-native applications, containers, and
 tools for DevOps. The primary cloud computing tool is the Pivotal Cloud
@@ -4159,7 +4159,7 @@ in the shift to cloud-native software
 development [@hid-sp18-404-Darrow2016].
 
 Pivotal Rabbit MQ
-=================
+-----------------
 
 Pivotal RabbitMQ is a messaging broker platform used by various consumer
 applications like financial market data, system monitoring, business
@@ -4175,7 +4175,7 @@ and routing according to topic and content [@hid-sp18-415-www-pivotal].
 It is one of the new trending tools for many web applications.
 
 Pool
-====
+----
 
 Pool is a connection manager for R, which interfaces with the DBI family
 of connections [@hid-sp18-403-R-dbi]. The advantage of using pool as a
@@ -4187,7 +4187,7 @@ Importantly, pool also closes connections at the end of session,
 ensuring that there are no dangling operations.
 
 Apache PredictionIO
-===================
+-------------------
 
 Apache PredictionIO is an open source machine learning stack for
 building, evaluating and deploying engines with machine learning
@@ -4200,7 +4200,7 @@ predictive analytics. It supports machine learning and data processing
 libraries such as Spark MLLib and OpenNLP [@hid-sp18-510-web-PredIO].
 
 Presto
-======
+------
 
 Presto is a SQL query engine developed specially for interactive
 analytics. It focuses on large commercial data warehouses with capacity
@@ -4216,7 +4216,7 @@ organizations without extra overhead of separate queries for each data
 source [@hid-sp18-502-Presto].
 
 PubNub
-======
+------
 
 PubNub is globally recognized as a cloud Data Stream Network and a
 real-time infrastructure as a service platform founded by Stephen Blum
@@ -4238,7 +4238,7 @@ deployments, delivery and fulfillment, manufacturing and industrial,
 smart cities, and beacons and eTail [@hid-sp18-409-www-pubnub].
 
 Pulsar
-======
+------
 
 Apache Pulsar which is also an open source project of the Apache
 foundation was originally developed by Yahoo. It is a messaging solution
@@ -4263,7 +4263,7 @@ Pulsar can also be installed on Kubernetes on Google Kubernetes or
 AWS [@hid-sp18-517-pulsar-apache].
 
 Puppet
-======
+------
 
 Puppet [@hid-sp18-413-puppet] is a open source software configuration
 and automation tool. It is written in C++ and Clojure. Puppet is a
@@ -4285,7 +4285,7 @@ Puppet is declarative, modular, has code testing
 features and therefore managing kubernetes with it is easier.
 
 Rackspace
-=========
+---------
 
 Rackspace is a cloud computing company which administrates cloud system
 for their business partners and further helping them to concentrate on
@@ -4303,7 +4303,7 @@ infrastructure of their business partners in a much different and
 efficient way [@hid-sp18-406-Rackspace].
 
 RapidMiner
-==========
+----------
 
 RapidMiner is a data science software platform that provides an
 integrated environment for data preparation, machine learning and model
@@ -4323,7 +4323,7 @@ drop environment for easy and fast data science related
 operations [@hid-sp18-511-rapidminer].
 
 RightScale Cloud Management
-===========================
+---------------------------
 
 RightScale Cloud Management is basically a platform which acts as a
 console to manage different clouds from one environment. Some of its
@@ -4339,7 +4339,7 @@ disaster recovery architecture, automatic scaling and scripting.
 
 
 Ripple Transaction Protocol
-===========================
+---------------------------
 
 Ripple Transaction Protocol is an open-source protocol that allows
 transfer of anything of value (usually payments) on the internet.
@@ -4373,7 +4373,7 @@ within minutes compared to the usual 3-business-days waiting period when
 sending money thru the traditional means.
 
 Amazon SageMaker
-================
+----------------
 
 Amazon SageMaker [@hid-sp18-521-Sagemaker] can help users be able to
 develop machine learning models in a more streamlined way. It includes
@@ -4392,7 +4392,7 @@ deploy your model. A/B testing capabilities are built into the product
 as well.
 
 Sales Cloud
-===========
+-----------
 
 Sales Cloud is basically a part of the sales module of SalesForce. It is
 a platform which integrates the customer data together and it
@@ -4411,7 +4411,7 @@ has a mobile application of the same thereby providing more ease of
 access and portability.
 
 Apache Samoa
-============
+------------
 
 Apache Samoa, which stands for Scalable Advanced Massive Online
 Analysis, is a distributed streaming machine learning framework that
@@ -4438,7 +4438,7 @@ used [@hid-sp18-405-blog-samoa]. Samoa, written in Java, is open source
 under the Apache Software License version 2.0.
 
 Scikit-learn
-============
+------------
 
 A Google Summer of Code project, scikit-learn project is a
 machine-learning library. Written in Python, it is designed to be simple
@@ -4468,7 +4468,7 @@ attest to its functionality. It has simplified a lot of usage of
 algorithms but it still is a powerful tool.
 
 Scribe
-======
+------
 
 Scribe is a server design, originally developed and maintained by
 Facebook in 2008, that serves as an aggregation service for streaming
@@ -4489,7 +4489,7 @@ Scribe is now maintained and improved upon through the open source
 community. Scribe is available via the Apache License v.2.
 
 SETI $@$ Home
-=============
+-------------
 
 After funding was cut SETI lauched SETI$@$Home, a public volunteer
 computer via the internet. Using this software users donate idle CPU
@@ -4501,7 +4501,7 @@ inspiration for several similar projects
 LHC$@$home [@hid-sp18-601-www-lhc-at-home-history].
 
 ShareLatex
-==========
+----------
 
 ShareLatex is a cloud service accesable via a website. It allows real
 time collaboration and compilation of
@@ -4516,7 +4516,7 @@ document and sinc the files to github or
 DropBox [@hid-sp18-601-www-slatex-plans].
 
 Share Point
-===========
+-----------
 
 Sharepoint is a web-based document management and storage system
 platform that integrates with Microsoft
@@ -4531,7 +4531,7 @@ centralize project management. It is integrated with Microsoft's
 OneDrive, allowing for mobility.
 
 Skytap
-======
+------
 
 Skytap is a cloud platform that provides Environment-as-a-Service
 (Eaas). The company enables businesses to implement their IT without
@@ -4548,7 +4548,7 @@ modernize.
 > datacenter.'' [@hid-sp18-411-skytap]
 
 Apache Solr
-===========
+-----------
 
 Apache Solr is an open-source search platform used to build search
 applications. It leverages the power of Apache
@@ -4585,7 +4585,7 @@ management systems and enterprise content management
 systems [@hid-sp18-516-www-wiki-solr].
 
 SpagoBI
-=======
+-------
 
 SpagoBI is an open source business intelligence and big data analytics
 platform.The software is completely free, but paid user support,
@@ -4601,7 +4601,7 @@ databases (such as HBase) and HDFS (Hadoop) or distributions
 (Hortonworks)
 
 Google Cloud Spanner
-====================
+--------------------
 
 
 
@@ -4642,7 +4642,7 @@ in structured query language.
 It is purposely built for global transactional consistency.
 
 Spinnaker
-=========
+---------
 
 Spinnaker is an open source, multi-cloud continuous delivery platform
 that helps you release software updates with high velocity and
@@ -4663,7 +4663,7 @@ organizations such as Microsoft, Oracle, Target, Veritas, Schibsted,
 Armory and Kenzan [@hid-sp18-602-www-spinnaker-gc].
 
 SQLite
-======
+------
 
 SQLite is an open source, embedded relational database. Originally
 released in 2000, it has outstanding performance in terms of
@@ -4679,7 +4679,7 @@ the architectural stack, executed in the middle, and the operating
 system's storage and interfaces are processed at the bottom.
 
 Sqoop
-=====
+-----
 
 The primary application of Sqoop is data transfer between the
 traditional or relational database management systems and Hadoop
@@ -4712,7 +4712,7 @@ on [@hid-sp18-517-Sqoop]. [^1]
 [^1]: citation wrongly placed
 
 Stardog
-=======
+-------
 
 Stardog is a graph database from US-software company Complexible.
 Stardog has a particular focus on OWL and RDF-based systems, with the
@@ -4734,7 +4734,7 @@ free to download and use for up to four users and ten graph
 databases [@hid-sp18-405-www-stardog].
 
 Synthea :o:
-=======
+-------
 
 Synthea [@hid-sp18-526-www-synthea] is an open-source medical patient
 generator. Synthea allows for the full synthetic generation of medical
@@ -4754,7 +4754,7 @@ MITRE Corporation written in Java, and supports both C-CDA and FHIR
 formats. It can also generate graphs using Graphviz.
 
 Synthetic Data Vault
-====================
+--------------------
 
 The most notable synthetic data generator is the Synthetic Data Vault
 (SDV)[@hid-sp18-526-patki-sdv]. Developed at MIT by Neha Patki, Roy
@@ -4774,7 +4774,7 @@ configuration file will be shown later, but first we will discuss why
 such a product is necessary.
 
 Apache SystemML
-===============
+---------------
 
 Apache SystemML is an [@systemml] open-source language and compiler that
 makes it dramatically easier to build custom machine learning
@@ -4788,7 +4788,7 @@ optimization based on data and cluster characteristics to ensure both
 efficiency and scalability.
 
 Tableau
-=======
+-------
 
 Tableau is the data visualization software that helps people to see and
 understand the data. Tableau can connect to almost any database, drag
@@ -4807,7 +4807,7 @@ positioned as a leader Business Intelligence and Analytics Platform in
 Gartner Magic Quadrant.
 
 Talend
-======
+------
 
 Talend is an open source software that provides variety of tools for
 integration of data of an organization. It also helps to synchronize
@@ -4819,7 +4819,7 @@ can decide whether they need to clean the data before integrating it
 with clean datasets [@hid-sp18-502-Talend].
 
 Teradata Intelliflex
-====================
+--------------------
 
 Teradata Intelliflex is an integrated environment for Data Warehouse
 functionalities which in its own way integrates some of the strategic
@@ -4834,7 +4834,7 @@ with virtual storage as per our data
 requirements [@hid-sp18-418-Teradata-Intelliflex-features].
 
 Theano
-======
+------
 
 \TODO{ERROR: USE ONLY ASCII}
 Theano is a numerical computation library built for Python programming
@@ -4851,7 +4851,7 @@ generation for evaluating expressions faster and support for extensive
 unit testing and self-verification [@hid-sp18-510-web-theano].
 
 Tibco DataSynapse GridServer
-============================
+----------------------------
 
 DataSynapse was founded by two ex-investment bankers with an idea to
 speed up calculations by running them in parallel, distributed over
@@ -4890,7 +4890,7 @@ several engines to support high availability and fault
 tolerance [@hid-sp18-514-tibcods].
 
 TokuDB
-======
+------
 
 TokuDB is an open-source storage engine for
 MySQL [@hid-sp18-516-www-wiki-mysql] and
@@ -4920,7 +4920,7 @@ environments including
 cloud [@hid-sp18-516-www-percona-server-tokudb] [@hid-sp18-516-www-percona-tokudb].
 
 TreasureData
-============
+------------
 
 Treasure Data provide a platform to consolidate the customer data from
 different sources, integrate them and see actionable customer view. This
@@ -4938,7 +4938,7 @@ is available within short time (in minutes) for the actions and business
 decision [@hid-sp18-511-treasuredata].
 
 Twilio
-======
+------
 
 Twilio is one among the famous companies which provide cloud
 communications platform as a services (Paas). Through the APIs provided
@@ -4954,7 +4954,7 @@ software and is consistently making contributions to the open-source
 community [@hid-sp18-406-Twilio].
 
 US Consumer Financial Protection Bureau
-=======================================
+---------------------------------------
 
 The United States Consumer Financial Protection Bureau (CFPB) Data and
 Research organization is a consumer protection agency that was
@@ -4965,7 +4965,7 @@ multiple data sources that are free and open to the public for
 consumption and analysis [@hid-sp18-505-CFPB2018].
 
 Google Vision
-=============
+-------------
 
 > ``Google Cloud Vision API has made the herculean task of correct
 > labeling/classification of images simple. With exponential increase
@@ -4990,7 +4990,7 @@ Regression) etc for classification of images.
 > API'' [@hid-sp18-523-www-google-vision].
 
 IBM Watson
-==========
+----------
 
 Old: IBM Watson
 ---------------
@@ -5039,7 +5039,7 @@ cloud computing business. Watson also forecasts the weather and conducts
 research from any number of organizations[@hid-sp18-525-watson].
 
 Weka
-====
+----
 
 Weka [@hid-sp18-413-weka] is a machine learning environment that
 provides grapical interface. It has a library of machine learning
@@ -5052,7 +5052,7 @@ Explorer to learn, experimenter to run experiments and Knowledge flow to
 build pipelines for actual implementations.
 
 The World Bank
-==============
+--------------
 
 The world bank is a philanthropic organization that has two main goals.
 First, end extreme poverty and second, to promote shared prosperity. One
@@ -5063,7 +5063,7 @@ will ultimately help with its goal of promoting prosperity and ending
 extreme poverty [@hid-sp18-505-Bank2018].
 
 WSO2 Analytics
-==============
+--------------
 
 WSO2 Analytics is provided by the WSO2 Stream Processor. The features of
 the stream processor are support for stream and event processing
@@ -5081,7 +5081,7 @@ automation and analytics is the highlight while taking the maximum use
 of contextual data [@hid-sp18-416-www-business-benefits-analytics].
 
 XGBoost :o:
-=======
+-------
 
 
 > ``XGBoost is an open-source software library which provides the
@@ -5110,7 +5110,7 @@ according to the software repository on github is
 > [@hid-sp18-401-XGBoost-git].
 
 Zepplin
-=======
+-------
 
 Apache [@hid-sp18-413-Zeppelin] Zepplin is open source web based
 notebook that has built in data discovery, exploration, visualization
@@ -5123,7 +5123,7 @@ supports [@hid-sp18-413-ApacheSpark] Apache Spark out of the box without
 any configuration.
 
 Zmanda
-======
+------
 
 Zmanda is an open source platform which offers open source cloud backup.
 The recovery software and the services provided by Zmanda are used by
