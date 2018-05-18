@@ -11,9 +11,12 @@
 
 
 Linux-VServers are used on web hosting services, pooling resources and
-containing any security breach. [@www-linux-vserver-org] ``Linux
-servers consist of three building blocks Hardware, Kernel and
-Applications'' the purpose of kernel is to provide abstraction layer
+containing any security breach. [@www-linux-vserver-org]
+
+> ``Linux servers consist of three building blocks Hardware, Kernel
+> and Applications''
+
+the purpose of kernel is to provide abstraction layer
 between hardware and application. Linux-Vserver provides VPS securely
 partitioning the resources on computer system in such a way that
 process cannot mount denial of service out of the partition.

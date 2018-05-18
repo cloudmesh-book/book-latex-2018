@@ -20,8 +20,12 @@ private, public, or hybrid clouds, limit the capability of each cloud
 solution.  Solution provided by such cloud will gets incompatible with
 others. So, to providing the solution which can compatible with
 multi-cloud platform is a tedious job. To achieve this CloudML
-provides a ``domain-specific modelling language along with run time
-environment'' [@www-cloudml]. It provides the interoperability and
+provides a
+
+> ``domain-specific modelling language along with run time
+> environment'' [@www-cloudml].
+
+It provides the interoperability and
 provide vendor lock-in, also it provides the solution on specification
 of provisioning, deployment, and adaptation concerns of multi-cloud
 systems. At design time as well as runtime [@www-cloudml].

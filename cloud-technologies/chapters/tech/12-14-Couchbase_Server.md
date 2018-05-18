@@ -14,10 +14,12 @@
 Couchbase, Inc. offers Couchbase Server (CBS) to the marketplace as a
 NoSQL, document-oriented database alternative to traditional
 relationship- oriented database management systems as well as other
-NoSQL competitors.  The basic storage unit, a \textit{document}, is a ``data
-structure defined as a collection of named fields''.  The document
-utilizes JSON, thereby allowing each document to have its own
-individual schema [@www-infoworld-cbs].
+NoSQL competitors.  The basic storage unit, a *document*, is a
+
+> ``data structure defined as a collection of named fields''.
+
+The document utilizes JSON, thereby allowing each document to have its
+own individual schema [@www-infoworld-cbs].
 
 CBS combines the in-memory capabilities of Membase with CouchDB's
 inherent data store reliability and data persistency.  Membase
@@ -27,12 +29,16 @@ the amount of data it can use.  More importantly, it provides no
 mechanism for data recovery if the server crashes.  Combining Membase
 with CouchDB provides a persistent data source, mitigating the
 disadvantages of either product.  In addition, CouchDB + membase
-allows the data size ``to grow beyond the size of RAM''
- [@www-safaribooks-cbs].
+allows the data size
+
+> ``to grow beyond the size of RAM'' [@www-safaribooks-cbs].
 
 CBS is written in Erlang/OTP, but generally shortened to just Erlang.
-In actuality, it is written in ``Erlang using components of OTP
-alongside some C/C++'', It runs on an Erlang virtual machine known as
+In actuality, it is written in
+
+> ``Erlang using components of OTP alongside some C/C++''.
+
+It runs on an Erlang virtual machine known as
 BEAM [@www-wikipedia-erlang-cbs] [@www-erlangcentral-cbs].
 
 Out-of-the-box benefits of Erlang/OTP include dynamic type setting,

@@ -1,4 +1,4 @@
-# LinkedIn
+# LinkedIn :o:
 
 
 |          |          |
@@ -25,11 +25,11 @@ Such products are based on big data. To achieve such big data tasks,
 LinkedIn has its ecosystem consist of Oracle, Hadoop, Pig, Hive,
 Azkaban (Workflow), Avro Data, Zookeeper, Aster Data, Data In- Apache
 Kafka, Data Out- Apache Kafka and Voldemort
-[@www-linkedinbigdata]. LinkedIn uses Hadoop and Aster Data as
-an analytics layer [@www-linkedinquora]. LinkedIn partitioned
-the user's data into separate DB's stored it in XML format. Voldemort
-is a key lookup system used to store the analytically-derived data for
-the products like ``People You May Know''. Voldemort stores the data
-in key-value form [@www-linkedinquora]. LinkedIn has exposed
-REST API to get the user data [@www-linkedindevelopers].
+[@www-linkedinbigdata]. LinkedIn uses Hadoop and Aster Data as an
+analytics layer [@www-linkedinquora]. LinkedIn partitioned the user's
+data into separate DB's stored it in XML format. Voldemort is a key
+lookup system used to store the analytically-derived data for the
+products like *People You May Know*. Voldemort stores the data in
+key-value form [@www-linkedinquora]. LinkedIn has exposed REST API to
+get the user data [@www-linkedindevelopers].
 

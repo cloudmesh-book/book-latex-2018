@@ -22,19 +22,27 @@ search and autocomplete suggestions for the products. Elasticsearch is
 developed in Java and is an open source search engine which uses
 standard RESTful APIs and JSON on top of Apache's Lucene - which is a
 full text search engine library. Clinton Gormley \& Zachary Tong
-describes elastic search as ``A distributed real time document store
-where every field is indexed and
-searchable''cite{elasticsearch-book}. They also mention that ``Elastic
-search is capable of scaling to hundreds of servers and petabytes of
-structured and unstructured data''
-[@www-elasticsearch-hadoop]. mentions that Elastic search can be
+describes elastic search as
+
+> ``A distributed real time document store where every field is
+> indexed and searchable'' [@elasticsearch-book].
+
+They also mention that
+
+> ``Elastic search is capable of scaling to hundreds of servers and
+> petabytes of structured and unstructured data'' [@www-elasticsearch-hadoop].
+
+mentions that Elastic search can be
 used on big data by using the Elasticsearch-Hadoop (ES-Hadoop)
 connector. ES-Hadoop connector lets you index the Hadoop data into the
 Elastic Stack to take full advantage of the Elasticsearch engine and
 returns output through Kibana visualizations
 [@www-wikipedia-elasticsearch]. A log parsing engine
-``Logstash'' and analytics and visualization platform \textit{Kibana}
-are also developed alongside Elasticsearch forming a single package.
+
+
+> ``Logstash'' and analytics and visualization platform
+> *Kibana* are also developed alongside Elasticsearch forming a
+> single package.
 
 
     

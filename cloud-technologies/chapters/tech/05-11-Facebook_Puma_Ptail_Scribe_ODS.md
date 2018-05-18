@@ -14,11 +14,14 @@ The real time data Processing at Facebook is carried out using the
 technologies like Scribe, Ptail, Puma, and ODS. While designing the
 system, facebook primarily focused on the five key decisions that the
 system should incorporate which were Ease of Use, Performance,
-Fault-tolerance, Scalability, and Correctness. ``The real time data
-analytics ecosystem at facebook is designed to handle hundreds of
-Gigabytes of data per second via hundreds of data pipelines and this
-system handles over 200,000 events per second with a maximum latency
-of 30 seconds'' [@www-facebook]. Facebook focused on the Seconds
+Fault-tolerance, Scalability, and Correctness.
+
+> ``The real time data analytics ecosystem at facebook is designed to
+> handle hundreds of Gigabytes of data per second via hundreds of data
+> pipelines and this system handles over 200,000 events per second
+> with a maximum latency of 30 seconds'' [@www-facebook].
+
+Facebook focused on the Seconds
 of latency while designing the system and not milliseconds as seconds
 are fast enough to for all the use case that needs to be supported,
 and it allowed facebook to use persistent message bus for data

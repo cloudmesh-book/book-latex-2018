@@ -1,4 +1,4 @@
-# Atmosphere
+# Atmosphere :o:
 
 
 |          |                                |
@@ -9,10 +9,14 @@
 | keywords | Application Hosting Frameworks |
 
 
+ERROR: QUOTES WERE MISSPLACED. 
 
 Atmosphere is developed by CyVerse (previously named as iPlant
 Collaborative).  It is a cloud-computing platform. It allows one to
-launch his own ``isolated virtual machine (VM) image [@www-at1].
+launch his own
+
+> ``isolated virtual machine (VM)'' image [@www-at1].
+
 It does not require any machine specification. It can be run on any
 device (tablet/desktop/laptop) and any machine
 (Linux/Windows/Max/Unix).  User should have a CyVerse account and be

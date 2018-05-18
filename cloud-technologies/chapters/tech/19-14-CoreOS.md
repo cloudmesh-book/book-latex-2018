@@ -9,8 +9,12 @@
 | keywords | IaaS Management from HPC to hypervisors |
 
 
- [@www-core] states that ``CoreOS is a linux operating system used
-for clustered deployments.'' CoreOS allows applications to run on
+[@www-core] states that
+
+> ``CoreOS is a linux operating system used for clustered
+> deployments.''
+
+CoreOS allows applications to run on
 containers. CoreOS can be run on clouds, virtual or physical
 servers. CoreOS allows the ability for automatic software updates
 inorder to make sure containers in cluster are secure and reliable. It

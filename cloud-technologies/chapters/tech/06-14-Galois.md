@@ -11,12 +11,15 @@
 
      
 Galois system was built by intelligent software systems team at
-University of Texas, Austin. Galois can be decibed as ``a system that
-automatically executes 'Galoized' serial C++ or Java code in
-parallel on shared-memory machinesv\cite{www-galoisSite}. It works by
-exploiting amorphous data-parallelism, which is present even in
-irregular codes that are organized around pointer-based data
-structures such as graphs and trees''. By using Galois provided data
+University of Texas, Austin. Galois can be decibed as
+
+> ``a system that automatically executes 'Galoized' serial C++ or Java
+> code in parallel on shared-memory machinesv\cite{www-galoisSite}. It
+> works by exploiting amorphous data-parallelism, which is present
+> even in irregular codes that are organized around pointer-based data
+> structures such as graphs and trees''.
+
+By using Galois provided data
 structures programmers can write serial programs that gives the
 performance of parallel execution. Galois employs annotations at loop
 levels to understand correct context during concurrent execution and

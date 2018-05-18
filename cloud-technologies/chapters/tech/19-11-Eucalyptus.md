@@ -15,8 +15,12 @@ computing that implements Infrastructure as a Service (IaaS). IaaS are
 systems that give users the ability to run and control entire virtual
 machine instances deployed across a variety physical
 resources [@paper-eucalyptus]. Eucalyptus is an acronym for
-``Elastic Utility Computing Architecture for Linking Your Programs to
-Useful Systems.''
+
+
+> ``Elastic Utility Computing Architecture for Linking Your Programs
+> to Useful Systems.''
+
+
 
 A Eucalyptus private cloud is deployed on an enterprise's data center
 infrastructure and is accessed by users over the enterprise's

@@ -10,8 +10,11 @@
 
 
 
-AppFog can be decribed as ``a platform as a service (PaaS)
-provider'' [@wee]. Platform as a service provides a platform for
+AppFog can be decribed as
+
+> ``a platform as a service (PaaS) provider'' [@wee].
+
+Platform as a service provides a platform for
 the development of web applications without the necessity of
 purchasing the software and infrastructure that supports
 it [@kepes]. PaaS provides an environment for the creation of

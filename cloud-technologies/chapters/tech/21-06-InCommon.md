@@ -10,10 +10,13 @@
 
 
 
-The mission of InCommon is to ``create and support a common trust
-framework for U.S. education and research.  This includes trustworthy
-shared management of access to on-line resources in support of
-education and research in the United States.'' [@www-incommon]
+The mission of InCommon is to
+
+> ``create and support a common trust framework for U.S. education and
+> research.  This includes trustworthy shared management of access to
+> on-line resources in support of education and research in the United
+> States.'' [@www-incommon]
+
 This mission ultimately is a simplification and an elimination of the
 need for multiple accounts across various websites that are at risk of
 data spills or misuse.  In the academic setting, this helps assist

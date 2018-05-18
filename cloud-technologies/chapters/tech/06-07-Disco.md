@@ -12,18 +12,26 @@
 
 a. Disco from discoproject.org represents an implementation of
 mapreduce for distributed computing that benefits end users by
-relieving them of the need to handle ``difficult technicalities
-related to distribution such as communication protocols, load
-balancing, locking, job scheduling, and fault
-tolerance'' [@www-whatis-discoproject]. Its designers wrote the
+relieving them of the need to handle
+
+> ``difficult technicalities related to distribution such as
+> communication protocols, load balancing, locking, job scheduling,
+> and fault tolerance'' [@www-whatis-discoproject].
+
+Its designers wrote the
 software in Erlang, an inherently fault tolerant language. In
 addition, Disco's creators chose Erlang because they believe it best
-meets the software's need to handle ``tens of thousands of tasks in
-parallel'' [@www-erlangprime-discoproject]. Python was used for
-Disco's libraries. Finally, Disco supports pipelines, ``a linear
-sequence of stages, where the outputs of each stage are grouped into
-the input of the subsequent
-stage'' [@www-clarridge-discoproject]. Its designers implemented
+meets the software's need to handle
+
+> ``tens of thousands of tasks in parallel'' [@www-erlangprime-discoproject].
+
+Python was used for
+Disco's libraries. Finally, Disco supports pipelines,
+
+> ``a linear sequence of stages, where the outputs of each stage are
+> grouped into the input of the subsequent stage'' [@www-clarridge-discoproject].
+
+Its designers implemented
 Disco's libraries in Python. Disco originated within Nokia Corp. to
 handle large data sets.  Since then it has proven itself reliable in
 production environments outside of

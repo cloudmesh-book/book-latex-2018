@@ -15,10 +15,11 @@ by Openstack, a cloud operating system similar to AWS Cloud
 Formation. Heat is an orchestration service which allows us to define
 resources over the cloud and connections amongst them using a simple
 text file called referred as a
-'template' [@www-heat-blog-introduction].  ``A Heat template
-describes the infrastructure for a cloud application in a text file
-that is readable and writable by humans, and can be checked into
-version control'' [@www-heat-wiki].
+'template' [@www-heat-blog-introduction].
+
+> ``A Heat template describes the infrastructure for a cloud
+> application in a text file that is readable and writable by humans,
+> and can be checked into version control'' [@www-heat-wiki].
 
 Once the execution environment has been setup and a user wants to
 modify the architecture of resources in the future, a user needs to

@@ -11,9 +11,12 @@
 
 
 Google Kubernetes is a cluster management platform developed by
-Google. Kubernetes is an open source system for ``automating
-deployment, scaling and management of containerized
-applications'' [@www-kubernetesdoc]. It primarily manages clusters
+Google. Kubernetes is an open source system for
+
+> ``automating deployment, scaling and management of containerized
+> applications'' [@www-kubernetesdoc].
+
+It primarily manages clusters
 through containers as they decouple applications from the host
 operating system dependencies and allowing their quick and seamless
 deployment, maintenance and scaling.

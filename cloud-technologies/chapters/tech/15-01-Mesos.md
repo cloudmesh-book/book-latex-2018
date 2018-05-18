@@ -30,8 +30,8 @@ Mesos uses containers for resource isolation between processes. In the
 context of Mesos, the two most important resource-isolation methods to
 know about are the control groups (cgroups) built into the Linux
 kernel,and Docker. The difference between using hyper-V, Docker
-containers, cgroup is described in detail in the book ``Mesos in
-action'' [@book-mesos-Ignazio-2016].
+containers, cgroup is described in detail in the book *Mesos in
+action* [@book-mesos-Ignazio-2016].
 
 
 

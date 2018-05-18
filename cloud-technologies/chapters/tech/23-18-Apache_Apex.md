@@ -10,8 +10,12 @@
 
 
      
-Apache Apex is ``a YARN (Hadoop 2.0)-native platform that unifies
-cloud and batch processing'' [@www-apacheapexwiki].This project
+Apache Apex is
+
+> ``a YARN (Hadoop 2.0)-native platform that unifies cloud and batch
+> processing'' [@www-apacheapexwiki].
+
+This project
 was developed under Apache License 2.0 and was driven by Data
 Torrent. It can be used for processing both streams of data and static
 files making it more relevant in the context of present day internet

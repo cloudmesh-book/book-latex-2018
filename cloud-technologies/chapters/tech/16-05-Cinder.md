@@ -10,8 +10,11 @@
 
 
       
-``Cinder is a block storage service for
-Openstack'' [@wiki-Cinder]. Openstack Compute uses ephemeral disks
+
+
+> ``Cinder is a block storage service for Openstack'' [@wiki-Cinder].
+
+Openstack Compute uses ephemeral disks
 meaning that they exist only for the life of the Openstack instance
 i.e. when the instance is terminated the disks disappear. Block
 storage system is a type of persistent storage that can be used to

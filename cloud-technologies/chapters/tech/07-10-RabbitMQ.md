@@ -12,8 +12,11 @@
 
 RabbitMQ is a message broker which allows services to exchange
 messages in a fault tolerant manner [@www-rabbitmq].  It provides
-variety of features which ``enables software applications to connect
-and scale''. Features are: reliability, flexible routing, clustering,
+variety of features which
+
+> ``enables software applications to connect and scale''.
+
+Features are: reliability, flexible routing, clustering,
 federation, highly available queues, multi-protocol, many clients,
 management UI, tracing, plugin system, commercial support, large
 community and user base. RabbitMQ can work in multiple scenarios:
@@ -43,15 +46,16 @@ community and user base. RabbitMQ can work in multiple scenarios:
         registers a callback message queue. The consumers consume the
         message and post the response message to the callback queue.
 
-        RabbitMQ is based on AMPQ (Advanced
-        Message Queuing Protocol) messaging model\cite{ampq-article}.
-        AMPQ is described
-        as follows ``messages are published to exchanges, which are
-        often compared to post offices or mailboxes. Exchanges then
-        distribute message copies to queues using rules called
-        bindings. Then AMQP brokers either deliver messages to
-        consumers subscribed to queues, or consumers fetch/pull
-        messages from queues on demand''
+RabbitMQ is based on AMPQ (Advanced Message Queuing Protocol)
+messaging model\cite{ampq-article}.  AMPQ is described as follows
+
+> ``messages are published to exchanges, which are often compared to
+> post offices or mailboxes. Exchanges then distribute message copies
+> to queues using rules called bindings. Then AMQP brokers either
+> deliver messages to consumers subscribed to queues, or consumers
+> fetch/pull messages from queues on demand''
+
+
 
 
 

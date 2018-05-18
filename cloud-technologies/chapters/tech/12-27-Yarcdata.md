@@ -34,7 +34,7 @@ Framework (RDF) triples to represent the data, SPARQL as the query
 language and extensions to support mathematical
 algorithms [@paper-graph-data].
 
-The paper ``Graph mining meets the semantic web'' outlines the
+The paper *Graph mining meets the semantic web* outlines the
 implementation of graph mining algorithms using
 SPARQL [@paper-lee2015graph].
 

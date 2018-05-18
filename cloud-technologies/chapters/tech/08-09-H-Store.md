@@ -15,12 +15,16 @@ on-line transaction processing (OLTP). Specifically, it has been
 illustrated that H-Store is a highly distributed, row-store-based
 relational database that runs on a cluster on shared-nothing, main
 memory executor nodes [@www-Hstore].  H-store trends have been
-decibred as ``the architectural and application shifts have resulted
-in modern OLTP databases increasingly falling short of optimal
-performance.In particular, the availability of multiple-cores, the
-abundance of main memory, the lack of user stalls, and the dominant
-use of stored procedures are factors that portend a clean-slate
-redesign of RDBMSs''\cite{kallman2008}.  The H-store which is a
+decibred as
+
+> ``the architectural and application shifts have resulted in modern
+> OLTP databases increasingly falling short of optimal performance.In
+> particular, the availability of multiple-cores, the abundance of
+> main memory, the lack of user stalls, and the dominant use of stored
+> procedures are factors that portend a clean-slate redesign of
+> RDBMSs'' [@kallman2008].
+
+The H-store which is a
 complete redesign has the potential to outperform legacy OLTP
 databases by a significant factor.  H-Store is the first
 implementation of a new class of parallel DBMS, called NewSQL, that

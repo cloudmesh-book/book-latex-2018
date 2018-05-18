@@ -1,4 +1,4 @@
-# Shark
+# Shark :o:
 
 
 |          |                        |
@@ -32,13 +32,18 @@ horizontally, it is easy to add or remove nodes to accommodate more
 data or faster query processing. Thus, it can be scaled to the large
 number of nodes in a fault-tolerant manner
 
-''Shark is built on Hive Codebase and it has the ability to execute
-HIVE QL queries up to 100 times faster than Hive without making any
-change in the existing queries [@shark-paper-2012]. ``Shark can
-run both on the Standalone Mode and Cluster-Mode. Shark can answer the
-queries 40X faster than Apache Hive and can run machine learning
-algorithms 25X faster than MapReduce programs in Apache Hadoop on
-large data sets'' [@shark-paper-2012]. Thus, this new data
+
+
+> ``Shark is built on Hive Codebase and it has the ability to execute
+> HIVE QL queries up to 100 times faster than Hive without making any
+> change in the existing queries'' [@shark-paper-2012].
+
+> ``Shark can run both on the Standalone Mode and Cluster-Mode. Shark
+> can answer the queries 40X faster than Apache Hive and can run
+> machine learning algorithms 25X faster than MapReduce programs in
+> Apache Hadoop on large data sets'' [@shark-paper-2012].
+
+Thus, this new data
 analysis system performs query processing and complex analytics
 (iterative Machine learning) at scale and efficiently recovers from
 the failures.

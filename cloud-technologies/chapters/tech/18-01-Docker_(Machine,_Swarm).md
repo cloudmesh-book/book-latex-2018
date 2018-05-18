@@ -32,8 +32,11 @@ Docker 1.12 or higher swarm mode is integrated with the Docker Engine,
 but on the older versions with Machine's swarm option, user can
 configure a swarm cluster. Docker Swarm provides native clustering
 capabilities to turn a group of Docker engines into a single, virtual
-Docker Engine. ``With these pooled resources user can scale out your
-application as if it were running on a single, huge computer''
-[@www-docker]. Docker Swarm can be scaled up to 1000 Nodes or up
+Docker Engine.
+
+> ``With these pooled resources user can scale out your application as
+> if it were running on a single, huge computer'' [@www-docker].
+
+Docker Swarm can be scaled up to 1000 Nodes or up
 to 50,000 containers
      
