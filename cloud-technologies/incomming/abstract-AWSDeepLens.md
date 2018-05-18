@@ -1,5 +1,8 @@
-AWS DeepLens
+AWS DeepLens :o:
 ------------
+
+ERROR: CITATION PLACEMENT WRONG WE CAN NOT FIGURE OUT IF THIS MEANS IT
+IS QUOTED
 
 AWS DeepLens is the world's first wireless high definition video camera
 which is optimized for Deep Learning. It comes with computer vision
@@ -11,24 +14,11 @@ can be programmed to run various lambda functions. There are many
 pre-built models that can run instantly with
 Deeplens. [@hid-sp18-522-deeplens]
 
-Several Features of AWS DeepLens are as below:
+Several Features of AWS DeepLens are listed next
 
-Integrated with AWS
+* Integrated with AWS
+* Build custom models with Amazon SageMaker
+* Broad framework support
+* Fully programmable
+* Custom built for deep learning
 
-:   
-
-Build custom models with Amazon SageMaker
-
-:   
-
-Broad framework support
-
-:   
-
-Fully programmable
-
-:   
-
-Custom built for deep learning
-
-:   
