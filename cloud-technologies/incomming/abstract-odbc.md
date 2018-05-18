@@ -1,5 +1,5 @@
 ODBC
-====
+----
 
 Odbc is an R package which allows connectivity to commercial databases,
 such as Oracle, and MS SQL Server [@hid-sp18-403-R-odbc]. It also

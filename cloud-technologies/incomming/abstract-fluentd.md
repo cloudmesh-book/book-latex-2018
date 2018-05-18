@@ -1,5 +1,5 @@
 Fluentd
-=======
+-------
 
 Fluentd is a data collector used by many organizations such as Amazon,
 Microsoft, and Google[@hid-sp18-526-www-fluentd]. It is open source and

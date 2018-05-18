@@ -1,5 +1,5 @@
 Clojure
-=======
+-------
 
 Clojure [@hid-sp18-413-clojure] is a fully functional scripting
 language. Although it is a complied programming language, all its

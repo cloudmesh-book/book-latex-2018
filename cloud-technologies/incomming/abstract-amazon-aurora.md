@@ -1,5 +1,5 @@
 Amazon Aurora
-=============
+-------------
 
 Amazon's Aurora is a relational database that is compatible with MySQL
 and PostgreSQL that puts together performance and availability of

@@ -1,5 +1,5 @@
 LightGBM
-========
+--------
 
 
 > ``A fast, distributed, high performance gradient boosting(GBDT,

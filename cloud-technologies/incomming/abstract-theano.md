@@ -1,5 +1,5 @@
 Theano
-======
+------
 
 \TODO{ERROR: USE ONLY ASCII}
 Theano is a numerical computation library built for Python programming

@@ -1,5 +1,5 @@
 Pivotal Rabbit MQ
-=================
+-----------------
 
 Pivotal RabbitMQ is a messaging broker platform used by various consumer
 applications like financial market data, system monitoring, business

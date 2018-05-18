@@ -1,5 +1,5 @@
 LinkedIn WhereHows
-==================
+------------------
 
 LinkedIn WhereHows is a open source project carried out by the LinkedIn
 Data team. The project works by creating a central repository and portal

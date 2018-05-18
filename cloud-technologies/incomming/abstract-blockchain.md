@@ -1,5 +1,5 @@
 Blockchain
-==========
+----------
 
 A blockchain is a continuously growing list of linked records, called
 blocks. The most recent transactions are recorded and added to it in

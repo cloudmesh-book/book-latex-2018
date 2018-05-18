@@ -1,4 +1,4 @@
-# Google Prediction API \& Translation API
+## Google Prediction API \& Translation API
 
 
 |          |                                          |

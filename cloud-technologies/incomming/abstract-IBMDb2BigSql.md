@@ -1,5 +1,5 @@
 IBM Db2 Big Sql :o:
-===============
+---------------
 
 **citation labels do not have spaces**
 

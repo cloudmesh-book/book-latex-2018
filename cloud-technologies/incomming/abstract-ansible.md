@@ -1,5 +1,5 @@
 Ansible
-=======
+-------
 
 Ansible is a widely popular open-source tool used for automation of
 configuration management, application deployment. Ansible is popular

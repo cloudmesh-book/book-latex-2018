@@ -1,5 +1,5 @@
 Apache Mesos
-============
+------------
 
 Apache Mesos is the distributed systems kernel built similarly to the
 Linux kernel, but runs on a different level [@hid-sp18-404-Apache2018].

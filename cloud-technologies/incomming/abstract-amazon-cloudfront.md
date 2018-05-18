@@ -1,5 +1,5 @@
 Amazon CloudFront
-=================
+-----------------
 
 A Content Delivery Network is a *globally distributed network of
 webservers* [@hid-sp18-512-amazon-cloudfront-b] over the internet at

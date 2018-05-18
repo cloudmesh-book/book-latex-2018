@@ -1,5 +1,5 @@
 Lumify
-======
+------
 
 Lumify is an open source project developed at US national security
 contractor Altamira, with key features indlucing big data fusion,

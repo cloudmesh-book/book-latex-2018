@@ -1,5 +1,5 @@
 Amazon EMR
-==========
+----------
 
 Amazon EMR [@hid-sp18-521-AmazonEMR] is a Hadoop framework that allows
 the user to process data on the AWS platform using their EC2 technology

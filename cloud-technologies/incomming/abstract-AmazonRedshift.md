@@ -1,5 +1,5 @@
 Amazon Redshift
-===============
+---------------
 
 Amazon Redshift is a product of amazon mainly designed as
 datawarehouse service center that fully manages data warehousing and

@@ -1,5 +1,5 @@
 Apttus
-======
+------
 
 Apttus provide various products for Customer Relationship Management
 (CRM) and use artificial intelligence (AI) to maximize the customer

@@ -1,5 +1,5 @@
 DBI
-===
+---
 
 DBI is a package for R that provides a common interface to databases for
 R programmers to use [@hid-sp18-403-R-dbi]. This allows R to access data

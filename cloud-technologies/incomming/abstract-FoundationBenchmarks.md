@@ -1,5 +1,5 @@
 FoundationBenchmarks
-====================
+--------------------
 
 The AWS Foundation Benchmarks [@hid-sp18-518-FoundationBenchmarks]
 project is a repository of Python scripts that can be used to evaluate

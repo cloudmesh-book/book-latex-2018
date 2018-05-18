@@ -16,7 +16,7 @@ FONTS=--epub-embed-font='fonts/*.ttf'
 BIB=--bibliography all.bib
 CSS=--css=template/epub.css
 
-epub: 
+epub: tech
 	pandoc $(MARKDOWN-OPTIONS)  $(FORMAT) $(FONTS) $(BIB)  $(CSL) $(CSS) -o book.epub metadata.txt $(INDEX)
 
 

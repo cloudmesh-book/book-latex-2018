@@ -1,5 +1,5 @@
 ShareLatex
-==========
+----------
 
 ShareLatex is a cloud service accesable via a website. It allows real
 time collaboration and compilation of

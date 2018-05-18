@@ -1,5 +1,5 @@
 Firepad
-=======
+-------
 
 Firepad is an open source real-time collaborative code and text editing
 cloud platform found by Google in 2016 and licensed under

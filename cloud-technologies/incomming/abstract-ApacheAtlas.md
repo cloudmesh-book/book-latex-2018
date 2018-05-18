@@ -1,5 +1,5 @@
 Apache Atlas
-============
+------------
 
 Apache atlas is the novel adaptable platform which incorporates the
 center set of the functional administration services. The Apache atlas

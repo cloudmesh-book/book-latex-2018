@@ -1,4 +1,4 @@
-# IBM Spectrum Scale, formerly GPFS :o:
+## IBM Spectrum Scale, formerly GPFS :o:
 
 
 |          |                                       |

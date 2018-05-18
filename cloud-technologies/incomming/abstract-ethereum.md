@@ -1,5 +1,5 @@
 Ethereum
-========
+--------
 
 Ethereum is an open-source, public, distributed computing that
 

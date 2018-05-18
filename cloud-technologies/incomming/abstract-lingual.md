@@ -1,5 +1,5 @@
 Lingual
-=======
+-------
 
 Lingual is a free, open source project designed to build Big Data
 applications on Apache Hadoop [@hid-sp18-516-www-drivenio-lingual]. All

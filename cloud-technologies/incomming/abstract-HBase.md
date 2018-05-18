@@ -1,5 +1,5 @@
 HBase
-=====
+-----
 
 Apache HBase[@hid-sp18-515-www-hbase]is a distributed, scalable, big
 data store, Hadoop database. You can use Apache HBase when you need

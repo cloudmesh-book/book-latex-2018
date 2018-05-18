@@ -1,5 +1,5 @@
 Drake
-=====
+-----
 
 Drake is an R package focused on reproducible research and
 high-performance computing [@hid-sp18-403-R-drake]. It is an R-centric

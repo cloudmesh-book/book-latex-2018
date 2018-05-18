@@ -1,5 +1,5 @@
 Zmanda
-======
+------
 
 Zmanda is an open source platform which offers open source cloud backup.
 The recovery software and the services provided by Zmanda are used by

@@ -1,5 +1,5 @@
 Apache Milagro
-==============
+--------------
 
 As an increasing number of connected devices communicate data with each
 other, data security must be taken into account. Apache Milagro is a

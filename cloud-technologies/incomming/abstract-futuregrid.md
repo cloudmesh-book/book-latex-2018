@@ -1,5 +1,5 @@
 Future Grid
-===========
+-----------
 
 Future Grid wroks through four ways, which contains Connect, Configure,
 Deploy and Learn [@www-futuregrid].

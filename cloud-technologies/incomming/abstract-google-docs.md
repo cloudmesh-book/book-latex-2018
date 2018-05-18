@@ -1,5 +1,5 @@
 Google Docs
-===========
+-----------
 
 Google Docs is a free office suite offered by
 Google [@hid-sp18-601-www-gdoc-about]. It is a part of Google Drive,

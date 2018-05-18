@@ -1,5 +1,5 @@
 MonetDB
-=======
+-------
 
 MonetDB is an open-source, column oriented database system. MonetDB
 mainly targets being a backend database for business oriented

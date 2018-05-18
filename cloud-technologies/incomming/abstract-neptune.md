@@ -1,5 +1,5 @@
 Neptune
-=======
+-------
 
 Neptune is a graph database service that was announced at the AWS
 Re:INVENT conference in November of 2017 [@hid-sp18-419-www-tc_neptune].

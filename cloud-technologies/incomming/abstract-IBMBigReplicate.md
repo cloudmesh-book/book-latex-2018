@@ -1,5 +1,5 @@
 IBM Big Replicate
-=================
+-----------------
 
 To make Hadoop deployment enterprise-class, easy data replication is
 required to support critical business applications that depend on

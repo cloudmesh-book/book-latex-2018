@@ -1,5 +1,5 @@
 Kafka
-=====
+-----
 
 Kafka is an open source distributed streaming platform that belongs to
 the Apache Hadoop family. It is mainly used in data ingestion and

@@ -1,4 +1,4 @@
-# Globus Online (GridFTP) :o:
+## Globus Online (GridFTP) :o:
 
 
 |          |                             |

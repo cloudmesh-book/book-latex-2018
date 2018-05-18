@@ -1,5 +1,5 @@
 IBM Data Science Experience
-===========================
+---------------------------
 
 IBM has compiled data science tools in one location, called Data Science
 Experience. This one location provides access to the IBM Cloud, and

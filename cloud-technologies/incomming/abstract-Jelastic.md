@@ -1,5 +1,5 @@
 Jelastic
-========
+--------
 
 Jelastic is a cloud service provider which combines platform as a
 service and container as a service in a single package.

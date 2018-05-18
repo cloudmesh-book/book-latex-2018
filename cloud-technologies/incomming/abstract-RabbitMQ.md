@@ -1,5 +1,5 @@
 RabbitMQ
-========
+--------
 
 RabbitMQ technology is open source message broker, which supports
 multiple messaging protocols. It has many features such as asynchronous

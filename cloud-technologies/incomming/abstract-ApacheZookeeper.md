@@ -1,5 +1,5 @@
 Apache Zookeeper
-================
+----------------
 
 Zookeeper is a open source centralized service that enables
 synchronization across cluster. It is also designed to maintain naming,

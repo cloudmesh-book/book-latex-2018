@@ -1,5 +1,5 @@
 Caffe
-=====
+-----
 
 Caffe is a deep learning framework developed by Berkeley AI Research.
 Caffe is optimized for research experiments and industrial applications.

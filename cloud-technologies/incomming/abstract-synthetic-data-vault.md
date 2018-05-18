@@ -1,5 +1,5 @@
 Synthetic Data Vault
-====================
+--------------------
 
 The most notable synthetic data generator is the Synthetic Data Vault
 (SDV)[@hid-sp18-526-patki-sdv]. Developed at MIT by Neha Patki, Roy

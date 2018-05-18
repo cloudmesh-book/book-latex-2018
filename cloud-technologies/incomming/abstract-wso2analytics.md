@@ -1,5 +1,5 @@
 WSO2 Analytics
-==============
+--------------
 
 WSO2 Analytics is provided by the WSO2 Stream Processor. The features of
 the stream processor are support for stream and event processing

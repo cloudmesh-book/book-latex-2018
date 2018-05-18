@@ -1,4 +1,4 @@
-# Tycoon :o:
+## Tycoon :o:
 
 
 |          |            |

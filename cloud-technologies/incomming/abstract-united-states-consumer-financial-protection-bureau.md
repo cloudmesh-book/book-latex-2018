@@ -1,5 +1,5 @@
 US Consumer Financial Protection Bureau
-=======================================
+---------------------------------------
 
 The United States Consumer Financial Protection Bureau (CFPB) Data and
 Research organization is a consumer protection agency that was

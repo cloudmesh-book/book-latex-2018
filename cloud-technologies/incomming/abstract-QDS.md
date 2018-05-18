@@ -1,5 +1,5 @@
 Qubole Data Service
-===================
+-------------------
 
 Qubole is a data services company who offers cloud services, data
 management, and data system security to companies. The BigData Platform

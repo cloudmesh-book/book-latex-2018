@@ -1,5 +1,5 @@
 Tibco DataSynapse GridServer
-============================
+----------------------------
 
 DataSynapse was founded by two ex-investment bankers with an idea to
 speed up calculations by running them in parallel, distributed over

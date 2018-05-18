@@ -1,4 +1,4 @@
-# PLASMA MAGMA :o:
+## PLASMA MAGMA :o:
 
 
 |          |                           |

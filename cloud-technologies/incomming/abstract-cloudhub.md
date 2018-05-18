@@ -1,5 +1,5 @@
 CloudHub
-========
+--------
 
 CloudHub is a cloud-based integration platform by MuleSoft which is
 mainly used for connecting SaaS, cloud and local applications and

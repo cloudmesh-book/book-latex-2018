@@ -1,4 +1,4 @@
-# Jupyter and IPython :o:
+## Jupyter and IPython :o:
 
 
 |          |                         |

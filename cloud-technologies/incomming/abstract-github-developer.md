@@ -1,5 +1,5 @@
 GitHub Developer
-================
+----------------
 
 GitHub is a software management platform that offers free and fee-based
 services that can be used for managing source code for software

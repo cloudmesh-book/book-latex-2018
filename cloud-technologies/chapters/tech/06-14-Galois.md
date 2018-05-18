@@ -1,4 +1,4 @@
-# Galois :o:
+## Galois :o:
 
 
 |          |                                                      |

@@ -1,5 +1,5 @@
 Apache Carbondata
-=================
+-----------------
 
 As the amount of data we have increases storing and performing analytics
 of this data becomes increasingly difficult. Apache carbondata is an

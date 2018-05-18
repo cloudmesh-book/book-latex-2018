@@ -1,5 +1,5 @@
 JavaScript
-==========
+----------
 
 JavaScript is a ubiquitous programming language with an enormous number
 of uses. It is best known as the language used to createweb

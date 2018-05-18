@@ -1,5 +1,5 @@
 ArangoDB
-========
+--------
 
 ArangoDB is a NoSQL database system used to support multiple data models
 against a single backend engine. ArangoDB supports three main models

@@ -1,5 +1,5 @@
 Amazon DynamoDB
-===============
+---------------
 
 NoSQL refers to a non-relational database the provides high performance
 and using various data models such as document, key-value, graph, and

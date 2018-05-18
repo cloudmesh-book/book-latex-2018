@@ -1,5 +1,5 @@
 Amazon Machine Learning
-=======================
+-----------------------
 
 AmazonML is a service for machine learning that makes it possible to
 design and build applications that can be used for prediction,

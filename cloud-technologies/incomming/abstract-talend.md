@@ -1,5 +1,5 @@
 Talend
-======
+------
 
 Talend is an open source software that provides variety of tools for
 integration of data of an organization. It also helps to synchronize

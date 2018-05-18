@@ -1,5 +1,5 @@
 Hyperledger Indy
-================
+----------------
 
 Another one of the newer developments from Hyperledger, Hyperledger Indy
 is all about providing independent digital identities across blockchains

@@ -1,5 +1,5 @@
 Amazon Glacier
-==============
+--------------
 
 Amazon Glacier is an online file storage web service provided by Amazon
 which can be used for data archiving and

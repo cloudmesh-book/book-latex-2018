@@ -1,5 +1,5 @@
 Openchain
-=========
+---------
 
 Openchain is a blockchain ledger technology designed to be built in
 seconds and deployed on an enterprise scale for the purposes of managing

@@ -1,5 +1,5 @@
 Mesosphere
-==========
+----------
 
 Mesosphere is an Datacenter Operating Platform for data-intensive
 applications. It is based on the Apache Mesos

@@ -1,5 +1,5 @@
 AtomSphere
-==========
+----------
 
 Boomi AtomSphere is basically an integration platform that supports all
 application integration processes between cloud platforms, SaaS and

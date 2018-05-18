@@ -1,4 +1,4 @@
-# Pivotal Greenplum
+## Pivotal Greenplum
 
 
 |          |                      |

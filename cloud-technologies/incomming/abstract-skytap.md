@@ -1,5 +1,5 @@
 Skytap
-======
+------
 
 Skytap is a cloud platform that provides Environment-as-a-Service
 (Eaas). The company enables businesses to implement their IT without

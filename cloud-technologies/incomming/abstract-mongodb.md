@@ -1,5 +1,5 @@
 MongoDB
-=======
+-------
 
 MongoDB is document database that belongs to the NoSQL family of
 databases. MongoDB is free and open-source, published under the GNU

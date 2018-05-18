@@ -1,5 +1,5 @@
 Apache Avro
-===========
+-----------
 
 Avro [@hid-sp18-421-AvroCloud] is a framework for data serialization,
 where serialization is a process of translating object or data structure

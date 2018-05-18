@@ -1,5 +1,5 @@
 AWS DeepLens
-============
+------------
 
 AWS DeepLens is the world's first wireless high definition video camera
 which is optimized for Deep Learning. It comes with computer vision

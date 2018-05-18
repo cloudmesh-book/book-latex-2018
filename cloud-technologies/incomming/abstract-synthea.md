@@ -1,5 +1,5 @@
 Synthea :o:
-=======
+-------
 
 Synthea [@hid-sp18-526-www-synthea] is an open-source medical patient
 generator. Synthea allows for the full synthetic generation of medical

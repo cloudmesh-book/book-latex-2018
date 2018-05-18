@@ -1,5 +1,5 @@
 Apache CloudStack
-=================
+-----------------
 
 Apache CloudStack is an open source that provides a highly scalable and
 available cloud management platform for IT Enterprises and service

@@ -108,3 +108,10 @@ table td {
     border-right: none;
     border-bottom: 1px solid black;    
 }
+blockquote { 
+	font-style: italic;
+	border-left: 4px solid rgb(242, 242, 242);
+  display: block;
+  margin-left: 10%;
+  margin-right: 10%;
+}

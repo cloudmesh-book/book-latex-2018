@@ -1,5 +1,5 @@
 Pulsar
-======
+------
 
 Apache Pulsar which is also an open source project of the Apache
 foundation was originally developed by Yahoo. It is a messaging solution

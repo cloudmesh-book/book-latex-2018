@@ -1,5 +1,5 @@
 Oozie
-=====
+-----
 
 Apache Oozie is a workflow scheduler to manage Hadoop jobs. Workflows
 are defined as a collection of control flow and action nodes in a

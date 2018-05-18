@@ -1,4 +1,4 @@
-# Couchbase Server :o:
+## Couchbase Server :o:
 
 
 |          |                      |

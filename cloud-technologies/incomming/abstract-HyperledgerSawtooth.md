@@ -1,5 +1,5 @@
 Hyperledger Sawtooth
-====================
+--------------------
 
 Hyperledger Sawtooth is an open source, blockchain platform which can be
 used to build distributed ledger applications. It's main application is

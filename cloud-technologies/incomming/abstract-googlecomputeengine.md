@@ -1,5 +1,5 @@
 Google Compute Engine
-=====================
+---------------------
 
 As an infrastructure as a service Google Compute Engine (GCE) provides
 scalable, high performance virtual machines to their

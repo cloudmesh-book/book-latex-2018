@@ -1,5 +1,5 @@
 Apache SystemML
-===============
+---------------
 
 Apache SystemML is an [@systemml] open-source language and compiler that
 makes it dramatically easier to build custom machine learning

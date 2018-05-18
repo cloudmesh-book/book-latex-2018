@@ -1,5 +1,5 @@
 Apache Mahout
-=============
+-------------
 
 Apache Mahout is commericial platform built for scalable implementation
 of machine learning algorithms. It has support for Apache Spark

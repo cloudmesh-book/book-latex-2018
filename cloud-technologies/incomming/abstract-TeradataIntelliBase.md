@@ -1,5 +1,5 @@
 Teradata Intellibase
-====================
+--------------------
 
 Teradata Intellibase provides a compact environment to perform data
 warehousing, data exploration in an iterative way and advanced analytics

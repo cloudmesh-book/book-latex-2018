@@ -1,5 +1,5 @@
 SETI $@$ Home
-=============
+-------------
 
 After funding was cut SETI lauched SETI$@$Home, a public volunteer
 computer via the internet. Using this software users donate idle CPU

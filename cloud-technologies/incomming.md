@@ -109,14 +109,21 @@ Services suite designed for long term storage of data that is accessed
 infrequently. User can store virtually any kind of data in any format.
 
 Amazon also provides Simple Storage Service for storing and retrieving
-data but Glacier is much cheaper than S3. As per AWS documentation, "
-For Amazon glacier, storage costs are a consistent \$0.004 per gigabyte
-per month, which is substantially cheaper than Amazon's own Simple
-Storage Service" [@hid-sp18-420-Amazon-Glacier-FAQ]. "Customers can
-store data to Amazon Glacier with a significant saving as compared to
-on-premise storage. Amazon Glacier is designed to provide average annual
-durability of 99.999999999% for an
-archive" [@hid-sp18-420-Amazon-Glacier]. Data is stored in Amazon
+data but Glacier is much cheaper than S3. As per AWS documentation,
+
+
+> ``For Amazon glacier, storage costs are a consistent \$0.004 per
+> gigabyte per month, which is substantially cheaper than Amazon's own
+> Simple Storage Service'' [@hid-sp18-420-Amazon-Glacier-FAQ].
+
+
+
+> ``Customers can store data to Amazon Glacier with a significant
+> saving as compared to on-premise storage. Amazon Glacier is designed
+> to provide average annual durability of 99.999999999% for an
+> archive'' [@hid-sp18-420-Amazon-Glacier].
+
+Data is stored in Amazon
 Glacier as archives. Archives can be deleted at any point of time and
 billing will be updated accordingly.
 
@@ -136,13 +143,18 @@ User can select the type of RDS instance and accordingly AWS provides
 capacity. RDS has capacity to resize as per requirement which enables
 user to change from one instance type to another instance type without
 losing its data. It is cost effective and the costing depends on the
-instance type [@hid-sp18-420-amazon-RDS-FAQ].
+instance type [@hid-sp18-420-amazon-RDS-FAQ].
 
-"Amazon RDS can automatically backup database and keep that database
-software up to date with its latest version. RDS makes it easy to use
-replication to enhance database availability, improve data durability,
-or scale beyond the capacity constraints of a single database instance
-for read-heavy database workloads" [@hid-sp18-420-amazon-RDS-FAQ]. High
+
+
+> ``Amazon RDS can automatically backup database and keep that
+> database software up to date with its latest version. RDS makes it
+> easy to use replication to enhance database availability, improve
+> data durability, or scale beyond the capacity constraints of a
+> single database instance for read-heavy database workloads''
+> [@hid-sp18-420-amazon-RDS-FAQ].
+
+High
 availability is achieved by built-in automated failover from primary
 database to a replicated secondary database in case of any failure. This
 replicated secondary database in sync with primary database.
@@ -150,26 +162,34 @@ replicated secondary database in sync with primary database.
 Amazon Redshift
 ===============
 
-Amazon Redshift is a product of amazon mainly designed as datawarehouse
-service center that fully manages data warehousing and makes it a very
-simple and cost-effective application that could be used to analyze all
-the data using standard SQL interface and existing Business Intelligence
-tools. Their website gives more details saying "It allows you to run
-complex analytic queries against petabytes of structured data, using
-sophisticated query optimization, columnar storage on high-performance
-local disks, and massively parallel query
-execution" [@hid-sp18-410-Amazon-Redshift].
+Amazon Redshift is a product of amazon mainly designed as
+datawarehouse service center that fully manages data warehousing and
+makes it a very simple and cost-effective application that could be
+used to analyze all the data using standard SQL interface and existing
+Business Intelligence tools. Their website gives more details saying
+
+
+> ``It allows you to run complex analytic queries against petabytes of
+> structured data, using sophisticated query optimization, columnar
+> storage on high-performance local disks, and massively parallel
+> query execution'' [@hid-sp18-410-Amazon-Redshift].
+
+
 
 It is an Internet hosting service and data warehouse product that was
 announced in 2012 and it became a part of the bigger cloud services
 project namely Amazon Web Services. Few stats about the technology and
-its adoption - "It is built on top of technology from the massive
-parallel processing (MPP) data-warehouse company ParAccel (later
-acquired by Actian),to handle large scale data sets and database
-migrations.Redshift differs from Amazon's other hosted database
-offering, Amazon RDS, in its ability to handle analytics workloads on
-big data data sets stored by a column-oriented DBMS
-principle" [@hid-sp18-410-AmazonWiki].
+its adoption -
+
+> ``It is built on top of technology from the massive parallel
+> processing (MPP) data-warehouse company ParAccel (later acquired by
+> Actian), to handle large scale data sets and database
+> migrations.Redshift differs from Amazon's other hosted database
+> offering, Amazon RDS, in its ability to handle analytics workloads
+> on big data data sets stored by a column-oriented DBMS principle''
+> [@hid-sp18-410-AmazonWiki].
+
+
 
 Amazon S3
 =========
@@ -186,9 +206,13 @@ format [@hid-sp18-420-amazon-S3-FAQ].
 One of the important features of using S3 is that it offers a highly
 durable, scalable, and secure destination for backing up and archiving
 critical data [@hid-sp18-420-amazon-S3]. As per AWS documentation,
-"Amazon S3 is designed to deliver 99.999999999% durability, and it is
-used to store data for millions of applications used by market leaders
-in every industry" [@hid-sp18-420-amazon-S3].
+
+
+> ``Amazon S3 is designed to deliver 99.999999999% durability, and it
+> is used to store data for millions of applications used by market
+> leaders in every industry'' [@hid-sp18-420-amazon-S3].
+
+
 
 Amazon S3 provides versioning capability to provide even further
 protection for stored data. It is easy to define lifecycle rules to
@@ -354,17 +378,23 @@ relatively longer time in cases where the action has to be taken as
 soonas possible in real time. Thus in scenarios where latency must be
 minimum and offloading becomes compulsory we would then be compelled to
 use cloudlets, where the computation now happens at the edge of cellular
-network and latency is reduced significantly."It is a new architectural
-element that extends today's cloud computing infrastructure. It
-represents the middle tier of a 3-tier hierarchy: mobile device -
-cloudlet - cloud." [@hid-sp18-410-wikiCloudlet]
+network and latency is reduced significantly.
+
+> ``It is a new architectural element that extends today's cloud
+> computing infrastructure. It represents the middle tier of a 3-tier
+> hierarchy: mobile device - cloudlet -
+> cloud.'' [@hid-sp18-410-wikiCloudlet]
 
 Thus a cloudlet can be viewed as a mini data center whose aim is to
-bring the cloud closer to the Non powerful devices. "The cloudlet term
-was first coined by Satyanarayanan and a prototype implementation is
-developed by Carnegie Mellon University as a research project.The
-concept of cloudlet is also known as follow me cloud,and mobile
-micro-cloud" [@hid-sp18-410-wikiCloudlet]
+bring the cloud closer to the Non powerful devices.
+
+
+
+> ``The cloudlet term was first coined by Satyanarayanan and a
+> prototype implementation is developed by Carnegie Mellon University
+> as a research project.The concept of cloudlet is also known as
+> follow me cloud,and mobile
+> micro-cloud'' [@hid-sp18-410-wikiCloudlet]
 
 Cognito
 =======
@@ -404,11 +434,15 @@ challenging problems with respect to indexing, logging, searching,
 troubleshooting, storage and reporting.
 
 ELK acronyms three open source projects: Elasticsearch, Logstash, and
-Kibana. "Elasticsearch is a search and analytics engine. Logstash is a
-server-side data processing pipeline that ingests data from multiple
-sources simultaneously, transforms it, and then sends it to a stash like
-Elasticsearch. Kibana lets users visualize data with charts and graphs
-in Elasticsearch" [@hid-sp18-410-ELKBlog]. ELK is one of the most
+Kibana.
+
+> ``Elasticsearch is a search and analytics engine. Logstash is a
+> server-side data processing pipeline that ingests data from multiple
+> sources simultaneously, transforms it, and then sends it to a stash
+> like Elasticsearch. Kibana lets users visualize data with charts and
+> graphs in Elasticsearch'' [@hid-sp18-410-ELKBlog].
+
+ELK is one of the most
 scalable solutions in field of reporting and indexing where Elastic
 search is an indexing and database kind of service and Logstash works
 more like a tool for logging everything feeding it to Elastic search for
@@ -434,17 +468,21 @@ This mechanism requires leveraging or using resources that may not be
 connected to a network with devices such as laptops, smartphones,
 tablets and sensors.
 
-"Edge computing covers a wide range of technologies including wireless
-sensor networks, mobile data acquisition, mobile signature analysis,
-cooperative distributed peer-to-peer ad hoc networking and processing
-also classifiable as local cloud/fog computing and grid/mesh computing,
-dew computing, mobile edge computing,cloudlet, distributed data storage
-and retrieval, autonomic self-healing networks, remote cloud
-services" [@hid-sp18-410-edge]
+
+
+> ``Edge computing covers a wide range of technologies including
+> wireless sensor networks, mobile data acquisition, mobile signature
+> analysis, cooperative distributed peer-to-peer ad hoc networking and
+> processing also classifiable as local cloud/fog computing and
+> grid/mesh computing, dew computing, mobile edge computing,cloudlet,
+> distributed data storage and retrieval, autonomic self-healing
+> networks, remote cloud services'' [@hid-sp18-410-edge]
 
 Majority of its application are realized in IOT and other smart
 connected ecosystem where emergency is the highest priority and data
-processing is scarce. Naive example would be a baby crossing a road and
+processing is scarce.
+
+Naive example would be a baby crossing a road and
 an autonous vehicle running over the same road, needs to decide as soon
 as possible to stop motion in order to save baby's life. It cannot send
 the data to main cloud server and wait for response which would be time
@@ -616,20 +654,28 @@ Another one of the newer developments from Hyperledger, Hyperledger Indy
 is all about providing independent digital identities across blockchains
 and distributed ledgers. It is a decentralized identity system and its
 advantage is that identity management is its sole focus. As Phillip J.
-Windley, Ph.D., Chair, Sovrin Foundation states, "Many have proposed
-distributed ledger technology as a solution, however building
-decentralized identity on top of distributed ledgers that were designed
-to support something else (cryptocurrency or smart contracts, for
-example) leads to compromises and short-cuts." [@hid-sp18-414-Windley]
+Windley, Ph.D., Chair, Sovrin Foundation states,
+
+> ``Many have proposed distributed ledger technology as a solution,
+> however building decentralized identity on top of distributed
+> ledgers that were designed to support something else (cryptocurrency
+> or smart contracts, for example) leads to compromises and
+> short-cuts.'' [@hid-sp18-414-Windley]
 
 This will allow people to securely, quickly and easily share their
 authenticated identity with the groups and organizations of their
 choosing while providing those organizations with the peace of mind of
-knowing who they are dealing with.As Behlendorf states, "Instead of
-being an entry in a giant data base, you have your data and deal
-programmatically with different organizations who want to check your
-identity. And companies don't have to store so much personal data. They
-can store a pointer to the identity" [@hid-sp18-414-Behlendor].
+knowing who they are dealing with.
+
+As Behlendorf states,
+
+> ``Instead of being an entry in a giant data base, you have your data
+> and deal programmatically with different organizations who want to
+> check your identity. And companies don't have to store so much
+> personal data. They can store a pointer to the
+> identity'' [@hid-sp18-414-Behlendor].
+
+
 
 Hyperledger Iroha
 =================
@@ -639,16 +685,23 @@ The Japanese startup, Soramitsu in partnership with Hitachi started the
 initiative to create a mobile friendly blockchain architecture. As one
 of the new, up and coming Hyperledger projects it focuses on being
 simple and easy to include in projects and was implemented in C++ which
-allows it to, "perform well with any small data projects and focused use
-cases." [@hid-sp18-414-Behlendorf].
+allows it to,
 
-As stated by the Linux Foundation, "Hyperledger Iroha is designed to be
-simple and easy to incorporate into infrastructural projects that
-require distributed ledger technology. It features a simple
-construction, modern, domain-driven C++ design, emphasis on mobile
-application development and a new, chain-based Byzantine Fault Tolerant
-consensus algorithm, called
-Sumeragi" [@hid-sp18-414-Active_Status_Iroha].
+> ``perform well with any small data projects and focused use
+> cases.'' [@hid-sp18-414-Behlendorf].
+
+
+
+As stated by the Linux Foundation,
+
+> ``Hyperledger Iroha is designed to be simple and easy to incorporate
+> into infrastructural projects that require distributed ledger
+> technology. It features a simple construction, modern, domain-driven
+> C++ design, emphasis on mobile application development and a new,
+> chain-based Byzantine Fault Tolerant consensus algorithm, called
+> Sumeragi'' [@hid-sp18-414-Active_Status_Iroha].
+
+
 
 Hyperledger Sawtooth
 ====================
@@ -656,25 +709,30 @@ Hyperledger Sawtooth
 Hyperledger Sawtooth is an open source, blockchain platform which can be
 used to build distributed ledger applications. It's main application is
 to simplify the development of blockchain applications by isolating the
-core system from the application domain. "This allows for developers to
-quickly and easily develop and deploy applications with custom tailored
-business rules in some of the more common
-languages" [@hid-sp18-414-Hyperledger_Sawtooth].
+core system from the application domain.
+
+> ``This allows for developers to quickly and easily develop and
+> deploy applications with custom tailored business rules in some of
+> the more common languages'' [@hid-sp18-414-Hyperledger_Sawtooth].
+
+
 
 Some of the core features that make Hyperledger Sawtooth a unique and
 interesting distributed ledger technology:
 
-"On-chain governance - Utilize smart contracts to vote on blockchain
-configuration settings such as the allowed participants and smart
-contracts. Advanced transaction execution engine - Process transactions
-in parallel to accelerate block creation and validation. Support for
-Ethereum - Run solidity smart contracts and integrate with Ethereum
-tooling. Dynamic consensus - Upgrade or swap the blockchain consensus
-protocol on the fly as your network grows, enabling the integration of
-more scalable algorithms as they are available. Broad language support -
-Program smart contracts in your preferred language, with support
-including Go, JavaScript, Python and
-more." [@hid-sp18-414-Linux_Foundation_Sawtooth]
+
+
+> ``On-chain governance - Utilize smart contracts to vote on
+> blockchain configuration settings such as the allowed participants
+> and smart contracts. Advanced transaction execution engine - Process
+> transactions in parallel to accelerate block creation and
+> validation. Support for Ethereum - Run solidity smart contracts and
+> integrate with Ethereum tooling. Dynamic consensus - Upgrade or swap
+> the blockchain consensus protocol on the fly as your network grows,
+> enabling the integration of more scalable algorithms as they are
+> available. Broad language support - Program smart contracts in your
+> preferred language, with support including Go, JavaScript, Python
+> and more.'' [@hid-sp18-414-Linux_Foundation_Sawtooth]
 
 IBM Big Replicate
 =================
@@ -697,7 +755,7 @@ deployed as proxy servers to add resilience. Users can access Hadoop
 Distributed File System using Big Replicate via the standard HDFS
 URI[@hid-sp18-408-IBMBigReplicate].
 
-IBM Db2 Big Sql
+IBM Db2 Big Sql :o:
 ===============
 
 **citation labels do not have spaces**
@@ -708,9 +766,15 @@ data and analsying data across data warehouses and also Hadoop.
 It is a well formed hybrid engine that lets you get data by querying
 Hadoop using SQL. It gives you the flexibilty of having a single
 database connection or make queries to different data sources such as
-"HDFS, RDBMS, NoSql databases, object stores and
-WebHDFS." [@IBM; @DB2; @Bi; @Sql] One of the most important feature of
-this Big Sql is that it provides low latency. This makes data retrival
+
+
+> ``HDFS, RDBMS, NoSql databases, object stores and
+> WebHDFS.'' [@IBM; @DB2; @Bi; @Sql]
+
+One of the most important feature
+of this Big Sql is that it provides low latency.
+
+This makes data retrival
 easier in complex business systems. It also provides high performance,
 security, SQL compatibility and federation capabilities to your data
 warehouses.
@@ -728,15 +792,19 @@ Intel Cloud finder is an enterprise level solution for choosing cloud
 service provider. It helps the customers seeking help for cloud service
 providers. It also provides a very good resource for people looking for
 a very good performance with decent amount of security in the cloud.
-They state that "In the domain of Intel Cloud Technology we have Intel
-Advanced vector expansions, Intel Turbo boost technology and Intel Xeon
-processor but on the security side we have Intel trusted execution
-technology hardware-based protection for the cloud, ensuring a secure
-foundation and protecting applications against malware, malicious
-software, and other attacks" [@hid-sp18-410-Intel]
+They state that
+
+> ``In the domain of Intel Cloud Technology we have Intel Advanced
+> vector expansions, Intel Turbo boost technology and Intel Xeon
+> processor but on the security side we have Intel trusted execution
+> technology hardware-based protection for the cloud, ensuring a
+> secure foundation and protecting applications against malware,
+> malicious software, and other attacks'' [@hid-sp18-410-Intel]
 
 looking forward to using this tool for selecting cloud services that
-would satisfy personal cloud requirements. Obviosly we need to wait
+would satisfy personal cloud requirements.
+
+Obviosly we need to wait
 until Intel makes this tool open to public as this looks to be
 proprietary tool.
 
@@ -768,23 +836,37 @@ OrientDB[@hid-sp18-408-JelasticWiki].
 OpenNN
 ======
 
-"OpenNN is an open source class library written in C++ programming
-language which implements neural networks, a main area of machine
-learning research. The main advantage of OpenNN is its high performance.
-It is developed in C++ for better memory management and higher
-processing speed, and implements CPU parallelization. The library
-implements any number of layers of non-linear processing units for
-supervised learning. This deep architecture allows the design of
-neuralnetworks with universal approximation
-properties" [@hid-sp18-520-OpenNN]. "Neural Designer has been developed
-from OpenNN, which is a advanced analytical tool and contains a
-graphical user interface which simplifies data entry and interpretation
-of results" citehid-sp18-520-OpenNN. "The class of neural network
-implemented in OpenNN is based on the multilayer perceptron. That model
-is extended here to contain scaling, unscaling, bounding, probabilistic
-and conditions layers" [@hid-sp18-520-OpenNNn]. "OpenNN includes project
-files for Qt Creator. When working with another compiler is needed,a
-project for it must be created" [@hid-sp18-520-OpenNNb].
+
+
+> ``OpenNN is an open source class library written in C++ programming
+> language which implements neural networks, a main area of machine
+> learning research. The main advantage of OpenNN is its high
+> performance.  It is developed in C++ for better memory management
+> and higher processing speed, and implements CPU parallelization. The
+> library implements any number of layers of non-linear processing
+> units for supervised learning. This deep architecture allows the
+> design of neuralnetworks with universal approximation
+> properties'' [@hid-sp18-520-OpenNN].
+
+
+
+> ``Neural Designer has been developed from OpenNN, which is a
+> advanced analytical tool and contains a graphical user interface
+> which simplifies data entry and interpretation of
+> results'' citehid-sp18-520-OpenNN.
+
+
+> ``The class of neural network implemented in OpenNN is based on the
+> multilayer perceptron. That model is extended here to contain
+> scaling, unscaling, bounding, probabilistic and conditions
+> layers'' [@hid-sp18-520-OpenNNn].
+
+
+> ``OpenNN includes project files for Qt Creator. When working with
+> another compiler is needed,a project for it must be
+> created'' [@hid-sp18-520-OpenNNb].
+
+
 
 Oracle Nosql Database
 =====================
@@ -836,27 +918,39 @@ pictures, sounds, or video [@hid-sp18-420-PostgreSQL_About].
 PyTorch
 =======
 
-"PyTorch is a open source python package that has high level features of
-Tensor computation with strong GPU acceleration and Deep Neural Networks
-built on a tape-based autograd system"  [@hid-sp18-520-PyTorch]. PyTorch
+
+
+> ``PyTorch is a open source python package that has high level
+> features of Tensor computation with strong GPU acceleration and Deep
+> Neural Networks built on a tape-based autograd system''
+>  [@hid-sp18-520-PyTorch].
+
+PyTorch
 has many packages and are used for deep learning, multi processing,
 loading data. It is fast and has high computation speed when run with
-any size of datasets. Out of many libraries of PyTorch, "A PyTorch
-Tensor is conceptually identical to a numpy array: a Tensor is an
-n-dimensional array, and PyTorch provides many functions for operating
-on these Tensors. Like numpy arrays, PyTorch Tensors do not know
-anything about deep learning or computational graphs or gradients; they
-are a generic tool for scientific
-computing" [@hid-sp18-520-PyTorchtensor]. PyTorch supports dynamic
+any size of datasets. Out of many libraries of PyTorch,
+
+> ``A PyTorch Tensor is conceptually identical to a numpy array: a
+> Tensor is an n-dimensional array, and PyTorch provides many
+> functions for operating on these Tensors. Like numpy arrays, PyTorch
+> Tensors do not know anything about deep learning or computational
+> graphs or gradients; they are a generic tool for scientific
+> computing'' [@hid-sp18-520-PyTorchtensor].
+
+PyTorch supports dynamic
 computation graphs, where the computational graph can be created in real
-run time. "Respect to Grad, This is especially useful when you want to
-freeze part of your model, or you know in advance that you are not going
-to use gradients w.r.t. some parameters. If there is a single input to
-an operation that requires gradient, its output will also require
-gradient. Conversely, only if all inputs do not require gradient, the
-output also will not require it. Backward computation is never performed
-in the subgraphs, where all Variables did not require
-gradients" [@hid-sp18-520-PyTorchgrad].
+run time.
+
+> ``Respect to Grad, This is especially useful when you want to freeze
+> part of your model, or you know in advance that you are not going to
+> use gradients w.r.t. some parameters. If there is a single input to
+> an operation that requires gradient, its output will also require
+> gradient. Conversely, only if all inputs do not require gradient,
+> the output also will not require it. Backward computation is never
+> performed in the subgraphs, where all Variables did not require
+> gradients'' [@hid-sp18-520-PyTorchgrad].
+
+
 
 Qubole Data Service
 ===================
@@ -886,20 +980,35 @@ RabbitMQ technology is open source message broker, which supports
 multiple messaging protocols. It has many features such as asynchronous
 messaging, which supports message queuing, receive and deliver
 acknowledgments, routing any message queues with broadcasting to logs or
-messages to multiple users. "A RabbitMQ broker is a logical grouping of
-one or several Erlang nodes, each running the RabbitMQ application and
-sharing users, virtual hosts, queues, exchanges, bindings, and runtime
-parameters. Sometimes we refer to the collection of nodes as a
-cluster" [@hid-sp18-520-RabbitMQCluster]. "RabbitMQ has pluggable
-support for various SASL authentication mechanisms. Among many, with
-PLAIN authentication, its enabled by default in the RabbitMQ server and
-clients" [@hid-sp18-520-RabbitMQauth]. "It was originally implemented
-Advance Message Queuing Protocoland has been extended to support
-Streaming Text Oriented Messaging Protocol and other
-protocols" [@hid-sp18-520-RabbitMQwiki]. "The rabbitmq-management plugin
-provides an HTTP-based API for management and monitoring of your
-RabbitMQ server, along with a browser-based UI and a command line tool,
-rabbitmqadmin" [@hid-sp18-520-RabbitMQmana].
+messages to multiple users.
+
+> ``A RabbitMQ broker is a logical grouping of one or several Erlang
+> nodes, each running the RabbitMQ application and sharing users,
+> virtual hosts, queues, exchanges, bindings, and runtime
+> parameters. Sometimes we refer to the collection of nodes as a
+> cluster'' [@hid-sp18-520-RabbitMQCluster].
+
+
+
+> ``RabbitMQ has pluggable support for various SASL authentication
+> mechanisms. Among many, with PLAIN authentication, its enabled by
+> default in the RabbitMQ server and
+> clients'' [@hid-sp18-520-RabbitMQauth].
+
+
+
+> ``It was originally implemented Advance Message Queuing Protocoland
+> has been extended to support Streaming Text Oriented Messaging
+> Protocol and other protocols'' [@hid-sp18-520-RabbitMQwiki].
+
+
+
+> ``The rabbitmq-management plugin provides an HTTP-based API for
+> management and monitoring of your RabbitMQ server, along with a
+> browser-based UI and a command line tool,
+> rabbitmqadmin'' [@hid-sp18-520-RabbitMQmana].
+
+
 
 Ranger
 ======
@@ -928,45 +1037,53 @@ control, etc. 5. Centrally audit user access and management operations
 Redis
 =====
 
-"Redis is an open source (BSD licensed), in-memory data structure store,
-used as a database, cache and message broker. It supports data
-structures such as strings, hashes, lists, sets, sorted sets with range
-queries, bitmaps, hyperloglogs and geospatial indexes with radius
-queries. Redis has built-in replication, Lua scripting, LRU eviction,
-transactions and different levels of on-disk persistence, and provides
-high availability via Redis Sentinel and automatic partitioning with
-Redis Cluster. It can run atomic operations on these types, like
-appending to a string, incrementing the value in a hash; pushing an
-element to a list; computing set intersection, union and difference, or
-getting the member with highest ranking in a sorted set. In order to
-achieve its outstanding performance, Redis works with an in-memory
-dataset. Depending on your use case, you can persist it either by
-dumping the dataset to disk every once in a while, or by appending each
-command to a log. Redis also supports trivial-to-setup master-slave
-asynchronous replication, with very fast non-blocking first
-synchronization, auto-reconnection with partial resynchronization on net
-split" [@hid-sp18-520-Redis]. Redis is No SQL database, supports Key
+
+
+> ``Redis is an open source (BSD licensed), in-memory data structure
+> store, used as a database, cache and message broker. It supports
+> data structures such as strings, hashes, lists, sets, sorted sets
+> with range queries, bitmaps, hyperloglogs and geospatial indexes
+> with radius queries. Redis has built-in replication, Lua scripting,
+> LRU eviction, transactions and different levels of on-disk
+> persistence, and provides high availability via Redis Sentinel and
+> automatic partitioning with Redis Cluster. It can run atomic
+> operations on these types, like appending to a string, incrementing
+> the value in a hash; pushing an element to a list; computing set
+> intersection, union and difference, or getting the member with
+> highest ranking in a sorted set. In order to achieve its outstanding
+> performance, Redis works with an in-memory dataset. Depending on
+> your use case, you can persist it either by dumping the dataset to
+> disk every once in a while, or by appending each command to a
+> log. Redis also supports trivial-to-setup master-slave asynchronous
+> replication, with very fast non-blocking first synchronization,
+> auto-reconnection with partial resynchronization on net
+> split'' [@hid-sp18-520-Redis].
+
+Redis is No SQL database, supports Key
 value databases by mapping its key to type of values.
 
 TensorFlow
 ==========
 
-"TensorFlow is an open source software library for numerical computation
-using data flow graphs. Nodes in the graph represent mathematical
-operations, while the graph edges represent the multidimensional data
-arrays (tensors) communicated between them. The flexible architecture
-allows you to deploy computation to one or more CPUs or GPUs in a
-desktop, server, or mobile device with a single API. TensorFlow was
-originally developed by researchers and engineers working on the Google
-Brain Team within Google Machine Intelligence research organization for
-the purposes of conducting machine learning and deep neural networks
-research, but the system is general enough to be applicable in a wide
-variety of other domains as well" [@hid-sp18-520-TensorFlow]. TensorFlow
-provides a platform for implementing and execute machine learning
-algorithms and is highly popular with deep neural network models and
-algorithms. TensorFlow is cross-platform, it can support mobile and
-embedded platforms. It has lot of API to support complex computations
-and algorithms.
+
+> ``TensorFlow is an open source software library for numerical
+> computation using data flow graphs. Nodes in the graph represent
+> mathematical operations, while the graph edges represent the
+> multidimensional data arrays (tensors) communicated between
+> them. The flexible architecture allows you to deploy computation to
+> one or more CPUs or GPUs in a desktop, server, or mobile device with
+> a single API. TensorFlow was originally developed by researchers and
+> engineers working on the Google Brain Team within Google Machine
+> Intelligence research organization for the purposes of conducting
+> machine learning and deep neural networks research, but the system
+> is general enough to be applicable in a wide variety of other
+> domains as well'' [@hid-sp18-520-TensorFlow].
+
+TensorFlow provides a platform for implementing and execute machine
+learning algorithms and is highly popular with deep neural network
+models and algorithms. TensorFlow is cross-platform, it can support
+mobile and embedded platforms. It has lot of API to support complex
+computations and algorithms.
 
 Teradata Intellibase
 ====================
@@ -1093,8 +1210,12 @@ Amazon Aurora
 
 Amazon's Aurora is a relational database that is compatible with MySQL
 and PostgreSQL that puts together performance and availability of
-databases with the power, "simplicity and cost-effectiveness of open
-source databases" [@hid-sp18-512-amazon-aurora]. Compared to standard
+databases with the power,
+
+> ``simplicity and cost-effectiveness of open source
+> databases'' [@hid-sp18-512-amazon-aurora].
+
+Compared to standard
 MySQL databases, Aurora provides speeds that are up to five times that
 higher. It's performance is increased by utilizing an SSD-based storage
 that helps reduce delays and workloads to the system. It is also
@@ -1109,9 +1230,13 @@ webservers* [@hid-sp18-512-amazon-cloudfront-b] over the internet at
 different geographical locations. They form a huge part of internet
 services today and are deployed at different locations to ensure faster
 content load times, and lower bandwidths over a network. This technology
-is highly "useful to companies that require higher response
-times" [@hid-sp18-512-amazon-cloudfront-b] and distribution of large
-files to many users at a given time. It helps accelerate delivery by
+is highly
+
+> ``useful to companies that require higher response
+> times'' [@hid-sp18-512-amazon-cloudfront-b] and distribution of
+> large files to many users at a given time.
+
+It helps accelerate delivery by
 moving the content close to the end-user therefore reducing hops through
 the internet. This is often done through caching the content inside a
 server that is closer to the user. With this, network performance is
@@ -1119,8 +1244,12 @@ accelerated, including global presence, and smart computing. Amazon
 CloudFront is a Content Delivery Network (CDN) that is integrated in
 Amazons AWS service. It is one of the largest in the world, including
 others such as Akamai, MaxCDN, and Rackspace. CloudFront is continuing
-to grow globally and currently "includes 44 availability zones in 16
-different geographic regions today"[@hid-sp18-512-amazon-cloudfront-a].
+to grow globally and currently
+
+> ``includes 44 availability zones in 16 different geographic regions
+> today''[@hid-sp18-512-amazon-cloudfront-a].
+
+
 This also includes plans for constructing 14 other zones in the coming
 future.
 
@@ -1145,8 +1274,12 @@ Amazon VPC
 
 A VPC is part of the AWS infrastructure that is logically isolated and
 spans a whole entire region of AWS to which the instances were created.
-"It is one of the most used and famous services inside the Amazon Web
-Services suite" [@hid-sp18-512-amazon-vpc-a]. It provides the
+
+
+> ``It is one of the most used and famous services inside the Amazon Web
+> Services suite'' [@hid-sp18-512-amazon-vpc-a].
+
+It provides the
 possibility of assigning specific IP addresses, subnets, and network
 rules when establishing communication with other resources within and
 out of the infrastructure. This way, the traffic between instances of
@@ -1172,11 +1305,17 @@ application they want on this virtual machine.
 Amazon EC2 has lots of benefits. First, it is inexpensive, it only costs
 a very low rate for the compute capacity. Second, it is easy to start.
 It contains several ways to get started with Amazon EC2. Third, Amazon
-EC2 provides a highly reliable environment. "The service runs within
-Amazon's proven network infrastructure and data
-centers." [@www-amazonec2]. What's more, Amazon EC2 and Amazon VPC works
-together to provide high security. "Cloud security at AWS is the highest
-priority." [@www-amazonec2].
+EC2 provides a highly reliable environment.
+
+> ``The service runs within Amazon's proven network infrastructure and
+> data centers.'' [@www-amazonec2].
+
+What's more, Amazon EC2 and Amazon VPC works
+together to provide high security.
+
+> ``Cloud security at AWS is the highest priority.'' [@www-amazonec2].
+
+
 
 Amazon Elastic Beanstalk
 ========================
@@ -1213,16 +1352,22 @@ forecasting et cetera. It employs algorithms that can help create models
 that can be used to train and discern patterns from data. A trained
 model can be used to determine trends that can be used to make
 predictions when given new sets of data. The Amazon's Machine Learning
-API "provides data and model visualization tools, as well as wizards to
-guide you through the process of creating machine learning
-models," [@hid-sp18-512-amazonml-b]. It is a service that is highly
+API
+
+> ``provides data and model visualization tools, as well as wizards to
+> guide you through the process of creating machine learning
+> models,'' [@hid-sp18-512-amazonml-b].
+
+It is a service that is highly
 scalable and can be used to create large numbers of predictions in
 real-time. The framework also supports Amazon Machine Images (AMI) that
 provide the resources for faster development of sophisticated models.
-"The AMI's are pre-installed with Apache MXNet, TensorFlow, PyTorch, the
-Microsoft Cognitive Toolkit (CNTK), Caffe, Theano, Torch, Gluon, and
-Keras to train sophisticated, custom AI
-models." [@hid-sp18-512-amazonml-a]
+
+
+> ``The AMI's are pre-installed with Apache MXNet, TensorFlow,
+> PyTorch, the Microsoft Cognitive Toolkit (CNTK), Caffe, Theano,
+> Torch, Gluon, and Keras to train sophisticated, custom AI
+> models.'' [@hid-sp18-512-amazonml-a]
 
 Ansible
 =======
@@ -1230,11 +1375,15 @@ Ansible
 Ansible is a widely popular open-source tool used for automation of
 configuration management, application deployment. Ansible is popular
 because of its simplicity. Originally, Ansible Inc was setup to manage
-the product. Later in 2015, RedHat acquired Ansible. "It uses no agents
-and no additional custom security infrastructure, so it's easy to deploy
-and most importantly, it uses a very simple language (YAML, in the form
-of Ansible Playbooks) that allow you to describe your automation jobs in
-a way that approaches plain English" [@hid-sp18-417-doc-Ansible]. An
+the product. Later in 2015, RedHat acquired Ansible.
+
+> ``It uses no agents and no additional custom security
+> infrastructure, so it's easy to deploy and most importantly, it uses
+> a very simple language (YAML, in the form of Ansible Playbooks) that
+> allow you to describe your automation jobs in a way that approaches
+> plain English'' [@hid-sp18-417-doc-Ansible].
+
+An
 user doesn't have to learn a cryptic language to use it. As no agents
 are required to be installed in the nodes, the tool eases the network
 overhead. Ansible may use two kinds of server for operation. One is the
@@ -1271,8 +1420,8 @@ Hive, Pig, and Rya.
 
 Accumulo is a distributed storage system for data, which is simpler than
 a typical key-value pair system. Each record in Accumulo has the
-following properties: "Key", "Value", "Row ID", "Column", "Timestamp",
-"Family", "Qualifier", and "Visibility". The records are stored across
+following properties: *Key*, *Value*, *Row ID*, *Column*, *Timestamp*,
+*Family*, *Qualifier*, and *Visibility*. The records are stored across
 many machines, with Accumolo keeping track of the properties. A monitor
 is also provided for information on the current states of the system. A
 garbage collector, tablet server (table partition manager), and tracer
@@ -1332,10 +1481,13 @@ native hadoop security and Kerberos for
 authentication [@hid-sp18-401-wiki-Impala].
 
 Apache Impala is massively Parallel Processing SQL query engine that
-works on data stored and run in Apache Hadoop clusters. \"It enables
-users to issue low- latency SQL queries to data stored in HDFS and
-Apache HBase without requiring data movement or
-transformation\" [@hid-sp18-401-apache-Impala].
+works on data stored and run in Apache Hadoop clusters.
+
+> ``It enables users to issue low- latency SQL queries to data stored
+> in HDFS and Apache HBase without requiring data movement or
+> transformation'' [@hid-sp18-401-apache-Impala].
+
+
 
 Apache Phoenix
 ==============
@@ -1365,15 +1517,19 @@ Apache CloudStack is an open source that provides a highly scalable and
 available cloud management platform for IT Enterprises and service
 providers. CloudStack was originally developed by Cloud.com and was
 known by the name VMOps. In 2011, Citrix acquired the product and
-donated it to Apache. "CloudStack is being developed to help managed
-service providers and enterprise IT departments create and operate
-public cloud, private cloud or hybrid clouds with capabilities
-equivalent to Amazon's Elastic Compute Cloud (Amazon EC2) It uses
-existing hypervisors such as KVM, VMware ESXi\|VMware vcenter and
-XenServer/XCP for virtualization. In addition to its own API, CloudStack
-also supports the Amazon Web Services (AWS) API\[3\] and the Open Cloud
-Computing Interface from the Open Grid
-Forum." [@hid-sp18-417-wiki-cloudStack]. The key feature of the product
+donated it to Apache.
+
+> ``CloudStack is being developed to help managed service providers
+> and enterprise IT departments create and operate public cloud,
+> private cloud or hybrid clouds with capabilities equivalent to
+> Amazon's Elastic Compute Cloud (Amazon EC2) It uses existing
+> hypervisors such as KVM, VMware ESXi\|VMware vcenter and
+> XenServer/XCP for virtualization. In addition to its own API,
+> CloudStack also supports the Amazon Web Services (AWS) API\[3\] and
+> the Open Cloud Computing Interface from the Open Grid
+> Forum.'' [@hid-sp18-417-wiki-cloudStack].
+
+The key feature of the product
 are (1) high availability of resources (2) network management (3)
 provides GUI for ease of management (4) compatible with most of the
 hypervisor/virtual monitor (5) it provides the snapshot management.
@@ -1446,15 +1602,18 @@ Apache Delta Cloud
 Apache DeltaCloud was developed in collaboration between Apache
 Foundation and Redhat to provide a programming application that will
 facilitate management of different cloud interfaces and It was
-supporting all the major cloud interfaces. "Each
-Infrastructure-as-a-Service cloud existing today\[when?\] provides its
-own API. The purpose of Deltacloud is to provide one unified REST-based
-API that can be used to manage services on any cloud. Each particular
-cloud is controlled through an adapter called a *driver*. As of June
-2012, drivers exist for the following cloud platforms: Amazon EC2,
-Fujitsu Global Cloud Platform, GoGrid, OpenNebula, Rackspace, RHEV-M,
-RimuHosting, Terremark and VMware
-vCloud" [@hid-sp18-417-wiki-deltacloud].
+supporting all the major cloud interfaces.
+
+> ``Each Infrastructure-as-a-Service cloud existing today\[when?\]
+> provides its own API. The purpose of Deltacloud is to provide one
+> unified REST-based API that can be used to manage services on any
+> cloud. Each particular cloud is controlled through an adapter called
+> a *driver*. As of June 2012, drivers exist for the following cloud
+> platforms: Amazon EC2, Fujitsu Global Cloud Platform, GoGrid,
+> OpenNebula, Rackspace, RHEV-M, RimuHosting, Terremark and VMware
+> vCloud'' [@hid-sp18-417-wiki-deltacloud].
+
+
 
 In 2009, DeltaCloud was developed for the purpose of providing one
 unified API for the major cloud service.
@@ -1735,10 +1894,13 @@ Boomi AtomSphere is basically an integration platform that supports all
 application integration processes between cloud platforms, SaaS and
 local systems as well. Boomi AtomSphere allows its customers to design
 cloud based processes called Atoms, which defines the necessities for
-the integration. It can dedicate "separate environments for testing,
-perform parallel processing, message based queuing is a part of its
-service" and it also allows its run time engines to cluster
-[@hid-sp18-418-AtomSphere-features].
+the integration. It can dedicate
+
+> ``separate environments for testing, perform parallel processing,
+> message based queuing is a part of its service'' and it also allows
+> its run time engines to cluster [@hid-sp18-418-AtomSphere-features].
+
+
 
 AWS CodeStar
 ============
@@ -1813,12 +1975,16 @@ and recoginized as the most trusted cloud [@www-azure]. Compared to AWS,
 Azure is the better choice all over the world as the most trusted
 cloud [@www-azure-opensource].
 
-Besides, lots of choices can pick in the cloud with Azure. "Get support
-for infrastructure as a service (IaaS) on Linux, Java, and PHP Web
-application platforms. Develop and test your Linux and open source
-components in Azure. You bring the tools you love and skills you already
-have, and run virtually any application, using your data source, with
-your operating system, on your device [@www-azure-choices]".
+Besides, lots of choices can pick in the cloud with Azure.
+
+> ``Get support for infrastructure as a service (IaaS) on Linux, Java,
+> and PHP Web application platforms. Develop and test your Linux and
+> open source components in Azure. You bring the tools you love and
+> skills you already have, and run virtually any application, using
+> your data source, with your operating system, on your
+> device [@www-azure-choices]''.
+
+
 
 Backblaze
 =========
@@ -1874,13 +2040,17 @@ a record would have to beat all the computers in the network that are
 verifying the transactions. Thus tampering is very close to
 impossibility.
 
-Blockchains "are an example of a distributed computing system with high
-Byzantine fault tolerance. Decentralized consensus has therefore been
-achieved with a blockchain. This makes blockchains potentially suitable
-for the recording of events, medical records, and other records
-management activities, such as identity management, transaction
-processing, documenting provenance, food traceability or
-voting" [@hid-sp18-506-Blockchain].
+Blockchains
+
+> ``are an example of a distributed computing system with high
+> Byzantine fault tolerance. Decentralized consensus has therefore
+> been achieved with a blockchain. This makes blockchains potentially
+> suitable for the recording of events, medical records, and other
+> records management activities, such as identity management,
+> transaction processing, documenting provenance, food traceability or
+> voting'' [@hid-sp18-506-Blockchain].
+
+
 
 Alhough, the popular use of blockchain nowadays is with the generation
 of cryptocurrency, blockchain has more to offer. Big corporations as
@@ -1997,9 +2167,12 @@ environment where applications and services can be compiled along with
 libraries that permit them to run on bare hardware without a software
 stack [@hid-sp18-419-www-clive-lsub2014]. The design is based on Plan 9,
 a research system developed at Bell Labs in the late 1980s and first
-released in 1992[@hid-sp18-419-www-about-plan9], and NIX, a "purely
-functional package manager" [@hid-sp18-419-www-about-nix] derived from
-Plan 9 that runs on Linux and Mac OS X.
+released in 1992[@hid-sp18-419-www-about-plan9], and NIX, a
+
+> ``purely functional package manager'' [@hid-sp18-419-www-about-nix]
+> derived from Plan 9 that runs on Linux and Mac OS X.
+
+
 
 Clojure
 =======
@@ -2043,10 +2216,14 @@ CloudHub
 CloudHub is a cloud-based integration platform by MuleSoft which is
 mainly used for connecting SaaS, cloud and local applications and
 Application interfaces. CloudHub is an elastic cloud that can scale on
-demand. We can publish REST API's on it. "The CloudHub Virtual Private
-Cloud (VPC) offering enables to construct a secure pipe to on-premise
-applications through an IPsec VPN tunnel, VPC Peering or Direct Connect"
-[@hid-sp18-418-CloudHub-docs]. CloudHub has a REST API which can perform
+demand. We can publish REST API's on it.
+
+> ``The CloudHub Virtual Private Cloud (VPC) offering enables to
+> construct a secure pipe to on-premise applications through an IPsec
+> VPN tunnel, VPC Peering or Direct Connect''
+> [@hid-sp18-418-CloudHub-docs].
+
+CloudHub has a REST API which can perform
 tasks such as manage, monitor and scale applications.
 
 Microsoft Cognitive Toolkit
@@ -2054,15 +2231,24 @@ Microsoft Cognitive Toolkit
 
 The Microsoft Cognitive Toolkit (CNTK) is an open-source project that
 can be used for implementing distributed deep learning commercially. Per
-Microsoft, "CNTK allows the user to easily realize and combine popular
-model types such as feed-forward DNNs, convolutional neural networks
-(CNNs) and recurrent neural networks (RNNs/LSTMs)". Under the covers,
-CNTK implements stochastic gradient descent that are automatically
-parallelized across multiple GPUs and servers [@hid-sp18-510-web-cntk].
-As of this date, CNTK can be run on both Windows and Linux operating
-systems. "CNTK also supports the description of neural networks via C++,
-Network Definition Language (NDL) and other descriptive languages such
-as Python and C\#" [@hid-sp18-510-kd-cntk].
+Microsoft,
+
+>
+
+> ``CNTK allows the user to easily realize and combine popular
+> model types such as feed-forward DNNs, convolutional neural networks
+> (CNNs) and recurrent neural networks (RNNs/LSTMs)''.
+
+
+
+Under the covers, CNTK implements stochastic gradient descent that are
+automatically parallelized across multiple GPUs and
+servers [@hid-sp18-510-web-cntk].  As of this date, CNTK can be run on
+both Windows and Linux operating systems.
+
+> ``CNTK also supports the description of neural networks via C++,
+> Network Definition Language (NDL) and other descriptive languages such
+> as Python and C\#'' [@hid-sp18-510-kd-cntk].
 
 ConnectTheDots
 ==============
@@ -2156,7 +2342,7 @@ components are classes for database connections, and database results,
 which can be treated differently, to minimize local computation.
 Connections to particular database systems, such as MySQL, or PostgreSQL
 are handled through connectivity packages, such as
-`odbc` [@hid-sp18-403-rstudio-odbc].
+*odbc* [@hid-sp18-403-rstudio-odbc].
 
 DBplyr
 ======
@@ -2277,11 +2463,18 @@ by the developers for writing queries to avoid the learning curve of new
 language. To fill this gap Google came up with Dremel. It is a
 interactive ad hoc query system that lets the user query the large
 dataset providing them results with much faster speed compared to
-traditional technologies [@hid-sp18-523-www-dremel]. "By combining
-multi-level execution trees and columnar data layout, it is capable of
-running aggregation queries over trillion-row tables in
-seconds" [@hid-sp18-523-www-dremel]. "Dremel is capable of scaling up to
-thousands of CPUs and petabytes of data" [@hid-sp18-523-www-dremel].
+traditional technologies [@hid-sp18-523-www-dremel].
+
+> ``By combining multi-level execution trees and columnar data layout,
+> it is capable of running aggregation queries over trillion-row
+> tables in seconds'' [@hid-sp18-523-www-dremel].
+
+
+
+> ``Dremel is capable of scaling up to thousands of CPUs and petabytes
+> of data'' [@hid-sp18-523-www-dremel].
+
+
 MapReduce framework and technologies thar are built over it such as Pig,
 Hive etc has latency issue between running the job and getting output.
 Dremel on the other hand took a different approach, it uses execution
@@ -2358,9 +2551,13 @@ adition to the ability to search in real-time, Elasticsearch is capable
 of analyzing queried results. Elasticsearch's use is compatible with
 multiple languages such as Curl, Java, Python, C-Sharp, PHP, Perl,
 JavaScript, and more [@hid-sp18-507-Elasticsearch]. DB-Engines, a
-"Knowledge Base of Relational and NoSQL Database Management Systems"
-ranks Elasticsearch as the top search engine, ahead of both Splunk and
-Solr [@hid-sp18-507-DBEngines].
+
+
+> ``Knowledge Base of Relational and NoSQL Database Management
+> Systems'' ranks Elasticsearch as the top search engine, ahead of
+> both Splunk and Solr [@hid-sp18-507-DBEngines].
+
+
 
 Amazon EMR
 ==========
@@ -2391,10 +2588,13 @@ open-data resource [@hid-sp18-505-ESRI2018].
 Ethereum
 ========
 
-Ethereum is an open-source, public, distributed computing that "runs
-smart contracts: applications that run exactly as programmed without any
-possibility of downtime, censorship, fraud or third-party
-interference" [@hid-sp18-506-EthereumOrg].
+Ethereum is an open-source, public, distributed computing that
+
+> ``runs smart contracts: applications that run exactly as programmed
+> without any possibility of downtime, censorship, fraud or
+> third-party interference'' [@hid-sp18-506-EthereumOrg].
+
+
 
 A smart contract is a computer protocol intended to digitally
 facilitate, verify, or enforce the negotiation or performance of a
@@ -2488,7 +2688,7 @@ Fluentd
 Fluentd is a data collector used by many organizations such as Amazon,
 Microsoft, and Google[@hid-sp18-526-www-fluentd]. It is open source and
 available on GitHub. Fluentd creates a layer of abstraction between the
-source of the data and backend, known as the "Unified Logging Layer".
+source of the data and backend, known as the *Unified Logging Layer*.
 This centralized system of data collection ensures security and
 reliability. Logs contain important information, but due to modern data
 sizes, they are no longer for just human use. The purpose of the logging
@@ -2500,7 +2700,7 @@ backend. Fluentd has a plugin system for many different programs, such
 as Python and Node.js. There are also custom versions of Fluentd in
 production. Google, for example, uses their own version of fluentd as
 their logging layer in conjuction with Google BigQuery. The Fluentd
-project also includes "Fluent Bit" which is a data forwarding system.
+project also includes *Fluent Bit* which is a data forwarding system.
 
 Future Grid
 ===========
@@ -2509,18 +2709,26 @@ Future Grid wroks through four ways, which contains Connect, Configure,
 Deploy and Learn [@www-futuregrid].
 
 From the official website we can know that, Performance is the most
-important things. "Future Grid Platform processes and analyses billions
-of data points per day" [@www-futuregrid]. It can reduce the time of
+important things.
+
+> ``Future Grid Platform processes and analyses billions
+> of data points per day'' [@www-futuregrid].
+
+It can reduce the time of
 processing data about 90%. The plarform can be connected to a wide
 variety of data sources. Furthermore, Future Grid Platform's provide
 end-to-end control.
 
-Steve Avery said, "Future Grid's innovative data platform delivers
-high-speed data processing that's ideal for IoT and Data Science
-environments in the Energy and Utility sector. We enjoy a strong working
-relationship with the Future Grid team and appreciate their deep
-understanding of Utilities as well as their ability to prepare relevant,
-affordable, ROI-focused Use-Cases for our clients" [@www-futuregrid].
+Steve Avery said,
+
+> ``Future Grid's innovative data platform delivers high-speed data
+> processing that's ideal for IoT and Data Science environments in the
+> Energy and Utility sector. We enjoy a strong working relationship
+> with the Future Grid team and appreciate their deep understanding of
+> Utilities as well as their ability to prepare relevant, affordable,
+> ROI-focused Use-Cases for our clients'' [@www-futuregrid].
+
+
 
 Google Genomics
 ===============
@@ -2532,19 +2740,28 @@ organize the world's genomic information and make it accessible and
 useful [@hid-sp18-523-www-genomics]. Researchers are able to apply
 Google powerful technologies such as Google Search and Maps to securely
 store, process, explore, and share large, complex genomics
-datasets [@hid-sp18-523-www-genomics]. "Multiple genome repositories
-data can be processed using Google Genomics within seconds as it is
-backed by Google bigtable and Spanner
-technologies" [@hid-sp18-523-www-genomics]. "It is based on open
-standard from Global Alliance of Genomics and Health achieving higher
-level of interoperability for genomics
-data" [@hid-sp18-523-www-genomics]. It is fully integrated with Google
+datasets [@hid-sp18-523-www-genomics].
+
+> ``Multiple genome repositories data can be processed using Google
+> Genomics within seconds as it is backed by Google bigtable and
+> Spanner technologies'' [@hid-sp18-523-www-genomics].
+
+
+
+> ``It is based on open standard from Global Alliance of Genomics and
+> Health achieving higher level of interoperability for genomics
+> data'' [@hid-sp18-523-www-genomics].
+
+It is fully integrated with Google
 cloud virtual machine, storage and SQL/NoSQL
-databases [@hid-sp18-523-www-genomics]."It helps analysing Genomic data
-in real-time with BigQuery, in literate programming style with Cloud
-Datalab, in batch with GATK on Google Genomics, with Apache Spark or
-Cloud Dataflow, or with a Grid Engine
-cluster" [@hid-sp18-523-www-genomics].
+databases [@hid-sp18-523-www-genomics].
+
+> ``It helps analysing Genomic data in real-time with BigQuery, in
+> literate programming style with Cloud Datalab, in batch with GATK on
+> Google Genomics, with Apache Spark or Cloud Dataflow, or with a Grid
+> Engine cluster'' [@hid-sp18-523-www-genomics].
+
+
 
 Gephi
 =====
@@ -2769,9 +2986,13 @@ as an alternative to XML and SOAP. However, REST also has challenges in
 terms of documenting the services and data available in this type of
 REST architecture.
 
-"GraphQL has emerged as query language that can reside on top of the
-REST architecture and address many of the issues associated with using
-XML/SOAP and JSON/REST" [@hid-sp18-505-GraphQL2018].
+
+
+> ``GraphQL has emerged as query language that can reside on top of
+> the REST architecture and address many of the issues associated with
+> using XML/SOAP and JSON/REST'' [@hid-sp18-505-GraphQL2018].
+
+
 
 AWS Greengrass
 ==============
@@ -2794,19 +3015,30 @@ appropriately filtered data back to the cloud.
 H20
 ===
 
-"H20 is a open source platform that can execute highly advanced and
-complex machine learning algorithms in faster and scalable
-way,regardless of the size, format and location of the
-data" [@hid-sp18-523-www-h2o]. "It achieves this by serializing the data
-faster between nodes and clusters that stores huge amount of data. Data
-processing is done in memory thus providing faster
-response" [@hid-sp18-523-www-h2o]."It uses fine grain parallelism
-technique for processing of distributed data archiving 100x faster speed
-as compared to traditional mapreduce without compromising on
-accuracy" [@hid-sp18-523-www-h2o]. H2O4GPU, Sparking Water and
-driverless AI are popular products of H2O. Many companies across
-different domain such as banks, insurance, online sales are using H2O
-platform for their machine learning and AI related research.
+
+
+> ``H20 is a open source platform that can execute highly advanced and
+> complex machine learning algorithms in faster and scalable
+> way,regardless of the size, format and location of the
+> data'' [@hid-sp18-523-www-h2o].
+
+
+
+> ``It achieves this by serializing the data faster between nodes and
+> clusters that stores huge amount of data. Data processing is done in
+> memory thus providing faster response'' [@hid-sp18-523-www-h2o].
+
+
+
+> ``It uses fine grain parallelism technique for processing of
+> distributed data archiving 100x faster speed as compared to
+> traditional mapreduce without compromising on
+> accuracy'' [@hid-sp18-523-www-h2o].
+
+H2O4GPU, Sparking Water and driverless AI are popular products of
+H2O. Many companies across different domain such as banks, insurance,
+online sales are using H2O platform for their machine learning and AI
+related research.
 
 HCatalog
 ========
@@ -2903,14 +3135,18 @@ ever-increasing computing power and rapidly expanding broadbanda
 coverage, enables new methods of registration and facilitates ongoing
 interaction between individuals and their identity data.
 
-"An estimated 1.1 billion people, including many millions of children,
-women and refugees, globally lack any form of officially recognized
-identification. Without an identity, individuals are often invisible -
-unable to vote, access healthcare, open a bank account, or receive an
-education - and bear higher risk for trafficking. Without accurate
-population data, public and private organizations struggle to broadly
-and accurately deliver the most basic human
-services" [@hid-sp18-506-NoID].
+
+
+> ``An estimated 1.1 billion people, including many millions of
+> children, women and refugees, globally lack any form of officially
+> recognized identification. Without an identity, individuals are
+> often invisible - unable to vote, access healthcare, open a bank
+> account, or receive an education - and bear higher risk for
+> trafficking. Without accurate population data, public and private
+> organizations struggle to broadly and accurately deliver the most
+> basic human services'' [@hid-sp18-506-NoID].
+
+
 
 Most people associate cryptocurrency with blockchain. But blockchain
 obviously has more to offer. This is an example where the blockchain
@@ -3013,7 +3249,7 @@ unlimited potential as a programming platform[@hid-sp18-525-java].
 JMP
 ===
 
-JMP, commonly referred to as "Jump", is an enterprise level statistical
+JMP, commonly referred to as *Jump*, is an enterprise level statistical
 analysis tool developed by SAS. The JMP software package is designed to
 handle every data-involved stage from the initial acquisition of data to
 the final presentation of findings. JMP was first released in 1989 and
@@ -3048,9 +3284,13 @@ aggregation [@hid-sp18-517-ApacheKafka].
 Keras
 =====
 
-\"Keras is a high-level neural networks API, written in Python and
-capable of running on top of TensorFlow, CNTK or
-Theano\" [@hid-sp18-401-keras].
+
+
+> ``Keras is a high-level neural networks API, written in Python and
+> capable of running on top of TensorFlow, CNTK or
+> Theano'' [@hid-sp18-401-keras].
+
+
 
 Keras is used in deep learning community to build neural nets with easy
 to use syntax. There are other technologies/software packages like
@@ -3095,20 +3335,23 @@ Kubernetes
 ==========
 
 Kubernetes is an open-source platform designed to automate deploying,
-scaling, and operating application containers. "The name Kubernetes
-originates from Greek, meaning helmsman or pilot, and is the root of
-governor and cybernetic" [@hid-sp18-510-web-Kubernetes]. Kubernetes is
-capable of scheduling and running application containers on both
-physical or virtual clusters. Kubernetes allows developers to design
-applications that are agnostic of underlying architecture and allows
-developers to design applications based on a container-centric
+scaling, and operating application containers.
+
+> ``The name Kubernetes originates from Greek, meaning helmsman or
+> pilot, and is the root of governor and
+> cybernetic'' [@hid-sp18-510-web-Kubernetes].
+
+Kubernetes is capable of scheduling and running application containers
+on both physical or virtual clusters. Kubernetes allows developers to
+design applications that are agnostic of underlying architecture and
+allows developers to design applications based on a container-centric
 infrastructure rather than host-centric infrastructure, utilizing the
 full advantages and benefits of
 containers [@hid-sp18-510-med-Kubernetes]. Kubernetes via its building
 blocks (primitives) provides mechanism for easily deploying,
 maintaining, and scaling applications. Underlying architecture of
-Kubernetes is meant to be loosely coupled and extensible so that it can
-be used across a wide variety of
+Kubernetes is meant to be loosely coupled and extensible so that it
+can be used across a wide variety of
 workloads [@hid-sp18-510-wiki-Kubernetes].
 
 Kudu
@@ -3147,11 +3390,14 @@ process [@hid-sp18-517-ApacheKylin].
 LightGBM
 ========
 
-\"A fast, distributed, high performance gradient boosting(GBDT, GBRT,
-GBM or MART) framework based on decision tree algorithms, used for
-ranking, classification and many other machine learning tasks. It is
-under the umbrella of the DMTK project of
-Microsoft\" [@hid-; @sp18-401-lightgbm].
+
+> ``A fast, distributed, high performance gradient boosting(GBDT,
+> GBRT, GBM or MART) framework based on decision tree algorithms, used
+> for ranking, classification and many other machine learning
+> tasks. It is under the umbrella of the DMTK project of
+> Microsoft'' [@hid-; @sp18-401-lightgbm].
+
+
 
 LightGBM is used to implement gradient boosting algorithm in machine
 learning with the aim to do so fastly, at the same time not compromising
@@ -3287,9 +3533,14 @@ Apache Mahout, an Apache Software Foundation project, is a distributed
 Scala DSL based linear algebra framework designed to aid mathematicians,
 statisticians and data scientists in implementing their own algorithms
 quickly and efficiently [@hid-sp18-510-web-Mahout]. Initiated based on
-Andrew Ng et al.'s paper "Map-Reduce for Machine Learning on
-Multicore" [@hid-sp18-510-ng-Mahout], it has evolved over time to cover
-other general machine-learning approaches [@hid-sp18-510-ibm-Mahout].
+Andrew Ng et al.'s paper
+
+> ``Map-Reduce for Machine Learning on
+> Multicore'' [@hid-sp18-510-ng-Mahout], it has evolved over time to
+> cover other general machine-learning
+> approaches [@hid-sp18-510-ibm-Mahout].
+
+
 While Apache Spark is recommended back end, where core algorithms are
 implemented on top of Apache Hadoop, Mahout is also extensible to other
 back ends and standalone implementations [@hid-sp18-510-wiki-Mahout].
@@ -3491,9 +3742,13 @@ Microsoft Visual Studio
 =======================
 
 Microsoft Visual Studio (MVS), community edition, is an open source
-"integrated development interface IDE applicable for the development of
-computer programs, websites, web services, web and mobile
-apps" [@hid-sp18-415-wikipedia-org]. While the interface consists of
+
+
+> ``integrated development interface IDE applicable for the
+> development of computer programs, websites, web services, web and
+> mobile apps'' [@hid-sp18-415-wikipedia-org].
+
+While the interface consists of
 some built-in tools such as code editor, code profiler and integrated
 debugger, it also supports plugins dependending on requirements of
 visual designer. Javascript, C++, XML, CSS, `.NET` are among some of the
@@ -3666,14 +3921,18 @@ control of different cloud systems. The tools can be used for a cloud
 implementations to virtualize data centers and also to obtain solution
 for cloud infrastructure. Opennebula can be adopted on top of an
 existing cloud setup. OpenNebula project started on 2005 and currently
-the product is available as an open-source under Apache license. "The
-toolkit includes features for integration, management, scalability,
-security and accounting. It also claims standardization,
-interoperability and portability, providing cloud users and
-administrators with a choice of several cloud interfaces (Amazon EC2
-Query, OGF Open Cloud Computing Interface and vCloud) and hypervisors
-(Xen, KVM and VMware), and can accommodate multiple hardware and
-software combinations in a data center" [@hid-sp18-417-opennebula-wiki].
+the product is available as an open-source under Apache license.
+
+> ``The toolkit includes features for integration, management,
+> scalability, security and accounting. It also claims
+> standardization, interoperability and portability, providing cloud
+> users and administrators with a choice of several cloud interfaces
+> (Amazon EC2 Query, OGF Open Cloud Computing Interface and vCloud)
+> and hypervisors (Xen, KVM and VMware), and can accommodate multiple
+> hardware and software combinations in a data
+> center'' [@hid-sp18-417-opennebula-wiki].
+
+
 
 ![OpenNebula Deployment
 Model [@hid-sp18-417-opennebula-deployment][]{label="F:opennebula"}](images/hid-sp18-417-opennebula.png){width="\textwidth"}
@@ -3697,10 +3956,13 @@ OpenRefine was formerly known as GoogleRefine. The tool is also used for
 fetching data from websites and data organization. It can import data
 from CSV, TSV, Excel, XML etc. It is written in Java. It works with data
 in tabular format like in relational data. The tool has a user interface
-that is available to be downloaded. "Once you get used to which commands
-do what, this is a powerful tool for data manipulation and analysis that
-strikes a good balance between functionality and ease of
-use" [@hid-sp18-417-openrefine].
+that is available to be downloaded.
+
+> ``Once you get used to which commands do what, this is a powerful
+> tool for data manipulation and analysis that strikes a good balance
+> between functionality and ease of use'' [@hid-sp18-417-openrefine].
+
+
 
 openVZ
 ======
@@ -3814,23 +4076,30 @@ them in an Orange workflow [@hid-sp18-504-wiki-orange].
 OrientDB
 ========
 
-"OrientDB is the open source NoSQL multi-model database that works with
-graph databases" [@hid-sp18-520-OrientDB]. Along with this it can be set
-up as document database and Object-Oriented database. "Graph databases
-are NoSQL databases which use the graph data model comprised of
-vertices, which is an entity such as a person, place, object or relevant
-piece of data and edges, which represent the relationship between two
-nodes. Graph databases are particularly helpful because they highlight
-the links and relationships between relevant data similarly to how we do
-so ourselves. Even though graph databases are awesome, they are not
-enough on their own. Advanced second-generation NoSQL products like
-OrientDB are the future. The modern multi-model database provides more
-functionality and flexibility while being powerful enough to replace
-traditional DBMSs" [@hid-sp18-520-OrientDB-graph]. Graph databases are
-usefull for developing application related to social networking and
-establish relationships between objects with respect to there
-properties. It maintains class relation using documents and links in
-document model.
+
+
+> ``OrientDB is the open source NoSQL multi-model database that works with
+> graph databases'' [@hid-sp18-520-OrientDB].
+
+Along with this it can be set
+up as document database and Object-Oriented database.
+
+> ``Graph databases are NoSQL databases which use the graph data model
+> comprised of vertices, which is an entity such as a person, place,
+> object or relevant piece of data and edges, which represent the
+> relationship between two nodes. Graph databases are particularly
+> helpful because they highlight the links and relationships between
+> relevant data similarly to how we do so ourselves. Even though graph
+> databases are awesome, they are not enough on their own. Advanced
+> second-generation NoSQL products like OrientDB are the future. The
+> modern multi-model database provides more functionality and
+> flexibility while being powerful enough to replace traditional
+> DBMSs'' [@hid-sp18-520-OrientDB-graph].
+
+Graph databases are usefull for developing application related to
+social networking and establish relationships between objects with
+respect to there properties. It maintains class relation using
+documents and links in document model.
 
 Owncloud
 ========
@@ -4006,9 +4275,13 @@ representation to represent the order of execution. Resources are
 defined in manifests written in Domain specific language. These
 manifests are complied into catalogue on puppet master and supplied to
 puppet clients. These catalogues are only applied if actual and desired
-states are different. "Kubernetes [@hid-sp18-413-Kubernetes] is new
-cluster manager from google" and puppet makes it easy to manage the
-kubernetes resources. Puppet is declarative, modular, has code testing
+states are different.
+
+> ``Kubernetes [@hid-sp18-413-Kubernetes] is new cluster manager from
+> google'' and puppet makes it easy to manage the kubernetes
+> resources.
+
+Puppet is declarative, modular, has code testing
 features and therefore managing kubernetes with it is easier.
 
 Rackspace
@@ -4055,12 +4328,15 @@ RightScale Cloud Management
 RightScale Cloud Management is basically a platform which acts as a
 console to manage different clouds from one environment. Some of its
 features are automatic recovery protocols when it detects an escalation,
-disaster recovery architecture, automatic scaling and scripting."TThis
-platform facilitates ways to deploy and manage business-critical
-applications across public, private and hybrid clouds and provides
-configuration, monitoring, automation, and governance of cloud computing
-infrastructure and applications"
- [@hid-sp18-418-RightScale-Cloud-Management-article].
+disaster recovery architecture, automatic scaling and scripting.
+
+> ``This platform facilitates ways to deploy and manage
+> business-critical applications across public, private and hybrid
+> clouds and provides configuration, monitoring, automation, and
+> governance of cloud computing infrastructure and applications''
+>  [@hid-sp18-418-RightScale-Cloud-Management-article].
+
+
 
 Ripple Transaction Protocol
 ===========================
@@ -4068,11 +4344,18 @@ Ripple Transaction Protocol
 Ripple Transaction Protocol is an open-source protocol that allows
 transfer of anything of value (usually payments) on the internet.
 
-"The Ripple network enables secure, instant and nearly free global
-financial transactions of any size with no chargebacks"
-[@hid-sp18-506-RippleNetwork]. "Ripple provides one frictionless
-experience to send money globally using the power of
-blockchain" [@hid-sp18-506-GlobalPayment].
+
+
+> ``The Ripple network enables secure, instant and nearly free global
+> financial transactions of any size with no chargebacks''
+> [@hid-sp18-506-RippleNetwork].
+
+
+
+> ``Ripple provides one frictionless experience to send money globally
+> using the power of blockchain'' [@hid-sp18-506-GlobalPayment].
+
+
 
 There are 3 problems that ripple are trying to solve in the current
 payment systems available now high fees, charges for currency exchanges
@@ -4115,13 +4398,17 @@ Sales Cloud is basically a part of the sales module of SalesForce. It is
 a platform which integrates the customer data together and it
 incorporates marketing, sales, customer service and business analytics
 functionalities. One of Sales Cloud's most important feature sets is
-"sales performance management software. The sales performance management
-covers incentives, commissions, quotas, regions, goal setting, training
-and performance evaluation"  [@hid-sp18-418-Sales-Cloud-features]. It
-also has features which enable us to construct dashboards and perform
-real time forecasting which are useful for data analytics. It has a
-mobile application of the same thereby providing more ease of access and
-portability.
+
+
+> ``sales performance management software. The sales performance
+> management covers incentives, commissions, quotas, regions, goal
+> setting, training and performance evaluation''
+>  [@hid-sp18-418-Sales-Cloud-features].
+
+It also has features which enable us to construct dashboards and
+perform real time forecasting which are useful for data analytics. It
+has a mobile application of the same thereby providing more ease of
+access and portability.
 
 Apache Samoa
 ============
@@ -4129,10 +4416,13 @@ Apache Samoa
 Apache Samoa, which stands for Scalable Advanced Massive Online
 Analysis, is a distributed streaming machine learning framework that
 contains a programming abstraction for distributed streaming machine
-learning algorithms [@hid-sp18-405-www-samoa]. "It features a pluggable
-architecture that allows it to run on several distributed stream
-processing engines such as Storm, S4, and
-Samza" [@hid-sp18-405-www-samoa]. Real time analytics can be utilized by
+learning algorithms [@hid-sp18-405-www-samoa].
+
+> ``It features a pluggable architecture that allows it to run on
+> several distributed stream processing engines such as Storm, S4, and
+> Samza'' [@hid-sp18-405-www-samoa].
+
+Real time analytics can be utilized by
 tools like Samoa and allow organizations to react in a timely manner
 when problems appear or to detect new trends helping to improve their
 performance by obtain useful knowledge from what is happening
@@ -4158,12 +4448,16 @@ users through a consistent interface.
 
 This package focuses on bringing m achine learning to non-specialists
 using a general-purpose high-level language that is easy tofollow.
-"Emphasis is put on ease of use, performance, documentation, and API
-consistency. It has minimal dependencies and is distributed under the
-simplified BSD license, encouraging its use in both academic and
-commercial settings. Source code, binaries, and documentation can be
-downloaded from http://scikit-learn.sourceforge.net"
- [@hid-sp18-506-Scikit-learn].
+
+
+> ``Emphasis is put on ease of use, performance, documentation, and
+> API consistency. It has minimal dependencies and is distributed
+> under the simplified BSD license, encouraging its use in both
+> academic and commercial settings. Source code, binaries, and
+> documentation can be downloaded from
+> http://scikit-learn.sourceforge.net''  [@hid-sp18-506-Scikit-learn].
+
+
 
 Although the library is easy to use its sophisticationand power to
 analyze big data is never lost. This library has earned respect not only
@@ -4246,10 +4540,12 @@ products/services. One of the high lights of Skytap is that in addition
 to providing the cutting edge technologies in their environment, they
 cater to businesses that require traditional application or
 technologies. Beyond which they enable the customer businesses to
-modernize. "True self-service, on-demand resources enable you to create
-your own software-defined datacenter and networks with environments on
-demand that work in the cloud just like in your
-datacenter." [@hid-sp18-411-skytap]
+modernize.
+
+> ``True self-service, on-demand resources enable you to create your
+> own software-defined datacenter and networks with environments on
+> demand that work in the cloud just like in your
+> datacenter.'' [@hid-sp18-411-skytap]
 
 Apache Solr
 ===========
@@ -4307,27 +4603,43 @@ databases (such as HBase) and HDFS (Hadoop) or distributions
 Google Cloud Spanner
 ====================
 
-"Cloud Spanner is the enterprise-grade, globally-distributed database
-service built for the cloud" [@hid-sp18-523-www-google-spanner]. This
+
+
+> ``Cloud Spanner is the enterprise-grade, globally-distributed
+> database service built for the
+> cloud'' [@hid-sp18-523-www-google-spanner].
+
+This
 technology combines the benefits of relational database structure with
-non-relational horizontal scale. "This is unique combination that
-delivers high-performance transactions and strong consistency across
-rows, regions, and continents with high availability and
-enterprise-grade security" [@hid-sp18-523-www-google-spanner]. Cloud
+non-relational horizontal scale.
+
+> ``This is unique combination that delivers high-performance
+> transactions and strong consistency across rows, regions, and
+> continents with high availability and enterprise-grade
+> security'' [@hid-sp18-523-www-google-spanner].
+
+Cloud
 Spanner revolutionizes database administration and management and makes
 application development more
-efficient [@hid-sp18-523-www-google-spanner]. "It is fully managed, can
-be easily deployed and has built in synchronous replication and
-maintenance feature" [@hid-sp18-523-www-google-spanner]. It takes
+efficient [@hid-sp18-523-www-google-spanner].
+
+> ``It is fully managed, can be easily deployed and has built in
+> synchronous replication and maintenance
+> feature'' [@hid-sp18-523-www-google-spanner].
+
+It takes
 advantages of all critical features of relational database---such as
 schemas, ACID transactions, and SQL queries (ANSI 2011) thus reducing
 the need of high learning curve for developers who are well proficient
-in structured query language. "Client libraries that can connect to
-spanner is language independent. These libraries can be developed in C
-sharp, Go, Java, Node.js, PHP, Python, and Ruby. Already existing JDBC
-driver with popular third-party tools can be used to connect with
-spanner" [@hid-sp18-523-www-google-spanner]. It is purposely built for
-global transactional consistency.
+in structured query language.
+
+> ``Client libraries that can connect to spanner is language
+> independent. These libraries can be developed in C sharp, Go, Java,
+> Node.js, PHP, Python, and Ruby. Already existing JDBC driver with
+> popular third-party tools can be used to connect with
+> spanner'' [@hid-sp18-523-www-google-spanner].
+
+It is purposely built for global transactional consistency.
 
 Spinnaker
 =========
@@ -4421,7 +4733,7 @@ enterprise version has a free 30-day trial and the community version is
 free to download and use for up to four users and ten graph
 databases [@hid-sp18-405-www-stardog].
 
-Synthea
+Synthea :o:
 =======
 
 Synthea [@hid-sp18-526-www-synthea] is an open-source medical patient
@@ -4436,8 +4748,8 @@ large-scale health analysis. The data underlying these models are
 generated based on current academic research. Therefore, the data can
 also be used to run analysis on the synthetic patients.
 
-According to its website, Synthea is useful for "Academic Research", the
-"Health IT Industry", and "Policy Formation". Synthea is a product of
+According to its website, Synthea is useful for Academic Research, the
+Health IT Industry, and Policy Formation. Synthea is a product of
 MITRE Corporation written in Java, and supports both C-CDA and FHIR
 formats. It can also generate graphs using Graphviz.
 
@@ -4513,9 +4825,12 @@ Teradata Intelliflex is an integrated environment for Data Warehouse
 functionalities which in its own way integrates some of the strategic
 and operational workload onto one Data warehouse. It is available on
 Intellicloud, which is a cloud offering of Teradata. Intelliflex can
-"independently scale nodes" enabling us to use nodes as required to
-manage the processing power and also "store data on multiple layers of
-solid state drives" with virtual storage as per our data
+*independently scale nodes* enabling us to use nodes as required to
+manage the processing power and also
+
+> ``store data on multiple layers of solid state drives''
+
+with virtual storage as per our data
 requirements [@hid-sp18-418-Teradata-Intelliflex-features].
 
 Theano
@@ -4652,22 +4967,27 @@ consumption and analysis [@hid-sp18-505-CFPB2018].
 Google Vision
 =============
 
-"Google Cloud Vision API has made the herculean task of correct
-labeling/classification of images simple. With exponential increase in
-different types of data including images, voice, video are transformed
-into digital form, stored and transmitted over network. There was a dire
-need of automated technology solution that can correctly classify /
-label images with high level of confidence; Google Vision API provides
-such platform to researchers and developers. It quickly classify images
-into thousands of predefined meaning ful
-categories" [@hid-sp18-523-www-google-vision]. It does this by
-encapsulating powerful machine learning models (KNN, Regression) etc for
-classification of images. "It help detects objects and faces within
-images, finds and reads printed words contained within images through
-OCR" [@hid-sp18-523-www-google-vision]. "Developers can build meta data
-on their image catalog, moderate offensive content, or launch new
-marketing campaign/scenarios through image sentiment analysis. It can be
-accessed through REST API" [@hid-sp18-523-www-google-vision].
+> ``Google Cloud Vision API has made the herculean task of correct
+> labeling/classification of images simple. With exponential increase
+> in different types of data including images, voice, video are
+> transformed into digital form, stored and transmitted over
+> network. There was a dire need of automated technology solution that
+> can correctly classify / label images with high level of confidence;
+> Google Vision API provides such platform to researchers and
+> developers. It quickly classify images into thousands of predefined
+> meaning ful categories'' [@hid-sp18-523-www-google-vision].
+
+It does this by encapsulating powerful machine learning models (KNN,
+Regression) etc for classification of images.
+
+> ``It help detects objects and faces within images, finds and reads
+> printed words contained within images through
+> OCR'' [@hid-sp18-523-www-google-vision].
+
+> ``Developers can build meta data on their image catalog, moderate
+> offensive content, or launch new marketing campaign/scenarios
+> through image sentiment analysis. It can be accessed through REST
+> API'' [@hid-sp18-523-www-google-vision].
 
 IBM Watson
 ==========
@@ -4760,12 +5080,13 @@ WSO2 team emphasizes the need for analytics in businesses where
 automation and analytics is the highlight while taking the maximum use
 of contextual data [@hid-sp18-416-www-business-benefits-analytics].
 
-XGBoost
+XGBoost :o:
 =======
 
-"XGBoost is an open-source software library which provides the gradient
-boosting framework for C++, Java, Python,R, and Julia"
- [@hid-sp18-401; @-XGBoost-wiki].
+
+> ``XGBoost is an open-source software library which provides the
+> gradient boosting framework for C++, Java, Python,R, and Julia''
+> [@hid-sp18-401-XGBoost-wiki].
 
 XGBoost stands for Extreme Gradient Boosting. Before talking about
 XGBoost, it is best to give introduction to general gradient boosting.
@@ -4773,15 +5094,20 @@ Gradient Boosting is a machine learning technique used to build both
 regression and classification models. It is primarily used in building
 decision trees. But building gradient boosting models on huge datasets
 (that sometimes contain more than 500,000 observations) is
-computationally onerous, not so efficient. "The name xgboost, though,
-actually refers to the engineering goal to push the limit of
-computations resources for boosted tree algorithms. Which is the reason
-why many people use xgboost". - says Tianqi Chen, creator of XGBoost
+computationally onerous, not so efficient.
+
+> ``The name xgboost, though, actually refers to the engineering goal
+> to push the limit of computations resources for boosted tree
+> algorithms. Which is the reason why many people use xgboost''.
+
+- says Tianqi Chen, creator of XGBoost
 (later received contributions from many
-developers) [@hid-sp18-401; @-XGBoost-gen]. The description of XGBoost
-according to the software repository on github is "Scalable, Portable
-and Distributed Gradient Boosting (GBDT, GBRT or GBM) Library, for
-Python, R, Java, Scala, C++ and more" [@hid-; @sp18-401-XGBoost-git].
+developers) [@hid-sp18-401-XGBoost-gen]. The description of XGBoost
+according to the software repository on github is
+
+> ``Scalable, Portable and Distributed Gradient Boosting (GBDT, GBRT
+> or GBM) Library, for Python, R, Java, Scala, C++ and more''
+> [@hid-sp18-401-XGBoost-git].
 
 Zepplin
 =======

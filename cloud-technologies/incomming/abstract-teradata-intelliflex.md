@@ -1,5 +1,5 @@
 Teradata Intelliflex
-====================
+--------------------
 
 Teradata Intelliflex is an integrated environment for Data Warehouse
 functionalities which in its own way integrates some of the strategic

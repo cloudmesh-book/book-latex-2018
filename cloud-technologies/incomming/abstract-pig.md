@@ -1,5 +1,5 @@
 Pig
-===
+---
 
 Pig is a part of the Apache Hadoop ecosystem consisting of a scripting
 language called Pig Latin and a compiler that produces Map-Reduce

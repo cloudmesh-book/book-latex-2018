@@ -1,5 +1,5 @@
 AWS CodeStar
-============
+------------
 
 AWS CodeStar is a developer tool used to develop projects and easily
 deploy on AWS cloud. It includes all of the tools and services needed

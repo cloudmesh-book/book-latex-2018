@@ -1,5 +1,5 @@
 Google Load Balancing
-=====================
+---------------------
 
 Google Cloud Load Balancing is a high performance, scalable load
 balancing, which has state of the art auto scaling feature which

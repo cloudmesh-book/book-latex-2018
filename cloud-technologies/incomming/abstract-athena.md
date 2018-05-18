@@ -1,5 +1,5 @@
 Amazon Athena
-=============
+-------------
 
 Amazon Athena [@hid-sp18-521-athena-faq] is a service from AWS that
 allows the user to analyze their data stored on Amazon S3 using SQL

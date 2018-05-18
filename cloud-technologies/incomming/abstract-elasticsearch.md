@@ -1,5 +1,5 @@
 Elasticsearch
-=============
+-------------
 
 The central engine to the Elastic product line, Elasticsearch is a
 distributed, RESTful search engine designed to grow with growing data.

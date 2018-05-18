@@ -1,5 +1,5 @@
 Kudu
-====
+----
 
 Apache Kudu was designed to fit into the Hadoop ecosystem and it serves
 as the storage layer that enables fast analytics on fast

@@ -1,5 +1,5 @@
 Apache Ignite
-=============
+-------------
 
 Apache Ignite is an in-memory distributed database, caching, and
 processing platform for transactional, analytical, and streaming

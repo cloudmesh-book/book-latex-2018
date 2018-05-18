@@ -1,5 +1,5 @@
 The GO Programming Language
-===========================
+---------------------------
 
 Go is an open source programming language developed by team of Google
 Robert Griesemer, Rob Pike and Ken Thompson. Its easy to build simple,

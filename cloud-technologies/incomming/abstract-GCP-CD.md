@@ -1,5 +1,5 @@
 Google Cloud Platform - Cloud Dataproc
-======================================
+--------------------------------------
 
 The Cloud Dataproc is a part of Google Cloud Platform services. It is a
 efficient, not sophisticated, and well managed cloud service for

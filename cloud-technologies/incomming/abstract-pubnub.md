@@ -1,5 +1,5 @@
 PubNub
-======
+------
 
 PubNub is globally recognized as a cloud Data Stream Network and a
 real-time infrastructure as a service platform founded by Stephen Blum

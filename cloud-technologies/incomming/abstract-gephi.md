@@ -1,5 +1,5 @@
 Gephi
-=====
+-----
 
 Gephi [@hid-sp18-402-gephi] is an open source software for visualization
 and exploration for all kind of graphs and network. It is a useful tool

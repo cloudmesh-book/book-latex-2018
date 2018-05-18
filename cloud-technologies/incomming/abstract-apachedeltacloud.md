@@ -1,5 +1,5 @@
 Apache Delta Cloud
-==================
+------------------
 
 Apache DeltaCloud was developed in collaboration between Apache
 Foundation and Redhat to provide a programming application that will

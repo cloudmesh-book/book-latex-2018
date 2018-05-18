@@ -1,5 +1,5 @@
 Druid
-=====
+-----
 
 Druid is a high-performance, column-oriented, distributed datastore
 written in Java. Druid can be used to analyze large volumes of real time

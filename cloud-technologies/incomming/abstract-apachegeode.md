@@ -1,5 +1,5 @@
 Apache Geode
-============
+------------
 
 Apache Geode is an in-memory distributed data management platform that
 provides real-time, consistent access to data-intensive application

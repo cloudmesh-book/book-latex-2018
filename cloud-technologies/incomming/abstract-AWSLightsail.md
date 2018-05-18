@@ -1,5 +1,5 @@
 Amazon Lightsail
-================
+----------------
 
 Amazon Lightsail is amazon virtual server. It provides virtual private
 servers which are pre-configured with storage where applications can be

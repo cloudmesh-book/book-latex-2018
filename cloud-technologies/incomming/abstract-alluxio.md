@@ -1,5 +1,5 @@
 Alluxio
-=======
+-------
 
 Alluxio is open source project under Apache License 2.0. [@alluxio]
 Applications only has to connect with Alluxio to access data stored in

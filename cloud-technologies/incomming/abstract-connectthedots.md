@@ -1,5 +1,5 @@
 ConnectTheDots
-==============
+--------------
 
 ConnectTheDots is a Microsoft Open source Technology project which makes
 it possible to [@Azure-IoT] connect IoT devices and sensors to the

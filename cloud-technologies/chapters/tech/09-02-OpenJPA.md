@@ -1,4 +1,4 @@
-# OpenJPA :o:
+## OpenJPA :o:
 
 
 |          |                           |

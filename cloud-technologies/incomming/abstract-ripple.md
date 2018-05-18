@@ -1,5 +1,5 @@
 Ripple Transaction Protocol
-===========================
+---------------------------
 
 Ripple Transaction Protocol is an open-source protocol that allows
 transfer of anything of value (usually payments) on the internet.

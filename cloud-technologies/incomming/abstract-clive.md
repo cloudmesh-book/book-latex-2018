@@ -1,5 +1,5 @@
 Clive
-=====
+-----
 
 Clive is an open-source, distributed operating system written in Go by
 the Laboratorio De Sistemas at Universidad Rey Juan Carlos in

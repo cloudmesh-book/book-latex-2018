@@ -1,5 +1,5 @@
 Apache Samoa
-============
+------------
 
 Apache Samoa, which stands for Scalable Advanced Massive Online
 Analysis, is a distributed streaming machine learning framework that

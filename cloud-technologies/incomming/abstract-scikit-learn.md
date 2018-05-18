@@ -1,5 +1,5 @@
 Scikit-learn
-============
+------------
 
 A Google Summer of Code project, scikit-learn project is a
 machine-learning library. Written in Python, it is designed to be simple

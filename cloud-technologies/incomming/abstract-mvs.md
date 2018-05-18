@@ -1,5 +1,5 @@
 Microsoft Visual Studio
-=======================
+-----------------------
 
 Microsoft Visual Studio (MVS), community edition, is an open source
 

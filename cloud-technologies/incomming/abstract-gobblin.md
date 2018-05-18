@@ -1,5 +1,5 @@
 Apache Gobblin
-==============
+--------------
 
 As the amount of data increases and its sources become numerous, it gets
 difficult to integrate this data to solve a specific problem. Apache

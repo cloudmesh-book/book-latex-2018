@@ -1,5 +1,5 @@
 Google Vision
-=============
+-------------
 
 > ``Google Cloud Vision API has made the herculean task of correct
 > labeling/classification of images simple. With exponential increase

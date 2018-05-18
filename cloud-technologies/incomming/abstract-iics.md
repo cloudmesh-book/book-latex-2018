@@ -1,5 +1,5 @@
 IICS
-====
+----
 
 Informatica provides various products in data integration and data
 warehousing domain. Informatica provide on premise products for Big

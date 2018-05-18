@@ -1,5 +1,5 @@
 Apache BigTop
-=============
+-------------
 
 BigTop [@hid-sp18-421-BigTopCloud] is Apache Foundation project for
 comprehensive packaging, testing and configuration of bigdata

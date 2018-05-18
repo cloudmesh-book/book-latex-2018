@@ -1,5 +1,5 @@
 CloudTrail
-==========
+----------
 
 The AWS CloudTrail [@hid-sp18-518-CloudTrail] service is an activity
 recording service provided by Amazon Web Services. The service allows

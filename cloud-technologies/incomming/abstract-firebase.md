@@ -1,5 +1,5 @@
 Firebase
-========
+--------
 
 Firebase is an open source project found by James Tamplin and Andrew Lee
 in 2011 and later acquired by Google in

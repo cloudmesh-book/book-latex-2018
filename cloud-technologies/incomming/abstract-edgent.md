@@ -1,5 +1,5 @@
 Apache Edgent
-=============
+-------------
 
 The number of connected devices are constantly increasing. Many of the
 devices that form the internet of thingss (IoT) are sensors, or devices

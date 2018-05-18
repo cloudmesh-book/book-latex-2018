@@ -1,5 +1,5 @@
 MariaDB
-=======
+-------
 
 MariaDB is an open source relational database. It has 12 million users
 worldwide and one of the fastest growing databases in the

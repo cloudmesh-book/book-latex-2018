@@ -1,5 +1,5 @@
 SpagoBI
-=======
+-------
 
 SpagoBI is an open source business intelligence and big data analytics
 platform.The software is completely free, but paid user support,

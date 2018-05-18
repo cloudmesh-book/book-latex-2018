@@ -1,5 +1,5 @@
 Amazon EC2
-==========
+----------
 
 Amazon Elastic Compute Cloud (Amazon EC2) [@www-amazonec2]is a web
 service provided by Amazon.com. It is a system that allows users to rent

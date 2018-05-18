@@ -1,5 +1,5 @@
 Presto
-======
+------
 
 Presto is a SQL query engine developed specially for interactive
 analytics. It focuses on large commercial data warehouses with capacity

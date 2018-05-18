@@ -1,5 +1,5 @@
 HCatalog
-========
+--------
 
 HCatalog, which was originally known as Howl, is a component shipped
 with Hive that manages storage and tables. Its purpose is to simplify

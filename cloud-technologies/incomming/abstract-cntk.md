@@ -1,5 +1,5 @@
 Microsoft Cognitive Toolkit
-===========================
+---------------------------
 
 The Microsoft Cognitive Toolkit (CNTK) is an open-source project that
 can be used for implementing distributed deep learning commercially. Per

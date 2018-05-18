@@ -1,5 +1,5 @@
 GraphQL
-=======
+-------
 
 Data services have been an important component in the evolution of the
 information age. In the early 2000s data-based web services relied

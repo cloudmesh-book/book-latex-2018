@@ -1,4 +1,4 @@
-# Galaxy :o:
+## Galaxy :o:
 
 
 |          |                        |

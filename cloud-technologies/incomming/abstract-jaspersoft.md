@@ -1,5 +1,5 @@
 Jaspersoft
-==========
+----------
 
 Jaspersoft is a Business Intelligence (BI) platform that provides its
 customers with highly interactive reports, analytics and dashboards.

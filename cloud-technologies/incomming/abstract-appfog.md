@@ -1,5 +1,5 @@
 AppFog
-======
+------
 
 AppFog which acts as platform-as-a-Service (Paas) is developed on the
 basis of the Cloud Foundry by Century Link. It empowers developers to

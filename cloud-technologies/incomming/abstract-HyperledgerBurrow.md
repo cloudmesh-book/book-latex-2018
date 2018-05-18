@@ -1,5 +1,5 @@
 Hyperledger Burrow
-==================
+------------------
 
 Hyperledger Burrow [@hid-sp18-414-Behlendorf] is an open sourced
 smart-contract interpreter which was built to meet the requirements of

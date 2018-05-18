@@ -1,5 +1,5 @@
 RightScale Cloud Management
-===========================
+---------------------------
 
 RightScale Cloud Management is basically a platform which acts as a
 console to manage different clouds from one environment. Some of its

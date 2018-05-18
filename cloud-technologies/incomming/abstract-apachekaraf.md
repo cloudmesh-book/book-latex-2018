@@ -1,5 +1,5 @@
 Apache Karaf
-============
+------------
 
 Apache Karaf is a lightweight enterprise application container. This
 container can be used as a standalone server. It also supports the run

@@ -1,5 +1,5 @@
 Oracle Coherence - DataGrid
-===========================
+---------------------------
 
 Oracle Coherence is an In-Memory Data Grid, data management platform for
 application objects that are shared across one or multiple distributed

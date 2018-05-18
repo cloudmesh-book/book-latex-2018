@@ -1,5 +1,5 @@
 Apache Accumulo
-===============
+---------------
 
 Based on Google's BigTable design, Apache has their own data store
 called Accumulo[@hid-sp18-526-www-apache-accumulo]. Accumulo overlays

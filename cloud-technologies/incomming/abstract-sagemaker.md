@@ -1,5 +1,5 @@
 Amazon SageMaker
-================
+----------------
 
 Amazon SageMaker [@hid-sp18-521-Sagemaker] can help users be able to
 develop machine learning models in a more streamlined way. It includes

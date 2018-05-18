@@ -1,5 +1,5 @@
 CouchDB
-=======
+-------
 
 CouchDB[@hid-sp18-515-www-couchdb] is a database designed for web, which
 use JSON as the file format to store data. You can use web browser to

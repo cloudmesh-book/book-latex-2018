@@ -1,5 +1,5 @@
 JMP
-===
+---
 
 JMP, commonly referred to as *Jump*, is an enterprise level statistical
 analysis tool developed by SAS. The JMP software package is designed to

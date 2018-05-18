@@ -1,5 +1,5 @@
 Tableau
-=======
+-------
 
 Tableau is the data visualization software that helps people to see and
 understand the data. Tableau can connect to almost any database, drag

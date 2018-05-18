@@ -1,5 +1,5 @@
 openVZ
-======
+------
 
 OpenVZ is a container-based virtualization for Linux [@www-openvz].
 OpenVZ is mainly composed of three parts: the kernel, an set of tools

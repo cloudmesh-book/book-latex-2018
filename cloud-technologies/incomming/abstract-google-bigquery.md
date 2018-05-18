@@ -1,5 +1,5 @@
 Google BigQuery
-===============
+---------------
 
 Google BigQuery is a cloud-based big data analytics web service for
 processing very large read-only data sets. BigQuery can analyze data on

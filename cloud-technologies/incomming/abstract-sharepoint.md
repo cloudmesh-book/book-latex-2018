@@ -1,5 +1,5 @@
 Share Point
-===========
+-----------
 
 Sharepoint is a web-based document management and storage system
 platform that integrates with Microsoft

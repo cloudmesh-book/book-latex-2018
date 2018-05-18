@@ -1,5 +1,5 @@
 Amazon S3
-=========
+---------
 
 Amazon S3 is a simple storage service which mainly focuses on a
 highly-scalable, reliable, and low-latency data storage infrastructure

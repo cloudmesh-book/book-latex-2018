@@ -1,5 +1,5 @@
 Databricks
-==========
+----------
 
 Azure Databricks is founded as an open source project by Microsoft in
 collaboration with and the creators of Apache Spark and Databricks

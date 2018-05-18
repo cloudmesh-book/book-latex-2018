@@ -1,5 +1,5 @@
 KNIME
-=====
+-----
 
 KNIME Analytics Platform [@hid-sp18-504-pred-knime] (otherwise known as
 Konstanz Information Miner) is an open source platform focused on

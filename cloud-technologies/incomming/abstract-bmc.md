@@ -1,5 +1,5 @@
 BMC Multi-Cloud
-===============
+---------------
 
 Cloud service introduced a new concept in how to manage IT application
 and the infrastructure cost and as it matured more, many businesses

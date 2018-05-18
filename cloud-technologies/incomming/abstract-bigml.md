@@ -1,5 +1,5 @@
 BigML
-=====
+-----
 
 BigML [@hid-sp18-504-cloudacad-bigml] is a Machine Learning platform
 focused on delivering a wide range of ML solutions, while aiming to

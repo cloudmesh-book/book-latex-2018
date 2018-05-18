@@ -1,5 +1,5 @@
 Open Refine
-===========
+-----------
 
 OpenRefine is a useful open source that is used for data visualization
 and analysis. Its predominantly used for cleaning messy data and

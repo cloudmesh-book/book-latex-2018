@@ -1,5 +1,5 @@
 Azure Blob Storage
-==================
+------------------
 
 Microsoft Azure BLOB storage service can be used to store and retrieve
 Binary Large Objects (BLOBs), or what are more commonly known as

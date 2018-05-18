@@ -1,4 +1,4 @@
-# SaltStack :o:
+## SaltStack :o:
 
 
 |          |               |

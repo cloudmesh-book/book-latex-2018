@@ -1,5 +1,5 @@
 Apache Drill
-============
+------------
 
 Apache Drill is an open-source framework for distributing computing on
 applications handling data-intensive analysis. It is the open-source

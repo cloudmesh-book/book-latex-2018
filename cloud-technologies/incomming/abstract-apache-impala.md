@@ -1,5 +1,5 @@
 Apache Impala
-=============
+-------------
 
 Apache Impala acts as analytic database for Apache Hadoop. Impala can be
 used from many open source distributions like Cloudera, MapR, Oracle and

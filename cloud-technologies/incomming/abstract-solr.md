@@ -1,5 +1,5 @@
 Apache Solr
-===========
+-----------
 
 Apache Solr is an open-source search platform used to build search
 applications. It leverages the power of Apache

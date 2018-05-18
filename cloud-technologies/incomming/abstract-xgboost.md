@@ -1,5 +1,5 @@
 XGBoost :o:
-=======
+-------
 
 
 > ``XGBoost is an open-source software library which provides the

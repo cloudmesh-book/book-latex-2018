@@ -1,5 +1,5 @@
 Data Virtualization
-===================
+-------------------
 
 Data Virtualization is a modern approach of data integration.Denodo is a
 data virtualization platform [@denodo] which provides agile, high

@@ -1,5 +1,5 @@
 Apache PredictionIO
-===================
+-------------------
 
 Apache PredictionIO is an open source machine learning stack for
 building, evaluating and deploying engines with machine learning

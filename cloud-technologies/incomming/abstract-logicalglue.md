@@ -1,5 +1,5 @@
 Logicalglue
-===========
+-----------
 
 Logicalglue [@hid-sp18-413-logicalglue] is a predictive analystics
 software that is mostly targeted towards insurance sector. It employs

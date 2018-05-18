@@ -1,4 +1,4 @@
-# Distributed Coordination
+## Distributed Coordination
 
 
 |          |                          |

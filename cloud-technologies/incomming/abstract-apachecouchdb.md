@@ -1,5 +1,5 @@
 Apache Couch DB
-===============
+---------------
 
 Apache Couch DB is a NoSQL database which uses document instead of
 tables to store the data. It simplifies the interaction with application

@@ -1,5 +1,5 @@
 Hyperledger Iroha
-=================
+-----------------
 
 Hyperledger Iroha is an open source, mobile focused blockchain platform.
 The Japanese startup, Soramitsu in partnership with Hitachi started the

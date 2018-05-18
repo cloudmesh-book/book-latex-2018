@@ -1,5 +1,5 @@
 Cloud Bigtable
-==============
+--------------
 
 Cloud Bigtable is googles NoSQL big data storage service. This is
 currently used by google itself for their own services like search

@@ -1,5 +1,5 @@
 Pivotal
-=======
+-------
 
 Pivotal is a developer of cloud-native applications, containers, and
 tools for DevOps. The primary cloud computing tool is the Pivotal Cloud

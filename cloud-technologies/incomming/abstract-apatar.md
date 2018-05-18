@@ -1,5 +1,5 @@
 Apatar
-======
+------
 
 Apatar [@hid-sp18-402-www-apatar] is a data integration tool which
 provides the capability to work with data across different systems and

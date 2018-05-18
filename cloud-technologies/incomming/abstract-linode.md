@@ -1,5 +1,5 @@
 Linode
-======
+------
 
 Linode is a cloud service provider. It provide compute, storage and
 networking services on demand. Linode provide SSD Storage which is

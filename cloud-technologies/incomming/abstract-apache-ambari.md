@@ -1,5 +1,5 @@
 Apache Ambari
-=============
+-------------
 
 Ambari is a software to manage Hadoop environment efficiently by
 providing services like managing, monitoring and provisioning to the

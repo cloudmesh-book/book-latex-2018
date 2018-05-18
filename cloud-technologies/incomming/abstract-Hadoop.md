@@ -1,5 +1,5 @@
 Apache Hadoop
-=============
+-------------
 
 The Apache Hadoop [@hid-sp18-515-www-hadoop] is an open-source software
 designed for reliable, scalable, distributed computing. The Apache

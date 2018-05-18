@@ -1,5 +1,5 @@
 Apache NiFi
-===========
+-----------
 
 Apache NiFi, which is short for NiagaraFiles, is a open source software
 project from the Apache Software Foundation designed to automate the

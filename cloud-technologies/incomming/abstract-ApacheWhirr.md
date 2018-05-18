@@ -1,5 +1,5 @@
 Apache Whirr
-============
+------------
 
 Apache Whirr provides collection of libraries for running cloud services
 in a neutral way. Whirr began as a set of shell scripts for running
