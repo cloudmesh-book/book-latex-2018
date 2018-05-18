@@ -1,0 +1,13 @@
+import glob
+import os
+
+files = glob.glob("*.md")
+
+print (files)
+
+for file in files:
+    file_in = file
+    file_out = file.lower().replace("_","-")
+    print(file_in, file_out)    
+    os.rename(file_in, file_out)
+    
