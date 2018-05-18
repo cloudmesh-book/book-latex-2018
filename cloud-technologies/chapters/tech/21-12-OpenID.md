@@ -1,4 +1,4 @@
-# OpenID -o-
+# OpenID :o:
 
 
 |          |            |

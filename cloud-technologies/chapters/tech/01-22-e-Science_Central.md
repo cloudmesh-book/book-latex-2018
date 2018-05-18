@@ -1,4 +1,4 @@
-# e-Science Central -o-
+# e-Science Central :o:
 
 
 |          |                        |

@@ -1,4 +1,4 @@
-# Azure Blob -o-
+# Azure Blob :o:
 
 
 |          |                |

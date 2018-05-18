@@ -1,4 +1,4 @@
-# Public Cloud: Amazon S3 -o-
+# Public Cloud: Amazon S3 :o:
 
 
 |          |                             |

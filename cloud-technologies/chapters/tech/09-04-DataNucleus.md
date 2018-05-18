@@ -1,4 +1,4 @@
-# DataNucleus -o-
+# DataNucleus :o:
 
 
 |          |                           |

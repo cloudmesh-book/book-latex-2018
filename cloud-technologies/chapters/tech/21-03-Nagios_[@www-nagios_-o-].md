@@ -1,9 +1,9 @@
-# Nagios [@www-nagios -o-]
+# Nagios [@www-nagios :o:]
 
 
 |          |                          |
 | -------- | ------------------------ |
-| title    | Nagios [@www-nagios -o-] | 
+| title    | Nagios [@www-nagios :o:] | 
 | status   | 90                       |
 | section  | Monitoring               |
 | keywords | Monitoring               |

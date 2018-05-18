@@ -1,4 +1,4 @@
-# Swift -o-
+# Swift :o:
 
 
 |          |              |

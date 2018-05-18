@@ -1,4 +1,4 @@
-# iRODS -o-
+# iRODS :o:
 
 
 |          |                 |

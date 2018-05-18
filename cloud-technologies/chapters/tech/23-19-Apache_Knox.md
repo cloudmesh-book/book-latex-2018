@@ -1,4 +1,4 @@
-# Apache Knox -o-
+# Apache Knox :o:
 
 
 |          |                               |

@@ -1,4 +1,4 @@
-# Google Cloud Machine Learning -o-
+# Google Cloud Machine Learning :o:
 
 
 |          |                                   |

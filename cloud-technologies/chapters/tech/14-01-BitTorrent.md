@@ -1,4 +1,4 @@
-# BitTorrent -o-
+# BitTorrent :o:
 
 
 |          |                |

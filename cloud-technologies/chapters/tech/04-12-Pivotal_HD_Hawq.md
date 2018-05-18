@@ -1,4 +1,4 @@
-# Pivotal HD/Hawq -o-
+# Pivotal HD/Hawq :o:
 
 
 |          |                        |

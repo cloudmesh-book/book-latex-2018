@@ -1,4 +1,4 @@
-# Rocks -o-
+# Rocks :o:
 
 
 |          |           |

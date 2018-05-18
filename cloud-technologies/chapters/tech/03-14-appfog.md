@@ -1,4 +1,4 @@
-# appfog -o-
+# appfog :o:
 
 
 |          |                                |

@@ -1,4 +1,4 @@
-# Google Chubby -o-
+# Google Chubby :o:
 
 
 |          |                   |

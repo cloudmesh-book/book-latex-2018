@@ -1,4 +1,4 @@
-# Terraform -o-
+# Terraform :o:
 
 
 |          |               |

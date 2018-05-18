@@ -1,4 +1,4 @@
-# Tyrant -o-
+# Tyrant :o:
 
 
 |          |            |

@@ -1,4 +1,4 @@
-# Google Omega -o-
+# Google Omega :o:
 
 
 |          |                             |

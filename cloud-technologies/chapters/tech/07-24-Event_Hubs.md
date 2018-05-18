@@ -1,4 +1,4 @@
-# Event Hubs -o-
+# Event Hubs :o:
 
 
 |          |                                         |

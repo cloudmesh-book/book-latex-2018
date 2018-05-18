@@ -1,4 +1,4 @@
-# Cloudability -o-
+# Cloudability :o:
 
 
 |          |                               |

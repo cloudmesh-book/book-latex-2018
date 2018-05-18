@@ -1,4 +1,4 @@
-#  (b) publish-subscribe: Big Data -o-
+#  (b) publish-subscribe: Big Data :o:
 
 
 |          |                                         |

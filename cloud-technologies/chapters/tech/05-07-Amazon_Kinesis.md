@@ -1,4 +1,4 @@
-# Amazon Kinesis -o-
+# Amazon Kinesis :o:
 
 
 |          |                    |

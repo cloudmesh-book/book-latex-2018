@@ -1,4 +1,4 @@
-# Aerobatic -o-
+# Aerobatic :o:
 
 
 |          |                                |

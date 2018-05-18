@@ -1,4 +1,4 @@
-# Google Cloud Storage -o-
+# Google Cloud Storage :o:
 
 
 |          |                          |

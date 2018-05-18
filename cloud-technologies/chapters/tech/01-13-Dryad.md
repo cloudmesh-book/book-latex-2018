@@ -1,4 +1,4 @@
-# Dryad -o-
+# Dryad :o:
 
 
 |          |                        |

@@ -1,4 +1,4 @@
-# Taverna -o-
+# Taverna :o:
 
 
 |          |                        |

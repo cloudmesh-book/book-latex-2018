@@ -1,4 +1,4 @@
-# Networking: Google Cloud DNS -o-
+# Networking: Google Cloud DNS :o:
 
 
 |          |                                         |

@@ -1,4 +1,4 @@
-# Memcached -o-
+# Memcached :o:
 
 
 |          |                            |

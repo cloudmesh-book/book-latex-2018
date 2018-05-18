@@ -1,4 +1,4 @@
-# SAP HANA -o-
+# SAP HANA :o:
 
 
 |          |                        |

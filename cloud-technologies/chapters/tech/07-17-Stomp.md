@@ -1,4 +1,4 @@
-# Stomp -o-
+# Stomp :o:
 
 
 |          |                                         |

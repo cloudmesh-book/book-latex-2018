@@ -1,4 +1,4 @@
-# Gluster -o-
+# Gluster :o:
 
 
 |          |              |

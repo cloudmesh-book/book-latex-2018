@@ -1,4 +1,4 @@
-# Kafka -o-
+# Kafka :o:
 
 
 |          |                                         |

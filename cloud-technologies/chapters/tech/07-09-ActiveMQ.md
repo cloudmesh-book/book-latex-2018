@@ -1,4 +1,4 @@
-# ActiveMQ -o-
+# ActiveMQ :o:
 
 
 |          |                                         |

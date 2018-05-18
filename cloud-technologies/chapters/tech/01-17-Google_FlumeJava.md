@@ -1,4 +1,4 @@
-# Google FlumeJava -o-
+# Google FlumeJava :o:
 
 
 |          |                        |

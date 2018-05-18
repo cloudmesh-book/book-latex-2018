@@ -1,4 +1,4 @@
-# LevelDB -o-
+# LevelDB :o:
 
 
 |          |             |

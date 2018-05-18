@@ -1,4 +1,4 @@
-# MR-MPI -o-
+# MR-MPI :o:
 
 
 |          |                                                      |

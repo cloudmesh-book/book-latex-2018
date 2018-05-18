@@ -1,4 +1,4 @@
-# Summingbird -o-
+# Summingbird :o:
 
 
 |          |                        |

@@ -1,4 +1,4 @@
-# JClouds -o- -o-
+# JClouds :o: :o:
 
 
 |          |                  |

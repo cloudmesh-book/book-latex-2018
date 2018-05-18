@@ -1,4 +1,4 @@
-# dotCloud -o-
+# dotCloud :o:
 
 
 |          |                                |

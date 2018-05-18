@@ -1,4 +1,4 @@
-# Airavata -o-
+# Airavata :o:
 
 
 |          |                        |

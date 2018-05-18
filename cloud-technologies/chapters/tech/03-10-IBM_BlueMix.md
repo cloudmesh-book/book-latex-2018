@@ -1,4 +1,4 @@
-# IBM BlueMix -o-
+# IBM BlueMix :o:
 
 
 |          |                                |

@@ -1,4 +1,4 @@
-# SciDB -o-
+# SciDB :o:
 
 
 |          |                      |

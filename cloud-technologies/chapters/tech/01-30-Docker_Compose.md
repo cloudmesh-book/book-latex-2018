@@ -1,4 +1,4 @@
-# Docker Compose -o-
+# Docker Compose :o:
 
 
 |          |                        |

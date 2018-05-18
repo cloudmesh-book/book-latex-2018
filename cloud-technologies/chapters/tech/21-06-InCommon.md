@@ -1,4 +1,4 @@
-# InCommon -o-
+# InCommon :o:
 
 
 |          |              |

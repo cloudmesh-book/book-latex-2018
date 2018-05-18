@@ -1,4 +1,4 @@
-# Apache Arrow -o-
+# Apache Arrow :o:
 
 
 |          |                               |

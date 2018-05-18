@@ -1,4 +1,4 @@
-# Cassandra -o-
+# Cassandra :o:
 
 
 |          |               |

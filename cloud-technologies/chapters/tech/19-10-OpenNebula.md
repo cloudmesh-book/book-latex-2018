@@ -1,4 +1,4 @@
-# OpenNebula -o-
+# OpenNebula :o:
 
 
 |          |                                         |

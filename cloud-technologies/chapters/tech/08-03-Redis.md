@@ -1,4 +1,4 @@
-# Redis -o-
+# Redis :o:
 
 
 |          |                            |

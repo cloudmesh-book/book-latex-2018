@@ -1,4 +1,4 @@
-# Amazon RDS -o-
+# Amazon RDS :o:
 
 
 |          |                      |

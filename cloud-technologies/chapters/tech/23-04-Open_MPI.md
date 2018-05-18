@@ -1,4 +1,4 @@
-# Open MPI -o-
+# Open MPI :o:
 
 
 |          |                               |

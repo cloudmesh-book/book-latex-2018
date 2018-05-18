@@ -1,4 +1,4 @@
-# Bioconductor -o-
+# Bioconductor :o:
 
 
 |          |                           |

@@ -1,4 +1,4 @@
-# Google Cloud SQL -o-
+# Google Cloud SQL :o:
 
 
 |          |                      |

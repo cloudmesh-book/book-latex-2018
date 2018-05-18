@@ -1,4 +1,4 @@
-# HCatalog -o-
+# HCatalog :o:
 
 
 |          |                        |

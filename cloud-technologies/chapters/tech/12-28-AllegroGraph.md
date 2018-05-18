@@ -1,4 +1,4 @@
-# AllegroGraph -o-
+# AllegroGraph :o:
 
 
 |          |                  |

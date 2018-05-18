@@ -1,4 +1,4 @@
-# OpenStack Keystone -o-
+# OpenStack Keystone :o:
 
 
 |          |                        |

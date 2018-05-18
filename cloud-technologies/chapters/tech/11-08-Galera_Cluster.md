@@ -1,4 +1,4 @@
-# Galera Cluster -o-
+# Galera Cluster :o:
 
 
 |          |                      |

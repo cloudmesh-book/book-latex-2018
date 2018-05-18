@@ -1,4 +1,4 @@
-# Zookeeper -o-
+# Zookeeper :o:
 
 
 |          |               |

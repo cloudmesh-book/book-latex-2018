@@ -1,4 +1,4 @@
-# Slurm -o-
+# Slurm :o:
 
 
 |          |                             |

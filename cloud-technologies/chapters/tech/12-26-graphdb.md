@@ -1,4 +1,4 @@
-# graphdb -o-
+# graphdb :o:
 
 
 |          |             |

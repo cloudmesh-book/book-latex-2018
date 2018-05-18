@@ -1,4 +1,4 @@
-# Totem -o-
+# Totem :o:
 
 
 |          |                                                      |

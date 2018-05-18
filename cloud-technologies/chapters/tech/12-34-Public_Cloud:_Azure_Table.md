@@ -1,4 +1,4 @@
-# Public Cloud: Azure Table -o-
+# Public Cloud: Azure Table :o:
 
 
 |          |                               |

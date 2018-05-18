@@ -1,4 +1,4 @@
-# Azure Stream Analytics -o-
+# Azure Stream Analytics :o:
 
 
 |          |                            |

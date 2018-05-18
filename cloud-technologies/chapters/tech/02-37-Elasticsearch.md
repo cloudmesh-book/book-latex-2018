@@ -1,4 +1,4 @@
-# Elasticsearch -o-
+# Elasticsearch :o:
 
 
 |          |                           |

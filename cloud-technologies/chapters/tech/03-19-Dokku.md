@@ -1,4 +1,4 @@
-# Dokku -o-
+# Dokku :o:
 
 
 |          |                                |

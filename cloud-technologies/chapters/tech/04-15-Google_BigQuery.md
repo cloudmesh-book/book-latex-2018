@@ -1,4 +1,4 @@
-# Google BigQuery -o-
+# Google BigQuery :o:
 
 
 |          |                        |

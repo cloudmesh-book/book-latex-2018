@@ -1,4 +1,4 @@
-# Pregel -o-
+# Pregel :o:
 
 
 |          |                                                      |

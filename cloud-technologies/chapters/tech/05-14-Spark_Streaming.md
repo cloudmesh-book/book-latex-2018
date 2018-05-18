@@ -1,4 +1,4 @@
-# Spark Streaming -o-
+# Spark Streaming :o:
 
 
 |          |                     |

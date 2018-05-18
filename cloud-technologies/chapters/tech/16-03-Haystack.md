@@ -1,4 +1,4 @@
-# Haystack -o-
+# Haystack :o:
 
 
 |          |              |

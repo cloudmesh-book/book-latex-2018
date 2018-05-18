@@ -1,4 +1,4 @@
-# Crunch -o-
+# Crunch :o:
 
 
 |          |                        |

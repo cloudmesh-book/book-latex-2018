@@ -1,4 +1,4 @@
-# Blazegraph -o-
+# Blazegraph :o:
 
 
 |          |                |

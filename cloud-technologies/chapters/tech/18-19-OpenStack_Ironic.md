@@ -1,4 +1,4 @@
-# OpenStack Ironic -o-
+# OpenStack Ironic :o:
 
 
 |          |                      |

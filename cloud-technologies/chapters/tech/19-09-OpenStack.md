@@ -1,4 +1,4 @@
-# OpenStack -o-
+# OpenStack :o:
 
 
 |          |                                         |

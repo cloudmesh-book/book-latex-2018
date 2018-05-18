@@ -1,4 +1,4 @@
-# Puppet -o-
+# Puppet :o:
 
 
 |          |            |

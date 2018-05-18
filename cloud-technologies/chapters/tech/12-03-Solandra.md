@@ -1,4 +1,4 @@
-# Solandra -o-
+# Solandra :o:
 
 
 |          |              |

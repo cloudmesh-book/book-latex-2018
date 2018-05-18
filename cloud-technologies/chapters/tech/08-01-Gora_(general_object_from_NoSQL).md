@@ -1,4 +1,4 @@
-# Gora (general object from NoSQL) -o-
+# Gora (general object from NoSQL) :o:
 
 
 |          |                                      |

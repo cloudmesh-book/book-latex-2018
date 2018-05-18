@@ -1,4 +1,4 @@
-# vSphere and vCloud -o-
+# vSphere and vCloud :o:
 
 
 |          |                                         |

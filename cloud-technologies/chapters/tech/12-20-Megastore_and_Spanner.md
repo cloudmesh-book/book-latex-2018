@@ -1,4 +1,4 @@
-# Megastore and Spanner -o-
+# Megastore and Spanner :o:
 
 
 |          |                           |

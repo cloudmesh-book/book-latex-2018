@@ -1,4 +1,4 @@
-# Apache Ranger -o-
+# Apache Ranger :o:
 
 
 |          |                               |

@@ -1,4 +1,4 @@
-# Rasdaman -o-
+# Rasdaman :o:
 
 
 |          |                      |
