@@ -32,8 +32,12 @@ center, or on cloud providers like AWS or Digital Ocean. For Docker
 the older versions with Machine's swarm option, we can configure a
 swarm cluster Docker Swarm provides native clustering capabilities to
 turn a group of Docker engines into a single, virtual Docker
-Engine. With these pooled resources ``you can scale out your
-application as if it were running on a single, huge computer'' as
+Engine. With these pooled resources
+
+> ``you can scale out your applicati> on as if it were running on a
+> single, huge computer''
+
+as
 swarm can be scaled upto 1000 Nodes or upto 50,000 containers
 [@www-docker].
 

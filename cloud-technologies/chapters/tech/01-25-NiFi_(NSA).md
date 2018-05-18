@@ -10,8 +10,12 @@
 
 
 
-NiFi can be descibed as ``An Easy to use, powerful and reliable system
-to process and distribute data''\cite{www-nifi}.  This tool aims at
+NiFi can be descibed as
+
+> ``An Easy to use, powerful and reliable system to process and
+> distribute data'' [@www-nifi].
+
+This tool aims at
 automated data flow from sources with different sizes, formats and
 following different protocols to the centralized location or
 destination [@www-hortanworks].

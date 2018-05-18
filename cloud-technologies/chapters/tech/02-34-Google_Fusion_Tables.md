@@ -22,11 +22,14 @@ allows to integrate the data from different tables from different
 users or tables.Fusion Table uses two-layer storage, Bigtable and
 Magastore. The information rows are stored in bigdata table called
 \textit{Rows}, user can merge the multiple table in to one, from multiple
-users. ``Megastore is a library on top of
-bigtable'' [@GoogleFusionTable2012]. Data visualization is one the
-feature, where user can see the visual representation of their data as
-soon as they upload it. User can store the data along with geospatial
-information as well.
+users.
+
+> ``Megastore is a library on top of bigtable''
+[@GoogleFusionTable2012].
+
+Data visualization is one the feature, where user can see the visual
+representation of their data as soon as they upload it. User can store
+the data along with geospatial information as well.
 
 
 

@@ -1,4 +1,4 @@
-# GraphBuilder (Intel)
+# GraphBuilder (Intel) :o:
 
 
 |          |                           |
@@ -20,11 +20,14 @@ to speed up the time to insight for data scientists by automating
 heavy custom workflows and also by removing the complexities of
 cluster computing for constructing graphs from Big Data. Intel Graph
 Building uses Apache Pig scripting language to simplify data
-preparation pipeline.  ``Intel Graph Builder also includes a connector
-that parallelizes the loading of the graph output into the Aurelius
-Titan open source graph database - which further speeds the graph
-processing pipeline through the final stage''.  Finally being an open
-source there is a possibility of adding a load of functionalities by
-various contributors [@graphbuilder].
+preparation pipeline.
+
+> ``Intel Graph Builder also includes a connector that parallelizes
+> the loading of the graph output into the Aurelius Titan open source
+> graph database - which further speeds the graph processing pipeline
+> through the final stage''.
+
+Finally being an open source there is a possibility of adding a load
+of functionalities by various contributors [@graphbuilder].
 
     

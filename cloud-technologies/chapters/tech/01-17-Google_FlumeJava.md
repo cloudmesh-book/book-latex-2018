@@ -21,10 +21,14 @@ abstractions of data parallel computations by providing support for
 pipelined execution. To provide optimized parallel execution,
 FlumeJava defers the execution of these pipelines and instead
 constructs an execution plan dataflow graph depending on the results
-needed by each stage of the pipeline. ``When the final results of the
-parallel operations are eventually needed, FlumeJava first optimizes
-the execution plan, and then executes the optimized operations on
-appropriate underlying primitives'' [@flumejava-paper]. FlumeJava
+needed by each stage of the pipeline.
+
+> ``When the final results of the parallel operations are eventually
+> needed, FlumeJava first optimizes the execution plan, and then
+> executes the optimized operations on appropriate underlying
+> primitives'' [@flumejava-paper].
+
+FlumeJava
 library is written on top of the collection framework in Java.
 
 When developing a large pipeline, it is time consuming to find a bug
