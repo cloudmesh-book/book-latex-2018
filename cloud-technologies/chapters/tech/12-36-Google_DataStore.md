@@ -38,4 +38,4 @@ provides a number of features that relational databases are not
 optimally suited to provide, including high-performance at a very
 large scale and high-reliability [@www-google-datastore].
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

@@ -23,4 +23,4 @@ website or application. Route 53 can also be used for registering
 domain names and arranging DNS health checks to monitor the
 server [@www-amar53].
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

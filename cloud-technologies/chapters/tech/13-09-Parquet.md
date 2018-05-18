@@ -21,4 +21,4 @@ data and thus improving performance. It can be implemented using the
 Apache Thrift framework which increases its flexibility to work with a
 number of programming languages like C++, Java, Python, PHP, etc.
      
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

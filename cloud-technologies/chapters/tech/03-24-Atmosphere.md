@@ -26,4 +26,4 @@ image or instance according to his requirements.  The images launched
 by users can be shared among different members as and when
 required [@www-at2].
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

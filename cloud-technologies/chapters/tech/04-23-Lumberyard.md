@@ -22,4 +22,4 @@ you use the engine for your game, you're permitted to roll your own
 server tech, but if you're using a third-party provider, it has to be
 Amazon [@what].
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

@@ -27,4 +27,4 @@ has enriched set of operations for complex domains:vision,NLP,Speech,
 plus,advanced math And is Integrated with new BDAS technologies:
 Velox, ml-matrix, soon Planck, TuPAQ and Sample Clean [@spark].
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

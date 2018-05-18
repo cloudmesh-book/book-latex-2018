@@ -946,7 +946,7 @@ has enriched set of operations for complex domains:vision,NLP,Speech,
 plus,advanced math And is Integrated with new BDAS technologies:
 Velox, ml-matrix, soon Planck, TuPAQ and Sample Clean [@spark].
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 # Mahout -o-
 
 
@@ -2345,7 +2345,6 @@ through its own model description language
 11 Release
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 # Google App Engine
 
 
@@ -2974,7 +2973,7 @@ image or instance according to his requirements.  The images launched
 by users can be shared among different members as and when
 required [@www-at2].
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 # Kite
 
 
@@ -3720,7 +3719,7 @@ you use the engine for your game, you're permitted to roll your own
 server tech, but if you're using a third-party provider, it has to be
 Amazon [@what].
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 # Storm
 
 
@@ -4188,7 +4187,7 @@ allows algorithms to run close to sensors.
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 # Hadoop
 
 
@@ -4623,7 +4622,7 @@ cost effective manner [@www-netsyslab].
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 # point-to-point
 
 
@@ -5310,7 +5309,7 @@ for Big Data.
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 # Gora (general object from NoSQL) -o-
 
 
@@ -5602,7 +5601,7 @@ single-node system.
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 # Hibernate
 
 
@@ -5755,7 +5754,7 @@ contain the JDBC classes. JDBC is more suitable for object oriented
 databases. JDBC can be used for ODBC compliant databases by using a
 JDBC-to-ODBC bridge.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%     
+
 # UIMA -o-
 
 
@@ -5811,7 +5810,7 @@ Tika useful for search engine indexing, content analysis, translation,
 and much more [@www-tika].''
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 # Oracle -o-
 
 
@@ -6377,7 +6376,7 @@ code generation to make queries fast [@www-spark-sql-2]. At the
 same time, it scales to thousands of nodes and multi hour queries
 using the Spark engine, which provides full mid-query fault tolerance.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 # Lucene -o-
 
 
@@ -7497,7 +7496,7 @@ provides a number of features that relational databases are not
 optimally suited to provide, including high-performance at a very
 large scale and high-reliability [@www-google-datastore].
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 # iRODS -o-
 
 
@@ -7738,7 +7737,7 @@ data and thus improving performance. It can be implemented using the
 Apache Thrift framework which increases its flexibility to work with a
 number of programming languages like C++, Java, Python, PHP, etc.
      
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 # BitTorrent -o-
 
 
@@ -7954,7 +7953,7 @@ gpfdist [@patent-google-gpf].
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 # Mesos -o-
 
 
@@ -8391,7 +8390,7 @@ execution of various workloads. This is so because the jobs are
 typically acquired by a placeholder job and they relayed to the
 workloads [@www-pilot-job-paper-2016].
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 # HDFS
 
 
@@ -8815,7 +8814,7 @@ unique in a bucket.
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 # Cloudmesh -o-
 
 
@@ -9133,7 +9132,7 @@ others [@saga-paper].
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 # Docker (Machine, Swarm)
 
 
@@ -9936,27 +9935,26 @@ formats. The generated API hide the tool specific details simplifying
 the integration and orchestration different kinds of artifacts. The
 APIfication framework contains various modules:
 
-     1. Invokers, which are capable of running a given type of
-        executable for example cookbook invoker can be used to run Chef
-        cookbooks
+1. Invokers, which are capable of running a given type of
+   executable for example cookbook invoker can be used to run Chef
+   cookbooks
 
-     2. Scanners, which are capable of scanning modules of certain type for
-        example cookbook scanner scans Chef cookbooks.
+2. Scanners, which are capable of scanning modules of certain type for
+   example cookbook scanner scans Chef cookbooks.
 
-     3. API impl generators, which are doingthe actual work to
-        generate the API implementation.
+3. API impl generators, which are doingthe actual work to
+   generate the API implementation.
 
-        The final API implementation [@www-any2api] is is packages
-        with executable in container.  The module is packaged as npm
-        module. Currently any2api-cli provides a command line
-        interface and web based interface is planned for future
-        development. Any2Api is very useful for by devops to
-        orchestrate open source ecosystem without dealing with low
-        level details of chef cookbook or ansible playbook or
-        puppet. It can also be very useful in writing microservices
-        where services talk to each other using well defined APIs.
+The final API implementation [@www-any2api] is is packages with
+executable in container.  The module is packaged as npm
+module. Currently any2api-cli provides a command line interface and
+web based interface is planned for future development. Any2Api is very
+useful for by devops to orchestrate open source ecosystem without
+dealing with low level details of chef cookbook or ansible playbook or
+puppet. It can also be very useful in writing microservices where
+services talk to each other using well defined APIs.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 # Xen
 
 
@@ -10590,7 +10588,7 @@ website or application. Route 53 can also be used for registering
 domain names and arranging DNS health checks to monitor the
 server [@www-amar53].
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 # Ambari -o-
 
 
@@ -11048,7 +11046,7 @@ latency.
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 # MQTT
 
 
@@ -11135,7 +11133,7 @@ python.
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 # Snort -o-
 
 

@@ -25,4 +25,4 @@ code generation to make queries fast [@www-spark-sql-2]. At the
 same time, it scales to thousands of nodes and multi hour queries
 using the Spark engine, which provides full mid-query fault tolerance.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

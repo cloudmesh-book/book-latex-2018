@@ -26,4 +26,4 @@ contain the JDBC classes. JDBC is more suitable for object oriented
 databases. JDBC can be used for ODBC compliant databases by using a
 JDBC-to-ODBC bridge.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%     
+
