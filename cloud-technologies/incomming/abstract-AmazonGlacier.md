@@ -9,14 +9,20 @@ infrequently. User can store virtually any kind of data in any format.
 
 Amazon also provides Simple Storage Service for storing and retrieving
 data but Glacier is much cheaper than S3. As per AWS documentation,
-``For Amazon glacier, storage costs are a consistent \$0.004 per
-gigabyte per month, which is substantially cheaper than Amazon's own
-Simple Storage
-Service'' [@hid-sp18-420-Amazon-Glacier-FAQ]. ``Customers can store
-data to Amazon Glacier with a significant saving as compared to
-on-premise storage. Amazon Glacier is designed to provide average
-annual durability of 99.999999999% for an
-archive'' [@hid-sp18-420-Amazon-Glacier]. Data is stored in Amazon
+
+
+> ``For Amazon glacier, storage costs are a consistent \$0.004 per
+> gigabyte per month, which is substantially cheaper than Amazon's own
+> Simple Storage Service'' [@hid-sp18-420-Amazon-Glacier-FAQ].
+
+
+
+> ``Customers can store data to Amazon Glacier with a significant
+> saving as compared to on-premise storage. Amazon Glacier is designed
+> to provide average annual durability of 99.999999999% for an
+> archive'' [@hid-sp18-420-Amazon-Glacier].
+
+Data is stored in Amazon
 Glacier as archives. Archives can be deleted at any point of time and
 billing will be updated accordingly.
 

@@ -8,4 +8,4 @@ components are classes for database connections, and database results,
 which can be treated differently, to minimize local computation.
 Connections to particular database systems, such as MySQL, or PostgreSQL
 are handled through connectivity packages, such as
-`odbc` [@hid-sp18-403-rstudio-odbc].
+*odbc* [@hid-sp18-403-rstudio-odbc].

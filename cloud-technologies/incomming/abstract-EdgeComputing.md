@@ -13,17 +13,21 @@ This mechanism requires leveraging or using resources that may not be
 connected to a network with devices such as laptops, smartphones,
 tablets and sensors.
 
-``Edge computing covers a wide range of technologies including wireless
-sensor networks, mobile data acquisition, mobile signature analysis,
-cooperative distributed peer-to-peer ad hoc networking and processing
-also classifiable as local cloud/fog computing and grid/mesh computing,
-dew computing, mobile edge computing,cloudlet, distributed data storage
-and retrieval, autonomic self-healing networks, remote cloud
-services'' [@hid-sp18-410-edge]
+
+
+> ``Edge computing covers a wide range of technologies including
+> wireless sensor networks, mobile data acquisition, mobile signature
+> analysis, cooperative distributed peer-to-peer ad hoc networking and
+> processing also classifiable as local cloud/fog computing and
+> grid/mesh computing, dew computing, mobile edge computing,cloudlet,
+> distributed data storage and retrieval, autonomic self-healing
+> networks, remote cloud services'' [@hid-sp18-410-edge]
 
 Majority of its application are realized in IOT and other smart
 connected ecosystem where emergency is the highest priority and data
-processing is scarce. Naive example would be a baby crossing a road and
+processing is scarce.
+
+Naive example would be a baby crossing a road and
 an autonous vehicle running over the same road, needs to decide as soon
 as possible to stop motion in order to save baby's life. It cannot send
 the data to main cloud server and wait for response which would be time

@@ -7,11 +7,15 @@ challenging problems with respect to indexing, logging, searching,
 troubleshooting, storage and reporting.
 
 ELK acronyms three open source projects: Elasticsearch, Logstash, and
-Kibana. ``Elasticsearch is a search and analytics engine. Logstash is a
-server-side data processing pipeline that ingests data from multiple
-sources simultaneously, transforms it, and then sends it to a stash like
-Elasticsearch. Kibana lets users visualize data with charts and graphs
-in Elasticsearch'' [@hid-sp18-410-ELKBlog]. ELK is one of the most
+Kibana.
+
+> ``Elasticsearch is a search and analytics engine. Logstash is a
+> server-side data processing pipeline that ingests data from multiple
+> sources simultaneously, transforms it, and then sends it to a stash
+> like Elasticsearch. Kibana lets users visualize data with charts and
+> graphs in Elasticsearch'' [@hid-sp18-410-ELKBlog].
+
+ELK is one of the most
 scalable solutions in field of reporting and indexing where Elastic
 search is an indexing and database kind of service and Logstash works
 more like a tool for logging everything feeding it to Elastic search for

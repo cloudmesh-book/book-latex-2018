@@ -1,10 +1,96 @@
-abstract-apachecloudstack.md:Figure [\[F:cloudstack-scalabuility\]](#F:cloudstack-scalabuility){reference-type="ref"
-abstract-apachecloudstack.md:reference="F:cloudstack-scalabuility"} depicts how the simplest
-abstract-apachecloudstack.md:Scalability [@hid-sp18-417-cloudstack-scaling][]{label="F:cloudstack-scalabuility"}](images/hid-sp18-417-cloudstack.png){width="\textwidth"}
-abstract-cntk.md:systems. "CNTK also supports the description of neural networks via C++,
-abstract-cntk.md:as Python and C\#" [@hid-sp18-510-kd-cntk].
-abstract-genomics.md:databases [@hid-sp18-523-www-genomics]."It helps analysing Genomic data
-abstract-genomics.md:cluster" [@hid-sp18-523-www-genomics].
-abstract-opennebula.md:Model [@hid-sp18-417-opennebula-deployment][]{label="F:opennebula"}](images/hid-sp18-417-opennebula.png){width="\textwidth"}
-abstract-opennebula.md:depicted in [\[F:opennebula\]](#F:opennebula){reference-type="ref"
-abstract-opennebula.md:reference="F:opennebula"}. Due to its long steady growth, the tool is
+abstract-AmazonGlacier.md
+abstract-AmazonGlacier.md
+abstract-AmazonRDS.md
+abstract-AmazonRedshift.md
+abstract-AmazonRedshift.md
+abstract-AmazonS3.md
+abstract-Cloudlet.md
+abstract-Cloudlet.md
+abstract-ELKStack.md
+abstract-EdgeComputing.md
+abstract-HyperledgerIndy.md
+abstract-HyperledgerIndy.md
+abstract-HyperledgerIroha.md
+abstract-HyperledgerIroha.md
+abstract-HyperledgerSawtooth.md
+abstract-HyperledgerSawtooth.md
+abstract-IBMDb2BigSql.md
+abstract-IntelCloudFinder.md
+abstract-OpenNN.md
+abstract-OpenNN.md
+abstract-OpenNN.md
+abstract-OpenNN.md
+abstract-PyTorch.md
+abstract-PyTorch.md
+abstract-PyTorch.md
+abstract-RabbitMQ.md
+abstract-RabbitMQ.md
+abstract-RabbitMQ.md
+abstract-RabbitMQ.md
+abstract-Redis.md
+abstract-TensorFlow.md
+abstract-amazon-aurora.md
+abstract-amazon-cloudfront.md
+abstract-amazon-cloudfront.md
+abstract-amazon-vpc.md
+abstract-amazonec2.md
+abstract-amazonec2.md
+abstract-amazonml.md
+abstract-amazonml.md
+abstract-ansible.md
+abstract-apache-impala.md
+abstract-apachecloudstack.md
+abstract-apachedeltacloud.md
+abstract-atomsphere.md
+abstract-azureblas.md
+abstract-blockchain.md
+abstract-clive.md
+abstract-cloudhub.md
+abstract-cntk.md
+abstract-cntk.md
+abstract-dbi.md
+abstract-dremel.md
+abstract-dremel.md
+abstract-elasticsearch.md
+abstract-ethereum.md
+abstract-futuregrid.md
+abstract-futuregrid.md
+abstract-genomics.md
+abstract-genomics.md
+abstract-genomics.md
+abstract-googleappengine.md
+abstract-graphql.md
+abstract-h2O.md
+abstract-h2O.md
+abstract-h2O.md
+abstract-id2020.md
+abstract-keras.md
+abstract-kubernetes.md
+abstract-lightgbm.md
+abstract-mahout.md
+abstract-mvs.md
+abstract-mvs.md
+abstract-opennebula.md
+abstract-openrefine.md
+abstract-orientDB.md
+abstract-orientDB.md
+abstract-puppet.md
+abstract-rightscale-cloud-management.md
+abstract-ripple.md
+abstract-ripple.md
+abstract-sales-cloud.md
+abstract-samoa.md
+abstract-scikit-learn.md
+abstract-skytap.md
+abstract-spanner.md
+abstract-spanner.md
+abstract-spanner.md
+abstract-spanner.md
+abstract-teradata-intelliflex.md
+abstract-teradata-intelliflex.md
+abstract-vision.md
+abstract-vision.md
+abstract-vision.md
+abstract-xgboost.md
+abstract-xgboost.md
+abstract-xgboost.md

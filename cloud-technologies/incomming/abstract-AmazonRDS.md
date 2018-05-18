@@ -11,11 +11,16 @@ user to change from one instance type to another instance type without
 losing its data. It is cost effective and the costing depends on the
 instance type [@hid-sp18-420-amazon-RDS-FAQ].
 
-``Amazon RDS can automatically backup database and keep that database
-software up to date with its latest version. RDS makes it easy to use
-replication to enhance database availability, improve data durability,
-or scale beyond the capacity constraints of a single database instance
-for read-heavy database workloads'' [@hid-sp18-420-amazon-RDS-FAQ]. High
+
+
+> ``Amazon RDS can automatically backup database and keep that
+> database software up to date with its latest version. RDS makes it
+> easy to use replication to enhance database availability, improve
+> data durability, or scale beyond the capacity constraints of a
+> single database instance for read-heavy database workloads''
+> [@hid-sp18-420-amazon-RDS-FAQ].
+
+High
 availability is achieved by built-in automated failover from primary
 database to a replicated secondary database in case of any failure. This
 replicated secondary database in sync with primary database.

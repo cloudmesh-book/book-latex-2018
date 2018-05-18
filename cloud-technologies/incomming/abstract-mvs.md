@@ -2,9 +2,13 @@ Microsoft Visual Studio
 =======================
 
 Microsoft Visual Studio (MVS), community edition, is an open source
-``integrated development interface IDE applicable for the development of
-computer programs, websites, web services, web and mobile
-apps'' [@hid-sp18-415-wikipedia-org]. While the interface consists of
+
+
+> ``integrated development interface IDE applicable for the
+> development of computer programs, websites, web services, web and
+> mobile apps'' [@hid-sp18-415-wikipedia-org].
+
+While the interface consists of
 some built-in tools such as code editor, code profiler and integrated
 debugger, it also supports plugins dependending on requirements of
 visual designer. Javascript, C++, XML, CSS, `.NET` are among some of the

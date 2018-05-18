@@ -17,13 +17,17 @@ a record would have to beat all the computers in the network that are
 verifying the transactions. Thus tampering is very close to
 impossibility.
 
-Blockchains ``are an example of a distributed computing system with high
-Byzantine fault tolerance. Decentralized consensus has therefore been
-achieved with a blockchain. This makes blockchains potentially suitable
-for the recording of events, medical records, and other records
-management activities, such as identity management, transaction
-processing, documenting provenance, food traceability or
-voting'' [@hid-sp18-506-Blockchain].
+Blockchains
+
+> ``are an example of a distributed computing system with high
+> Byzantine fault tolerance. Decentralized consensus has therefore
+> been achieved with a blockchain. This makes blockchains potentially
+> suitable for the recording of events, medical records, and other
+> records management activities, such as identity management,
+> transaction processing, documenting provenance, food traceability or
+> voting'' [@hid-sp18-506-Blockchain].
+
+
 
 Alhough, the popular use of blockchain nowadays is with the generation
 of cryptocurrency, blockchain has more to offer. Big corporations as

@@ -1,9 +1,13 @@
 Keras
 =====
 
-\``Keras is a high-level neural networks API, written in Python and
-capable of running on top of TensorFlow, CNTK or
-Theano\'' [@hid-sp18-401-keras].
+
+
+> ``Keras is a high-level neural networks API, written in Python and
+> capable of running on top of TensorFlow, CNTK or
+> Theano'' [@hid-sp18-401-keras].
+
+
 
 Keras is used in deep learning community to build neural nets with easy
 to use syntax. There are other technologies/software packages like
