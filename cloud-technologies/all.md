@@ -6094,22 +6094,21 @@ environments [@www-DB2Wiki].
 
 SQL Server is a relational database management system from
 Microsoft [@www-sqlserver-wiki].  As of Jan 2017, SQL Server is
-available in below editions
+available as follows:
 
-     1. Standard - consists of core database engine
-     2. Web - low cost edition for web hosting
-     3. Business Intelligence - includes standard edition and business
-        intelligence tools like PowerPivot, PowerBI, Master Data Services
-     4. Enterprise - consists of core database engine and enterprise services
-        like cluster manager
-     5. SQL Server Azure - core database engine
-        integrated with Microsoft Azure cloud platform and available in
-        platform-as-a-service mode cite{www-azuresql}.
+1. Standard - consists of core database engine
+2. Web - low cost edition for web hosting
+3. Business Intelligence - includes standard edition and business
+   intelligence tools like PowerPivot, PowerBI, Master Data Services
+4. Enterprise - consists of core database engine and enterprise services
+   like cluster manager
+5. SQL Server Azure - core database engine
+   integrated with Microsoft Azure cloud platform and available in
+   platform-as-a-service mode cite{www-azuresql}.
 
-        The technical architecture of SQL Server in OLTP (online
-        transaction processing), hybrid cloud and business
-        intelligence modes is explained in
-        detail [@book-sqlserver].
+The technical architecture of SQL Server in OLTP (online transaction
+processing), hybrid cloud and business intelligence modes is explained
+in detail [@book-sqlserver].
 
 
 
@@ -10800,8 +10799,7 @@ determine where potential issues might arise.
 | keywords | IaaS Management from HPC to hypervisors |
 
 
-
-FORMAT WRONG
+ERROR: MANY BIBTEX ENTRIES MISSING
 
 Amazon's AWS (Amazon Web Services) is a provider of Infrastructure as
 a Service (IaaS) on cloud. It provides a broad set of infrastructure
@@ -10812,22 +10810,23 @@ In this instance you can select the hard disk volume, number of CPUs
 and other hardware configuration based on your application needs.  You
 can also select operating system and other software required to run
 your application. AWS lets you select from the countless services.
-Some of them are mentioned below:
+Some of them are mentioned next:
 
-     -  Amazon Elastic Computer Cloud (EC2)
-     -  Amazon Simple Storage Service (Amazon S3)
-     -  Amazon CloudFront
-     -  Amazon Relational Database Service (Amazon RDS)
-     -  Amazon SimpleDB
-     -  Amazon Simple Notification Service (Amazon SNS)
-     -  Amazon Simple Queue Service (Amazon SQS)
-     -  Amazon Virtual Private Cloud (Amazon VPC)
+-  Amazon Elastic Computer Cloud (EC2)
+-  Amazon Simple Storage Service (Amazon S3)
+-  Amazon CloudFront
+-  Amazon Relational Database Service (Amazon RDS)
+-  Amazon SimpleDB
+-  Amazon Simple Notification Service (Amazon SNS)
+-  Amazon Simple Queue Service (Amazon SQS)
+-  Amazon Virtual Private Cloud (Amazon VPC)
 
 Amazon EC2 and Amazon S3 are the two core IaaS services, which are
 used by cloud application solution developers
 worldwide. [@www-aws]
 
-     {\bf Improve: all of them need bibentries}
+
+
      
 ## Azure
 
