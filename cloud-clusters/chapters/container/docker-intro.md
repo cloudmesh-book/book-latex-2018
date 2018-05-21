@@ -12,8 +12,8 @@ IT ops to unlock their potential and creates a model for better
 collaboration and innovation. An overview of docker is provided at
 
 \URL{https://docs.docker.com/engine/docker-overview/}
-\centering
-![Docker Containers](docker-container.png){width="70%"}
+
+![Docker Containers](images/docker-container.png){width="70%"}
 
 Image Source
 <https://www.docker.com/sites/default/files/Package%20software%40x2.png>

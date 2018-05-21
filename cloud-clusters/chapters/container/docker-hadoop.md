@@ -51,8 +51,7 @@ The input to the program will be a text file(s) carrying exactly one
 floating point number per line. The result file includes *min, max,
 average, and standard deviation* of these numbers.
 
-![Caption
-Missing](section/container/images/docker-hadoop-1.png){width="90%"}
+![Caption Missing](images/docker-hadoop-1.png){width="90%"}
 
 ### Base Location
 

@@ -37,9 +37,7 @@ than will need to install by double clicking and allowing access to the
 dmg file. Upon installation a `whale` in the top status bar shows that
 Docker is running, and you can access it via a terminal.
 
-\centering
-![Docker integrated in the menu bar on
-OSX](whale-in-menu-bar.png){width="50%"}
+![Docker integrated in the menu bar on OSX](images/whale-in-menu-bar.png){width="50%"}
 
 Installation for Ubuntu
 -----------------------

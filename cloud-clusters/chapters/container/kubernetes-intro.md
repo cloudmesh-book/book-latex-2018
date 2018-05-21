@@ -60,7 +60,7 @@ What are containers?
 --------------------
 
 \centering
-![Kubernetes Containers](why_containers.png){width="80%"}
+![Kubernetes Containers](images/why-containers.png){width="80%"}
 
 Image source:
 
