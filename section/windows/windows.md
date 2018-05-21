@@ -1,6 +1,6 @@
 # Windows Download
 
-Download the Educationl version of WIndows from 
+Download the Educationl version of Windows from 
 
 * [https://www.microsoft.com/en-us/software-download/vlacademicwindows10iso](https://www.microsoft.com/en-us/software-download/vlacademicwindows10iso)
 
@@ -18,9 +18,9 @@ Download the:
 
 Now burn it onto a flash drive for your OS. For OSX you use 
 
-Virtualbox
-4GB memory
-32GB disk
+* Virtualbox
+* 4GB memory
+* 32GB disk
 
 
 # Install from IUWare
