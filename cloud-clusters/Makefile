@@ -3,6 +3,23 @@ INDEX=\
  ./dest/chapters/todo.md\
  ./dest/chapters/preface.md\
  ./dest/chapters/contributors.md\
+ ./dest/chapters/container/container.md\
+ ./dest/chapters/container/docker-fs.md\
+ ./dest/chapters/container/docker-hadoop-cluster.md\
+ ./dest/chapters/container/docker-hadoop.md\
+ ./dest/chapters/container/docker-hadoop3.md\
+ ./dest/chapters/container/docker-intro.md\
+ ./dest/chapters/container/docker-local.md\
+ ./dest/chapters/container/docker-pagerank-example-instruction.md\
+ ./dest/chapters/container/docker-rest.md\
+ ./dest/chapters/container/docker-spark.md\
+ ./dest/chapters/container/docker-swarm.md\
+ ./dest/chapters/container/exercise.md\
+ ./dest/chapters/container/glossary.md\
+ ./dest/chapters/container/index.md\
+ ./dest/chapters/container/kubernetes-fs.md\
+ ./dest/chapters/container/kubernetes-intro.md\
+ ./dest/chapters/container/qemu.md\
  ./dest/chapters/iot/dexter.md\
  ./dest/chapters/iot/easyplug.md\
  ./dest/chapters/iot/esp8266.md\
@@ -71,7 +88,7 @@ FORMAT=--toc --number-sections
 FONTS=--epub-embed-font='fonts/*.ttf'
 BIB=--bibliography references.bib
 CSS=--css=template/epub.css
-RESOURCE=--resource-path=".:chapters/prg:chapters/iot"
+RESOURCE=--resource-path=".:chapters/prg:chapters/iot:chapters/container"
 FILENAME=vonlaszewski-cloud-cluster
 
 #	pandoc ./chapters/prg/python.md -o dest/chapters/prg/python.md --base-header-level=2
