@@ -3,6 +3,8 @@ INDEX=\
  ./dest/chapters/todo.md\
  ./dest/chapters/preface.md\
  ./dest/chapters/contributors.md\
+ ./dest/chapters/msg/mqtt.md\
+ ./dest/chapters/msg/graphql.md\
  ./dest/chapters/rest/rest.md\
  ./dest/chapters/rest/swagger-bravado.md\
  ./dest/chapters/rest/swagger-codegen.md\
