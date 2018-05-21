@@ -1,5 +1,5 @@
 Draft: Enhanced Cloudmesh
-=========================
+-------------------------
 
  
 
@@ -19,34 +19,28 @@ We are trying to develop the following:
 
 Configuration:
 
->   so that we can easily configure and add various clouds to our
->    multi-cloud environment.
+> so that we can easily configure and add various clouds to our
+> multi-cloud environment.
 
-Database:
->    of virtual machines and clouds so that they can be managed across
->    different clouds in a multi cloud environment
+Database: \> of virtual machines and clouds so that they can be managed
+across \> different clouds in a multi cloud environment
 
-API Classes:
->   so that we can use python as a convenient programming environment.
+API Classes: \> so that we can use python as a convenient programming
+environment.
 
-Context:
->   libraries so that in python we can easily apply context for clouds
->    and virtual machines on a block of statements
+Context: \> libraries so that in python we can easily apply context for
+clouds \> and virtual machines on a block of statements
 
-Command Shell:
->   so that we can similar to matlab and other shells execute multiple
->    commands
+Command Shell: \> so that we can similar to matlab and other shells
+execute multiple \> commands
 
-REST Services:
->   so that we can access the features form other programming
->    environments and different programming languages.
+REST Services: \> so that we can access the features form other
+programming \> environments and different programming languages.
 
-Parallel Services:
->    so that we can issue commands in parallel and manage virtual
->    machines in a multi cloud environment.
+Parallel Services: \> so that we can issue commands in parallel and
+manage virtual \> machines in a multi cloud environment.
 
-Configuration
--------------
+### Configuration
 
 As we are developing a multi-cloud environment, we need some mechanism
 to define the clouds easily. To make our development effort simpler, we
@@ -140,8 +134,7 @@ There are some special properties of this file that we need to discuss.
 
 -   
 
-Storage
--------
+### Storage
 
 As we need to store some of the data we must identify a suitable
 database for storing information about virtual machines and other
@@ -154,7 +147,7 @@ which come with build in object models as they are not lightweight.
 Hence, we start we just use a file based sql database as provided with
 sqlite3.
 
-### sqlite3
+#### sqlite3
 
 While we keep the configuration in the configuration yaml file we intend
 to create a database entry for virtual machines we start in the cloud.
@@ -193,22 +186,22 @@ separate element.
 
 Thus we probably want a table generator such as
 
-```python
+``` {.python}
 class Database (object):
    @staticmethod
    def generate (dictionary):
       # implement me
 ```
-      
+
 Additionally we want to create convenience methods for adding, deleting,
 and searching information
 
-### Context
+#### Context
 
 Python provides the feature of a context that we are well familiar with
 from file management. An example is:
 
-```python
+``` {.python}
 with open('/tmp/gregor.txt', 'wt') as f:
     f.write('Hello Gregor')
 # after this, the file is automatically closed
@@ -223,11 +216,11 @@ action on named virtual machines.
 To illustrate what we have in mind, please take a look at our initial
 examples.
 
-#### Cloud Context
+##### Cloud Context
 
 When defining the following cloud context
 
-```python
+``` {.python}
 class Cloud (object):
         
     def __init__(self, name):
@@ -243,15 +236,15 @@ class Cloud (object):
     def machine(self, name, action):
         print (name, action)
 ```
-        
+
 we can issue conveniently commands such as the following
 
-```python
+``` {.python}
 cloud = 'chameleon'
 with Cloud(cloud) as c:
     vm = c.machine('vm1', 'start')
 ```
-        
+
 It is obvious that through this abstraction we can formulate a templated
 behavior such as starting a virtual machine and through the switch of a
 ingle variable (`cloud`) issue the command on other clouds.

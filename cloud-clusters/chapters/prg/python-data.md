@@ -1,5 +1,5 @@
 Data Management
-===============
+---------------
 
  
 
@@ -9,10 +9,9 @@ you will be able to master such formats and seamlessly integrate in your
 analysis. Thus we provide some simple examples on which different data
 formats exist and how to use them.
 
-Formats
--------
+### Formats
 
-### Pickle
+#### Pickle
 
 Python pickle allows you to save data in a python native format into a
 file that can later be read in by other programs. However, the data
@@ -20,7 +19,7 @@ format may not be portable among different python versions thus the
 format is often not suitable to store information. Instead we recommend
 for standrad data to use either json or yaml.
 
-```python
+``` {.python}
 import pickle
 
 flavor = {
@@ -31,56 +30,56 @@ flavor = {
 
 pickle.dump( flavor, open( "data.p", "wb" ) )
 ```
-    
+
 To read it back in use
 
-```python
+``` {.python}
 flavor = pickle.load( open( "data.p", "rb" ) )
 ```
-    
-### Text Files
+
+#### Text Files
 
 To read text files into a variable called content you can use
 
-```python
+``` {.python}
 content = open('filename.txt', 'r').read() 
- ```
- 
+```
+
 You can also use the following code while using the convenient `with`
 statement
 
-```python
+``` {.python}
 with open('filename.txt','r') as file:
     content = file.read()
 ```
-    
+
 To split up the lines of the file into an array you can do
 
-```python
+``` {.python}
 with open('filename.txt','r') as file:
     lines = file.read().splitlines()
 ```
-    
+
 This cam aslo be done with the build in `readlines` function
 
-```python
+``` {.python}
 lines = open('filename.txt','r').readlines()
 ```
 
 In case the file is too big you will want to read the file line by line:
 
-```python
+``` {.python}
 with open('filename.txt','r') as file:
     line = file.readline()
     print (line)
 ```
-    
-### CSV Files
+
+#### CSV Files
 
 Often data is contained in comma separated values (CSV) within a file.
 To read such files you can use the csv package.
 
-```python
+``` {.python}
 import csv
 with open('data.csv', 'rb') as f:
    contents = csv.reader(f)
@@ -90,7 +89,7 @@ for row in content:
 
 Using pandas you can read them as follows.
 
-```python
+``` {.python}
 import pandas as pd
 df = pd.read_csv("example.csv") 
 ```
@@ -101,34 +100,34 @@ also use the `split` function. However, remember it swill split at every
 comma, including those contained in quotes. SO this method although
 looking originally convenient has limitations.
 
-### Excel spread sheets
+#### Excel spread sheets
 
 Pandas contains a method to read Excel files
 
-```python
+``` {.python}
 import pandas as pd
 filename = 'data.xlsx'
 data = pd.ExcelFile(file)
 df = data.parse('Sheet1')
 ```
 
-### YAML
+#### YAML
 
 YAML is a very important format as it allows you easily to structure
 data in hierarchical fileds It is frequently used to coordinate programs
 while using yaml as the specification for configuration fils, but also
 data files. To read in a yaml file the following code can be used
 
-```python
+``` {.python}
 import yaml
 with open('data.yaml', 'r') as f:
     content = yaml.load(f)
 ```
-    
+
 The nice part is that this code can also be used to verify if a file is
 valid yaml. To write data out we can use
 
-```python
+``` {.python}
 with open('data.yml', 'w') as f:
     yaml.dump(data, f, default_flow_style=False)
 ```
@@ -136,42 +135,42 @@ with open('data.yml', 'w') as f:
 The flow style set to false formats the data in a nice readable fashion
 with indentations.
 
-### JSON
+#### JSON
 
-```python
+``` {.python}
 import json
 with open('strings.json') as f:
     content = json.load(f)
 ```
 
-### XML
+#### XML
 
 \TODO{Tutorial: Please contribute a XML python tutorial.}
-### RDF
+#### RDF
 
 To read RDF files you will need to install RDFlib with
 
-```bash
+``` {.bash}
 $ pip install rdflib
 ```
-    
+
 This will than allow you to read RDF files
 
-```python
+``` {.python}
 from rdflib.graph import Graph
 g = Graph()
 g.parse("filename.rdf", format="format")
 for entry in g:
    print(entry)
 ```
-       
+
 Good examples on using RDF are provided on the RDFlib Web page
 at <https://github.com/RDFLib/rdflib>
 
 From the Web page we showcase also how to directly process RDF data from
 the Web
 
-```python
+``` {.python}
 import rdflib
 g=rdflib.Graph()
 g.load('http://dbpedia.org/resource/Semantic_Web')
@@ -179,12 +178,12 @@ g.load('http://dbpedia.org/resource/Semantic_Web')
 for s,p,o in g:
     print s,p,o
 ```
-        
-### PDF
 
-The Portable Document Format (PDF) has been made available by Adobe Inc.
-royalty free. This has enabled PDF to become a world wide adopted format
-that also has been standardized in 2008 (ISO/IEC 32000-1:2008,
+#### PDF
+
+The Portable Document Format (PDF) has been made available by Adobe
+Inc. royalty free. This has enabled PDF to become a world wide adopted
+format that also has been standardized in 2008 (ISO/IEC 32000-1:2008,
 <https://www.iso.org/standard/51502.html>). A lot of research is
 published in papers making PDF one of the de-facto standards for
 publishing. However, PDF is difficult to parse and is focused on high
@@ -206,7 +205,7 @@ pdf-parser.py
 
 If you know about other tools, let us know.
 
-### HTML
+#### HTML
 
 A very powerful library to parse HTML Web pages is provided
 with <https://www.crummy.com/software/BeautifulSoup/>
@@ -215,15 +214,13 @@ More details about it are provided in the documentation page
 <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>
 
 \TODO{Students: beautiful soup contribute tutorial}
-### ConfigParser
+#### ConfigParser
 
 \URL{https://pymotw.com/2/ConfigParser/}
-### ConfigDict
+#### ConfigDict
 
 \URL{https://github.com/cloudmesh/cloudmesh.common/blob/master/cloudmesh/common/ConfigDict.py}
-
-Encryption
-----------
+### Encryption
 
 Often we need to protect the information stored in a file. This is
 achieved with encryption. There are many methods of supporting
@@ -237,7 +234,7 @@ To illustrate one type of encryption that is non trivial we have chosen
 to demonstrate how to encrypt a file with an ssh key. In case you have
 openssl installed on your system, this can be achieved as follows.
 
-```sh
+``` {.sh}
     #! /bin/sh
 
     # Step 1. Creating a file with data
@@ -261,33 +258,31 @@ decrypts the file. Using the Python os module it is straight forward to
 implement this. However, we are providing in cloudmesh a convenient
 class that makes the use in python very simple.
 
-```python
+``` {.python}
 from cloudmesh.common.ssh.encrypt import EncryptFile
 
 e = EncryptFile('file.txt', 'secret.txt')
 e.encrypt()
 e.decrypt()
 ```
-    
+
 In our class we initialize it with the locations of the file that is to
 be encrypted and decrypted. To initiate that action just call the
 methods `encrypt` and `decrypt`.
 
-Database Access
----------------
+### Database Access
 
 \TODO{Students: define conventional database access tutorial}
 see: <https://www.tutorialspoint.com/python/python_database_access.htm>
 
-SQLite
-------
+### SQLite
 
 \TODO{Students: defineSQLite database access tutorial}
 <https://www.sqlite.org/index.html>
 
 <https://docs.python.org/3/library/sqlite3.html>
 
-### Exercises
+#### Exercises
 
 [\[E:Encryption.1\]]{#E:Encryption.1 label="E:Encryption.1"} Test out
 the shell script to replicate how this example works

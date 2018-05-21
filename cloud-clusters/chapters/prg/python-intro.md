@@ -1,7 +1,7 @@
  
 
 Introduction to Python
-======================
+----------------------
 
 Portions of this lesson have been adapted from the [official Python
 Tutorial](https://docs.python.org/2/tutorial/) copyright [Python
@@ -92,7 +92,7 @@ In order to conduct this lesson you need
     and set it up.
 
 References
-==========
+----------
 
 Some important additional information can be found on the following Web
 pages.

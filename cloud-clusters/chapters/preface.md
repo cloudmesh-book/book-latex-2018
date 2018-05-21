@@ -1,4 +1,4 @@
-# Preface [:cloud:](https://github.com/cloudmesh/book/blob/master/cloud-clusters/preface.md)
+# Preface
 
 This collection of documents will help in creating cloud based clusters
 
@@ -37,3 +37,8 @@ $
 :bulb: *Notes are indicated with a bulb and are wriiten in itallic and suroundd by bars* 
 
 ---
+
+Right indent test
+
+First [this ]{style="float:right"}
+

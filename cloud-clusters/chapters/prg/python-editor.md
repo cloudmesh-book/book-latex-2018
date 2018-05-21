@@ -1,22 +1,20 @@
  
 
 Editors {#introduction}
-=======
+-------
 
 This section is meant to give an overview of the python editing tools
 needed for doing for this course. There are many other alternatives,
 however, we do recommend to use PyCharm.
 
-Pycharm {#s:pycharm}
--------
+### Pycharm {#s:pycharm}
 
 PyCharm is an Integrated Development Environment (IDE) used for
 programming in Python. It provides code analysis, a graphical debugger,
 an integrated unit tester, integration with git.
 
 \video{Python}{8:56}{Pycharm}{https://youtu.be/X8ZpbZweJcw}
-Python in 45 minutes
---------------------
+### Python in 45 minutes
 
 An additional community video about the Python programming language that
 we found on the internet. Naturally there are many alternatives to this

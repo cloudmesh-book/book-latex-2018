@@ -1,24 +1,24 @@
  
 
 Interactive Python
-==================
+------------------
 
 Python can be used interactively. You can enter the interactive mode by
 entering the interactive loop by executing the command:
 
-```python
+``` {.python}
 $ python
 ```
 
 You will see something like the following:
 
-```python
+``` {.python}
 Python 2.7.13 (default, Nov 19 2016, 06:48:10)
 [GCC 5.4.0 20160609] on linux2
 Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ```
-    
+
 The `>>>` is the prompt used by the interpreter. This is similar to bash
 where commonly `$` is used.
 
@@ -40,23 +40,18 @@ This is why you may see the interactive loop referred to as a **REPL**:
 **R**ead-**E**valuate-**P**rint-**L**oop.
 
 REPL (Read Eval Print Loop)
-===========================
+---------------------------
 
 There are many different types beyond what we have seen so far, such as
 **dictionaries**s, **list**s, **set**s. One handy way of using the
 interactive python is to get the type of a value using type():
 
-```python
->>> type(42)
-<type 'int'>
->>> type(hello)
-<type 'str'>
->>> type(3.14)
-<type 'float'>
+\`\`\`python \>\>\> type(42) \<type 'int'\> \>\>\> type(hello) \<type
+'str'\> \>\>\> type(3.14) \<type 'float'\>
 
 You can also ask for help about something using help():
 
-```python
+``` {.python}
 >>> help(int)
 >>> help(list)
 >>> help(str)
@@ -67,7 +62,7 @@ use the spacebar to go down a page w to go up a page, the arrow keys to
 go up/down line-by-line, or q to exit.
 
 Python 3 Features in Python 2
-=============================
+-----------------------------
 
 In this course we want to be able to seamlessly switch between python 2
 and python 3. Thus it is convenient from the start to use python 3
@@ -75,7 +70,7 @@ syntax when it is supported also in python 2. One of the most used
 functions is the print statement that has in python 3 parentheses. To
 enable it in python 2 you just need to import this function:
 
-```python
+``` {.python}
 >>> from __future__ import print_function, division
 ```
 
@@ -88,7 +83,7 @@ reflects Python's underlying philosophy.
 Other functions such as the division also behave differently. Thus we
 use
 
-```python
+``` {.python}
 >>> from __future__ import division
 ```
 
@@ -98,12 +93,12 @@ newcomer to the language might find more intuitive. In Python 2,
 division / is *floor division* when the arguments are integers, meaning
 that the following
 
-```python
+``` {.python}
 (5 / 2 == 2) is True
 ```
 
 In Python 3, division / is a floating point division, thus
 
-```python
+``` {.python}
 (5 / 2 == 2.5) is True
 ```

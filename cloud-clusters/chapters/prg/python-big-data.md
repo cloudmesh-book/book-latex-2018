@@ -1,8 +1,7 @@
 Python for Big Data
-===================
+-------------------
 
-An Example with Pandas, NumPy and Matplotlib
---------------------------------------------
+### An Example with Pandas, NumPy and Matplotlib
 
 In this example, we will download some traffic citation data for the
 city of Bloomington, IN, load it into Python and generate a histogram.
@@ -10,7 +9,7 @@ In doing so, you will be exposed to important Python libraries for
 working with big data such as [numpy](www.numpy.org),
 [pandas](pandas.pydata.org) and [matplotlib](matplotlib.org).
 
-### Set Up Directories and Get Test Data
+#### Set Up Directories and Get Test Data
 
 Data.gov is a government portal for open data and the [city of
 Bloomington, Indiana makes available a number of datasets
@@ -21,12 +20,8 @@ We will use traffic citations data for 2016.
 To start, let's create a separate directory for this project and
 download the CSV data:
 
-```bash    $ cd ~/projects/i524
-$ mkdir btown-citations
-$ cd btown-citations
-$ wget https://data.bloomington.in.gov/dataset/c543f0c1-1e37-46ce-a0ba-e0a949bd248a/resource/24841976-fd35-4483-a2b4-573bd1e77cfb/download/2016-first-quarter-citations.csv
-```
-    
+`bash    $ cd ~/projects/i524 $ mkdir btown-citations $ cd btown-citations $ wget https://data.bloomington.in.gov/dataset/c543f0c1-1e37-46ce-a0ba-e0a949bd248a/resource/24841976-fd35-4483-a2b4-573bd1e77cfb/download/2016-first-quarter-citations.csv`
+
 Depending on your directory organization, the above might be slightly
 different for you.
 
@@ -41,14 +36,12 @@ tutorial \<python\_intro\>, the first two of these are already installed
 for you. To install `matplotlib`, make sure you've activated your
 `virtualenv` and use `pip`:
 
-```bash    $ source ~/ENV/bin/activate
-$ pip install matplotlib
-```
-    
+`bash    $ source ~/ENV/bin/activate $ pip install matplotlib`
+
 If you are using a different distribution of Python, you will need to
 make sure that all three of these modules are installed.
 
-### Load Data in Pandas
+#### Load Data in Pandas
 
 From the same directory where you saved the citations data, let's start
 the Python interpreter and load the citations data for Q1 2016
@@ -66,7 +59,7 @@ load each of the modules we will use in this example. The final line
 uses Pandas' `read_csv` function to load the data into a Pandas
 `DataFrame` data structure.
 
-### Working with DataFrames
+#### Working with DataFrames
 
 You can verify that you are working with a `DataFrame` and use some of
 its methods to take a look at the structure of the data as follows:
@@ -143,7 +136,7 @@ functions in the `datetime` module linked above.
     ...  lambda row: datetime.strftime(row['DateTime Issued'], '%A'), axis=1
     ... )
 
-### Plotting with Matplotlib and NumPy
+#### Plotting with Matplotlib and NumPy
 
 Let's say we want to see how many citations were given each day of the
 week. We gather the data first:
@@ -165,7 +158,7 @@ You should see something like this on your screen:
 
 ![image](images/dow.png){width="4.16667in"}
 
-### More DataFrame Manipulation and Plotting
+#### More DataFrame Manipulation and Plotting
 
 `DataFrame`s and `numpy` give us other ways to manipulate data. For
 example, we can plot a histogram of the ages of violators like this:
@@ -190,7 +183,7 @@ the histogram again:
 
 ![image](images/ages-filtered.png){width="4.16667in"}
 
-### Saving Plots to PDF
+#### Saving Plots to PDF
 
 Oftentimes, you will want to save your `matplotlib` graph as a PDF or an
 SVG file instead of just viewing it on your screen. For both, we need to
@@ -214,7 +207,7 @@ If we want to save the figure as PDF instead, we need to use the
     >>> fig.savefig(pp, format='pdf')
     >>> pp.close()
 
-### Next Steps and Exercises
+#### Next Steps and Exercises
 
 There is a lot more to working with `pandas`, `numpy` and `matplotlib`
 than we can show you here, but hopefully this example has piqued your
@@ -226,12 +219,11 @@ please take a look at the tutorials below. The `numpy` and `pandas`
 tutorials are mandatory if you want to be able to use these modules, and
 the `matplotlib` gallery has many useful code examples.
 
-Summary of Useful Libraries
----------------------------
+### Summary of Useful Libraries
 
-### Numpy {#s:numpy}
+#### Numpy {#s:numpy}
 
-* <http://www.numpy.org/}>
+-   <http://www.numpy.org/%7D>
 
 According to the Numpy Web page "NumPy is a package for scientific
 computing with Python. It contains a powerful N-dimensional array
@@ -241,9 +233,9 @@ random number capabilities".
 
 Tutorial: <https://docs.scipy.org/doc/numpy-dev/user/quickstart.html>
 
-### MatplotLib
+#### MatplotLib
 
-* <http://matplotlib.org/>
+-   <http://matplotlib.org/>
 
 According the the Matplotlib Web page, "matplotlib is a python 2D
 plotting library which produces publication quality figures in a variety
@@ -254,9 +246,9 @@ graphical user interface toolkits."
 
 Matplotlib Gallery: <http://matplotlib.org/gallery.html>
 
-### Pandas
+#### Pandas
 
-* <http://pandas.pydata.org/>
+-   <http://pandas.pydata.org/>
 
 According to the Pandas Web page, "Pandas is a library library providing
 high-performance, easy-to-use data structures and data analysis tools
@@ -271,12 +263,11 @@ Tutorial: <http://pandas.pydata.org/pandas-docs/stable/10min.html>
 Pandas Cheat Sheet:
 <https://github.com/pandas-dev/pandas/blob/master/doc/cheatsheet/Pandas_Cheat_Sheet.pdf>
 
-Big Data Libraries {#other-useful-libraries}
-------------------
+### Big Data Libraries {#other-useful-libraries}
 
-### Scipy {#s:scipy}
+#### Scipy {#s:scipy}
 
-* <https://www.scipy.org/>
+-   <https://www.scipy.org/>
 
 According to the Web page, SciPy (pronounced *Sigh Pie*) is a
 Python-based ecosystem of open-source software for mathematics, science,
@@ -297,18 +288,18 @@ and engineering. In particular, these are some of the core packages:
 It is thus an agglomeration of useful pacakes and will prbably sufice
 for your projects in case you use Python.
 
-### ggplot
+#### ggplot
 
-* <http://ggplot.yhathq.com/>
+-   <http://ggplot.yhathq.com/>
 
 According to the ggplot python Web page ggplot is a plotting system for
 Python based on R's ggplot2. It allows to quickly generate some plots
 quickly with little effort. Often it may be easier to use than
 matplotlib directly.
 
-### seaborn
+#### seaborn
 
-* <http://www.data-analysis-in-python.org/t_seaborn.html>
+-   <http://www.data-analysis-in-python.org/t_seaborn.html>
 
 The good library for plotting is called seaborn which is build on top of
 matplotlib. It provides high level templates for common statistical
@@ -325,9 +316,9 @@ plots.
 
 Here are some examples from a previous class:
 
-* <https://github.com/bigdata-i523/hid231/blob/master/experiment/seaborn/seaborn-exercises.ipynb>
+-   <https://github.com/bigdata-i523/hid231/blob/master/experiment/seaborn/seaborn-exercises.ipynb>
 
-* <https://github.com/bigdata-i523/hid231/blob/master/experiment/learning-jupyter/learning_jupyter_notebook.ipynb>
+-   <https://github.com/bigdata-i523/hid231/blob/master/experiment/learning-jupyter/learning_jupyter_notebook.ipynb>
 
 [\[E:ipynb-export\]]{#E:ipynb-export label="E:ipynb-export"} Take these
 examples and create sections in latex that can be added to the book.
@@ -338,11 +329,11 @@ cleanup on the tex files
 
 Can this be automated with a cmd5 script such as
 
-```bash
+``` {.bash}
 cms ipynb [url=URL | file=FILE] --output FILENAME
 ```
 
-### Bokeh
+#### Bokeh
 
 Bokeh is an interactive visualization library with focus on web browsers
 for display. Its goal is to provide a similar experience as D3.js
@@ -351,21 +342,21 @@ for display. Its goal is to provide a similar experience as D3.js
 
 -   Gallery: <http://bokeh.pydata.org/en/latest/docs/gallery.html>
 
-### pygal
+#### pygal
 
 Pygal is a simple API to produce graphs that can be easily embedded into
 your Web pages. It contains annotations when you hover over data points.
 It also allows to present the data in a table.
 
-* <http://pygal.org/>
+-   <http://pygal.org/>
 
-### Network and Graphs
+#### Network and Graphs
 
 -   igraph: <http://www.pythonforsocialscientists.org/t_igraph.html>
 
 -   networkx: <https://networkx.github.io/>
 
-### REST
+#### REST
 
 -   django REST FRamework <http://www.django-rest-framework.org/>
 
@@ -391,14 +382,13 @@ It also allows to present the data in a table.
 -   <https://code.tutsplus.com/tutorials/building-rest-apis-using-eve--cms-22961>
 
 Parsing Data
-============
+------------
 
 Being able to parse data is an important activity in the data analysis
 process. Not all data may be following a specific format and the data
 may need to be extracted.
 
-notebook.md Parser
-------------------
+### notebook.md Parser
 
 We are using a notebook.md to communicate what students have done
 throughout the semester. We like to make a simple cmd5 command that
@@ -406,11 +396,11 @@ parses the notebook.md file and check it upon correctness.
 
 An example for a notebook.md file is located here
 
-* <https://raw.githubusercontent.com/bigdata-i523/sample-hid000/master/notebook.md>
+-   <https://raw.githubusercontent.com/bigdata-i523/sample-hid000/master/notebook.md>
 
 The following code may inspire you
 
-* <https://github.com/bigdata-i523/hid203/tree/master/experiment>
+-   <https://github.com/bigdata-i523/hid203/tree/master/experiment>
 
 We like to implement the following functionality and use docopts to
 document the command.
@@ -439,8 +429,7 @@ identify a list of students that have not updated the notebok for a
 week? Can we identify the list of student s that have updated the
 notebook for a week?
 
-Video Length
-------------
+### Video Length
 
 The Latex source of this class contains a macro to include videos.
 
@@ -449,19 +438,19 @@ all videos in that file and sums up the total viewing time. Previously
 the document was stored in RST and the code from a previous student may
 inspire you. Can you recreate it for LaTeX?
 
-* <https://github.com/bigdata-i523/hid107/blob/master/cloudmesh/bar/command/mycommand.py>
+-   <https://github.com/bigdata-i523/hid107/blob/master/cloudmesh/bar/command/mycommand.py>
 
-    cms class video list FILENAME --output=[tabular|longtable|csv|txt]
+    cms class video list FILENAME
+    --output=\[tabular\|longtable\|csv\|txt\]
 
-        prints the videolist in the given format. txt means it is just ASCII
+          prints the videolist in the given format. txt means it is just ASCII
 
 Write a tool that extracts the information for video length.
 
 Write a tool that finds all youtube urls that are not in a video latex
 macro.
 
-Dask
-----
+### Dask
 
 Many times operations need to be done on data in parallel to utilize
 modern processor architectures.
@@ -481,7 +470,7 @@ the dynamic task schedulers.
 
 More information can be found at:
 
-* <https://dask.pydata.org>
+-   <https://dask.pydata.org>
 
 Conduct a performance study that showcases the difference of doing
 parallel calculations in Dask, calculations in a framework such as

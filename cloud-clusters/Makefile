@@ -3,6 +3,19 @@ INDEX=\
  ./chapters/todo.md\
  ./chapters/preface.md\
  ./chapters/contributors.md\
+ ./dest/chapters/prg/SECTION-PYTHON.md\
+ ./dest/chapters/prg/python.md\
+ ./dest/chapters/prg/python-cloudmesh.md\
+ ./dest/chapters/prg/python-matplotlib.md\
+ ./dest/chapters/prg/python-editor.md\
+ ./dest/chapters/prg/python-libraries.md\
+ ./dest/chapters/prg/python-cmd5.md\
+ ./dest/chapters/prg/python-click.md\
+ ./dest/chapters/prg/python-big-data.md\
+ ./dest/chapters/prg/python-intro.md\
+ ./dest/chapters/prg/python-interactive.md\
+ ./dest/chapters/prg/python-data.md\
+ ./dest/chapters/prg/python-libcloud.md\
  ./README.md\
  ./chapters/login-node.md\
  ./chapters/raspberry/README.md\
@@ -36,9 +49,15 @@ FORMAT=--toc --number-sections
 FONTS=--epub-embed-font='fonts/*.ttf'
 BIB=--bibliography references.bib
 CSS=--css=template/epub.css
+RESOURCE=--resource-path=".:chapters/prg"
+
+#	pandoc ./chapters/prg/python.md -o dest/chapters/prg/python.md --base-header-level=2
 
 epub:
-	pandoc $(MARKDOWN-OPTIONS)  $(FORMAT) $(FONTS) $(BIB)  $(CSL) $(CSS) -o book.epub metadata.txt $(INDEX)
+	mkdir -p dest/chapters/prg
+	bin/section.py 1 "Python" > dest/chapters/prg/SECTION-PYTHON.md
+	bin/markup-all.py
+	pandoc $(RESOURCE) $(MARKDOWN-OPTIONS)  $(FORMAT) $(FONTS) $(BIB)  $(CSL) $(CSS) -o book.epub metadata.txt $(INDEX)
 
 
 html:

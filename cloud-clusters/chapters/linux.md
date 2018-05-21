@@ -1,4 +1,4 @@
-# Linux [:cloud:](https://github.com/cloudmesh/book/blob/master/cloud-clusters/chapters/linux/linux.md)
+# Linux
 
 Now that you have Linux or a Linux like environment (such as `gitbash`)
 on your computer it is time to learn a number of useful commands to

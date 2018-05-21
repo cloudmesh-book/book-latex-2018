@@ -1,18 +1,16 @@
- 
 Statements and Strings
-======================
+----------------------
 
 \TODO{TA: some of the python examples assume REPL, but its better to use a
   print statement instead as more general, please fix}
-
 Let us explore the syntax of Python. Type into the interactive loop and
 press Enter:
 
-```python
+``` {.python}
     print("Hello world from Python!")
     # Hello world from Python!
 ```
-    
+
 What happened: the print function was given a **string** to process. A
 string is a sequence of characters. A **character** can be a alphabetic
 (A through Z, lower and upper case), numeric (any of the digits), white
@@ -29,29 +27,28 @@ print statement and the `"Hello world from Python!"` string, and then
 executed the line, showing you the output.
 
 Variables
-=========
+---------
 
 You can store data into a **variable** to access it later. For instance,
 instead of:
 
-```python
+``` {.python}
     print('Hello world from Python!')
 ```
 
 which is a lot to type if you need to do it multiple times, you can
 store the string in a variable for convenient access:
 
-```python
+``` {.python}
     hello = 'Hello world from Python!'
     print(hello)
     # Hello world from Python!
 ```
 
 Data Types
-==========
+----------
 
-Booleans
---------
+### Booleans
 
 A **boolean** is a value that indicates *truthness* of something. You
 can think of it as a toggle: either "on" or "off", "one" or "zero",
@@ -69,8 +66,7 @@ You can combine booleans with **boolean operators**:
 -   or
 
 <!-- -->
-
-```python
+``` {.python}
     print(True and True)
     # True
 
@@ -90,13 +86,12 @@ You can combine booleans with **boolean operators**:
     # False
 ```
 
-Numbers
--------
+### Numbers
 
 The interactive interpreter can also be used as a calculator. For
 instance, say we wanted to compute a multiple of 21:
 
-```python
+``` {.python}
     print(21 * 2)
     # 42
 ```
@@ -125,7 +120,7 @@ the provided numbers. Some operators are:
 
 :   --- subtraction
 
-**
+\*\*
 
 :   --- exponent
 
@@ -133,7 +128,7 @@ Exponentiation $x^y$ is written as x\*\*y is x to the yth power.
 
 You can combine **float**s and **int**s:
 
-```python
+``` {.python}
     print(3.14 * 42 / 11 + 4 - 2)
     # 13.9890909091
 
@@ -145,7 +140,7 @@ Note that **operator precedence** is important. Using parenthesis to
 indicate affect the order of operations gives a difference results, as
 expected:
 
-```python
+``` {.python}
     print(3.14 * (42 / 11) + 4 - 2)
     # 11.42
 
@@ -155,9 +150,9 @@ expected:
     print( (1 + 2) * (3 - 4) / 5.0 )
     # -0.6
 ```
-    
+
 Module Management
-=================
+-----------------
 
 A module allows you to logically organize your Python code. Grouping
 related code into a module makes the code easier to understand and use.
@@ -166,8 +161,7 @@ can bind and reference. A module is a file consisting of Python code. A
 module can define functions, classes and variables. A module can also
 include runnable code.
 
-Import Statement
-----------------
+### Import Statement
 
 When the interpreter encounters an import statement, it imports the
 module if the module is present in the search path. A search path is a
@@ -176,7 +170,7 @@ module. The from...import Statement Python's from statement lets you
 import specific attributes from a module into the current namespace. It
 is preferred to use for each import its own line such as:
 
-```python
+``` {.python}
     import numpy
     import matplotlib
 ```
@@ -186,19 +180,18 @@ module if the module is present in the search path. A search path is a
 list of directories that the interpreter searches before importing a
 module.
 
-The from ... import Statement
------------------------------
+### The from ... import Statement
 
 Python's from statement lets you import specific attributes from a
 module into the current namespace. The from ... import has the following
 syntax:
 
-```python
+``` {.python}
     from datetime import datetime
 ```
 
 Date Time in Python
-===================
+-------------------
 
 The datetime module supplies classes for manipulating dates and times in
 both simple and complex ways. While date and time arithmetic is
@@ -209,60 +202,59 @@ functionality, see also the time and calendar modules.
 The import Statement You can use any Python source file as a module by
 executing an import statement in some other Python source file.
 
-```python
+``` {.python}
     from datetime import datetime
 ```
 
 This module offers a generic date/time string parser which is able to
 parse most known formats to represent a date and/or time.
 
-```python
+``` {.python}
     from dateutil.parser import parse
 ```
 
 pandas is an open source Python library for data analysis that needs to
 be imported.
 
-```python
+``` {.python}
     import pandas as pd
 ```
 
 Create a string variable with the class start time
 
-```python
+``` {.python}
     fall_start = '08-21-2017'
 ```
 
 Convert the string to datetime format
 
-```python
-    datetime.strptime(fall_start, '%m-%d-%Y')
-    # datetime.datetime(2017, 8, 21, 0, 0)
+\`\`\`python datetime.strptime(fall\_start, '%m-%d-%Y') \#
+datetime.datetime(2017, 8, 21, 0, 0)
 
 Creating a list of strings as dates
 
-```python
+``` {.python}
     class_dates = ['8/25/2017', '9/1/2017', '9/8/2017', '9/15/2017', '9/22/2017', '9/29/2017']
 ```
 
 Convert Class\_dates strings into datetime format and save the list into
 variable a
 
-```python
+``` {.python}
     a = [datetime.strptime(x, '%m/%d/%Y') for x in class_dates]
 ```
 
 Use parse() to attempt to auto-convert common string formats. Parser
 must be a string or character stream, not list.
 
-```python
+``` {.python}
     parse(fall_start)
     # datetime.datetime(2017, 8, 21, 0, 0)
 ```
 
 Use parse() on every element of the Class\_dates string.
 
-```python
+``` {.python}
     [parse(x) for x in class_dates] 
     # [datetime.datetime(2017, 8, 25, 0, 0),
     #   datetime.datetime(2017, 9, 1, 0, 0),
@@ -274,7 +266,7 @@ Use parse() on every element of the Class\_dates string.
 
 Use parse, but designate that the day is first.
 
-```python
+``` {.python}
     parse (fall_start, dayfirst=True)
     # datetime.datetime(2017, 8, 21, 0, 0)
 ```
@@ -283,7 +275,7 @@ Create a dataframe.A DataFrame is a tabular data structure comprised of
 rows and columns, akin to a spreadsheet, database table. DataFrame as a
 group of Series objects that share an index (the column names).
 
-```python
+``` {.python}
     import pandas as pd
     data = {'class_dates': ['8/25/2017 18:47:05.069722', 
                             '9/1/2017 18:47:05.119994', 
@@ -305,7 +297,7 @@ group of Series objects that share an index (the column names).
 
 Convert `` df[`date`] `` from string to datetime
 
-```python
+``` {.python}
     import pandas as pd
     pd.to_datetime(df['class_dates'])
     # 0   2017-08-25 18:47:05.069722
@@ -318,10 +310,9 @@ Convert `` df[`date`] `` from string to datetime
 ```
 
 Control Statements
-==================
+------------------
 
-Comparison {#comparision}
-----------
+### Comparison {#comparision}
 
 Computer programs do not only execute instructions. Occasionally, a
 choice needs to be made. Such as a choice is based on a condition.
@@ -346,7 +337,7 @@ Python has several conditional operators:
 Conditions are always combined with variables. A program can make a
 choice using the if keyword. For example:
 
-```python
+``` {.python}
     x = int(input("Guess x:"))
     if x == 4:
        print('You guessed correctly!')
@@ -356,7 +347,7 @@ In this example, *You guessed correctly!* will only be printed if the
 variable x equals to four (see table above). Python can also execute
 multiple conditions using the elif and else keywords.
 
-```python
+``` {.python}
     x = int(input("Guess x:"))
     if x == 4:
         print('You guessed correctly!')
@@ -366,13 +357,12 @@ multiple conditions using the elif and else keywords.
         print('Wrong guess')
 ```
 
-Iteration
----------
+### Iteration
 
 To repeat code, the for keyword can be used. For example, to display the
 numbers from 1 to 10, we could write something like this:
 
-```python
+``` {.python}
     for i in range(1, 11):
        print('Hello!')
 ```
@@ -381,7 +371,7 @@ The second argument to range, *11*, is not inclusive, meaning that the
 loop will only get to *10* before it finishes. Python itself starts
 counting from 0, so this code will also work:
 
-```python
+``` {.python}
     for i in range(0, 10):
        print(i + 1)
 ```
@@ -389,14 +379,14 @@ counting from 0, so this code will also work:
 In fact, the range function defaults to starting value of *0*, so the
 above is equivalent to:
 
-```python
+``` {.python}
     for i in range(10):
        print(i + 1)
 ```
 
 We can also nest loops inside each other:
 
-```python
+``` {.python}
     for i in range(0,10):
         for j in range(0,10):
             print(i,' ',j)
@@ -406,10 +396,9 @@ In this case we have two nested loops. The code will iterate over the
 entire coordinate range (0,0) to (9,9)
 
 Datatypes
-=========
+---------
 
-Lists
------
+### Lists
 
 see: <https://www.tutorialspoint.com/python/python_lists.htm>
 
@@ -419,7 +408,7 @@ can be accessed using a 0-based index.
 To define a list, you simply list its elements between square brackets
 '\[\]':
 
-```python
+``` {.python}
     names = ['Albert', 'Jane', 'Liz', 'John', 'Abby']
     names[0] # access the first element of the list
     # 'Albert'
@@ -431,7 +420,7 @@ You can also use a negative index if you want to start counting elements
 from the end of the list. Thus, the last element has index *-1*, the
 second before last element has index *-2* and so on:
 
-```python
+``` {.python}
     names[-1] # access the last element of the list
     # 'Abby'
     names[-2] # access the second last element of the list
@@ -441,7 +430,7 @@ second before last element has index *-2* and so on:
 Python also allows you to take whole slices of the list by specifying a
 beginning and end of the slice separated by a colon
 
-```python
+``` {.python}
     names[1:-1] # the middle elements, excluding first and last
     # ['Jane', 'Liz', 'John']
 ```
@@ -454,7 +443,7 @@ list.
 
 You can add elements with append':
 
-```python
+``` {.python}
     names.append('Liz')
     names
     # ['Albert', 'Jane', 'Liz', 'John', 'Abby', 'Liz']
@@ -464,7 +453,7 @@ As you can see, the elements in a list need not be unique.
 
 Merge two lists with 'extend':
 
-```python
+``` {.python}
     names.extend(['Lindsay', 'Connor'])
     names
     # ['Albert', 'Jane', 'Liz', 'John', 'Abby', 'Liz', 'Lindsay', 'Connor']
@@ -472,13 +461,11 @@ Merge two lists with 'extend':
 
 Find the index of the first occurrence of an element with 'index':
 
-```python
-    names.index('Liz')
-    # 2
+\`\`\`python names.index('Liz') \# 2
 
 Remove elements by value with 'remove':
 
-```python
+``` {.python}
     names.remove('Abby')
     names
     # ['Albert', 'Jane', 'Liz', 'John', 'Liz', 'Lindsay', 'Connor']
@@ -486,7 +473,7 @@ Remove elements by value with 'remove':
 
 Remove elements by index with 'pop':
 
-```python
+``` {.python}
     names.pop(1)
     # 'Jane'
     names
@@ -499,7 +486,7 @@ not.
 If you are familiar with stacks from other programming languages, you
 can use insert and 'pop':
 
-```python
+``` {.python}
     names.insert(0, 'Lincoln')
     names
     # ['Lincoln', 'Albert', 'Liz', 'John', 'Liz', 'Lindsay', 'Connor']
@@ -514,26 +501,25 @@ The Python documentation contains a [full list of list operations]().
 To go back to the range function you used earlier, it simply creates a
 list of numbers:
 
-```python
+``` {.python}
     range(10)
     # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     range(2, 10, 2)
     # [2, 4, 6, 8]
 ```
 
-Sets
-----
+### Sets
 
 Python lists can contain duplicates as you saw above:
 
-```python
+``` {.python}
     names = ['Albert', 'Jane', 'Liz', 'John', 'Abby', 'Liz']
 ```
 
 When we don't want this to be the case, we can use a
 [set](https://docs.python.org/2/library/stdtypes.html#set):
 
-```python
+``` {.python}
     unique_names = set(names)
     unique_names
     # set(['Lincoln', 'John', 'Albert', 'Liz', 'Lindsay'])
@@ -542,7 +528,7 @@ When we don't want this to be the case, we can use a
 Keep in mind that the *set* is an unordered collection of objects, thus
 we can not access them by index:
 
-```python
+``` {.python}
     unique_names[0]
     # Traceback (most recent call last):
     #   File "<stdin>", line 1, in <module>
@@ -551,7 +537,7 @@ we can not access them by index:
 
 However, we can convert a set to a list easily:
 
-```python
+``` {.python}
     unique_names = list(unique_names) 
     unique_names [`Lincoln', `John', `Albert', `Liz', `Lindsay']
     unique_names[0]
@@ -580,8 +566,7 @@ familiar with from mathematical sets: *union*, *intersection*,
 about this in the [Python documentation for
 sets](https://docs.python.org/2/library/stdtypes.html#set).
 
-Removal and Testing for Membership in Sets
-------------------------------------------
+### Removal and Testing for Membership in Sets
 
 One important advantage of a `set` over a `list` is that **access to
 elements is fast**. If you are familiar with different data structures
@@ -591,7 +576,7 @@ array, while the set is implemented by a hash table.
 We will demonstrate this with an example. Let's say we have a list and a
 set of the same number of elements (approximately 100 thousand):
 
-```python
+``` {.python}
     import sys, random, timeit
     nums_set = set([random.randint(0, sys.maxint) for _ in range(10**5)])
     nums_list = list(nums_set)
@@ -603,7 +588,7 @@ We will use the [timeit](https://docs.python.org/2/library/timeit.html)
 Python module to time 100 operations that test for the existence of a
 member in either the list or set:
 
-```python
+``` {.python}
     timeit.timeit('random.randint(0, sys.maxint) in nums', 
                   setup='import random; nums=%s' % str(nums_set), number=100)
     # 0.0004038810729980469
@@ -617,15 +602,14 @@ but the take away will be the same: searching for an element in a set is
 orders of magnitude faster than in a list. This is important to keep in
 mind when you work with large amounts of data.
 
-Dictionaries
-------------
+### Dictionaries
 
 One of the very important data structures in python is a dictionary also
 referred to as *dict*.
 
 A dictionary represents a key value store:
 
-```python
+``` {.python}
     person = {'Name': 'Albert', 'Age': 100, 'Class': 'Scientist'}
     print("person['Name']: ", person['Name'])
     # person['Name']:  Albert
@@ -635,7 +619,7 @@ A dictionary represents a key value store:
 
 You can delete elements with the following commands:
 
-```python
+``` {.python}
     del person['Name'] # remove entry with key 'Name'
     person
     # {'Age': 100, 'Class': 'Scientist'}
@@ -651,7 +635,7 @@ You can delete elements with the following commands:
 
 You can iterate over a dict:
 
-```python
+``` {.python}
     person = {'Name': 'Albert', 'Age': 100, 'Class': 'Scientist'}
     for item in person:
       print(item, person[item])
@@ -661,13 +645,12 @@ You can iterate over a dict:
     # Class Scientist
 ```
 
-Dictionary Keys and Values
---------------------------
+### Dictionary Keys and Values
 
 You can retrieve both the keys and values of a dictionary using the
 keys() and values() methods of the dictionary, respectively:
 
-```python
+``` {.python}
     person.keys()
     # ['Age', 'Name', 'Class']
     person.values()
@@ -689,14 +672,13 @@ and Class to Scientist, and you will observe the same correspondence in
 general as long as *keys() and values() are called one right after the
 other*.
 
-Counting with Dictionaries
---------------------------
+### Counting with Dictionaries
 
 One application of dictionaries that frequently comes up is counting the
 elements in a sequence. For example, say we have a sequence of coin
 flips:
 
-```python
+``` {.python}
     import random
     die_rolls = [random.choice(['heads', 'tails']) for _ in range(10)]
     # die_rolls
@@ -710,7 +692,7 @@ this on your computer since the outcomes of the die rolls are random.
 To compute the probabilities of heads and tails, we could count how many
 heads and tails we have in the list:
 
-```python
+``` {.python}
     counts = {'heads': 0, 'tails': 0}
     for outcome in coin_flips:
        assert outcome in counts
@@ -738,7 +720,7 @@ coin\_flips, notice a couple things about this example:
     here](https://docs.python.org/2/library/functions.html).
 
 Functions
-=========
+---------
 
 You can reuse code by putting it inside a function that you can call in
 other parts of your programs. Functions are also a good way of grouping
@@ -746,7 +728,7 @@ code that logically belongs together in one coherent whole. A function
 has a unique name in the program. Once you call a function, it will
 execute its body which consists of one or more lines of code:
 
-```python
+``` {.python}
     def check_triangle(a, b, c):
     return \
         a < b + c and a > abs(b - c) and \
@@ -769,7 +751,7 @@ function calls.
 It is also possible to store the output of a function in a variable, so
 it can be reused.
 
-```python
+``` {.python}
     def check_triangle(a, b, c):
       return \
          a < b + c and a > abs(b - c) and \
@@ -781,14 +763,14 @@ it can be reused.
 ```
 
 Classes
-=======
+-------
 
 A class is an encapsulation of data and the processes that work on them.
 The data is represented in member variables, and the processes are
 defined in the methods of the class (methods are functions inside the
 class). For example, let's see how to define a Triangle class:
 
-```python
+``` {.python}
     class Triangle(object):
 
      def __init__(self, length, width, height, angle1, angle2, angle3):
@@ -823,33 +805,32 @@ we can not cover all of them in a quick tutorial, so please refer to the
 OOP](https://docs.python.org/2.7/tutorial/classes.html).
 
 Modules
-=======
+-------
 
 Now write this simple program and save it:
 
-```python
+``` {.python}
     from __future__ import print_statement, division
     print("Hello world!")
 ```
-
 
 As a check, make sure the file contains the expected contents on the
 command line:
 
-```bash
+``` {.bash}
     $ cat hello.py
     from __future__ import print_statement, division
     print("Hello world!")
 ```
-    
+
 To execute your program pass the file as a parameter to the python
 command:
 
-```bash
+``` {.bash}
     $ python hello.py
     Hello world!
 ```
-    
+
 Files in which Python code is stored are called **module**s. You can
 execute a Python module form the command line like you just did, or you
 can import it in other Python code using the import statement.
@@ -860,8 +841,7 @@ they define a valid triangle. A triangle is valid if the length of each
 side is less than the sum of the lengths of the other two sides and
 greater than the difference of the lengths of the other two sides.:
 
-```
-    """Usage: check_triangle.py [-h] LENGTH WIDTH HEIGHT
+\`\`\` \"\"\"Usage: check\_triangle.py \[-h\] LENGTH WIDTH HEIGHT
 
     Check if a triangle is valid.
 
@@ -888,14 +868,15 @@ greater than the difference of the lengths of the other two sides.:
       ))
       ```
       
+
 Assuming we save the program in a file called check\_triangle.py, we can
 run it like so:
 
-```bash
+``` {.bash}
     $ python check_triangle.py 4 5 6
     Triangle with sides 4, 5 and 6 is valid: True
 ```
-    
+
 Let us break this down a bit.
 
 1.  We are importing the print\_function and division modules from
@@ -930,14 +911,14 @@ Let us break this down a bit.
     to insert values into the string we are displaying.
 
 Lambda Expressions
-==================
+------------------
 
 \TODO{contribute}
 Generators
-==========
+----------
 
 \TODO{contribute}
 Non Blocking Threads
-====================
+--------------------
 
 \TODO{contribute}
