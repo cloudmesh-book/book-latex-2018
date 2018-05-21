@@ -5,7 +5,6 @@ ai
 art
 bigdata
 cloud
-container
 data
 devops
 faas
@@ -16,7 +15,6 @@ mapreduce
 new
 os
 preface
-prg
 
 
 
