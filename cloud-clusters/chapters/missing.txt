@@ -12,7 +12,6 @@ faas
 hadoop
 i524
 icloud
-iot
 mapreduce
 new
 os
