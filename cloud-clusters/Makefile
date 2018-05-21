@@ -3,6 +3,19 @@ INDEX=\
  ./dest/chapters/todo.md\
  ./dest/chapters/preface.md\
  ./dest/chapters/contributors.md\
+ ./dest/chapters/iot/dexter.md\
+ ./dest/chapters/iot/easyplug.md\
+ ./dest/chapters/iot/esp8266.md\
+ ./dest/chapters/iot/fundamentals.md\
+ ./dest/chapters/iot/grovepi.md\
+ ./dest/chapters/iot/hardware.md\
+ ./dest/chapters/iot/introduction.md\
+ ./dest/chapters/iot/pi.md\
+ ./dest/chapters/iot/projects.md\
+ ./dest/chapters/iot/sensors.md\
+ ./dest/chapters/iot/tools.md\
+ ./dest/chapters/iot/turtle.md\
+ ./dest/chapters/iot/vnc.md\
  ./dest/chapters/msg/mqtt.md\
  ./dest/chapters/msg/graphql.md\
  ./dest/chapters/rest/rest.md\
@@ -58,7 +71,7 @@ FORMAT=--toc --number-sections
 FONTS=--epub-embed-font='fonts/*.ttf'
 BIB=--bibliography references.bib
 CSS=--css=template/epub.css
-RESOURCE=--resource-path=".:chapters/prg"
+RESOURCE=--resource-path=".:chapters/prg:chapters/iot"
 FILENAME=vonlaszewski-cloud-cluster
 
 #	pandoc ./chapters/prg/python.md -o dest/chapters/prg/python.md --base-header-level=2
