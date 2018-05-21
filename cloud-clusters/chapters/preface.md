@@ -23,14 +23,16 @@ $
 > refernce chapter [@las14cloudmeshmultiple]
 
 
-:clapper:
-
-> Movies are indicated with a :clapper:
-
 :o:
 
 > Chapters marked with an :o: are not yet complete or have some issue
 > that we know about. THese chapters need to be fixed.
+
+
+[:clapper: REST 36:02](https://youtu.be/xjFuA6q5N_U)
+
+> Example for a video
+
 
 ---
 
