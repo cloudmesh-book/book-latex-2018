@@ -30,13 +30,14 @@ INDEX=\
  ./dest/chapters/modify-pi-image.md\
  ./dest/chapters/pi-passwordreset.md\
  ./dest/chapters/pxe.md\
- ./dest/chapters/pi-assemble-cluster.md\
- ./dest/chapters/pi-configure-cluster.md\
- ./dest/chapters/pi-docker.md\
- ./dest/chapters/pi-dockerswarm.md\
+ ./dest/chapters/clusters/pi-assemble-cluster.md\
+ ./dest/chapters/clusters/pi-configure-cluster.md\
+ ./dest/chapters/clusters/pi-docker.md\
+ ./dest/chapters/clusters/pi-dockerswarm.md\
  ./dest/chapters/kubernetes-526/readme-kube.md\
  ./dest/chapters/kubernetes-417/pi-kubernetes.md\
- ./dest/chapters/pi-spark.md\
+ ./dest/chapters/clusters/pi-spark.md\
+ ./dest/chapters/clusters/pi-software.md\
  ./dest/chapters/pi/slurm.md\
  ./dest/chapters/pi/setup.md\
  ./dest/chapters/pi/software.md\
