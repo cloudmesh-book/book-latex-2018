@@ -4,6 +4,8 @@ INDEX=\
  ./dest/chapters/preface.md\
  ./dest/chapters/contributors.md\
  ./dest/chapters/ai/ai.md\
+ ./dest/chapters/devops/devops.md\
+ ./dest/chapters/devops/travis.md\
  ./dest/chapters/container/container.md\
  ./dest/chapters/container/docker-fs.md\
  ./dest/chapters/container/docker-hadoop-cluster.md\
