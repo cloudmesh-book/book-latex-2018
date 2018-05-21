@@ -1,5 +1,3 @@
- 
-
 Introduction to Python
 ----------------------
 

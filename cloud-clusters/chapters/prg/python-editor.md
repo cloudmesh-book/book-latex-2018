@@ -1,6 +1,4 @@
- 
-
-Editors {#introduction}
+Editors
 -------
 
 This section is meant to give an overview of the python editing tools

@@ -1,4 +1,4 @@
-Cloudmesh Command Shell {#C:python-cmd5}
+Cloudmesh Command Shell
 -----------------------
 
 ### CMD5

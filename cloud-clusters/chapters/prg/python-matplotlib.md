@@ -1,5 +1,3 @@
- 
-
 Draft: Plotting with matplotlib {#matplotlib}
 -------------------------------
 

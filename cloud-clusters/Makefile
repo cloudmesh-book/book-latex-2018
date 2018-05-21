@@ -1,10 +1,11 @@
 
 INDEX=\
- ./chapters/todo.md\
- ./chapters/preface.md\
- ./chapters/contributors.md\
+ ./dest/chapters/todo.md\
+ ./dest/chapters/preface.md\
+ ./dest/chapters/contributors.md\
  ./dest/chapters/prg/SECTION-PYTHON.md\
  ./dest/chapters/prg/python.md\
+ ./dest/chapters/prg/python-install.md\
  ./dest/chapters/prg/python-cloudmesh.md\
  ./dest/chapters/prg/python-matplotlib.md\
  ./dest/chapters/prg/python-editor.md\

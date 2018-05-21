@@ -1,5 +1,3 @@
- 
-
 Interactive Python
 ------------------
 
