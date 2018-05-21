@@ -1,0 +1,25 @@
+all in in and
+doc -> latex
+
+ai
+art
+bigdata
+cloud
+container
+data
+devops
+faas
+hadoop
+i524
+icloud
+iot
+mapreduce
+msg
+new
+os
+preface
+prg
+
+
+
+
