@@ -3,7 +3,20 @@ INDEX=\
  ./dest/chapters/todo.md\
  ./dest/chapters/preface.md\
  ./dest/chapters/contributors.md\
+ ./dest/chapters/faas/introduction.md\
  ./dest/chapters/ai/ai.md\
+ ./dest/chapters/bigdata//algorithms/technology.md\
+ ./dest/chapters/bigdata//algorithms/clustering.md\
+ ./dest/chapters/bigdata//algorithms/plotviz.md\
+ ./dest/chapters/bigdata//applications/overview.md\
+ ./dest/chapters/bigdata//applications/physics.md\
+ ./dest/chapters/bigdata//applications/lifestyle.md\
+ ./dest/chapters/bigdata//applications/sport.md\
+ ./dest/chapters/bigdata//applications/cloud.md\
+ ./dest/chapters/bigdata//applications/usecases.md\
+ ./dest/chapters/bigdata//applications/sensor.md\
+ ./dest/chapters/bigdata//applications/web.md\
+ ./dest/chapters/bigdata//applications/health.md\
  ./dest/chapters/devops/devops.md\
  ./dest/chapters/devops/travis.md\
  ./dest/chapters/container/container.md\

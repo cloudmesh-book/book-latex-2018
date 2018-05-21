@@ -53,9 +53,7 @@ known values. Naturally the determination of 'similar' is of fundamental
 importance. This is done through the application of the euclidian
 distance calculation given by the following equation:
 
-$${d(\mathbf{i},\mathbf{j})} = {d(\mathbf{j},\mathbf{i})} =
-\sqrt{{(i_1 - j_1)^2 + (i_2 - j_2)^2 +... (i_n - j_n)^2 } }  =
-\sqrt{\sideset{}{}\sum_{n=1}^n(i_n - j_n)^2}$$
+$${d(\mathbf{i},\mathbf{j})} = {d(\mathbf{j},\mathbf{i})} = \sqrt{{(i_1 - j_1)^2 + (i_2 - j_2)^2 +... (i_n - j_n)^2 } }  = \sqrt{\sum_{n=1}^n(i_n - j_n)^2}$$
 
 Now to illustrate an example of calculating similarity we put this
 equation to work by exploring if a car is fast or not by using
@@ -87,8 +85,7 @@ and the Bugatti are fast but maybe the Tesla is not fast therefore
 giving an incorrect answer. An example calculation using the Mustang and
 the Tesla is given below:
 
-$${d(\mathbf{i},\mathbf{j})}  =
-\sqrt{{(300 - 288)^2 + (1 - 0)^2 } }  = 12.04$$
+$${d(\mathbf{i},\mathbf{j})}  = \sqrt{{(300 - 288)^2 + (1 - 0)^2 } }  = 12.04$$
 
 We were able to determine the closest, or first nearest neighbor by
 inspection of this data, however with a more robust dataset this may not

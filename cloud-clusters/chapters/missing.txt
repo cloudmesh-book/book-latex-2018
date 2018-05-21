@@ -1,12 +1,10 @@
 all in in and
 doc -> latex
 
-ai
 art
 bigdata
 cloud
 data
-devops
 faas
 hadoop
 i524
