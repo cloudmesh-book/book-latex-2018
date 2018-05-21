@@ -17,30 +17,30 @@ INDEX=\
  ./dest/chapters/prg/python-data.md\
  ./dest/chapters/prg/python-libcloud.md\
  ./README.md\
- ./chapters/login-node.md\
- ./chapters/raspberry/README.md\
- ./chapters/sd-card.md\
- ./chapters/linux.md\
- ./chapters/ssh/ssh.md\
- ./chapters/raspberry/config-display.md\
- ./chapters/raspberry/motherboard-led.md\
- ./chapters/run-at-boot.md\
- ./chapters/pi-now.md\
- ./chapters/modify-pi-image.md\
- ./chapters/pi-passwordreset.md\
- ./chapters/pxe.md\
- ./chapters/pi-assemble-cluster.md\
- ./chapters/pi-configure-cluster.md\
- ./chapters/pi-docker.md\
- ./chapters/pi-dockerswarm.md\
- ./chapters/kubernetes-526/readme-kube.md\
- ./chapters/kubernetes-417/pi-kubernetes.md\
- ./chapters/pi-spark.md\
- ./chapters/pi/slurm.md\
- ./chapters/pi/setup.md\
- ./chapters/pi/software.md\
- ./chapters/pi/cluster.md\
- ./chapters/references.md
+ ./dest/chapters/login-node.md\
+ ./dest/chapters/raspberry/README.md\
+ ./dest/chapters/sd-card.md\
+ ./dest/chapters/linux.md\
+ ./dest/chapters/ssh/ssh.md\
+ ./dest/chapters/raspberry/config-display.md\
+ ./dest/chapters/raspberry/motherboard-led.md\
+ ./dest/chapters/run-at-boot.md\
+ ./dest/chapters/pi-now.md\
+ ./dest/chapters/modify-pi-image.md\
+ ./dest/chapters/pi-passwordreset.md\
+ ./dest/chapters/pxe.md\
+ ./dest/chapters/pi-assemble-cluster.md\
+ ./dest/chapters/pi-configure-cluster.md\
+ ./dest/chapters/pi-docker.md\
+ ./dest/chapters/pi-dockerswarm.md\
+ ./dest/chapters/kubernetes-526/readme-kube.md\
+ ./dest/chapters/kubernetes-417/pi-kubernetes.md\
+ ./dest/chapters/pi-spark.md\
+ ./dest/chapters/pi/slurm.md\
+ ./dest/chapters/pi/setup.md\
+ ./dest/chapters/pi/software.md\
+ ./dest/chapters/pi/cluster.md\
+ ./dest/chapters/references.md
 
 
 MARKDOWN-OPTIONS=-f markdown+smart -f markdown+emoji --indented-code-classes=bash,python,yaml
@@ -73,7 +73,7 @@ tex:
 
 clean:
 	rm -rf book.*
-
+	rm -rf dest
 
 list:
 	@echo "----"
