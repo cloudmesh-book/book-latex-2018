@@ -1,8 +1,6 @@
 SSH
 ===
 
- 
-
 If you do not know what ssh is we recommend that you [read up on
 it](http://openssh.com/manual.html). However, the simple material
 presented here will help you get started quickly. It can however not
@@ -23,7 +21,8 @@ Generate a SSH key
 
 First we must generate a ssh key with the tool
 [ssh-keygen](http://linux.die.net/man/1/ssh-keygen). This program is
-commonly available on most UNIX systems (this includes Cygwin if you
+commonly available on most UNIX syste
+ms (this includes Cygwin if you
 installed the ssh module or use our pre-generated cygwin executable). It
 will ask you for the location and name of the new key. It will also ask
 you for a passphrase, which you **MUST** provide. Please use a strong

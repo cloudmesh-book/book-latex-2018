@@ -196,14 +196,14 @@ FILENAME=vonlaszewski-cloud-cluster
 
 #	pandoc ./chapters/prg/python.md -o dest/chapters/prg/python.md --base-header-level=2
 
-epub: refernces.bib
+epub: refernces
 	mkdir -p dest/chapters/prg
 	bin/section.py 1 "Python" > dest/chapters/prg/SECTION-PYTHON.md
 	bin/markup-all.py
 	pandoc $(RESOURCE) $(MARKDOWN-OPTIONS)  $(FORMAT) $(FONTS) $(BIB)  $(CSL) $(CSS) -o $(FILENAME).epub metadata.txt $(INDEX)
 
-refernces.bib:
-	cat ../bib/refs-mqtt.bib bib/references.bib > dest/refernces.bib
+refernces:
+	cat ../bib/refs-mqtt.bib bib/references.bib > dest/references.bib
 html:
 	pandoc $(MARKDOWN-OPTIONS)  $(FORMAT) $(FONTS) $(BIB)  $(CSL) -o $(FILENAME).html metadata.txt $(INDEX)
 
