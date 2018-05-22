@@ -10,7 +10,6 @@ INDEX=\
  ./dest/chapters/class/fall2018.md\
  ./dest/chapters/class/policy.md\
  ./dest/chapters/SECTION-DRAFT.md\
- ./dest/chapters/preface/fall2017.md\
  ./dest/chapters/preface/assignments-sp18.md\
  ./dest/chapters/preface/assignments.md\
  ./dest/chapters/preface/contributing.md\
@@ -208,6 +207,7 @@ epub: refernces todo
 	pandoc $(RESOURCE) $(MARKDOWN-OPTIONS)  $(FORMAT) $(FONTS) $(BIB)  $(CSL) $(CSS) -o $(FILENAME).epub metadata.txt $(INDEX)
 
 refernces:
+	mkdir -p dest
 	cat ../bib/refs-mqtt.bib bib/references.bib > dest/references.bib
 
 html:
