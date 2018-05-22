@@ -6,7 +6,9 @@ INDEX=\
  ./dest/todo.md\
  ./dest/chapters/preface/preface.md\
  ./dest/chapters/preface/contributors.md\
- ./dest/chapters/preface/fall2018.md\
+ ./dest/chapters/class/SECTION.md\
+ ./dest/chapters/class/fall2018.md\
+ ./dest/chapters/SECTION-DRAFT.md\
  ./dest/chapters/preface/fall2018-policy.md\
  ./dest/chapters/preface/fall2017.md\
  ./dest/chapters/preface/assignments-sp18.md\
@@ -199,12 +201,15 @@ FILENAME=vonlaszewski-cloud-cluster
 
 epub: refernces todo
 	mkdir -p dest/chapters/prg
-	bin/section.py 1 "Python" > dest/chapters/prg/SECTION-PYTHON.md
 	bin/markup-all.py
+	bin/section.py 1 "Python" > dest/chapters/prg/SECTION-PYTHON.md
+	bin/section.py 1 "Classes" > dest/chapters/class/SECTION.md
+	bin/section.py 1 "EVERYTHING FROM HERE NOT CHECKED" > dest/chapters/SECTION-DRAFT.md
 	pandoc $(RESOURCE) $(MARKDOWN-OPTIONS)  $(FORMAT) $(FONTS) $(BIB)  $(CSL) $(CSS) -o $(FILENAME).epub metadata.txt $(INDEX)
 
 refernces:
 	cat ../bib/refs-mqtt.bib bib/references.bib > dest/references.bib
+
 html:
 	pandoc $(MARKDOWN-OPTIONS)  $(FORMAT) $(FONTS) $(BIB)  $(CSL) -o $(FILENAME).html metadata.txt $(INDEX)
 
