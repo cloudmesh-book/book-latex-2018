@@ -1,0 +1,14 @@
+pandoc -o new/go.md new/go.tex
+
+pandoc -o new/osx-tricks.md new/osx-tricks.tex
+pandoc -o new/amqp.md new/amqp.tex
+pandoc -o mapreduce/twister.md mapreduce/twister.tex
+pandoc -o mapreduce/hadoop-installation.md mapreduce/hadoop-installation.tex
+pandoc -o mapreduce/twister-installation.md mapreduce/twister-installation.tex
+pandoc -o mapreduce/spark-streaming.md mapreduce/spark-streaming.tex
+pandoc -o mapreduce/hadoop-lectures.md mapreduce/hadoop-lectures.tex
+pandoc -o mapreduce/twister2-example.md mapreduce/twister2-example.tex
+pandoc -o mapreduce/harp.md mapreduce/harp.tex
+pandoc -o mapreduce/spark-installation.md mapreduce/spark-installation.tex
+pandoc -o mapreduce/spark-lectures.md mapreduce/spark-lectures.tex
+pandoc -o os/ubuntu-usb-osx.md os/ubuntu-usb-osx.tex

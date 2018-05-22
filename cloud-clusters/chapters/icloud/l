@@ -1,0 +1,60 @@
+pandoc -o ./course/nosql-new.md ./course/nosql-new.tex
+pandoc -o ./course/mapreduce.md ./course/mapreduce.tex
+pandoc -o ./course/saas.md ./course/saas.tex
+pandoc -o ./course/iaas.md ./course/iaas.tex
+
+
+pandoc -o ./course/iterative-mapreduce.md ./course/iterative-mapreduce.tex
+pandoc -o ./course/fundamentals.md ./course/fundamentals.tex
+pandoc -o ./course/nosql.md ./course/nosql.tex
+
+
+pandoc -o ./course/old-fundamentals.md ./course/old-fundamentals.tex
+pandoc -o ./course/iot.md ./course/iot.tex
+pandoc -o ./evaluation.md ./evaluation.tex
+
+
+pandoc -o ./syllabus.md ./syllabus.tex
+
+
+
+pandoc -o ./deprecated.md ./deprecated.tex
+
+
+pandoc -o ./preface.md ./preface.tex
+
+
+pandoc -o ./participation.md ./participation.tex
+
+
+
+pandoc -o ./project2.md ./project2.tex
+
+
+pandoc -o ./course/selected.draft.md ./course/selected.draft.tex
+
+pandoc -o ./assignment/assignment.md ./assignment/assignment.tex
+
+
+pandoc -o ./assignment/exercise5/exercise5.md ./assignment/exercise5/exercise5.tex
+
+
+
+pandoc -o ./assignment/exercise2/exercise2.md ./assignment/exercise2/exercise2.tex
+
+pandoc -o ./assignment/exercise3/exercise3.md ./assignment/exercise3/exercise3.tex
+
+pandoc -o ./assignment/exercise4/exercise4.md ./assignment/exercise4/exercise4.tex
+
+pandoc -o ./assignment/exercise8/exercise8.md ./assignment/exercise8/exercise8.tex
+
+pandoc -o ./assignment/exercise1/exercise1.md ./assignment/exercise1/exercise1.tex
+
+pandoc -o ./assignment/exercise6/exercise6.md ./assignment/exercise6/exercise6.tex
+
+pandoc -o ./assignment/exercise7/exercise7.md ./assignment/exercise7/exercise7.tex
+
+pandoc -o ./assignment/deprecated/exercise-old7/exercise7.md ./assignment/deprecated/exercise-old7/exercise7.tex
+exit
+
+
