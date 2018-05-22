@@ -4,6 +4,7 @@
 INDEX=\
  ./dest/chapters/todo.md\
  ./dest/todo.md\
+ ./dest/chapters/preface/issues.md\
  ./dest/chapters/preface/preface.md\
  ./dest/chapters/preface/contributors.md\
  ./dest/chapters/class/SECTION.md\
@@ -19,7 +20,6 @@ INDEX=\
  ./dest/chapters/preface/graph-e516.md\
  ./dest/chapters/preface/graph-e616-a.md\
  ./dest/chapters/preface/graph-e616.md\
- ./dest/chapters/preface/issues.md\
  ./dest/chapters/preface/organization.md\
  ./dest/chapters/preface/plan.md\
  ./dest/chapters/preface/project-ideas.md\
