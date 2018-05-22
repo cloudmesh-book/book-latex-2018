@@ -1,0 +1,347 @@
+\MDNAME\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DO NOT MODIFY THIS FILE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Tutorial: Zookeeper Installation}
+
+Authored by rcarmick (hid-sp18-404) -
+https://github.com/cloudmesh-community/hid-sp18-404/blob/master/tutorial/zookeeper.md
+
+\section{Installation of Zookeeper in Ubuntu}
+
+This tutorial was developed in a virtualized Ubuntu 16.4 i386 running
+through Oracle VM VirtualBox on a host Windows10 Home host system
+
+Installation of Zookeeper on Ubuntu requires the prior installation of
+Hadoop. Java OpenJDK is a prerequisite for both Hadoop and Zookeeper
+
+\subsection{Install Java-OpenJDK-8}
+
+Run system package updates
+
+\begin{lstlisting}
+sudo apt-get update
+sudo apt-get upgrade
+\end{lstlisting}
+
+Download and install Java OpenJDK-8
+
+\begin{lstlisting}
+sudo apt-get install openjdk-8-jdk
+\end{lstlisting}
+
+\subsection{Install and configure Hadoop}
+
+The Hadoop prerequisite portion of the tutorial follows the instructions
+at http://idroot.net/linux/install-apache-hadoop-ubuntu-16-04-lts/
+
+Setup a Hadoop user and Hadoop group which will become the owner of
+Zookeeper instances later.
+
+\begin{lstlisting}
+sudo addgroup hadoopgroup
+sudo adduser -ingroup hadoopgroup hadoopuser
+\end{lstlisting}
+
+Create an SSH key for the hadoopuser
+
+\begin{lstlisting}
+sudo apt-get install ssh
+su - hadoopuser
+ssh-keygen -t rsa -P ""
+cd $HOME/.ssh
+cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
+chmod 600 authorized_keys
+\end{lstlisting}
+
+Download and unpack the latest Apache Hadoop
+
+\begin{lstlisting}
+sudo wget http://www-us.apache.org/dist/hadoop/common/hadoop-3.0.0/hadoop-3.0.0.tar.gz
+tar xzf hadoop-3.0.0.tar.gz
+mv hadoop-3.0.0 hadoop
+\end{lstlisting}
+
+Configure Apache Hadoop Begin configuration with the Hadoop variables in
+bashrc
+
+\begin{lstlisting}
+gedit ~/.bashrc
+\end{lstlisting}
+
+Append the following to the bottom of bashrc
+
+\begin{lstlisting}
+export HADOOP_HOME=/home/hadoop
+export HADOOP_INSTALL=$HADOOP_HOME
+export HADOOP_MAPRED_HOME=$HADOOP_HOME
+export HADOOP_COMMON_HOME=$HADOOP_HOME
+export HADOOP_HDFS_HOME=$HADOOP_HOME
+export YARN_HOME=$HADOOP_HOME
+export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
+export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
+\end{lstlisting}
+
+Ensure the HADOOP\_HOME variable is set to the correct path to your
+Hadoop installation.
+
+Apply bashrc variables to the current session
+
+\begin{lstlisting}
+source ~/.bashrc
+\end{lstlisting}
+
+Navigate to the hadoop configuration folder to use gedit to configure
+necessary files
+
+\begin{lstlisting}
+cd $HADOOP_HOME/etc/hadoop
+\end{lstlisting}
+
+Edit \$HADOOP\_HOME/etc/hadoop/hadoop-env.sh to set the JAVA\_HOME
+environment by appending a JAVA\_HOME variable to the bottom of the
+file. Locate the path for your installation of Java.
+
+\begin{lstlisting}
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-i386
+\end{lstlisting}
+
+Edit core-site.xml to:
+
+\begin{lstlisting}
+<configuration>
+<property>
+  <name>fs.default.name</name>
+    <value>hdfs://localhost:9000</value>
+</property>
+</configuration>
+\end{lstlisting}
+
+Edit hdfs-site.xml. The file path in the value fields should match your
+hadoop installation.
+
+\begin{lstlisting}
+<configuration>
+<property>
+ <name>dfs.replication</name>
+ <value>1</value>
+</property>
+<property>
+  <name>dfs.name.dir</name>
+    <value>file:///home/hadoop/hadoopdata/hdfs/namenode</value>
+</property>
+<property>
+  <name>dfs.data.dir</name>
+    <value>file:///home/hadoop/hadoopdata/hdfs/datanode</value>
+</property>
+</configuration>
+\end{lstlisting}
+
+Edit mapred-site.xml to:
+
+\begin{lstlisting}
+<configuration>
+ <property>
+  <name>mapreduce.framework.name</name>
+   <value>yarn</value>
+ </property>
+</configuration>
+\end{lstlisting}
+
+Edit yarn-site.xml to:
+
+\begin{lstlisting}
+<configuration>
+ <property>
+  <name>yarn.nodemanager.aux-services</name>
+    <value>mapreduce_shuffle</value>
+ </property>
+ </configuration>
+\end{lstlisting}
+
+Format namenode
+
+\begin{lstlisting}
+hdfs namenode -format
+\end{lstlisting}
+
+Start hadoop services
+
+\begin{lstlisting}
+cd $HADOOP_HOME/sbin/
+start-dfs.sh
+start-yarn.sh
+\end{lstlisting}
+
+\subsection{Install single instance of Zookeeper}
+
+The Zookeeper tutorial builds on the tutorial at
+https://my-bigdata-blog.blogspot.com/2017/07/apache-Zookeeper-install-Ubuntu.html
+You must have Java installed and JAVA\_HOME set, as described in the
+Hadoop prerequisite portion.
+
+This tutorial's JAVA\_HOME directory is
+
+\begin{lstlisting}
+/usr/lib/jvm/java-8-openjdk-i386
+\end{lstlisting}
+
+First, we add a zookeeper user to the hadoopgroup
+
+\begin{lstlisting}
+sudo adduser --ingroup hadoopgroup zookeeper
+\end{lstlisting}
+
+Download and unpack the latest Apache Zookeeper
+
+\begin{lstlisting}
+sudo wget http://apache.cs.utah.edu/zookeeper/current/zookeeper-3.4.10.tar.gz
+tar xvf zookeeper-3.4.10.tar.gz
+\end{lstlisting}
+
+Move and rename the instance of zookeeper to your desired directory.
+
+\begin{lstlisting}
+sudo mv zookeeper-3.4.10 /home/zookeeper
+\end{lstlisting}
+
+Navigate to the conf folder in the zookeeper isntance. The zookeeper
+configuration file is by default named \emph{zoo\_sample.cfg} This file
+is going to be edited to correct the dataDir variable to the correct
+directory of the zookeeper instance and set the clientPort. Since the
+zookeeper directory for this instance is /home/zookeeper the dataDir
+will be set to /home/zookeeper/data. Set yours accordingly.
+
+Edit zoo\_sample.cfg to reflect the changes to dataDir and clientPort
+
+\begin{lstlisting}
+
+dataDir=/home/zookeeper/data
+
+clientPort=2181
+\end{lstlisting}
+
+Finalize the creation zoo.cfg file with the command
+
+\begin{lstlisting}
+mv zoo_sample.cfg zoo.cfg
+\end{lstlisting}
+
+Navigate to the Zookeeper instance's conf directory
+(/home/zookeeper/conf) and create a java.env file to create log
+parameters. java.env should contain two lines of text in the format:
+
+\begin{lstlisting}
+ZOO_LOG4J_PROP="INFO,ROLLINGFILE"
+ZOO_LOG_DIR="/home/zookeeper/logs"
+\end{lstlisting}
+
+The file path set in the \emph{ZOO\_LOG\_DIR} variable should be a
+directory called \emph{logs} within the zookeeper instance.
+
+The \emph{data} and \emph{logs} directories need to be made in the
+zookeeper instance directory
+
+\begin{lstlisting}
+mkdir /home/zookeeper/data
+mkdir /home/zookeeper/logs
+\end{lstlisting}
+
+Create a myid file in the data directory
+
+\begin{lstlisting}
+echo "1" /home/zookeeper/data/myid
+\end{lstlisting}
+
+Change the ownership of the zookeeper instance
+
+\begin{lstlisting}
+sudo chown -R zookeeper:hadoopgroup /home/zookeeper
+\end{lstlisting}
+
+The Zookeeper server can now be started with the command
+
+\begin{lstlisting}
+sudo su -p - zookeeper -c "/usr/local/zookeeper/bin/zkServer.sh start"
+\end{lstlisting}
+
+The status of the server is tested with the command
+
+\begin{lstlisting}
+echo srvr | nc localhost 2181
+\end{lstlisting}
+
+The server is shutoff with the command
+
+\begin{lstlisting}
+sudo su -p - zookeeper -c "/usr/local/zookeeper/bin/zkServer.sh stop"
+\end{lstlisting}
+
+\subsection{Deploy multiple instances of Zookeeper}
+
+To deploy multiple isntances of Zookeeper, repeat the single isntance
+steps with the following changes
+
+When unpacking and renaming Zookeeper from the tar.gz file, duplicate
+the unpacked instance with an iterated name.
+
+\begin{lstlisting}
+tar xvf zookeeper-3.4.10.tar.gz
+sudo mv zookeeper-3.4.10 /usr/local/zookeeper2
+\end{lstlisting}
+
+When confuguring zoo\_sample.cfg and converting it to zoo.cfg, update
+the dataDir for the second instance. Also iterate the clientPort from a
+starting clientPort of 2181
+
+\begin{lstlisting}
+**dataDir=/home/zookeeper2/data**
+# the port at which the clients will connect
+**clientPort=2182**
+\end{lstlisting}
+
+Update the ZOO\_LOG\_DIR variable in the second instance's java.env
+
+\begin{lstlisting}
+ZOO_LOG4J_PROP="INFO,ROLLINGFILE"
+ZOO_LOG_DIR="/home/zookeeper2/logs"
+\end{lstlisting}
+
+When creating the data and log directories, update the directory.
+
+\begin{lstlisting}
+mkdir /home/zookeeper2/data
+mkdir /home/zookeeper2/logs 
+\end{lstlisting}
+
+When creating the myid file in the data directory
+
+\begin{lstlisting}
+echo "2" /home/zookeeper/data/myid
+\end{lstlisting}
+
+Change the ownership of the second instance.
+
+\begin{lstlisting}
+sudo chown -R zookeeper:hadoop /usr/local/zookeeper2
+\end{lstlisting}
+
+The second Zookeeper server can be started with the command
+
+\begin{lstlisting}
+sudo su -p - zookeeper -c "/usr/local/zookeeper2/bin/zkServer.sh start"
+\end{lstlisting}
+
+The status of the second server is tested with the command
+
+\begin{lstlisting}
+echo srvr | nc localhost 2182
+\end{lstlisting}
+
+The second server is shutoff with the command
+
+\begin{lstlisting}
+sudo su -p - zookeeper -c "/usr/local/zookeeper2/bin/zkServer.sh stop"
+\end{lstlisting}
+

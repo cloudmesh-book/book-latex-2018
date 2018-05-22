@@ -1,0 +1,111 @@
+\MDNAME\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DO NOT MODIFY THIS FILE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{MongoDB Tutorial}
+
+\textbf{THIS IS A DRAFT AND NOT COMPLETED YET}
+
+\begin{itemize}
+\item
+  status: 0
+\item
+  feedback: 1
+\end{itemize}
+
+Some steps are copied from
+\url{https://www.tutorialspoint.com/mongodb/mongodb_environment.htm/}
+
+\subsubsection{Overview}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+RDBMS & MongoDB\tabularnewline
+\midrule
+\endhead
+Database & Database\tabularnewline
+Table & Collection\tabularnewline
+Tuple/Row & Document\tabularnewline
+column & Field\tabularnewline
+Table Join & Embedded Documents\tabularnewline
+Primary Key & Primary Key\tabularnewline
+\bottomrule
+\end{longtable}
+
+MongoDB is an open-source document database and NoSQL database, which is
+written in C++. A document is a set of key-value pairs. The table shows
+the difference between RDBMS terminology and MongoDB.
+
+\subsubsection{Advantages of MongoDB over RDBMS}
+
+\begin{itemize}
+\item
+  Schema less - MongoDB is a document database in which one collection
+  holds different documents. Number of fields, content and size of the
+  document can differ from one document to another.
+\item
+  Structure of a single object is clear.
+\item
+  No complex joins.
+\item
+  Deep query-ability. MongoDB supports dynamic queries on documents
+  using a document-based query language that's nearly as powerful as
+  SQL.
+\item
+  Tuning.
+\item
+  Ease of scale-out - MongoDB is easy to scale.
+\item
+  Conversion/mapping of application objects to database objects not
+  needed.
+\item
+  Uses internal memory for storing the (windowed) working set, enabling
+  faster access of data.
+\end{itemize}
+
+\subsubsection{Install MongoDB on Ubuntu}
+
+Run the following command to import the MongoDB public GPG key
+
+\begin{lstlisting}
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+\end{lstlisting}
+
+Create a /etc/apt/sources.list.d/mongodb.list file using the following
+command.
+
+\begin{lstlisting}
+echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
+\end{lstlisting}
+
+Now issue the following command to update the repository
+
+\begin{lstlisting}
+sudo apt-get update
+\end{lstlisting}
+
+Next install the MongoDB by using the following command
+
+\begin{lstlisting}
+apt-get install mongodb-10gen = 2.2.3
+\end{lstlisting}
+
+Start MongoDB
+
+\begin{lstlisting}
+sudo service mongodb start
+\end{lstlisting}
+
+Stop MongoDB
+
+\begin{lstlisting}
+sudo service mongodb stop
+\end{lstlisting}
+
+Restart MongoDB
+
+\begin{lstlisting}
+sudo service mongodb restart
+\end{lstlisting}
+

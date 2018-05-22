@@ -1,0 +1,185 @@
+\MDNAME\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DO NOT MODIFY THIS FILE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Enable remote access}
+
+enable vnc enable ssh
+
+\section{Install GrovePi}
+
+Do not install the Grovepi shield yet
+
+\begin{lstlisting}
+sudo apt-get update
+sudo apt-get install emacs -y
+cd /home/pi/Desktop
+sudo git clone https://github.com/DexterInd/GrovePi
+cd /home/pi/Desktop/GrovePi/Script
+sudo chmod +x install.sh
+sudo ./install.sh
+sudo reboot
+\end{lstlisting}
+
+Now we install grovepi
+
+\begin{lstlisting}
+sudo pip install grovepi
+sudo shutdown -h now
+\end{lstlisting}
+
+put the grove shield on and power on
+
+check
+
+\begin{lstlisting}
+sudo i2cdetect -y 1
+\end{lstlisting}
+
+If everything goes right you will see:
+
+\begin{lstlisting}
+    0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- 04 -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+70: -- -- -- -- -- -- -- --        
+\end{lstlisting}
+
+\section{Test a joystick}
+
+\begin{lstlisting}
+cd ~/Desktop/GrovePi/Software/Python/   
+python grove_thumb_joystick.py
+\end{lstlisting}
+
+You will see output such as
+
+\begin{lstlisting}
+('x =', 497, ' y =', 513, ' Rx =', 10.583501006036217, ' Ry =', 9.941520467836257, ' click =', 0)
+('x =', 496, ' y =', 513, ' Rx =', 10.625, ' Ry =', 9.941520467836257, ' click =', 0)
+('x =', 497, ' y =', 513, ' Rx =', 10.583501006036217, ' Ry =', 9.941520467836257, ' click =', 0)
+\end{lstlisting}
+
+\section{Making the board LED blink}
+
+The green LED can be made blinking as follows in root
+
+\begin{lstlisting}
+echo 1 > /sys/class/leds/led0/brightness
+echo 0 > /sys/class/leds/led0/brightness
+\end{lstlisting}
+
+THis can also be done via a file and if combined witth an uploades key
+into authorized\_keys, we can controll them via ssh
+
+\begin{lstlisting}
+ssh pi@red03 "echo 1 > led; sudo cp led /sys/class/leds/led0/brightness"        
+ssh pi@red03 "echo 0 > led; sudo cp led /sys/class/leds/led0/brightness"
+\end{lstlisting}
+
+\section{Find PIs on the network}
+
+\begin{lstlisting}
+arp -a | fgrep "b8:27:eb"
+\end{lstlisting}
+
+\section{(obsolete as the above works) New kernel has a bug}
+
+Run this
+
+\begin{lstlisting}
+sudo rpi-update 52241088c1da59a359110d39c1875cda56496764.
+\end{lstlisting}
+
+\section{Enable remote access}
+
+\section{Set up Grove PI}
+
+Setup the rasperry grove pi software
+
+\begin{lstlisting}
+sudo curl -kL dexterindustries.com/update_grovepi | bash
+sudo reboot
+\end{lstlisting}
+
+Setup the examples
+
+\begin{lstlisting}
+cd /home/pi/Desktop
+sudo git clone https://github.com/DexterInd/GrovePi
+\end{lstlisting}
+
+\section{GrovePI Firmware update}
+
+\url{https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/updating-firmware/}
+
+\begin{lstlisting}
+cd Desktop/
+git clone https://github.com/DexterInd/GrovePi.git
+cd /home/pi/Desktop/GrovePi/Firmware
+sudo chmod +x firmware_update.sh
+sudo ./firmware_update.sh
+\end{lstlisting}
+
+say \texttt{y}
+
+You will see
+
+\begin{lstlisting}
+avrdude: safemode: Fuses OK
+\end{lstlisting}
+
+which indicates the firmware update was successfully completed.
+
+check the firmware version
+
+\begin{lstlisting}
+python ~/Desktop/GrovePi/Software/Python/grove_firmware_version_check.py
+\end{lstlisting}
+
+\section{Install 4 inch monitor}
+
+We assume you have VNC and ssh enabled as services in the prefernces.
+
+The documentation to the monitor is located at
+
+\url{https://www.waveshare.com/wiki/4inch_HDMI_LCD}
+
+The best way to install it is to use ssh pi@
+
+and use the terminal of you laptop. Frst download the driver with
+
+\begin{lstlisting}
+sudo su
+wget http://www.waveshare.com/w/upload/0/00/LCD-show-170703.tar.gz
+cd /boot
+hdmi_group=2
+hdmi_mode=87
+hdmi_cvt 480 800 60 6 0 0 0
+dtoverlay=ads7846,cs=1,penirq=25,penirq_pull=2,speed=50000,keep_vref_on=0,swapxy=0,pmax=255,xohms=150,xmin=200,xmax=3900,ymin=200,ymax=3900
+display_rotate=3
+\end{lstlisting}
+
+This will reboot the pi. Next install the touch screen driver with
+
+\begin{lstlisting}
+cd /boot
+wget http://www.waveshare.com/w/upload/0/00/LCD-show-170703.tar.gz
+sudo tar xvf LCD-show-170703.tar.gz 
+cd LCD-show
+chmod +x LCD4-800x480-show
+./LCD4-800x480-show
+\end{lstlisting}
+
+\section{GUI}
+
+\begin{lstlisting}
+sudo pip3 install guizero
+\end{lstlisting}
+

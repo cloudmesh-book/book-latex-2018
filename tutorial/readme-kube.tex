@@ -1,0 +1,311 @@
+\MDNAME\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DO NOT MODIFY THIS FILE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Raspberry Pi Kubernetes Cluster}
+
+\begin{itemize}
+\item
+  Tim Whitson @whitstd (hid-sp18-526)
+\item
+  Juliano Gianlupi @JulianoGianlupi (hid-sp18-601)
+\end{itemize}
+
+\subsection{Note}
+
+This tutorial is for Raspbian Stretch.
+
+\subsection{Hardware}
+
+Each cluster consists of:
+
+\begin{itemize}
+\item
+  1 head node (\href{head}{setup}) (recommend following the instructions
+  here first)
+\item
+  4 compute nodes
+\end{itemize}
+
+\subsection{Configuration}
+
+\subsubsection{Flash Raspbian}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Download Raspbian image \url{https://www.raspberrypi.org/downloads/}.
+\item
+  Download Etcher \url{https://etcher.io/}.
+\item
+  Using Etcher, flash Raspbian onto SD card.
+\end{enumerate}
+
+\subsubsection{Keyboard Layout}
+
+The default keyboard layout may need to be changed to US.
+
+Menu -\textgreater{} Preferences -\textgreater{} Mouse and Keyboard
+Settings -\textgreater{} Keyboard tab -\textgreater{} Variant
+-\textgreater{} English (US)
+
+\subsubsection{Change password}
+
+Change password:
+
+\begin{lstlisting}
+passwd
+\end{lstlisting}
+
+Enter new password via prompts.
+
+\subsubsection{Change hostnames}
+
+Change hostname of each raspberry pi (in descending order).
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  rp0
+\item
+  rp1
+\item
+  rp2
+\item
+  rp3
+\item
+  rp4
+\end{enumerate}
+
+This can be done on the command line using:
+
+\begin{lstlisting}
+sudo raspi-config
+\end{lstlisting}
+
+Or on the desktop by going to Menu -\textgreater{} Preferences
+-\textgreater{} Raspbery Pi Configuration
+
+Or by modifying \textbf{/etc/hostname}
+
+\subsubsection{Configure Head Node}
+
+Install Dependencies:
+
+\begin{lstlisting}
+apt-get update
+apt-get install -qy dnsmasq clusterssh iptables-persistent
+\end{lstlisting}
+
+\paragraph{Create Static IP}
+
+Copy old config (-n flag prevents overwrite):
+
+\begin{lstlisting}
+\cp -n /etc/dhcpcd.conf /etc/dhcpcd.conf.old
+\end{lstlisting}
+
+To update DHCP configuration, add the following to
+\textbf{/etc/dhcpd.conf}:
+
+\begin{lstlisting}
+interface wlan0
+metric 200
+
+interface eth0
+metric 300
+static ip_address=192.168.50.1/24
+static routers=192.168.50.1
+static domain_name_servers=192.168.50.1
+\end{lstlisting}
+
+\paragraph{Configure DHCP Server:}
+
+Copy old config (-n flag prevents overwrite):
+
+\begin{lstlisting}
+\cp -n /etc/dnsmasq.conf /etc/dnsmasq.conf.old
+\end{lstlisting}
+
+To update DNS configuration, add the following to
+\textbf{/etc/dhcpd.conf}
+
+\begin{lstlisting}
+interface=eth0
+interface=wlan0
+
+dhcp-range=eth0, 192.168.50.1, 192.168.50.250, 24h
+\end{lstlisting}
+
+\paragraph{NAT Forwarding}
+
+To Setup NAT Forwarding, uncomment the following line in
+\textbf{/etc/sysctl.conf}:
+
+\begin{lstlisting}
+net.ipv4.ip_forward=1
+\end{lstlisting}
+
+\paragraph{IP Tables}
+
+Create IP Tables:
+
+\begin{lstlisting}
+sudo iptables -t nat -A POSTROUTING -o wlan0 -j MASQUERADE
+sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+sudo iptables -A FORWARD -i $INTERNAL -o wlan0 -j ACCEPT
+sudo iptables -A FORWARD -i $EXTERNAL -o eth0 -j ACCEPT
+\end{lstlisting}
+
+Make rules permanent:
+
+\begin{lstlisting}
+iptables-save > /etc/iptables/rules.v4
+\end{lstlisting}
+
+\subsubsection{SSH Configuration}
+
+\textbf{Note: Gregor says this is not best practice}
+
+Generate SSH keys:
+
+\begin{lstlisting}
+ssh-keygen -t rsa
+\end{lstlisting}
+
+Copy key to each compute node:
+
+\begin{lstlisting}
+ssh-copy-id <hostname>
+\end{lstlisting}
+
+For hostnames rp1-4 (final node names will be: rp0, rp1, rp2, rp3, rp4).
+
+\subsubsection{Configure Cluster SSH}
+
+To update Cluster SSH configuration, add the following to
+\textbf{/etc/clusters}:
+
+\begin{lstlisting}
+rpcluster rp1 rp2 rp3 rp4
+\end{lstlisting}
+
+Now you can run commands to all clusters by:
+
+\begin{lstlisting}
+cssh rpcluster
+\end{lstlisting}
+
+\section{Intructions for installing kubernetes}
+
+\subsection{First install doker, disable swap, install kubeadm}
+
+All the following steps are made automatically by the
+docker\_kubernetes\_install.sh script.
+
+\subsubsection{Install docker}
+
+In order to install kubernetes you first need to have docker installed.
+This is very strait foward.
+
+\subsubsection{Disable swap memory}
+
+Docker has an issue (in my opinion severe) in that it is \textbf{not
+compatible with SWAP memory}, therefore it is neeeded to disable it.
+This might create some issues, if you encounter them you should try to
+rebbot the cluster again, if that fails change line 16 in the script
+from
+
+\begin{lstlisting}
+orig="$(head -n1 /boot/cmdline.txt) cgroup_enable=cpuset cgroup_memory=1"
+\end{lstlisting}
+
+to
+
+\begin{lstlisting}
+orig="$(head -n1 /boot/cmdline.txt) cgroup_enable=cpuset cgroup_memory=memory".
+\end{lstlisting}
+
+\subsubsection{Installing kubernetes administrator}
+
+Finally, to configure kubernetes you'll need kubeadm. Now the Pi needs
+to be rebooted.
+
+\subsubsection{\texorpdfstring{\emph{All of this will be done by the script, don't worry} (maybe worry)}{All of this will be done by the script, don't worry (maybe worry)}}
+
+\subsection{For the nodes}
+
+All of the above needs to be done in each node aswell. The script
+copy\_dk\_kub\_install\_script\_to\_nodes.sh should copy the needed
+script to each of them and run it. It is set up to work with 4 nodes
+named rp\textless{}number\textgreater{} with pi as the username (the
+numbers start at 1 because the head node is rp0). Changing the number of
+nodes is trivial, if all of your nodes have the same username it is also
+trivial.
+
+If your nodes are not configured like that you'll need to change this
+script or copy docker\_kubernetes\_install.sh to each of the nodes
+manually.
+
+\subsection{Now some more explanations on the scripts}
+
+First docker needs to be installed
+
+\begin{lstlisting}
+curl -sSL get.docker.com \
+  | sh \
+  && sudo usermod pi -aG docker
+\end{lstlisting}
+
+Now, as docker does not work with SWAP memory it needs to be disabled,
+this is easy enough
+
+\begin{lstlisting}
+sudo swapoff -a 
+echo Adding " cgroup_enable=cpuset cgroup_enable=1" to /boot/cmdline.txt
+sudo cp /boot/cmdline.txt /boot/cmdline_backup.txt
+\end{lstlisting}
+
+If after running this script your raspberry pi starts to not work
+properly reboot it once again, if thar does not solve the issue replace
+cgroup\_memory=1 with cgroup\_enable=memory.
+
+\begin{lstlisting}
+orig="$(head -n1 /boot/cmdline.txt) cgroup_enable=cpuset cgroup_memory=1"
+echo $orig | sudo tee /boot/cmdline.txt
+\end{lstlisting}
+
+Now kubernetes admin will be installed
+
+\begin{lstlisting}
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add - &&\
+  echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" | \
+  sudo tee /etc/apt/sources.list.d/kubernetes.list && \
+  sudo apt-get update -q && \
+  sudo apt-get install -qy kubeadm
+sudo reboot 
+\end{lstlisting}
+
+\subsubsection{On the nodes}
+
+Docker and kubernetes need to be installed on the nodes, as well as the
+SWAP memory needs to be disabled. This is handled by another script that
+simply copies the installation script to the nodes and runs it. First
+copy the script
+
+\begin{lstlisting}
+for number in {1..4}
+    do 
+        scp /home/pi/docker_kubernites_install.sh \
+            pi@rp$number:/home/pi/docker_kubernites_install.sh
+    done
+exit 0
+\end{lstlisting}
+
+Now the installation script will be run on the nodes using cssh
+
+\begin{lstlisting}
+cssh -a "sh docker_kubernites_install.sh"
+\end{lstlisting}
+
