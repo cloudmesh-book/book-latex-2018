@@ -4,27 +4,27 @@
 INDEX=\
  ./dest/chapters/todo.md\
  ./dest/todo.md\
- ./dest/chapters/preface.md\
- ./dest/chapters/contributors.md\
- ./dest/chapters/preface-old/fall2018.md\
- ./dest/chapters/preface-old/fall2018-policy.md\
- ./dest/chapters/preface-old/fall2017.md\
- ./dest/chapters/preface-old/assignments-sp18.md\
- ./dest/chapters/preface-old/assignments.md\
- ./dest/chapters/preface-old/contributing.md\
- ./dest/chapters/preface-old/g.md\
- ./dest/chapters/preface-old/git.md\
- ./dest/chapters/preface-old/grading.md\
- ./dest/chapters/preface-old/graph-e222.md\
- ./dest/chapters/preface-old/graph-e516.md\
- ./dest/chapters/preface-old/graph-e616-a.md\
- ./dest/chapters/preface-old/graph-e616.md\
- ./dest/chapters/preface-old/issues.md\
- ./dest/chapters/preface-old/organization.md\
- ./dest/chapters/preface-old/plan.md\
- ./dest/chapters/preface-old/project-ideas.md\
- ./dest/chapters/preface-old/project.md\
- ./dest/chapters/preface-old/update.md\
+ ./dest/chapters/preface/preface.md\
+ ./dest/chapters/preface/contributors.md\
+ ./dest/chapters/preface/fall2018.md\
+ ./dest/chapters/preface/fall2018-policy.md\
+ ./dest/chapters/preface/fall2017.md\
+ ./dest/chapters/preface/assignments-sp18.md\
+ ./dest/chapters/preface/assignments.md\
+ ./dest/chapters/preface/contributing.md\
+ ./dest/chapters/preface/g.md\
+ ./dest/chapters/preface/git.md\
+ ./dest/chapters/preface/grading.md\
+ ./dest/chapters/preface/graph-e222.md\
+ ./dest/chapters/preface/graph-e516.md\
+ ./dest/chapters/preface/graph-e616-a.md\
+ ./dest/chapters/preface/graph-e616.md\
+ ./dest/chapters/preface/issues.md\
+ ./dest/chapters/preface/organization.md\
+ ./dest/chapters/preface/plan.md\
+ ./dest/chapters/preface/project-ideas.md\
+ ./dest/chapters/preface/project.md\
+ ./dest/chapters/preface/update.md\
  ./dest/chapters/icloud//course/old-fundamentals.md\
  ./dest/chapters/icloud//course/iot.md\
  ./dest/chapters/icloud//course/nosql.md\
