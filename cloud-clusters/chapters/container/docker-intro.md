@@ -11,7 +11,7 @@ independence between applications and infrastructure and developers and
 IT ops to unlock their potential and creates a model for better
 collaboration and innovation. An overview of docker is provided at
 
-\URL{https://docs.docker.com/engine/docker-overview/}
+* <https://docs.docker.com/engine/docker-overview/>
 
 ![Docker Containers](images/docker-container.png){width="70%"}
 
@@ -25,13 +25,10 @@ In 2016 Docker Inc. surveyed over 500 Docker developers and operations
 experts in various phases of deploying container-based technologies. The
 result is available in the *The Docker Survey 2016*.
 
-\URL{https://www.docker.com/survey-2016}
-\centering
+* <https://www.docker.com/survey-2016>
+
 ![Docker Survey Results 2016 ](images/docker-survey.png){width="100%"}
 
-\centering
-![ Docker Engine Component Flow
-](images/engine-components-flow.png){width="50%"}
+![Docker Engine Component Flow](images/engine-components-flow.png){width="50%"}
 
-\centering
-![ Docker Architecture ](images/docker-architecture.pdf){width="100%"}
+![Docker Architecture](images/docker-architecture.pdf){width="100%"}

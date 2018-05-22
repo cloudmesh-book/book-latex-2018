@@ -44,7 +44,8 @@ Information to Knowledge to Wisdom) pipeline. Then more detail is given
 on the flood of data from Internet and Industry applications with eBay
 and General Electric discussed in most detail.
 
-\slides{Overview of Data Science}{45}{Commercial Data Deluge}{https://drive.google.com/open?id=0B88HKpainTSfenJ4dEZQOUxZSmM}
+[:scroll: Overview of Data Science 45 Commercial Data Deluge](https://drive.google.com/open?id=0B88HKpainTSfenJ4dEZQOUxZSmM)
+
 
 ### What is X-Informatics and its Motto
 
@@ -151,7 +152,8 @@ many users with individually modest data adding up to a lot. The last
 lesson emphasizes how everyday devices \~\~ the Internet of Things \~\~
 are being used to create a wealth of data.
 
-\slides{Overview of Data Science}{22}{Methodology}{https://drive.google.com/open?id=0B88HKpainTSfZzhqZHVKbllZcTA}{PDF}
+[:scroll: Overview of Data Science 22 Methodology](https://drive.google.com/open?id=0B88HKpainTSfZzhqZHVKbllZcTA)
+
 
 ### Science and Research
 
@@ -239,8 +241,9 @@ the big data to give big wisdom. There are many ways to describe data
 science and several are discussed to give a good composite picture of
 this emerging field.
 
-\slides{Overview of Data Science}{35}{Clouds}{https://drive.google.com/open?id=0B88HKpainTSfV1FwdktnbTl3T1k}{PDF}
+[:scroll: Overview of Data Science 35 Clouds](https://drive.google.com/open?id=0B88HKpainTSfV1FwdktnbTl3T1k)
 Clouds
+
 ------
 
 We describe cloud data centers with their staggering size with up to a
@@ -273,8 +276,9 @@ through the DIKW pipeline.
 
 ### Data Analytics
 
-\slides{Overview of Data Science}{30}{Data Analytics}{http://archive2.cra.org/ccc/files/docs/nitrdsymposium/keyes.pdf}
-We stress the importance of data analytics giving examples from several
+[:scroll: Overview of Data Science 30 Data Analytics](http://archive2.cra.org/ccc/files/docs/nitrdsymposium/keyes.pdf)
+We stress the importance of data analytics givi
+ng examples from several
 fields. We note that better analytics is as important as better
 computing and storage capability. In the second video we look at High
 Performance Computing in Science and Engineering: the Tree and the

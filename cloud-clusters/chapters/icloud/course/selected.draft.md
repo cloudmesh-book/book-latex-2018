@@ -11,7 +11,8 @@ to paralle processing and MapReduce communication patterns are explained
 like Embarrassingly Parallel, Classical MapReduce, Iterative Reductions
 and Loosely Synchronous e.g. MPI.
 
-\video{Cloud}{10:17}{Cloud and MapReduce}{https://www.youtube.com/watch?v=_irz3v1gT-A}
+[:clapper: Cloud 10:17 Cloud and MapReduce](https://www.youtube.com/watch?v=_irz3v1gT-A)
+
 \slides{Cloud}{Page 25}{IaaS, PaaS and SaaS}{https://drive.google.com/open?id=1eXWtNlQ_jgeq_nVS_9B7MTaiDjzddXjC}
 Hadoop Framework
 ----------------
@@ -19,7 +20,8 @@ Hadoop Framework
 Hadoop components are explained i.e. JobTracker, TaskTracker, MapTask,
 ReduceTask including HDFS.
 
-\video{Cloud}{8:32}{Hadoop Components including HDFS}{https://www.youtube.com/watch?v=Vuroqly6FTE}
+[:clapper: Cloud 8:32 Hadoop Components including HDFS](https://www.youtube.com/watch?v=Vuroqly6FTE)
+
 \slides{Cloud}{Page 15}{Hadoop Components including HDFS}{https://drive.google.com/open?id=0B88HKpainTSfMnpCelpNQUpNdVE}
 \slides{Cloud}{Page 15}{Hadoop Components including HDFS - pptx}{https://drive.google.com/open?id=0B88HKpainTSfTVlNRzRMemNaZEU}
 Hadoop Framework II
@@ -32,7 +34,8 @@ and sorting occurs in the map phase. Reduce reads and writes files to
 HDFS, and the merger generates the final result. The second Quiz is
 given at the end.
 
-\video{Cloud}{9:25}{Hadoop Framework II}{https://www.youtube.com/watch?v=KWLY_maNEPA}
+[:clapper: Cloud 9:25 Hadoop Framework II](https://www.youtube.com/watch?v=KWLY_maNEPA)
+
 \slides{Cloud}{Page 8}{Hadoop Framework II}{https://drive.google.com/open?id=0B88HKpainTSfd3hkTG4yY2FYUVE}
 \slides{Cloud}{Page 8}{Hadoop Framework II - pptx}{https://drive.google.com/open?id=0B88HKpainTSfcUkwN0l1VHBEdlU}
 Walk Through MapReduce: Step-by-Step Hadoop Tasks
@@ -48,7 +51,8 @@ In detail, Shuffle and Merge are used to order and reduce size of
 intermediate data. The last stage, Reduce, handles each group of output
 data, per key, in parallel.
 
-\video{Cloud}{11:01}{Hadoop Tasks}{https://www.youtube.com/watch?v=UN4t3tvdjms}
+[:clapper: Cloud 11:01 Hadoop Tasks](https://www.youtube.com/watch?v=UN4t3tvdjms)
+
 \slides{Cloud}{Page 24}{Hadoop Tasks}{https://drive.google.com/open?id=0B88HKpainTSfMnpCelpNQUpNdVE}
 \slides{Cloud}{Page 24}{Hadoop Tasks - pptx}{https://drive.google.com/open?id=0B88HKpainTSfTVlNRzRMemNaZEU}
 Google File System and BigTable
@@ -60,7 +64,8 @@ e.g. Microsoft Dryad, a distributed execution engine for data parallel
 applications. In Google File System, data chunks, metadata, and replicas
 are briefly discussed.
 
-\video{Cloud}{9:43}{GFS and BigTable}{https://www.youtube.com/watch?v=5YmjrhEFQsk}
+[:clapper: Cloud 9:43 GFS and BigTable](https://www.youtube.com/watch?v=5YmjrhEFQsk)
+
 \slides{Cloud}{Page 16}{GFS and BigTable}{https://drive.google.com/open?id=0B88HKpainTSfd3hkTG4yY2FYUVE}
 \slides{Cloud}{Page 16}{GFS and BigTable - pptx}{https://drive.google.com/open?id=0B88HKpainTSfcUkwN0l1VHBEdlU}
 MapReduce Example - WordCount
@@ -69,7 +74,8 @@ MapReduce Example - WordCount
 MapReduce is revisited with the WordCount example to demonstrate how it
 actually works in the map and reduce phase.
 
-\video{Cloud}{9:07}{MapReduce WordCount}{https://www.youtube.com/watch?v=sSIGaDaulvA}
+[:clapper: Cloud 9:07 MapReduce WordCount](https://www.youtube.com/watch?v=sSIGaDaulvA)
+
 \slides{Cloud}{Page 6}{MapReduce WordCount}{https://drive.google.com/open?id=0B88HKpainTSfMnpCelpNQUpNdVE}
 \slides{Cloud}{Page 6}{MapReduce WordCount - pptx}{https://drive.google.com/open?id=0B88HKpainTSfTVlNRzRMemNaZEU}
 MapReduce Example - Twister
@@ -90,7 +96,8 @@ the PlotViz program developed by Indiana University. The architecture
 between Hadoop 1 and 2 are explained in the beginning along with
 MapReduce.
 
-\video{Cloud}{12:01}{Twister Introduction}{https://www.youtube.com/watch?v=6vkgvGtyv4Q}
+[:clapper: Cloud 12:01 Twister Introduction](https://www.youtube.com/watch?v=6vkgvGtyv4Q)
+
 \slides{Cloud}{Page 1}{MapReduce and Twister}{https://drive.google.com/open?id=0B88HKpainTSfMnpCelpNQUpNdVE}
 \slides{Cloud}{Page 1}{MapReduce and Twister}{https://drive.google.com/open?id=0B88HKpainTSfTVlNRzRMemNaZEU}
 Embarrassingly Parallel Example, Basic Local Alignment Search Tool (BLAST)
@@ -103,10 +110,12 @@ sequences in databases in parallel. Blast introduction starts at 2:12.
 BLAST can be parallelized in several ways: multi-thread, query
 segmentation, and database segmentation.
 
-\video{Cloud}{8:27}{Introduction to BLAST}{https://www.youtube.com/watch?v=i3H9HmUYfq8}
+[:clapper: Cloud 8:27 Introduction to BLAST](https://www.youtube.com/watch?v=i3H9HmUYfq8)
+
 \slides{Cloud}{Page 1}{Introduction to BLAST}{https://drive.google.com/open?id=0B88HKpainTSfdnFvY1V3dlFTRlE}
 \slides{Cloud}{Page 1}{Introduction to BLAST - pptx}{https://drive.google.com/open?id=0B88HKpainTSfMDAwZm5uQlZWckU}
-\video{Cloud}{4:44}{BLAST Parallelization}{https://www.youtube.com/watch?v=isc0MjkwTlk}
+[:clapper: Cloud 4:44 BLAST Parallelization](https://www.youtube.com/watch?v=isc0MjkwTlk)
+
 \slides{Cloud}{Page 13}{BLAST Parallelization}{https://drive.google.com/open?id=0B88HKpainTSfdnFvY1V3dlFTRlE}
 \slides{Cloud}{Page 13}{BLAST Parallelization - pptx}{https://drive.google.com/open?id=0B88HKpainTSfcUkwN0l1VHBEdlU}
 MapReduce Optimization - Data Locality
@@ -120,7 +129,8 @@ equation to improve data locality is tested in an experiment, whose
 results are given. By default, Hadoop determines scheduling of tasks to
 available slots in terms of best local composition, not global.
 
-\video{Cloud}{8:36}{Data Locality}{https://www.youtube.com/watch?v=RqLA7_asK50}
+[:clapper: Cloud 8:36 Data Locality](https://www.youtube.com/watch?v=RqLA7_asK50)
+
 \slides{Cloud}{Page 10}{Data Locality}{https://drive.google.com/open?id=0B88HKpainTSfT28zLTdKYWhGdGM}
 \slides{Cloud}{Page 10}{Data Locality - pptx}{https://drive.google.com/open?id=0B88HKpainTSfVGdyVzNjTzdfb3c}
 MapReduce Optimization - Optimal Data Locality
@@ -135,7 +145,8 @@ designed to improve the original one in Hadoop. An experiment was run
 comparing all three, with the network topology-aware algorithm clearly
 outperforming the others.
 
-\video{Cloud}{4:17}{Optimal Data Locality}{https://www.youtube.com/watch?v=Ok8vdrFXo5w}
+[:clapper: Cloud 4:17 Optimal Data Locality](https://www.youtube.com/watch?v=Ok8vdrFXo5w)
+
 \slides{Cloud}{Page 17}{Optimal Data Locality}{https://drive.google.com/open?id=0B88HKpainTSfT28zLTdKYWhGdGM}
 \slides{Cloud}{Page 17}{Optimal Data Locality - pptx}{https://drive.google.com/open?id=0B88HKpainTSfVGdyVzNjTzdfb3c}
 MapReduce Optimization - Task Granularity
@@ -152,7 +163,8 @@ gain is deemed optimal. Optimal and Expected Remaining Job Execution
 Time can help determine task splitting. Several examples are offered
 with either single or multiple jobs.
 
-\video{Cloud}{9:51}{Task Granularity}{https://www.youtube.com/watch?v=u9UpgTnOZz4}
+[:clapper: Cloud 9:51 Task Granularity](https://www.youtube.com/watch?v=u9UpgTnOZz4)
+
 \slides{Cloud}{Page 29}{Task Granularity}{https://drive.google.com/open?id=0B88HKpainTSfT28zLTdKYWhGdGM}
 \slides{Cloud}{Page 29}{Task Granularity - pptx}{https://drive.google.com/open?id=0B88HKpainTSfVGdyVzNjTzdfb3c}
 MapReduce Optimization - Resource Utilization and Speculative Execution
@@ -166,7 +178,8 @@ can take over if it is determined the original task will not finish in
 time. Overuse of speculative tasks can lead to poor data locality and
 higher energy demands.
 
-\video{Cloud}{3:52}{Resource Utilization and Speculative Execution}{https://www.youtube.com/watch?v=wWyFiqDIYus}
+[:clapper: Cloud 3:52 Resource Utilization and Speculative Execution](https://www.youtube.com/watch?v=wWyFiqDIYus)
+
 \slides{Cloud}{Page 46}{Resource Utilization and Speculative Execution}{https://drive.google.com/open?id=0B88HKpainTSfT28zLTdKYWhGdGM}
 \slides{Cloud}{Page 46}{Resource Utilization and Speculative Execution - pptx}{https://drive.google.com/open?id=0B88HKpainTSfVGdyVzNjTzdfb3c}
 Appendix; SIMD vs MIMD;SPMD vs MPMD
@@ -181,6 +194,9 @@ applications differs from the norm in that data is sent in a matrix, not
 a string. WordCount functions in a map/reduce pattern. These are all
 types of SIMD. SPMD and MPMD are two other types of model.
 
-\video{Cloud}{9:42}{SIMD vs MIMD;SPMD vs MPMD}{https://www.youtube.com/watch?v=zHQiR56Zmtc}
-\slides{Cloud}{Page 1}{SIMD vs MIMD;SPMD vs MPMD}{https://drive.google.com/open?id=0B88HKpainTSfT28zLTdKYWhGdGM}
-\slides{Cloud}{Page 1}{SIMD vs MIMD;SPMD vs MPMD - pptx}{https://drive.google.com/open?id=0B88HKpainTSfVGdyVzNjTzdfb3c}
+[:clapper: Cloud 9:42 SIMD vs MIMD;SPMD vs MPMD](https://www.youtube.com/watch?v=zHQiR56Zmtc)
+
+[:scroll: Cloud Page 1 SIMD vs MIMD;SPMD vs MPMD](https://drive.google.com/open?id=0B88HKpainTSfT28zLTdKYWhGdGM)
+
+[:scroll: Cloud Page 1 SIMD vs MIMD;SPMD vs MPMD - pptx](https://drive.google.com/open?id=0B88HKpainTSfVGdyVzNjTzdfb3c)
+

@@ -26,7 +26,8 @@ DexterOS:
 
 * <https://www.dexterindustries.com/download/dexteros>
 
-\video{DexterOS}{9:15}{Set up SDCard (original Video)}{https://www.youtube.com/watch?v=pJZURHLeTs0}
+[:clapper: DexterOS 9:15 Set up SDCard (original Video)](https://www.youtube.com/watch?v=pJZURHLeTs0)
+
 The video is published on the Dexter Web site.
 
 ### Dexter Rasbian

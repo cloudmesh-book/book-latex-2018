@@ -146,7 +146,7 @@ possible
 
 The link for joining the meeting on Zoom is posted in Piazza.
 
-\URL{TBD}
+* <TBD>
 For more up-to-date details, refer to Piazza.
 
 Class Material
@@ -211,10 +211,10 @@ follow these rules:
 
 Please examine carefully the sample note book is available at:
 
-\URL{https://raw.githubusercontent.com/bigdata-i523/sample-hid000/master/notebook.md}
+* <https://raw.githubusercontent.com/bigdata-i523/sample-hid000/master/notebook.md>
 This will render in git as:
 
-\URL{https://github.com/bigdata-i523/sample-hid000/blob/master/notebook.md}
+* <https://github.com/bigdata-i523/sample-hid000/blob/master/notebook.md>
 The notebook.md is not a blog and should only contain a summary of what
 you have done.
 
@@ -236,7 +236,7 @@ This class is a full term class of 16 weeks.
 
 The semester calendar is posted at
 
-\URL{http://registrar.indiana.edu/official-calendar/official-calendar-spring.shtml}
+* <http://registrar.indiana.edu/official-calendar/official-calendar-spring.shtml>
 The class beginns Mon, Jan 8th and ends Fri, May 4th
 
 Incomplete
@@ -294,10 +294,10 @@ relevant for that class and add the appropriate artifacts.
 Here is the process for how to deal with incomplets at IU are
 documented:
 
-\URL{http://registrar.indiana.edu/grades/grade-values/grade-of-incomplete.shtml}
+* <http://registrar.indiana.edu/grades/grade-values/grade-of-incomplete.shtml>
 Piazza is FERPA compliant:
 
-\URL{https://piazza.com/legal/ferpa}
+* <https://piazza.com/legal/ferpa>
 Waitlist
 --------
 
@@ -429,4 +429,4 @@ plagiarized, do not even have us review your paper.
 
 For more information on this topic please see:
 
-\URL{https://studentaffairs.indiana.edu/student-conduct/misconduct-charges/academic-misconduct.shtml}
+* <https://studentaffairs.indiana.edu/student-conduct/misconduct-charges/academic-misconduct.shtml>

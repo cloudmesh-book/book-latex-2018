@@ -33,7 +33,8 @@ What is Kubernetes?
 
 Kubernetes is an open-source platform designed to automate deploying,
 scaling, and operating application containers.
-<https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/>
+
+* <https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/>
 
 With Kubernetes, you can:
 
@@ -64,7 +65,8 @@ What are containers?
 
 Image source:
 
-\URL{https://d33wubrfki0l68.cloudfront.net/e7b766e0175f30ae37f7e0e349b87cfe2034a1ae/3e391/images/docs/why_containers.svg}
+* <https://d33wubrfki0l68.cloudfront.net/e7b766e0175f30ae37f7e0e349b87cfe2034a1ae/3e391/images/docs/why_containers.svg>
+
 Terminology
 -----------
 

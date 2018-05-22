@@ -9,9 +9,8 @@ INDEX=\
  ./dest/chapters/class/SECTION.md\
  ./dest/chapters/class/fall2018.md\
  ./dest/chapters/class/policy.md\
+ ./dest/chapters/class/assignments.md\
  ./dest/chapters/SECTION-DRAFT.md\
- ./dest/chapters/preface/assignments-sp18.md\
- ./dest/chapters/preface/assignments.md\
  ./dest/chapters/preface/contributing.md\
  ./dest/chapters/preface/g.md\
  ./dest/chapters/preface/git.md\

@@ -4,15 +4,21 @@ Outdated: Search Engine
 Google Components
 -----------------
 
-\video{Cloud}{7:02}{Google Components}{https://www.youtube.com/watch?v=IWMcv7HbbPM}
-\slides{Cloud}{Page 1}{Google Components}{https://drive.google.com/open?id=0B88HKpainTSfYWZ0dDlrNThkVms}
-\slides{Cloud}{Page 1}{Google Components - pptx}{https://drive.google.com/open?id=0B88HKpainTSfcHg4cV8wRzQwU3M}
+[:clapper: Cloud 7:02 Google Components](https://www.youtube.com/watch?v=IWMcv7HbbPM)
+
+[:scroll: Cloud Page 1 Google Components](https://drive.google.com/open?id=0B88HKpainTSfYWZ0dDlrNThkVms)
+
+[:scroll: Cloud Page 1 Google Components - pptx](https://drive.google.com/open?id=0B88HKpainTSfcHg4cV8wRzQwU3M)
+
 Google Architecture
 -------------------
 
-\video{Cloud}{8:40}{Google Architecture}{https://www.youtube.com/watch?v=syZHezdbdRY}
-\slides{Cloud}{Page 6}{Google Architecture}{https://drive.google.com/open?id=0B88HKpainTSfYWZ0dDlrNThkVms}
-\slides{Cloud}{Page 6}{Google Architecture - pptx}{https://drive.google.com/open?id=0B88HKpainTSfcHg4cV8wRzQwU3M}
+[:clapper: Cloud 8:40 Google Architecture](https://www.youtube.com/watch?v=syZHezdbdRY)
+
+[:scroll: Cloud Page 6 Google Architecture](https://drive.google.com/open?id=0B88HKpainTSfYWZ0dDlrNThkVms)
+
+[:scroll: Cloud Page 6 Google Architecture - pptx](https://drive.google.com/open?id=0B88HKpainTSfcHg4cV8wRzQwU3M)
+
 Google History
 --------------
 
@@ -22,6 +28,9 @@ Google Search Engine 1: <https://www.youtube.com/watch?v=S2oT7uMw5Yg>
 
 Google Search Engine 2: <https://www.youtube.com/watch?v=pxos3Yt6y6I>
 
-\video{Cloud}{10:36}{Google History}{https://www.youtube.com/watch?v=Kg0NK0XUkHw}
-\slides{Cloud}{Page 14}{Google History}{https://drive.google.com/open?id=0B88HKpainTSfYWZ0dDlrNThkVms}
-\slides{Cloud}{Page 14}{Google History - pptx}{https://drive.google.com/open?id=0B88HKpainTSfcHg4cV8wRzQwU3M}
+[:clapper: Cloud 10:36 Google History](https://www.youtube.com/watch?v=Kg0NK0XUkHw)
+
+[:scroll: Cloud Page 14 Google History](https://drive.google.com/open?id=0B88HKpainTSfYWZ0dDlrNThkVms)
+
+[:scroll: Cloud Page 14 Google History - pptx](https://drive.google.com/open?id=0B88HKpainTSfcHg4cV8wRzQwU3M)
+

@@ -55,7 +55,8 @@ to models that are used to compare how changes to the systems affect
 their overall performance. It is interesting how the humble ranking has
 become such a dominant driver of the world's economy.
 
-\slides{Lifestyle}{Recommender}{45}{https://drive.google.com/open?id=0B6wqDMIyK2P7YkIwczVfQlJqVG8}{PDF}
+[:scroll: Lifestyle Recommender 45](https://drive.google.com/open?id=0B6wqDMIyK2P7YkIwczVfQlJqVG8)
+
 
 ### Recommender Systems as an Optimization Problem
 
@@ -136,7 +137,8 @@ user rankings to predict their interests, and the Pearson correlation,
 used to statistically quantify correlations between users viewed as
 points in a space of items.
 
-\slides{Lifestyle}{Recommender}{49}{https://drive.google.com/open?id=0B6wqDMIyK2P7UVloVElaZ2FXcTg}{PDF}
+[:scroll: Lifestyle Recommender 49](https://drive.google.com/open?id=0B6wqDMIyK2P7UVloVElaZ2FXcTg)
+
 
 We start with a quick recap of recommender systems from previous unit;
 what they are with brief examples.
@@ -201,7 +203,8 @@ difference between implicit and explicit ratings and the k Nearest
 Neighbors algorithm. General features like the curse of dimensionality
 in high dimensions are discussed.
 
-\slides{Lifestyle}{Filtering}{18}{https://drive.google.com/open?id=0B6wqDMIyK2P7UExxVFc5YlpOZ28}{PDF}
+[:scroll: Lifestyle Filtering 18](https://drive.google.com/open?id=0B6wqDMIyK2P7UExxVFc5YlpOZ28)
+
 
 ### Item-based Collaborative Filtering
 

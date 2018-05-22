@@ -10,7 +10,7 @@ format.
 The paper format is included in hid-sample project-report (e.g. same as
 paper):
 
-\URL{https://github.com/cloudmesh-community/hid-sample/tree/master/project-paper}
+* <https://github.com/cloudmesh-community/hid-sample/tree/master/project-paper>
 The code and the paper are to be added in your hid folder. YOu will be
 creating lower case directories called `project-paper` and
 `project-code`. You will not check in any data, but instead create
@@ -18,7 +18,7 @@ scripts that fetch the data.
 
 For an example directory structure, please see
 
-\URL{https://github.com/cloudmesh-community/hid-sample}
+* <https://github.com/cloudmesh-community/hid-sample>
 Certainly, you can chose from many different topics and we hope you pick
 one that is suitable for you and you enjoy doing. You have the
 opportunity to definitely pick a project that you enjoy doing. However
@@ -47,7 +47,7 @@ Register your project idea
 
 Please register your project idea here:
 
-\URL{https://docs.google.com/document/d/14L0guBfWJdRqqf1BoLw41LPg9HU3BqROFZeF43hJF_E}
+* <https://docs.google.com/document/d/14L0guBfWJdRqqf1BoLw41LPg9HU3BqROFZeF43hJF_E>
 Meeting with Gregor
 -------------------
 
@@ -201,22 +201,22 @@ different classes, we posted the content and not just the URL.
 
 On March 11 we posted in 516:
 
-\URL{https://piazza.com/class/jbku81aeli95rz?cid=274}
+* <https://piazza.com/class/jbku81aeli95rz?cid=274>
 Tutorial and Project Idea: Reproducible Scalable spark cluster and
 benchmarking. While on the phone with others, I was asked is there a
 tutorial about spark that would get 10 points.
 
 Here is an example of such a tutorial:
 
-\URL{http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-1/}
-\URL{http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-2/}
-\URL{http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-3/}
-\URL{http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-4/}
-\URL{http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-5/}
-\URL{http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-6/}
-\URL{http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-7/}
-\URL{http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-8/}
-\URL{http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-9/}
+* <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-1/>
+* <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-2/>
+* <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-3/>
+* <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-4/>
+* <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-5/>
+* <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-6/>
+* <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-7/>
+* <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-8/>
+* <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-9/>
 This could naturally be the basis of your project. However you can not
 just paste and copy, you need to write it as a section and not use the
 word tutorial. You need to make meaningful modifications or enhancements
@@ -234,7 +234,7 @@ The following video is pretty interesting as it shows many of the steps
 that are needed to create a docker cluster. This is regardless if you
 use a cluster based on zeros, 3 B, 3B+.
 
-\URL{https://www.youtube.com/watch?v=qSpfWP-Fgjc}
+* <https://www.youtube.com/watch?v=qSpfWP-Fgjc>
 Naturally, the video shows how to do things by hand. To bring this to
 the next level, One could, for example, provide a host file with the
 static addresses (or create them) and use it as part of a script to
@@ -264,7 +264,7 @@ Tutorial and Project Idea: Hadoop on Docker with newer version (a) use
 ubuntu image, (b) use newest version of hadoop, (c) develop docker file
 similar to
 
-\URL{https://github.com/sequenceiq/hadoop-docker/blob/master/Dockerfile}
+* <https://github.com/sequenceiq/hadoop-docker/blob/master/Dockerfile>
 or others you can find, (d) find dataset and benchmark on various
 machines.
 
@@ -280,7 +280,8 @@ and attribute base security. Take a look at the already developed Web
 services to showcase how we develop flask and swagger servers with basic
 auth (needed to understand the attribute based security).
 
-\URL{https://en.wikipedia.org/wiki/Attribute-based_access_control}
+* <https://en.wikipedia.org/wiki/Attribute-based_access_control>
+
 This project has three parts and could be used throughout the class for
 all assignments.
 

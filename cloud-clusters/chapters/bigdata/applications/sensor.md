@@ -12,8 +12,10 @@ IIoT. More detail is given for radar data gathered by sensors;
 ubiquitous or smart cities and homes including U-Korea; and finally the
 smart electric grid.
 
-\slides{Sensor}{31}{Sensor I}{https://drive.google.com/open?id=0B8936_ytjfjmVXZCUnR3TnVMMFk}
-\slides{Sensor}{44}{Sensor II}{https://drive.google.com/open?id=0B8936_ytjfjmelMwSUl6Q1lLV1k}
+[:scroll: Sensor 31 Sensor I](https://drive.google.com/open?id=0B8936_ytjfjmVXZCUnR3TnVMMFk)
+
+[:scroll: Sensor 44 Sensor II](https://drive.google.com/open?id=0B8936_ytjfjmelMwSUl6Q1lLV1k)
+
 
 Internet of Things
 ------------------
@@ -101,6 +103,7 @@ Resources
 
 \TODO{These resources have not all been checked to see if they still
   exist this is curretnly in progress}
+
 -   <https://www.gesoftware.com/minds-and-machines>
 -   <https://www.gesoftware.com/predix>
 -   <https://www.gesoftware.com/sites/default/files/the-industrial-internet/index.html>

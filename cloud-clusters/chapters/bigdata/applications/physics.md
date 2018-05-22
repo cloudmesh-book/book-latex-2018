@@ -26,7 +26,8 @@ histograms of Higgs Boson production with various forms of shape of
 signal and various background and with various event totals. The
 lectures use Python but use of Java is described.
 
-* \slides{Physics}{20}{Higgs}{https://drive.google.com/open?id=0B8936_ytjfjmYXNoM3ZadGR6QlE}
+* [:scroll: Physics 20 Higgs](https://drive.google.com/open?id=0B8936_ytjfjmYXNoM3ZadGR6QlE)
+
 * \sourcecode{Physics}{HiggsClassI-Sloping.py}{examples/physics/mr-higgs/higgs-classI-sloping.py}
 
 ### Particle Counting
@@ -74,8 +75,9 @@ This unit is devoted to Python experiments looking at histograms of
 Higgs Boson production with various forms of shape of signal and various
 background and with various event totals.
 
-* \slides{Physics}{29}{Higgs II}{https://drive.google.com/open?id=0B8936_ytjfjmUHRpV2g2V28walE}{PDF}
+* [:scroll: Physics 29 Higgs II](https://drive.google.com/open?id=0B8936_ytjfjmUHRpV2g2V28walE}
 Files:
+
 * \sourcecode{Physics}{HiggsClassI-Sloping.py}{examples/physics/mr-higgs/higgs-classI-sloping.py}
 * \sourcecode{Physics}{HiggsClassIII.py}{examples/physics/number-theory/higgs-classIII.py}
 * \sourcecode{Physics}{HiggsClassIIUniform.py}{examples/physics/mr-higgs/higgs-classII-uniform.py}
@@ -122,8 +124,9 @@ unit introduces Gaussian (normal) distributions and explains why they
 seen so often in natural phenomena. Several Python illustrations are
 given. Java is currently not available in this unit.
 
-* \slides{Physics}{39}{Higgs}{https://drive.google.com/open?id=0B8936_ytjfjmNWhrS0xadk16SWM}
-* \sourcecode{Physics}{HiggsClassIII.py}{examples/physics/number-theory/higgs-classIII.py}
+* [:scroll: Physics 39 Higgs](https://drive.google.com/open?id=0B8936_ytjfjmNWhrS0xadk16SWM)
+* \sourcecode{Physics}{Hig
+gsClassIII.py}{examples/physics/number-theory/higgs-classIII.py}
 
 ### Statistics Overview and Fundamental Idea: Random Variables
 
@@ -183,8 +186,9 @@ are discussed. The Central Limit Theorem and Bayes law concludes
 discussion. Python and Java (for student - not reviewed in class)
 examples and Physics applications are given.
 
-* \slides{Physics}{44}{Higgs III}{https://drive.google.com/open?id=0B8936_ytjfjmTUxkZXVRRmlBSUk}{PDF}
+* [:scroll: Physics 44 Higgs III](https://drive.google.com/open?id=0B8936_ytjfjmTUxkZXVRRmlBSUk)
 Files:
+
 * \sourcecode{Physics}{HiggsClassIII.py}{examples/physics/calculated-dice-roll/higgs-classIV-seeds.py}
 
 #### Generators and Seeds
@@ -252,14 +256,14 @@ the observable universe as they describe the SKA's international
 partnership that will map and study the entire sky in greater detail
 than ever before."
 
-\URL{http://sc17.supercomputing.org/presentation/?id=inspkr101&sess=sess263}
+* <http://sc17.supercomputing.org/presentation/?id=inspkr101&sess=sess263>
 
 A summary article about this effort is available at:
 
-\URL{https://www.hpcwire.com/2017/11/17/sc17-keynote-hpc-powers-ska-efforts-peer-deep-cosmos/}
+* <https://www.hpcwire.com/2017/11/17/sc17-keynote-hpc-powers-ska-efforts-peer-deep-cosmos/>
 The video is hosted at
 
-\URL{http://sc17.supercomputing.org/presentation/?id=inspkr101&sess=sess263}
+* <http://sc17.supercomputing.org/presentation/?id=inspkr101&sess=sess263>
 Start at about 1:03:00 (e.g. the one hour mark)
 
 Radar
@@ -276,7 +280,8 @@ the changing climate. The Radar-Informatics unit provides a glimpse in
 the processes fueling global climate change and explains what methods
 are used for ice data acquisitions and analysis.
 
-\slides{Radar}{58}{Radar}{https://drive.google.com/open?id=0B8936_ytjfjmZ0VzZ0ZIenpUMTQ}
+[:scroll: Radar 58 Radar](https://drive.google.com/open?id=0B8936_ytjfjmZ0VzZ0ZIenpUMTQ)
+
 
 ### Introduction
 

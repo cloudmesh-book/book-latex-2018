@@ -254,7 +254,7 @@ Simple Usecase
 In this example we are demonstrating how to set up a MQTT broker, a
 client and a subscriber.
 
-\URL{https://github.com/bigdata-i523/sample-hid000/tree/master/experiment/mqtt}
+* <https://github.com/bigdata-i523/sample-hid000/tree/master/experiment/mqtt>
 A test program that starts a MQTT broker and client is provided next,
 showcasing how simple the interactions are while using a higher level
 API such as provided through the python client library of Paho.
@@ -305,7 +305,8 @@ controlled with the help of messages communicated over MQTT.
 
 The code for the project is available at
 
-\URL{https://github.com/bigdata-i523/hid201/tree/master/experiment/mqtt}
+* <https://github.com/bigdata-i523/hid201/tree/master/experiment/mqtt>
+
 ### Requirements and Setup
 
 The setup used three different machines. A laptop or a desktop running

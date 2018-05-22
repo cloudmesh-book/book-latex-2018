@@ -292,7 +292,10 @@ browser, preferably google, and following the url below the code.
     if __name__ == '__main__':
         app.run(debug=True)
 
-\URL{http://127.0.0.1:5000/}
+Now Open the application in your bbrowser with
+
+    http://127.0.0.1:5000/
+
 The first API endpoint we will define is the endpoint to download the
 data, which is done by the following lines of code. Note the url is
 hardcoded into this portion of the code as passing urls to an API is not

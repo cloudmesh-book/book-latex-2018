@@ -47,7 +47,8 @@ Adding Content
 
 First, you have to **fork** the repository while going to the link:
 
-\URL{https://github.com/cloudmesh/book}
+* <https://github.com/cloudmesh/book>
+
 and press the fork icon. Now you can clone or directly manipulate your
 fork from the web browser.
 

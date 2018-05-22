@@ -1,8 +1,6 @@
 Virtual Box
 ===========
 
- 
-
 For development purposes we recommend tha you use for this class an
 Ubuntu virtual machine that you set up with the help of virtualbox. We
 recommend that you use the current version of ubuntu and do not install
@@ -20,7 +18,7 @@ virtual machine on your own computer. Only after you have successfully
 used ubuntu in a virtual machine you will be allowed to use virtual
 machines on clouds.
 
-A "cloud drivers license test" will be conducted. Only after you pass it
+A *cloud drivers license test* will be conducted. Only after you pass it
 we wil let you gain access to the cloud infrastructure. We will announce
 this test. Before you have not passed the test, you will not be able to
 use the clouds. Furthermore, you do not have to ask us for join requests
@@ -40,17 +38,21 @@ Instalation
 First you will need to install virtualbox. It is easy to install and
 details can be found at
 
-<https://www.virtualbox.org/wiki/Downloads>
+* <https://www.virtualbox.org/wiki/Downloads>
+
 After you have installed virtualbox you also need to use an image. For
 this class we will be using ubuntu Desktop 16.04 which you can find at:
 
-<http://www.ubuntu.com/download/desktop>
+* <http://www.ubuntu.com/download/desktop>
+
 Please note some hardware you may have may be too old or has too little
 resources to be useful. We have heard from students that the following
 is a minimal setup for the desktop machine:
 
 -   multi core processor or better allowing to run hypervisors
+
 -   8 GB system memory
+
 -   50 GB of free hard drive space
 
 For virtual machines you may need multiple, while the minimal
@@ -60,15 +62,16 @@ As configuration we often use
 
 minimal
 
-- 1 core, 2GB Memory, 5 GB disk
+:   1 core, 2GB Memory, 5 GB disk
 
 latex
 
-- 2 core, 4GB Memory, 25 GB disk
+:   2 core, 4GB Memory, 25 GB disk
 
 A video to showcase such an install is available at:
 
-<https://youtu.be/NWibDntN2M4>
+[:clapper: Virtualbox seconds Video](https://youtu.be/NWibDntN2M4)
+
 If you specify your machine too small you will not be able to install
 the development environment. Gregor used on his machine 8GB RAM and 25GB
 diskspace.
@@ -81,6 +84,7 @@ Guest additions
 The virtual guest additions allow you to easily do the following tasks:
 
 -   Resize the windows of the vm
+
 -   Copy and paste content between the Guest operating system and the
     host operating system windows.
 
@@ -89,7 +93,8 @@ easily into for example a terminal or an editor that you run in the Vm.
 
 A video is located at
 
-<https://youtu.be/wdCoiNdn2jA>
+[:clapper: Virtualbox 4:46 Video](https://youtu.be/wdCoiNdn2jA)
+
 Please reboot the machine after installation and configuration.
 
 On OSX you can once you have enabled bidirectional copying in the Device
@@ -97,11 +102,11 @@ tab with
 
 OSX to Vbox:
 
-- command c shift CONTRL v
+:   command c shift CONTRL v
 
 Vbox to OSX:
 
-- shift CONTRL v shift CONTRL v
+:   shift CONTRL v shift CONTRL v
 
 On Windows the key combination is naturally different. Please consult
 your windows manual. If you let us know TAs will add the information

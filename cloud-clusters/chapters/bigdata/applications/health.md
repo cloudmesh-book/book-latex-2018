@@ -28,7 +28,8 @@ listing subareas where Big data important. Data sizes are given in
 radiology, genomics, personalized medicine, and the Quantified Self
 movement, with sizes and access to European Bioinformatics Institute.
 
-\video{Health}{10:02}{Big Data and Health}{https://www.youtube.com/watch?v=ZkM-yZJQ1Cg}
+[:clapper: Health 10:02 Big Data and Health](https://www.youtube.com/watch?v=ZkM-yZJQ1Cg)
+
 
 Status of Healthcare Today
 --------------------------
@@ -36,7 +37,8 @@ Status of Healthcare Today
 This covers trends of costs and type of healthcare with low cost genomes
 and an aging population. Social media and government Brain initiative.
 
-\video{Health}{16:09}{Status of Healthcare Today}{https://www.youtube.com/watch?v=x9TpdMBqYrk}
+[:clapper: Health 16:09 Status of Healthcare Today](https://www.youtube.com/watch?v=x9TpdMBqYrk)
+
 
 Telemedicine (Virtual Health)
 -----------------------------
@@ -44,24 +46,28 @@ Telemedicine (Virtual Health)
 This describes increasing use of telemedicine and how we tried and
 failed to do this in 1994.
 
-\video{Health}{8:21}{Telemedicine}{https://www.youtube.com/watch?v=Pe4CVXQaL_U}
+[:clapper: Health 8:21 Telemedicine](https://www.youtube.com/watch?v=Pe4CVXQaL_U)
+
 
 Medical Big Data in the Clouds
 ------------------------------
 
 An impressive exemplar Cloud-based medicine system from Potsdam.
 
-\video{Health}{15:02}{Medical Big Data in the Clouds}{https://www.youtube.com/watch?v=GldSVijkJcM}
+[:clapper: Health 15:02 Medical Big Data in the Clouds](https://www.youtube.com/watch?v=GldSVijkJcM)
+
 
 
 ### Medical image Big Data
 
-\video{Health}{6:33}{Midical Image Big Data}{https://www.youtube.com/watch?v=GOcVtwx2R2k}
+[:clapper: Health 6:33 Midical Image Big Data](https://www.youtube.com/watch?v=GOcVtwx2R2k)
+
 
 
 ### Clouds and Health
 
-\video{Health}{4:35}{Clouds and Health}{http://youtu.be/9Whkl_UPS5g}
+[:clapper: Health 4:35 Clouds and Health](http://youtu.be/9Whkl_UPS5g)
+
 
 ### McKinsey Report on the big-data revolution in US health care
 

@@ -214,10 +214,10 @@ More details about it are provided in the documentation page
 \TODO{Students: beautiful soup contribute tutorial}
 #### ConfigParser
 
-\URL{https://pymotw.com/2/ConfigParser/}
+* <https://pymotw.com/2/ConfigParser/>
 #### ConfigDict
 
-\URL{https://github.com/cloudmesh/cloudmesh.common/blob/master/cloudmesh/common/ConfigDict.py}
+* <https://github.com/cloudmesh/cloudmesh.common/blob/master/cloudmesh/common/ConfigDict.py>
 ### Encryption
 
 Often we need to protect the information stored in a file. This is

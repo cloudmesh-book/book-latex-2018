@@ -9,8 +9,10 @@ etc. This is followed by a look at Google and their initial offering,
 Google search engine. Amount of tasks performed on this engine increased
 considerably over the course of a single decade.
 
-\video{Cloud}{9:00}{MapReduce Refresher}{https://www.youtube.com/watch?v=0TRTdzgC_N0}
-\slides{Cloud}{Page 1}{MapReduce Refresher}{https://drive.google.com/open?id=10IDob_Ytec3pLNFjY-aOLjDaC6owXVYw}
+[:clapper: Cloud 9:00 MapReduce Refresher](https://www.youtube.com/watch?v=0TRTdzgC_N0)
+
+[:scroll: Cloud Page 1 MapReduce Refresher](https://drive.google.com/open?id=10IDob_Ytec3pLNFjY-aOLjDaC6owXVYw)
+
 
 Google Search Engine 1
 ----------------------
@@ -23,9 +25,12 @@ differences between index and doc servers are discussed. Cache servers
 save previous query results and can bypass index/doc servers for repeat
 queries.
 
-\video{Cloud}{8:04}{Google Search Engine 1}{https://www.youtube.com/watch?v=S2oT7uMw5Yg}
-\slides{Cloud}{Page 15}{Google Search Engine 1}{https://drive.google.com/open?id=0B88HKpainTSfYWZ0dDlrNThkVms}
-\slides{Cloud}{Page 15}{Google Search Engine 1 - pptx}{https://drive.google.com/open?id=0B88HKpainTSfcHg4cV8wRzQwU3M}
+[:clapper: Cloud 8:04 Google Search Engine 1](https://www.youtube.com/watch?v=S2oT7uMw5Yg)
+
+[:scroll: Cloud Page 15 Google Search Engine 1](https://drive.google.com/open?id=0B88HKpainTSfYWZ0dDlrNThkVms)
+
+[:scroll: Cloud Page 15 Google Search Engine 1 - pptx](https://drive.google.com/open?id=0B88HKpainTSfcHg4cV8wRzQwU3M
+)
 
 Google Search Engine 2
 ----------------------
@@ -41,9 +46,12 @@ in 2007, among others. Google File System, MapReduce and BigTable are
 key components of Google's current search structure. A discussion of the
 initial Google proposal paper follows.
 
-\video{Cloud}{8:32}{Google Search Engine 2}{https://www.youtube.com/watch?v=pxos3Yt6y6I}
-\slides{Cloud}{Page 21}{Google Search Engine 2}{https://drive.google.com/open?id=0B88HKpainTSfYWZ0dDlrNThkVms}
-\slides{Cloud}{Page 21}{Google Search Engine 2 - pptx}{https://drive.google.com/open?id=0B88HKpainTSfcHg4cV8wRzQwU3M}
+[:clapper: Cloud 8:32 Google Search Engine 2](https://www.youtube.com/watch?v=pxos3Yt6y6I)
+
+[:scroll: Cloud Page 21 Google Search Engine 2](https://drive.google.com/open?id=0B88HKpainTSfYWZ0dDlrNThkVms)
+
+[:scroll: Cloud Page 21 Google Search Engine 2 - pptx](https://drive.google.com/open?id=0B88HKpainTSfcHg4cV8wRzQwU3M
+)
 
 Hadoop PageRank
 ---------------
@@ -53,9 +61,12 @@ The PageRank calculation formula is examined. After this comes an
 example of its performance and further mathematical formulae involved in
 its application.
 
-\video{Cloud}{7:58}{Hadoop PageRank}{https://www.youtube.com/watch?v=GCp5OLLOrH0}
-\slides{Cloud}{Page 1}{Hadoop PageRank}{https://drive.google.com/open?id=0B88HKpainTSfWFpEZGxqSWRTYms}
-\slides{Cloud}{Page 1}{Hadoop PageRank - pptx}{https://drive.google.com/open?id=0B88HKpainTSfUXB1Z2JPa2FfOXc}
+[:clapper: Cloud 7:58 Hadoop PageRank](https://www.youtube.com/watch?v=GCp5OLLOrH0)
+
+[:scroll: Cloud Page 1 Hadoop PageRank](https://drive.google.com/open?id=0B88HKpainTSfWFpEZGxqSWRTYms)
+
+[:scroll: Cloud Page 1 Hadoop PageRank - pptx](https://drive.google.com/open?id=0B88HKpainTSfUXB1Z2JPa2FfOXc)
+
 
 Discussions and ParallelThinking
 --------------------------------
@@ -72,9 +83,13 @@ a list of related reading. Seven important questions are asked
 concerning parallel computing. 13 'Dwarves' are different methods of
 parallel computing, including MapReduce.
 
-\video{Cloud}{11:12}{Discussions and ParallelThinking}{https://www.youtube.com/watch?v=ISJp7TUzo1s}
-\slides{Cloud}{Page 10}{Discussions and ParallelThinking}{https://drive.google.com/open?id=0B88HKpainTSfWFpEZGxqSWRTYms}
-\slides{Cloud}{Page 10}{Discussions and ParallelThinking - pptx}{https://drive.google.com/open?id=0B88HKpainTSfUXB1Z2JPa2FfOXc}
+[:clapper: Cloud 11:12 Discussions and ParallelThinking](https://www.youtube.com/watch?v=ISJp7TUzo1s)
+
+[:scroll: Cloud Page 10 Discussions and ParallelThinking](https://drive.google.com/open?id=0B88HKpainTSfWFpEZGxqSWRTYms)
+
+[:scroll: Cloud Page 10 Discussions and ParallelThinking - pptx](https://drive.google.com/open?id=0B88HKpainTSfUXB1Z
+2JPa2FfOXc)
+
 Hadoop Extensions
 -----------------
 
@@ -83,8 +98,10 @@ of parallel processing. Twister is an iterative map-reduce framework, as
 are Haloop, Spark and Pregel. A comparison of their features and
 capabilities is included.
 
-\video{Cloud}{5:37}{Hadoop Extensions}{https://www.youtube.com/watch?v=gS7TImRZZ1g}
-\slides{Cloud}{Page 50}{Hadoop Extensions}{https://drive.google.com/open?id=10IDob_Ytec3pLNFjY-aOLjDaC6owXVYw}
+[:clapper: Cloud 5:37 Hadoop Extensions](https://www.youtube.com/watch?v=gS7TImRZZ1g)
+
+[:scroll: Cloud Page 50 Hadoop Extensions](https://drive.google.com/open?id=10IDob_Ytec3pLNFjY-aOLjDaC6owXVYw)
+
 
 Iterative MapReduce Models
 --------------------------
@@ -96,9 +113,12 @@ tasks and reduce tasks which aggregate output and allow legacy code.
 Loosely Synchronous is an MPI model used in computation and
 communication of scientific applications.
 
-\video{Cloud}{6:46}{Iterative MapReduce Models}{https://www.youtube.com/watch?v=CXDdWmAWIvk}
-\slides{Cloud}{Page 1}{Iterative MapReduce Models}{https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms}
-\slides{Cloud}{Page 1}{Iterative MapReduce Models - pptx}{https://drive.google.com/open?id=0B88HKpainTSfM2FjLXRmRVU0SUU}
+[:clapper: Cloud 6:46 Iterative MapReduce Models](https://www.youtube.com/watch?v=CXDdWmAWIvk)
+
+[:scroll: Cloud Page 1 Iterative MapReduce Models](https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms)
+
+[:scroll: Cloud Page 1 Iterative MapReduce Models - pptx](https://drive.google.com/open?id=0B88HKpainTSfM2FjLXRmRVU0
+SUU)
 
 Parallel Processes
 ------------------
@@ -114,9 +134,12 @@ I/O and handle intermediate data, task scheduling, and fault tolerance.
 Versions of MapReduce like Hadoop, Dryad and MPI boast different
 features and programming languages.
 
-\video{Cloud}{9:44}{Parallel Processes}{https://www.youtube.com/watch?v=JAYvkIZ8TuE}
-\slides{Cloud}{Page 4}{Parallel Processes}{https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms}
-\slides{Cloud}{Page 4}{Parallel Processes - pptx}{https://drive.google.com/open?id=0B88HKpainTSfM2FjLXRmRVU0SUU}
+[:clapper: Cloud 9:44 Parallel Processes](https://www.youtube.com/watch?v=JAYvkIZ8TuE)
+
+[:scroll: Cloud Page 4 Parallel Processes](https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms)
+
+[:scroll: Cloud Page 4 Parallel Processes - pptx](https://drive.google.com/open?id=0B88HKpainTSfM2FjLXRmRVU0SUU)
+
 
 Static and Variable Data
 ------------------------
@@ -142,9 +165,12 @@ static scheduling. Fault tolerance is reserved for failures that
 terminate running tasks. Static data can then be used to reassign the
 failed iterations. A list of Twister APIs is given.
 
-\video{Cloud}{11:01}{Static and Variable Data}{https://www.youtube.com/watch?v=UJHQ3VvWOTA}
-\slides{Cloud}{Page 10}{Static and Variable Data}{https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms}
-\slides{Cloud}{Page 10}{Static and Variable Data - pptx}{https://drive.google.com/open?id=0B88HKpainTSfM2FjLXRmRVU0SUU}
+[:clapper: Cloud 11:01 Static and Variable Data](https://www.youtube.com/watch?v=UJHQ3VvWOTA)
+
+[:scroll: Cloud Page 10 Static and Variable Data](https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms)
+
+[:scroll: Cloud Page 10 Static and VariableData - pptx](https://drive.google.com/open?id=0B88HKpainTSfM2FjLXRmRVU0SU
+U)
 
 MapReduce Model Comparison
 --------------------------
@@ -157,9 +183,12 @@ PageRank and Multi-dimensional Scaling, and finally Loosely Synchronous
 with Matrix Multiplication Algorithms. In all cases, Twister outperforms
 or is close to the competition.
 
-\video{Cloud}{6:56}{MapReduce Model Comparison}{https://www.youtube.com/watch?v=n7RVGrC-wcs}
-\slides{Cloud}{Page 24}{MapReduce Model Comparison}{https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms}
-\slides{Cloud}{Page 24}{MapReduce Model Comparison - pptx}{https://drive.google.com/open?id=0B88HKpainTSfM2FjLXRmRVU0SUU}
+[:clapper: Cloud 6:56 MapReduce Model Comparison](https://www.youtube.com/watch?v=n7RVGrC-wcs)
+
+[:scroll: Cloud Page 24 MapReduce Model Comparison](https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms)
+
+[:scroll: Cloud Page 24 MapReduce Model Comparison - pptx](https://drive.google.com/open?id=0B88HKpainTSfM2FjLXRmRVU
+0SUU)
 
 Twister K-means
 ---------------
@@ -177,9 +206,12 @@ increases, Twister's runtimes get progressively faster. In a final set
 of runs against Hadoop, DryadLINQ, and MPI, Twister outperforms all but
 MPI.
 
-\video{Cloud}{7:28}{Twister K-means}{https://www.youtube.com/watch?v=-G5jlzABo-Y}
-\slides{Cloud}{Page 34}{Twister K-means}{https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms}
-\slides{Cloud}{Page 34}{Twister K-means - pptx}{https://drive.google.com/open?id=0B88HKpainTSfM2FjLXRmRVU0SUU}
+[:clapper: Cloud 7:28 Twister K-means](https://www.youtube.com/watch?v=-G5jlzABo-Y)
+
+[:scroll: Cloud Page 34 Twister K-means](https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms)
+
+[:scroll: Cloud Page 34 Twister K-means - pptx](https://drive.google.com/open?id=0B88HKpainTSfM2FjLXRmRVU0SUU)
+
 
 Coding and Iterative Alternatives
 ---------------------------------
@@ -189,6 +221,9 @@ MapReduce has many programs designed around its setup, including other
 iterative versions like Haloop, Pregel, and Spark. Twister can extend
 the use of traditional MapReduce to more complex applications.
 
-\video{Cloud}{5:14}{Coding and Iterative Alternatives}{https://www.youtube.com/watch?v=QTCpiwnwjvo}
-\slides{Cloud}{Page 43}{Coding and Iterative Alternatives}{https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms}
-\slides{Cloud}{Page 43}{Coding and Iterative Alternatives - pptx}{https://drive.google.com/open?id=0B88HKpainTSfM2FjLXRmRVU0SUU}
+[:clapper: Cloud 5:14 Coding and Iterative Alternatives](https://www.youtube.com/watch?v=QTCpiwnwjvo)
+
+[:scroll: Cloud Page 43 Coding and Iterative Alternatives](https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms)
+
+[:scroll: Cloud Page 43 Coding and Iterative Alternatives - pptx](https://drive.google.com/open?id=0B88HKpainTSfM2Fj
+LXRmRVU0SUU)

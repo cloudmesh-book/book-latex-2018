@@ -450,7 +450,7 @@ $\mapsto$](https://github.com/cloudmesh-community/hid-sample/blob/master/technol
 The report will be generated on Mondays at 9:00 am est and made
 available by 12:00 pm est of the same day.
 
-\URL{https://drive.google.com/open?id=1h6_ZRmlCRIFMHG861wSyriPzn9rXxgKT}
+* <https://drive.google.com/open?id=1h6_ZRmlCRIFMHG861wSyriPzn9rXxgKT>
 Learning Outcome:
 
 -   Learn how to not plagiarize.
@@ -654,8 +654,8 @@ before Feb 15, 2018
 -   \(C) You will pick one of the existing resources or identify a new
     resource that you would like to specify. Simply go to:
 
-    \URL{https://docs.google.com/document/d/12FUtHlEzQwxc3hjyki3RbU0iMfBrcyoSMKeq3aEDPk/edit?usp=sharing
-    }
+    * <https://docs.google.com/document/d/12FUtHlEzQwxc3hjyki3RbU0iMfBrcyoSMKeq3aEDPk/edit?usp=sharing>
+    
     and add your name to one of the resource. Make sure there is only
     one name for each resource even if you work in a team.
 

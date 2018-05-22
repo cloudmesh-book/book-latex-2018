@@ -10,7 +10,8 @@ docker swarm are distributed with recent versions of ubuntu. Just in
 case we are providing a link to an effort we found to install docker
 swarm. However we have not checked it or identified if it is useful.
 
-\URL{https://rominirani.com/docker-swarm-tutorial-b67470cf8872}
+* <https://rominirani.com/docker-swarm-tutorial-b67470cf8872>
+
 Docker Swarm on Google Compute Engine
 -------------------------------------
 
@@ -20,7 +21,8 @@ are distributed with recent versions of ubuntu. Just in case we are
 providing a link to an effort we found to install docker swarm. However
 we have not checked it or identified if it is useful.
 
-\URL{https://rominirani.com/docker-swarm-on-google-compute-engine-364765b400ed}
+* <https://rominirani.com/docker-swarm-on-google-compute-engine-364765b400ed>
+
 Single Node Hadoop
 ------------------
 
@@ -65,13 +67,14 @@ echo.
 You may want to get inspired from the talk *Scalable Spark Deployment
 using Kubernetes*:
 
-\URL{http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-1/}
-\URL{http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-2/}
-\URL{http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-3/}
-\URL{http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-4/}
-\URL{http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-5/}
-\URL{http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-6/}
-\URL{http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-7/}
-\URL{http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-8/}
-\URL{http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-9/}
+* <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-1/>
+* <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-2/>
+* <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-3/>
+* <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-4/>
+* <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-5/>
+* <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-6/>
+* <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-7/>
+* <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-8/>
+* <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-9/>
+
 Make sure you do not plagiarize.

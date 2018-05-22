@@ -13,7 +13,8 @@ of the slide.
 
 This homework is worth 5 points.
 
-\slides{Assignments}{Exercise 0}{5 points}{https://drive.google.com/open?id=0B88HKpainTSfQ2FrUzdKRkM5X0U}
+[:scroll: Assignments Exercise 0 5 points](https://drive.google.com/open?id=0B88HKpainTSfQ2FrUzdKRkM5X0U)
+
 Exercise 1 - Basic Statistics with Hadoop
 -----------------------------------------
 

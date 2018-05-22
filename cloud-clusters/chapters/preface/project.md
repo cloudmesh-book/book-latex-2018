@@ -144,7 +144,7 @@ Report Format:
 
     The format for LaTeX and Word found here:
 
-    \URL{https://github.com/cloudmesh-community/hid-sample/tree/master/paper}
+    * <https://github.com/cloudmesh-community/hid-sample/tree/master/paper>
 
 There will be **NO EXCEPTION** to this format. In case you are in a
 team, you can use either github while collaboratively developing the

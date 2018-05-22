@@ -4,7 +4,8 @@ Running Docker Locally
 The official installation documentation for docker can be found by
 visiting the following Web page:
 
-\URL{https://www.docker.com/community-edition}
+* <https://www.docker.com/community-edition>
+
 Here you will find a variety of packages, one of which will hopefully
 suitable for your operating system. The supported operating systems
 currently include:
@@ -25,11 +26,13 @@ Instillation for OSX
 
 The docker community edition for OSX can be found at the following link
 
-\URL{https://store.docker.com/editions/community/docker-ce-desktop-mac}
+* <https://store.docker.com/editions/community/docker-ce-desktop-mac>
+
 We recommend that at this time you get the version *Docker CE for MAC
 (stable)*
 
-\URL{https://download.docker.com/mac/stable/Docker.dmg}
+* <https://download.docker.com/mac/stable/Docker.dmg>
+
 Clicking on the link will download a dmg file to your machine, that you
 than will need to install by double clicking and allowing access to the
 dmg file. Upon installation a `whale` in the top status bar shows that
@@ -87,8 +90,9 @@ terminal window for the next steps.
 
 To install Docker on Windows, please download the following files
 
-\URL{https://download.docker.com/win/stable/Docker\%20for\%20Windows\%20Installer.exe}
-\URL{https://download.docker.com/win/stable/DockerToolbox.exe}
+* <https://download.docker.com/win/stable/Docker\%20for\%20Windows\%20Installer.exe>
+* <https://download.docker.com/win/stable/DockerToolbox.exe>
+
 Move the downloaded files to a directory `$HOME/cloudmesh`
 
 Place the downloaded exe files in the cloudmesh directory we created

@@ -34,6 +34,7 @@ $
 > Example for a video
 
 
+
 ---
 
 :bulb: *Notes are indicated with a bulb and are wriiten in itallic and suroundd by bars* 

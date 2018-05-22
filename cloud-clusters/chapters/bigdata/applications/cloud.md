@@ -421,7 +421,8 @@ for some science examples.
 This lesson describe the way users and data interact with the system for
 the final set of examples.
 
-\video{cloud}{11:36}{Access Patterns}{https://drive.google.com/file/d/0B1Of61fJF7WsYVVRWmdpanV4Vlk/view?usp=sharing}
+[:clapper: cloud 11:36 Access Patterns](https://drive.google.com/file/d/0B1Of61fJF7WsYVVRWmdpanV4Vlk/view?usp=sharing)
+
 
 ### Data in the Cloud
 
@@ -429,7 +430,8 @@ Databases, File systems, Object Stores and NOSQL are discussed and
 compared. The way to build a modern data repository in the cloud is
 introduced.
 
-\video{cloud}{10:24}{Data in the Cloud}{https://drive.google.com/file/d/0B1Of61fJF7WsRzR6eHZwelVuOG8/view?usp=sharing}
+[:clapper: cloud 10:24 Data in the Cloud](https://drive.google.com/file/d/0B1Of61fJF7WsRzR6eHZwelVuOG8/view?usp=sharing)
+
 
 ### Applications Processing Big Data
 
@@ -437,7 +439,8 @@ This lesson collects remarks on Big data processing from several
 sources: Berkeley, Teradata, IBM, Oracle and eBay with architectures and
 application opportunities.
 
-\video{cloud}{8:45}{Processing Big Data}{https://drive.google.com/file/d/0B1Of61fJF7WsUG9UVGFOQXNXbnc/view?usp=sharing}
+[:clapper: cloud 8:45 Processing Big Data](https://drive.google.com/file/d/0B1Of61fJF7WsUG9UVGFOQXNXbnc/view?usp=sharing)
+
 
 Resources
 ---------
