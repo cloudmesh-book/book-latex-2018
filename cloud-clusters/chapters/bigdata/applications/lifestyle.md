@@ -109,6 +109,7 @@ its rating system. The analogy to maximizing click through rate is given
 and the objectives of optimization are given.
 
 [:clapper: Lifestyle 14:20 Netflix on Recommender Systems](https://www.youtube.com/watch?v=ModhdIT9D24)
+
 Next we go through Netflix's methodology in letting data speak for
 itself in optimizing the recommender engine. An example iis given on
 choosing self produced movies. A/B testing is discussed with examples
@@ -136,6 +137,7 @@ used to statistically quantify correlations between users viewed as
 points in a space of items.
 
 \slides{Lifestyle}{Recommender}{49}{https://drive.google.com/open?id=0B6wqDMIyK2P7UVloVElaZ2FXcTg}{PDF}
+
 We start with a quick recap of recommender systems from previous unit;
 what they are with brief examples.
 
@@ -212,6 +214,7 @@ processing can help. We discuss different Likert ranking scales and
 issues with new items that do not have a significant number of rankings.
 
 [:clapper: Lifestyle 11:18 Item Based Filtering](https://www.youtube.com/watch?v=HTdYGaOTlFI)
+
 [:clapper: Lifestyle 7:16 k Nearest Neighbors and High Dimensional Spaces](https://youtu.be/SM8EJdAa4mw)
 
 ### k-Nearest Neighbors and High Dimensional Spaces
@@ -229,18 +232,11 @@ there would be faster solution methods.
 \TODO{These resources have not all been checked to see if they still
   exist this is curretnly in progress}
 -   <http://www.slideshare.net/xamat/building-largescale-realworld-recommender-systems-recsys2012-tutorial>
-
 -   <http://www.ifi.uzh.ch/ce/teaching/spring2012/16-Recommender-Systems_Slides.pdf>
-
 -   <https://www.kaggle.com/>
-
 -   <http://www.ics.uci.edu/~welling/teaching/CS77Bwinter12/CS77B_w12.html>
-
 -   Jeff Hammerbacher
     <https://berkeleydatascience.files.wordpress.com/2012/01/20120117berkeley1.pdf>
-
 -   <http://www.techworld.com/news/apps/netflix-foretells-house-of-cards-success-with-cassandra-big-data-engine-3437514/>
-
 -   <https://en.wikipedia.org/wiki/A/B_testing>
-
 -   <http://www.infoq.com/presentations/Netflix-Architecture>

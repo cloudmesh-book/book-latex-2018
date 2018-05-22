@@ -102,17 +102,10 @@ Resources
 \TODO{These resources have not all been checked to see if they still
   exist this is curretnly in progress}
 -   <https://www.gesoftware.com/minds-and-machines>
-
 -   <https://www.gesoftware.com/predix>
-
 -   <https://www.gesoftware.com/sites/default/files/the-industrial-internet/index.html>
-
 -   <https://developer.cisco.com/site/eiot/discover/overview/>
-
 -   <http://www.accenture.com/SiteCollectionDocuments/PDF/Accenture-Industrial-Internet-Changing-Competitive-Landscape-Industries.pdf>
-
 -   <http://www.gesoftware.com/ge-predictivity-infographic>
-
 -   <http://www.getransportation.com/railconnect360/rail-landscape>
-
 -   <http://www.gesoftware.com/sites/default/files/GE-Software-Modernizing-Machine-to-Machine-Interactions.pdf>

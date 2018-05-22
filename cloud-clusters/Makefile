@@ -3,6 +3,7 @@
 
 INDEX=\
  ./dest/chapters/todo.md\
+ ./dest/todo.md\
  ./dest/chapters/preface.md\
  ./dest/chapters/contributors.md\
  ./dest/chapters/preface-old/fall2018.md\
@@ -196,7 +197,7 @@ FILENAME=vonlaszewski-cloud-cluster
 
 #	pandoc ./chapters/prg/python.md -o dest/chapters/prg/python.md --base-header-level=2
 
-epub: refernces
+epub: refernces todo
 	mkdir -p dest/chapters/prg
 	bin/section.py 1 "Python" > dest/chapters/prg/SECTION-PYTHON.md
 	bin/markup-all.py
@@ -229,3 +230,8 @@ list:
 
 view:
 	open $(FILENAME).epub
+
+todo:
+	bin/todo.py > dest/todo.md
+
+

@@ -438,25 +438,17 @@ sources: Berkeley, Teradata, IBM, Oracle and eBay with architectures and
 application opportunities.
 
 \video{cloud}{8:45}{Processing Big Data}{https://drive.google.com/file/d/0B1Of61fJF7WsUG9UVGFOQXNXbnc/view?usp=sharing}
+
 Resources
 ---------
 
 -   <http://bigdatawg.nist.gov/_uploadfiles/M0311_v2_2965963213.pdf>
-
 -   <https://dzone.com/articles/hadoop-t-etl>
-
 -   <http://venublog.com/2013/07/16/hadoop-summit-2013-hive-authorization/>
-
 -   <https://indico.cern.ch/event/214784/session/5/contribution/410>
-
 -   <http://asd.gsfc.nasa.gov/archive/hubble/a_pdf/news/facts/FS14.pdf>
-
 -   <http://blogs.teradata.com/data-points/announcing-teradata-aster-big-analytics-appliance/>
-
 -   <http://wikibon.org/w/images/2/20/Cloud-BigData.png>
-
 -   <http://hortonworks.com/hadoop/yarn/>
-
 -   <https://berkeleydatascience.files.wordpress.com/2012/01/20120119berkeley.pdf>
-
 -   <http://fisheritcenter.haas.berkeley.edu/Big_Data/index.html>

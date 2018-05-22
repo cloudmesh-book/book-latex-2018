@@ -55,7 +55,7 @@ Collaboratively processing Big Data can solve problems in X-Informatics.
 We list many values of X you can defined in various activities across
 the world.
 
-[:clapper: Overview of Data Science 9:49 X Informatics](https://www.youtube.com/watch?v=8T0OtdR9Bp4)
+* [:clapper: Overview of Data Science 9:49 X Informatics](https://www.youtube.com/watch?v=8T0OtdR9Bp4)
 
 ### Jobs
 
@@ -65,7 +65,7 @@ by Microsoft and the McKinsey institute respectively. We show a plot
 from LinkedIn showing rapid increase in the number of data science and
 analytics jobs as a function of time.
 
-[:clapper: Overview of Data Science 2:58 Jobs](http://youtu.be/pRlfEigUJAc)
+* [:clapper: Overview of Data Science 2:58 Jobs](http://youtu.be/pRlfEigUJAc)
 
 ### Data Deluge: General Structure
 
@@ -76,7 +76,7 @@ how it is integrated into an enterprise IT architecture. We give some
 views as to what characterizes Big data and why data science is a
 science that is needed to interpret all the data.
 
-[:clapper: Overview of Data Science 13:04 Data Deluge](http://youtu.be/mPJ9twAFRQU)
+* [:clapper: Overview of Data Science 13:04 Data Deluge](http://youtu.be/mPJ9twAFRQU)
 
 ### Data Science: Process
 
@@ -85,7 +85,7 @@ knowledge and then wisdom, policy and decisions. This pipeline is
 illustrated with Google maps and we show how complex the ecosystem of
 data, transformations (filters) and its derived forms is.
 
-[:clapper: Overview of Data Science 4:27 Data Science Process](http://youtu.be/ydH34L-z0Rk)
+* [:clapper: Overview of Data Science 4:27 Data Science Process](http://youtu.be/ydH34L-z0Rk)
 
 ### Data Deluge: Internet
 
@@ -93,7 +93,7 @@ We give examples of Big data from the Internet with Tweets, uploaded
 photos and an illustration of the vitality and size of many commodity
 applications.
 
-[:clapper: Overview of Data Science 3:42 Internet](http://youtu.be/rtuq5y2Bx2g)
+* [:clapper: Overview of Data Science 3:42 Internet](http://youtu.be/rtuq5y2Bx2g)
 
 ### Data Deluge: Business
 
@@ -103,9 +103,9 @@ banking, manufacturing and retail industries both online and offline in
 shopping malls. We give examples from ebay showing how analytics
 allowing them to refine and improve the customer experiences.
 
-[:clapper: Overview of Data Science 6:00 Buisiness](http://youtu.be/PJz38t6yn_s)
-[:clapper: Overview of Data Science 7:34 Business](http://youtu.be/fESm-2Vox9M)
-[:clapper: Overview of Data Science 9:37 Buisiness](http://youtu.be/fcvn-IxPO00)
+* [:clapper: Overview of Data Science 6:00 Buisiness](http://youtu.be/PJz38t6yn_s)
+* [:clapper: Overview of Data Science 7:34 Business](http://youtu.be/fESm-2Vox9M)
+* [:clapper: Overview of Data Science 9:37 Buisiness](http://youtu.be/fcvn-IxPO00)
 
 ### Resources
 
@@ -160,8 +160,8 @@ research. We give astronomy, genomics, radiology, particle physics and
 discovery of Higgs particle (Covered in more detail in later lessons),
 European Bioinformatics Institute and contrast to Facebook and Walmart.
 
-[:clapper: Overview of Data Science 11:27 Science and Research](http://youtu.be/u1h6bAkuWQ8)
-[:clapper: Overview of Data Science 11:49 Science and Research](http://youtu.be/_JfcUg2cheg)
+* [:clapper: Overview of Data Science 11:27 Science and Research](http://youtu.be/u1h6bAkuWQ8)
+* [:clapper: Overview of Data Science 11:49 Science and Research](http://youtu.be/_JfcUg2cheg)
 
 ### Implications for Scientific Method
 
@@ -170,7 +170,7 @@ research based on data driven inquiry. We contrast this with third \~\~
 computation or simulation based discovery - methodology which emerged
 itself some 25 years ago.
 
-[:clapper: Overview of Data Science 5:07 Scientifuc Methods](http://youtu.be/srEbOAmU_g8)
+* [:clapper: Overview of Data Science 5:07 Scientifuc Methods](http://youtu.be/srEbOAmU_g8)
 
 ### Long Tail of Science
 
@@ -178,7 +178,7 @@ There is big science such as particle physics where a single experiment
 has 3000 people collaborate!.Then there are individual investigators who
 don't generate a lot of data each but together they add up to Big data.
 
-[:clapper: Overview of Data Science 2:10 Long Tail of Science](http://youtu.be/dwzEKEGYhqE)
+* [:clapper: Overview of Data Science 2:10 Long Tail of Science](http://youtu.be/dwzEKEGYhqE)
 
 ### Internet of Things
 
@@ -186,7 +186,7 @@ A final category of Big data comes from the Internet of Things where
 lots of small devices \~\~ smart phones, web cams, video games collect
 and disseminate data and are controlled and coordinated in the cloud.
 
-[:clapper: Overview of Data Science 5:45 Long Tail of Science](http://youtu.be/K2anbyxX48w)
+* [:clapper: Overview of Data Science 5:45 Long Tail of Science](http://youtu.be/K2anbyxX48w)
 
 ### Resources
 
@@ -250,7 +250,7 @@ power consumption and the environment are also touched upon, followed by
 a list of the most critical features of Cloud computing and a comparison
 to supercomputing.
 
-[:clapper: Overview of Data Science 16:04 Clouds](https://www.youtube.com/watch?v=trIFW-rucgM){MP4}
+* [:clapper: Overview of Data Science 16:04 Clouds](https://www.youtube.com/watch?v=trIFW-rucgM){MP4}
 
 ### Features of Data Deluge I
 
@@ -260,8 +260,8 @@ data are compared. We give an example where "More data usually beats
 better algorithms". We discuss examples of intelligent big data and list
 8 different types of data deluge
 
-[:clapper: Overview of Data Science 8:02 Data Deluge](http://youtu.be/FMktnTQGyrw)
-[:clapper: Overview of Data Science 6:24 Data Deluge](http://youtu.be/QNVZobXHiZw)
+* [:clapper: Overview of Data Science 8:02 Data Deluge](http://youtu.be/FMktnTQGyrw)
+* [:clapper: Overview of Data Science 6:24 Data Deluge](http://youtu.be/QNVZobXHiZw)
 
 ### Data Science Process
 
@@ -269,7 +269,7 @@ We describe and critique one view of the work of a data scientists. Then
 we discuss and contrast 7 views of the process needed to speed data
 through the DIKW pipeline.
 
-[:clapper: Overview of Data Science 11:28 Scientific Process](http://youtu.be/lpQ-Q9ZidR4)
+* [:clapper: Overview of Data Science 11:28 Scientific Process](http://youtu.be/lpQ-Q9ZidR4)
 
 ### Data Analytics
 
@@ -280,8 +280,9 @@ computing and storage capability. In the second video we look at High
 Performance Computing in Science and Engineering: the Tree and the
 Fruit.
 
-[:clapper: Overview of Data Science 7:28 Data Analytics](http://youtu.be/RPVojR8jrb8)
-[:clapper: Overview of Data Science 6:51 Data Analytics](http://youtu.be/wOSgywqdJDY)
+* [:clapper: Overview of Data Science 7:28 Data Analytics](http://youtu.be/RPVojR8jrb8)
+* [:clapper: Overview of Data Science 6:51 Data Analytics](http://youtu.be/wOSgywqdJDY)
+
 Resources
 ---------
 
@@ -289,35 +290,22 @@ Resources
     Activities Coordinating Committee (TACC) Meeting, Data Management,
     Cloud Computing and the Long Tail of Science October 2012 Dennis
     Gannon
-
 -   Dan Reed Roger Barga Dennis Gannon Rich
     Wolskihttp://research.microsoft.com/en-us/people/barga/sc09\_cloudcomp\_tutorial.pdf
-
 -   <http://www.datacenterknowledge.com/archives/2011/05/10/uptime-institute-the-average-pue-is-1-8/>
-
 -   <http://loosebolts.wordpress.com/2008/12/02/our-vision-for-generation-4-modular-data-centers-one-way-of-getting-it-just-right/>
-
 -   <http://www.mediafire.com/file/zzqna34282frr2f/koomeydatacenterelectuse2011finalversion.pdf>
-
 -   Bina Ramamurthy <http://www.cse.buffalo.edu/~bina/cse487/fall2011/>
-
 -   Jeff Hammerbacher
     <http://berkeleydatascience.files.wordpress.com/2012/01/20120117berkeley1.pdf>
-
 -   Jeff Hammerbacher
     <http://berkeleydatascience.files.wordpress.com/2012/01/20120119berkeley.pdf>
-
 -   Anjul Bhambhri
     <http://fisheritcenter.haas.berkeley.edu/Big_Data/index.html>
-
 -   <http://cs.metrostate.edu/~sbd/slides/Sun.pdf>
-
 -   Hugh Williams
     <http://fisheritcenter.haas.berkeley.edu/Big_Data/index.html>
-
 -   Tom Davenport
     <http://fisheritcenter.haas.berkeley.edu/Big_Data/index.html>
-
 -   <http://www.mckinsey.com/mgi/publications/big_data/index.asp>
-
 -   <http://cra.org/ccc/docs/nitrdsymposium/pdfs/keyes.pdf>
