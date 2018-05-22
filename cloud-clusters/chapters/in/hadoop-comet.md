@@ -1,7 +1,7 @@
 Hadoop SDSC
 ===========
 
- 
+ 
 
 Overview
 --------

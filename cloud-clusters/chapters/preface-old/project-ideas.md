@@ -3,7 +3,7 @@ Project Ideas
 
 For the format and the details about artifacts produced in general for
 projects, please see
-Section [\[s:project-format\]](#s:project-format){reference-type="ref"
+Section [\[s:project-format\]](#s:project-format){reference-type="ref"
 reference="s:project-format"}. This includes the length and the paper
 format.
 
@@ -134,14 +134,14 @@ scripts with minimal input by hand (this requires programming).
 ### e616 and I524
 
 In e616 and I524 we have essentially the same requirements as in
-Section [1.6.1](#s:idea-project-pi-spark){reference-type="ref"
+Section [1.6.1](#s:idea-project-pi-spark){reference-type="ref"
 reference="s:idea-project-pi-spark"}, but replace map, reduce, hadoop,
 and spark with containers, Docker Swarm and Kubernetes. Please remember
 here you will have a cluster with docker swarm or kubernetes, It is not
 sufficient to just install docker on all nodes.
 
 All other requirements are the same as in
-Section [1.6.1](#s:idea-project-pi-spark){reference-type="ref"
+Section [1.6.1](#s:idea-project-pi-spark){reference-type="ref"
 reference="s:idea-project-pi-spark"}.
 
 Project type C: Data related project for Spark or Hadoop

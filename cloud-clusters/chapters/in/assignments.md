@@ -210,8 +210,8 @@ Learning Outcome:
 ### Eve REST Service
 
 Read the Sections Overview of REST
-(Section [\[c:rest\]](#c:rest){reference-type="ref" reference="c:rest"}
-and Eve [\[s:eve-intro\]](#s:eve-intro){reference-type="ref"
+(Section [\[c:rest\]](#c:rest){reference-type="ref" reference="c:rest"}
+and Eve [\[s:eve-intro\]](#s:eve-intro){reference-type="ref"
 reference="s:eve-intro"}).
 
 Learning Outcome:
@@ -536,8 +536,8 @@ Learning Outcome:
 ### REST
 
 Read the Sections Overview of Rest
-Section [\[c:rest\]](#c:rest){reference-type="ref" reference="c:rest"}
-and Eve [\[s:eve-intro\]](#s:eve-intro){reference-type="ref"
+Section [\[c:rest\]](#c:rest){reference-type="ref" reference="c:rest"}
+and Eve [\[s:eve-intro\]](#s:eve-intro){reference-type="ref"
 reference="s:eve-intro"}.
 
 **Develop an Eve REST Service** due Feb, 2018

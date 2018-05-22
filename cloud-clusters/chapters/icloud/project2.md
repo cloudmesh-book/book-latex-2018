@@ -1,7 +1,7 @@
 Project 2: Hadoop PageRank
 ==========================
 
- 
+ 
 
 Cloud Computing
 

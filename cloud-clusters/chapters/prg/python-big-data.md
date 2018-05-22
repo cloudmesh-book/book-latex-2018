@@ -121,7 +121,7 @@ methods that help you deal with missing values:
 
 Adding columns to the data is also easy. Here, we add two columns.
 First, a [datetime](https://docs.python.org/2/library/datetime.html)
-column that is a combination of the `Date Issued` and `Time Issued`
+column that is a combination of the `Date Issued` and `Time Issued`
 columns originally in the data. Second, a column identifying what day of
 the week each citation was given. To understand this example better,
 take a look at the Python docs for the `strptime` and `strftime`
@@ -433,7 +433,7 @@ notebook for a week?
 
 The Latex source of this class contains a macro to include videos.
 
-Given a LaTeX file, can you create a table that includes the names of
+Given a LaTeX file, can you create a table that includes the names of
 all videos in that file and sums up the total viewing time. Previously
 the document was stored in RST and the code from a previous student may
 inspire you. Can you recreate it for LaTeX?

@@ -1,7 +1,7 @@
 Contributing
 ============
 
-The document is managed in LaTeX and is stored on github. Thus creating
+The document is managed in LaTeX and is stored on github. Thus creating
 of the document is rather simple.
 
 Requirements

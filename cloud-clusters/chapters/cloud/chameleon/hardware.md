@@ -31,7 +31,7 @@ Portal](https://www.chameleoncloud.org/user/discovery/)
 Standard Cloud Units
 --------------------
 
-The homogeneous standard cloud unit is a self-contained rack with all
+The homogeneous standard cloud unit is a self-contained rack with all
 the components necessary to run a complete cloud infrastructure, and the
 capability to combine with other units to form a larger experiment. The
 rack consists of 42 Dell R630 servers; each with 24 cores delivered in
@@ -59,10 +59,10 @@ Networking is changing rapidly, and the network fabric is as much a part
 of the research focus of Chameleon as the compute or storage. For the
 Chameleon network, every switch in the research network is a fully
 OpenFlow compliant programmable Dell S6000-ON switch. Each node connects
-to this network at 10 Gbps, and each unit uplinks with 40Gbps per rack
+to this network at 10 Gbps, and each unit uplinks with 40Gbps per rack
 to the Chameleon core network. The core switches (Dell S6000-ON) are
-connected by 40 Gbps Ethernet links, which connect to the backbone
-100Gbps services at both UC and TACC. A Fourteen Data Rate (FDR)
+connected by 40 Gbps Ethernet links, which connect to the backbone
+100Gbps services at both UC and TACC. A Fourteen Data Rate (FDR)
 Infiniband network (56Gbps) is also deployed on one SCU to allow
 exploration of alternate networks.
 
@@ -92,7 +92,7 @@ server with the same CPUs as the R630 servers in our SCUs.
 
 The two storage hierarchy nodes have been designed to enable experiments
 using multiple layers of caching: they are configured with 512 GiB of
-memory, two Intel P3700 NVMe of 2 TB each, four Intel S3610 SSDs of 1.6
+memory, two Intel P3700 NVMe of 2 TB each, four Intel S3610 SSDs of 1.6
 TB each, and four 15K SAS HDDs of 600 GB each.
 
 The GPU offering consists of two K80 GPU nodes, two M40 GPU nodes,
@@ -105,9 +105,9 @@ GDDR5 memory. Each M40 node is upgraded with an NVIDIA Tesla M40
 accelerator, consisting of a GM200 chip with 3072 cores and 12 GiB of
 GDDR5 memory. The P100 nodes have two GPU cards installed each,
 providing 32 P100 GPUs in total. The P100 GPUs utilize GP100 chips
-providing 3584 cores, with 16 GiB GDDR5 RAM in each card. In order to
+providing 3584 cores, with 16 GiB GDDR5 RAM in each card. In order to
 make it easy for users to get started with the GPU nodes, we have
-developed a [CUDA
+developed a [CUDA
 appliance](https://www.chameleoncloud.org/appliances/21/) that includes
 NVIDIA drivers as well as the CUDA framework.
 
@@ -118,10 +118,10 @@ NVIDIA drivers as well as the CUDA framework.
   Tesla P100   GP100    3584              16 GiB GDDR5   2              16
   ------------ -------- ----------------- -------------- -------------- -------------
 
-The four FPGA nodes have a Nallatech 385A board with an Altera Arria 10
+The four FPGA nodes have a Nallatech 385A board with an Altera Arria 10
 1150 GX FPGA (up to 1.5 TFlops), 8 GiB DDR3 on-card memory, and dual
 QSFP 10/40 GbE support. The Chameleon [FPGA User
-Guide](https://www.chameleoncloud.org/docs/bare-metal-user-guide/fpga/) provides
+Guide](https://www.chameleoncloud.org/docs/bare-metal-user-guide/fpga/) provides
 details for conducting experiments on this hardware.
 
 The low-power systems are comprised of 8 low power Xeon servers (HP
@@ -139,6 +139,6 @@ of the bare metal user's guide.
 Live updates
 ------------
 
-You can browse detailed information about the resources offered for bare
+You can browse detailed information about the resources offered for bare
 metal reconfiguration in our [Resource Discovery
 Portal](https://www.chameleoncloud.org/user/discovery/).

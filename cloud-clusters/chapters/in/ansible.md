@@ -1,7 +1,7 @@
 Ansible I: Simplest Example
 ===========================
 
- 
+ 
 
 Prerequisite
 ------------

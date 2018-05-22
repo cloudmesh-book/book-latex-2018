@@ -84,15 +84,15 @@ All software projects must:
     Version 2.0)
 
 6.  All figures should include labels with the following format:
-    `label (units)`.
+    `label (units)`.
 
     For example:
 
-    -   `distance (meters)`
+    -   `distance (meters)`
 
-    -   `volume (liters)`
+    -   `volume (liters)`
 
-    -   `cost (USD)`
+    -   `cost (USD)`
 
 7.  All figures should have a caption describing what the measurement
     is, and a summary of the conclusions drawn.

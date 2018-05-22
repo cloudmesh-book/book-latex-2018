@@ -153,8 +153,8 @@ You can now ssh to the server using the floating IP just as you do with
 regular instances (use the cc account). The client does not have a
 floating IP attached to it (as per the visualization above) but you can
 connect to it via the server node with the client's private IP (connect
-to the server with `ssh -A` to enable the SSH agent forwarding after
-loading your key to your SSH agent with `ssh-add <path-to-your-key>`).
+to the server with `ssh -A` to enable the SSH agent forwarding after
+loading your key to your SSH agent with `ssh-add <path-to-your-key>`).
 
 You can find out the information about the IPs and other things if you
 click the "Overview" tab and look in the "Outputs" section. Under the
@@ -202,7 +202,7 @@ the ext-net public network. It is not attached to any instance yet.
 
 The second resource, nfs\_server, creates the NFS server instance (an
 instance is defined with the type `OS::Nova::Server` in Heat). It is a
-bare-metal instance (`flavor: baremetal`) using the CC-CentOS7 image and
+bare-metal instance (`flavor: baremetal`) using the CC-CentOS7 image and
 connected to the private network named sharednet1. We set the keypair to
 use the value of the parameter defined earlier, using the `get_param`
 function. Similarly, the reservation to use is passed to the scheduler.
@@ -523,8 +523,8 @@ instance.
 
 You can get outputs in the "Overview" tab of the Stack Details page. If
 you want to use the command line, install `python-heatclient` and use
-the `heat output-list` and `heat output-show` commands, or get a full
-list in the information returned by `heat stack-show`.
+the `heat output-list` and `heat output-show` commands, or get a full
+list in the information returned by `heat stack-show`.
 
 Multiple outputs can be defined in the outputs section. Each of them
 needs to have a unique name. For example, we can add another output to
@@ -551,8 +551,8 @@ text to the parameters section:
           - range: { min: 1 }
             description: There must be at least one client.
 
-Inside the resource group definition, change `count: 2` to
-`count: { get_param: nfs_client_count }` to retrieve and use the
+Inside the resource group definition, change `count: 2` to
+`count: { get_param: nfs_client_count }` to retrieve and use the
 parameter we just defined. When you launch this template, you will see
 that an additional parameter allows you to define the number of client
 instances, like in the NFS share appliance.
@@ -589,7 +589,7 @@ lists all available versions and their features. We recommended that you
 always use the latest supported version to have access to all supported
 features:
 
-`heat_template_version: 2015-10-15`
+`heat_template_version: 2015-10-15`
 
 ### Description
 
@@ -646,7 +646,7 @@ optional values. For example, they can customize which Chameleon
 appliance they want to deploy, or which key pair to install. Default
 values can be provided with the `default` key, as well as constraints to
 ensure that only valid OpenStack resources can be selected. For example,
-`custom_constraint: glance.image` restricts the image selection to an
+`custom_constraint: glance.image` restricts the image selection to an
 available OpenStack image, while providing a pre-filled selection box in
 the web interface. [More details about
 constraints](http://docs.openstack.org/developer/heat/template_guide/hot_spec.html#parameter-constraints)

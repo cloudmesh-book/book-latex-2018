@@ -1,7 +1,7 @@
 HBase WordCount
 ===============
 
- 
+ 
 
 \TODO{Hyungro: fix hyperlinks, use exercise instead or project where
   appropriate}
@@ -10,7 +10,7 @@ from the clueWeb09 dataset. Each row record of columnfamily
 \"frequencies\" is unique; the rowkey is the unique term stored in byte
 format, column name is \"count\" and value is the term frequency shown
 in all documents. Load the result to HBase WordCountTable.
-Figure [\[fig:wordcounttablescheme\]](#fig:wordcounttablescheme){reference-type="ref"
+Figure [\[fig:wordcounttablescheme\]](#fig:wordcounttablescheme){reference-type="ref"
 reference="fig:wordcounttablescheme"} shows the schema of
 WordCountTable. You will compare the results of your finished run to a
 correct version we will supply to you.
@@ -62,7 +62,7 @@ We are using the ClueWeb09 dataset, which was created to support
 research on information retrieval and related human language
 technologies. It consists of about 1 billion webpages in ten languages
 that were collected in January and February 2009. The dataset is used by
-several tracks of the TREC conference (See [Useful
+several tracks of the TREC conference (See [Useful
 Links](#link_exercise4)). Since the ClueWeb09 dataset is composed of
 webpages crawled from the Internet, the uploaded table schemas are
 designed as shown in Figure 2.
@@ -71,7 +71,7 @@ designed as shown in Figure 2.
 ![Data table schema for storing the ClueWeb09
 dataset[]{label="fig:datatablescheme"}](section/icloud/assignment/exercise4/datatablescheme)
 
-So, while similar to Hadoop WordCount (See [Useful
+So, while similar to Hadoop WordCount (See [Useful
 Links](#link_exercise4)), the differences are that data is stored on
 HBase and URI is the \"filename\" that contains all the text content.
 
@@ -167,7 +167,7 @@ The main function has been provided as standard initialization, although
 you can modify it to suit your own style. Hint: the provided code is
 designed for using put operations in the reducer content.write()
 function. Before writing the codes, please read the HBase MapReduce
-tutorial first (See [Useful Links](#link_exercise4)).
+tutorial first (See [Useful Links](#link_exercise4)).
 
 Edit
 ----

@@ -1,7 +1,7 @@
 Hadoop Blast
 ============
 
- 
+ 
 
 By this point you should have gone over the sections concerning Hadoop
 Setup and a few Hadoop programs. Now you are going to blend these
@@ -90,7 +90,7 @@ java class for you to implement:
     DataFileInputFormat.java.
 
 The detail dataflow can be seen in
-Figure [\[fig:blastdataflow\]](#fig:blastdataflow){reference-type="ref"
+Figure [\[fig:blastdataflow\]](#fig:blastdataflow){reference-type="ref"
 reference="fig:blastdataflow"}. You will implement the RunnerMap.java,
 which copies the distributed cache and assigned FASTA file to local,
 then run the BLAST binary with correct parameters.

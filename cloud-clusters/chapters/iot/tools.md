@@ -4,7 +4,7 @@ Tools
 -   **Terminal**: On OSX, when you navigate to the search magnification
     glass, you can type in *terminal* to start it. A terminal allows you
     to execute a number of commands to interact with the computer from a
-    commandline interface, e.g. the terminal.
+    commandline interface, e.g. the terminal.
 
 -   [Bash](https://linuxconfig.org/bash-scripting-tutorial) it the
     command language used in terminal.
@@ -82,7 +82,7 @@ The following are some basic examples
 -   To create a hyperlink use `[Google](https://google.com)` which will
     result in [Google](https://google.com)
 
--   To include an image use `![Bracketed Text](link)`
+-   To include an image use `![Bracketed Text](link)`
 
 A list can be created by item starting with \*, a - , or a + or a number
 
@@ -131,12 +131,12 @@ combinations with the Control or Meta key (The Meta key is the ESC key).
 If you accidentally end up doing something wrong simply press `CTRL-g`
 to get out without issue. Other Keyboard Shortcuts include:
 
--   `CTRL-x u` or File\>Undo will cancel any command that you did not
+-   `CTRL-x u` or File\>Undo will cancel any command that you did not
     want done. (CHECK)
 
 -   `ESC-g` will cancel any command you are in the middle of.
 
--   You can break paragraph lines with `Ctrl-x w`, where `w` will wrap
+-   You can break paragraph lines with `Ctrl-x w`, where `w` will wrap
     text around word boundaries.
 
 -   To delete text to the end of the current word, press `ESC-d`.

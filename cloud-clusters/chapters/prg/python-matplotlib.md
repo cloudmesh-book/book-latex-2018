@@ -122,7 +122,7 @@ plt.show()
 ```
 
 An example of a barchart is procided below using data from
- [\[T:fast-cars\]](#T:fast-cars){reference-type="ref"
+ [\[T:fast-cars\]](#T:fast-cars){reference-type="ref"
 reference="T:fast-cars"}.
 
 ``` {.python}

@@ -1,11 +1,11 @@
- 
+ 
 
 Schedule
 ========
 
   No       Title                    Level
   -------- ------------------------ --------------
-  Survey   Welcome Survey            
+  Survey   Welcome Survey            
   Unit 1                            Basic
   Unit 2                            Intermediate
   Unit 3                            Advanced
@@ -15,8 +15,8 @@ Schedule
   Unit 6                            Intermediate
   Unit 7                            Advanced
   Exam     Post-course assessment   Intermediate
-  Survey   Post-course Survey        
-  Survey   Test-course assessment    
+  Survey   Post-course Survey        
+  Survey   Test-course assessment    
 
 Grade distribution
 ==================
@@ -37,7 +37,7 @@ Weekly Schedule
 +-------------+-------------+-------------+-------------+-------------+
 | Week        | Content     | Section No  | Assignment  | Lab         |
 +:============+:============+:============+:============+:============+
-| 1           | -   Course  | Unit 1      | Assignment  |             |
+| 1           | -   Course  | Unit 1      | Assignment  |             |
 |             |     Info    | ([\[sec:icl | 0           |             |
 |             |             | oud-fundame |             |             |
 |             | -   Introdu | ntals\]](#s |             |             |
@@ -147,7 +147,7 @@ Weekly Schedule
 |             | ce          | reference=" |             |             |
 |             |             | sec:icloud- |             |             |
 |             | -   How     | mapreduce"} |             |             |
-|             |     Hadoop  |  [\[sec:icl |             |             |
+|             |     Hadoop  |  [\[sec:icl |             |             |
 |             |     Runs on | oud-iterati |             |             |
 |             |     a       | ve-mapreduc |             |             |
 |             |     MapRedu | e\]](#sec:i |             |             |
@@ -202,7 +202,7 @@ Weekly Schedule
 |             | r           |             |             |             |
 |             |     2006    |             |             |             |
 +-------------+-------------+-------------+-------------+-------------+
-| 5           | -   Applyin | Unit 2      |             | Lab         |
+| 5           | -   Applyin | Unit 2      |             | Lab         |
 |             | g           | ([\[sec:icl |             | Openstack   |
 |             |     for     | oud-iaas\]] |             |             |
 |             |     FutureS | (#sec:iclou |             |             |
@@ -325,7 +325,7 @@ Weekly Schedule
 |             | m           |             |             |             |
 |             |     2010    |             |             |             |
 +-------------+-------------+-------------+-------------+-------------+
-| 7           | Midterm     |             |             |             |
+| 7           | Midterm     |             |             |             |
 |             | Exam        |             |             |             |
 +-------------+-------------+-------------+-------------+-------------+
 | 8           | -   RDBMS   | Unit        | Project 4   | Lab 4       |
@@ -411,7 +411,7 @@ Weekly Schedule
 |             | ns          |             |             |             |
 |             |     2-5).   |             |             |             |
 +-------------+-------------+-------------+-------------+-------------+
-| 13          | -   Everyda | Unit 6      |             | Turtlebot   |
+| 13          | -   Everyda | Unit 6      |             | Turtlebot   |
 |             | y           | ([\[sec:icl |             | and         |
 |             |     Data    | oud-iot\]]( |             | streaming   |
 |             |             | #sec:icloud |             |             |
@@ -458,7 +458,7 @@ Weekly Schedule
 |             |             | iterative-m |             |             |
 |             |             | apreduce"}) |             |             |
 +-------------+-------------+-------------+-------------+-------------+
-| 15          | -   Advance | Unit 3      |             | Apache      |
+| 15          | -   Advance | Unit 3      |             | Apache      |
 |             | d           | ([\[sec:icl |             | Spark and   |
 |             |     Topics  | oud-mapredu |             | Flink       |
 |             |             | ce\]](#sec: |             |             |
@@ -492,7 +492,7 @@ Weekly Schedule
 |             |     Executi |             |             |             |
 |             | on          |             |             |             |
 +-------------+-------------+-------------+-------------+-------------+
-| 16          | No new      | Final Exam  |             |             |
+| 16          | No new      | Final Exam  |             |             |
 |             | lecture     |             |             |             |
 |             | assignment  |             |             |             |
 +-------------+-------------+-------------+-------------+-------------+

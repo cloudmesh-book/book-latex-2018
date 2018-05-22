@@ -150,7 +150,7 @@ project number and find **Access & Security** on the left menu. The
 Access & Security page has tabs and choose **API Access** to download
 credentials on a local machine. Click **Download OpenStack RC File** to
 download *CH-\$PROJECTID-openrc.sh* file on your machine (see
-Figure [\[F:cc-gui\]](#F:cc-gui){reference-type="ref"
+Figure [\[F:cc-gui\]](#F:cc-gui){reference-type="ref"
 reference="F:cc-gui"}). Every time you use nova command line tools, the
 file should be loaded on your terminal.
 
@@ -208,7 +208,7 @@ Creating SSH keys
 
 Naturally you will need an ssh key. If you do not have an existing SSH
 keypair, you can create one. Please see
-Section [\[C:ssh\]](#C:ssh){reference-type="ref" reference="C:ssh"} for
+Section [\[C:ssh\]](#C:ssh){reference-type="ref" reference="C:ssh"} for
 more details:
 
 ``` {.bash language="bash"}

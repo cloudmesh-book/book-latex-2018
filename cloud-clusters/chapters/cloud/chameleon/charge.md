@@ -10,7 +10,7 @@ resource usage to all:
 Allocation:
 
 :   Chameleon projects are limited to a per-project allocation currently
-    set to 20,000 service units for 6 months. Allocations can be renewed
+    set to 20,000 service units for 6 months. Allocations can be renewed
     or extended (see [Project and Allocation
     Management](index.html#toc-project-and-allocation-management)
     section for more details on Chameleon allocations.)
@@ -27,7 +27,7 @@ Lease:
     days or "30m" for 30 minutes. If there is an advance reservation
     blocking your lease prolongation that could potentially be moved,
     you can interact through the users mailing list to coordinate with
-    others users. Additionally, if you know from the start that your
+    others users. Additionally, if you know from the start that your
     lease will require longer than a week and can justify it, you can
     [contact Chameleon staff via the ticketing
     system](https://www.chameleoncloud.org/user/help/ticket/new/) to
@@ -60,7 +60,7 @@ testbed.
 
 For example, a user wishing to provision a 10 node cluster +1 storage
 server for a 1 week experiment should budget
-`[(10 + 2) SUs per hour]  [7 days  24 hours/day] = 2,016 SUs` for that
+`[(10 + 2) SUs per hour]  [7 days  24 hours/day] = 2,016 SUs` for that
 experiment.
 
 SUs are charged the same regardless of use case. Hence, whether asking

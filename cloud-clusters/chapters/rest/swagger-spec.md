@@ -13,7 +13,7 @@ documentations, in the language you desire. In Section
 reference="c:swagger-codegen"} the we have introduced the codegen tool
 and how to use that to generate server side and client side code and
 documentation. In this
-Section [1.1](#S:vcluster-spec){reference-type="ref"
+Section [1.1](#S:vcluster-spec){reference-type="ref"
 reference="S:vcluster-spec"} we will use a slightly more complex example
 to show how to define an API following the OpenAPI 2.0 specification.
 The example is to retrieve virtual cluster (VC) object from the server.

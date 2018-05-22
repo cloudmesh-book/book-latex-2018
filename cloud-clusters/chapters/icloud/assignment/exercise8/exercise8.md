@@ -1,11 +1,11 @@
 Harp MiniBatch Kmeans
 =====================
 
- 
+ 
 
 \TODO{Hyungro: check hyperlinks}
 The goal for this exercise is to implement Harp Mini-batch Kmeans from
-scratch (See [Useful Links](#link_exercise8)).
+scratch (See [Useful Links](#link_exercise8)).
 
 Deliverables
 ------------
@@ -37,7 +37,7 @@ Some options you may consider to get extra credits:
 
 -   Implement mini-batch kmeans using other tools/platforms (Spark,
     Flink, etc) and compare the performance between different
-    tools/platforms (See [Useful Links](#link_exercise8)).
+    tools/platforms (See [Useful Links](#link_exercise8)).
 
 You are encouraged to explore other options to get extra credits.
 Remember to present all of your extra work in the report.
@@ -47,7 +47,7 @@ Dataset
 
 You can implement a script to generate data randomly as your input
 datasets. You are also free to use public datasets such as RCV1-v2
-(See [Useful Links](#link_exercise8)).
+(See [Useful Links](#link_exercise8)).
 
 Mini-batch Kmeans
 -----------------

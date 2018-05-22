@@ -24,6 +24,6 @@ travis
 * <https://about.travis-ci.com/> <https://travis-ci.org/>
 * <https://docs.travis-ci.com/user/getting-started/>
 
-### LaTeX and Travis
+### LaTeX and Travis
 
 * <https://github.com/harshjv/travis-ci-latex-pdf>

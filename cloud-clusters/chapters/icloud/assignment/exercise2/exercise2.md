@@ -56,7 +56,7 @@ threshold that controls the accuracy of the output results.
 ![Mathematical PageRank for a simple network in
 Wikipedia[]{label="fig:pagerankexample"}](section/icloud/assignment/exercise2/pagerankexample){width="8cm"}
 
-Figure [\[fig:pagerankexample\]](#fig:pagerankexample){reference-type="ref"
+Figure [\[fig:pagerankexample\]](#fig:pagerankexample){reference-type="ref"
 reference="fig:pagerankexample"} shows a web graph consisting of 11
 vertices A, B, C, D, E, F, G1, G2, G3, G4, G5. Each vertex refers to a
 unique webpage, and the directed edge means there is one link from the
@@ -79,12 +79,12 @@ Pregel.
 Formula
 -------
 
-Equation [\[eq:pagerank\]](#eq:pagerank){reference-type="ref"
+Equation [\[eq:pagerank\]](#eq:pagerank){reference-type="ref"
 reference="eq:pagerank"} is the formula to calculate the rank value for
 each webpage. We will learn this formula by applying it to the case in
-Figure [\[fig:pagerankexample\]](#fig:pagerankexample){reference-type="ref"
+Figure [\[fig:pagerankexample\]](#fig:pagerankexample){reference-type="ref"
 reference="fig:pagerankexample"}. There are 11 webpages in
-Figure [\[fig:pagerankexample\]](#fig:pagerankexample){reference-type="ref"
+Figure [\[fig:pagerankexample\]](#fig:pagerankexample){reference-type="ref"
 reference="fig:pagerankexample"}, which include: A, B, C, D, E, F, G1,
 G2, G3, G4, G5. Assuming the probability distribution for a web surfer
 accessing all these 11 pages in current iteration is {PR(A), PR(B),
@@ -113,7 +113,7 @@ step, that the person will continue is a damping factor d. Various
 studies have tested different damping factors, but it is generally
 assumed that the damping factor will be around 0.85. The formula
 considering damping factor is shown in
-Equation [\[eq:pagerankwithdf\]](#eq:pagerankwithdf){reference-type="ref"
+Equation [\[eq:pagerankwithdf\]](#eq:pagerankwithdf){reference-type="ref"
 reference="eq:pagerankwithdf"}. N refers to the total number of unique
 urls.
 
@@ -137,7 +137,7 @@ MapReduce jobs for you to implement:
     **(sourceUrl, pagerank value)** as the final result.
 
 The detail dataflow can be seen in
-Figure [\[fig:hadoopdataflow\]](#fig:hadoopdataflow){reference-type="ref"
+Figure [\[fig:hadoopdataflow\]](#fig:hadoopdataflow){reference-type="ref"
 reference="fig:hadoopdataflow"}. Part 1 and Part 3 are given as full
 solutions in this pipeline; you will implement the 2nd part of the
 PageRank program.
@@ -163,11 +163,11 @@ information. Map tasks then generate intermediate (key, value) pairs,
 whose value is the partial rank value of every webpage. Each reduce task
 aggregates all the partial values of specific webpages by applying the
 provided
-Equation [\[eq:pagerankwithdf\]](#eq:pagerankwithdf){reference-type="ref"
+Equation [\[eq:pagerankwithdf\]](#eq:pagerankwithdf){reference-type="ref"
 reference="eq:pagerankwithdf"}. The aggregated global rank values are
 written back to HDFS, which in turn is used as input in the next set of
 iterations, if any. \"Hadoop - PageRank\" in
-Figure [\[fig:hadoopdataflow\]](#fig:hadoopdataflow){reference-type="ref"
+Figure [\[fig:hadoopdataflow\]](#fig:hadoopdataflow){reference-type="ref"
 reference="fig:hadoopdataflow"} shows an example for the PageRank data
 processing.
 

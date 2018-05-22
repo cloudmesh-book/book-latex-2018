@@ -46,7 +46,7 @@ commands that you may als find even as a RefCard.
 <http://www.cheat-sheets.org/#Linux>
 
 We provide in
-Table T:shell-commands\]](#T:shell-commands){reference-type="ref"
+Table T:shell-commands\]](#T:shell-commands){reference-type="ref"
 reference="T:shell-commands"} a number of useful commands that you want
 to explore. For more information simply type man and the name of the
 command.
@@ -219,7 +219,7 @@ repeated fashion by developers.
 An example of how to use Makefiles for docker is provided at
 <http://jmkhael.io/makefiles-for-your-dockerfiles/>.
 
-An example on how to use Makefiles for LaTeX is provided at
+An example on how to use Makefiles for LaTeX is provided at
 <https://github.com/cloudmesh/book/blob/master/Makefile>.
 
 Makefiles include a number of rules that are defined by a target name.
@@ -266,7 +266,7 @@ we just use the most elementary makefiles.
 
 For more information we recommend you to find out about it on the
 internet. A convenient refrence card sis available
-at <http://www.cs.jhu.edu/~joanne/unixRC.pdf>.
+at <http://www.cs.jhu.edu/~joanne/unixRC.pdf>.
 
 ### Makefiles on Windows
 
@@ -292,7 +292,7 @@ E.Linux.3
 
 E.Linux.4
 
-> In Table T:shell-commands\]](#T:shell-commands){reference-type="ref"
+> In Table T:shell-commands\]](#T:shell-commands){reference-type="ref"
 > reference="T:shell-commands"} you will find a number of commands with
 > (assignment). Develop descriptions that you will contribute and add to
 > the manual with a pull request. Work in a team so that only one pull

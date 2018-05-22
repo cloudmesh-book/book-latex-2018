@@ -3,7 +3,7 @@ OpenStack Virtual Machines
 
 OpenStack is an Infrastructure as a Service (IaaS) platform that allows
 you to create and manage virtual environments. Chameleon provides an
-installation of OpenStack version 2015.1 (Kilo) using the KVM
+installation of OpenStack version 2015.1 (Kilo) using the KVM
 virtualization technology.
 
 Since the KVM hypervisor is used on this cloud, any virtual machines you
@@ -16,11 +16,11 @@ KVM on Chameleon.
 Web Interface
 -------------
 
-An easy way to use OpenStack KVM on Chameleon is via the [OpenStack web
+An easy way to use OpenStack KVM on Chameleon is via the [OpenStack web
 interface](https://openstack.tacc.chameleoncloud.org/dashboard) also
 known as Horizon. You log into the web interface using your Chameleon
 username and password. If you change your Chameleon password in the
-portal, that change will propagate to the OpenStack KVM interface in
+portal, that change will propagate to the OpenStack KVM interface in
 about 5 minutes.
 
 The initial log in page appears as:
@@ -161,9 +161,9 @@ You can then install the OpenStack command line clients following [these
 instructions](http://docs.openstack.org/user-guide/common/cli_install_openstack_command_line_clients.html).
 If using pip, we recommend setting up a virtualenv.
 
-The SSL certificate used by Chameleon is trusted by most operating
+The SSL certificate used by Chameleon is trusted by most operating
 systems, so you shouldn't have to provide any extra options to OpenStack
-commands, i.e. "nova list" should work. If your command-line tool
+commands, i.e. "nova list" should work. If your command-line tool
 complains about the certificate, [download the Mozilla CA bundle from
 the cURL website](http://curl.haxx.se/docs/caextract.html) and run the
 OpenStack client tools with the --os-cacert cacert.pem arguments.
@@ -181,7 +181,7 @@ commands:
 -   `glance\ image-create` to upload images and snapshots to Glance
 
 -   `cinder upload-to-image` to convert a Cinder volume to a
-    Glance image
+    Glance image
 
 -   `cinder create [--image-id <image-id>] [--image <image>]` to create
     a Cinder volume from a Glance image

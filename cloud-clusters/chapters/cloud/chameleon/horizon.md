@@ -15,27 +15,27 @@ tab.
 ![image](images/Screen-Shot-2016-10-26-at-14-37-00.png){width="0.8\columnwidth"}
 
 Here you can either ask OpenStack to create an SSH key pair for you (via
-the "Create Key" Pair button), or, if you already have an SSH key pair
+the "Create Key" Pair button), or, if you already have an SSH key pair
 on your machine and are happy to use it, click on "Import Key Pair".
 
 If you chose to import a key pair, you will be asked to enter a name for
 the key pair, for example laptop. In the "Public Key" box, copy the
 content of your SSH public key. Typically it will be at
 \~/.ssh/id\_rsa.pub. On Mac OS X, you can run in a terminal:
- `cat ~/.ssh/id_rsa.pub  pbcopy`\
+ `cat ~/.ssh/id_rsa.pub  pbcopy`\
 It copies the content of the public key to your copy/paste buffer. Then
 you can simply paste in the "Public Key" box.
 
 ![image](images/Screen-Shot-2016-10-26-at-14-37-18.png){width="0.8\columnwidth"}
 
-Then, click on the blue "Import Key Pair" button. This should show you
+Then, click on the blue "Import Key Pair" button. This should show you
 the list of key pairs, with the one you just added.
 
 ![image](images/Screen-Shot-2016-10-26-at-14-37-52.png){width="0.8\columnwidth"}
 
 For those already familiar with OpenStack, note that Security Groups are
 not functional on bare-metal. All instances ports are open to the
-Internet and any security group rule you add will not be respected.
+Internet and any security group rule you add will not be respected.
 
 Now, go to the "Instances" panel.
 
@@ -43,9 +43,9 @@ Now, go to the "Instances" panel.
 
 Click on the "Launch Instance" button in the top right corner. Select a
 reservation in the Reservation box, pick an instance name (in this
-example my-first-instance) and in the Image Name list select our default
+example my-first-instance) and in the Image Name list select our default
 environment named CC-CentOS7. If you have multiple key pairs registered,
-you need to select one in the "Access & Security" tab. Finally, click on
+you need to select one in the "Access & Security" tab. Finally, click on
 the blue "Launch" button.
 
 ![image](images/Screen-Shot-2016-10-26-at-14-41-08.png){width="0.8\columnwidth"}
@@ -63,8 +63,8 @@ Power State should be Running.
 
 At this point the instance might still be booting: it might take a
 minute or two to actually be accessible on the network and accept SSH
-connections. In the meantime, you can attach a floating IP to the
-instance. Click on the "Associate Floating IP" button. You should get a
+connections. In the meantime, you can attach a floating IP to the
+instance. Click on the "Associate Floating IP" button. You should get a
 screen like the one below:
 
 ![image](images/Screen-Shot-2016-10-26-at-16-25-04.png){width="0.8\columnwidth"}
@@ -93,7 +93,7 @@ Interact with resources
 
 Now you should be able to connect to the instance via SSH using the cc
 account. In a terminal, type ssh cc@\<floating\_ip\>, in our example
-this would be `ssh cc@130.202.88.241`
+this would be `ssh cc@130.202.88.241`
 
 SSH will probably tell you:
 
@@ -104,17 +104,17 @@ SSH will probably tell you:
 
 Type yes and press Enter. You should arrive to a prompt like this one:
 
-`[cc@my-first-instance ~]$`
+`[cc@my-first-instance ~]$`
 
 If you notice SSH errors such as connection refused, password requests,
 or failures to accept your key, it is likely that the physical node is
 still going through the boot process. In that case, please wait before
-retrying. Also make sure that you use the **cc** account. If after 10
-minutes you still cannot connect to the machine, please [open a ticket
+retrying. Also make sure that you use the **cc** account. If after 10
+minutes you still cannot connect to the machine, please [open a ticket
 with our help desk](https://www.chameleoncloud.org/user/help/).
 
 You can now check whether the resource matches its known description in
-the resource registry. For this, simply run: `sudo cc-checks -v`
+the resource registry. For this, simply run: `sudo cc-checks -v`
 
 As of 03/30/2018, the cc-checks command may not work on the images in
 Chameleon cloud. You may have to ignore (not run) this command.
@@ -122,12 +122,12 @@ Chameleon cloud. You may have to ignore (not run) this command.
 ![image](images/cc-checks.png){width="0.5\columnwidth"}
 
 The cc-checks program prints the result of each check in green if it is
-successful and red if it failed.
+successful and red if it failed.
 
 You can now run your experiment directly on the machine via SSH. You can
-run commands with root privileges by prefixing them with `sudo`. To
-completely switch user and become root, use
-the `sudo su - root` command.
+run commands with root privileges by prefixing them with `sudo`. To
+completely switch user and become root, use
+the `sudo su - root` command.
 
 ### Snapshot an instance
 
@@ -153,12 +153,12 @@ repository](https://github.com/ChameleonCloud/ChameleonSnapshotting).
 Once cc-snapshot is installed, to make a snapshot of a bare-metal
 instance, run the following command from inside the instance:
 
-`sudo cc-snapshot <snapshot_name>`
+`sudo cc-snapshot <snapshot_name>`
 
 You can verify that it has been uploaded to Glance by running the
 following command:
 
-`glance image-list`
+`glance image-list`
 
 If you prefer to use a series of standard Unix commands, or are
 generally interested in more detail about image management, please refer
@@ -169,7 +169,7 @@ Use FPGAs
 ---------
 
 Consult the [dedicated
-page](https://www.chameleoncloud.org/docs/bare-metal-user-guide/fpga/) if
+page](https://www.chameleoncloud.org/docs/bare-metal-user-guide/fpga/) if
 you would like to use the FPGAs available on Chameleon.
 
 Next Step

@@ -13,11 +13,11 @@ currently include:
 
 Please chose the one most suitable for you. For your convenience we
 provide you with installation instructions for OSX
-(Section [1.1](#s:docker-osx){reference-type="ref"
+(Section [1.1](#s:docker-osx){reference-type="ref"
 reference="s:docker-osx"}), Windows 10
-(Section [1.3](#s:docker-windows){reference-type="ref"
+(Section [1.3](#s:docker-windows){reference-type="ref"
 reference="s:docker-windows"}) and Ubuntu
-(Section [1.2](#s:docker-ubuntu){reference-type="ref"
+(Section [1.2](#s:docker-ubuntu){reference-type="ref"
 reference="s:docker-ubuntu"}).
 
 Instillation for OSX

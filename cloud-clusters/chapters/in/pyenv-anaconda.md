@@ -1,4 +1,4 @@
- Anaconda
+ Anaconda
 ========
 
 We do not recommend that you use anaconda as it may

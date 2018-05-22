@@ -87,7 +87,7 @@ the fan has for an impact on the temperature.
 * <http://climbers.net/sbc/diy-raspberry-pi-3-cluster/>
 
 From the above Web page we find the following information as shown in
-Table [\[F:pi-fan\]](#F:pi-fan){reference-type="ref"
+Table [\[F:pi-fan\]](#F:pi-fan){reference-type="ref"
 reference="F:pi-fan"}. From the data in the table it is clear that we
 need to keep the Pi from throttling while being in a case by adding a
 fan as obvious from experiment No. 2.
@@ -132,7 +132,7 @@ This sytem is targeted to be placed into a rack to create a large Pi
 cluster. The cost for such a module is about $15K. Figure
 [\[F:pi-mod-1\]](#F:pi-mod-1){reference-type="ref"
 reference="F:pi-mod-1"} shows the module and
-Figure [\[F:pi-mod-2\]](#F:pi-mod-2){reference-type="ref"
+Figure [\[F:pi-mod-2\]](#F:pi-mod-2){reference-type="ref"
 reference="F:pi-mod-2"} shows how multiple modules can be placed into a
 single rack.
 
@@ -171,7 +171,7 @@ Instead it is possible to build such a cluster based on Raspberry PI's
 yourself if you are willing to spend the money or if you have access to
 PI's that you may loan from your department.
 
-Table [\[T:picluster-partslist\]](#T:picluster-partslist){reference-type="ref"
+Table [\[T:picluster-partslist\]](#T:picluster-partslist){reference-type="ref"
 reference="T:picluster-partslist"} lists one such possible parts list
 that will allow you to build a cluster for up to 5 nodes. However make
 sure to buy at least 3 Raspberry PI's with the appropriate memory. At

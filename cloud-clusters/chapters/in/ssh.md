@@ -1,7 +1,7 @@
 SSH
 ===
 
- 
+ 
 
 If you do not know what ssh is we recommend that you [read up on
 it](http://openssh.com/manual.html). However, the simple material
@@ -132,7 +132,7 @@ To start the agent please use the following command:
     eval `ssh-agent`
 
 It is important that you use the backquote ('), located under the tilde
-( ), rather than the single quote ('). Once the agent is started it will
+( ), rather than the single quote ('). Once the agent is started it will
 print a PID that you can use to interact with later
 
 To add the key use the command
@@ -278,7 +278,7 @@ Putty is best known for its GUI configuration application to manage
 several machines as demonstrated next. Once you have downloaded it and
 opened PuTTYgen, you will be presented with a a key generator window
 (images provided by chameleon cloud) (see
-Figure [\[F:putty-key\]](#F:putty-key){reference-type="ref"
+Figure [\[F:putty-key\]](#F:putty-key){reference-type="ref"
 reference="F:putty-key"}).
 
 \FIGURE{htb} 
@@ -288,7 +288,7 @@ reference="F:putty-key"}).
        {F:putty-key}
 To generate a key you click the *Generate* button which is blue. The
 PuTTY Key Generator (see
-Figure [\[F:putty-pass\]](#F:putty-pass){reference-type="ref"
+Figure [\[F:putty-pass\]](#F:putty-pass){reference-type="ref"
 reference="F:putty-pass"}) will then ask you to move your mouse around
 the program's blank space to generate "randomness" for your key. You
 must enter a "Key passphrase" and then confirm the passphrase.

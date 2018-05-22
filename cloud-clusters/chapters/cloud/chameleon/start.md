@@ -5,7 +5,7 @@ We describe how you can get access to chameleon cloud under the
 assumption that you are a student or a researcher that joins an existing
 project on Chameleon cloud. You will need to follow the following steps:
 
-Step 1: Create a Chameleon account
+Step 1: Create a Chameleon account
 ----------------------------------
 
 To get started using Chameleon you will need to [create a user

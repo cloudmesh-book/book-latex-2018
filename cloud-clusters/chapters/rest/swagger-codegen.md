@@ -8,10 +8,10 @@ Codegen to define and develop a REST Service.
 
 We assume you have been familiar with the concept of REST service,
 OpenAPI as discussed in
-section [\[s:rest-intro\]](#s:rest-intro){reference-type="ref"
+section [\[s:rest-intro\]](#s:rest-intro){reference-type="ref"
 reference="s:rest-intro"}. In next section we will further look into the
 Swagger/OpenAPI 2.0
-specification [\[S:swagger-specification\]](#S:swagger-specification){reference-type="ref"
+specification [\[S:swagger-specification\]](#S:swagger-specification){reference-type="ref"
 reference="S:swagger-specification"} and use a slight more complex
 example to walk you through the design of a RESTful service following
 the OpenAPI 2.0 specifications.
@@ -21,25 +21,25 @@ REST service with Swagger/OpenAPI 2.0 specification and the tools
 related to is. The general steps are:
 
 -   Step 1
-    (Section [1.1](#s:step-1-define-your-rest-service){reference-type="ref"
+    (Section [1.1](#s:step-1-define-your-rest-service){reference-type="ref"
     reference="s:step-1-define-your-rest-service"}). Define the REST
     service conforming to Swagger/OpenAPI 2.0 specification. It is a
     YAML document file with the basics of the REST service defined,
     e.g., what resources it has and what actions are supported.
 
 -   Step 2
-    (Section [1.2](#s:step-2-swagger-code-gen){reference-type="ref"
+    (Section [1.2](#s:step-2-swagger-code-gen){reference-type="ref"
     reference="s:step-2-swagger-code-gen"}). Use Swagger Codegen to
     generate the server side stub code. Fill in the actual
     implementation of the business logic portion in the code.
 
 -   Step 3
-    (Section [1.3](#s:step-3-swagger-codegen){reference-type="ref"
+    (Section [1.3](#s:step-3-swagger-codegen){reference-type="ref"
     reference="s:step-3-swagger-codegen"}). Install the server side code
     and run it. The service will then be available.
 
 -   Step 4
-    (Section [1.4](#s:step-4-swagger-codegen){reference-type="ref"
+    (Section [1.4](#s:step-4-swagger-codegen){reference-type="ref"
     reference="s:step-4-swagger-codegen"}). Generate client side code.
     Develop code to call the REST service. Install and run to verify.
 
@@ -173,7 +173,7 @@ a function definition which we list next:
         """
         return 'do some magic!'
 
-Please note the `do some magic!` string at the return of the function.
+Please note the `do some magic!` string at the return of the function.
 This ought to be replaced with actual implementation what you would like
 your REST call to be really doing. In reality this could be some call to
 a backend database or datastore; a call to another API; or even calling
@@ -346,25 +346,25 @@ Exercises
 ---------
 
 In
-Section [1.1](#s:step-1-define-your-rest-service){reference-type="ref"
+Section [1.1](#s:step-1-define-your-rest-service){reference-type="ref"
 reference="s:step-1-define-your-rest-service"}, we introduced a schema.
 The question relates to termsOfService: Investigate what the
 termOfService attribut is and suggest a better value. Discuss on piazza.
 
 In
-Section [1.1](#s:step-1-define-your-rest-service){reference-type="ref"
+Section [1.1](#s:step-1-define-your-rest-service){reference-type="ref"
 reference="s:step-1-define-your-rest-service"}, we introduced a schema.
 The question relates to model: What is the meaning of model under the
 definitions
 
 In
-Section [1.1](#s:step-1-define-your-rest-service){reference-type="ref"
+Section [1.1](#s:step-1-define-your-rest-service){reference-type="ref"
 reference="s:step-1-define-your-rest-service"}, we introduced a schema.
 The question relates to \$ref: what is the meaning of the \$ref. Discuss
 on piazza, come up with a student answer in class.
 
 In
-Section [1.1](#s:step-1-define-your-rest-service){reference-type="ref"
+Section [1.1](#s:step-1-define-your-rest-service){reference-type="ref"
 reference="s:step-1-define-your-rest-service"}, we introduced a schema.
 What does the response 200 mean. Do you need other responses?
 
@@ -373,7 +373,7 @@ you add create a more sophisticated schema and add more attributes
 exposing more information from your system.
 
 How can you for example develop a rest service that exposes portions of
-your file system serving large files, e.g. their filenames and their
+your file system serving large files, e.g. their filenames and their
 size? How would you download these files? Would you use a rest service,
 or would you register an alternative service such as ftp, DAV, or
 others? Please discuss in piazza. Note this will be a helping you to

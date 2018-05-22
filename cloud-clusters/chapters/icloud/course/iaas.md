@@ -1,7 +1,7 @@
 Outdated: IaaS
 ==============
 
- 
+ 
 
 Examples and definitions are given for SaaS, PaaS, and IaaS.
 Computational models must be designed with the problems and effective

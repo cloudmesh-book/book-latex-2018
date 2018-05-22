@@ -53,7 +53,7 @@ pre-packaged with many useful programming tools, and is easy to use.
 
 ![Noobs](images/noobs.jpg){width="50%"}
 
-1.  Select Raspbian and click `Install (i)`
+1.  Select Raspbian and click `Install (i)`
 
 ### Installation of Dexter
 
@@ -254,7 +254,7 @@ VLC on OSX
 
 -   <http://www.mybigideas.co.uk/RPi/RPiCamera/>
 
--    
+-    
 
     Camera on Pi
     ------------

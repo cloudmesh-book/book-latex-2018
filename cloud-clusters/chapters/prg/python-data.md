@@ -163,7 +163,7 @@ for entry in g:
 ```
 
 Good examples on using RDF are provided on the RDFlib Web page
-at <https://github.com/RDFLib/rdflib>
+at <https://github.com/RDFLib/rdflib>
 
 From the Web page we showcase also how to directly process RDF data from
 the Web
@@ -180,7 +180,7 @@ for s,p,o in g:
 #### PDF
 
 The Portable Document Format (PDF) has been made available by Adobe
-Inc. royalty free. This has enabled PDF to become a world wide adopted
+Inc. royalty free. This has enabled PDF to become a world wide adopted
 format that also has been standardized in 2008 (ISO/IEC 32000-1:2008,
 <https://www.iso.org/standard/51502.html>). A lot of research is
 published in papers making PDF one of the de-facto standards for
@@ -206,7 +206,7 @@ If you know about other tools, let us know.
 #### HTML
 
 A very powerful library to parse HTML Web pages is provided
-with <https://www.crummy.com/software/BeautifulSoup/>
+with <https://www.crummy.com/software/BeautifulSoup/>
 
 More details about it are provided in the documentation page
 <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>

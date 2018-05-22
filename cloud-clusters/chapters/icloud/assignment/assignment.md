@@ -4,7 +4,7 @@ Exercises
 Exercise 0 - Identify Technologies
 ----------------------------------
 
- 
+ 
 
 Exercise 0 will require you to identify the different software
 tools/technologies included in the given attachment and then group them

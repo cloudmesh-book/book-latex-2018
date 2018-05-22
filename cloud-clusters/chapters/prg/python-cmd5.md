@@ -21,7 +21,7 @@ The source code for cmd5 is located in github:
 
 We recommend that you use a virtualenv either with virtualenv or pyenv.
 This is in detail documented in the
-Section [\[S:managing-multiple-python-versions-with-pyenv\]](#S:managing-multiple-python-versions-with-pyenv){reference-type="ref"
+Section [\[S:managing-multiple-python-versions-with-pyenv\]](#S:managing-multiple-python-versions-with-pyenv){reference-type="ref"
 reference="S:managing-multiple-python-versions-with-pyenv"}.
 
 #### Installation from source

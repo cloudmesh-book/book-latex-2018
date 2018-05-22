@@ -375,7 +375,7 @@ Maximization, graphs and Collaborative Filtering.
 Some of the links bellow may be outdated. Please let us know the new
 links and notify us of the outdated links.
 
--   DCGSA Standard Cloud: <https://www.youtube.com/watch?v=l4Qii7T8zeg>
+-   DCGSA Standard Cloud: <https://www.youtube.com/watch?v=l4Qii7T8zeg>
 
 -   On line 51 Use Cases <http://bigdatawg.nist.gov/usecases.php>
 
@@ -403,8 +403,8 @@ links and notify us of the outdated links.
     <https://www.materialsproject.org/>
 
 -   Use Case 13 Large Scale Geospatial Analysis and Visualization
-    <http://www.opengeospatial.org/standards>,  <http://geojson.org/> ,
-    <http://earth-info.nga.mil/publications/specs/printed/CADRG/cadrg.html> 
+    <http://www.opengeospatial.org/standards>,  <http://geojson.org/> ,
+    <http://earth-info.nga.mil/publications/specs/printed/CADRG/cadrg.html> 
 
 -   Use Case 14 Object identification and tracking from Wide Area Large
     Format Imagery (WALF) Imagery or Full Motion Video (FMV) -
@@ -427,7 +427,7 @@ links and notify us of the outdated links.
     System](http://www.iom.edu/Activities/Quality/LearningHealthcare.aspx)
 
 -   Use Case 17 Pathology Imaging/digital pathology;
-    <https://web.cci.emory.edu/confluence/display/PAIS> , https://web.cci.emory.edu/confluence/display/HadoopGIS
+    <https://web.cci.emory.edu/confluence/display/PAIS> , https://web.cci.emory.edu/confluence/display/HadoopGIS
 
 -   Use Case 19 Genome in a Bottle Consortium:
     [www.genomeinabottle.org](https://bigdatacoursespring2015.appspot.com/www.genomeinabottle.org)
@@ -440,9 +440,9 @@ links and notify us of the outdated links.
 
 -   Use Case 26 Deep Learning: Recent popular press coverage of deep
     learning technology:
-    <http://www.nytimes.com/2012/11/24/science/scientists-see-advances-in-deep-learning-a-part-of-artificial-intelligence.html> ,
-    <http://www.nytimes.com/2012/06/26/technology/in-a-big-network-of-computers-evidence-of-machine-learning.html> ,
-    <http://www.wired.com/2013/06/andrew_ng/>, 
+    <http://www.nytimes.com/2012/11/24/science/scientists-see-advances-in-deep-learning-a-part-of-artificial-intelligence.html> ,
+    <http://www.nytimes.com/2012/06/26/technology/in-a-big-network-of-computers-evidence-of-machine-learning.html> ,
+    <http://www.wired.com/2013/06/andrew_ng/>, 
 
     A recent research paper on HPC for Deep Learning:
     <http://www.stanford.edu/~acoates/papers/CoatesHuvalWangWuNgCatanzaro_icml2013.pdf>,
@@ -454,7 +454,7 @@ links and notify us of the outdated links.
     consumer photos <http://vision.soic.indiana.edu/projects/disco/>
 
 -   Use Case 28 Truthy: Information diffusion research from Twitter Data
-    <http://truthy.indiana.edu/> , http://cnets.indiana.edu/groups/nan/truthy/ , http://cnets.indiana.edu/groups/nan/despic/
+    <http://truthy.indiana.edu/> , http://cnets.indiana.edu/groups/nan/truthy/ , http://cnets.indiana.edu/groups/nan/despic/
 
 -   Use Case 30 CINET: Cyberinfrastructure for Network (Graph) Science
     and Analytics <http://cinet.vbi.vt.edu/cinet_new/>
@@ -476,7 +476,7 @@ links and notify us of the outdated links.
     , <http://xpdb.nist.gov/chemblast/pdb.pl>
 
 -   Use Case 35 Light source beamlines
-    <http://www-als.lbl.gov/> , https://www1.aps.anl.gov/
+    <http://www-als.lbl.gov/> , https://www1.aps.anl.gov/
 
 -   Use Case 36 [CRTS survey](http://crts.caltech.edu/), [CSS
     survey](http://www.lpl.arizona.edu/css/) ; For an overview of the
@@ -485,7 +485,7 @@ links and notify us of the outdated links.
 
 -   Use Case 37 DOE Extreme Data from Cosmological Sky Survey and
     Simulations
-    <http://www.lsst.org/lsst/> , http://www.nersc.gov/ , http://www.nersc.gov/assets/Uploads/HabibcosmosimV2.pdf
+    <http://www.lsst.org/lsst/> , http://www.nersc.gov/ , http://www.nersc.gov/assets/Uploads/HabibcosmosimV2.pdf
 
 -   Use Case 38 Large Survey Data for Cosmology <http://desi.lbl.gov/> ,
     <http://www.darkenergysurvey.org/>

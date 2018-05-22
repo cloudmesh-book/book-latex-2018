@@ -41,5 +41,5 @@ Examples
 --------
 
 The statistics and PageRank examples are identical to the Hadoop 2.7.5
-on Docker [\[c:hadoop-docker\]](#c:hadoop-docker){reference-type="ref"
+on Docker [\[c:hadoop-docker\]](#c:hadoop-docker){reference-type="ref"
 reference="c:hadoop-docker"}.

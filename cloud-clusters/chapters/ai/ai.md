@@ -57,7 +57,7 @@ $${d(\mathbf{i},\mathbf{j})} = {d(\mathbf{j},\mathbf{i})} = \sqrt{{(i_1 - j_1)^2
 
 Now to illustrate an example of calculating similarity we put this
 equation to work by exploring if a car is fast or not by using
- [\[T:fast-cars\]](#T:fast-cars){reference-type="ref"
+ [\[T:fast-cars\]](#T:fast-cars){reference-type="ref"
 reference="T:fast-cars"}. Lets pretend we know nothing about cars and
 are asked if we think a Chevy Corvette is fast or not.
 
@@ -108,7 +108,7 @@ Determine for yourself if we use 2 nearest neighbors what the prediction
 about the Mustang would be given the data provided what about 3, 4
 nearest neighbors? What is the maximum number of k-nearest neighbors we
 could have given the dataset in
- [\[T:fast-cars\]](#T:fast-cars){reference-type="ref"
+ [\[T:fast-cars\]](#T:fast-cars){reference-type="ref"
 reference="T:fast-cars"} ?
 
 Calculate the Euclidian Distances for all five row entries with respect

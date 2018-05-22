@@ -1,7 +1,7 @@
 Docker and Docker Swarm on FutureSystems
 ========================================
 
- 
+ 
 
 This section is for IU students only that take classes with us.
 

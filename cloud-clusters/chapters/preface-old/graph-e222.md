@@ -56,7 +56,7 @@ reference="C:latex"}) \[bibtex
 ([\[C:bibtex\]](#C:bibtex){reference-type="ref" reference="C:bibtex"})\
 jabref ([\[s:jabref\]](#s:jabref){reference-type="ref"
 reference="s:jabref"})\
-LaTeX ([\[C:latex\]](#C:latex){reference-type="ref"
+LaTeX ([\[C:latex\]](#C:latex){reference-type="ref"
 reference="C:latex"}), \] \] \] \[Prerequisits Review \[Python
 ([\[C:python\]](#C:python){reference-type="ref" reference="C:python"})
 \[Language

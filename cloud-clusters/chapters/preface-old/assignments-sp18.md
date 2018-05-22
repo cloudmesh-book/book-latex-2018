@@ -4,7 +4,7 @@ Assignments
 Overview
 --------
 
- 
+ 
 
 We will post in this part all assignments for the various classes. As
 this page will be updated frequently, it is in the students
@@ -38,13 +38,13 @@ Week 1
 ------
 
 -   Watch the introduction video at: <https://youtu.be/yC3PNkb_9mI>
--   Exercise [\[E:Piazza.1\]](#E:Piazza.1){reference-type="ref"
+-   Exercise [\[E:Piazza.1\]](#E:Piazza.1){reference-type="ref"
     reference="E:Piazza.1"} in Chapter on page
--   Exercise [\[E:Piazza.2\]](#E:Piazza.2){reference-type="ref"
+-   Exercise [\[E:Piazza.2\]](#E:Piazza.2){reference-type="ref"
     reference="E:Piazza.2"} in Chapter on page
--   Exercise [\[E:Piazza.3\]](#E:Piazza.3){reference-type="ref"
+-   Exercise [\[E:Piazza.3\]](#E:Piazza.3){reference-type="ref"
     reference="E:Piazza.3"} in Chapter on page
--   Exercise [\[E:Documentation.1\]](#E:Documentation.1){reference-type="ref"
+-   Exercise [\[E:Documentation.1\]](#E:Documentation.1){reference-type="ref"
     reference="E:Documentation.1"} on page
 -   Exercise.Organization.1 e-organization
 -   Exercise.Organization.2 e-organization

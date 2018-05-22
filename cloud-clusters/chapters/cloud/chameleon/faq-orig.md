@@ -15,44 +15,44 @@ effectively support Computer Science experiments Chameleon offers bare
 metal reconfigurability on most of the hardware. To provide easy access
 to educational users, three SCUs at TACC (a quarter of the testbed) are
 configured with OpenStack KVM. You can read more about
-Chameleon [here](https://www.chameleoncloud.org/about/chameleon/).
+Chameleon [here](https://www.chameleoncloud.org/about/chameleon/).
 
 ### What does CHI mean?
 
 CHI stands for Chameleon Infrastructure, and refers to the technology
 powering our bare-metal clouds: a combination of software components
-from OpenStack, Grid'5000, and our own developments.
+from OpenStack, Grid'5000, and our own developments.
 
 ### Who can use Chameleon?
 
 Chameleon is broadly available to members of the US Computer Science
 research community and its international collaborators working in the
-open community on cloud research.  By emphasizing "open" we mean that
+open community on cloud research.  By emphasizing "open" we mean that
 the expectation is that any research performed on Chameleon will result
-in publication in a broadly available journal or conference. 
+in publication in a broadly available journal or conference. 
 
 ### What are the best practices for Chameleon usage?
 
-In order to promote fairness to all users, we have the following set of
-Best Practices for using Chameleon bare metal partitions:
+In order to promote fairness to all users, we have the following set of
+Best Practices for using Chameleon bare metal partitions:
 
--    Think Small for Development: If you are just developing or
+-    Think Small for Development: If you are just developing or
     prototyping a system, and not yet running experiments at scale, use
     only as many nodes as you actually need (e.g., many projects can be
     developed and tested on 3-4 nodes), and try to take short
     reservations (e.g., for a work day or two when you actually
     develop). Always release the reservation if you will not use the
     testbed for an extended period of time (e.g., when you leave for the
-    weekend or holidays). 
+    weekend or holidays). 
 
 -   Automation is your Friend: You can always snapshot your work/images
     between sessions using the [snapshotting
-    instructions](https://www.chameleoncloud.org/docs/user-guides/ironic/#snapshotting_an_instance) to
+    instructions](https://www.chameleoncloud.org/docs/user-guides/ironic/#snapshotting_an_instance) to
     simplify the redeployment of your environment during the next work
     session. You can also use scripting and environment customization to
     make it easier to redeploy images. An additional benefit of
     automation is that it makes it easier for you to reproduce your work
-    and eventually share it with colleagues within your lab and other
+    and eventually share it with colleagues within your lab and other
     collaborators.
 
 -   Think Big for Experimentation: Once you are ready to experiment you
@@ -67,10 +67,10 @@ Best Practices for using Chameleon bare metal partitions:
 ### Are there any limitations on Chameleon usage?
 
 We have two types of limitations, introduced to promote fair resource
-usage to all: 
+usage to all: 
 
--   Allocation: Chameleon projects are limited to a per-project
-    allocation currently set to 20,000 service units for 6 months.
+-   Allocation: Chameleon projects are limited to a per-project
+    allocation currently set to 20,000 service units for 6 months.
     Allocations can be renewed or extended---see the [Project and
     Allocation
     Management](index.html#toc-project-and-allocation-management)
@@ -86,7 +86,7 @@ usage to all: 
     unit suffix, e.g. "5d" for 5 days or "30m" for 30 minutes. If there
     is an advance reservation blocking your lease prolongation that
     could potentially be moved, you can interact through the users
-    mailing list to coordinate with others users. Additionally, if you
+    mailing list to coordinate with others users. Additionally, if you
     know from the start that your lease will require longer than a week
     and can justify it, you can [contact Chameleon staff via the
     ticketing
@@ -133,8 +133,8 @@ by modifying options in your profile. An application for a project has
 to include a description of the research or education project to be
 performed using the testbed and the type of resources needed (see
 below). Each Chameleon project is awarded an allocation of service units
-for a specific amount of time. Users can expect a project decision
-within one business day.
+for a specific amount of time. Users can expect a project decision
+within one business day.
 
 ### Who is eligible to be Chameleon PI and how do I make sure that my PI status is reflected in my profile?
 
@@ -157,7 +157,7 @@ following groups:
 -   International research institutions: to promote intellectual
     exchange and federation with institutions abroad we support a
     limited number of international PIs with ongoing, active
-    collaborations with scientists in the US. 
+    collaborations with scientists in the US. 
 
 -   NSF Graduate Student Fellows: While in most cases, a graduate
     student is ineligible to be PI of an allocation request, an
@@ -175,11 +175,11 @@ following groups:
     allocation as PI.
 
 We do occasionally provide case-by-case exceptions to this guideline in
-well-justified cases. 
+well-justified cases. 
 
-If are eligible to be PI, in order to apply for a project  you need to
+If are eligible to be PI, in order to apply for a project  you need to
 make sure that your Chameleon profile reflects your status. You can do
-so on the [Edit Account Profile
+so on the [Edit Account Profile
 page](https://www.chameleoncloud.org/user/profile/edit). Simply check
 the "Request PI Eligibility" checkbox and save you Account Profile.
 
@@ -187,19 +187,19 @@ the "Request PI Eligibility" checkbox and save you Account Profile.
 
 You will need to contact the project PI and request that they add you as
 a user. Provide the PI with your Chameleon username. The project PI
-should visit the [Chameleon Project Management
+should visit the [Chameleon Project Management
 page](https://www.chameleoncloud.org/user/projects). From the list of
 projects, locate the project to which the user is to be added and click
 
 View Project
 
-. Near the bottom of the page, under the heading *Project Users*, is a
+. Near the bottom of the page, under the heading *Project Users*, is a
 form where the PI can enter the Chameleon username of the user to add.
 Clicking
 
 Add user
 
- will add the user to the project.
+ will add the user to the project.
 
 ### What are the units of an allocation, and how am I charged?
 
@@ -226,7 +226,7 @@ testbed.
 
 For example, a user wishing to provision a 10 node cluster +1 storage
 server for a 1 week experiment should budget
-`[(10 + 2) SUs per hour]  [7 days  24 hours/day] = 2,016 SUs` for that
+`[(10 + 2) SUs per hour]  [7 days  24 hours/day] = 2,016 SUs` for that
 experiment.
 
 SUs are charged the same regardless of use case. Hence, whether asking
@@ -315,9 +315,9 @@ Account Management Troubleshooting
 
 Chameleon relies on TACC's Identity Service for account management. If
 you already have a TACC account, possibly
-through [XSEDE](http://www.xsede.org) or directly through TACC, then you
+through [XSEDE](http://www.xsede.org) or directly through TACC, then you
 should use that account to log in to Chameleon. If you don't know your
-TACC password, you can [reset your
+TACC password, you can [reset your
 password](https://www.chameleoncloud.org/password-reset). After
 resetting your password you should be able to log in to Chameleon.
 
@@ -325,24 +325,24 @@ resetting your password you should be able to log in to Chameleon.
 
 Please make sure that you have successfully confirmed your email
 address. Check your junk folder as the confirmation email might have
-been marked as spam.** **Double- check that you are using the password
+been marked as spam.** **Double- check that you are using the password
 that you provided during the registration. If you are unsure of the
-password you used, you can [reset
+password you used, you can [reset
 it](https://www.chameleoncloud.org/user/password-reset/). If you still
-cannot log in, please [open a
+cannot log in, please [open a
 ticket](https://www.chameleoncloud.org/user/help/ticket/new/guest/).
 
 ### I have an account, but when I try to log in to OpenStack/Experiment it says my username/password is unknown, why?
 
-You must be a member of an active project to access the
+You must be a member of an active project to access the
 OpenStack/Experiment interface. If you are PI Eligible, you can request
-a new project on the [Chameleon Project Management
+a new project on the [Chameleon Project Management
 page](https://www.chameleoncloud.org/user/projects). If you are not PI
 Eligible, you will need to be added to an existing project by the
 project PI. You can check that a project has an active Chameleon
-allocation by clicking on the **View Project** button. If you are part
-of a project but the allocation is *Pending*, it means your project is
-under review. If you still cannot log in, please [open a ticket with our
+allocation by clicking on the **View Project** button. If you are part
+of a project but the allocation is *Pending*, it means your project is
+under review. If you still cannot log in, please [open a ticket with our
 help desk](https://www.chameleoncloud.org/user/help/).
 
 Appliances
@@ -363,8 +363,8 @@ reproducibility; publishing an appliance used to obtain experimental
 results will go a long way to allowing others to reproduce and build on
 your research easily.
 
-To deploy distributed applications on several Chameleon instances,
-complex appliances combine an image and a template describing how the
+To deploy distributed applications on several Chameleon instances,
+complex appliances combine an image and a template describing how the
 cluster should be configured and contextualized. You can read more about
 them in the [Complex Appliances
 documentation](https://www.chameleoncloud.org/docs/complex-appliances/).
@@ -372,7 +372,7 @@ documentation](https://www.chameleoncloud.org/docs/complex-appliances/).
 ### What is the Chameleon Appliance Catalog?
 
 [The Chameleon Appliance
-Catalog](https://www.chameleoncloud.org/appliances/) is a repository
+Catalog](https://www.chameleoncloud.org/appliances/) is a repository
 that allows users to discover, publish, and share appliances. The
 appliance catalog contains useful images of both bare metal and virtual
 machine appliances supported by the Chameleon team as well appliances
@@ -383,11 +383,11 @@ contributed by users.
 The new Appliance Catalog allows you to easily publish and share your
 own appliances so that others can discover them and use them either to
 reproduce the research of others or as a basis for their own research.
- Before creating your own appliance it is advisable to review other
-appliances on the [Chameleon Appliance
-Catalog](https://www.chameleoncloud.org/appliances/) in order to get an
+ Before creating your own appliance it is advisable to review other
+appliances on the [Chameleon Appliance
+Catalog](https://www.chameleoncloud.org/appliances/) in order to get an
 idea of the categories you will want to contribute and what others have
-done. 
+done. 
 
 Once you are ready to proceed, an appliance can be contributed to
 Chameleon in the following steps:
@@ -407,7 +407,7 @@ Chameleon in the following steps:
     OpenStack/KVM at TACC. You will need to provide at least one
     appliance, but may want to provide all three.
 
-3.  Go to the [Appliance Catalog Create Appliance web
+3.  Go to the [Appliance Catalog Create Appliance web
     form](https://www.chameleoncloud.org/appliances/create/), fill out,
     and submit the form. Be prepared to provide the following
     information: a descriptive name (this sometimes requires some
@@ -427,21 +427,21 @@ enter your template instead in the dedicated text box.
 
 As always, if you encounter any problems or want to share with us
 additional improvements we should do to the process, please don't
-hesitate to [submit a ticket](https://www.chameleoncloud.org/help/). 
+hesitate to [submit a ticket](https://www.chameleoncloud.org/help/). 
 
 ### How can I manage an appliance on Chameleon Appliance Catalog?
 
-If you are the owner of the appliance, you can edit the appliance
-data, such as the description or the support information. Browse to the
+If you are the owner of the appliance, you can edit the appliance
+data, such as the description or the support information. Browse to the
 appliance that you want to edit and view its Details page. At the top
 right of the page is an Edit button. You will be presented with the same
 web form as when creating the appliance, pre-filled with the appliances
 current information. Make changes as necessary and click Save at the
 bottom of the page.
 
-And finally, you can delete appliances you had made available. Browse to
-the appliance that you want to delete and click Edit on the
-Appliance Details page. At the bottom of the page is a Delete button.
+And finally, you can delete appliances you had made available. Browse to
+the appliance that you want to delete and click Edit on the
+Appliance Details page. At the bottom of the page is a Delete button.
 You will be asked to confirm once more that you do want to delete this
 appliance. After confirming, the appliance will be removed and no longer
 listed on the Appliance Catalog.
@@ -450,22 +450,22 @@ listed on the Appliance Catalog.
 
 The three clouds forming the Chameleon testbed are fully separated, each
 having its own Glance image repository. The same appliance
-image uploaded to the three clouds will produce three different image
+image uploaded to the three clouds will produce three different image
 IDs.
 
 In addition, it is sometimes needed to customize an appliance image for
 each site, resulting in slightly different image files.
 
-### Can I use Ubuntu, Debian, or another operating system rather than CentOS on bare-metal?
+### Can I use Ubuntu, Debian, or another operating system rather than CentOS on bare-metal?
 
-The recommended appliance for Chameleon is CentOS 7 (supported by
+The recommended appliance for Chameleon is CentOS 7 (supported by
 Chameleon staff), or appliances built on top of it.\
-These appliances provide Chameleon-specific customizations, such as
-login using the cc account, the cc-checks utility to verify hardware
+These appliances provide Chameleon-specific customizations, such as
+login using the cc account, the cc-checks utility to verify hardware
 against our resource registry, gathering of metrics, etc.
 
-Since 2016, we also provide and support Ubuntu 14.04 and
-16.04 appliances with the same functionality.
+Since 2016, we also provide and support Ubuntu 14.04 and
+16.04 appliances with the same functionality.
 
 Bare Metal Troubleshooting
 --------------------------
@@ -490,38 +490,38 @@ OpenStack KVM Troubleshooting
 
 ### Why are my OpenStack KVM instances failing to launch?
 
-If you get an error stating that **No valid host was found**, it might
+If you get an error stating that **No valid host was found**, it might
 be caused by a lack of resources in the cloud. The Chameleon staff
 continuously monitors the utilization of the testbed, but there might be
 times when no more resources are available. If the error persists,
-please [open a ticket with our help
+please [open a ticket with our help
 desk](https://www.chameleoncloud.org/user/help/).
 
 ### Why can't I ping or SSH to my instance?
 
 While the possibility that the system is being taking over by nanites
 should not be discounted too easily, it is always prudent to first
-check for the following issues:
+check for the following issues:
 
--   Do you have a floating IP associated with your instance? By default,
+-   Do you have a floating IP associated with your instance? By default,
     instances do not have publicly-accessible IP addresses assigned. See
     the **Managing Virtual Machine Instances** section in the [User
     Guide](https://www.chameleoncloud.org/docs/user-guides/openstack-kvm-user-guide/).
 
--   Does your security group allow incoming ICMP (e.g. ping) traffic? By
+-   Does your security group allow incoming ICMP (e.g. ping) traffic? By
     default, firewall rules do not allow ping to your instances. If you
     wish to enable it, see the **Firewall (Access Security)** section in
     the [User
     Guide](https://www.chameleoncloud.org/docs/user-guides/openstack-kvm-user-guide/).
 
 -   Does your security group allow incoming SSH (TCP port 22)
-    traffic? By default, firewall rules do not allow SSH to your
+    traffic? By default, firewall rules do not allow SSH to your
     instances. If you wish to enable it, see the **Firewall (Access
     Security)** section in the [User
     Guide](https://www.chameleoncloud.org/docs/user-guides/openstack-kvm-user-guide/).
 
- If none of these solve your problem, please [open a ticket with our
-help desk](https://www.chameleoncloud.org/user/help/), and send us the
+ If none of these solve your problem, please [open a ticket with our
+help desk](https://www.chameleoncloud.org/user/help/), and send us the
 results of the above (and any evidence of nanites you find as well).
 
 Create your own SSH key pairs
@@ -544,21 +544,21 @@ Access the SSH key pairs directory; in your terminal type the command:
 
     $ cd ~/.ssh
 
-Create your ssh key pair (public and private keys);  in the `.ssh`
+Create your ssh key pair (public and private keys);  in the `.ssh`
 directory, type the command:
 
     $ ssh-keygen
 
-Press the enter key, then enter a name for your key.
+Press the enter key, then enter a name for your key.
 
 After completing the previous step, a message stating "Enter file in
 which to save the Key" will be displayed. Enter the name of your
-preference. I will use in this example the name "sample-key". Then press
+preference. I will use in this example the name "sample-key". Then press
 the enter key.
 
-Then, you will be requested to enter a passphrase for your key. Entering
+Then, you will be requested to enter a passphrase for your key. Entering
 a passphrase is not necessary, so you can proceed to leave it blank and
-press enter. You will receive a message "Enter same passphrase again:"
+press enter. You will receive a message "Enter same passphrase again:"
 so just leave it blank and press enter.
 
 Since we are still in the `.ssh` directory, now you can see your newly
@@ -573,10 +573,10 @@ You will see two files:
 -   sample-key.pub (containing the public key)
 
 Then, provide the public key to your cloud system or individual
-instance. To add a key pair in Chameleon, access one of the resource
+instance. To add a key pair in Chameleon, access one of the resource
 dashboards and go the following tabs:
 
-  Compute \> Access and Security \> Key Pairs \> Import Key Pair
+  Compute \> Access and Security \> Key Pairs \> Import Key Pair
 
 In this window, you only need to provide a name for your key pair and
 paste your public key pair in the "Public Key" window. To obtain the
@@ -586,7 +586,7 @@ your terminal and use the command:
     $ cat sample-key.pub
 
 Select and copy the contents displayed starting ssh-rsa all the way to
-the end. Paste these contents into the "Public Key" window mentioned
+the end. Paste these contents into the "Public Key" window mentioned
 earlier.
 
 Whenever you are creating an instance in Chameleon, you will have an
@@ -598,7 +598,7 @@ known\_hosts file.
 
 ###### Connect to an instance from your terminal
 
-###### After you have created a key pair and imported it in Chameleon, you can connect to any instance configured with this key pair. To do so you can use the command:
+###### After you have created a key pair and imported it in Chameleon, you can connect to any instance configured with this key pair. To do so you can use the command:
 
     $ ssh -i ~/.ssh/sample-key cc@<instance ip address>
 
@@ -616,11 +616,11 @@ below.
 ![image](images/putty2.png){width="\columnwidth"}
 
 Once the program is opened, click the Generate button, seen above in
-blue. PuTTY Key Generator will then ask you to move your mouse around
+blue. PuTTY Key Generator will then ask you to move your mouse around
 the program's blank space to generate "randomness" for your key.?
 
-You may enter an optional "Key passphrase" and then confirm the
-passphrase in the required areas but let us keep these spaces in blank
+You may enter an optional "Key passphrase" and then confirm the
+passphrase in the required areas but let us keep these spaces in blank
 just to avoid complexity. An example is shown below. Note that the
 passphrases are not necessary!
 

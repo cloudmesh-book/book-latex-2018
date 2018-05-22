@@ -1,4 +1,4 @@
- Ubuntu Development Configurations :o:
+ Ubuntu Development Configurations :o:
 ======================================
 
 Development Configuration

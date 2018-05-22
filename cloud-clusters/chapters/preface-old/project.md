@@ -1,7 +1,7 @@
 Tutorials, Topic Paper, Term Paper, Project Report
 ==================================================
 
- 
+ 
 
 Dependendt on the class you need to do different assignments. The
 assignments will be clearly posted in this document and updated in case
@@ -24,7 +24,7 @@ Topic Paper:
     application, or useful information that provides an overview of what
     you are trying to describe and analyses its relatinship to the class
     topic. Be mindful about plagiarizm. The paper is written in
-    LaTeX and uses jabref for bibliography management.
+    LaTeX and uses jabref for bibliography management.
 
 Term Paper:
 
@@ -51,7 +51,7 @@ Assignments:
     beginning of the assignment which of the evaluation will apply.
 
 Examples from prior classes are avalable in the class proceedings listed
-in Section [\[S:p-intro\]](#S:p-intro){reference-type="ref"
+in Section [\[S:p-intro\]](#S:p-intro){reference-type="ref"
 reference="S:p-intro"}.
 
 Dependent on the class you have to fulfill different requirements.

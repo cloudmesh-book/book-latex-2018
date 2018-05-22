@@ -269,7 +269,7 @@ onto the ENV3 environment. Than you need to execute the following steps:
 
 After you installed it you can activate it by typing `ENV3`. Naturally
 this requires that you added it to your bash environment as discussed in
-Section [1.1.1.8](#s:set-up-the-shell){reference-type="ref"
+Section [1.1.1.8](#s:set-up-the-shell){reference-type="ref"
 reference="s:set-up-the-shell"}.
 
 ### Installation without pyenv

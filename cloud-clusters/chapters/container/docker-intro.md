@@ -21,7 +21,7 @@ Image Source
 Docker Survey
 =============
 
-In 2016 Docker Inc. surveyed over 500 Docker developers and operations
+In 2016 Docker Inc. surveyed over 500 Docker developers and operations
 experts in various phases of deploying container-based technologies. The
 result is available in the *The Docker Survey 2016*.
 

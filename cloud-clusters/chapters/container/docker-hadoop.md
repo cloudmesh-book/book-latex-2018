@@ -4,7 +4,7 @@ Apache Hadoop using Docker
 In this section we will explore the Map/Reduce framework using Hadoop
 provided through a Docker container. The example that we use in this
 session is similar to WordCount but simple calculations are added
-e.g. minimum, maximum, average and standard deviation values using
+e.g. minimum, maximum, average and standard deviation values using
 several input files which contain float numbers.
 
 Draft: Creating the Hadoop Container

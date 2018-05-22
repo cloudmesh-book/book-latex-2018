@@ -381,7 +381,7 @@ motivation to not offer these classes for auditing are:
 
 -   The best way to take the class is to conduct a project. As this can
     not be achieved without taking the class full time and as auditing
-    the class does not provide the full value of the class, e.g. not
+    the class does not provide the full value of the class, e.g. not
     more than 10% of the class. Hence, we do not think it is useful to
     audit the class.
 
@@ -391,7 +391,7 @@ motivation to not offer these classes for auditing are:
 Resource restrictions
 ---------------------
 
--   It is not allowed to use our services for profit (e.g. just
+-   It is not allowed to use our services for profit (e.g. just
     enrolling in the class to use our clouds).
 
 -   In case of abuse of available compute time on our clouds the student
