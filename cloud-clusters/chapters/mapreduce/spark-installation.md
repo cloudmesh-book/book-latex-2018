@@ -1,4 +1,4 @@
-Installation of Spark {#c:spark-local-installation}
+Installation of Spark
 =====================
 
 In this section we will discuss how to install Spark 2.3.0 in Ubuntu
@@ -35,7 +35,7 @@ Source the bashrc file after adding the environmental variables.
 
       source ~/.bashrc
 
-Install Spark with Hadoop {#s:s:install-spark-with-hadoop}
+Install Spark with Hadoop
 -------------------------
 
 Here we use Spark packaged with Hadoop. In this package Spark uses

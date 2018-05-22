@@ -1,7 +1,5 @@
-Course Policies {#C:course-2018}
+Course Policies
 ===============
-
- 
 
 We describe briefly how we manage different classes and how to interact
 with us.
@@ -37,7 +35,7 @@ outline as follows:
 -   any post from piazza by a TA must be not done to the individual
     student only, but also must include *instructors*;
 
-Managing Your Own Calendar {#s:manage-calendar}
+Managing Your Own Calendar
 --------------------------
 
 From time to time we get the question from a very small number of
@@ -100,7 +98,7 @@ conduct support. We establish the following principals:
     online student. Residential students can attend the class on Friday
     and ask any question.
 
-### Office Hour Calendar {#office-hours}
+### Office Hour Calendar
 
 Online Students:
 
@@ -231,7 +229,7 @@ grading. If something does not go so well, do not focus on the negative
 things, but focus on how that experience can be overcome and how you
 turn it to a positive experience.
 
-Calendar I524, E616, E516 {#S:calendar}
+Calendar I524, E616, E516
 -------------------------
 
 This class is a full term class of 16 weeks.
@@ -360,7 +358,7 @@ Yes. There is a provision for a late registration - contact our office
 if this occurs. Students will be assessed a tuition fee at the time of
 late or retroactive registration.
 
-Registration {#S:register-mandatory}
+Registration
 ------------
 
 The Executive Associate Dean for Academic Affairs requires starting

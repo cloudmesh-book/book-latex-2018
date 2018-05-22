@@ -312,7 +312,7 @@ Convert `` df[`date`] `` from string to datetime
 Control Statements
 ------------------
 
-### Comparison {#comparision}
+### Comparison
 
 Computer programs do not only execute instructions. Occasionally, a
 choice needs to be made. Such as a choice is based on a condition.

@@ -1,4 +1,4 @@
-Physics {#c:physics}
+Physics
 =======
 
 This section starts by describing the LHC accelerator at CERN and

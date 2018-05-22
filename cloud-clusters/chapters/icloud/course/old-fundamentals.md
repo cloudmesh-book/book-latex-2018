@@ -1,7 +1,5 @@
-OUTDATED: Cloud Computing Fundamentals {#sec:icloud-fundamentals}
+OUTDATED: Cloud Computing Fundamentals
 ======================================
-
- 
 
 Retired lectures
 ----------------

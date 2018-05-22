@@ -1,4 +1,4 @@
-Hardware {#C:cc-hardware}
+Hardware
 ========
 
 The Chameleon architecture consists of a set of standard cloud units

@@ -1,4 +1,4 @@
-Chameleon OpenStack {#s:chameleon-openstack}
+Chameleon OpenStack
 ===================
 
 OpenStack on Chameleon delivers KVM based compute resources to provision

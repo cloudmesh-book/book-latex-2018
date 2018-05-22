@@ -1,7 +1,5 @@
-Outdated: MapReduce {#sec:icloud-mapreduce}
+Outdated: MapReduce
 ===================
-
- 
 
 Apache Data Analysis OpenStack
 ------------------------------
@@ -18,6 +16,7 @@ in-memory support of tasks, data flow separation, and portability.
 \video{Cloud}{12:01}{Apache Data Analysis OpenStack}{https://www.youtube.com/watch?v=6vkgvGtyv4Q}
 \slides{Cloud}{Page 1}{Apache Data Analysis OpenStack}{https://drive.google.com/open?id=0B88HKpainTSfMnpCelpNQUpNdVE}
 \slides{Cloud}{Page 1}{Apache Data Analysis OpenStack - pptx}{https://drive.google.com/open?id=0B88HKpainTSfTVlNRzRMemNaZEU}
+
 MapReduce
 ---------
 
@@ -30,6 +29,7 @@ basic process of MapReduce is shown.
 \video{Cloud}{9:07}{MapReduce}{https://www.youtube.com/watch?v=sSIGaDaulvA}
 \slides{Cloud}{Page 6}{MapReduce}{https://drive.google.com/open?id=0B88HKpainTSfMnpCelpNQUpNdVE}
 \slides{Cloud}{Page 6}{MapReduce - pptx}{https://drive.google.com/open?id=0B88HKpainTSfTVlNRzRMemNaZEU}
+
 Hadoop Framework
 ----------------
 
@@ -42,6 +42,7 @@ intertwined programs are then explored more fully.
 \video{Cloud}{8:32}{Hadoop Framework}{https://www.youtube.com/watch?v=Vuroqly6FTE}
 \slides{Cloud}{Page 15}{Hadoop Framework}{https://drive.google.com/open?id=0B88HKpainTSfMnpCelpNQUpNdVE}
 \slides{Cloud}{Page 15}{Hadoop Framework - pptx}{https://drive.google.com/open?id=0B88HKpainTSfTVlNRzRMemNaZEU}
+
 Hadoop Tasks
 ------------
 
@@ -58,6 +59,7 @@ in MapReduce.
 \video{Cloud}{11:01}{Hadoop Tasks}{https://www.youtube.com/watch?v=UN4t3tvdjms}
 \slides{Cloud}{Page 24}{Hadoop Tasks}{https://drive.google.com/open?id=0B88HKpainTSfMnpCelpNQUpNdVE}
 \slides{Cloud}{Page 24}{Hadoop Tasks - pptx}{https://drive.google.com/open?id=0B88HKpainTSfTVlNRzRMemNaZEU}
+
 Fault Tolerance
 ---------------
 
@@ -71,12 +73,14 @@ discussion of class assignments.
 \video{Cloud}{2:45}{Fault Tolerance}{https://www.youtube.com/watch?v=a3AlOTmD42k}
 \slides{Cloud}{Page 36}{Fault Tolerance}{https://drive.google.com/open?id=0B88HKpainTSfMnpCelpNQUpNdVE}
 \slides{Cloud}{Page 36}{Fault Tolerance - pptx}{https://drive.google.com/open?id=0B88HKpainTSfTVlNRzRMemNaZEU}
+
 Hadoop WordCount on VMs
 -----------------------
 
 \video{Cloud}{7:30}{Hadoop WordCount on VMs}{https://www.youtube.com/watch?v=1TrjmcPHrRU}
 \slides{Cloud}{Page 17}{Hadoop WordCount on VMs}{https://drive.google.com/open?id=0B88HKpainTSfZENxeUlOcVFUTkU}
 \slides{Cloud}{Page 17}{Hadoop WordCount on VMs - pptx}{https://drive.google.com/open?id=0B88HKpainTSfcVNHWUJaUDRoYUk}
+
 Programming on a Compute Cluster
 --------------------------------
 
@@ -89,6 +93,7 @@ and machine failures.
 \video{Cloud}{6:01}{Programming on a Compute Cluster}{https://www.youtube.com/watch?v=rRR2ALa5CUA}
 \slides{Cloud}{Page 1}{Programming on a Compute Cluster}{https://drive.google.com/open?id=0B88HKpainTSfd3hkTG4yY2FYUVE}
 \slides{Cloud}{Page 1}{Programming on a Compute Cluster - pptx}{https://drive.google.com/open?id=0B88HKpainTSfcUkwN0l1VHBEdlU}
+
 How Hadoop Runs on a MapReduceJob
 ---------------------------------
 
@@ -102,6 +107,7 @@ given at the end.
 \video{Cloud}{9:25}{How Hadoop Runs on a MapReduceJob}{https://www.youtube.com/watch?v=KWLY_maNEPA}
 \slides{Cloud}{Page 8}{How Hadoop Runs on a MapReduceJob}{https://drive.google.com/open?id=0B88HKpainTSfd3hkTG4yY2FYUVE}
 \slides{Cloud}{Page 8}{How Hadoop Runs on a MapReduceJob - pptx}{https://drive.google.com/open?id=0B88HKpainTSfcUkwN0l1VHBEdlU}
+
 Literature Review
 -----------------
 
@@ -114,6 +120,7 @@ is followed by MapReduce and BigTable.
 \video{Cloud}{9:43}{Literature Review}{https://www.youtube.com/watch?v=5YmjrhEFQsk}
 \slides{Cloud}{Page 16}{Literature Review}{https://drive.google.com/open?id=0B88HKpainTSfd3hkTG4yY2FYUVE}
 \slides{Cloud}{Page 16}{Literature Review - pptx}{https://drive.google.com/open?id=0B88HKpainTSfcUkwN0l1VHBEdlU}
+
 Introduction to BLAST
 ---------------------
 
@@ -127,6 +134,7 @@ Hospital. BLAST uses scores to find similar sequences in databases.
 \video{Cloud}{8:27}{Introduction to BLAST}{https://www.youtube.com/watch?v=i3H9HmUYfq8}
 \slides{Cloud}{Page 1}{Introduction to BLAST}{https://drive.google.com/open?id=0B88HKpainTSfdnFvY1V3dlFTRlE}
 \slides{Cloud}{Page 1}{Introduction to BLAST - pptx}{https://drive.google.com/open?id=0B88HKpainTSfMDAwZm5uQlZWckU}
+
 BLAST Parallelization
 ---------------------
 
@@ -139,6 +147,7 @@ about articles featuring BLAST is provided at the end.
 \video{Cloud}{4:44}{BLAST Parallelization}{https://www.youtube.com/watch?v=isc0MjkwTlk}
 \slides{Cloud}{Page 13}{BLAST Parallelization}{https://drive.google.com/open?id=0B88HKpainTSfdnFvY1V3dlFTRlE}
 \slides{Cloud}{Page 13}{BLAST Parallelization - pptx}{https://drive.google.com/open?id=0B88HKpainTSfcUkwN0l1VHBEdlU}
+
 SIMD vs MIMD;SPMD vs MPMD
 -------------------------
 
@@ -154,6 +163,7 @@ types of SIMD. SPMD and MPMD are two other types of model.
 \video{Cloud}{9:42}{SIMD vs MIMD;SPMD vs MPMD}{https://www.youtube.com/watch?v=zHQiR56Zmtc}
 \slides{Cloud}{Page 1}{SIMD vs MIMD;SPMD vs MPMD}{https://drive.google.com/open?id=0B88HKpainTSfT28zLTdKYWhGdGM}
 \slides{Cloud}{Page 1}{SIMD vs MIMD;SPMD vs MPMD - pptx}{https://drive.google.com/open?id=0B88HKpainTSfVGdyVzNjTzdfb3c}
+
 Data Locality
 -------------
 
@@ -168,6 +178,7 @@ available slots in terms of best local composition, not global.
 \video{Cloud}{8:36}{Data Locality}{https://www.youtube.com/watch?v=RqLA7_asK50}
 \slides{Cloud}{Page 10}{Data Locality}{https://drive.google.com/open?id=0B88HKpainTSfT28zLTdKYWhGdGM}
 \slides{Cloud}{Page 10}{Data Locality - pptx}{https://drive.google.com/open?id=0B88HKpainTSfVGdyVzNjTzdfb3c}
+
 Optimal Data Locality
 ---------------------
 
@@ -183,6 +194,7 @@ outperforming the others.
 \video{Cloud}{4:17}{Optimal Data Locality}{https://www.youtube.com/watch?v=Ok8vdrFXo5w}
 \slides{Cloud}{Page 17}{Optimal Data Locality}{https://drive.google.com/open?id=0B88HKpainTSfT28zLTdKYWhGdGM}
 \slides{Cloud}{Page 17}{Optimal Data Locality - pptx}{https://drive.google.com/open?id=0B88HKpainTSfVGdyVzNjTzdfb3c}
+
 Task Granularity
 ----------------
 
@@ -200,6 +212,7 @@ with either single or multiple jobs.
 \video{Cloud}{9:51}{Task Granularity}{https://www.youtube.com/watch?v=u9UpgTnOZz4}
 \slides{Cloud}{Page 29}{Task Granularity}{https://drive.google.com/open?id=0B88HKpainTSfT28zLTdKYWhGdGM}
 \slides{Cloud}{Page 29}{Task Granularity - pptx}{https://drive.google.com/open?id=0B88HKpainTSfVGdyVzNjTzdfb3c}
+
 Resource Utilization and Speculative Execution
 ----------------------------------------------
 

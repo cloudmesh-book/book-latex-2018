@@ -1,4 +1,4 @@
-Getting Started {#C:cc-start}
+Getting Started
 ===============
 
 We describe how you can get access to chameleon cloud under the
@@ -67,7 +67,7 @@ cloud name. You can already apply for an account name, but do not apply
 for a project. If you nevertheless apply for a project, we will hear
 from the administrators and you will receive a point deduction.
 
-Step 3: Start using Chameleon! {#using-chameleon}
+Step 3: Start using Chameleon!
 ------------------------------
 
 Now that you have enrolled and once you are added to the project by your

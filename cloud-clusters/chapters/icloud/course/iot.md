@@ -1,7 +1,5 @@
-Outdated: IoT {#sec:icloud-iot}
+Outdated: IoT
 =============
-
- 
 
 Everyday Data
 -------------

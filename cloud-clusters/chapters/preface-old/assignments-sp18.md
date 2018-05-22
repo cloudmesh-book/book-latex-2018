@@ -38,31 +38,20 @@ Week 1
 ------
 
 -   Watch the introduction video at: <https://youtu.be/yC3PNkb_9mI>
-
 -   Exercise [\[E:Piazza.1\]](#E:Piazza.1){reference-type="ref"
     reference="E:Piazza.1"} in Chapter on page
-
 -   Exercise [\[E:Piazza.2\]](#E:Piazza.2){reference-type="ref"
     reference="E:Piazza.2"} in Chapter on page
-
 -   Exercise [\[E:Piazza.3\]](#E:Piazza.3){reference-type="ref"
     reference="E:Piazza.3"} in Chapter on page
-
 -   Exercise [\[E:Documentation.1\]](#E:Documentation.1){reference-type="ref"
     reference="E:Documentation.1"} on page
-
 -   Exercise.Organization.1 e-organization
-
 -   Exercise.Organization.2 e-organization
-
 -   Exercise.Organization.3 e-organization
-
 -   Exercise.Organization.4 e-organization
-
 -   Exercise.Organization.5 e-organization
-
 -   Conduct the entry survey after you have done the above assignments:
-
 -   Learn about Piazza folders:
 
 Optional Assignment:

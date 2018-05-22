@@ -123,7 +123,7 @@ REST design support tools:
     generate code from swagger specifications, which we will explore in
     more detail.
 
-Flask RESTful Services {#s:rest-flask}
+Flask RESTful Services
 ----------------------
 
 Flask is a mocro services framework allowing to write web services in
@@ -215,7 +215,7 @@ happens in this example.
     if __name__ == '__main__':
         app.run(debug=True)
 
-Rest Services with Eve {#s:eve-intro}
+Rest Services with Eve
 ----------------------
 
 Next, we will focus on how to make a RESTful web service with Python
@@ -524,8 +524,8 @@ What does the `_items` section describe?
         }
     }
 
-\clearpage
-### Creating REST API Endpoints {#s:rest-api-endpoints}
+
+### Creating REST API Endpoints
 
 Next we wont to enhance our example a bit. First, let us get back to the
 eve working directory with
@@ -744,7 +744,7 @@ use the psutil library in python to retrieve the data, and then get
 these information into an string then populate a class called Computer
 and try to save the object like wise.
 
-### HATEOAS {#s:hateoas}
+### HATEOAS
 
 In the previous section we discussed the basic concepts about RESTful
 web service. Next we introduce you to the concept of HATEOAS

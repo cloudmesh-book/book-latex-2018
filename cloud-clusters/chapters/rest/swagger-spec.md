@@ -167,7 +167,7 @@ Node
 
 :   as part of a cluster.
 
-The Virtual Cluster example API Definition {#S:vcluster-spec}
+The Virtual Cluster example API Definition
 ------------------------------------------
 
 ### Terminology

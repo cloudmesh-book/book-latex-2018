@@ -1,4 +1,4 @@
-Outdated: IaaS {#sec:icloud-iaas}
+Outdated: IaaS
 ==============
 
  

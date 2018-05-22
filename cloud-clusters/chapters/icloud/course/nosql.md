@@ -1,7 +1,5 @@
-Outdated: NoSQL {#sec:icloud-nosql}
+Outdated: NoSQL
 ===============
-
- 
 
 RDBMS vs. NoSQL
 ---------------

@@ -1,4 +1,4 @@
-Charge Rates {#C:cc-charge}
+Charge Rates
 ============
 
 It is important to fully understand the charge rates of your VM and

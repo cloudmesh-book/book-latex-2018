@@ -23,7 +23,7 @@ installed. To avoid this it is bets to work in an isolated python we can
 use tools such as virtualenv, pyenv or pyvenv for 3.6.4[^1]. Which you
 use depends on you, but we highly recommend pyenv if you can.
 
-#### Managing Multiple Python Versions with Pyenv {#S:managing-multiple-python-versions-with-pyenv}
+#### Managing Multiple Python Versions with Pyenv
 
 Python has several versions that are used by the community. This
 includes Python 2 and Python 3, but alls different management of the
@@ -80,7 +80,7 @@ This is our recommended way to install pyenv on OSX:
     $ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
     $ echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
 
-##### Installation of Homebrew {#instalation-of-homebrew}
+##### Installation of Homebrew
 
 Before installing anything on your computer make sure you have enough
 space. Use in the terminal the command:
@@ -183,7 +183,7 @@ In the example above, ENV2 would represent python 2.7.13 while ENV3
 would represent python 3.6.4. Often it is easier to type the alias
 rather than the explicit version.
 
-##### Set up the Shell {#s:set-up-the-shell}
+##### Set up the Shell
 
 To make all work smoothly from your terminal, you can include the
 following in your `.bashrc` files:

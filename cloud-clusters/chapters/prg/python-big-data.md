@@ -221,7 +221,7 @@ the `matplotlib` gallery has many useful code examples.
 
 ### Summary of Useful Libraries
 
-#### Numpy {#s:numpy}
+#### Numpy
 
 -   <http://www.numpy.org/%7D>
 
@@ -263,9 +263,9 @@ Tutorial: <http://pandas.pydata.org/pandas-docs/stable/10min.html>
 Pandas Cheat Sheet:
 <https://github.com/pandas-dev/pandas/blob/master/doc/cheatsheet/Pandas_Cheat_Sheet.pdf>
 
-### Big Data Libraries {#other-useful-libraries}
+### Big Data Libraries
 
-#### Scipy {#s:scipy}
+#### Scipy
 
 -   <https://www.scipy.org/>
 

@@ -1,7 +1,5 @@
-Outdated: Search Engine {#C:search}
+Outdated: Search Engine
 =======================
-
- 
 
 Google Components
 -----------------

@@ -1,8 +1,6 @@
 Assignments
 ===========
 
- 
-
 The assignments are listed in chronological order. All assignments
 posted here are supposed to be conducted by you. There is a slight delay
 between assignments posted in piazza and the assignments in this section
@@ -242,10 +240,10 @@ Learning Outcome:
 -   You wil be exposed to various AI technologies and algorithms that
     you can explore further by integrating them in your project.
 
-Assignments E516, I524, E616 {#s:616-assignments}
+Assignments E516, I524, E616
 ----------------------------
 
-### Bio Post {#a:616-bio}
+### Bio Post
 
 [\[E:616-bio-piazza\]]{#E:616-bio-piazza label="E:616-bio-piazza"} **Bio
 Post on Piazza.** Please post a formal bio to piazza
@@ -293,7 +291,7 @@ Learning Outcomes:
     do i need to read all questions is the same as in a live lecture, do
     I need to listen to the instructor? I am sure you know the answer.
 
-### IU Google Services {#E:e616-iu-google-services}
+### IU Google Services
 
 [\[E:616-iu-google\]]{#E:616-iu-google label="E:616-iu-google"}
 
@@ -333,7 +331,7 @@ Learning Outcome:
     be done by the deadline. Yu need to start early as they take
     multiple weeks to complete.
 
-### Big Data Collaboration {#E:616-bigdata-collab}
+### Big Data Collaboration
 
 [\[E:616-big-data-and-collaboration\]]{#E:616-big-data-and-collaboration
 label="E:616-big-data-and-collaboration"} **Big data and
@@ -361,7 +359,7 @@ Learning Outcome:
 
 -   Use google docs for collaborative writing
 
-### New Technology List {#E:616-new-tech}
+### New Technology List
 
 **Technology List** due Jan 29, 2018
 
@@ -392,7 +390,7 @@ Learning Outcome:
 
 -   Identify a unique technology that you explore further.
 
-### New Technology Abstract {#E:616-new-tech-abstract}
+### New Technology Abstract
 
 **Technology Abstract** due Feb 5, 2018
 
@@ -467,7 +465,7 @@ Learning Outcome:
 -   Learn how to upload your document to github (you will need this for
     all work from now on)
 
-### Cloud Accounts {#a:accounts}
+### Cloud Accounts
 
 **Account Creation: github.com**. If you do not have a github.com
 account, go to github.com and apply for a <https://github.com> account.
@@ -502,7 +500,7 @@ Learning Outcome:
     repository is viewable. As we are working as prat of this class as
     open source project it is natural that all work is done in the open.
 
-### Entry Survey {#a:survey-entry}
+### Entry Survey
 
 Please fill out the following survey ASAP as it will determine some of
 the class material we prepare based on your feedback. The survey is
@@ -535,7 +533,7 @@ Learning Outcome:
 -   Setting up your github repository. Letting us know who you are.
     Filling out a form
 
-### REST {#E:REST-a}
+### REST
 
 Read the Sections Overview of Rest
 Section [\[c:rest\]](#c:rest){reference-type="ref" reference="c:rest"}
@@ -581,7 +579,7 @@ Learning Outcome:
 -   You wil be exposed to various AI technologies and algorithms that
     you can explore further by integrating them in your project.
 
-### Swagger REST Services {#E:REST-swagger}
+### Swagger REST Services
 
 #### PART A: Elementary Swagger Server
 
@@ -816,7 +814,7 @@ Learning Outcome:
 
 -   Learn how to use a simple container.
 
-### Technology Paper {#E:616-tech-paper}
+### Technology Paper
 
 **Technology Paper** due March 20, 2018
 
@@ -856,7 +854,7 @@ Learning Outcome:
 -   In your final project report it is likely you need to write similar
     to this report 2 pages to introduce the project
 
-### Tutorial {#E:616-tutorial}
+### Tutorial
 
 **Tutorial** due March 26, 2018
 
@@ -911,7 +909,7 @@ Learning Outcome:
     section in which you explain to execute your project. This
     assignment helps you on how to do that.
 
-### Project {#E:project}
+### Project
 
 The policies and format about the project are discussed in Sections
 [\[s:project-format\]](#s:project-format){reference-type="ref"
@@ -959,7 +957,7 @@ Learning Outcome:
 
 -   Learn how to use virtual machines or containers or both.
 
-Assignments I523 {#s:i523-assignment}
+Assignments I523
 ----------------
 
 ### Open Source Efforts

@@ -29,7 +29,7 @@ Prerequisites
     Section[\[s:s:twister2-extras\]](#s:s:twister2-extras){reference-type="ref"
     reference="s:s:twister2-extras"}
 
-### Maven Installation {#s:s:twister2-maven}
+### Maven Installation
 
 Execute the following commands to install Maven locally.
 
@@ -50,7 +50,7 @@ Add the following line at the end of the file.
 
       source ~/.bashrc
 
-### OpenMPI Installation {#s:s:twister2-openmpi}
+### OpenMPI Installation
 
 For Twister2, the recommended version is `Open MPI 3.0.0`. Execute the
 following commands to install Open MPI locally.
@@ -89,7 +89,7 @@ Install the following command to add this as an maven artifact,
 
       mvn install:install-file -DcreateChecksum=true -Dpackaging=jar -Dfile=$OMPI_300/ompi/mpi/java/java/mpi.jar -DgroupId=ompi -DartifactId=ompijavabinding -Dversion=3.0.0
 
-### Bazel Installation {#s:s:twister2-bazel}
+### Bazel Installation
 
 For this installation, `Bazel 0.8.1` is recommended. Execute the
 following commands to install Bazel,

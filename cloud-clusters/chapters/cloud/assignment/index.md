@@ -1,7 +1,7 @@
 Assignments :o:
 ===========
 
-Assignment 0 - Identify Technologies {#assignment-0}
+Assignment 0 - Identify Technologies
 ------------------------------------
 
 Assignment 0 will require you to identify the different software

@@ -48,7 +48,8 @@ Comparisons of different methods, Coefficient of Determination, Another,
 Sabermetrics Example, Summary of Sabermetrics.
 
 [:clapper: Sport 30:43 Wins Above Replacement](https://www.youtube.com/watch?v=D6PHqPor4LA)
-Advanced Sabermetrics {#sports-informatics-ii-sabermetrics-advanced}
+
+Advanced Sabermetrics
 ---------------------
 
 This unit discusses 'advanced sabermetrics' covering advances possible

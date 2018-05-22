@@ -1,7 +1,7 @@
 Introduction to Virtual Machines
 ================================
 
-QEMU and KVM {#s:motivation-qemu-kvm}
+QEMU and KVM
 ------------
 
 We discuss the underlying virtualization technologies used by OpenStack

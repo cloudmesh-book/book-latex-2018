@@ -1,6 +1,4 @@
- 
-
-Project Ideas {#s:project-ideas}
+Project Ideas
 =============
 
 For the format and the details about artifacts produced in general for
@@ -93,7 +91,7 @@ The raspberry PI projects are divided topically by class. While 516
 focusses on map reduce 616 and 524 are focussing on containers.
 Exceptions could be allowed with proper reasoning.
 
-### e516 {#s:idea-project-pi-spark}
+### e516
 
 In this project you will be developing or leveraging form an existing
 tutorial developed as part of the class. You will be focussing on how to

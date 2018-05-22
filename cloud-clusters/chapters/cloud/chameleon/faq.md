@@ -25,7 +25,7 @@ cluster should be configured and contextualized. You can read more about
 them in the [Complex Appliances
 documentation](https://www.chameleoncloud.org/docs/complex-appliances/).
 
-### What is the Appliance Catalog? {#what-is-the-chameleon-appliance-catalog}
+### What is the Appliance Catalog?
 
 [The Chameleon Appliance
 Catalog](https://www.chameleoncloud.org/appliances/) is a repository
@@ -34,7 +34,7 @@ appliance catalog contains useful images of both bare metal and virtual
 machine appliances supported by the Chameleon team as well appliances
 contributed by users.
 
-### How do I publish an appliance in the Appliance Catalog? {#how-do-i-publish-an-appliance-in-the-chameleon-appliance-catalog}
+### How do I publish an appliance in the Appliance Catalog?
 
 The new Appliance Catalog allows you to easily publish and share your
 own appliances so that others can discover them and use them either to
@@ -85,7 +85,7 @@ As always, if you encounter any problems or want to share with us
 additional improvements we should do to the process, please don't
 hesitate to [submit a ticket](https://www.chameleoncloud.org/help/).
 
-### How can I manage an appliance on Appliance Catalog? {#how-can-i-manage-an-appliance-on-chameleon-appliance-catalog}
+### How can I manage an appliance on Appliance Catalog?
 
 If you are the owner of the appliance, you can edit the appliance data,
 such as the description or the support information. Browse to the
@@ -102,7 +102,7 @@ asked to confirm once more that you do want to delete this appliance.
 After confirming, the appliance will be removed and no longer listed on
 the Appliance Catalog.
 
-### Why are there different image IDs for the same appliance? {#why-are-there-different-image-ids-for-kvmtacc-chitacc-and-chiuc-for-the-same-appliance}
+### Why are there different image IDs for the same appliance?
 
 The three clouds forming the Chameleon testbed are fully separated, each
 having its own Glance image repository. The same appliance image
@@ -111,7 +111,7 @@ uploaded to the three clouds will produce three different image IDs.
 In addition, it is sometimes needed to customize an appliance image for
 each site, resulting in slightly different image files.
 
-### Can I use another operating system on bare-metal? {#can-i-useubuntudebian-oranother-operating-system-rather-than-centos-on-bare-metal}
+### Can I use another operating system on bare-metal?
 
 The recommended appliance for Chameleon is CentOS 7 (supported by
 Chameleon staff), or appliances built on top of it.\

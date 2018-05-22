@@ -1,7 +1,7 @@
 GrovePi Modules
 ===============
 
-Introduction {#intro}
+Introduction
 ------------
 
 -   [Electronics](http://www.instructables.com/id/Basic-Electronics): An

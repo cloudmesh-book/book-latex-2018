@@ -1,6 +1,4 @@
- 
-
-Grading {#s:grading}
+Grading
 =======
 
 Grading for homework will be done within reasonable time of the

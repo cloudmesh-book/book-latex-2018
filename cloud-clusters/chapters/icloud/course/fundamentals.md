@@ -1,6 +1,4 @@
- 
-
-Introduction to Cloud Computing {#s:icloud-fundamentals}
+Introduction to Cloud Computing
 ===============================
 
 This introduction to Cloud Computing covers all aspects of the field
@@ -9,7 +7,7 @@ the Gartner group on future Industry trends. The presentation is broken
 into 21 parts starting with a survey of all the material covered. Note
 this first part is A while the substance of the talk is in parts B to U.
 
-Introduction - Part A {#s:cloud-fundamentals-a}
+Introduction - Part A
 ---------------------
 
 -   Parts B to D **define cloud computing**, its key concepts and how it
@@ -71,7 +69,7 @@ Introduction - Part A {#s:cloud-fundamentals-a}
 \slides{Cloud}{7 Slides}{Introduction - Part A}{https://drive.google.com/open?id=17_voZxBdqiLicJKzroQ2DzjW4zvp0VYb}
 This lecture describes the contents of the following 20 parts (B to U).
 
-Introduction - Part B - Defining Clouds I {#s:cloud-fundamentals-b}
+Introduction - Part B - Defining Clouds I
 -----------------------------------------
 
 \video{Cloud}{20:22}{Part B - Defining Clouds I}{https://drive.google.com/open?id=1iGv6GG2b2th_RL3kQX6P04Y0AyuUxQcj}
@@ -87,7 +85,7 @@ Introduction - Part B - Defining Clouds I {#s:cloud-fundamentals-b}
 
 -   Typical data center
 
-Introduction - Part C - Defining Clouds II {#s:cloud-fundamentals-c}
+Introduction - Part C - Defining Clouds II
 ------------------------------------------
 
 \video{Cloud}{20:45}{Part C - Defining Clouds II}{https://drive.google.com/open?id=1nU9HlqDe_vEZR1MlOq2XibnoHmaygo-H}
@@ -104,7 +102,7 @@ Introduction - Part C - Defining Clouds II {#s:cloud-fundamentals-c}
 -   Initial Gartner comments on clouds (they are now the norm) and
     evolution of servers; serverless and microservices
 
-Introduction - Part D - Defining Clouds III {#s:cloud-fundamentals-d}
+Introduction - Part D - Defining Clouds III
 -------------------------------------------
 
 \video{Cloud}{9:08}{Part D - Defining Clouds III}{https://drive.google.com/open?id=1Qayxfwuc_qSeCzaIpHj3-F0N7TONvM5L}
@@ -117,7 +115,7 @@ Introduction - Part D - Defining Clouds III {#s:cloud-fundamentals-d}
 
 -   How much money do they make?
 
-Introduction - Part E - Virtualization {#s:cloud-fundamentals-e}
+Introduction - Part E - Virtualization
 --------------------------------------
 
 \video{Cloud}{11:21}{Part E - Virtualization}{https://drive.google.com/open?id=1EC-eOYuBOV1qMojSg4Mg50doPqjAY0Hr}
@@ -131,7 +129,7 @@ Introduction - Part E - Virtualization {#s:cloud-fundamentals-e}
 
 -   Several web resources are listed
 
-Introduction - Part F - Technology Hypecycle I {#s:cloud-fundamentals-f}
+Introduction - Part F - Technology Hypecycle I
 ----------------------------------------------
 
 \video{Cloud}{13:41}{Part F - Technology Hypecycle I}{https://drive.google.com/open?id=1_M0HDemFmykAq4iPuQ0MHYIW0kffHuMa}
@@ -151,7 +149,7 @@ Introduction - Part F - Technology Hypecycle I {#s:cloud-fundamentals-f}
 
 -   Hypecycle and Priority Matrix for Data Center Infrastructure 2017
 
-Introduction - Part G - Technology Hypecycle II {#s:cloud-fundamentals-g}
+Introduction - Part G - Technology Hypecycle II
 -----------------------------------------------
 
 \video{Cloud}{16:05}{Part G - Technology Hypecycle II}{https://drive.google.com/open?id=19k6os58_OCCsmbusWQ6z6n9hwVmmd163}
@@ -167,7 +165,7 @@ Introduction - Part G - Technology Hypecycle II {#s:cloud-fundamentals-g}
 
 -   The route to Digital Business (2015)
 
-Introduction - Part H - IaaS I {#s:cloud-fundamentals-h}
+Introduction - Part H - IaaS I
 ------------------------------
 
 \video{Cloud}{13:22}{Part H - IaaS I}{https://drive.google.com/open?id=1_lH7ou_UQOMMfdSSQLrqZr8yJZIr7rC0}
@@ -181,7 +179,7 @@ Introduction - Part H - IaaS I {#s:cloud-fundamentals-h}
 -   Green computing and fraction of world's computing ecosystem in
     clouds
 
-Introduction - Part I - IaaS II {#s:cloud-fundamentals-i}
+Introduction - Part I - IaaS II
 -------------------------------
 
 \video{Cloud}{13:13}{Part I - IaaS II}{https://drive.google.com/open?id=1UwBzSKK-iHYW7aRCS_f4BoXNYxUb476i}
@@ -195,7 +193,7 @@ Introduction - Part I - IaaS II {#s:cloud-fundamentals-i}
 
 -   The emergence of artificial intelligence as a dominant force
 
-Introduction - Part J - Cloud Software {#s:cloud-fundamentals-j}
+Introduction - Part J - Cloud Software
 --------------------------------------
 
 \video{Cloud}{37:56}{Part J - Cloud Software}{https://drive.google.com/open?id=1tasT1lJE_7pwowuk0D68M7rgW1gtv3im}
@@ -217,7 +215,7 @@ Introduction - Part J - Cloud Software {#s:cloud-fundamentals-j}
 
 .
 
-Introduction - Part K - Applications I {#s:cloud-fundamentals-k}
+Introduction - Part K - Applications I
 --------------------------------------
 
 \video{Cloud}{11:58}{Part K - Applications I}{https://drive.google.com/open?id=1BzpXNqs3Ai_QlSsjxSV6Q3FevZt1BPj-}
@@ -231,7 +229,7 @@ Introduction - Part K - Applications I {#s:cloud-fundamentals-k}
 
 .
 
-Introduction - Part L - Applications II {#s:cloud-fundamentals-l}
+Introduction - Part L - Applications II
 ---------------------------------------
 
 \video{Cloud}{13:03}{Part L - Applications II}{https://drive.google.com/open?id=1pIjcar6SZSelWiR6dv4lhnsmweDarNXR}
@@ -244,7 +242,7 @@ Introduction - Part L - Applications II {#s:cloud-fundamentals-l}
 
 -   Artificial Intelligence from Gartner
 
-Introduction - Part M - Applications III {#s:cloud-fundamentals-m}
+Introduction - Part M - Applications III
 ----------------------------------------
 
 \video{Cloud}{24:12}{Part M - Applications III}{https://drive.google.com/open?id=16rb0zZafTLoYhT638qc4IRorOk5qgRP-}
@@ -257,7 +255,7 @@ Introduction - Part M - Applications III {#s:cloud-fundamentals-m}
 
 -   Different types of MapReduce
 
-Introduction - Part N - Parallelism {#s:cloud-fundamentals-n}
+Introduction - Part N - Parallelism
 -----------------------------------
 
 \video{Cloud}{35:46}{Part N - Parallelism}{https://drive.google.com/open?id=1apuvCaKlQBZp8FjvqN9It5bJhfXmf1kg}
@@ -270,7 +268,7 @@ Introduction - Part N - Parallelism {#s:cloud-fundamentals-n}
 
 -   What is hard to do?
 
-Introduction - Part O - Storage {#s:cloud-fundamentals-o}
+Introduction - Part O - Storage
 -------------------------------
 
 \video{Cloud}{19:22}{Part O - Storage}{https://drive.google.com/open?id=1_A51jrlzKYKhQvefXbJPs0J4GiCCQ1et}
@@ -281,7 +279,7 @@ Introduction - Part O - Storage {#s:cloud-fundamentals-o}
 
 -   Repositories, File Systems, Data lakes
 
-Introduction - Part P - HPC in the Cloud {#s:cloud-fundamentals-p}
+Introduction - Part P - HPC in the Cloud
 ----------------------------------------
 
 \video{Cloud}{19:29}{Part P - HPC in the Clou}{https://drive.google.com/open?id=1u5z9-GY1Hecp8nR47Gxe8506NnhHduF1}
@@ -294,7 +292,7 @@ Introduction - Part P - HPC in the Cloud {#s:cloud-fundamentals-p}
 
 -   Science Computing Environments
 
-Introduction - Part Q - Analytics and Simulation {#s:cloud-fundamentals-q}
+Introduction - Part Q - Analytics and Simulation
 ------------------------------------------------
 
 \video{Cloud}{16:19}{Part Q - Analytics and Simulation}{https://drive.google.com/open?id=1vmtpndTlmtV4DzUtl04_nWo9DCR84mIM}
@@ -307,7 +305,7 @@ Introduction - Part Q - Analytics and Simulation {#s:cloud-fundamentals-q}
 
 -   Languages
 
-Introduction - Part R - Jobs {#s:cloud-fundamentals-r}
+Introduction - Part R - Jobs
 ----------------------------
 
 \video{Cloud}{4:52}{Part R - Jobs}{https://drive.google.com/open?id=1JMNPLdbS81Hfi5P7irDUy7kna35jpU6j}
@@ -322,7 +320,7 @@ Introduction - Part R - Jobs {#s:cloud-fundamentals-r}
 
 -   Data Science/Engineering
 
-Introduction - Part S - The Future {#s:cloud-fundamentals-s}
+Introduction - Part S - The Future
 ----------------------------------
 
 \video{Cloud}{19:46}{Part S - The Future}{https://drive.google.com/open?id=1kgbrDiDNj0DKYi_ICvOXYeFZ32R1JH2_}
@@ -339,7 +337,7 @@ Introduction - Part S - The Future {#s:cloud-fundamentals-s}
 
     -   Microservices
 
-Introduction - Part T - Security {#s:cloud-fundamentals-t}
+Introduction - Part T - Security
 --------------------------------
 
 \video{Cloud}{11:29}{Part T - Security}{https://drive.google.com/open?id=1TQsCuR-2C6D_OJeJH818WO5-OBrA8Spo}
@@ -350,7 +348,7 @@ Introduction - Part T - Security {#s:cloud-fundamentals-t}
 
 -   Blockchain
 
-Introduction - Part U - Fault Tolerance {#s:cloud-fundamentals-u}
+Introduction - Part U - Fault Tolerance
 ---------------------------------------
 
 \video{Cloud}{9:10}{Part U - Fault Tolerance}{https://drive.google.com/open?id=1jRpkdGCT-sQRb6pOGrW-qG58A_HYfr9W}

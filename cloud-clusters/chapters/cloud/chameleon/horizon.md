@@ -1,4 +1,4 @@
-Horizon Graphical User Interface {#C:cc-horizon}
+Horizon Graphical User Interface
 ================================
 
 Configure resources

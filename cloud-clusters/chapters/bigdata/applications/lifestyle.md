@@ -1,4 +1,4 @@
-e-Commerce and LifeStyle {#c:e-commerce}
+e-Commerce and LifeStyle
 ========================
 
 Recommender systems operate under the hood of such widely recognized

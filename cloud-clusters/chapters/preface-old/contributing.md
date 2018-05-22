@@ -1,4 +1,4 @@
-Contributing {#S:contributing}
+Contributing
 ============
 
 The document is managed in LaTeX and is stored on github. Thus creating

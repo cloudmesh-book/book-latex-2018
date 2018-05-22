@@ -254,7 +254,7 @@ yourself a new username and use this if you like to use cygwin.
 You can selectively install from the cygwin setup terminal which
 software you like to use, obviously you may want to use ssh
 
-### SSH from putty {#S:putty}
+### SSH from putty
 
 As you will see the process is somewhat cumbersome and when you compare
 it with the commandline tools available, we do recommend using them

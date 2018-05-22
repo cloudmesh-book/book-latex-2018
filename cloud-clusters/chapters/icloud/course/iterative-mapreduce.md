@@ -1,7 +1,5 @@
-Outdated: Iterative Map Reduce {#sec:icloud-iterative-mapreduce}
+Outdated: Iterative Map Reduce
 ==============================
-
- 
 
 Introduction to MapReduce
 -------------------------
@@ -13,6 +11,7 @@ considerably over the course of a single decade.
 
 \video{Cloud}{9:00}{MapReduce Refresher}{https://www.youtube.com/watch?v=0TRTdzgC_N0}
 \slides{Cloud}{Page 1}{MapReduce Refresher}{https://drive.google.com/open?id=10IDob_Ytec3pLNFjY-aOLjDaC6owXVYw}
+
 Google Search Engine 1
 ----------------------
 
@@ -27,6 +26,7 @@ queries.
 \video{Cloud}{8:04}{Google Search Engine 1}{https://www.youtube.com/watch?v=S2oT7uMw5Yg}
 \slides{Cloud}{Page 15}{Google Search Engine 1}{https://drive.google.com/open?id=0B88HKpainTSfYWZ0dDlrNThkVms}
 \slides{Cloud}{Page 15}{Google Search Engine 1 - pptx}{https://drive.google.com/open?id=0B88HKpainTSfcHg4cV8wRzQwU3M}
+
 Google Search Engine 2
 ----------------------
 
@@ -44,6 +44,7 @@ initial Google proposal paper follows.
 \video{Cloud}{8:32}{Google Search Engine 2}{https://www.youtube.com/watch?v=pxos3Yt6y6I}
 \slides{Cloud}{Page 21}{Google Search Engine 2}{https://drive.google.com/open?id=0B88HKpainTSfYWZ0dDlrNThkVms}
 \slides{Cloud}{Page 21}{Google Search Engine 2 - pptx}{https://drive.google.com/open?id=0B88HKpainTSfcHg4cV8wRzQwU3M}
+
 Hadoop PageRank
 ---------------
 
@@ -55,6 +56,7 @@ its application.
 \video{Cloud}{7:58}{Hadoop PageRank}{https://www.youtube.com/watch?v=GCp5OLLOrH0}
 \slides{Cloud}{Page 1}{Hadoop PageRank}{https://drive.google.com/open?id=0B88HKpainTSfWFpEZGxqSWRTYms}
 \slides{Cloud}{Page 1}{Hadoop PageRank - pptx}{https://drive.google.com/open?id=0B88HKpainTSfUXB1Z2JPa2FfOXc}
+
 Discussions and ParallelThinking
 --------------------------------
 
@@ -83,6 +85,7 @@ capabilities is included.
 
 \video{Cloud}{5:37}{Hadoop Extensions}{https://www.youtube.com/watch?v=gS7TImRZZ1g}
 \slides{Cloud}{Page 50}{Hadoop Extensions}{https://drive.google.com/open?id=10IDob_Ytec3pLNFjY-aOLjDaC6owXVYw}
+
 Iterative MapReduce Models
 --------------------------
 
@@ -96,6 +99,7 @@ communication of scientific applications.
 \video{Cloud}{6:46}{Iterative MapReduce Models}{https://www.youtube.com/watch?v=CXDdWmAWIvk}
 \slides{Cloud}{Page 1}{Iterative MapReduce Models}{https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms}
 \slides{Cloud}{Page 1}{Iterative MapReduce Models - pptx}{https://drive.google.com/open?id=0B88HKpainTSfM2FjLXRmRVU0SUU}
+
 Parallel Processes
 ------------------
 
@@ -113,6 +117,7 @@ features and programming languages.
 \video{Cloud}{9:44}{Parallel Processes}{https://www.youtube.com/watch?v=JAYvkIZ8TuE}
 \slides{Cloud}{Page 4}{Parallel Processes}{https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms}
 \slides{Cloud}{Page 4}{Parallel Processes - pptx}{https://drive.google.com/open?id=0B88HKpainTSfM2FjLXRmRVU0SUU}
+
 Static and Variable Data
 ------------------------
 
@@ -140,6 +145,7 @@ failed iterations. A list of Twister APIs is given.
 \video{Cloud}{11:01}{Static and Variable Data}{https://www.youtube.com/watch?v=UJHQ3VvWOTA}
 \slides{Cloud}{Page 10}{Static and Variable Data}{https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms}
 \slides{Cloud}{Page 10}{Static and Variable Data - pptx}{https://drive.google.com/open?id=0B88HKpainTSfM2FjLXRmRVU0SUU}
+
 MapReduce Model Comparison
 --------------------------
 
@@ -154,6 +160,7 @@ or is close to the competition.
 \video{Cloud}{6:56}{MapReduce Model Comparison}{https://www.youtube.com/watch?v=n7RVGrC-wcs}
 \slides{Cloud}{Page 24}{MapReduce Model Comparison}{https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms}
 \slides{Cloud}{Page 24}{MapReduce Model Comparison - pptx}{https://drive.google.com/open?id=0B88HKpainTSfM2FjLXRmRVU0SUU}
+
 Twister K-means
 ---------------
 
@@ -173,6 +180,7 @@ MPI.
 \video{Cloud}{7:28}{Twister K-means}{https://www.youtube.com/watch?v=-G5jlzABo-Y}
 \slides{Cloud}{Page 34}{Twister K-means}{https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms}
 \slides{Cloud}{Page 34}{Twister K-means - pptx}{https://drive.google.com/open?id=0B88HKpainTSfM2FjLXRmRVU0SUU}
+
 Coding and Iterative Alternatives
 ---------------------------------
 

@@ -1,4 +1,4 @@
-Draft: Plotting with matplotlib {#matplotlib}
+Draft: Plotting with matplotlib
 -------------------------------
 
 A brief overview of plotting with matplotlib along with examples is

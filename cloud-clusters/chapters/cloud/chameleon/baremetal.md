@@ -1,4 +1,4 @@
-Bare Metal {#C:cc-baremetal}
+Bare Metal
 ==========
 
 In this page you will find documentation guiding you through the

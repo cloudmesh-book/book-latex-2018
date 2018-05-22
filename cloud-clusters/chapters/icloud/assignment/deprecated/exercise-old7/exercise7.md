@@ -1,5 +1,4 @@
-\maketitle
-Goal {#goal .unnumbered .unnumbered}
+Goal
 ====
 
 The goal of this project is to familiarize yourself with the concept of
@@ -7,13 +6,13 @@ map-collective applications. Harp is similar to MapReduce in programming
 with the exception that it provides collective communication support
 across map tasks.
 
-Deliverables {#deliverables .unnumbered .unnumbered}
+Deliverables
 ============
 
 Zip your source code and output as username\_harp-kmeans.zip. Please
 submit this file to the Canvas Assignments page.
 
-Evaluation {#evaluation .unnumbered .unnumbered}
+Evaluation
 ==========
 
 The point total for this project is 20, where the distribution is as
@@ -23,7 +22,7 @@ follows:
 
 -   Correct output (4 points)
 
-Prerequisites {#prerequisites .unnumbered .unnumbered}
+Prerequisites
 =============
 
 -   Before working on Harp K-Means, make sure you can successfully run
@@ -40,7 +39,7 @@ Prerequisites {#prerequisites .unnumbered .unnumbered}
     this is within the **javac** tag of the **build.xml**\
     **\<include name="edu/iu/simplekmeans/\*\*" /\>**
 
-K-Means Clustering Algorithm {#k-means-clustering-algorithm .unnumbered .unnumbered}
+K-Means Clustering Algorithm
 ============================
 
 K-Means is a clustering algorithm to partition $n$ observations
@@ -61,7 +60,7 @@ height="2cm"}
 
 ![K-Means Clustering for MapReduce](p7-2){width="8cm" height="6cm"}
 
-Harp Data Structure {#harp-data-structure .unnumbered .unnumbered}
+Harp Data Structure
 ===================
 
 The main data structure used for this assignment is
@@ -80,7 +79,7 @@ invoke **getPartitionID()** method on the same ArrPartition object.
 
 ![Parallelization of K-means Clustering](p7-3){width="8cm" height="5cm"}
 
-Harp Implementation {#harp-implementation .unnumbered .unnumbered}
+Harp Implementation
 ===================
 
 Most of the code is completed for you; your task will be to perform the
@@ -97,7 +96,7 @@ FindingNearestCenter.java
 
 INPUT UpdatingCenters.java
 
-Compilation and Running {#compilation-and-running .unnumbered .unnumbered}
+Compilation and Running
 =======================
 
 -   To compile the code, simply go into

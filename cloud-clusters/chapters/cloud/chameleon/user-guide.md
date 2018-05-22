@@ -1,4 +1,4 @@
-OpenStack Virtual Machines {#C:cc-guide}
+OpenStack Virtual Machines
 ==========================
 
 OpenStack is an Infrastructure as a Service (IaaS) platform that allows
@@ -13,7 +13,7 @@ This tutorial provide basic information about how to use the OpenStack
 web interface and provides some information specific to using OpenStack
 KVM on Chameleon.
 
-Web Interface {#web-interface-horizon}
+Web Interface
 -------------
 
 An easy way to use OpenStack KVM on Chameleon is via the [OpenStack web

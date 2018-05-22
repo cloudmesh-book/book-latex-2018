@@ -1,7 +1,5 @@
-Installation of Hadoop {#s:hadoop-local-installation}
+Installation of Hadoop
 ======================
-
- 
 
 In this section we use Hadoop 3.0.1 and we install Hadoop locally in
 Ubuntu 16.04. We also describe the instalation of the Yarn resource
@@ -99,7 +97,7 @@ Now execute the following commands to download and install java
     wget -c --header "Cookie: oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u161-b12/2f38c3b165be4555a1fa6e98c45e0808/jdk-8u161-linux-x64.tar.gz"
     tar xvzf jdk-8u161-linux-x64.tar.gz
 
-Installation of Hadoop {#installation-of-hadoop}
+Installation of Hadoop
 ----------------------
 
 First we will take a look on how to install Hadoop 3.0.1 on Ubuntu

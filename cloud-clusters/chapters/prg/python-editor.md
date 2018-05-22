@@ -5,7 +5,7 @@ This section is meant to give an overview of the python editing tools
 needed for doing for this course. There are many other alternatives,
 however, we do recommend to use PyCharm.
 
-### Pycharm {#s:pycharm}
+### Pycharm
 
 PyCharm is an Integrated Development Environment (IDE) used for
 programming in Python. It provides code analysis, a graphical debugger,

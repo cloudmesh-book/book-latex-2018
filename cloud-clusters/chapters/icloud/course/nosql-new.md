@@ -1,7 +1,5 @@
-NoSQL {#c:nosql}
+NoSQL
 =====
-
- 
 
 RDBMS vs. NoSQL
 ---------------
@@ -14,6 +12,7 @@ scalability and how NoSQL fits into the picture in terms of big data.
 \video{Cloud}{9:22}{RDBMS vs. NoSQL}{https://www.youtube.com/watch?v=dJunqER9lb8}
 \slides{Cloud}{Page 1}{RDBMS vs. NoSQL}{https://drive.google.com/open?id=0B88HKpainTSfaDFNbjNiMm44bnc}
 \slides{Cloud}{Page 1}{RDBMS vs. NoSQL - pptx}{https://drive.google.com/open?id=0B88HKpainTSfNnQ5SEVKTm1tRk0}
+
 NoSQL Characteristics
 ---------------------
 
@@ -36,6 +35,7 @@ wide column models.
 \video{Cloud}{10:31}{NoSQL Characteristics}{https://www.youtube.com/watch?v=BjtTDiKhqk8}
 \slides{Cloud}{Page 11}{NoSQL Characteristics}{https://drive.google.com/open?id=0B88HKpainTSfaDFNbjNiMm44bnc}
 \slides{Cloud}{Page 11}{NoSQL Characteristics - pptx}{https://drive.google.com/open?id=0B88HKpainTSfNnQ5SEVKTm1tRk0}
+
 ### Document Model
 
 Relational databases store data in rows and columns, the class of NoSQL
@@ -76,6 +76,7 @@ family has a primary key that can be queried in order to retrieve the
 data.
 
 \URL{https://www.mongodb.com/collateral/top-5-considerations-when-evaluating-nosql-databases}
+
 BigTable
 --------
 
@@ -89,6 +90,7 @@ Google like their search engine and Google Earth.
 \video{Cloud}{6:55}{BigTable}{https://www.youtube.com/watch?v=JAlz9AI5I-M}
 \slides{Cloud}{Page 28}{BigTable}{https://drive.google.com/open?id=0B88HKpainTSfaDFNbjNiMm44bnc}
 \slides{Cloud}{Page 28}{BigTable - pptx}{https://drive.google.com/open?id=0B88HKpainTSfNnQ5SEVKTm1tRk0}
+
 HBase
 -----
 
@@ -112,6 +114,7 @@ HBase and connecting to it.
 \slides{Cloud}{Page 60}{HBase Coding}{https://drive.google.com/open?id=0B88HKpainTSfaDFNbjNiMm44bnc}
 \slides{Cloud}{Page 60}{HBase Coding -
   pptx}{https://drive.google.com/open?id=0B88HKpainTSfNnQ5SEVKTm1tRk0}
+
 Draft: MongoDB
 --------------
 
@@ -126,6 +129,7 @@ MongoDB are its ease of scalability, lack of complex joins, schema-less,
 use of internal memory and the support for dynamic queriers.
 
 \URL{https://www.tutorialspoint.com/mongodb/mongodb_quick_guide.htm}
+
 Indexing Applications
 ---------------------
 
@@ -141,6 +145,7 @@ query, analysis, and visualization.
 \video{Cloud}{9:33}{Indexing Applications}{https://www.youtube.com/watch?v=MxgabfoGH-M}
 \slides{Cloud}{Page 1}{Indexing Applications}{https://drive.google.com/open?id=0B88HKpainTSfWUh6dVNHcXloSnc}
 \slides{Cloud}{Page 1}{Indexing Applications - pptx}{https://drive.google.com/open?id=0B88HKpainTSfZkJpLTNIbDJ1dVU}
+
 Related Work
 ------------
 
@@ -154,6 +159,7 @@ topics. Customizability of indexing among NoSQL databases is desirable.
 \video{Cloud}{5:56}{Related Work}{https://www.youtube.com/watch?v=NDjAdFSVzxo}
 \slides{Cloud}{Page 11}{Related Work}{https://drive.google.com/open?id=0B88HKpainTSfWUh6dVNHcXloSnc}
 \slides{Cloud}{Page 11}{Related Work - pptx}{https://drive.google.com/open?id=0B88HKpainTSfZkJpLTNIbDJ1dVU}
+
 Indexamples
 -----------
 
@@ -167,6 +173,7 @@ or retweet status.
 \video{Cloud}{8:35}{Indexamples}{https://www.youtube.com/watch?v=Ec3VFeTGuo8}
 \slides{Cloud}{Page 15}{Indexamples}{https://drive.google.com/open?id=0B88HKpainTSfWUh6dVNHcXloSnc}
 \slides{Cloud}{Page 15}{Indexamples - pptx}{https://drive.google.com/open?id=0B88HKpainTSfZkJpLTNIbDJ1dVU}
+
 Indexing 101
 ------------
 
@@ -186,6 +193,7 @@ for large-scale data.
 \video{Cloud}{9:53}{Indexing 101}{https://www.youtube.com/watch?v=eKQaLkw-HBU}
 \slides{Cloud}{Page 20}{Indexing 101}{https://drive.google.com/open?id=0B88HKpainTSfWUh6dVNHcXloSnc}
 \slides{Cloud}{Page 20}{Indexing 101 - pptx}{https://drive.google.com/open?id=0B88HKpainTSfZkJpLTNIbDJ1dVU}
+
 Social Media Searches
 ---------------------
 
@@ -198,6 +206,7 @@ A diagram displays an indexing setup for social media data with YARN.
 \video{Cloud}{6:19}{Social Media Searches}{https://www.youtube.com/watch?v=a3tcL-Qw9to}
 \slides{Cloud}{Page 28}{Social Media Searches}{https://drive.google.com/open?id=0B88HKpainTSfWUh6dVNHcXloSnc}
 \slides{Cloud}{Page 28}{Social Media Searches - pptx}{https://drive.google.com/open?id=0B88HKpainTSfZkJpLTNIbDJ1dVU}
+
 Analysis Algorithms
 -------------------
 

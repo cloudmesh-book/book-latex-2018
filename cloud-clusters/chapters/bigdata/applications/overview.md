@@ -139,7 +139,7 @@ allowing them to refine and improve the customer experiences.
 Data Deluge and Scientific Applications and Methodology
 -------------------------------------------------------
 
-### Overview of Data Science {#overview}
+### Overview of Data Science
 
 We continue the discussion of the data deluge with a focus on scientific
 research. He takes a first peek at data from the Large Hadron Collider
@@ -153,7 +153,7 @@ are being used to create a wealth of data.
 
 \slides{Overview of Data Science}{22}{Methodology}{https://drive.google.com/open?id=0B88HKpainTSfZzhqZHVKbllZcTA}{PDF}
 
-### Science and Research {#science-research}
+### Science and Research
 
 We look into more big data examples with a focus on science and
 research. We give astronomy, genomics, radiology, particle physics and
@@ -223,7 +223,7 @@ Clouds and Big Data Processing; Data Science Process and Analytics
 ------------------------------------------------------------------
 
 
-### Overview of Data Science {#overview-1}
+### Overview of Data Science
 
 We give an initial technical overview of cloud computing as pioneered by
 companies like Amazon, Google and Microsoft with new centers holding up

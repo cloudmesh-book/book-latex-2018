@@ -1,7 +1,5 @@
-Selected Cloud Computing Lectures {#sec:icloud-selected-lectures}
+Selected Cloud Computing Lectures
 =================================
-
- 
 
 Cloud and MapReduce
 -------------------

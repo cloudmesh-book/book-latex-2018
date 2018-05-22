@@ -1,8 +1,29 @@
 
+# ./dest/chapters/preface-old/spring2018.md\
+
 INDEX=\
  ./dest/chapters/todo.md\
  ./dest/chapters/preface.md\
  ./dest/chapters/contributors.md\
+ ./dest/chapters/preface-old/fall2018.md\
+ ./dest/chapters/preface-old/fall2018-policy.md\
+ ./dest/chapters/preface-old/fall2017.md\
+ ./dest/chapters/preface-old/assignments-sp18.md\
+ ./dest/chapters/preface-old/assignments.md\
+ ./dest/chapters/preface-old/contributing.md\
+ ./dest/chapters/preface-old/g.md\
+ ./dest/chapters/preface-old/git.md\
+ ./dest/chapters/preface-old/grading.md\
+ ./dest/chapters/preface-old/graph-e222.md\
+ ./dest/chapters/preface-old/graph-e516.md\
+ ./dest/chapters/preface-old/graph-e616-a.md\
+ ./dest/chapters/preface-old/graph-e616.md\
+ ./dest/chapters/preface-old/issues.md\
+ ./dest/chapters/preface-old/organization.md\
+ ./dest/chapters/preface-old/plan.md\
+ ./dest/chapters/preface-old/project-ideas.md\
+ ./dest/chapters/preface-old/project.md\
+ ./dest/chapters/preface-old/update.md\
  ./dest/chapters/icloud//course/old-fundamentals.md\
  ./dest/chapters/icloud//course/iot.md\
  ./dest/chapters/icloud//course/nosql.md\
@@ -30,25 +51,6 @@ INDEX=\
  ./dest/chapters/icloud//preface.md\
  ./dest/chapters/icloud//deprecated.md\
  ./dest/chapters/icloud//evaluation.md\
- ./dest/chapters/preface-old/assignments-sp18.md\
- ./dest/chapters/preface-old/assignments.md\
- ./dest/chapters/preface-old/contributing.md\
- ./dest/chapters/preface-old/fall2017.md\
- ./dest/chapters/preface-old/fall2018.md\
- ./dest/chapters/preface-old/g.md\
- ./dest/chapters/preface-old/git.md\
- ./dest/chapters/preface-old/grading.md\
- ./dest/chapters/preface-old/graph-e222.md\
- ./dest/chapters/preface-old/graph-e516.md\
- ./dest/chapters/preface-old/graph-e616-a.md\
- ./dest/chapters/preface-old/graph-e616.md\
- ./dest/chapters/preface-old/issues.md\
- ./dest/chapters/preface-old/organization.md\
- ./dest/chapters/preface-old/plan.md\
- ./dest/chapters/preface-old/project-ideas.md\
- ./dest/chapters/preface-old/project.md\
- ./dest/chapters/preface-old/spring2018.md\
- ./dest/chapters/preface-old/update.md\
  ./dest/chapters/art/sentient.md\
  ./dest/chapters/cloud/chameleon/baremetal.md\
  ./dest/chapters/cloud/chameleon/resources.md\
@@ -187,20 +189,21 @@ MARKDOWN-OPTIONS=-f markdown+smart -f markdown+emoji --indented-code-classes=bas
 CSL=--csl=template/ieee-with-url.csl
 FORMAT=--toc --number-sections
 FONTS=--epub-embed-font='fonts/*.ttf'
-BIB=--bibliography references.bib
+BIB=--bibliography dest/references.bib
 CSS=--css=template/epub.css
 RESOURCE=--resource-path=".:chapters/prg:chapters/iot:chapters/container:chapters/os:chapters/mapreduce:chapters/cloud/chameleon"
 FILENAME=vonlaszewski-cloud-cluster
 
 #	pandoc ./chapters/prg/python.md -o dest/chapters/prg/python.md --base-header-level=2
 
-epub:
+epub: refernces.bib
 	mkdir -p dest/chapters/prg
 	bin/section.py 1 "Python" > dest/chapters/prg/SECTION-PYTHON.md
 	bin/markup-all.py
 	pandoc $(RESOURCE) $(MARKDOWN-OPTIONS)  $(FORMAT) $(FONTS) $(BIB)  $(CSL) $(CSS) -o $(FILENAME).epub metadata.txt $(INDEX)
 
-
+refernces.bib:
+	cat ../bib/refs-mqtt.bib bib/references.bib > dest/refernces.bib
 html:
 	pandoc $(MARKDOWN-OPTIONS)  $(FORMAT) $(FONTS) $(BIB)  $(CSL) -o $(FILENAME).html metadata.txt $(INDEX)
 

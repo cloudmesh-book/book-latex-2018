@@ -1,4 +1,4 @@
-Tutorials, Topic Paper, Term Paper, Project Report {#s:project-format}
+Tutorials, Topic Paper, Term Paper, Project Report
 ==================================================
 
  
@@ -159,7 +159,7 @@ Documents that do not follow the ACM format and are not accompanied by
 references managed with jabref or are not spell checked will be returned
 without review.
 
-Project Paper {#s:paper-rules}
+Project Paper
 -------------
 
 ### Systems Usage
