@@ -1,0 +1,46 @@
+\MDNAME\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DO NOT MODIFY THIS FILE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Draft:Multinode Hadoop Cluster Deployment with Docker Swarm}
+
+\subsection{Docker Hadoop 3.0.1}
+
+This Dockerfile builds Hadoop Docker container with CentOS base image
+and contains examples to run Hadoop such as statistics like WordCount
+and PageRank.
+
+\subsubsection{Build}
+
+\texttt{docker\ build\ -t\ cloudmesh/hadoop:3.0.1\ .}
+
+\subsubsection{Run}
+
+\texttt{docker\ run\ -it\ cloudmesh/hadoop:3.0.1\ /etc/bootstrap.sh\ -bash}
+
+\subsubsection{PageRank Example}
+
+Find instruction and source code to run in the following directory:
+
+\texttt{/cloudmesh/pagerank}
+
+\subsubsection{Hadoop Configuration Files}
+
+The configuration files are shared with Hadoop 2.7.5.
+
+\subsubsection{Virtual Memory Limit}
+
+Increase memory limit in the mapred-site.xml, for example:
+
+\begin{itemize}
+\item
+  mapreduce.map.memory.mba to 4096
+\item
+  mapreduce.reduce.memory.mb to 8192
+\end{itemize}
+
+\subsubsection{hdfs Safemode leave command}
+
+\texttt{hdfs\ dfsadmin\ -safemode\ leave}
+

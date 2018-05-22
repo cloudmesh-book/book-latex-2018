@@ -1,0 +1,78 @@
+\MDNAME\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DO NOT MODIFY THIS FILE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\#Place holder for PageRank Example in the docker hadoop section, needs
+to be merged to docker-hadoop.tex
+
+\section{PageRank Example}
+
+\subsubsection{Use the automated script}
+
+\begin{itemize}
+\item
+  We make the steps of compiling java source, archiving class files,
+  load input files and run the program into one single script. To
+  execute it with the input file:
+  PageRankDataGenerator/pagerank5000g50.input.0, using 5000 urls and 1
+  iteration:
+
+\begin{lstlisting}
+  cd /cloudmesh/pagerank
+
+  ./compileAndExecHadoopPageRank.sh PageRankDataGenerator/pagerank5000g50.input.0 5000 1
+\end{lstlisting}
+\item
+  Result
+
+\begin{lstlisting}
+  output.pagerank/part-r-00000
+\end{lstlisting}
+\item
+  Head of the result
+
+\begin{lstlisting}
+  head output.pagerank/part-r-00000
+\end{lstlisting}
+\end{itemize}
+
+\subsection{Compile and run by hand}
+
+\begin{itemize}
+\item
+  If one wants to generate the java class files and archive them as the
+  previous exercise, one could use the following code (which is actually
+  inside compileAndExecHadoopPageRank.sh)
+
+\begin{lstlisting}
+  export HADOOP_CLASSPATH=`$HADOOP_PREFIX/bin/hadoop classpath`
+  mkdir /cloudmesh/pagerank/dist
+  find /cloudmesh/pagerank/src/indiana/cgl/hadoop/pagerank/ -name "*.java"|xargs  javac -classpath $HADOOP_CLASSPATH -d /cloudmesh/pagerank/dist
+  cd /cloudmesh/pagerank/dist
+  jar -cvf HadoopPageRankMooc.jar -C . .
+\end{lstlisting}
+\item
+  Load input files to HDFS
+
+\begin{lstlisting}
+  export PATH=$PATH:/$HADOOP_PREFIX/bin
+  cd /cloudmesh/pagerank/
+  hadoop fs -mkdir input.pagerank
+  hadoop fs -put PageRankDataGenerator/pagerank5000g50.input.0 input.pagerank
+\end{lstlisting}
+\item
+  Run program with the {[}PageRank Inputs File Directory{]}{[}PageRank
+  Output Directory{]}{[}Number of Urls{]}{[}Number Of Iterations{]}
+
+\begin{lstlisting}
+  hadoop jar dist/HadoopPageRankMooc.jar indiana.cgl.hadoop.pagerank.HadoopPageRank input.pagerank output.pagerank 5000 1
+\end{lstlisting}
+\item
+  Result
+
+\begin{lstlisting}
+  hadoop fs -cat output.pagerank/part-r-00000
+\end{lstlisting}
+\end{itemize}
+
