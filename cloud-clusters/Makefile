@@ -8,8 +8,8 @@ INDEX=\
  ./dest/chapters/preface/contributors.md\
  ./dest/chapters/class/SECTION.md\
  ./dest/chapters/class/fall2018.md\
+ ./dest/chapters/class/policy.md\
  ./dest/chapters/SECTION-DRAFT.md\
- ./dest/chapters/preface/fall2018-policy.md\
  ./dest/chapters/preface/fall2017.md\
  ./dest/chapters/preface/assignments-sp18.md\
  ./dest/chapters/preface/assignments.md\
@@ -204,7 +204,7 @@ epub: refernces todo
 	bin/markup-all.py
 	bin/section.py 1 "Python" > dest/chapters/prg/SECTION-PYTHON.md
 	bin/section.py 1 "Classes" > dest/chapters/class/SECTION.md
-	bin/section.py 1 "EVERYTHING FROM HERE NOT CHECKED" > dest/chapters/SECTION-DRAFT.md
+	bin/section.py 1 ":construction::construction::construction::construction::construction::construction::construction::construction::construction::construction::construction:" > dest/chapters/SECTION-DRAFT.md
 	pandoc $(RESOURCE) $(MARKDOWN-OPTIONS)  $(FORMAT) $(FONTS) $(BIB)  $(CSL) $(CSS) -o $(FILENAME).epub metadata.txt $(INDEX)
 
 refernces:
