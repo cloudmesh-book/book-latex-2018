@@ -230,8 +230,11 @@ CHAPTER_OTHER=\
  ./dest/chapters/pi/cluster.md\
  ./dest/chapters/references.md
 
-INDEX=$(CHAPTER_DOC) \
-  $(CHAPTER_DOC_DRAFT) \
+INDEX=\
+  $(CHAPTER_DOC_DRAFT) 
+
+X=\
+  $(CHAPTER_DOC) \
   $(CHAPTER_PREFIX) \
   $(CHAPTER_CLASS) \
   $(CHAPTER_DRAFT) \

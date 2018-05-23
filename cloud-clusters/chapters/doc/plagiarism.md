@@ -117,11 +117,11 @@ We are listing fifteen patterns of plagiarism that are defined at
 *  <https://www.indiana.edu/~istd/patterns.html>
 
 which we copied into the next table. As such we have not included
-quotes but refer to their Web page but instead copied the table with a
-proper refernce. Naturally we do not want to be accused of
-plagiarize in a chapter about plagiarism. 
+quotes but refer to their Web page but instead copied the tables with
+a reference. Naturally we do not want to be accused of plagiarize in a
+chapter about plagiarism.
 
-Table Plagiarism [@www-plagiarism-pattern]
+Table: Plagiarism [@www-plagiarism-pattern]
 
   Name                                                           Plagiarism Type                                      Reason
   -------------------------------------------------------------- ---------------------------------------------------- -------------------------------------------------------------------
@@ -141,11 +141,11 @@ Table Plagiarism [@www-plagiarism-pattern]
   [Shirking Cite](patternShirkingCite.html)                      word-for-word                                        lacks locator and reference, although quotes and citation present
   [Triple D--Disguised Disconnected Dupe](patternTripleD.html)   word-for-word                                        looks like proper para, but no quotes, no reference, no locator
 
-In addition they do specify three patterns of non-plagiarism:
 
-Name Type Description
-------------------------------------------------------- ---------------- -------------------------------------------------------------------------------------------------------------------------
-
-[Correct Quote](patternCorrectQuote.html)               non-plagiarizm   takes another's words verbatim and acknowledges with quotation marks, full in-text citation with locator, and reference
-[Proper Paraphrase](patternProperParaphrase.html)       non-plagiarizm   summarizes another's words and acknowledges with in-text citation and reference
-[Parroted Paraphrase](patternMindlessParaphrase.html)   non-plagiarizm   appears to be paraphrasing, and technically may not be plagiarism ...
+  Table: Three patterns of non-plagiarism [@www-plagiarism-pattern]
+  
+  Name Type Description
+  ------------------------------------------------------- ---------------- -------------------------------------------------------------------------------------------------------------------------
+  [Correct Quote](patternCorrectQuote.html)               non-plagiarizm   takes another's words verbatim and acknowledges with quotation marks, full in-text citation with locator, and reference
+  [Proper Paraphrase](patternProperParaphrase.html)       non-plagiarizm   summarizes another's words and acknowledges with in-text citation and reference
+  [Parroted Paraphrase](patternMindlessParaphrase.html)   non-plagiarizm   appears to be paraphrasing, and technically may not be plagiarism ...
