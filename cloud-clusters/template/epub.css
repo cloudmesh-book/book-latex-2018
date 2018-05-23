@@ -72,7 +72,6 @@ h2 {
     text-align: left;    
     font-family: OpenSans;
     border-bottom: 1px solid black;
-    page-break-before: always;
 }
 h3, h4, h5, h6 {
     font-family: OpenSans;

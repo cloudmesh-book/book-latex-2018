@@ -1,27 +1,38 @@
 
 # ./dest/chapters/preface-old/spring2018.md\
 
+#
+# COMPLETED
+#
+
+CHAPTER_PREFIX=\
+ ./dest/chapters/preface/update.md\
+ ./dest/chapters/preface/preface.md\
+ ./dest/chapters/preface/contributors.md\
+ ./dest/chapters/preface/contributing.md\
+ ./README.md\
+ ./dest/chapters/todo.md\
+ ./dest/todo.md\
+ ./dest/chapters/preface/issues.md
+
+
+#
+# DRAFTS
+#
+
 CHAPTER_DOC=\
  ./dest/chapters/doc/SECTION.md\
  ./dest/chapters/doc/emacs.md\
  ./dest/chapters/doc/markdown.md\
- ./dest/chapters/doc/graphviz.md
+ ./dest/chapters/doc/plagiarism.md
+
 
 CHAPTER_DOC_DRAFT=\
- ./dest/chapters/doc/plagiarism.md\
+./dest/chapters/doc/graphviz.md\
  ./dest/chapters/doc/projects.md\
  ./dest/chapters/doc/report.md\
  ./dest/chapters/doc/type.md
 
-CHAPTER_PREFIX=\
- ./dest/chapters/preface/update.md\
- ./dest/chapters/todo.md\
- ./dest/todo.md\
- ./dest/chapters/preface/issues.md\
- ./dest/chapters/preface/preface.md\
- ./dest/chapters/preface/contributors.md\
- ./dest/chapters/preface/contributing.md\
- ./README.md
 
 CHAPTER_CLASS=\
  ./dest/chapters/class/SECTION.md\
@@ -231,11 +242,11 @@ CHAPTER_OTHER=\
  ./dest/chapters/references.md
 
 INDEX=\
-  $(CHAPTER_DOC_DRAFT) 
+  $(CHAPTER_PREFIX) \
+  $(CHAPTER_DOC) \
+	$(CHAPTER_DOC_DRAFT) 
 
 X=\
-  $(CHAPTER_DOC) \
-  $(CHAPTER_PREFIX) \
   $(CHAPTER_CLASS) \
   $(CHAPTER_DRAFT) \
 	$(CHAPTER_OTHER) \
@@ -299,3 +310,4 @@ todo:
 issues:
 	python ../bin/issues.py > /tmp/issues.tex
 	pandoc /tmp/issues.tex -o chapters/preface/issues.md
+	bin/header.sh chapters/preface/issues.md 3

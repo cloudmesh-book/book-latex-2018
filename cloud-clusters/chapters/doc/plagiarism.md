@@ -149,3 +149,37 @@ Table: Plagiarism [@www-plagiarism-pattern]
   [Correct Quote](patternCorrectQuote.html)               non-plagiarizm   takes another's words verbatim and acknowledges with quotation marks, full in-text citation with locator, and reference
   [Proper Paraphrase](patternProperParaphrase.html)       non-plagiarizm   summarizes another's words and acknowledges with in-text citation and reference
   [Parroted Paraphrase](patternMindlessParaphrase.html)   non-plagiarizm   appears to be paraphrasing, and technically may not be plagiarism ...
+
+
+### Citation Styles
+
+Each journal or workshop and books will have their own citation
+styles. Often we find styles such as APA and Harvard. However these
+styles are often not use in scientific writing and tutorials that use
+them may provide you with information that is not applicable to other
+publications. Hence you need to review the rules for your specific
+publication venue carefully. In some cases this will lead to a
+significant improvement in readbility as well as reduction in space.
+
+While in APA style you may mention
+
+> "John von Neuman (John von Neuman; 1927) describes a turing machine in his
+> ground braking paper ... that can do this and that and more.".
+
+However in our community we often focus more on the technology than on
+the person or team that did this. Also citations will be precisely
+numbered. Hence this will be sufficient:
+
+> "In [1] a turing machine is introduced that can do ..."
+
+Please be reminded that non of our assignments will use APA style
+citing. We use numbered ACM or IEEE proceedings and journal citations.
+
+### Exercise
+
+Plagiarism.1
+
+: Pass the plagiarism certification. This test is mandatory for all
+  students taking this class. Typically it should have been done as part
+  of another class, but we found through experience that some student
+  that have not taken the certification have issues with this topic.
