@@ -60,4 +60,3 @@ for file in files:
 
 print()
 
-print("LL")
