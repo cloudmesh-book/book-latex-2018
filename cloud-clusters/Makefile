@@ -16,19 +16,21 @@ CHAPTER_PREFIX=\
  ./dest/chapters/preface/issues.md
 
 
+CHAPTER_DOC=\
+ ./dest/chapters/doc/SECTION.md\
+ ./dest/chapters/doc/plagiarism.md\
+ ./dest/chapters/doc/emacs.md\
+ ./dest/chapters/doc/markdown.md\
+ ./dest/chapters/doc/pandoc.md\
+
 #
 # DRAFTS
 #
 
-CHAPTER_DOC=\
- ./dest/chapters/doc/SECTION.md\
- ./dest/chapters/doc/emacs.md\
- ./dest/chapters/doc/markdown.md\
- ./dest/chapters/doc/plagiarism.md
 
 
 CHAPTER_DOC_DRAFT=\
-./dest/chapters/doc/graphviz.md\
+ ./dest/chapters/doc/graphviz.md\
  ./dest/chapters/doc/projects.md\
  ./dest/chapters/doc/report.md\
  ./dest/chapters/doc/type.md
@@ -241,8 +243,12 @@ CHAPTER_OTHER=\
  ./dest/chapters/pi/cluster.md\
  ./dest/chapters/references.md
 
+OK=\
+  $(CHAPTER_PREFIX)
+
+
 INDEX=\
-  $(CHAPTER_PREFIX) \
+  $(CHAPTER_PREFIX)\
   $(CHAPTER_DOC) \
 	$(CHAPTER_DOC_DRAFT) 
 
