@@ -107,7 +107,7 @@ table td {
     border-left: none;
 #    border-bottom: none;
     border-right: none;
-    border-bottom: 1px solid black;    
+    border-bottom: 1px solid black;
 }
 blockquote { 
 	font-style: italic;
@@ -115,4 +115,7 @@ blockquote {
   display: block;
   margin-left: 10%;
   margin-right: 10%;
+}
+.smalltable {
+    font-size: 50%;
 }

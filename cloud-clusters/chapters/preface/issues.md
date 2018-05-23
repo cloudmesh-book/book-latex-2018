@@ -1,5 +1,6 @@
 ### Github Issues
 
+<div class="smalltable">
   Count   Number                                                title                                                               Assignee
   ------- ----------------------------------------------------- ------------------------------------------------------------------- ---------------
   1       [165](https://github.com/cloudmesh/book/pull/165)     Added instructions to add role to service account                   None
@@ -63,3 +64,5 @@
   59      [20](https://github.com/cloudmesh/book/issues/20)     Weekly: piazza faq to handbook cleanup                              bfeng
   60      [19](https://github.com/cloudmesh/book/issues/19)     Data size homework                                                  vibhatha
   61      [14](https://github.com/cloudmesh/book/issues/14)     Lecture/Section: Docker swarm                                       bfeng
+
+</div>

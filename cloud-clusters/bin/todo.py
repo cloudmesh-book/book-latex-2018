@@ -54,10 +54,14 @@ def extract_todos(filename):
 #print("# TODO")
 print()
 
+print('<div class="smalltable">')
+
 print("| Line | Path | Description    |")
 print("| - | ---- | -------------- |")
 for file in files:
     extract_todos(file)
+
+print('</div>')
 
 print()
 
