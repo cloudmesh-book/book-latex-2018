@@ -306,6 +306,7 @@ view:
 
 todo:
 	bin/todo.py > dest/todo.md
+	cat dest/todo.md
 
 issues:
 	python ../bin/issues.py > /tmp/issues.tex
