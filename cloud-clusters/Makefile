@@ -1,15 +1,19 @@
 
 # ./dest/chapters/preface-old/spring2018.md\
 
-INDEX=\
- ./dest/chapters/doc/piazza.md\
+CHAPTER_DOC=\
+ ./dest/chapters/doc/SECTION.md\
  ./dest/chapters/doc/emacs.md\
- ./dest/chapters/doc/graphviz.md\
  ./dest/chapters/doc/markdown.md\
+ ./dest/chapters/doc/graphviz.md
+
+CHAPTER_DOC_DRAFT=\
  ./dest/chapters/doc/plagiarism.md\
  ./dest/chapters/doc/projects.md\
  ./dest/chapters/doc/report.md\
- ./dest/chapters/doc/type.md\
+ ./dest/chapters/doc/type.md
+
+CHAPTER_PREFIX=\
  ./dest/chapters/preface/update.md\
  ./dest/chapters/todo.md\
  ./dest/todo.md\
@@ -17,10 +21,16 @@ INDEX=\
  ./dest/chapters/preface/preface.md\
  ./dest/chapters/preface/contributors.md\
  ./dest/chapters/preface/contributing.md\
+ ./README.md
+
+CHAPTER_CLASS=\
  ./dest/chapters/class/SECTION.md\
  ./dest/chapters/class/fall2018.md\
  ./dest/chapters/class/policy.md\
  ./dest/chapters/class/assignments.md\
+ ./dest/chapters/doc/piazza.md
+
+CHAPTER_DRAFT=\
  ./dest/chapters/SECTION-DRAFT.md\
  ./dest/chapters/preface/g.md\
  ./dest/chapters/preface/git.md\
@@ -33,7 +43,6 @@ INDEX=\
  ./dest/chapters/preface/plan.md\
  ./dest/chapters/preface/project-ideas.md\
  ./dest/chapters/preface/project.md\
- ./README.md\
  ./dest/chapters/in/ansible.md\
  ./dest/chapters/in/assignments.md\
  ./dest/chapters/in/box.md\
@@ -53,10 +62,10 @@ INDEX=\
  ./dest/chapters/in/ubuntu.md\
  ./dest/chapters/in/virtualbox.md\
  ./dest/chapters/in/vis.md\
- ./dest/chapters/in/wordcount.md\
+ ./dest/chapters/in/wordcount.md
 
 
-OTHER=\
+CHAPTER_OTHER=\
  ./dest/chapters/icloud//course/old-fundamentals.md\
  ./dest/chapters/icloud//course/iot.md\
  ./dest/chapters/icloud//course/nosql.md\
@@ -216,6 +225,12 @@ OTHER=\
  ./dest/chapters/pi/cluster.md\
  ./dest/chapters/references.md
 
+INDEX=$(CHAPTER_DOC) \
+  $(CHAPTER_DOC_DRAFT) \
+  $(CHAPTER_PREFIX) \
+  $(CHAPTER_CLASS) \
+  $(CHAPTER_DRAFT) \
+	$(CHAPTER_OTHER)
 
 MARKDOWN-OPTIONS=-f markdown+smart -f markdown+emoji --indented-code-classes=bash,python,yaml
 CSL=--csl=template/ieee-with-url.csl
@@ -223,7 +238,7 @@ FORMAT=--toc --number-sections
 FONTS=--epub-embed-font='fonts/*.ttf'
 BIB=--bibliography dest/references.bib
 CSS=--css=template/epub.css
-RESOURCE=--resource-path=".:chapters/prg:chapters/iot:chapters/container:chapters/os:chapters/mapreduce:chapters/cloud/chameleon"
+RESOURCE=--resource-path=".:chapters/prg:chapters/iot:chapters/container:chapters/os:chapters/mapreduce:chapters/cloud/chameleon:chapters/doc"
 FILENAME=vonlaszewski-cloud-cluster
 
 #	pandoc ./chapters/prg/python.md -o dest/chapters/prg/python.md --base-header-level=2
@@ -231,6 +246,7 @@ FILENAME=vonlaszewski-cloud-cluster
 epub: refernces todo
 	mkdir -p dest/chapters/prg
 	bin/markup-all.py
+	bin/section.py 1 "Scientifc Writing" > dest/chapters/doc/SECTION.md
 	bin/section.py 1 "Python" > dest/chapters/prg/SECTION-PYTHON.md
 	bin/section.py 1 "Classes" > dest/chapters/class/SECTION.md
 	bin/section.py 1 ":construction::construction::construction::construction::construction::construction::construction::construction::construction::construction::construction:" > dest/chapters/SECTION-DRAFT.md
@@ -238,7 +254,7 @@ epub: refernces todo
 
 refernces:
 	mkdir -p dest
-	cat ../bib/refs-mqtt.bib bib/references.bib > dest/references.bib
+	cat ../bib/refs-mqtt.bib bib/references.bib ../bib/bibliography.bib > dest/references.bib
 
 html:
 	pandoc $(MARKDOWN-OPTIONS)  $(FORMAT) $(FONTS) $(BIB)  $(CSL) -o $(FILENAME).html metadata.txt $(INDEX)
@@ -269,4 +285,6 @@ view:
 todo:
 	bin/todo.py > dest/todo.md
 
-
+issues:
+	python ../bin/issues.py > /tmp/issues.tex
+	pandoc /tmp/issues.tex -o chapters/preface/issues.md

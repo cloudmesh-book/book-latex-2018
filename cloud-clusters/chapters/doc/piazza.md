@@ -1,5 +1,5 @@
-Piazza {#C:piazza}
-======
+Piazza
+------
 
 We use Piazza (<https://piazza.com>) because questions and answers on
 Piazza are community-edited and provides the opportunity not only for
@@ -14,18 +14,17 @@ to also look at some comments that lead up to the answer.
 
 An advertisement video from Piazza summarizes the features:
 
-* <https://www.youtube.com/watch?v=2jLSiN8E18w>
+-   <https://www.youtube.com/watch?v=2jLSiN8E18w>
 
 Piazza Support with a lot of information is available at:
 
-* <http://support.piazza.com>
+-   <http://support.piazza.com>
 
 A good document about piazza is available at
 
-* <https://piazza.com/pdfs/piazza_product_introduction.pdf>
+-   <https://piazza.com/pdfs/piazza_product_introduction.pdf>
 
-Access to Piazza from Canvas
-----------------------------
+### Access to Piazza from Canvas
 
 Piazza is one of the recommended IU supported technologies within
 CANVAS. It replaces the CANVAS discussion groups with superior
@@ -37,12 +36,12 @@ next four subsections. Please read *ALL*\* of them **CAREFULLY**, decide
 which applies tou you and follow the instructions. If you have
 improvements to this instructions, please let us know.
 
-### Situation: You have never logged into piazza {#situation-you-have-never-logged-into-piazza .unnumbered .unnumbered}
+#### Situation: You have never logged into piazza
 
 First, Click the Piazza link on the left navigation of your Canvas
 course.
 
-![image](images/piazza/image3.png){width="75%"}
+![image](images/piazza/image3.png)
 
 Second, create password and accept terms.
 
@@ -54,7 +53,7 @@ The password you create here is for accessing Piazza from a mobile
 device. You must use the default IU email address from this screen to
 access this account on another device, so make a note of it.
 
-![image](images/piazza/image1.png){width="75%"}
+![image](images/piazza/image1.png)
 
 Choose current degree program (only important if you want to opt into
 their recruiting program on the next screen; choose whatever you want
@@ -62,42 +61,36 @@ here)
 
 Third, associate your IU account
 
-![image](images/piazza/image4.png){width="75%"}
+![image](images/piazza/image4.png)
 
 Forth, if all goes well you see the Success screen
 
-![image](images/piazza/image2.png){width="75%"}
+![image](images/piazza/image2.png)
 
-### Situation: You have logged into piazza and used your default IU e-mail {#situation-you-have-logged-into-piazza-and-used-your-default-iu-e-mail .unnumbered .unnumbered}
+#### Situation: You have logged into piazza and used your default IU e-mail
 
 1.  Click the Piazza link on the left navigation of your Canvas course.
-
 2.  You will be automatically enrolled in the course Piazza site and
     logged in.
-
 3.  Start using Piazza.
 
-### Situation: You have logged into piazza and you used another non IU e-mail {#situation-you-have-logged-into-piazza-and-you-used-another-non-iu-e-mail .unnumbered .unnumbered}
+#### Situation: You have logged into piazza and you used another non IU e-mail
 
 1.  Click the Piazza link on the left navigation of your Canvas course.
-
 2.  Proceed as in \#1 above. This will create your new Piazza account
     that is linked to your courses in Canvas. This is the account you
     should always use in your IU courses.
-
 3.  If you wish to merge other accounts that you own, please see [Add an
     email address or merge two
     accounts](https://www.google.com/url?q=http://support.piazza.com/customer/portal/articles/1646661-add-an-email-address-or-merge-two-accounts&sa=D&ust=1502127148503000&usg=AFQjCNHyBFh3TMAtSDpFordYOfH0IE6kPA).
 
-### Situation: You have multiple accounts in piazza {#situation-you-have-multiple-accounts-in-piazza .unnumbered .unnumbered}
+#### Situation: You have multiple accounts in piazza
 
 1.  If one of your multiple accounts corresponds with your default IU
     email address, you will be automatically enrolled in the course
     Piazza site and logged in.
-
 2.  If none of your accounts corresponds to your default IU email
     address, follow the instructions in \#3 above.
-
 3.  If you wish to merge other accounts that you own, please see [Add an
     email address or merge two
     accounts](https://www.google.com/url?q=http://support.piazza.com/customer/portal/articles/1646661-add-an-email-address-or-merge-two-accounts&sa=D&ust=1502127148504000&usg=AFQjCNHwO1kks2cnVLpWWCnOIEDFhl2fJA).
@@ -116,10 +109,9 @@ to
 
 "Ricci, Margaret P" \<[](mailto:mricci@iu.edu)\>
 
-Verify you are on Piazza via a post
------------------------------------
+### Verify you are on Piazza via a post
 
-Post on the **bio** folder a short introduction about yourself. One that
+Post in the **bio** folder a short introduction about yourself. One that
 you could include in a paper.
 
 An example is provided at <https://laszewski.github.io/bio.html> with an
@@ -128,8 +120,7 @@ image at <https://laszewski.github.io/_images/gregor.jpg>
 Use the subject line *Biography: Firstname Lastname* and post it into
 the bio folder.
 
-Making Piazza Work
-------------------
+### Making Piazza Work
 
 In order for Piazza to work students and instructors need to participate
 
@@ -154,8 +145,7 @@ your responsibility to enroll in Piazza to make it work for you.
 Instructions are posted in this document. (Grade discussion will be done
 in CANVAS)
 
-Towards good questions
-----------------------
+### Towards good questions
 
 Naturally when you ask a question you need to do it in a reasonable form
 and provide sufficient information so that the question can be answered.
@@ -171,7 +161,8 @@ To give you an example of a **bad** question consider:
 
     Hi Professor:
 
-    I read a nice article about apples and potato's and updated my
+    I read a nice article about apples
+    and potato's and updated my
     paper. Please give me feedback
 
     Thank you
@@ -184,14 +175,11 @@ Here the reasons why this can be improved:
     unnecessary to start with "Hi Professor:", just leave it away. If
     you want a particular instructor use the name explicitly, such as
     "Gregor:", e.g. multiple professors may be teaching your course.
-
 2.  You have not specified which article you read, you need to include
-    the URL to the article so we can follow your argument.
-
-3.  You have not included the link to your document so we do not know
+    the **URL** to the article so we can follow your argument.
+3.  You have not included the **URL** to your document so we do not know
     what you are talking about. Remember there are many others students
-    in the class
-
+    in the class.
 4.  You are using a different name from the one that you are registered
     with. This can lead to confusion when we look up your name. We
     prefer that you use only one name that is associated with your
@@ -202,15 +190,13 @@ The above question will simply be commented on (if at all):
 "Missing information" or "?" indicating that information is missing.
 
 It is in your responsibility to figure out which information is missing.
-YOu need to modify the original post and.
+You need to modify the original post and.
 
-Guide on how to ask good questions
-----------------------------------
+### Guide on how to ask good questions
 
 This guide is adapted from
 
-*
-<http://www.techsupportalert.com/content/how-ask-question-when-you-want-technical-help.htm>
+-   <http://www.techsupportalert.com/content/how-ask-question-when-you-want-technical-help.htm>
 
 Ten steps to getting your question answered on piazza
 
@@ -255,7 +241,7 @@ Ten steps to getting your question answered on piazza
     that you have tried but didn't work. Avoid using screenshots if they
     are not needed. (I mention this again).
 
-7.  IN case of a technical issue describe relevant system details. For
+7.  In case of a technical issue describe relevant system details. For
     example, it is essential to designate your operating system and type
     of computer and any components that might be involved in your
     problem. List any error code that has been displayed. Be prepared to
@@ -279,57 +265,69 @@ Ten steps to getting your question answered on piazza
     for the help you have been given. It will make you welcome in the
     forum the next time you go there for help.
 
-Piazza class Links
-------------------
+### Piazza class Links
 
-Using the following direct links can lead to you not getting proper
-access via Canvas. If you click on these links **before they create**
-the account via the link in your current Canvas course, you will create
-an account that is not matched up with Canvas.
+:warning: Using the direct links listed in the next two sections, can
+lead to you not getting proper access via Canvas. If you click on
+these links **before they create** the account via the link in your
+current Canvas course, you will create an account that is not matched
+up with Canvas. To avoid issues make sure you integrate to piazza via
+Canvas first.
 
-To avoid issues make sure you integrate to piazza via Canvas first.
+If you have questions about this contact Margaret Ricci (mricci@iu.edu).
 
-If you have questions bout this contact Margaret Ricci.
 
-Classes hosted on Piazza
+#### Current Classes
 
-### Current Classes
+---
 
--   E516 Spring 2018:
-    <https://piazza.com/iu/spring2018/e516spring18/home>
+:warning: before clicking on the links you need to have an account
+created
 
--   E616 and I524 Spring 2018:
-    <https://piazza.com/iu/spring2018/e616spring18/home>
+---
 
-### Previous Classes
+| Class | Semester | Year  | Link |
+| :------ | :------ | -----:| ------ |
+| E516 | Fall | 2018 | [piazza home link](https://piazza.com/iu/fall2018/516/home) |
 
--   I523 Fall 2017: <https://piazza.com/iu/fall2017/i523/home>
 
--   I524 Spring 2017: <https://piazza.com/class/ix39m27czn5uw>
+#### Previous Classes
 
--   I523 Fall 2016: <https://piazza.com/class/irqfvh1ctrg2vt>
+| Class | Semester | Year  | Link |
+| :------ | :------ | -----:| ------ |
+| E516 | Spring | 2018 | [piazza home link](https://piazza.com/iu/spring2018/e516spring18/home) |
+| E616 | Spring | 2018 | [piazza home link](https://piazza.com/iu/spring2018/e616spring18/home) |
+| I524 | Spring | 2018 | [piazza home link](https://piazza.com/iu/spring2018/e616spring18/home) |
+| I523 | Fall | 2017 | [piazza home link](https://piazza.com/iu/fall2017/i523/home) |
+| I524 | Spring | 2017 | [piazza home link](https://piazza.com/class/ix39m27czn5uw) |
+| I523 | Fall | 2016 | [piazza home link](https://piazza.com/class/irqfvh1ctrg2vt) |
 
-Piazza Curation
----------------
+### Piazza Curation
 
-We are using Piazza in a curated fashion and we like that all students
-participate in this. This will allow Piazza to become a superior tool
-for all in the class. In general we only allow **exactly one folder**
-for a message. If a message is wrongly filed it will be corrected,
-either by students or TAs.
+We are using Piazza in a curated fashion.  This means that we try to
+file posts into folders and delete messages that are not relevant or
+do not provide any additional information. IT also means that if you
+see an error in the post that students and instructors should improve
+it. THis may include spelling errors.
 
-As part of this we are introducing a number of folders. Some of which
-must not be used by students. We list the following folders and their
-purpose:
+As part of this we are introducing a number of folders.
+THe folders may vary from class and we can add new folders if
+needed. Please let us know.
+
+We provide next a list of example folders that we have used in
+previous classes and list their purpose. Please helo us to add folders
+form your class.
 
   Folder       Description
   ------------ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   logistics    Any question and discussion related to the logistics of the course
   lectures     Any question and discussion related to the lectures.
+  p            Any question and discussion related to paper.
   p1           Any question and discussion related to paper 1.
   p2           Any question and discussion related to paper 2.
-  t1           Any question and discussion related to paper 1.
-  t2           Any question and discussion related to paper 2.
+  t            Any question and discussion related to tutorial.  
+  t1           Any question and discussion related to tutorial 1.
+  t2           Any question and discussion related to tutorial 2.
   project      Any question and discussion related to iot projects.
   term-paper   Any question and discussion related to the term project.
   python       Any question and discussion related to python.
@@ -360,38 +358,46 @@ and the TA's.
     should however use the folder *help*. Gregor use most often the *ta*
     folder for internal coordination with the tas.
 
-It may be necessary to create new folders for the class. Their meaning
-will be updated here once this occurs.
-
 In case you decide to post privately and the information is useful for
 others also, the message will be published to the class.
 
-Read the Originals, not just the e-mail
----------------------------------------
+### Read the Originals, not just the e-mail
 
 Piazza provides a convenient mechanism to update you through e-mail when
-an answer is changed or when somone posts.
+an answer is changed or when someone posts.
 
-However, this is just a reminder that something happened. In some cases
-I always recommend that instead of only reading the mail to use the
+---
+
+:warning: In many cases additional information is available for the
+post and it is **not sufficient to just read the mail**.
+
+---
+
+The mail is just a reminder that something happened. Use the
 `<click here>` feature in the mail to get not only to the update, but to
 the actual post. Than you can get reminded about the information that is
-part of the post and potentialy answers your question in full. It is not
+part of the post and potentially answers your question in full. It is not
 sufficient to participate in this class while only reading email, you
 should participate while visiting piazza and actively contribute to it.
 
-Exercises
----------
+### Exercises
 
-[\[E:Piazza.1\]]{#E:Piazza.1 label="E:Piazza.1"} Enroll in piazza
+Piazza.1
 
-[\[E:Piazza.2\]]{#E:Piazza.2 label="E:Piazza.2"} Post a short formal bio
-in the bio folder and optionally include a professional portrait of
-yourself. Make sure you understand what a formal bio and portrait is.
-Research this in the internet. Look at IEEE papers for examples.
+:   Enroll in piazza
 
-[\[E:Piazza.3\]]{#E:Piazza.3 label="E:Piazza.3"} How do you find out
-within Piazza which assignments have been posted?
+Piazza.2
 
-[\[E:Piazza.4\]]{#E:Piazza.4 label="E:Piazza.4"} Please watch the Video
-about Piazza
+:   Post a short formal bio in the bio folder and optionally include a
+    professional portrait of yourself. Make sure you understand what a
+    formal bio and portrait is. Research this in the internet. Look at
+    IEEE papers for examples.
+
+Piazza.3
+
+:   How do you find out within Piazza which assignments have been
+    posted?
+
+Piazza.4
+
+:   Please watch the Video about Piazza

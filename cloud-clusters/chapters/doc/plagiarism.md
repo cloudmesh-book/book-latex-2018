@@ -1,10 +1,9 @@
 Plagiarism
-==========
+----------
 
 We start with the review of a most important topic.
 
-Plagiarism Definition
----------------------
+### Plagiarism Definition
 
 In academic life it is important to understand and avoid plagiarism. The
 dictionary defines plagiarism as follows
@@ -12,11 +11,10 @@ dictionary defines plagiarism as follows
 
 pla$\cdot$gia$\cdot$rism
 
-:   "the practice of taking someone else's work or ideas and passing
-    them off as one's own."
+>   "the practice of taking someone else's work or ideas and passing
+>   them off as one's own."
 
-Plagiarism Policies
--------------------
+### Plagiarism Policies
 
 Organizations and universities will have policies in place do address
 plagiarism. An example is provided for Indiana University
@@ -44,7 +42,7 @@ complete policy see the Web page):
 > is his or her most serious obligation to investigate these thoroughly,
 > to take appropriate action with respect to the grades of students, and
 > *in any event* to report the matter to the Dean for Student Services
-> \[or equivalent administrator\]. The necessity to report every case of
+> (or equivalent administrator). The necessity to report every case of
 > cheating, whether or not further action is desirable, arises
 > particularly because of the possibility that this is not the student's
 > first offense, or that other offenses may follow it. Equity also
@@ -78,73 +76,52 @@ what it is, know how to detect it and know how to avoid it. The
 resources provided next will give you the necessary tools and
 background.
 
-Plagiarism Resources
---------------------
+### Plagiarism Resources
 
 The [School of Education at Indiana
 University](http://education.indiana.edu/) has a significant set of
 resources to get educated about plagiarism. These resources are intended
 to "preparing educators, advancing knowledge, and improving
-education" [@www-iu-plagiarism]
-<https://www.indiana.edu/~istd/patterns.html>
+education" [@www-iu-plagiarism]. This includes:
 
-The content here is copied from the Web Page
-
-* <https://www.indiana.edu/~istd/patterns.html>
-
-As such we have not included quotes but refer to their Web page for the
-original source which may also include updates. Naturally we do not want
-to be accused of plagiarize in a chapter about plagiarism. Thus assume
-the content for the rest of this chapter are copied from that Web page.
-The resources in particular include:
-
--   [IU Definition](https://www.indiana.edu/~istd/definition.html) of
+*   [IU Definition](https://www.indiana.edu/~istd/definition.html) of
     Plagiarism from Student Code of Conduct
-
--   [Overview](https://www.indiana.edu/~istd/overview.html) How to give
+*   [Overview](https://www.indiana.edu/~istd/overview.html) How to give
     proper credit, steps.
-
--   [Cases](https://www.indiana.edu/~istd/cases.html) of Plagiarism in
+*   [Cases](https://www.indiana.edu/~istd/cases.html) of Plagiarism in
     the US, in the news, and elsewhere
-
--   [Examples](https://www.indiana.edu/~istd/examples.html) Word for
+*   [Examples](https://www.indiana.edu/~istd/examples.html) Word for
     word, paraphrasing
-
--   [Practice](https://www.indiana.edu/~istd/practice.html) with
+*   [Practice](https://www.indiana.edu/~istd/practice.html) with
     feedback on word-for-word and paraphrasing plagiarism
-
--   [Test](https://www.indiana.edu/~istd/test.html) 10 questions on
+*   [Test](https://www.indiana.edu/~istd/test.html) 10 questions on
     recognizing plagiarism
-
--   [Tutorial Site Map](https://www.indiana.edu/~istd/sitemap.html)
+*   [Tutorial Site Map](https://www.indiana.edu/~istd/sitemap.html)
     Expanded table of contents
-
--   [Resources](https://www.indiana.edu/~istd/resources.html) Websites,
+*   [Resources](https://www.indiana.edu/~istd/resources.html) Websites,
     books, dictionary links, references for learning more about
     plagiarism
 
-Tutorials {#S:ptutorial}
----------
+Furthermore, a number of tutorials are offerd by Indiana University
+[Instructional Systems Technology Department](http://education.indiana.edu/graduate/programs/instructional-systems/index.html)
+Web pages dealing with plagiarism. These include:
 
-A number of tutorials are offerd by Indiana University [Instructional
-Systems Technology
-Department](http://education.indiana.edu/graduate/programs/instructional-systems/index.html)
-Web pages ealing with plagiarism. Thes include:
+*   [Plagiarsim Tutorial](https://www.indiana.edu/~academy/firstPrinciples/choice.html)
+*   [Understanding Plagiarism](https://www.indiana.edu/~tedfrick/plagiarism/)
 
--   [Plagiarsim
-    Tutorial](https://www.indiana.edu/~academy/firstPrinciples/choice.html)
 
--   [Understanding
-    Plagiarism](https://www.indiana.edu/~tedfrick/plagiarism/)
+### How to Recognize Plagiarism
 
-How to Recognize Plagiarism
----------------------------
+We are listing fifteen patterns of plagiarism that are defined at
 
-We are listing fifteen patterns of plagiarism that are defined on the
-Web pages itedntified in
-Section [1.4](#S:ptutorial){reference-type="ref"
-reference="S:ptutorial"} as part of the tutorials taht we recommend you
-take:
+*  <https://www.indiana.edu/~istd/patterns.html>
+
+which we copied into the next table. As such we have not included
+quotes but refer to their Web page but instead copied the table with a
+proper refernce. Naturally we do not want to be accused of
+plagiarize in a chapter about plagiarism. 
+
+Table Plagiarism [@www-plagiarism-pattern]
 
   Name                                                           Plagiarism Type                                      Reason
   -------------------------------------------------------------- ---------------------------------------------------- -------------------------------------------------------------------
@@ -166,9 +143,9 @@ take:
 
 In addition they do specify three patterns of non-plagiarism:
 
-  Name                                                    Type             Description
-  ------------------------------------------------------- ---------------- -------------------------------------------------------------------------------------------------------------------------
-                                                                           
-  [Correct Quote](patternCorrectQuote.html)               non-plagiarizm   takes another's words verbatim and acknowledges with quotation marks, full in-text citation with locator, and reference
-  [Proper Paraphrase](patternProperParaphrase.html)       non-plagiarizm   summarizes another's words and acknowledges with in-text citation and reference
-  [Parroted Paraphrase](patternMindlessParaphrase.html)   non-plagiarizm   appears to be paraphrasing, and technically may not be plagiarism ...
+Name Type Description
+------------------------------------------------------- ---------------- -------------------------------------------------------------------------------------------------------------------------
+
+[Correct Quote](patternCorrectQuote.html)               non-plagiarizm   takes another's words verbatim and acknowledges with quotation marks, full in-text citation with locator, and reference
+[Proper Paraphrase](patternProperParaphrase.html)       non-plagiarizm   summarizes another's words and acknowledges with in-text citation and reference
+[Parroted Paraphrase](patternMindlessParaphrase.html)   non-plagiarizm   appears to be paraphrasing, and technically may not be plagiarism ...

@@ -13,15 +13,10 @@ date. Procrastenation will not help you.  Please do the following:
 
 Get access to piazza:
 
-1. We have provided a special section for you to explain how to get
-   access to piazza. Please reveie this section carefully.
-
-
----
-
-:o: TODO: Gregor: add link to the piazza section
-
----
+1. We have provided a detailed section about [piazza](#piazza) for you
+   to explain how to get access to piazza. Please reveiew this section
+   carefully and create an account or use your existing piazza account
+   to access the class piazza.
 
 Next obtain some cloud accounts which you may use as part of the class:
 
@@ -39,16 +34,17 @@ Make sure you chose strong passwords that you remember.
 
 Once you have the accounts do the following:
 
-6. Post a **formal** bio on piazza so you introduce yourself to the
-   class. Please put in the firstline, your github.com username (**do
-   not use your github.iu.edu username**)
-   An example is available at
+6. Post a **formal** bio on piazza in the bio folder so you introduce
+   yourself to the class. It also serves as a verification that you
+   have access to piazza and we can communicate with you. An example
+   is available at
 
    :o: TODO: Gregor: include link to formal bio
 
-7. **Wait till your HID directory on github.com is created**. Please do
-   not send us e-mail, we watch piazza and add you within 1-2 buisiness
-   days. You can check it on github.com if it is done.
+7. **Wait till your HID directory on github.com is created**. Please
+   do not send us e-mail, we watch piazza and add you within 1-2
+   buisiness days (Mon - Fri 9am-5pm EST). You can check it on
+   github.com if it is done.
 
 After your HID directory is created you can continue, however you can
 certainly prepare the information to be uploaded already on your
@@ -62,7 +58,7 @@ computer while you wait.
 9. Create a README.yml file in teh rood directory of your github.com
    repository. Make sure to not use any TABS and use valid yaml. If
    you do not know what yaml is please find out, it is part of this
-   assignment. AN example README.yml can be found at:
+   assignment. An example README.yml can be found at:
 
    * <https://github.com/cloudmesh-community/hid-sample/blob/master/README.yml>
 

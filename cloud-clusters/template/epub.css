@@ -58,19 +58,21 @@ code {
     font-size: xx-small;
     background-color: rgb(242, 242, 242);
 }
-h1 { text-align: left; color: #333; }
-h2 { text-align: left; color: #555; }
 h3 { text-align: left; }
 h4 { text-align: left; }
 h5 { text-align: left; }
 h6 { text-align: left; }
 h1 {
+    text-align: left;
     font-family: OpenSans;
-    border-bottom: 2px solid black;    
+    border-bottom: 2px solid black;
+    page-break-before: always;
 }
 h2 {
+    text-align: left;    
     font-family: OpenSans;
-    border-bottom: 1px solid black;    
+    border-bottom: 1px solid black;
+    page-break-before: always;
 }
 h3, h4, h5, h6 {
     font-family: OpenSans;
@@ -107,4 +109,11 @@ table td {
 #    border-bottom: none;
     border-right: none;
     border-bottom: 1px solid black;    
+}
+blockquote { 
+	font-style: italic;
+	border-left: 4px solid rgb(242, 242, 242);
+  display: block;
+  margin-left: 10%;
+  margin-right: 10%;
 }

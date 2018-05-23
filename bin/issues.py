@@ -28,14 +28,14 @@ count = 0
 if len(issues) > 0:
     print("\section{Github Issues}")
     print("\\begin{center}")    
-    print("\\begin{longtable}{lllll}")
-    print ("Count & Status & No & title & Assignee\\\\")
+    print("\\begin{longtable}{llll}")
+    print ("Count &  Number & title & Assignee\\\\")
     print ("\hline")
     for issue in issues:
         count = count + 1
         issue['count'] = count
         if issue['state'] == 'open':
-            line = "{count} & {state} & \href{{{html_url}}}{{{number}}} & {title} & ".format(**issue) + str(assignee(issue)) + "\\\\"
+            line = "{count} & \href{{{html_url}}}{{{number}}} & {title} & ".format(**issue) + str(assignee(issue)) + "\\\\"
             print (line)
     print("\\end{longtable}")
     print("\\end{center}")    
