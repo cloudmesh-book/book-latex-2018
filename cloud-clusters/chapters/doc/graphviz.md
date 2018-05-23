@@ -1,11 +1,15 @@
-Graphviz :o:
+Graphviz
 --------
 
--   <https://graphviz.gitlab.io/resources/>
+Graph is a tool that allows you to visualize structural information
+with the help of abstract graphs and networks. It is achhieved while
+providing the graph with automatic layout algorithms so you can focus
+on the creation of dependencies between nots through edges. The main
+Web page is located at
+
+*   <https://graphviz.gitlab.io/resources/>
 
 ### Instalation
-
-#### OSX
 
 On OSX you can install graphviz with
 
@@ -34,15 +38,16 @@ Online versions of graphviz are also available, but we have not tested
 them
 
 -   <http://www.webgraphviz.com/>
--   https://dreampuf.github.io/GraphvizOnline/
--   http://viz-js.com/
--   http://graphviz.it/\#/gallery/unix.gv
+-   <https://dreampuf.github.io/GraphvizOnline/>
+-   <http://viz-js.com/>
+-   <http://graphviz.it/\#/gallery/unix.gv>
 
-There are many more
+There are many more versions available. Please contribute to this
+section to improve it
 
 ### Usage
 
-To use graphvis creadte a dot and run the following command.
+To use graphviz create a dot file and run the following command.
 
     dot -Tpng filename.dot -o filename.png
 
@@ -57,7 +62,13 @@ has a much better quality and is maller in size than png.
 
 ### The Dot Format
 
-Put an example dot file here
+An extensive documentation is provided at
+
+* <https://graphviz.gitlab.io/documentation/>
+
+From there we find also the most simpplest Hello World Graph>
+
+    echo "digraph G {Hello->World}" | dot -Tpng > hello.png
 
 ### Exercise
 

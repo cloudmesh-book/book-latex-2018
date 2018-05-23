@@ -1,6 +1,6 @@
 ### Github Issues
-
 <div class="smalltable">
+
   Count   Number                                                title                                                               Assignee
   ------- ----------------------------------------------------- ------------------------------------------------------------------- ---------------
   1       [165](https://github.com/cloudmesh/book/pull/165)     Added instructions to add role to service account                   None
@@ -66,3 +66,4 @@
   61      [14](https://github.com/cloudmesh/book/issues/14)     Lecture/Section: Docker swarm                                       bfeng
 
 </div>
+

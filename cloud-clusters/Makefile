@@ -30,7 +30,6 @@ CHAPTER_DOC=\
 
 
 CHAPTER_DOC_DRAFT=\
- ./dest/chapters/doc/graphviz.md\
  ./dest/chapters/doc/projects.md\
  ./dest/chapters/doc/report.md\
  ./dest/chapters/doc/type.md
@@ -56,6 +55,9 @@ CHAPTER_DRAFT=\
  ./dest/chapters/preface/plan.md\
  ./dest/chapters/preface/project-ideas.md\
  ./dest/chapters/preface/project.md\
+
+GRAPHICS=\
+ ./dest/chapters/doc/graphviz.md\
 
 CHAPTER_IN=\
  ./dest/chapters/in/ansible.md\
@@ -318,3 +320,10 @@ issues:
 	python ../bin/issues.py > /tmp/issues.tex
 	pandoc /tmp/issues.tex -o chapters/preface/issues.md
 	bin/header.sh chapters/preface/issues.md 3
+	head -1 chapters/preface/issues.md > /tmp/issues.md
+	echo "<div class=\"smalltable\">" >> /tmp/issues.md
+	tail -n +2 chapters/preface/issues.md >> /tmp/issues.md
+	echo  >> /tmp/issues.md
+	echo "</div>" >> /tmp/issues.md
+	echo  >> /tmp/issues.md
+	cp /tmp/issues.md chapters/preface/issues.md
