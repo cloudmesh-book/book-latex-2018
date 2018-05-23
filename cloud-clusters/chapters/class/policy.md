@@ -1,5 +1,4 @@
-Course Policies
----------------
+## Course Policies
 
 We describe briefly how we manage different classes and how to interact
 with us.
@@ -76,7 +75,14 @@ as it is much more general and once you graduate the knowledge you
 gained using professional tools such as github tools will help you and
 give you an advantage.
 
-### Office Hours - Online Students
+### Office Hours
+
+We provide office hours for residential and online
+students. Residential students should primarily use the discussion
+session.
+
+
+#### Online Students
 
 To support you we have established an open policy of sharing
 information not only as part of the class material and your
@@ -124,7 +130,7 @@ The link for joining the meeting on Zoom is posted in Piazza in the
 *Resources* section for your class.
 
 
-### Office Hours - Residential Students
+#### Residential Students
 
 Residential students must attend the class listed in the discussion
 time (see information provided by the registrar) and ask any question
@@ -425,3 +431,9 @@ langauges.
 For more information on this topic please see:
 
 * <https://studentaffairs.indiana.edu/student-conduct/misconduct-charges/academic-misconduct.shtml>
+
+### Exercises
+
+Policy.1
+
+:    Take the [Plagiarism](#plagiarism) test.

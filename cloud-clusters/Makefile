@@ -2,6 +2,14 @@
 # ./dest/chapters/preface-old/spring2018.md\
 
 INDEX=\
+ ./dest/chapters/doc/piazza.md\
+ ./dest/chapters/doc/emacs.md\
+ ./dest/chapters/doc/graphviz.md\
+ ./dest/chapters/doc/markdown.md\
+ ./dest/chapters/doc/plagiarism.md\
+ ./dest/chapters/doc/projects.md\
+ ./dest/chapters/doc/report.md\
+ ./dest/chapters/doc/type.md\
  ./dest/chapters/preface/update.md\
  ./dest/chapters/todo.md\
  ./dest/todo.md\
@@ -25,6 +33,30 @@ INDEX=\
  ./dest/chapters/preface/plan.md\
  ./dest/chapters/preface/project-ideas.md\
  ./dest/chapters/preface/project.md\
+ ./README.md\
+ ./dest/chapters/in/ansible.md\
+ ./dest/chapters/in/assignments.md\
+ ./dest/chapters/in/box.md\
+ ./dest/chapters/in/cm-hadoop.md\
+ ./dest/chapters/in/course1.md\
+ ./dest/chapters/in/datasets.md\
+ ./dest/chapters/in/futuresystems.md\
+ ./dest/chapters/in/hadoop-comet.md\
+ ./dest/chapters/in/hadoop-rdma.md\
+ ./dest/chapters/in/hadoop-ubunto.md\
+ ./dest/chapters/in/linux.md\
+ ./dest/chapters/in/old.md\
+ ./dest/chapters/in/pyenv-anaconda.md\
+ ./dest/chapters/in/python-cmd.md\
+ ./dest/chapters/in/refcards.md\
+ ./dest/chapters/in/ssh.md\
+ ./dest/chapters/in/ubuntu.md\
+ ./dest/chapters/in/virtualbox.md\
+ ./dest/chapters/in/vis.md\
+ ./dest/chapters/in/wordcount.md\
+
+
+OTHER=\
  ./dest/chapters/icloud//course/old-fundamentals.md\
  ./dest/chapters/icloud//course/iot.md\
  ./dest/chapters/icloud//course/nosql.md\
@@ -158,7 +190,6 @@ INDEX=\
  ./dest/chapters/prg/python-interactive.md\
  ./dest/chapters/prg/python-data.md\
  ./dest/chapters/prg/python-libcloud.md\
- ./README.md\
  ./dest/chapters/login-node.md\
  ./dest/chapters/raspberry/README.md\
  ./dest/chapters/sd-card.md\

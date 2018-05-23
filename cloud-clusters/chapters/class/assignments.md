@@ -1,12 +1,15 @@
 ## Assignments
 
-For due dates see class policies section.
+For due dates see the [calendar](#calendar) section.
 
 ### Assignment 0 - Communication
 
-In order for us to communicate with you and you beingable to ue the
-class reources we need to set the various systems. Please do the
-following:
+In order for us to communicate with you and you being able to use the
+class reources we need you to register with various systems.  THis
+needs to be done immediatly as it takes a while to get the systems set
+up. It also requires approval steps that take some time and are not
+immediate, thus do not just start this assignment on the due
+date. Procrastenation will not help you.  Please do the following:
 
 Get access to piazza:
 
