@@ -38,6 +38,7 @@ def recursive_glob(rootdir='.', pattern='*.md'):
 
 	return matches
 
+# {gitissue}{12}
 
 
     
@@ -52,8 +53,7 @@ def convert(filename):
         lines[0] = lines[0] + " {github}"
     content = "\n".join(lines)
     content = content.replace("{github}", link)
-
-    
+    content = content.replace("{github-sourcecode}", "gregor")
     
     with open("dest/" + filename, 'w') as f:
         f.write(content)

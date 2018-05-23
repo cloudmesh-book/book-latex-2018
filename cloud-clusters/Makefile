@@ -43,6 +43,8 @@ CHAPTER_DRAFT=\
  ./dest/chapters/preface/plan.md\
  ./dest/chapters/preface/project-ideas.md\
  ./dest/chapters/preface/project.md\
+
+CHAPTER_IN=\
  ./dest/chapters/in/ansible.md\
  ./dest/chapters/in/assignments.md\
  ./dest/chapters/in/box.md\
@@ -63,6 +65,21 @@ CHAPTER_DRAFT=\
  ./dest/chapters/in/virtualbox.md\
  ./dest/chapters/in/vis.md\
  ./dest/chapters/in/wordcount.md
+
+CHAPTER_BIGDATA=\
+ ./dest/chapters/bigdata/SECTION.md\
+ ./dest/chapters/bigdata//algorithms/technology.md\
+ ./dest/chapters/bigdata//algorithms/clustering.md\
+ ./dest/chapters/bigdata//algorithms/plotviz.md\
+ ./dest/chapters/bigdata//applications/overview.md\
+ ./dest/chapters/bigdata//applications/physics.md\
+ ./dest/chapters/bigdata//applications/lifestyle.md\
+ ./dest/chapters/bigdata//applications/sport.md\
+ ./dest/chapters/bigdata//applications/cloud.md\
+ ./dest/chapters/bigdata//applications/usecases.md\
+ ./dest/chapters/bigdata//applications/sensor.md\
+ ./dest/chapters/bigdata//applications/web.md\
+ ./dest/chapters/bigdata//applications/health.md\
 
 
 CHAPTER_OTHER=\
@@ -134,18 +151,6 @@ CHAPTER_OTHER=\
  ./dest/chapters/faas/introduction.md\
  ./dest/chapters/data/formats.md\
  ./dest/chapters/ai/ai.md\
- ./dest/chapters/bigdata//algorithms/technology.md\
- ./dest/chapters/bigdata//algorithms/clustering.md\
- ./dest/chapters/bigdata//algorithms/plotviz.md\
- ./dest/chapters/bigdata//applications/overview.md\
- ./dest/chapters/bigdata//applications/physics.md\
- ./dest/chapters/bigdata//applications/lifestyle.md\
- ./dest/chapters/bigdata//applications/sport.md\
- ./dest/chapters/bigdata//applications/cloud.md\
- ./dest/chapters/bigdata//applications/usecases.md\
- ./dest/chapters/bigdata//applications/sensor.md\
- ./dest/chapters/bigdata//applications/web.md\
- ./dest/chapters/bigdata//applications/health.md\
  ./dest/chapters/devops/devops.md\
  ./dest/chapters/devops/travis.md\
  ./dest/chapters/container/container.md\
@@ -230,7 +235,9 @@ INDEX=$(CHAPTER_DOC) \
   $(CHAPTER_PREFIX) \
   $(CHAPTER_CLASS) \
   $(CHAPTER_DRAFT) \
-	$(CHAPTER_OTHER)
+	$(CHAPTER_OTHER) \
+  $(CHAPTER_IN) \
+  $(CHAPTER_BIGDATA)
 
 MARKDOWN-OPTIONS=-f markdown+smart -f markdown+emoji --indented-code-classes=bash,python,yaml
 CSL=--csl=template/ieee-with-url.csl
@@ -246,6 +253,7 @@ FILENAME=vonlaszewski-cloud-cluster
 epub: refernces todo
 	mkdir -p dest/chapters/prg
 	bin/markup-all.py
+	bin/section.py 1 "Big Data Applications" > dest/chapters/bigdata/SECTION.md
 	bin/section.py 1 "Scientifc Writing" > dest/chapters/doc/SECTION.md
 	bin/section.py 1 "Python" > dest/chapters/prg/SECTION-PYTHON.md
 	bin/section.py 1 "Classes" > dest/chapters/class/SECTION.md

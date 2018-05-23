@@ -13,8 +13,8 @@ Github Issues
   8       [146](https://github.com/cloudmesh/book/issues/146)   vm virtual machine setup                                            None
   9       [145](https://github.com/cloudmesh/book/issues/145)   TA help: cms comminity                                              laszewsk
   10      [144](https://github.com/cloudmesh/book/issues/144)   TA help: i movie                                                    laszewsk
-  11      [143](https://github.com/cloudmesh/book/issues/143)   AWS lamda                                                           None
-  12      [142](https://github.com/cloudmesh/book/issues/142)   open wisk                                                           None
+  11      [143](https://github.com/cloudmesh/book/issues/143)   Chapter: AWS lamda                                                  None
+  12      [142](https://github.com/cloudmesh/book/issues/142)   Chapter: OpenWisk                                                   None
   13      [141](https://github.com/cloudmesh/book/issues/141)   Raspberry pi applications                                           None
   14      [140](https://github.com/cloudmesh/book/issues/140)   Install docker swarm on single node                                 bfeng
   15      [139](https://github.com/cloudmesh/book/issues/139)   Mini Kube instalation tutorial ubuntu osx                           bfeng

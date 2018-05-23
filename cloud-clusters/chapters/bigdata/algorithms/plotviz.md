@@ -1,5 +1,5 @@
 Technology Training - Plotviz
-=============================
+-----------------------------
 
 We introduce Plotviz, a data visualization tool developed at Indiana
 University to display 2 and 3 dimensional data. The motivation is that
@@ -11,8 +11,7 @@ data can be visualized. This includes individual plots and the
 manipulation of multiple synchronized plots.Finally, he describes the
 download and software dependency of Plotviz.
 
-Using Plotviz Software for Displaying Point Distributions in 3D
----------------------------------------------------------------
+### Using Plotviz Software for Displaying Point Distributions in 3D
 
 We introduce Plotviz, a data visualization tool developed at Indiana
 University to display 2 and 3 dimensional data. The motivation is that
@@ -31,8 +30,7 @@ Files:
 \sourcecode{Plotviz}{DatingRatings-OriginalLabels.pviz}{examples/plotviz/datingrating-originallabels.pviz}
 \sourcecode{Plotviz}{ClusterFinal-M30-C28.pviz}{examples/plotviz/clusterFinal-M30-C28.pviz}
 \sourcecode{Plotviz}{clusterFinal-M3-C3Dating-ReClustered.pviz}{examples/plotviz/clusterfinal-m3-c3dating-reclustered.pviz}
-
-### Motivation and Introduction to use
+#### Motivation and Introduction to use
 
 The motivation of Plotviz is that the human eye is very good at pattern
 recognition and can *see* structure in data. Although most Big data is
@@ -49,7 +47,7 @@ respectively. Note all files used in examples are available to students.
 
 Video: 7:58: Motivation: <http://youtu.be/4aQlCmQ1jfY>
 
-### Example of Use I: Cube and Structured Dataset
+#### Example of Use I: Cube and Structured Dataset
 
 Initially we start with a simple plot of 8 points -- the corners of a
 cube in 3 dimensions -- showing basic operations such as
@@ -59,7 +57,7 @@ structure. This has .pviz and a .txt versions that are compared.
 
 Video: 9:45: Example I: <http://youtu.be/nCTT5mI_j_Q>
 
-### Example of Use II: Proteomics and Synchronized Rotation
+#### Example of Use II: Proteomics and Synchronized Rotation
 
 This starts with an examination of a sample of Protein Universe Browser
 showing how one uses Plotviz to look at different features of this set
@@ -70,7 +68,7 @@ different ways; this dataset comes from k Nearest Neighbor discussion.
 Video: 9:14: Proteomics and Synchronized Rotation:
 <http://youtu.be/lDbIhnLrNkk>
 
-### Example of Use III: More Features and larger Proteomics Sample
+#### Example of Use III: More Features and larger Proteomics Sample
 
 This starts by describing use of Labels and Glyphs and the Default mode
 in Plotviz. Then we illustrate sophisticated use of these ideas to view
@@ -78,7 +76,7 @@ a large Proteomics dataset.
 
 Video: 8:37: Larger Proteomics Sample: <http://youtu.be/KBkUW_QNSvs>
 
-### Example of Use IV: Tools and Examples
+#### Example of Use IV: Tools and Examples
 
 This lesson starts by describing the Plotviz tools and then sets up two
 examples -- Oil Flow and Trading -- described in PowerPoint. It finishes
@@ -86,7 +84,7 @@ with the Plotviz viewing of Oil Flow data.
 
 Video: 10:17: Plotviz I: <http://youtu.be/zp_709imR40>
 
-### Example of Use V: Final Examples
+#### Example of Use V: Final Examples
 
 This starts with Plotviz looking at Trading example introduced in
 previous lesson and then examines solvent data. It finishes with two
@@ -94,8 +92,8 @@ large biology examples with 446K and 100K points and each with over 100
 clusters. We finish remarks on Plotviz software structure and how to
 download. We also remind you that a picture is worth a 1000 words.
 
-[:clapper: Plotviz II 14:58](<http://youtu.be/FKoCfTJ_cDM>)
+[:clapper: Plotviz II 14:58](http://youtu.be/FKoCfTJ_cDM)
 
-### Resources
+#### Resources
 
-[Download](<http://salsahpc.indiana.edu/pviz3/>)
+[Download](http://salsahpc.indiana.edu/pviz3/)

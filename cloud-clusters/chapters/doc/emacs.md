@@ -2,6 +2,8 @@ Basic Emacs
 -----------
 
 
+{github-sourcecode}
+
 
 One of the most useful short manuals for emacs is the following refrence
 card. It takes some time to use this card efficiently, but the most
@@ -40,7 +42,6 @@ a wrong key:
 -   `C-/` If you executed a command and Emacs has modified your buffer,
     use `C-/` to undo that change.
 
-
   Key         Description
   ----------- -----------------------------------------
   ---         **Saving and Exiting**
@@ -51,7 +52,7 @@ a wrong key:
   `C-n`       Next line
   `C-b`       Back one character
   `C-p`       Previous line
-   ---        **Cursor context move**
+  ---         **Cursor context move**
   `C-a`       Beginning of line
   `M-f`       Forward one word
   `M-a`       Previous sentence
@@ -62,14 +63,14 @@ a wrong key:
   `M-e`       Next sentence
   `C-v`       Next screen
   `M->`       End of buffer
-   ---        **Cursor jump**
+  ---         **Cursor jump**
   `M-g` g     Jump to specified line
-   ---        **Search**
+  ---         **Search**
   `C-s`       Incremental search forward
   `C-r`       Incremental search backward
-   ---        **Replace**
+  ---         **Replace**
   `M-`%       Query replace
-   ---        **Killing ("cutting") text**
+  ---         **Killing ("cutting") text**
   `C-k`       Kill line
   `C-y`       Yanks last killed text
 
