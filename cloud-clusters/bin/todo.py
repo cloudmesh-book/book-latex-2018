@@ -36,19 +36,19 @@ def extract_todos(filename):
 
         # path = filename.replace("chapters/","")
         path = os.path.basename(filename) .replace(".md", "")
-        link = '[' + path + '](https://github.com/cloudmesh/book/edit/master/cloud-clusters/' + filename + ')'
+        link = '[' + path + '](https://github.com/cloudmesh/book/edit/master/cloud-clusters/' + filename + ')' + '{style="font-size:50%"}'
 
 
         
         if "todo" in line:
-            print ("|", count, "|", '<font size="xx-small">' , link, '</font>', "|", line, "|")            
+            print ("|", count, "|", link, "|", line, "|")
 
         if "TODO" in line:
             line = line.replace("\TODO{","")
             line = line.replace("}","")
             line = line.replace("TODO:","")
-            line = line.replace("TODO","")                        
-            print ("|", count, "|", '<font size="xx-small">' , link, '</font>', "|", line, "|")
+            line = line.replace("TODO","")
+            print("|", count, "|", link, "|", line, "|")
         count = count + 1
 
 #print("# TODO")
