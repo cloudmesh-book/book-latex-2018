@@ -38,8 +38,6 @@ def extract_todos(filename):
         path = os.path.basename(filename) .replace(".md", "")
         link = '[' + path + '](https://github.com/cloudmesh/book/edit/master/cloud-clusters/' + filename + ')' + '{style="font-size:50%"}'
 
-
-        
         if "todo" in line:
             print ("|", count, "|", link, "|", line, "|")
 

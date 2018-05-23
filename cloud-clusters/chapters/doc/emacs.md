@@ -1,9 +1,5 @@
-Basic Emacs
------------
-
-
-{github-sourcecode}
-
+Emacs
+-----
 
 One of the most useful short manuals for emacs is the following refrence
 card. It takes some time to use this card efficiently, but the most
@@ -64,7 +60,7 @@ a wrong key:
   `C-v`       Next screen
   `M->`       End of buffer
   ---         **Cursor jump**
-  `M-g` g     Jump to specified line
+  `M-g` g     Jump to specified line number
   ---         **Search**
   `C-s`       Incremental search forward
   `C-r`       Incremental search backward
@@ -73,20 +69,11 @@ a wrong key:
   ---         **Killing ("cutting") text**
   `C-k`       Kill line
   `C-y`       Yanks last killed text
-
-Macros
-
-Keyboard Macros
-
-Keyboard macros are a way to remember a fixed sequence of keys for later
-repetition. They're handy for automating some boring editing tasks.
-
-  Key           Description
-  ------------- -------------------------
-  `M-x (`       Start recording macro
-  `M-x )`       Stop recording macro
-  `M-x e`       Play back macro once
-  `M-5 C-x-e`   Play back macro 5 times
+  ---         **Macros**
+  `M-x (`     Start recording macro
+  `M-x )`     Stop recording macro
+  `M-x e`     Play back macro once
+  `M-5 C-x-e` Play back macro 5 times
 
 Modes
 
@@ -131,7 +118,7 @@ Some more information is available at
 
 One of the real great features of knowing emacs is that you can set all
 your editors to emacs shortcuts. This includes pyCharm, but also bash.
-IN bash you simply say
+In bash you simply say
 
     set -o emacs
 
@@ -154,9 +141,10 @@ emacs is avalable at
 
 Of interest are for example also
 
-\* `M-x flyspell-mode`: allowing to do spell checking in the window \*
-predictive mode: https://www.emacswiki.org/emacs/PredictiveMode \*
-preview latex \* whizzy tex
+* `M-x flyspell-mode`: allowing to do spell checking in the window
+* predictive mode: https://www.emacswiki.org/emacs/PredictiveMode
+* preview latex
+*whizzy tex
 
 However instead of previes and whizzy tex we recommend to use
 
