@@ -110,41 +110,50 @@ support older versions.
 
 ---
 
+Implicit assignments
 
+* Learn how to use piazza
+* Learn how to use github
+* Learn how to write a formal bio, see IEEE papers for examples
 
 ### Assignment 1 - Technology
 
+Learning about Git pull Requests while using the Class web page as
+example. Only make small changes based on a paragraph and create a pull
+request for it.
+
 
 ### Assignment 2 - Programming Assignment & Chapter
+
+* Identify a Programming assignment that can be a chapter in the
+  handbook. Use github issues to coordinate this.
+
+* Learn Python
+* Learn CMD5
+* Learn click
+* Python 2 vs 3: <https://docs.google.com/document/d/1WGK6Bhdp4ErwvNr-bk5dlZmHKDjdzTn1emHtbijTqjo/edit>
+
+* Data formats <https://github.com/bigdata-i523/hid233/blob/master/experiment/dataformats/group_assignment.md>
+* Raspberry Pi <https://github.com/bigdata-i523/hid201/blob/master/python_stuff/raspberry_pi.md>
+
+
+CMD5
+* open: cloudmesh.cmd5 on Windows Native and with docker
+    <https://piazza.com/class/j5wll7vzylg25j?cid=337>
+* MQTT
+  <https://github.com/bigdata-i523/hid104/tree/master/experiment>
+  (PDF, lost original)
+
+*  Cloudmesh.cmd5 <https://piazza.com/class/j5wll7vzylg25j?cid=335>
+
 
 
 ### Assignment 3 - Project
 
 
 
-Week 2
+OLD
 ------
-
-This may take multiple weeks to complete for some of you:
-
-Learn on how to use piazza for the class
-
--   EPiazza.4 e-piazza
-
-Learn Python
-
--   EPython.1 e-python
-
-Paper 1 Topic:
-
-:   Identify the topic for your individual paper 1 and post it on
-    Piazza: <https://piazza.com/class/j5wll7vzylg25j?cid=158> . The
-    paper will be due on Oct 9, 9am.
-
-Week 3
-------
-
-This assignment may take some of you multiple weeks.
 
 Implement a command using
 
@@ -157,9 +166,6 @@ Use cms sys generate command hello
 
 There will be a tutorial about this.
 
-Learning about Git pull Requests while using the Class web page as
-example. Only make small changes based on a paragraph and create a pull
-request for it.
 
 -   EContrib.0 e-contrib
 -   EContrib.1 e-contrib
@@ -181,21 +187,6 @@ Polls
     -   Which lectures did you view?
         <https://piazza.com/class/j5wll7vzylg25j?cid=185>
 
-Week 4
-------
-
-Please identify your paper 2 topic immediately. Post it in the Followup
-Discussion section of this Piazza post with the specified format:
-<https://piazza.com/class/j5wll7vzylg25j?cid=187>
-
-Week 5
-------
-
--   Please read the following post on Piazza and make sure your
-    README.md file is up to date (Deadline: Friday 22 Sept 9am):
-    <https://piazza.com/class/j5wll7vzylg25j?cid=252>
-
--   
 
     Experiments
 
@@ -222,82 +213,7 @@ Week 5
         -   E: Build a Raspberry PI docker swarm cluster
             <https://piazza.com/class/j5wll7vzylg25j?cid=243>
 
-Week 6
-------
-
-Group activity for Residential Students
-
-Work on one of the following discussion posts on Piazza. You will work
-in groups that were formed in the class on Friday Sep 25. Post the
-results of your work on Piazza by next Thursday (Oct 5) 11:59 PM
-
--   Python 2 vs 3 <https://piazza.com/class/j5wll7vzylg25j?cid=333>
--   Data formats <https://piazza.com/class/j5wll7vzylg25j?cid=334>
--   Cloudmesh.cmd5 <https://piazza.com/class/j5wll7vzylg25j?cid=335>
--   Raspberry Pi <https://piazza.com/class/j5wll7vzylg25j?cid=336>
--   open: cloudmesh.cmd5 on Windows Native and with docker
-    <https://piazza.com/class/j5wll7vzylg25j?cid=337>
--   open: MQTT <https://piazza.com/class/j5wll7vzylg25j?cid=338>
 
 
-Assignments
-===========
+-
 
-Overview
---------
-
- 
-
-We will post in this part all assignments for the various classes. As
-this page will be updated frequently, it is in the students
-responsibility to check.
-
-It is in the responsibility of the student to check this page and
-complete the assignments. Some assignment may not be graded, but they
-still have to be completed. To identify the assignment they carry the
-name of the Lesson as well as a number. We try to alsoinclude a refernce
-to the section where this assignment may be originating from.
-
-The following are mandated assignments for this class
-
-Due Dates
----------
-
-If not explicitly mentioned here the due dates are posted in Section
-[\[S:calendar\]](#S:calendar){reference-type="ref"
-reference="S:calendar"}.
-
-Deliverables
-------------
-
-You will have graded assignments as documented in Section C:course-2018.
-In addition we will post here some additional assignments, some of which
-are pass/fail and are integrated in your disccussion points. You will
-need to add them to your notebook and if code is required to include an
-explicit URL to where that particular code is in your git repository.
-
-Week 1
-------
-
--   Watch the introduction video at: <https://youtu.be/yC3PNkb_9mI>
--   Exercise [\[E:Piazza.1\]](#E:Piazza.1){reference-type="ref"
-    reference="E:Piazza.1"} in Chapter on page
--   Exercise [\[E:Piazza.2\]](#E:Piazza.2){reference-type="ref"
-    reference="E:Piazza.2"} in Chapter on page
--   Exercise [\[E:Piazza.3\]](#E:Piazza.3){reference-type="ref"
-    reference="E:Piazza.3"} in Chapter on page
--   Exercise [\[E:Documentation.1\]](#E:Documentation.1){reference-type="ref"
-    reference="E:Documentation.1"} on page
--   Exercise.Organization.1 e-organization
--   Exercise.Organization.2 e-organization
--   Exercise.Organization.3 e-organization
--   Exercise.Organization.4 e-organization
--   Exercise.Organization.5 e-organization
--   Conduct the entry survey after you have done the above assignments:
--   Learn about Piazza folders:
-
-Optional Assignment:
-
--   Buy Hardware for IoT
-
-Complete the above within the first week!

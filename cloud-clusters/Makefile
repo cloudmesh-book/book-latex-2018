@@ -2,17 +2,18 @@
 # ./dest/chapters/preface-old/spring2018.md\
 
 INDEX=\
+ ./dest/chapters/preface/update.md\
  ./dest/chapters/todo.md\
  ./dest/todo.md\
  ./dest/chapters/preface/issues.md\
  ./dest/chapters/preface/preface.md\
  ./dest/chapters/preface/contributors.md\
+ ./dest/chapters/preface/contributing.md\
  ./dest/chapters/class/SECTION.md\
  ./dest/chapters/class/fall2018.md\
  ./dest/chapters/class/policy.md\
  ./dest/chapters/class/assignments.md\
  ./dest/chapters/SECTION-DRAFT.md\
- ./dest/chapters/preface/contributing.md\
  ./dest/chapters/preface/g.md\
  ./dest/chapters/preface/git.md\
  ./dest/chapters/preface/grading.md\
@@ -24,7 +25,6 @@ INDEX=\
  ./dest/chapters/preface/plan.md\
  ./dest/chapters/preface/project-ideas.md\
  ./dest/chapters/preface/project.md\
- ./dest/chapters/preface/update.md\
  ./dest/chapters/icloud//course/old-fundamentals.md\
  ./dest/chapters/icloud//course/iot.md\
  ./dest/chapters/icloud//course/nosql.md\
