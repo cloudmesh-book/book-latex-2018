@@ -1,7 +1,7 @@
 Health Informatics
 ==================
 
-\slides{Health}{131}{Health Informatics}{https://drive.google.com/open?id=0B6wqDMIyK2P7UGRJNmlkYkNkQk0}
+[:scroll: Health Informatics (131)](https://drive.google.com/open?id=0B6wqDMIyK2P7UGRJNmlkYkNkQk0)
 
 This section starts by discussing general aspects of Big Data and Health
 including data sizes, different areas including genomics, EBI, radiology
@@ -159,13 +159,10 @@ trees.
 \TODO{These two videos need to be uploaded to youtube}
 [:clapper: Genomics, Proteomics and Information Visualization I (10:33)](https://drive.google.com/file/d/0B5plU-u0wqMobXdEQWRHWl95UTA/view?usp=sharing)
 [:clapper: Genomics, Proteomics and Information Visualization: II (7:41)](https://drive.google.com/file/d/0B5plU-u0wqModlhmdVUwdGlQNTA/view?usp=sharing)
-\slides{Health}{131}{Proteomics and Information Visualization}{https://drive.google.com/open?id=0B8936_ytjfjmX0lEMWhMX2kwRHc}
+
+[:scroll: Proteomics and Information Visualization (131)](https://drive.google.com/open?id=0B8936_ytjfjmX0lEMWhMX2kwRHc)
 
 ### Resources
-
-\TODO{These resources have not all been checked to see if they still
-  exist this is curretnly in progress}
-
 
 *   <https://wiki.nci.nih.gov/display/CIP/CIP+Survey+of+Biomedical+Imaging+Archives>
 *   <http://grids.ucs.indiana.edu/ptliupages/publications/Where\%20does\%20all\%20the\%20data\%20come\%20from\%20v7.pdf>

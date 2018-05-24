@@ -33,10 +33,10 @@ choosing best answer.
 
 Files:
 
--   \sourcecode{K-means}{xmean.py}{examples/python/k-means/xmean.py}
--   \sourcecode{K-means}{sample.csv}{examples/python/k-means/sample.csv}
--   \sourcecode{K-means}{parallel-kmeans.py}{examples/python/k-means/parallel-kmeans.py}
--   \sourcecode{K-means}{kmeans-extra.py}{examples/python/k-means/kmeans-extra.py}
+-   <{gitcode}/kmeans/xmean.py>
+-   <{gitcode}/kmeans/sample.csv>
+-   <{gitcode}/kmeans/parallel-kmeans.py>
+-   <{gitcode}/kmeans/kmeans-extra.py>
 
 #### K-means in Python
 
@@ -97,7 +97,8 @@ this simple 2 map version can be generalized to scalable parallelism.
 
 Files:
 
-\sourcecode{K-means}{ParallelKmeans}{examples/python/k-means/parallel-kmeans.py}
+<{gitcode}/kmeans/parallel-kmeans.py>
+
 #### MapReduce Kmeans in Python
 
 We modify the SciPy K-means code to support a MapReduce execution style
@@ -115,8 +116,9 @@ for general web pages by extracting the secret from Google.
 
 Files:
 
-\sourcecode{K-means}{pagerank1.py}{examples/python/page-rank/pagerank1.py}
-\sourcecode{K-means}{pagerank2.py}{examples/python/page-rank/pagerank2.py}
+<{gitcode}/page-rank/pagerank1.py>
+<{gitcode}/page-rank/pagerank2.py>
+
 #### Calculate PageRank from Web Linkage Matrix
 
 We take two simple matrices for 6 and 8 web sites respectively to

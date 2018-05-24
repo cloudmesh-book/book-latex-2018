@@ -40,7 +40,7 @@ individual cores. Many examples are given and it is stressed that issues
 in parallel computing are seen in day to day life for communication,
 synchronization, load balancing and decomposition.
 
-\slides{Cloud}{33}{Parallel Computing}{https://drive.google.com/file/d/0B8936_ytjfjmZDRqMldzSVhVem8/view?usp=sharing}
+[:scroll: Parallel Computing (33)](https://drive.google.com/file/d/0B8936_ytjfjmZDRqMldzSVhVem8/view?usp=sharing)
 
 ### Decomposition
 
@@ -119,7 +119,7 @@ clouds and Big Data. The unit concludes with two simple examples of the
 value of clouds for enterprise applications. Gartner also has specific
 predictions for cloud computing growth areas.
 
-\slides{Cloud}{45}{Introduction}{https://drive.google.com/file/d/0B8936_ytjfjmdmF2Uy1vWS0xTFU/view?usp=sharing}
+[:scroll: Introduction (45)](https://drive.google.com/file/d/0B8936_ytjfjmdmF2Uy1vWS0xTFU/view?usp=sharing)
 
 ### Cyberinfrastructure for E-Applications
 
@@ -202,7 +202,7 @@ starting at virtual machine management (IaaS) and the broad Platform
 studies. We summarize the 21 layers and almost 300 software packages in
 the HPC-ABDS Software Stack explaining how they are used.
 
-\slides{Cloud}{32}{Software and Systems}{https://drive.google.com/file/d/0B8936_ytjfjmUHlEVG1wSUhDNnM/view?usp=sharing}
+[:scroll: Software and Systems (32)](https://drive.google.com/file/d/0B8936_ytjfjmUHlEVG1wSUhDNnM/view?usp=sharing)
 
 ### What is Cloud Computing
 
@@ -265,7 +265,7 @@ comparison with high performance computing, science clouds and the
 Internet of Things. Remarks on Security, Fault Tolerance and
 Synchronicity issues in cloud follow.
 
-\slides{Cloud}{64}{Architectures}{https://drive.google.com/file/d/0B8936_ytjfjmTHlzcGN3SzFNTTA/view?usp=sharing}
+[scroll: Architectures (64)](https://drive.google.com/file/d/0B8936_ytjfjmTHlzcGN3SzFNTTA/view?usp=sharing)
 
 ### Cloud (Data Center) Architectures
 
@@ -400,7 +400,7 @@ unit concludes with the treatment of data in the cloud from an
 architecture perspective and Big Data Processing from an application
 perspective with commercial examples including eBay.
 
-\slides{Cloud}{49}{Data Systems}{https://drive.google.com/file/d/0B1Of61fJF7WsN1RPVFRLUGJLZGs/view?usp=sharing}
+[:scroll: Data Systems (49)](https://drive.google.com/file/d/0B1Of61fJF7WsN1RPVFRLUGJLZGs/view?usp=sharing)
 
 ### The 10 Interaction scenarios (access patterns) I
 

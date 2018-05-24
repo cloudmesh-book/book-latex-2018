@@ -28,7 +28,7 @@ lectures use Python but use of Java is described.
 
 * [:scroll: Higgs (20)](https://drive.google.com/open?id=0B8936_ytjfjmYXNoM3ZadGR6QlE)
 
-* \sourcecode{Physics}{HiggsClassI-Sloping.py}{examples/physics/mr-higgs/higgs-classI-sloping.py}
+* <{gitcode}/physics/mr-higgs/higgs-classI-sloping.py>
 
 ### Particle Counting
 
@@ -78,9 +78,9 @@ background and with various event totals.
 * [:scroll: Higgs II (29)](https://drive.google.com/open?id=0B8936_ytjfjmUHRpV2g2V28walE}
 Files:
 
-* \sourcecode{Physics}{HiggsClassI-Sloping.py}{examples/physics/mr-higgs/higgs-classI-sloping.py}
-* \sourcecode{Physics}{HiggsClassIII.py}{examples/physics/number-theory/higgs-classIII.py}
-* \sourcecode{Physics}{HiggsClassIIUniform.py}{examples/physics/mr-higgs/higgs-classII-uniform.py}
+* <{gitcode}/physics/mr-higgs/higgs-classI-sloping.py>
+* <{gitcode}/physics/number-theory/higgs-classIII.py>
+* <{gitcode}/physics/mr-higgs/higgs-classII-uniform.py>
 
 ### Event Counting
 
@@ -125,8 +125,7 @@ seen so often in natural phenomena. Several Python illustrations are
 given. Java is currently not available in this unit.
 
 * [:scroll: Higgs (39)](https://drive.google.com/open?id=0B8936_ytjfjmNWhrS0xadk16SWM)
-* \sourcecode{Physics}{Hig
-gsClassIII.py}{examples/physics/number-theory/higgs-classIII.py}
+* <{gitcode}/physics/number-theory/higgs-classIII.py>
 
 ### Statistics Overview and Fundamental Idea: Random Variables
 
@@ -189,7 +188,7 @@ examples and Physics applications are given.
 * [:scroll: Higgs III (44)](https://drive.google.com/open?id=0B8936_ytjfjmTUxkZXVRRmlBSUk)
 Files:
 
-* \sourcecode{Physics}{HiggsClassIII.py}{examples/physics/calculated-dice-roll/higgs-classIV-seeds.py}
+* <{gitcode}/physics/calculated-dice-roll/higgs-classIV-seeds.py>
 
 #### Generators and Seeds
 

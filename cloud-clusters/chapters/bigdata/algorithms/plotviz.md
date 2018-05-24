@@ -23,13 +23,15 @@ data can be visualized. This includes individual plots and the
 manipulation of multiple synchronized plots. Finally, he describes the
 download and software dependency of Plotviz.
 
-\slides{Plotviz}{34}{Plotvisz}{https://iu.app.box.com/s/jypomnrz755xgps5e6iw}
+[:scroll: Plotviz (34)](https://iu.app.box.com/s/jypomnrz755xgps5e6iw)
+
 Files:
 
-\sourcecode{Plotviz}{Fungi-LSU-3-15-to-3-26-zeroidx.pviz}{examples/python/plotviz/fungi-lsu-3-15-to-3-26-zeroidx.pviz}
-\sourcecode{Plotviz}{DatingRatings-OriginalLabels.pviz}{examples/plotviz/datingrating-originallabels.pviz}
-\sourcecode{Plotviz}{ClusterFinal-M30-C28.pviz}{examples/plotviz/clusterFinal-M30-C28.pviz}
-\sourcecode{Plotviz}{clusterFinal-M3-C3Dating-ReClustered.pviz}{examples/plotviz/clusterfinal-m3-c3dating-reclustered.pviz}
+- <{gitcode}/plotviz/fungi-lsu-3-15-to-3-26-zeroidx.pviz>
+- <{gitcode}/plotviz/datingrating-originallabels.pviz>
+- <{gitcode}/plotviz/clusterFinal-M30-C28.pviz>
+- <{gitcode}/plotviz/clusterfinal-m3-c3dating-reclustered.pviz>
+
 #### Motivation and Introduction to use
 
 The motivation of Plotviz is that the human eye is very good at pattern
