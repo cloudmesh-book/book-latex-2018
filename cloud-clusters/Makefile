@@ -34,7 +34,6 @@ CHAPTER_CLASS=\
 
 
 CHAPTER_DOC_DRAFT=\
- ./dest/chapters/doc/projects.md\
  ./dest/chapters/doc/report.md\
  ./dest/chapters/doc/type.md\
  ./dest/chapters/preface/project-ideas.md\
@@ -251,6 +250,8 @@ OK=\
 
 INDEX=\
   $(CHAPTER_CLASS) \
+
+Y=\
 	$(CHAPTER_DOC_DRAFT)\
   $(CHAPTER_DRAFT) 
 

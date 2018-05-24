@@ -289,101 +289,271 @@ This assignment has the following outcomes
    to document how to replicate your project
 
 
-### :o: Assignment 2 - Programming Assignment & Chapter
+### Assignment 2 - Programming Assignment & Chapter
 
-* Identify a Programming assignment that can be a chapter in the
-  handbook. Use github issues to coordinate this.
+In the handbook we have a large number of practical information that
+describe a paricular topic and include some information to explore
+this topic with programs and scripts. Your task will be to improve or
+create substentially a topic of your choice. The topics are included
+in the following ebooks:
 
-* Learn Python
-* Learn CMD5
-* Learn click
-* Python 2 vs 3: <https://docs.google.com/document/d/1WGK6Bhdp4ErwvNr-bk5dlZmHKDjdzTn1emHtbijTqjo/edit>
+* https://github.com/cloudmesh/book/raw/master/cloud-clusters/vonlaszewski-cloud-cluster.epub
 
-* Data formats <https://github.com/bigdata-i523/hid233/blob/master/experiment/dataformats/group_assignment.md>
-* Raspberry Pi <https://github.com/bigdata-i523/hid201/blob/master/python_stuff/raspberry_pi.md>
-
-
-CMD5
-* open: cloudmesh.cmd5 on Windows Native and with docker
-    <https://piazza.com/class/j5wll7vzylg25j?cid=337>
-* MQTT
-  <https://github.com/bigdata-i523/hid104/tree/master/experiment>
-  (PDF, lost original)
-
-*  Cloudmesh.cmd5 <https://piazza.com/class/j5wll7vzylg25j?cid=335>
+The source is located at
 
 
+* https://github.com/cloudmesh/book/tree/master/cloud-clusters
 
-### :o: Assignment 3 - Project
+You will be identifying an existing chapter or a new one that you will
+improve. Just as in Assignment 0 we will use github issues to
+coordinate this. Note that this is a different github issue so you
+need to make sure you use the correct one for the correct task. For
+this assignment the issues are managed at
 
+* https://github.com/cloudmesh/book/issues
 
+For chapter that you work on pleaase use the title
 
-OLD
-------
+```Chapter: Chapter name```
 
-Implement a command using
+Make sure to assign it to you. Use the label `community` to make sure
+to communicate that this contribution will be done by a community
+member. As soon as you start working on this and there is text already
+in the repository, please augment your issue with the url to the document.
 
--   ECMD5.2 e-cmd5
+TAs will also provide issues that are labeld with `open` that you can
+take. Once you take it change the label to `community`. Note that the
+Assignment 2 must be a significant contribution. Multiple smaller once
+could add up to a significant contribution.
 
-that is called "hello" that prints hello world. Use docopts to define
-the command.
+#### Outcomes
 
-Use cms sys generate command hello
-
-There will be a tutorial about this.
-
-
--   EContrib.0 e-contrib
--   EContrib.1 e-contrib
--   EContrib.5 e-contrib
-
-There will be tutorials about this
-
-Polls
-
-:   Please fill out the following polls on Piazza. They will used to
-    track your progress:
-
-    -   Who has or will have a Raspberry Pi or esp8266?
-        <https://piazza.com/class/j5wll7vzylg25j?cid=182>
-    -   Where do you intend to program in python?
-        <https://piazza.com/class/j5wll7vzylg25j?cid=183>
-    -   What is your python knowledge?
-        <https://piazza.com/class/j5wll7vzylg25j?cid=184>
-    -   Which lectures did you view?
-        <https://piazza.com/class/j5wll7vzylg25j?cid=185>
+This assignment has the following outcomes
 
 
-    Experiments
-
-    :   A number of experiments are posted on Piazza. They are not
-        assignments, but are experiments and if you do them right, they
-        will lead to material that can be shared with all students.
-        Experiments can lead to discussion points that go into your
-        discussion grade. Here are the links:
-
-        -   Description
-            <https://piazza.com/class/j5wll7vzylg25j?cid=240>
-        -   E: Experimenting with gitbash on windows
-            <https://piazza.com/class/j5wll7vzylg25j?cid=236>
-        -   E: Experimenting Windows Subsystem for Linux Documentation
-            <https://piazza.com/class/j5wll7vzylg25j?cid=237>
-        -   E: Experimenting with MQTT
-            <https://piazza.com/class/j5wll7vzylg25j?cid=238>
-        -   E: Experimenting with Graphs
-            <https://piazza.com/class/j5wll7vzylg25j?cid=239>
-        -   E: Experimenting with IoT sculptures
-            <https://piazza.com/class/j5wll7vzylg25j?cid=241>
-        -   E: Build a camera enhanced Raspberry Pi robot car
-            <https://piazza.com/class/j5wll7vzylg25j?cid=242>
-        -   E: Build a Raspberry PI docker swarm cluster
-            <https://piazza.com/class/j5wll7vzylg25j?cid=243>
+1. Inspect the chapters of the handbook
+2. Learn how to document code and code execution
+3. Learn python, bash, Makefiles and similar
+4. Learn how to communicate on how to replicate a code
+5. Learn how to benchmark (some contributions may require this)
+6. Learn about libraries such as cmd5 and click
+7. Learn about Python 2 vs 3
+8. Learn about the limitations aof anaconda and why we should not use
+   it (valid for some assignments).
 
 
 
-# OLD CLASS :o:
+
+### Assignment 3 - Project
+
+The project deliverables depend on tha class you take. Please locate
+your class number and read up on the section relevant for your class.
+
+#### Class: E516 or E616
+
+The objective of the project is to define a clear problem statement and
+create a framework to address that problem. This framework must include
+a docker packaged service that includes all necessary dependencies
+necessary to perform the analysis. For example if you are using a
+machine learning algorithm your docker packaged service will include the
+machine learning algorithm which works on a particular dataset providing
+clustered ,classified or regression outputs to the user. The final
+objective is to obtain results in form of graphs or tabular mode. In
+selecting a dataset, you can use a dataset from a public dataset like
+and pick a suitable dataset according to your problem statement. Final
+results must be exposed via a REST service. For instance if it is a
+classification problem, the should have the capability of entering a new
+test data set or single data point (meaning a single record) via a REST
+API endpoint and get the expected output in form of a JSON object. UI
+creation is an optional task. This is the overall expectation of the
+project.
+
+### Deliverables
+
+- Find a data set with reasonable size (this may depend on your
+  resources and needs to include a benchmark in your paper for
+  justification).
+
+- Clean up the data set or make it smaller or find a bigger data set
+
+- Identify existing algorithms and tools and technologies that you can
+  use to analyze your data
+
+- Develop a Swagger or Flask Rest Service to send a sample data set
+  and get output. Provide benchmarks.
+
+- Take results in two different cloud services and your local PC (ex:
+  Chameleon Cloud, echo kubernetes). Make sure your system can be
+  created and deployed based on your documentation. 
+
+- Create a Makefile with the tags deploy, run, kill, view, clean that
+  deploys your environment, runs application, kills it, views the
+  result and cleans up after wards. You are allowed to have different
+  makefiles for the different clouds and different directories. Keep
+  the code and directory structure clean and document how to reproduce
+  your results.
+
+- For python use a requirements.txt file also
+
+- For docker use a Dockerfile also 
+
+- Write a report that includes the following sections
+
+  * Abstract
+  * Introduction
+  * Architecture
+  * Implementation
+    * Technologies Used
+  * Results
+    * Deployment Benchmarks
+    * application Benchmarks
+  * (Limitations)
+  * Conlusion
+  * (Work Breakdown)
+
+
+### Class: i423 i523 or E534 or i524
+
+The objective of the project is to define a clear problem statement and
+create a framework to address that problem as it relates to big data
+your project must address the reproducability of the deployment and
+the application. A dataset must be chosen and you can analyze the
+data. While in i423, i523, the data analysis has more weight, in e523
+and i524 you must also address the deplyment. For the later classes
+see also the project requirements of E616
+
+### Deliverables
+
+- Find a data set with reasonable size (this may depend on your
+  resources and needs to include a benchmark in your paper for
+  justification).
+
+- Clean up the data set or make it smaller or find a bigger data set
+
+- Identify existing algorithms and tools and technologies that you can
+  use to analyze your data
+
+- Develop a Swagger or Flask Rest Service to send a sample data set
+  and get output. Provide benchmarks.
+
+- Take results in two different cloud services and your local PC (ex:
+  Chameleon Cloud, echo kubernetes). Make sure your system can be
+  created and deployed based on your documentation. 
+
+- Create a Makefile with the tags deploy, run, kill, view, clean that
+  deploys your environment, runs application, kills it, views the
+  result and cleans up after wards. You are allowed to have different
+  makefiles for the different clouds and different directories. Keep
+  the code and directory structure clean and document how to reproduce
+  your results.
+
+- For python use a requirements.txt file also
+
+- For docker use a Dockerfile also 
+
+- Write a report that includes the following sections
+
+  * Abstract
+  * Introduction
+  * Architecture
+  * Implementation
+    * Technologies Used
+  * Results
+    * Deployment Benchmarks
+    * application Benchmarks
+  * (Limitations)
+  * Conlusion
+  * (Work Breakdown)
+
+
+
+Class: E222 {#s:classe22-proj}
+-----------
+
+For the final project in this class you need to do the following.
+
+-   Find a dataset : A sample data repository can be found at the link
+    below however you are free to use data from elsewhere, like scikit
+    learn libraries.
+
+-   Use Scikit Learn Library to run Machine Learning algorithm depending
+    on your problem.
+
+-   Do some classifications, clustering or a regression calculation
+    using a machine learning algorithm.
+
+-   Use the results from classification to draw charts. You can use
+    matplotlib to do this.
+
+-   Use REST api to tun ML algorithm i.e. in k-means the user should be
+    able to change the cluster number (k) through a RESTful service.
+
+-   Use Flask Rest API to expose the data to the viewers. So people can
+    send a data set and get the outputs as a json object.
+
+### Deliverables
+
+-   Find and clean up data set
+
+-   Scikit Learn ML Algorithm Application to cleaned up data set
+
+-   Clustering or Regression or Classification results in Graphical
+    Format (Matplotlib) (GUI not needed, save graphs as png)
+
+-   Flask Rest service to tune ML algorithm
+
+-   Flask Rest Service to send a sample data set and get output
+    (terminal output is enough)
+
+-   Create a Makefile with running, setting up, sample test case running
+    commands
+
+-   requirement.txt file for pip installation
+
+-   Package with Docker
+
+- Write a report that includes the following sections
+
+  * Abstract
+  * Introduction
+  * Architecture
+  * Implementation
+    * Technologies Used
+  * Results
+    * Deployment Benchmarks
+    * application Benchmarks
+  * (Limitations)
+  * Conlusion
+  * (Work Breakdown)
+
+
+
+# OLD CLASS links :o:
 
 If you observe something missing let us know.
 
 -   <https://github.com/bigdata-i523>
 -   <https://raw.githubusercontent.com/bigdata-i523/sample-hid000/master/README.md>
+
+
+## Contributions for review and improvements not yet in this document :o:
+
+:o: TODO: integrate and review the following
+
+* Python 2 vs 3: <https://docs.google.com/document/d/1WGK6Bhdp4ErwvNr-bk5dlZmHKDjdzTn1emHtbijTqjo/edit>
+* Data formats <https://github.com/bigdata-i523/hid233/blob/master/experiment/dataformats/group_assignment.md>
+* Raspberry Pi <https://github.com/bigdata-i523/hid201/blob/master/python_stuff/raspberry_pi.md>
+* open: cloudmesh.cmd5 on Windows Native and with docker
+    <https://piazza.com/class/j5wll7vzylg25j?cid=337>
+* MQTT
+  <https://github.com/bigdata-i523/hid104/tree/master/experiment>
+  (PDF, lost original)
+*  Cloudmesh.cmd5 <https://piazza.com/class/j5wll7vzylg25j?cid=335>
+-   Description            <https://piazza.com/class/j5wll7vzylg25j?cid=240>
+-   E: Experimenting with gitbash on windows            <https://piazza.com/class/j5wll7vzylg25j?cid=236>
+-   E: Experimenting Windows Subsystem for Linux Documentation            <https://piazza.com/class/j5wll7vzylg25j?cid=237>
+-   E: Experimenting with MQTT      <https://piazza.com/class/j5wll7vzylg25j?cid=238>
+-   E: Experimenting with Graphs            <https://piazza.com/class/j5wll7vzylg25j?cid=239>
+-   E: Experimenting with IoT sculptures            <https://piazza.com/class/j5wll7vzylg25j?cid=241>
+-   E: Build a camera enhanced Raspberry Pi robot car            <https://piazza.com/class/j5wll7vzylg25j?cid=242>
+-   E: Build a Raspberry PI docker swarm cluster            <https://piazza.com/class/j5wll7vzylg25j?cid=243>
