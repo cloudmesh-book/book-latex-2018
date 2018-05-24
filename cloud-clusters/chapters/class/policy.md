@@ -36,7 +36,7 @@ outline as follows:
 *   any post from piazza by a TA must be not be send to the individual
     student only, but also must include *instructors*;
 
-These elementary rules gurantee that multiple instructors can view
+These elementary rules guarantee that multiple instructors can view
 your post and that a record of the post is created in piazza.
 
 
@@ -198,11 +198,11 @@ Please examine carefully the sample note book is available at:
 
 The notebook.md is not a blog and should only contain a summary of what
 you have done in bullet form. PLease also note that you will only get
-credit for the notbook on a weekly basis. So if you do not do anything
+credit for the notebook on a weekly basis. So if you do not do anything
 in class for that week you still need to add this in that week. As
 this only takes 30 seconds (we timed it) excuses such as *I did not
 have time* do not apply. TAs will use the gitlog to determine if you
-updated your notbook on weekly basis.
+updated your notebook on weekly basis.
 
 
 ### Blog
@@ -219,7 +219,7 @@ turn it to a positive experience.
 
 ### Incomplete
 
-Incompletes have to be explicitly requested in piazza through a private
+Incomplete's have to be explicitly requested in piazza through a private
 mail to *instructors*. 
 
 Incomplete's will receive **two fractional grade reductions**: A will become
@@ -228,7 +228,7 @@ to complete all assignments without getting an incomplete.
 
 In case you take multiple classes and our class is the only class that
 you have an incomplete in, it shows to us that you did not spend
-sufficient time for the class and instead favoured another class. In
+sufficient time for the class and instead favored another class. In
 this case we will reduce the grade not only by 2 fractions, but you
 will receive a **full grade reduction**. E.g. an A becomes a B, a B
 becomes a C and so on.
@@ -411,7 +411,7 @@ you do not have to retake it.
 If we find cheating or plagiarism, your assignment will be receiving
 an *F*. This especially includes copying text without proper
 attribution.  Furthermore, we will follow IU policy and **report your
-case to the dean of students** who may elect to exspell you form the
+case to the dean of students** who may elect to expel you form the
 university in severe cases. Please understand that it is **your
 doing** and the instructors have no choice as to **follow university
 policies**. Thus, please do not blame the instructors for **your
@@ -426,7 +426,7 @@ not even have us review your paper. Do not work on teh assumption
 *they will not find out*. Please note that our test for plagiarism is
 more sophisticated than any online service that we are aware of this
 includes turnitin.com. This includes text written in different
-langauges.
+languages.
 
 For more information on this topic please see:
 

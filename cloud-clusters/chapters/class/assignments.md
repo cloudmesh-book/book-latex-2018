@@ -154,7 +154,7 @@ other accounts.
    You should remove the comments in your README.yml
 
 Naturally, we want you to learn about the various systems. The one you will
-need to use immediatly is piazza. 
+need to use immediately is piazza. 
 
 10. Learn about Piazza: please see [piazza](#piazza) for more details.
 
@@ -164,13 +164,13 @@ need to use immediatly is piazza.
 Now it is time to buy some supplies and prepare your system. Obviously
 this class will need a computer that you can use to login into the
 remote machines and do your project. If you do not have such a
-computer, you can purchase a Raspbery Pi with power plug for about
+computer, you can purchase a Raspberry Pi with power plug for about
 $50. Otherwise use your laptop or desktop. Detailed information about
 such hardware are provided in the Raspberry PI section.
 
 Residential students have access to about 100 Raspberry PIs in the
-Rasperry PI Lab in Smith Research Center (which may be relocated to
-MESH) Resdidential students will have mandatory projects for selected
+Raspberry PI Lab in Smith Research Center (which may be relocated to
+MESH) Residential students will have mandatory projects for selected
 classes that will have to be done on the Raspberry PIs. For online
 students this is optional. Please refer to your specific class.
 
@@ -179,11 +179,11 @@ students this is optional. Please refer to your specific class.
 :warning: Please note that we do not provide support for Windows. You
 can certainly use virtualbox and install a newer version of ubuntu on it.
 
-:warning: Windows 10 Home Eddition has significant limitations at time
+:warning: Windows 10 Home Edition has significant limitations at time
 of writing of this document. For example it does not allow you to use
 containers or proper virtualization. For this reason we recommend that
-you upgrade to Woindows 10 pro or eductaion. The eductaion version is
-available for free via IU. Please see IUware and share your experince
+you upgrade to Windows 10 pro or education. The education version is
+available for free via IU. Please see IUware and share your experience
 in piazza about your update. Whatever you do, make a backup first.
 
 :warning: OSX users have typically an easy time as all TAs have access
@@ -202,10 +202,10 @@ outcomes such as
 * Learn how to write a formal bio.
 * Set up a computer to be used for class.
 * Learn on how to asks for help.
-* Work with the fellow students to solve issues and giveach other tips.
+* Work with the fellow students to solve issues and give each other tips.
 
 We expect that if you have difficulties with some of the technologies
-to also consult with external resources that are for example serachble
+to also consult with external resources that are for example searchable
 with google.
 
 ### Assignment 1 - Technology
@@ -226,7 +226,7 @@ tasked to do the following:
    in cloud and or big data. Each student will contribute till midterm
    10 such technologies. It is important that we make sure that each
    student has a unique list of technologies they work on. To
-   coordinate this you will be first inspecting the gitissues at
+   coordinate this you will be first inspecting the git issues at
 
    * https://github.com/cloudmesh/technologies/issues
 
@@ -242,7 +242,7 @@ tasked to do the following:
    assigned to. The organization of this is part of your learning
    experience. You will need to assign this technology to you.
 
-   If you find in the gitissues als technologies marked with the label
+   If you find in the git issues als technologies marked with the label
    `open` they are free for the taking and you can modify the issues
    and assign them to you.  Please also be reminded that all
    technologies in the technology book that are marked with a red
@@ -292,9 +292,9 @@ This assignment has the following outcomes
 ### Assignment 2 - Programming Assignment & Chapter
 
 In the handbook we have a large number of practical information that
-describe a paricular topic and include some information to explore
+describe a particular topic and include some information to explore
 this topic with programs and scripts. Your task will be to improve or
-create substentially a topic of your choice. The topics are included
+create a substantial topic of your choice. The topics are included
 in the following ebooks:
 
 * https://github.com/cloudmesh/book/raw/master/cloud-clusters/vonlaszewski-cloud-cluster.epub
@@ -312,7 +312,7 @@ this assignment the issues are managed at
 
 * https://github.com/cloudmesh/book/issues
 
-For chapter that you work on pleaase use the title
+For chapter that you work on please use the title
 
 ```Chapter: Chapter name```
 
@@ -321,7 +321,7 @@ to communicate that this contribution will be done by a community
 member. As soon as you start working on this and there is text already
 in the repository, please augment your issue with the url to the document.
 
-TAs will also provide issues that are labeld with `open` that you can
+TAs will also provide issues that are labeled with `open` that you can
 take. Once you take it change the label to `community`. Note that the
 Assignment 2 must be a significant contribution. Multiple smaller once
 could add up to a significant contribution.
@@ -408,7 +408,7 @@ project.
     * Deployment Benchmarks
     * application Benchmarks
   * (Limitations)
-  * Conlusion
+  * Conclusion
   * (Work Breakdown)
 
 
@@ -416,10 +416,10 @@ project.
 
 The objective of the project is to define a clear problem statement and
 create a framework to address that problem as it relates to big data
-your project must address the reproducability of the deployment and
+your project must address the reproducibility of the deployment and
 the application. A dataset must be chosen and you can analyze the
 data. While in i423, i523, the data analysis has more weight, in e523
-and i524 you must also address the deplyment. For the later classes
+and i524 you must also address the deployment. For the later classes
 see also the project requirements of E616
 
 ### Deliverables
@@ -462,12 +462,12 @@ see also the project requirements of E616
     * Deployment Benchmarks
     * application Benchmarks
   * (Limitations)
-  * Conlusion
+  * Conclusion
   * (Work Breakdown)
 
 
 
-Class: E222 {#s:classe22-proj}
+Class: E222
 -----------
 
 For the final project in this class you need to do the following.
@@ -523,37 +523,6 @@ For the final project in this class you need to do the following.
     * Deployment Benchmarks
     * application Benchmarks
   * (Limitations)
-  * Conlusion
+  * Conclusion
   * (Work Breakdown)
 
-
-
-# OLD CLASS links :o:
-
-If you observe something missing let us know.
-
--   <https://github.com/bigdata-i523>
--   <https://raw.githubusercontent.com/bigdata-i523/sample-hid000/master/README.md>
-
-
-## Contributions for review and improvements not yet in this document :o:
-
-:o: TODO: integrate and review the following
-
-* Python 2 vs 3: <https://docs.google.com/document/d/1WGK6Bhdp4ErwvNr-bk5dlZmHKDjdzTn1emHtbijTqjo/edit>
-* Data formats <https://github.com/bigdata-i523/hid233/blob/master/experiment/dataformats/group_assignment.md>
-* Raspberry Pi <https://github.com/bigdata-i523/hid201/blob/master/python_stuff/raspberry_pi.md>
-* open: cloudmesh.cmd5 on Windows Native and with docker
-    <https://piazza.com/class/j5wll7vzylg25j?cid=337>
-* MQTT
-  <https://github.com/bigdata-i523/hid104/tree/master/experiment>
-  (PDF, lost original)
-*  Cloudmesh.cmd5 <https://piazza.com/class/j5wll7vzylg25j?cid=335>
--   Description            <https://piazza.com/class/j5wll7vzylg25j?cid=240>
--   E: Experimenting with gitbash on windows            <https://piazza.com/class/j5wll7vzylg25j?cid=236>
--   E: Experimenting Windows Subsystem for Linux Documentation            <https://piazza.com/class/j5wll7vzylg25j?cid=237>
--   E: Experimenting with MQTT      <https://piazza.com/class/j5wll7vzylg25j?cid=238>
--   E: Experimenting with Graphs            <https://piazza.com/class/j5wll7vzylg25j?cid=239>
--   E: Experimenting with IoT sculptures            <https://piazza.com/class/j5wll7vzylg25j?cid=241>
--   E: Build a camera enhanced Raspberry Pi robot car            <https://piazza.com/class/j5wll7vzylg25j?cid=242>
--   E: Build a Raspberry PI docker swarm cluster            <https://piazza.com/class/j5wll7vzylg25j?cid=243>
