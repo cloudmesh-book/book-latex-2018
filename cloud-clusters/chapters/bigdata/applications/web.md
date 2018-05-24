@@ -195,15 +195,11 @@ All resources accessed March 2018.
 
 -   <http://saedsayad.com/data_mining_map.htm>
 -   <http://webcourse.cs.technion.ac.il/236621/Winter2011-2012/en/ho_Lectures.html>
--   The Web Graph: an Overviews:
-    <https://www.youtube.com/watch?v=yPFi6xFnDHE> Jean-Loup Guillaume
-    and Matthieu Latapy
-    <https://hal.archives-ouvertes.fr/file/index/docid/54458/filename/webgraph.pdf>
--   Constructing a reliable Web graph with information on browsing
+-   [The Web Graph: an Overviews](https://www.youtube.com/watch?v=yPFi6xFnDHE)
+-   [Jean-Loup Guillaume and Matthieu Latapy](https://hal.archives-ouvertes.fr/file/index/docid/54458/filename/webgraph.pdf)
+-   [Constructing a reliable Web graph with information on browsing
     behavior, Yiqun Liu, Yufei Xue, Danqing Xu, Rongwei Cen, Min Zhang,
-    Shaoping Ma, Liyun Ru
-    <http://www.sciencedirect.com/science/article/pii/S0167923612001844>
+    Shaoping Ma, Liyun Ru](http://www.sciencedirect.com/science/article/pii/S0167923612001844)
 -   <http://www.ifis.cs.tu-bs.de/teaching/ss-11/irws>
 -   <https://en.wikipedia.org/wiki/PageRank>
--   Meeker/Wu May 29 2013 Internet Trends D11 Conference
-    <http://www.slideshare.net/kleinerperkins/kpcb-internet-trends-2013>
+-   [Meeker/Wu May 29 2013 Internet Trends D11 Conference](http://www.slideshare.net/kleinerperkins/kpcb-internet-trends-2013)

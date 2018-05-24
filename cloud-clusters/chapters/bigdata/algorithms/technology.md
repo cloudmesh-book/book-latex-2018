@@ -97,7 +97,7 @@ this simple 2 map version can be generalized to scalable parallelism.
 
 Files:
 
-<{gitcode}/kmeans/parallel-kmeans.py>
+- <{gitcode}/kmeans/parallel-kmeans.py>
 
 #### MapReduce Kmeans in Python
 
@@ -116,8 +116,8 @@ for general web pages by extracting the secret from Google.
 
 Files:
 
-<{gitcode}/page-rank/pagerank1.py>
-<{gitcode}/page-rank/pagerank2.py>
+- <{gitcode}/page-rank/pagerank1.py>
+- <{gitcode}/page-rank/pagerank2.py>
 
 #### Calculate PageRank from Web Linkage Matrix
 

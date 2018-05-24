@@ -76,6 +76,7 @@ Higgs Boson production with various forms of shape of signal and various
 background and with various event totals.
 
 * [:scroll: Higgs II (29)](https://drive.google.com/open?id=0B8936_ytjfjmUHRpV2g2V28walE}
+
 Files:
 
 * <{gitcode}/physics/mr-higgs/higgs-classI-sloping.py>
@@ -111,9 +112,7 @@ shape of background.
 -   Python for Data Analysis: Agile Tools for Real World Data By Wes
     McKinney, Publisher: O'Reilly Media, Released: October 2012,
     Pages: 472.
-
 -   <http://jwork.org/scavis/api/>
-
 -   <https://en.wikipedia.org/wiki/DataMelt>
 
 ### Random Variables, Physics and Normal Distributions
@@ -186,6 +185,7 @@ discussion. Python and Java (for student - not reviewed in class)
 examples and Physics applications are given.
 
 * [:scroll: Higgs III (44)](https://drive.google.com/open?id=0B8936_ytjfjmTUxkZXVRRmlBSUk)
+
 Files:
 
 * <{gitcode}/physics/calculated-dice-roll/higgs-classIV-seeds.py>
@@ -261,7 +261,6 @@ A summary article about this effort is available at:
 
 * <https://www.hpcwire.com/2017/11/17/sc17-keynote-hpc-powers-ska-efforts-peer-deep-cosmos/>
 The video is hosted at
-
 * <http://sc17.supercomputing.org/presentation/?id=inspkr101&sess=sess263>
 Start at about 1:03:00 (e.g. the one hour mark)
 

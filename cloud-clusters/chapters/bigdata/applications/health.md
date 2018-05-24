@@ -77,7 +77,7 @@ convergence of multiple positive changes has created a tipping point for
 innovation; Primary data pools are at the heart of the big data
 revolution in healthcare; Big data is changing the paradigm: these are
 the value pathways; Applying early successes at scale could reduce US
-healthcare costs by \$300 billion to \$450 billion; Most new big-data
+healthcare costs by $300 billion to $450 billion; Most new big-data
 applications target consumers and providers across pathways; Innovations
 are weighted towards influencing individual decision-making levers; Big
 data innovations use a range of public, acquired, and proprietary data
@@ -144,8 +144,7 @@ clustering methods applied to metagenomics. Then we discuss the
 Generative Topographic Map GTM method that can be used in dimension
 reduction when original data is in a metric space and is in this case
 faster than MDS as GTM computational complexity scales like N not N
-squar
-ed as seen in MDS.
+squared as seen in MDS.
 
 Examples are given of GTM including an application to topic models in
 Information Retrieval. Indiana University has developed a deterministic
@@ -157,7 +156,9 @@ an application of MDS to generate and visualize phylogenetic
 trees.
 
 \TODO{These two videos need to be uploaded to youtube}
+
 [:clapper: Genomics, Proteomics and Information Visualization I (10:33)](https://drive.google.com/file/d/0B5plU-u0wqMobXdEQWRHWl95UTA/view?usp=sharing)
+
 [:clapper: Genomics, Proteomics and Information Visualization: II (7:41)](https://drive.google.com/file/d/0B5plU-u0wqModlhmdVUwdGlQNTA/view?usp=sharing)
 
 [:scroll: Proteomics and Information Visualization (131)](https://drive.google.com/open?id=0B8936_ytjfjmX0lEMWhMX2kwRHc)
@@ -179,12 +180,12 @@ trees.
 *   <http://medcitynews.com/2013/03/the-body-in-bytes-medical-images-as-a-source-of-healthcare-big-data-infographic/>
 *   <http://healthinformatics.wikispaces.com/file/view/cloud_computing.ppt>
 *   <https://www.mckinsey.com/~/media/mckinsey/industries/healthcare%20systems%20and%20services/our%20insights/the%20big%20data%20revolution%20in%20us%20health%20care/the_big_data_revolution_in_healthcare.ashx>
-*   <https://partner.microsoft.com/download/global/40193764> ?
+*   <https://partner.microsoft.com/download/global/40193764>
 *   <https://ec.europa.eu/eip/ageing/file/353/download_en?token=8gECi1RO>
 *   <http://www.kpcb.com/internet-trends>
-*   <http://www.liveathos.com/apparel/app> ?
+*   <http://www.liveathos.com/apparel/app>
 *   <http://debategraph.org/Poster.aspx?aID=77>
-*   <http://www.oerc.ox.ac.uk/downloads/presentations-from-events/microsoftworkshop/gannon> ?
+*   <http://www.oerc.ox.ac.uk/downloads/presentations-from-events/microsoftworkshop/gannon>
 *   <http://www.delsall.org>
 *   <http://salsahpc.indiana.edu/millionseq/mina/16SrRNA_index.html>
 *   <http://www.geatbx.com/docu/fcnindex-01.html>

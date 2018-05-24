@@ -168,7 +168,9 @@ discuss the approach that involves both batch (offline) and on-line
 (real time) components.
 
 [:clapper: Recap of Recommender Systems II (8:46)](https://youtu.be/FBn7HpGFNvg)
+
 [:clapper: Recap of Recommender Systems III (10:48)](https://youtu.be/VS2Y4lAiP5A)
+
 [:clapper: Case Study of Recommender systems (3:21)](https://youtu.be/HrRJWEF8EfU)
 
 #### User-based nearest-neighbor collaborative filtering
@@ -180,6 +182,7 @@ predict their interests, and typically this quantified by the Pearson
 correlation, used to statistically quantify correlations between users.
 
 [:clapper: User-based nearest-neighbor collaborative filtering I (7:20)](https://youtu.be/lsf_AE-8dSk)
+
 [:clapper: User-based nearest-neighbor collaborative filtering II (7:29)](https://youtu.be/U7-qeX2ItPk)
 
 #### Vector Space Formulation of Recommender Systems
@@ -234,12 +237,12 @@ there would be faster solution methods.
 
 \TODO{These resources have not all been checked to see if they still
   exist this is curretnly in progress}
+
 -   <http://www.slideshare.net/xamat/building-largescale-realworld-recommender-systems-recsys2012-tutorial>
 -   <http://www.ifi.uzh.ch/ce/teaching/spring2012/16-Recommender-Systems_Slides.pdf>
 -   <https://www.kaggle.com/>
 -   <http://www.ics.uci.edu/~welling/teaching/CS77Bwinter12/CS77B_w12.html>
--   Jeff Hammerbacher
-    <https://berkeleydatascience.files.wordpress.com/2012/01/20120117berkeley1.pdf>
+-   [Jeff Hammerbacher](https://berkeleydatascience.files.wordpress.com/2012/01/20120117berkeley1.pdf)
 -   <http://www.techworld.com/news/apps/netflix-foretells-house-of-cards-success-with-cassandra-big-data-engine-3437514/>
 -   <https://en.wikipedia.org/wiki/A/B_testing>
 -   <http://www.infoq.com/presentations/Netflix-Architecture>

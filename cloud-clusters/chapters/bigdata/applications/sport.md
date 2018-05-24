@@ -78,12 +78,14 @@ PITCHf/X
 Examples of use of PITCHf/X.
 
 [:clapper: PITCHf/X (10:39)](https://www.youtube.com/watch?v=m7IXhsHgQmE)
+
 ### Other Video Data Gathering in Baseball
 
 FIELDf/X, MLBAM, HITf/X, COMMANDf/X.
 
 [:clapper: Other Video Data Gathering in Baseball (18:5)](https://www.youtube.com/watch?v=nKZiOOGccms)
 Other Sports
+
 ------------
 
 We look at Wearables and consumer sports/recreation. The importance of

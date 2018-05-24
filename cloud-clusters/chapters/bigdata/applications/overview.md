@@ -104,38 +104,23 @@ banking, manufacturing and retail industries both online and offline in
 shopping malls. We give examples from ebay showing how analytics
 allowing them to refine and improve the customer experiences.
 
-* [:clapper: Buisiness (6:00)](http://youtu.be/PJz38t6yn_s)
-* [:clapper: Business (7:34)](http://youtu.be/fESm-2Vox9M)
-* [:clapper: Buisiness (9:37)](http://youtu.be/fcvn-IxPO00)
+* [:clapper: Business I (6:00)](http://youtu.be/PJz38t6yn_s)
+* [:clapper: Business II (7:34)](http://youtu.be/fESm-2Vox9M)
+* [:clapper: Business III (9:37)](http://youtu.be/fcvn-IxPO00)
 
 ### Resources
 
 -   <http://www.microsoft.com/en-us/news/features/2012/mar12/03-05CloudComputingJobs.aspx>
-
 -   <http://www.mckinsey.com/mgi/publications/big_data/index.asp>
-
--   Tom Davenport
-    <http://fisheritcenter.haas.berkeley.edu/Big_Data/index.html>
-
--   Anjul Bhambhri
-    <http://fisheritcenter.haas.berkeley.edu/Big_Data/index.html>
-
--   Jeff Hammerbacher
-    <http://berkeleydatascience.files.wordpress.com/2012/01/20120117berkeley1.pdf>
-
+-   [Tom Davenport](http://fisheritcenter.haas.berkeley.edu/Big_Data/index.html)
+-   [Anjul Bhambhri](http://fisheritcenter.haas.berkeley.edu/Big_Data/index.html)
+-   [Jeff Hammerbacher](http://berkeleydatascience.files.wordpress.com/2012/01/20120117berkeley1.pdf)
 -   <http://www.economist.com/node/15579717>
-
 -   <http://cs.metrostate.edu/~sbd/slides/Sun.pdf>
-
 -   <http://jess3.com/geosocial-universe-2/>
-
--   Bill Ruh
-    <http://fisheritcenter.haas.berkeley.edu/Big_Data/index.html>
-
+-   [Bill Ruh](http://fisheritcenter.haas.berkeley.edu/Big_Data/index.html)
 -   <http://www.hsph.harvard.edu/ncb2011/files/ncb2011-z03-rodriguez.pptx>
-
--   Hugh Williams
-    <http://fisheritcenter.haas.berkeley.edu/Big_Data/index.html>
+-   [Hugh Williams](http://fisheritcenter.haas.berkeley.edu/Big_Data/index.html)
 
 Data Deluge and Scientific Applications and Methodology
 -------------------------------------------------------
@@ -188,38 +173,27 @@ A final category of Big data comes from the Internet of Things where
 lots of small devices \~\~ smart phones, web cams, video games collect
 and disseminate data and are controlled and coordinated in the cloud.
 
-* [:clapper: Long Tail of Science (5:45)](http://youtu.be/K2anbyxX48w)
+* [:clapper: Internet of Things (5:45)](http://youtu.be/K2anbyxX48w)
 
 ### Resources
 
 -   <http://www.economist.com/node/15579717>
-
 -   Geoffrey Fox and Dennis Gannon Using Clouds for Technical Computing
     To be published in Proceedings of HPC 2012 Conference at Cetraro,
     Italy June 28 2012
-
 -   <http://grids.ucs.indiana.edu/ptliupages/publications/Clouds_Technical_Computing_FoxGannonv2.pdf>
-
 -   <http://grids.ucs.indiana.edu/ptliupages/publications/Where%20does%20all%20the%20data%20come%20from%20v7.pdf>
-
 -   <http://www.genome.gov/sequencingcosts/>
-
 -   <http://www.quantumdiaries.org/2012/09/07/why-particle-detectors-need-a-trigger/atlasmgg>
-
 -   <http://salsahpc.indiana.edu/dlib/articles/00001935/>
-
 -   <http://en.wikipedia.org/wiki/Simple_linear_regression>
-
 -   <http://www.ebi.ac.uk/Information/Brochures/>
-
 -   <http://www.wired.com/wired/issue/16-07>
-
 -   <http://research.microsoft.com/en-us/collaboration/fourthparadigm/>
-
--   CSTI General Assembly 2012, Washington, D.C., USA Technical
+-   [CSTI General Assembly 2012, Washington, D.C., USA Technical
     Activities Coordinating Committee (TACC) Meeting, Data Management,
     Cloud Computing and the Long Tail of Science October 2012 Dennis
-    Gannon <https://sites.google.com/site/opensourceiotcloud/>
+    Gannon](https://sites.google.com/site/opensourceiotcloud/)
 
 Clouds and Big Data Processing; Data Science Process and Analytics
 ------------------------------------------------------------------
@@ -242,8 +216,8 @@ science and several are discussed to give a good composite picture of
 this emerging field.
 
 [:scroll: Clouds (35)](https://drive.google.com/open?id=0B88HKpainTSfV1FwdktnbTl3T1k)
-Clouds
 
+Clouds
 ------
 
 We describe cloud data centers with their staggering size with up to a
@@ -299,17 +273,12 @@ Resources
 -   <http://www.datacenterknowledge.com/archives/2011/05/10/uptime-institute-the-average-pue-is-1-8/>
 -   <http://loosebolts.wordpress.com/2008/12/02/our-vision-for-generation-4-modular-data-centers-one-way-of-getting-it-just-right/>
 -   <http://www.mediafire.com/file/zzqna34282frr2f/koomeydatacenterelectuse2011finalversion.pdf>
--   Bina Ramamurthy <http://www.cse.buffalo.edu/~bina/cse487/fall2011/>
--   Jeff Hammerbacher
-    <http://berkeleydatascience.files.wordpress.com/2012/01/20120117berkeley1.pdf>
--   Jeff Hammerbacher
-    <http://berkeleydatascience.files.wordpress.com/2012/01/20120119berkeley.pdf>
--   Anjul Bhambhri
-    <http://fisheritcenter.haas.berkeley.edu/Big_Data/index.html>
+-   [Bina Ramamurthy](http://www.cse.buffalo.edu/~bina/cse487/fall2011/)
+-   [Jeff Hammerbacher](http://berkeleydatascience.files.wordpress.com/2012/01/20120117berkeley1.pdf)
+-   [Jeff Hammerbacher](http://berkeleydatascience.files.wordpress.com/2012/01/20120119berkeley.pdf)
+-   [Anjul Bhambhri](http://fisheritcenter.haas.berkeley.edu/Big_Data/index.html)
 -   <http://cs.metrostate.edu/~sbd/slides/Sun.pdf>
--   Hugh Williams
-    <http://fisheritcenter.haas.berkeley.edu/Big_Data/index.html>
--   Tom Davenport
-    <http://fisheritcenter.haas.berkeley.edu/Big_Data/index.html>
+-   [Hugh Williams](http://fisheritcenter.haas.berkeley.edu/Big_Data/index.html)
+-   [Tom Davenport](http://fisheritcenter.haas.berkeley.edu/Big_Data/index.html)
 -   <http://www.mckinsey.com/mgi/publications/big_data/index.asp>
 -   <http://cra.org/ccc/docs/nitrdsymposium/pdfs/keyes.pdf>
