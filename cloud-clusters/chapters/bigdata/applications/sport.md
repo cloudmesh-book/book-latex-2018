@@ -22,7 +22,7 @@ other sports. We discuss Performance-Dollar relationship including new
 stadiums and media/advertising. We look at classic baseball averages and
 sophisticated measures like Wins Above Replacement.
 
-[:scroll: Sport 40 Overview](https://drive.google.com/open?id=0B8936_ytjfjmbWt6bGZuTFJ4TFE)
+[:scroll: Overview (40)](https://drive.google.com/open?id=0B8936_ytjfjmbWt6bGZuTFJ4TFE)
 
 
 ### Introduction and Sabermetrics (Baseball Informatics) Lesson
@@ -31,8 +31,7 @@ Introduction to all Sports Informatics, Moneyball The 2002-2003 Oakland
 Athletics, Diamond Dollars economic model of baseball, Performance -
 Dollar relationship, Value of a Win.
 
-[:clapper: Sport 31:4 Introduction and Sabermetrics (Baseball
-Informatics) Lesson](https://www.youtube.com/watch?v=Dd4zV__G5Q8)
+[:clapper: Introduction and Sabermetrics (Baseball Informatics) Lesson (31:4)](https://www.youtube.com/watch?v=Dd4zV__G5Q8)
 
 ### Basic Sabermetrics
 
@@ -40,7 +39,7 @@ Different Types of Baseball Data, Sabermetrics, Overview of all data,
 Details of some statistics based on basic data, OPS, wOBA, ERA, ERC,
 FIP, UZR.
 
-[:clapper: Sport 26:53 Basic Sabermetrics](https://www.youtube.com/watch?v=L0X-RQJZKrs)
+[:clapper: Basic Sabermetrics (26:53)](https://www.youtube.com/watch?v=L0X-RQJZKrs)
 
 ### Wins Above Replacement
 
@@ -48,7 +47,7 @@ Wins above Replacement WAR, Discussion of Calculation, Examples,
 Comparisons of different methods, Coefficient of Determination, Another,
 Sabermetrics Example, Summary of Sabermetrics.
 
-[:clapper: Sport 30:43 Wins Above Replacement](https://www.youtube.com/watch?v=D6PHqPor4LA)
+[:clapper: Wins Above Replacement (30:43)](https://www.youtube.com/watch?v=D6PHqPor4LA)
 
 Advanced Sabermetrics
 ---------------------
@@ -56,7 +55,7 @@ Advanced Sabermetrics
 This unit discusses 'advanced sabermetrics' covering advances possible
 from using video from PITCHf/X, FIELDf/X, HITf/X, COMMANDf/X and MLBAM.
 
-[:scroll: Sport 41 Sporta II](https://drive.google.com/open?id=0B8936_ytjfjmUDh0Y01GbW9tWnc)
+[:scroll: Sporta II (41)](https://drive.google.com/open?id=0B8936_ytjfjmUDh0Y01GbW9tWnc)
 
 
 ### Pitching Clustering
@@ -64,26 +63,26 @@ from using video from PITCHf/X, FIELDf/X, HITf/X, COMMANDf/X and MLBAM.
 A Big Data Pitcher Clustering method introduced by Vince Gennaro, Data
 from Blog and video at 2013 SABR conference.
 
-[:clapper: Sport 20:59 Pitching Clustering](https://www.youtube.com/watch?v=rZ9-b54aEvw)
+[:clapper: Pitching Clustering (20:59)](https://www.youtube.com/watch?v=rZ9-b54aEvw)
 
 ### Pitcher Quality
 
 Results of optimizing match ups, Data from video at 2013 SABR
 conference.
 
-[:clapper: Sport 10:02 Pitcher Quality](https://www.youtube.com/watch?v=OkkUaySvXOY)
+[:clapper: Pitcher Quality (10:02)](https://www.youtube.com/watch?v=OkkUaySvXOY)
 
 PITCHf/X
 --------
 
 Examples of use of PITCHf/X.
 
-[:clapper: Sport 10:39 PITCHf/X](https://www.youtube.com/watch?v=m7IXhsHgQmE)
+[:clapper: PITCHf/X (10:39)](https://www.youtube.com/watch?v=m7IXhsHgQmE)
 ### Other Video Data Gathering in Baseball
 
 FIELDf/X, MLBAM, HITf/X, COMMANDf/X.
 
-[:clapper: Sport 18:5 Other Video Data Gathering in Baseball](https://www.youtube.com/watch?v=nKZiOOGccms)
+[:clapper: Other Video Data Gathering in Baseball (18:5)](https://www.youtube.com/watch?v=nKZiOOGccms)
 Other Sports
 ------------
 
@@ -91,32 +90,32 @@ We look at Wearables and consumer sports/recreation. The importance of
 spatial visualization is discussed. We look at other Sports: Soccer,
 Olympics, NFL Football, Basketball, Tennis and Horse Racing.
 
-[:scroll: Sport Sports III 44](https://drive.google.com/open?id=0B8936_ytjfjmUGdpUzFaRzhyWXM)
+[:scroll: Sport Sports III (44)](https://drive.google.com/open?id=0B8936_ytjfjmUGdpUzFaRzhyWXM)
 
 
 ### Wearables
 
 Consumer Sports, Stake Holders, and Multiple Factors.
 
-[:clapper: Sport 22:2 Wearables](https://www.youtube.com/watch?v=F_cPq6xIXw0)
+[:clapper: Wearables (22:2)](https://www.youtube.com/watch?v=F_cPq6xIXw0)
 
 ### Soccer and the Olympics
 
 Soccer, Tracking Players and Balls, Olympics.
 
-[:clapper: Sport 8:28 Soccer and the Olympics](https://www.youtube.com/watch?v=AiZneaLJMTs)
+[:clapper: Soccer and the Olympics (8:28)](https://www.youtube.com/watch?v=AiZneaLJMTs)
 
 ### Spatial Visualization in NFL and NBA
 
 NFL, NBA, and Spatial Visualization.
 
-[:clapper: Sport 15:19 Spatial Visualization in NFL and NBA](https://www.youtube.com/watch?v=Uorh3RJLC1s)
+[:clapper: Spatial Visualization in NFL and NBA (15:19)](https://www.youtube.com/watch?v=Uorh3RJLC1s)
 
 ### Tennis and Horse Racing
 
 Tennis, Horse Racing, and Continued Emphasis on Spatial Visualization.
 
-[:clapper: Sport 8:52 Tennis and Horse Racing](https://www.youtube.com/watch?v=2P-pismFSrI)
+[:clapper: Tennis and Horse Racing (8:52)](https://www.youtube.com/watch?v=2P-pismFSrI)
 
 ### Resources
 

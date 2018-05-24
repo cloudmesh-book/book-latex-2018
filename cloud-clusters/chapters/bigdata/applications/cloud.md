@@ -55,9 +55,9 @@ different data parts -- is described with MPI and MapReduce as two
 approaches. The challenges of data decomposition in irregular problems
 is noted.
 
-* [:clapper: cloud  8:51 Decomposition:](https://drive.google.com/file/d/0B1Of61fJF7WsWXgtNndQN0Jydkk/view?usp=sharing)
-* [:clapper: cloud  13:22 Examples of Application:](https://drive.google.com/file/d/0B1Of61fJF7WsQ1pMLWhXQV92OXM/view?usp=sharing)
-* [:clapper: cloud  9:22 Decomposition Strategies:](https://drive.google.com/file/d/0B1Of61fJF7WsaVZLOEUzc0VuWjQ/view?usp=sharing)
+* [:clapper: Decomposition: (8:51)](https://drive.google.com/file/d/0B1Of61fJF7WsWXgtNndQN0Jydkk/view?usp=sharing)
+* [:clapper: Examples of Application: (13:22)](https://drive.google.com/file/d/0B1Of61fJF7WsQ1pMLWhXQV92OXM/view?usp=sharing)
+* [:clapper: Decomposition Strategies: (9:22)](https://drive.google.com/file/d/0B1Of61fJF7WsaVZLOEUzc0VuWjQ/view?usp=sharing)
 
 ### Parallel Computing in Society
 
@@ -72,8 +72,8 @@ the relation between data and processor topology. The lesson concludes
 with other examples from nature including collections of neurons (the
 brain) and ants.
 
-* [:clapper: cloud 8:24 Parallel Computing in Society I](https://drive.google.com/file/d/0B1Of61fJF7WsY3hEeTJvTFYtN2s/view?usp=sharing)
-* [:clapper: cloud 8:01 Parallel Computing in Society II](https://drive.google.com/file/d/0B1Of61fJF7WsU1ROMmpNNTlUTUU/view?usp=sharing)
+* [:clapper: Parallel Computing in Society I (8:24)](https://drive.google.com/file/d/0B1Of61fJF7WsY3hEeTJvTFYtN2s/view?usp=sharing)
+* [:clapper: Parallel Computing in Society II (8:01)](https://drive.google.com/file/d/0B1Of61fJF7WsU1ROMmpNNTlUTUU/view?usp=sharing)
 
 ### Parallel Processing for Hadrian's Wall
 
@@ -87,7 +87,7 @@ demonstrated. Parallel I/O for Hadrian's wall is followed by a slide
 summarizing this quaint comparison between Big data parallelism and the
 construction of a large wall.
 
-* [:clapper: cloud 9:24 Processing for Hadrian's Wall](https://drive.google.com/file/d/0B1Of61fJF7WsNEtLOTNNN3dlNjQ/view?usp=sharing)
+* [:clapper: Processing for Hadrian's Wall (9:24)](https://drive.google.com/file/d/0B1Of61fJF7WsNEtLOTNNN3dlNjQ/view?usp=sharing)
 
 ### Resources
 
@@ -128,7 +128,7 @@ its role in solving the electronic implementation of any problem where
 e-moreorlessanything is another term for moreorlessanything-Informatics
 and generalizes early discussion of e-Science and e-Business.
 
-* [:clapper: cloud 13:34 Cloud Computing Introduction Part1](https://drive.google.com/file/d/0B1Of61fJF7WsbXpEdF8zWFh4aXc/view?usp=sharing)
+* [:clapper: Cloud Computing Introduction Part1 (13:34)](https://drive.google.com/file/d/0B1Of61fJF7WsbXpEdF8zWFh4aXc/view?usp=sharing)
 
 ### What is Cloud Computing: Introduction
 
@@ -140,16 +140,16 @@ Software (SaaS), Platform (Paas), Infrastructure (IaaS) and Network
 (NaaS) -- are introduced with Research aaS and other capabilities (for
 example Sensors aaS are discussed later) being built on top of these.
 
-* [:clapper: cloud 12:01 What is Cloud Computing Intro](https://drive.google.com/file/d/0B1Of61fJF7WsdDdsYkw0dXdHS1U/view?usp=sharing)
+* [:clapper: What is Cloud Computing Intro (12:01)](https://drive.google.com/file/d/0B1Of61fJF7WsdDdsYkw0dXdHS1U/view?usp=sharing)
 
 ### What and Why is Cloud Computing: Other Views I
 
 This lesson contains 5 slides with diverse comments on ''what is cloud
 computing'' from the web.
 
-* [:clapper: cloud 5:25 Other Views I](https://drive.google.com/file/d/0B1Of61fJF7WsNm1jVVJMUVpCUlU/view?usp=sharing)
-* [:clapper: cloud 6:41 Other Views II](https://drive.google.com/file/d/0B1Of61fJF7WsV1RJcldzRlctRlk/view?usp=sharing)
-* [:clapper: cloud 7:27 Other Views III](https://drive.google.com/file/d/0B1Of61fJF7WsOUlxVHZ4MlN0RXc/view?usp=sharing)
+* [:clapper: Other Views I (5:25)](https://drive.google.com/file/d/0B1Of61fJF7WsNm1jVVJMUVpCUlU/view?usp=sharing)
+* [:clapper: Other Views II (6:41)](https://drive.google.com/file/d/0B1Of61fJF7WsV1RJcldzRlctRlk/view?usp=sharing)
+* [:clapper: Other Views III (7:27)](https://drive.google.com/file/d/0B1Of61fJF7WsOUlxVHZ4MlN0RXc/view?usp=sharing)
 
 ### Gartner's Emerging Technology Landscape for Clouds and Big Data
 
@@ -160,7 +160,7 @@ the top of the hype and by definition predictions of doom are emerging.
 Before too much excitement sets in, note that spinach is above clouds
 and Big data in Google trends.
 
-* [:clapper: cloud 11:26 Gartners Emerging Technology Landscape](https://drive.google.com/file/d/0B1Of61fJF7WsaTg5aEZ0cHJuM0k/view?usp=sharing)
+* [:clapper: Gartners Emerging Technology Landscape (11:26)](https://drive.google.com/file/d/0B1Of61fJF7WsaTg5aEZ0cHJuM0k/view?usp=sharing)
 
 ### Simple Examples of use of Cloud Computing
 
@@ -170,13 +170,13 @@ for multiple Microsoft database applications and the second is the
 benefits of scale comparing gmail to multiple smaller installations. It
 ends with some fiscal comments.
 
-* [:clapper: cloud 3:26 Examples](https://drive.google.com/file/d/0B1Of61fJF7WsLTBoM0NpYzVxOHc/view?usp=sharing)
+* [:clapper: Examples (3:26)](https://drive.google.com/file/d/0B1Of61fJF7WsLTBoM0NpYzVxOHc/view?usp=sharing)
 
 ### Value of Cloud Computing
 
 Some comments on fiscal value of cloud computing.
 
-* [:clapper: cloud 4:20 Value of Cloud Computing](https://drive.google.com/file/d/0B1Of61fJF7WsSFdfZ0hodDlnUGM/view?usp=sharing)
+* [:clapper: Value of Cloud Computing (4:20)](https://drive.google.com/file/d/0B1Of61fJF7WsSFdfZ0hodDlnUGM/view?usp=sharing)
 
 ### Resources
 
@@ -209,7 +209,7 @@ the HPC-ABDS Software Stack explaining how they are used.
 This lesson gives some general remark of cloud systems from an
 architecture and application perspective.
 
-* [:clapper: cloud 6:20 What is Cloud Computing](https://drive.google.com/file/d/0B1Of61fJF7WsYlRhOHU5ci1seXc/view?usp=sharing)
+* [:clapper: What is Cloud Computing (6:20)](https://drive.google.com/file/d/0B1Of61fJF7WsYlRhOHU5ci1seXc/view?usp=sharing)
 
 ### Introduction to Cloud Software Architecture: IaaS and PaaS I
 
@@ -223,8 +223,8 @@ examples from Amazon and academic studies. We summarize the 21 layers
 and almost 300 software packages in the HPC-ABDS Software Stack
 explaining how they are used.
 
-* [:clapper: cloud 7:42 Intro to IaaS and PaaS I](https://drive.google.com/file/d/0B1Of61fJF7WsUm1XanBaaWtpQWM/view?usp=sharing)
-* [:clapper: cloud 6:42 Intro to IaaS and PaaS II](https://drive.google.com/file/d/0B1Of61fJF7WsMXpfTTlvNDBkbTQ/view?usp=sharing)
+* [:clapper: Intro to IaaS and PaaS I (7:42)](https://drive.google.com/file/d/0B1Of61fJF7WsUm1XanBaaWtpQWM/view?usp=sharing)
+* [:clapper: Intro to IaaS and PaaS II (6:42)](https://drive.google.com/file/d/0B1Of61fJF7WsMXpfTTlvNDBkbTQ/view?usp=sharing)
 We discuss cloud software for the cloud starting at virtual machine
 management (IaaS) and the broad Platform (middleware) capabilities with
 examples from Amazon and academic studies. We cover different views as
@@ -235,14 +235,14 @@ examples from Amazon and academic studies. We summarize the 21 layers
 and almost 300 software packages in the HPC-ABDS Software Stack
 explaining how they are used.
 
-* [:clapper: cloud 7:42 Software Architecture: ](https://youtu.be/1AnyJYyh490)
-* [:clapper: cloud 6:43 IaaS and PaaS II: ](https://youtu.be/hVpFAUHcAd4)
+* [:clapper: Software Architecture: (7:42)](https://youtu.be/1AnyJYyh490)
+* [:clapper: IaaS and PaaS II: (6:43)](https://youtu.be/hVpFAUHcAd4)
 
 ### Using the HPC-ABDS Software Stack
 
 Using the HPC-ABDS Software Stack.
 
-* [:clapper: cloud  27:50 ABDS](https://drive.google.com/file/d/0B1Of61fJF7WsUTdlNmlYWDUyTlE/view?usp=sharing)
+* [:clapper: ABDS (27:50)](https://drive.google.com/file/d/0B1Of61fJF7WsUTdlNmlYWDUyTlE/view?usp=sharing)
 
 ### Resources
 
@@ -276,20 +276,20 @@ and Google. The role of containers is stressed as part of modular data
 centers that trade scalability for fault tolerance. Sizes of cloud
 centers and supercomputers are discussed as is "green" computing.
 
-* [:clapper: cloud  8:38 Coud Architecture](https://drive.google.com/file/d/0B1Of61fJF7WsYkxKelV2bTlMZ1k/view?usp=sharing)
-* [:clapper: cloud 9:59 Cloud Data Center Architecture](https://drive.google.com/file/d/0B1Of61fJF7WsRHJhN3VMaDJLTG8/view?usp=sharing)
+* [:clapper: Coud Architecture (8:38)](https://drive.google.com/file/d/0B1Of61fJF7WsYkxKelV2bTlMZ1k/view?usp=sharing)
+* [:clapper: Cloud Data Center Architecture (9:59)](https://drive.google.com/file/d/0B1Of61fJF7WsRHJhN3VMaDJLTG8/view?usp=sharing)
 
 ### Analysis of Major Cloud Providers
 
 Gartner 2014 Analysis of leading cloud providers.
 
-* [:clapper: cloud  21:40 Analysis of Major Cloud Providers](https://drive.google.com/file/d/0B1Of61fJF7WsUXBjRUJpX1BaSjA/view?usp=sharing)
+* [:clapper: Analysis of Major Cloud Providers (21:40)](https://drive.google.com/file/d/0B1Of61fJF7WsUXBjRUJpX1BaSjA/view?usp=sharing)
 
 ### Commercial Cloud Storage Trends
 
 Use of Dropbox, iCloud, Box etc.
 
-* [:clapper: cloud  3:07 Commercial Storage Trends](https://drive.google.com/file/d/0B1Of61fJF7WsZjR5VHQ2MXFmbjg/view?usp=sharing)
+* [:clapper: Commercial Storage Trends (3:07)](https://drive.google.com/file/d/0B1Of61fJF7WsZjR5VHQ2MXFmbjg/view?usp=sharing)
 
 ### Cloud Applications I
 
@@ -300,21 +300,21 @@ discuss both storage and program fault tolerance noting that parallel
 computing is especially sensitive to faults as a fault in one task will
 impact all other tasks in the parallel job.
 
-* [:clapper: cloud 7:57 Cloud Applications I](https://drive.google.com/file/d/0B1Of61fJF7WsYXlKVXk0aG8tZFk/view?usp=sharing)
-* [:clapper: cloud 7:44 Cloud Applications II](https://drive.google.com/file/d/0B1Of61fJF7WseGVUNHhGTHpZbVU/view?usp=sharing)
+* [:clapper: Cloud Applications I (7:57)](https://drive.google.com/file/d/0B1Of61fJF7WsYXlKVXk0aG8tZFk/view?usp=sharing)
+* [:clapper: Cloud Applications II (7:44)](https://drive.google.com/file/d/0B1Of61fJF7WseGVUNHhGTHpZbVU/view?usp=sharing)
 
 ### Science Clouds
 
 Science Applications and Internet of Things.
 
-* [:clapper: cloud  19:26 Science Clouds](https://drive.google.com/file/d/0B1Of61fJF7Wsd0lZejhPTkItZEE/view?usp=sharing)
+* [:clapper: Science Clouds (19:26)](https://drive.google.com/file/d/0B1Of61fJF7Wsd0lZejhPTkItZEE/view?usp=sharing)
 
 ### Security
 
 This short lesson discusses the need for security and issues in its
 implementation.
 
-* [:clapper: cloud  2:34 Security](https://drive.google.com/file/d/0B1Of61fJF7WsajE4QkljRUExLWM/view?usp=sharing)
+* [:clapper: Security (2:34)](https://drive.google.com/file/d/0B1Of61fJF7WsajE4QkljRUExLWM/view?usp=sharing)
 
 ### Comments on Fault Tolerance and Synchronicity Constraints
 
@@ -324,7 +324,7 @@ storage and program fault tolerance noting that parallel computing is
 especially sensitive to faults as a fault in one task will impact all
 other tasks in the parallel job.
 
-* [:clapper: cloud 8:55 Comments on Fault Tolerance and Synchronicity Constraints](https://drive.google.com/file/d/0B1Of61fJF7WsdHRZV1VrTklWYVE/view?usp=sharing)
+* [:clapper: Comments on Fault Tolerance and Synchronicity Constraints (8:55)](https://drive.google.com/file/d/0B1Of61fJF7WsdHRZV1VrTklWYVE/view?usp=sharing)
 
 ### Resources
 
@@ -407,21 +407,21 @@ perspective with commercial examples including eBay.
 The next 3 lessons describe the way users and data interact with the
 system.
 
-* [:clapper: cloud  10:26 The 10 Interaction scenarios I](https://drive.google.com/file/d/0B1Of61fJF7WsWldDNm1oNXdPQmc/view?usp=sharing)
+* [:clapper: The 10 Interaction scenarios I (10:26)](https://drive.google.com/file/d/0B1Of61fJF7WsWldDNm1oNXdPQmc/view?usp=sharing)
 
 ### The 10 Interaction scenarios. Science Examples
 
 This lesson describes the way users and data interact with the system
 for some science examples.
 
-* [:clapper: cloud  16:34 The 10 Interaction scenarios. Science Examples](https://drive.google.com/file/d/0B1Of61fJF7WsQTlvLWs4cm5NRE0/view?usp=sharing)
+* [:clapper: The 10 Interaction scenarios. Science Examples (16:34)](https://drive.google.com/file/d/0B1Of61fJF7WsQTlvLWs4cm5NRE0/view?usp=sharing)
 
 ### Remaining general access patterns
 
 This lesson describe the way users and data interact with the system for
 the final set of examples.
 
-[:clapper: cloud 11:36 Access Patterns](https://drive.google.com/file/d/0B1Of61fJF7WsYVVRWmdpanV4Vlk/view?usp=sharing)
+[:clapper: Access Patterns (11:36)](https://drive.google.com/file/d/0B1Of61fJF7WsYVVRWmdpanV4Vlk/view?usp=sharing)
 
 
 ### Data in the Cloud
@@ -430,7 +430,7 @@ Databases, File systems, Object Stores and NOSQL are discussed and
 compared. The way to build a modern data repository in the cloud is
 introduced.
 
-[:clapper: cloud 10:24 Data in the Cloud](https://drive.google.com/file/d/0B1Of61fJF7WsRzR6eHZwelVuOG8/view?usp=sharing)
+[:clapper: Data in the Cloud (10:24)](https://drive.google.com/file/d/0B1Of61fJF7WsRzR6eHZwelVuOG8/view?usp=sharing)
 
 
 ### Applications Processing Big Data
@@ -439,7 +439,7 @@ This lesson collects remarks on Big data processing from several
 sources: Berkeley, Teradata, IBM, Oracle and eBay with architectures and
 application opportunities.
 
-[:clapper: cloud 8:45 Processing Big Data](https://drive.google.com/file/d/0B1Of61fJF7WsUG9UVGFOQXNXbnc/view?usp=sharing)
+[:clapper: Processing Big Data (8:45)](https://drive.google.com/file/d/0B1Of61fJF7WsUG9UVGFOQXNXbnc/view?usp=sharing)
 
 
 Resources

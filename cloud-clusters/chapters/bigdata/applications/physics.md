@@ -26,7 +26,7 @@ histograms of Higgs Boson production with various forms of shape of
 signal and various background and with various event totals. The
 lectures use Python but use of Java is described.
 
-* [:scroll: Physics 20 Higgs](https://drive.google.com/open?id=0B8936_ytjfjmYXNoM3ZadGR6QlE)
+* [:scroll: Higgs (20)](https://drive.google.com/open?id=0B8936_ytjfjmYXNoM3ZadGR6QlE)
 
 * \sourcecode{Physics}{HiggsClassI-Sloping.py}{examples/physics/mr-higgs/higgs-classI-sloping.py}
 
@@ -37,13 +37,13 @@ that particles often manifested as bumps in histograms and those bumps
 need to be large enough to stand out from background in a statistically
 significant fashion.
 
-* [:clapper: Physics 13:49 Discovery of Higgs Particle](https://www.youtube.com/watch?v=iaypHlgFyuU)
+* [:clapper: Discovery of Higgs Particle (13:49)](https://www.youtube.com/watch?v=iaypHlgFyuU)
 
 We give a few details on one LHC experiment ATLAS. Experimental physics
 papers have a staggering number of authors and quite big budgets.
 Feynman diagrams describe processes in a fundamental fashion.
 
-* [:clapper: Physics 7:38 Looking for Higgs Particle and Counting Introduction II](http://youtu.be/UAMzmOgjj7I)
+* [:clapper: Looking for Higgs Particle and Counting Introduction II (7:38)](http://youtu.be/UAMzmOgjj7I)
 
 ### Experimental Facilities
 
@@ -51,7 +51,7 @@ We give a few details on one LHC experiment ATLAS. Experimental physics
 papers have a staggering number of authors and quite big budgets.
 Feynman diagrams describe processes in a fundamental fashion.
 
-* [:clapper: Physics 9:29 Looking for Higgs Particle Experiments](http://youtu.be/BW12d780qT8)
+* [:clapper: Looking for Higgs Particle Experiments (9:29)](http://youtu.be/BW12d780qT8)
 
 ### Accelerator Picture Gallery of Big Science
 
@@ -60,7 +60,7 @@ detection chambers and magnets in tunnels and a large underground
 laboratory used fpr experiments where you need to be shielded from
 background like cosmic rays.
 
-* [:clapper: Physics 11:21 Accelerator Picture Gallery of Big Science](http://youtu.be/WLJIxWWMYi8)
+* [:clapper: Accelerator Picture Gallery of Big Science (11:21)](http://youtu.be/WLJIxWWMYi8)
 
 ### Resources
 
@@ -75,7 +75,7 @@ This unit is devoted to Python experiments looking at histograms of
 Higgs Boson production with various forms of shape of signal and various
 background and with various event totals.
 
-* [:scroll: Physics 29 Higgs II](https://drive.google.com/open?id=0B8936_ytjfjmUHRpV2g2V28walE}
+* [:scroll: Higgs II (29)](https://drive.google.com/open?id=0B8936_ytjfjmUHRpV2g2V28walE}
 Files:
 
 * \sourcecode{Physics}{HiggsClassI-Sloping.py}{examples/physics/mr-higgs/higgs-classI-sloping.py}
@@ -91,7 +91,7 @@ background plus either a Higgs particle generated similarly to LHC
 observation or one observed with better resolution (smaller measurement
 error).
 
-* [:clapper: Physics 7:02 Event Counting](http://youtu.be/h8-szCeFugQ)
+* [:clapper: Event Counting (7:02)](http://youtu.be/h8-szCeFugQ)
 
 ### Monte Carlo
 
@@ -99,12 +99,12 @@ This uses Monte Carlo data both to generate data like the experimental
 observations and explore effect of changing amount of data and changing
 measurement resolution for Higgs.
 
-* [:clapper: Physics 7:33 With Python examples of Signal plus Background](http://youtu.be/bl2f0tAzLj4)
+* [:clapper: With Python examples of Signal plus Background (7:33)](http://youtu.be/bl2f0tAzLj4)
 This lesson continues the examination of Monte Carlo data looking at
 effect of change in number of Higgs particles produced and in change in
 shape of background.
 
-* [:clapper: Physics 7:01 Change shape of background \& num of Higgs Particles](http://youtu.be/bw3fd5cfQhk)
+* [:clapper: Change shape of background \& num of Higgs Particles (7:01)](http://youtu.be/bw3fd5cfQhk)
 
 ### Resources
 
@@ -124,7 +124,7 @@ unit introduces Gaussian (normal) distributions and explains why they
 seen so often in natural phenomena. Several Python illustrations are
 given. Java is currently not available in this unit.
 
-* [:scroll: Physics 39 Higgs](https://drive.google.com/open?id=0B8936_ytjfjmNWhrS0xadk16SWM)
+* [:scroll: Higgs (39)](https://drive.google.com/open?id=0B8936_ytjfjmNWhrS0xadk16SWM)
 * \sourcecode{Physics}{Hig
 gsClassIII.py}{examples/physics/number-theory/higgs-classIII.py}
 
@@ -133,7 +133,7 @@ gsClassIII.py}{examples/physics/number-theory/higgs-classIII.py}
 We go through the many different areas of statistics covered in the
 Physics unit. We define the statistics concept of a random variable.
 
-* [:clapper: Physics 8:19 Random variables and normal distributions](https://www.youtube.com/watch?v=_sLGyt4qWWk)
+* [:clapper: Random variables and normal distributions (8:19)](https://www.youtube.com/watch?v=_sLGyt4qWWk)
 
 ### Physics and Random Variables
 
@@ -144,8 +144,8 @@ particles seen in a few events. We illustrate how physicists decide
 whats going on with a plot of expected Higgs production experimental
 cross sections (probabilities) for signal and background.
 
-* [:clapper: Physics 8:34 Physics and Random Variables I](http://youtu.be/Tn3GBxgplxg)
-* [:clapper: Physics 5:50 Physics and Random Variables II](http://youtu.be/qWEjp0OtvdA)
+* [:clapper: Physics and Random Variables I (8:34)](http://youtu.be/Tn3GBxgplxg)
+* [:clapper: Physics and Random Variables II (5:50)](http://youtu.be/qWEjp0OtvdA)
 
 ### Statistics of Events with Normal Distributions
 
@@ -155,14 +155,14 @@ numbers defining the errors in counting and leading to Gaussian
 distributions for many things. We demonstrate this in Python
 experiments.
 
-* [:clapper: Physics 11:25 Statistics of Events with Normal Distributions](http://youtu.be/LMBtpWOOQLo)
+* [:clapper: Statistics of Events with Normal Distributions (11:25)](http://youtu.be/LMBtpWOOQLo)
 
 ### Gaussian Distributions
 
 We introduce the Gaussian distribution and give Python examples of the
 fluctuations in counting Gaussian distributions.
 
-* [:clapper: Physics 9:08 Gaussian Distributions](http://youtu.be/LWIbPa-P5W0)
+* [:clapper: Gaussian Distributions (9:08)](http://youtu.be/LWIbPa-P5W0)
 
 ### Using Statistics
 
@@ -170,7 +170,7 @@ We discuss the significance of a standard deviation and role of biases
 and insufficient statistics with a Python example in getting incorrect
 answers.
 
-* [:clapper: Physics 14:02 Using Statistics](http://youtu.be/n4jlUrGwgic)
+* [:clapper: Using Statistics (14:02)](http://youtu.be/n4jlUrGwgic)
 
 ### Resources
 
@@ -186,7 +186,7 @@ are discussed. The Central Limit Theorem and Bayes law concludes
 discussion. Python and Java (for student - not reviewed in class)
 examples and Physics applications are given.
 
-* [:scroll: Physics 44 Higgs III](https://drive.google.com/open?id=0B8936_ytjfjmTUxkZXVRRmlBSUk)
+* [:scroll: Higgs III (44)](https://drive.google.com/open?id=0B8936_ytjfjmTUxkZXVRRmlBSUk)
 Files:
 
 * \sourcecode{Physics}{HiggsClassIII.py}{examples/physics/calculated-dice-roll/higgs-classIV-seeds.py}
@@ -197,42 +197,42 @@ We define random numbers and describe how to generate them on the
 computer giving Python examples. We define the seed used to define to
 specify how to start generation.
 
-* [:clapper: Physics 6:28 Higgs Particle Counting Errors](https://www.youtube.com/watch?v=de4AQ9AFt54)
-* [:clapper: Physics 7:10 Generators and Seeds II](http://youtu.be/9QY5qkQj2Ag)
+* [:clapper: Higgs Particle Counting Errors (6:28)](https://www.youtube.com/watch?v=de4AQ9AFt54)
+* [:clapper: Generators and Seeds II (7:10)](http://youtu.be/9QY5qkQj2Ag)
 
 #### Binomial Distribution
 
 We define binomial distribution and give LHC data as an example of where
 this distribution valid.
 
-* [:clapper: Physics 12:38 Binomial Distribution: ](http://youtu.be/DPd-eVI_twQ)
+* [:clapper: Binomial Distribution: (12:38)](http://youtu.be/DPd-eVI_twQ)
 
 #### Accept-Reject
 
 We introduce an advanced method **accept/reject** for generating random
 variables with arbitrary distributions.
 
-* [:clapper: Physics 5:54 Accept-Reject](http://youtu.be/GfshkKMKCj8)
+* [:clapper: Accept-Reject (5:54)](http://youtu.be/GfshkKMKCj8)
 
 #### Monte Carlo Method
 
 We define Monte Carlo method which usually uses accept/reject method in
 typical case for distribution.
 
-* [:clapper: Physics 2:23 Monte Carlo Method](http://youtu.be/kIQ-BTyDfOQ)
+* [:clapper: Monte Carlo Method (2:23)](http://youtu.be/kIQ-BTyDfOQ)
 
 #### Poisson Distribution
 
 We extend the Binomial to the Poisson distribution and give a set of
 amusing examples from Wikipedia.
 
-* [:clapper: Physics 4:37 Poisson Distribution](http://youtu.be/WFvgsVo-k4s)
+* [:clapper: Poisson Distribution (4:37)](http://youtu.be/WFvgsVo-k4s)
 
 #### Central Limit Theorem
 
 We introduce Central Limit Theorem and give examples from Wikipedia.
 
-* [:clapper: Physics 4:47 Central Limit Theorem](http://youtu.be/ZO53iKlPn7c)
+* [:clapper: Central Limit Theorem (4:47)](http://youtu.be/ZO53iKlPn7c)
 
 #### Interpretation of Probability: Bayes v. Frequency
 
@@ -241,7 +241,7 @@ probability. Bayes's law of conditional probability is derived and
 applied to Higgs example to enable information about Higgs from multiple
 channels and multiple experiments to be accumulated.
 
-* [:clapper: Physics 12:39 Interpretation of Probability](http://youtu.be/jzDkExAQI9M)
+* [:clapper: Interpretation of Probability (12:39)](http://youtu.be/jzDkExAQI9M)
 
 #### Resources
 
@@ -280,7 +280,7 @@ the changing climate. The Radar-Informatics unit provides a glimpse in
 the processes fueling global climate change and explains what methods
 are used for ice data acquisitions and analysis.
 
-[:scroll: Radar 58 Radar](https://drive.google.com/open?id=0B8936_ytjfjmZ0VzZ0ZIenpUMTQ)
+[:scroll: Radar (58)](https://drive.google.com/open?id=0B8936_ytjfjmZ0VzZ0ZIenpUMTQ)
 
 
 ### Introduction
@@ -294,7 +294,7 @@ explaining how other remote sensing technologies, such as the radar, can
 be used to sound the polar ice sheets and what we are doing with radar
 images to extract knowledge to be incorporated into numerical models.
 
-* [:clapper: Radar 3:31 Radar Informatics](https://youtu.be/LXOncC2AhsI)
+* [:clapper: Radar Informatics (3:31)](https://youtu.be/LXOncC2AhsI)
 
 ### Remote Sensing
 
@@ -302,7 +302,7 @@ This lesson explains the basics of remote sensing, the characteristics
 of remote sensors and remote sensing applications. Emphasis is on image
 acquisition and data collection in the electromagnetic spectrum.
 
-* [:clapper: Radar 6:43 Remote Sensing](https://youtu.be/TTrm9rmZySQ)
+* [:clapper: Remote Sensing (6:43)](https://youtu.be/TTrm9rmZySQ)
 
 ### Ice Sheet Science
 
@@ -310,7 +310,7 @@ This lesson provides a brief understanding on why melt water at the base
 of the ice sheet can be detrimental and why it's important for sensors
 to sound the bedrock.
 
-* [:clapper: Radar 1:00 Ice Sheet Science](https://youtu.be/rDpjMLguVBc)
+* [:clapper: Ice Sheet Science (1:00)](https://youtu.be/rDpjMLguVBc)
 
 ### Global Climate Change
 
@@ -318,7 +318,7 @@ This lesson provides an understanding and the processes for the
 greenhouse effect, how warming effects the Polar Regions, and the
 implications of a rise in sea level.
 
-* [:clapper: Radar 2:51 Global Climate Change](https://youtu.be/f9hzzJX0qDs)
+* [:clapper: Global Climate Change (2:51)](https://youtu.be/f9hzzJX0qDs)
 
 ### Radio Overview
 
@@ -326,7 +326,7 @@ This lesson provides an elementary introduction to radar and its
 importance to remote sensing, especially to acquiring information about
 Greenland and Antarctica.
 
-* [:clapper: Radar 4:16 Radio Overview](https://youtu.be/PuI7F-RMKCI)
+* [:clapper: Radio Overview (4:16)](https://youtu.be/PuI7F-RMKCI)
 
 ### Radio Informatics
 
@@ -335,4 +335,4 @@ algorithms, such as active contours and a hidden markov model to support
 data analysis for extracting layers, so ice sheet models can accurately
 forecast future changes in climate.
 
-* [:clapper: Radar 3:35 Radio Informatics](https://youtu.be/q3Pwyt49syE)
+* [:clapper: Radio Informatics (3:35)](https://youtu.be/q3Pwyt49syE)
