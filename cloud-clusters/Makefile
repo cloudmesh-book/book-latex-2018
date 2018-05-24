@@ -15,7 +15,6 @@ CHAPTER_PREFIX=\
  ./dest/todo.md\
  ./dest/chapters/preface/issues.md
 
-
 CHAPTER_DOC=\
  ./dest/chapters/doc/SECTION.md\
  ./dest/chapters/doc/plagiarism.md\
@@ -27,20 +26,23 @@ CHAPTER_DOC=\
 # DRAFTS
 #
 
-
-
-CHAPTER_DOC_DRAFT=\
- ./dest/chapters/doc/projects.md\
- ./dest/chapters/doc/report.md\
- ./dest/chapters/doc/type.md
-
-
 CHAPTER_CLASS=\
  ./dest/chapters/class/SECTION.md\
  ./dest/chapters/class/fall2018.md\
  ./dest/chapters/class/policy.md\
  ./dest/chapters/class/assignments.md\
- ./dest/chapters/doc/piazza.md
+
+
+CHAPTER_DOC_DRAFT=\
+ ./dest/chapters/doc/projects.md\
+ ./dest/chapters/doc/report.md\
+ ./dest/chapters/doc/type.md\
+ ./dest/chapters/preface/project-ideas.md\
+ ./dest/chapters/preface/project.md\
+
+PIAZZA=\
+  ./dest/chapters/doc/piazza.md
+
 
 CHAPTER_DRAFT=\
  ./dest/chapters/SECTION-DRAFT.md\
@@ -53,8 +55,6 @@ CHAPTER_DRAFT=\
  ./dest/chapters/preface/graph-e616.md\
  ./dest/chapters/preface/organization.md\
  ./dest/chapters/preface/plan.md\
- ./dest/chapters/preface/project-ideas.md\
- ./dest/chapters/preface/project.md\
 
 GRAPHICS=\
  ./dest/chapters/doc/graphviz.md\
@@ -246,17 +246,16 @@ CHAPTER_OTHER=\
  ./dest/chapters/references.md
 
 OK=\
-  $(CHAPTER_PREFIX)
-
+  $(CHAPTER_PREFIX)\
+  $(CHAPTER_DOC) 
 
 INDEX=\
-  $(CHAPTER_PREFIX)\
-  $(CHAPTER_DOC) \
-	$(CHAPTER_DOC_DRAFT) 
+  $(CHAPTER_CLASS) \
+	$(CHAPTER_DOC_DRAFT)\
+  $(CHAPTER_DRAFT) 
+
 
 X=\
-  $(CHAPTER_CLASS) \
-  $(CHAPTER_DRAFT) \
 	$(CHAPTER_OTHER) \
   $(CHAPTER_IN) \
   $(CHAPTER_BIGDATA)

@@ -1,5 +1,76 @@
 ## Assignments
 
+
+### Terminology
+
+Dependent on the class you need to do different assignments. The
+assignments will be clearly posted. In case of questions, we will
+update this document to provide clarifications if needed. We use the
+following terminology:
+
+Tutorials:
+
+: Tutorials are written in markdown and include information on a
+  particular technical issue that is in general helpful for other
+  students. Tutorials must be about a substantial topic and include an
+  introduction a section that teaches a reader a significant issue, as
+  well as practical code examples. Multiple small tutorials can lead
+  to a substantial contribution. We expect that the tutorial are of
+  high quality and can be included in our handbooks. Please be careful
+  of plagiarism and do not just copy the tutorial or code from
+  elsewhere.
+
+Technology Paper:
+
+: A technology paper is a summary paper about a technology,
+  application, or topic that is not yet covered in other technology
+  papers delivered by previous students of this class. It includes
+  useful information that provides an overview of what you are trying
+  to describe and analyses its relationship to the class topic. Be
+  mindful about plagiarism. The paper is written in LaTeX and uses
+  jabref for bibliography management. It uses the same format as your
+  report paper
+
+Term Paper:
+
+: A term paper is an enhanced topic paper. The difference is in length
+  and depth of coverage. Comparative or review papers can also be term
+  papers. Term papers should have the quality to be publishable either
+  in a workshop or as part of the handbook. Not all classes allow you
+  to do a term paper, but require you to do a project. Please confirm
+  with your class.
+
+Project Paper:
+
+: A project report is an enhanced topic paper that includes not just
+  the analysis of a topic, but an actual code, with **benchmark** and
+  demonstrated application use. Obviously it is longer than a
+  technology paper and includes descriptions about reproducibility of
+  the application. A README is provided that describes in tutorial
+  form how others can reproduce your project and run it.  Term papers
+  should have the quality to be publishable either in a workshop or as
+  part of the handbook.
+
+Project Code:
+
+: This is the **documented** and **reproducable** code and scripts
+  that allows a TA do replicate the project. In case you use images
+  they must be created from scratch locally and may not be uploaded to
+  services such as dockerhub. You can however reuse vendor uploaded
+  images such as from ubuntu or centos. All code, scripts, and
+  documentation must be uploaded to github.com under the class
+  specific github directory.
+
+Project:
+
+: We refer with the term project to the major activity that you chose
+  as part of your class. The default case is an implementation project
+  that requires a project report and project code. In case you have
+  issues with code development you can asl o chose a term paper as
+  project.
+
+### Due dates
+
 For due dates see the [calendar](#calendar) section.
 
 ### Assignment 0 - Communication
@@ -9,7 +80,11 @@ class reources we need you to register with various systems.  THis
 needs to be done immediatly as it takes a while to get the systems set
 up. It also requires approval steps that take some time and are not
 immediate, thus do not just start this assignment on the due
-date. Procrastenation will not help you.  Please do the following:
+date. Procrastenation will not help you.
+
+#### Account setup and survey
+
+Please do the following:
 
 Get access to piazza:
 
@@ -30,99 +105,191 @@ Next obtain some cloud accounts which you may use as part of the class:
 5. Obtain an account on <https://portal.xsede.org/>. Please write down
    your username.
 
-Make sure you chose strong passwords that you remember.
-
-Once you have the accounts do the following:
+Make sure you chose strong passwords that you remember. Once you have
+accees to Piazza do the following:
 
 6. Post a **formal** bio on piazza in the bio folder so you introduce
    yourself to the class. It also serves as a verification that you
    have access to piazza and we can communicate with you. An example
-   is available at
+   is available at:
 
-   :o: TODO: Gregor: include link to formal bio
+   * <https://laszewski.github.io/bio.html>
+
+7. Next fill out the class survey. Only do this after you have created
+   all the accounts and you remember your usernames. The survey is
+   located at
+
+   * <https://goo.gl/forms/8Tkf2usxONZIEA182>
+
+After you have submitted the survey we will create your github
+repository that you will use for your deliverables. This will take
+some time ...
 
 7. **Wait till your HID directory on github.com is created**. Please
-   do not send us e-mail, we watch piazza and add you within 1-2
-   buisiness days (Mon - Fri 9am-5pm EST). You can check it on
-   github.com if it is done.
+   do not send us e-mail, we will look at the survey within 1-2
+   buisiness days (Mon - Fri 9am-5pm EST) we will create your
+   repository on github. Make sure to check on github as you will need
+   to accept the invitation to gain access to the
+   repository. github.com will also send you an e-mail. Check your
+   spam folder.  make sure to **meet the deadline** for filling out
+   the survey. It is typically the first Friday of the first week of
+   class. Please be aware of this and conduct this task before Friday.
 
-After your HID directory is created you can continue, however you can
-certainly prepare the information to be uploaded already on your
-computer while you wait. 
+After your HID directory is created you can continue, with the next
+tasks. But do not forget to upload them once you have access to the
+other accounts.
 
-8. Create a notebook.md file and place it in the root directory of
-   your github.com hid repository. An example is provided at
+8. Create a notebook.md file in your hid directory on github.com. An
+   example is provided at
 
    * <https://github.com/cloudmesh-community/hid-sample/blob/master/notebook.md>
 
-9. Create a README.yml file in teh rood directory of your github.com
-   repository. Make sure to not use any TABS and use valid yaml. If
-   you do not know what yaml is please find out, it is part of this
-   assignment. An example README.yml can be found at:
+9. Create a README.yml file in the hid directory on github.com. Make
+   sure to not use any TABS and use valid yaml. If you do not know
+   what yaml is please find out, it is part of this assignment. An
+   example README.yml can be found at:
 
    * <https://github.com/cloudmesh-community/hid-sample/blob/master/README.yml>
 
    You should remove the comments in your README.yml
 
-Naturally, we want you to learn about the systems. The one you will
-need to use immediatly know is piazza. 
+Naturally, we want you to learn about the various systems. The one you will
+need to use immediatly is piazza. 
 
-10. :o: Learn about Piazza: <https://youtu.be/9hnW-327CMQ>. 
+10. Learn about Piazza: please see [piazza](#piazza) for more details.
 
-11. :o: :clapper: Watch the introduction video at:
-    <https://youtu.be/yC3PNkb_9mI>. Naturally the video is for an
-    older class so please ignore the links in it. 
 
-Now that you have accomplished these easy taks it is time to take our
-entry survey
+#### Class Computer Setup
 
-12. :o: TODO: MAKE NEW ENTRY SURVEY Conduct the entry survey after you have done the above assignments:
-    <https://piazza.com/class/j5wll7vzylg25j?cid=67>
-
-Now it is time to buy some supplies. Obviously this class will need a
-computer that you can use to login into the remote machines and do
-your project. If you do not have such a computer, you can purchase a
-Raspbery Pi with power plug for about $50. Otherwise use your laptop
-or desktop. Detailed infprmation about such hardware are provided in
-the Raspberry PI section.
+Now it is time to buy some supplies and prepare your system. Obviously
+this class will need a computer that you can use to login into the
+remote machines and do your project. If you do not have such a
+computer, you can purchase a Raspbery Pi with power plug for about
+$50. Otherwise use your laptop or desktop. Detailed information about
+such hardware are provided in the Raspberry PI section.
 
 Residential students have access to about 100 Raspberry PIs in the
-Rasperry PI Lab in Smith Research Center (which may be relocated to MESH)
-Resdidential students will have mandatory projects that will have to
-be done on the Raspberry PIs. For online students thi sis optional.
+Rasperry PI Lab in Smith Research Center (which may be relocated to
+MESH) Resdidential students will have mandatory projects for selected
+classes that will have to be done on the Raspberry PIs. For online
+students this is optional. Please refer to your specific class.
 
 ---
 
 :warning: Please note that we do not provide support for Windows. You
 can certainly use virtualbox and install a newer version of ubuntu on it.
 
-:warning: Windows 10 home has limitations and does
-not allow you to use containers or proper virtualization. For this
-reason we recommend that you upgrade to Woindows 10 pro or
-eductaion. The eductaion version is available for free via IU. Please see
-IUware and share your experince in piazza in your update. Whatever you
-do, make a backup first.
+:warning: Windows 10 Home Eddition has significant limitations at time
+of writing of this document. For example it does not allow you to use
+containers or proper virtualization. For this reason we recommend that
+you upgrade to Woindows 10 pro or eductaion. The eductaion version is
+available for free via IU. Please see IUware and share your experince
+in piazza about your update. Whatever you do, make a backup first.
 
-:warning: OSX users have typically an easy time as all TAs have OSX
-machines. However the version must be the latest version. We do not
-support older versions.
+:warning: OSX users have typically an easy time as all TAs have access
+to OSX machines. However the version must be the latest version. We do
+not support older versions.
 
 ---
 
-Implicit assignments
+#### Outcomes
 
-* Learn how to use piazza
-* Learn how to use github
-* Learn how to write a formal bio, see IEEE papers for examples
+Obviously this assignment has some implicit tasks and learning
+outcomes such as 
+
+* Learn how to use piazza.
+* Learn how to use github.
+* Learn how to write a formal bio.
+* Set up a computer to be used for class.
+* Learn on how to asks for help.
+* Work with the fellow students to solve issues and giveach other tips.
+
+We expect that if you have difficulties with some of the technologies
+to also consult with external resources that are for example serachble
+with google.
 
 ### Assignment 1 - Technology
 
-Learning about Git pull Requests while using the Class web page as
-example. Only make small changes based on a paragraph and create a pull
-request for it.
+Cloud and big data is an emerging field with lots of activities. To
+gain an overview of the technologies used in the field you will be
+tasked to do the following:
+
+1. You will be downloading and studying the technology abstracts that
+   we collected in
+
+   * https://github.com/cloudmesh/technologies/raw/master/vonLaszewski-cloud-echnologies.epub
+
+2. You will be writing new or improving existing technology
+   abstracts. A technology abstract is not plagiarized, does at most
+   have 30% quotes in it and is between 150 to 450 words long. The
+   text must address what the technology is about and how it is used
+   in cloud and or big data. Each student will contribute till midterm
+   10 such technologies. It is important that we make sure that each
+   student has a unique list of technologies they work on. To
+   coordinate this you will be first inspecting the gitissues at
+
+   * https://github.com/cloudmesh/technologies/issues
+
+   For each technology that you will add or improve you will add a new
+   issue. You will be using the title 
+
+   ```Tech: Technology name```
+
+   For new entries you will be using the label `new`, for issues that
+   need improvement you will be using the label `open`. You will make
+   sure you assign the issue to you.  It is in your responsibility to
+   make sure you are the only and first one that this technology is
+   assigned to. The organization of this is part of your learning
+   experience. You will need to assign this technology to you.
+
+   If you find in the gitissues als technologies marked with the label
+   `open` they are free for the taking and you can modify the issues
+   and assign them to you.  Please also be reminded that all
+   technologies in the technology book that are marked with a red
+   circle need improvements. This is a long list
+
+   All this is done on first come first serve.
+
+   If you work in groups make sure to assign yourself 10
+   technologies * the number of team members in your group. Make sure
+   all group members are in github listed as assignee. The maximal
+   number of group members is 3. In fact for this assignment we
+   recommend that you work in groups as this usually increases the
+   quality of of the submission. If you do not have a group find
+   someone to review your submission.
+
+   The technologies can be easily modified with pull requests that are
+   managed by the TAs. We suggest that you work with your team and
+   reviewer before you create the pull request. Each technology has a
+   small cloud that when you click on it brings you to the github
+   editor so you can create a pull request. Make sure that when
+   working in a group you coordinate the contribution and do not
+   create conflicts. Conflict resolution will be delegated to the team
+   working on the technology
+
+   The epub publication will be updated typically once a day. So
+   please check if your change is as expected.
+
+   The entire technology handbook can be https://github.com/cloudmesh/technologies
 
 
-### Assignment 2 - Programming Assignment & Chapter
+#### Outcomes
+
+This assignment has the following outcomes
+
+1. Learn about the many technologies as you should not just pick 10
+   but read up on the once that you are interested in
+2. Learn on how to write a small meaning full summary about a
+   technology. This may also be required for you as part of you
+   project. Hence, it is good to know how to do that.
+3. Learn using gitissues
+4. Learn how to self coordinate lots of tasks in a large group
+5. Learn how to create pull requests via the git userinterface
+6. Learn how to use markdown which will be also used in your project
+   to document how to replicate your project
+
+
+### :o: Assignment 2 - Programming Assignment & Chapter
 
 * Identify a Programming assignment that can be a chapter in the
   handbook. Use github issues to coordinate this.
@@ -147,7 +314,7 @@ CMD5
 
 
 
-### Assignment 3 - Project
+### :o: Assignment 3 - Project
 
 
 
@@ -214,5 +381,9 @@ Polls
 
 
 
--
+# OLD CLASS :o:
 
+If you observe something missing let us know.
+
+-   <https://github.com/bigdata-i523>
+-   <https://raw.githubusercontent.com/bigdata-i523/sample-hid000/master/README.md>

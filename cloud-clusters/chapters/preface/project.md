@@ -1,56 +1,15 @@
-Tutorials, Topic Paper, Term Paper, Project Report
-==================================================
-
- 
-
-Dependendt on the class you need to do different assignments. The
-assignments will be clearly posted in this document and updated in case
-clarification is needed.
-
-We use the following terminology:
-
-Tutorials:
-
-:   Tutorials are written in markdown, RST, or LaTeX and include
-    information on a particular technical issue that is in general
-    helpful for other students. Tutorials can be small, but sume may
-    need to be substential. As we expect that the tutorials can be
-    included in the Handbook, please be careful of plagiarizm and do not
-    just copy the tutorial from elswhere.
-
-Topic Paper:
-
-:   A topic paper, or short paper is a smapp paper about a technology,
-    application, or useful information that provides an overview of what
-    you are trying to describe and analyses its relatinship to the class
-    topic. Be mindful about plagiarizm. The paper is written in
-    LaTeX and uses jabref for bibliography management.
-
-Term Paper:
-
-:   A term paper is an enhanced topic paper. The difference is in
-    length. Comparative or review papers can also be term papers. Term
-    papers should have the quality to be publishable either in a
-    workshop or as part of the handbook.
-
-Project Paper:
-
-:   A project reportis an enhanced topic paper that includes not just
-    the analysis of a topic, but an actuall code, with benchmark or
-    demosntarted appliction use. Obviously it is longer than a paper and
-    includes descriptions about reproducability of the application. Term
-    papers should have the quality to be publishable either in a
-    workshop or as part of the handbook.
+Terminology
+===========
 
 Assignments:
 
-:   In addition to the previously discussed toppict you also are doing a
+:   In addition to the previously discussed topic you also are doing a
     small number of assignments. These assignments may take you one or
     multiple weeks to accomplish. Some of them are pass fail, while
     others will receive a grade. It will be clearly stated at the
     beginning of the assignment which of the evaluation will apply.
 
-Examples from prior classes are avalable in the class proceedings listed
+Examples from prior classes are available in the class proceedings listed
 in Section [\[S:p-intro\]](#S:p-intro){reference-type="ref"
 reference="S:p-intro"}.
 
@@ -100,10 +59,10 @@ does not contribute to the project you need to address this early on.
 Please do not come to us a week before the deadline is due and say a
 team member has not contributed, this is far to late to do any
 adjustment to the team. It is in your responsibility to manage the team.
-You can build different teams throughout the semestar for different
+You can build different teams throughout the semester for different
 tasks. Please communicate clearly and timely with your class mates.
 
-Common Deleiverables
+Common Deliverables
 --------------------
 
 Both Projects and Term paper have the following common deliverables
@@ -113,7 +72,7 @@ Work Breakdown:
 :   This is an appendix to the document that describes in detail who did
     what in the project. This section comes in a new page after the
     references. It does not count towards the page length of the
-    document. It also includes explicit URLs to the the git history that
+    document. It also includes explicit URLs to the git history that
     documents the statistics to demonstrate not only one student has
     worked on the project. If you can not provide such a statistic or
     all checkins have been made by a single student, the project has
@@ -211,7 +170,7 @@ Code:
     class. In addition you can use or are expected to us DOCKERFILES,
     ansible, or shell scripts. It is not permissible to use GUI based
     DevOps preinstalled frameworks. Everything must be installable and
-    reproducable form the command line.
+    reproducible form the command line.
 
 Data:
 
@@ -224,12 +183,11 @@ Data:
 Project Report:
 
 :   A report must be produced while using the format discussed in the
-    Report Format section. The following length is required:
+    Report Format section. Remember tables and figures do not count
+    towards the paper length. The following length is required:
 
     -   6 pages, one student in the project
-
     -   8 pages, two students in the project
-
     -   10 pages, three students in the project
 
 License:
@@ -248,11 +206,10 @@ In case you chose the term paper, you or your team will pick a topic
 relevant for the class. You will write a high quality scholarly paper
 about this topic. The following artifacts are part of the deliverables
 for a term paper. A report must be produced while using the format
-discussed in the Report Format section. The following length is
+discussed in the Report Format section. Remember tables and figures do
+not count towards the paper length. The following length is
 required:
 
 -   8 pages, one student in the project
-
 -   10 pages, two student in the project
-
 -   12 pages, three student in the project
