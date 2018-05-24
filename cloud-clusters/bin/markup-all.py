@@ -47,13 +47,13 @@ def convert(filename):
         content = f.read()
 
     link = '[[:cloud:](https://github.com/cloudmesh/book/edit/master/cloud-clusters/' + filename + ')]{style="float:right"}'
-
+    gitcoderoot = 'https://github.com/cloudmesh/book/tree/master/examples'
     lines = content.split("\n")
     if "{github}" not in lines[0]:
         lines[0] = lines[0] + " {github}"
     content = "\n".join(lines)
     content = content.replace("{github}", link)
-    content = content.replace("{github-sourcecode}", "gregor")
+    content = content.replace("{gitcode}", gitcoderoot)
     
     with open("dest/" + filename, 'w') as f:
         f.write(content)
