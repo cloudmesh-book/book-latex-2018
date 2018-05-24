@@ -16,15 +16,12 @@ testing sets are introduced with training set pre-labelled.
 
 Files:
 
--   kNN.py </files/python/knn/kNN.py>
--   kNN\_Driver.py </files/python/knn/kNN_Driver.py>
--   DatingTesting2.txt </files/python/knn/dating_test_set2.txt>
--   clusterFinal-M3-C3Dating-ReClustered.pviz
-    </files/python/knn/clusterFinal-M3-C3Dating-ReClustered.pviz>
--   DatingRating-OriginalLabels.pviz
-    </files/python/knn/dating_rating_original_labels.pviz>
--   clusterFinal-M30-C28.pviz
-    </files/python/knn/clusterFinal-M30-C28.pviz>
+- <{gitcode}/knn/kNN.py>
+- <{gitcode}/knn/kNN_Driver.py>
+- <{gitcode}/knn/dating_test_set2.txt>
+- <{gitcode}/knn/clusterFinal-M3-C3Dating-ReClustered.pviz>
+- <{gitcode}/knn/dating_rating_original_labels.pviz>
+- <{gitcode}/knn/clusterFinal-M30-C28.pviz>
 
 ### Python k'th Nearest Neighbor Algorithms
 
@@ -63,14 +60,10 @@ use of annealing to avoid this and value of heuristic algorithms.
 
 Files:
 
--   Fungi\_LSU\_3\_15\_to\_3\_26\_zeroidx.pviz
-    </files/python/plotviz/fungi_lsu_3_15_to_3_26_zeroidx.pviz>
--   DatingRating-OriginalLabels.pviz
-    </files/python/plotviz/datingrating_originallabels.pviz>
--   clusterFinal-M30-C28.pviz
-    </files/python/plotviz/clusterFinal-M30-C28.pviz>
--   clusterFinal-M3-C3Dating-ReClustered.pviz
-    </files/python/plotviz/clusterfinal_m3_c3dating_reclustered.pviz>
+-   <{gitcode}/plotviz/fungi_lsu_3_15_to_3_26_zeroidx.pviz>
+-   <{gitcode}/plotviz/datingrating_originallabels.pviz>
+-   <{gitcode}/plotviz/clusterFinal-M30-C28.pviz>
+-   <{gitcode}/plotviz/clusterfinal_m3_c3dating_reclustered.pviz>
 
 ### Kmeans Clustering
 
@@ -117,6 +110,7 @@ getting exact answers is often not so important?
 
 \TODO{These resources have not all been checked to see if they still
   exist this is curretnly in progress}
+
 ### Resources
 
 -   <https://en.wikipedia.org/wiki/Kmeans>
