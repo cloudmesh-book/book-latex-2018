@@ -20,7 +20,6 @@ CHAPTER_DOC=\
  ./dest/chapters/doc/plagiarism.md\
  ./dest/chapters/doc/emacs.md\
  ./dest/chapters/doc/markdown.md\
- ./dest/chapters/doc/pandoc.md\
 
 #
 # DRAFTS
@@ -244,12 +243,10 @@ CHAPTER_OTHER=\
  ./dest/chapters/pi/cluster.md\
  ./dest/chapters/references.md
 
-OK=\
-  $(CHAPTER_PREFIX)\
-  $(CHAPTER_DOC) 
-
 INDEX=\
+  $(CHAPTER_PREFIX)\
   $(CHAPTER_CLASS) \
+  $(CHAPTER_DOC)
 
 Y=\
 	$(CHAPTER_DOC_DRAFT)\
