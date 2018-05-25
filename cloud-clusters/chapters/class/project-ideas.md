@@ -1,19 +1,43 @@
-Project Ideas :o:
+Project Ideas
 -------------
 
+A god way to start identifying a project is to look at previous
+student projects. For this reason we provide here a list of class
+proceedings that have been authored by previous students of cloud
+classes.  Please remember that the proceedings could include papers
+that do not fulfill the class requirements or are incomplete. It is up
+to you to identify excellent project and use them as a yardstick.
 
-Examples from prior classes are available in the class proceedings listed
-in Section [\[S:p-intro\]](#S:p-intro){reference-type="ref"
-reference="S:p-intro"}.
+Volumes include (with highlighted contributions, there are many more
+so please look at the volumes):
 
 
+2. [Use Cases in Big Data Software and Analytics Vol. 3, Gregor von Laszewski, Fall 2017](https://drive.google.com/file/d/1PyEzfyXz0tnudMQn-AhWbbbiwc3SUjHa/view) (426 pages)
+   * Predicting Housing Prices, Murali Cheruvu, Anand Sriramulu
+   * There a many other good examples in this volume. This volume focusses more on Analysing and identifying a big data proplem. Also it includes some nice Raspberry PI applications.
+3. [Projects in Big Data Software and Applications, Gregor von Laszewski, Spring 2017](https://github.com/cloudmesh/sp17-i524/blob/master/project/projects.pdf) (196 pages)
+   * *Automated Sharded MongoDB Deployment and Benchmarking for Big Data Analysis*, Mark McCombe, Gregor von Laszewski
+4. [Cloud and Big Data Technologies Vol 9, Gregor von Laszewski, Spring 2018](http://cyberaide.org/papers/vonLaszewski-cloud-vol-9.pdf) (189 pages)
+   * *Location based crime data search and analysis with Spark UDF*, 
+     Kadupitiya Kadupitige, Gregor von Laszewski
+   * *Big Data Reference Architecture using Python Celery*, 
+     Sabra Ossen, Gregor von Laszewski
+   * *Benchmarking a Sentiment Analysis Algorithm Using Hadoop
+     on Multiple Platforms*, 
+     Min Chen, Bertolt Sobolik, Gregor von Laszewski
+   * *Leveraging REST for cloud portability*, 
+     Michael Robinson, Sushant Athaley, Harshad Pitkar
 
-For the format and the details about artifacts produced in general for
-projects, please see Section
-[\[s:project-format\]](#s:project-format){reference-type="ref"
-reference="s:project-format"}. This includes the length and the paper
-format.
+One important policy we have in the class is that all projects must be
+unique from each other. Thus you should identify different data sets,
+algorithms or infrastructure from all current and previously produced
+reports. That should not be an issue as there is a lot of different
+opportunities for you. Finding a unique project is part of the class
+goal.
 
+There will be a number of project topics available that are of
+interest to us. However, it is your responsibility to expand them to
+make them project worthy.
 
 
 The paper format is included in hid-sample project-report (e.g. same as
@@ -39,32 +63,55 @@ For an example directory structure, please see
 
 ### Project Data Restrictions
 
-On Mar 8th we posted in Piazza, that there are a couple of restrictions
-to the choice of the data set. We will not accept any project using the
-Titanic, Wordcount, or any Kaggle dataset.
+We will not accept any project using the Titanic,
+Wordcount. Furthermore we observed that many students that used Kaggle
+datasets did not focus on deployment issues, but only on
+data set analysis. Please remember you need to deploy your code on a
+cloud and make that deployment reproducible. It is not sufficient to
+show that you are the only one being able to run your programs.
 
-### Example Projects
 
-Example projects are available in the Volumes we published and are
-listed in Section [\[S:p-intro\]](#S:p-intro){reference-type="ref"
-reference="S:p-intro"}.
+### Register Your Idea
 
-### Register your project idea
+Please register your project idea you need to do two things. Fist you
+file a github issue with the title
 
-Please register your project idea here:
+	Project: Coursenumber: Meaningful Project title
+	
+You assign it to all team members in your project. An abstract is
+submitted in that issue that describes what you do in your
+project. THe course number is the number of your course. We will be
+commenting on your project idea. It is yoru responsibility to see if
+this project has already been done. Please do not jut go ahead an copy
+someone leses code, try to do something that you do. However you can
+levergage toolkits such as scikit learn, tensorfolw, and others.
 
--   <https://docs.google.com/document/d/14L0guBfWJdRqqf1BoLw41LPg9HU3BqROFZeF43hJF_E>
-    Meeting with Gregor -------------------
+### Example Ideas
 
-On March 11th we posted that you need to meet with Gregor to discuss
-your projects. Many students have done this, but we are missing some
-that have not yet started or postponed the idea of starting the project.
-Please attend Monday March 25, sometime between 7pm to 10pm. If you can
-not attend this meeting, please identify an alternative time where we
-will discuss your project in a group setting. Have your project idea
-ready so we can discuss it.
+Next we list some project ideas that are suitable for the classes. At
+this time we are especially interested in creating a big data
+reference architecture. Thus your project could be incredible valuable
+to contribute to this. This is done in collaboration with NIST. Other
+projects include the deployment of cloud clusters This might includes
+the following technology tech
 
-### Project type A: NIST Rest services project
+1. Slurm/mpi 
+2. Docker 
+3. Docker swarm 
+4. Kubernetes 
+5. Ssh worker 
+6. OpenFaas 
+7. OpenWhisk 
+8. Hadoop 
+9. Spark. 
+
+Naturally they need to be *reproducible* deployments. To test out such
+projects, you will also need to demonstrate a benchmark on an
+application.
+
+We provide some more details next.
+
+#### Project Type A: NIST Rest Services Project
 
 This project idea is the simplest one of the once listed in this section
 as we have extensively discussed it and provided all important
@@ -88,31 +135,45 @@ accounting framework, and so forth.
 In case you have not completed your swagger REST service a portion of
 this project will be used to satisfy that requirement.
 
-### Project type B: Raspberry PI projects
+One nice project would for example be the automated creation of rest
+services while using a function specification of python. THis way you
+could for example look at scikit learn, write 10 use cases, use your
+code generator and create for each of them the rest service. Important
+would be a scalability test.
 
-The raspberry PI projects are divided topically by class. While 516
-focusses on map reduce 616 and 524 are focussing on containers.
-Exceptions could be allowed with proper reasoning.
+#### Project Type B: Reproducible Raspberry PI Projects
 
-#### e516
-
+The raspberry PI projects are divided topically by class. 
 In this project you will be developing or leveraging form an existing
 tutorial developed as part of the class. You will be focussing on how to
-create a Spark and/or Hadoop cluster for Raspberry Pi's in a scalable
-fashion. In previous tutorials for the class students focussed on
-setting this up for a small number of nodes. What we need to do now is
-to expand this to a scalable solution with many hundrets of Pi's in the
-cluster. Naturally login in by hand on these machines is not suitable,
-but you need to automatize this process as much as possible. Your ideas
-on how to do this are most welcome. There are different strategies, such
-as burning all SD cards with a program on your laptop and modifying the
-file system of the sd card after the burning, setting up a simple
-minimal system with ssh enabled and DHCP so you can log into a named
-host and use parallel commands to further provision the system, or even
-PXE boot. Once you have figured out and documented this you will be
-documented how to deploy a Hadoop and/or a spark cluster on the Pis.
+create for each tem member on one of the following technologies
 
-You will then pick a data set and do a mapreduce application and measure
+1. Slurm/mpi 
+2. Docker 
+3. Docker swarm 
+4. Kubernetes 
+5. Ssh worker 
+6. OpenFaas 
+7. OpenWhisk 
+8. Hadoop 
+9. Spark
+
+You will create a reproducible deployment and work towards the
+implementation of a deployment.  In previous tutorials for the class
+students focussed on setting this up for a small number of nodes. What
+we need to do now is to expand this to a scalable solution with many
+hundrets of Pi's in the cluster. Naturally login in by hand on these
+machines is not suitable, but you need to automatize this process as
+much as possible. Your ideas on how to do this are most welcome. There
+are different strategies, such as burning all SD cards with a program
+on your laptop and modifying the file system of the sd card after the
+burning, setting up a simple minimal system with ssh enabled and DHCP
+so you can log into a named host and use parallel commands to further
+provision the system, or even PXE boot. Once you have figured out and
+documented this you will be documented how to deploy a Hadoop and/or a
+spark cluster on the Pis.
+
+You will then pick a data set and do a application and measure
 the performance.
 
 In case you work in a team, each person in the team needs to add a new
@@ -134,55 +195,18 @@ For this reason the length of the paper may be reduced by one page if
 the set up procedure is excellent, and includes automated deployment
 scripts with minimal input by hand (this requires programming).
 
-#### e616 and I524
 
-In e616 and I524 we have essentially the same requirements as in Section
-[1.6.1](#s:idea-project-pi-spark){reference-type="ref"
-reference="s:idea-project-pi-spark"}, but replace map, reduce, hadoop,
-and spark with containers, Docker Swarm and Kubernetes. Please remember
-here you will have a cluster with docker swarm or kubernetes, It is not
-sufficient to just install docker on all nodes.
-
-All other requirements are the same as in Section
-[1.6.1](#s:idea-project-pi-spark){reference-type="ref"
-reference="s:idea-project-pi-spark"}.
-
-### Project type C: Data related project for Spark or Hadoop
+#### Project Type C: Reproducable Data Analysis 
 
 This project requires you to use one cloud IaaS resource such as
-chameleon, Futuresystems Echo, AWS, or Azure.
+chameleon, Futuresystems Echo, AWS, or Azure. You will be deploying on
+the IaaS and conducting based on a data set that you conduct an
+analysis of the data. You will be benchmarking the time it takes to
+set up this environment as well as benchmarking how fast the analysis
+is.
 
-You will be deploying on the IaaS a Spark or Hadoop cluster and
-conducting based on a data set that you conduct an analysis of the data.
-YOu will be benchmarking the time it costs to set up this environment as
-well as benchmarking how fast the analysis is.
 
-### Project type D: Data related project for a kubernetes or swarm cluster
-
-This task is not for e516 students.
-
-This project requires you to use one cloud IaaS resource such as
-chameleon, Futuresystems Echo, AWS, or Azure.
-
-You will be deploying a multi nod kuberntes or swarm cluster (in case of
-echo this is already done, so you will just use it, but substitute the
-deployment task with somethings else).
-
-You will be deploying rest services on the cluster base don the Swagger
-services we explained to you and benchmarking them. The rest services
-are related to the Big data architecture or have significant set of
-analysis components.
-
-In case you run on echo, you just do more services than you would do if
-you were running on other platforms.
-
-One nice project would fo =r example be the automated creation of rest
-services while using a function specification of python. THis way you
-coudl for example look at scikit learn, write 10 use cases, use your
-code generator and create for each of them the rest service. Important
-would be a scalability test.
-
-### Project type E: Define your own
+#### Project Type D: Define Your Own
 
 Define your own project and discuss with us in the Monday meeting with
 Gregor. A good example is a student that has chosen grapQL as the major
@@ -190,125 +214,77 @@ infrastructure component. He is developing a contributed chapter for the
 handbook, a tutorial, and a deployment and benchmark of data of his
 choice.
 
-### Project Idea Piazza Notes
+### Special Projects
 
-In addition to the above notes we have selected some postes from piazza
-in which we discussed project related activities. As they are from
-different classes, we posted the content and not just the URL.
-
-#### A project idea to create a spark kubernetes cluster
-
-On March 11 we posted in 516:
-
--   <https://piazza.com/class/jbku81aeli95rz?cid=274> Tutorial and
-    Project Idea: Reproducible Scalable spark cluster and benchmarking.
-    While on the phone with others, I was asked is there a tutorial
-    about spark that would get 10 points.
-
-Here is an example of such a tutorial:
-
--   <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-1/>
--   <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-2/>
--   <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-3/>
--   <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-4/>
--   <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-5/>
--   <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-6/>
--   <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-7/>
--   <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-8/>
--   <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-9/>
-    This could naturally be the basis of your project. However you can
-    not just paste and copy, you need to write it as a section and not
-    use the word tutorial. You need to make meaningful modifications or
-    enhancements to it. Such as creating a Dockerfile doing all of this
-    in an elegant fashion without any human input other than starting
-    the process. We know this is possible and can be done. Then you need
-    a dataset and test your deployment on a variety of machines.
-
-3 committed people can work on this.
-
-### Docker Cluster on PI Video
-
-The following video is pretty interesting as it shows many of the steps
-that are needed to create a docker cluster. This is regardless if you
-use a cluster based on zeros, 3 B, 3B+.
-
--   <https://www.youtube.com/watch?v=qSpfWP-Fgjc> Naturally, the video
-    shows how to do things by hand. To bring this to the next level, One
-    could, for example, provide a host file with the static addresses
-    (or create them) and use it as part of a script to modify Vanilla SD
-    cars that contain the vanilla OS on it.
-
-E.g. the tutorial contains many steps that ask to manipulate things by
-hand. This is unnecessary as all the steps can be provided by a script.
-
-The reason we want everything scripted is that we like to replicate this
-many many times as we want to replicate a swarm cluster for example on
-100 PIs doing this on 1-4 by hand may be reasonable, but doing this on
-100, we have to further automate this.
-
-Using just 4 zeros is a good way to test this automated setup.
-
-This could become a project. Then you just develop some swagger rest
-services and try to place them on the swarm. Similar things can be done
-with kubernetes.
-
-### Hadoop 3.0
-
-Please note that TAs may already have done this and if so it may no
-longer be elegible. However, it could be extended upon.
-
-Tutorial and Project Idea: Hadoop on Docker with newer version (a) use
-ubuntu image, (b) use newest version of hadoop, (c) develop docker file
-similar to
-
--   <https://github.com/sequenceiq/hadoop-docker/blob/master/Dockerfile>
-    or others you can find, (d) find dataset and benchmark on various
-    machines.
-
-Max 3 people can work on this, while deploying it on 3 platformas and
-showcasing it works with a benchmark.
+Some projects that you may be interested in and should be done
+throughout the entire semester in order to be successfully. This
+includes making sure that Assignment 0 - 3 all integrate with each
+other.
 
 #### Project Cloud Security
 
-On February Feb 27 we posted
-
-Before engaging in discussions about this with me read up on security
-and attribute base security. Take a look at the already developed Web
-services to showcase how we develop flask and swagger servers with basic
-auth (needed to understand the attribute based security).
+Please read up on security and attribute base security. Take a look at
+the already developed Web services to showcase how we develop flask
+and swagger servers with basic auth (needed to understand the
+attribute based security).
 
 -   <https://en.wikipedia.org/wiki/Attribute-based_access_control>
 
 This project has three parts and could be used throughout the class for
 all assignments.
 
-Paper.
+Technologies
+
+: Identify and summarize technologies related to cloud or big data and
+  security. Do more than 10.
+
+Paper
 
 :   Survey of Attribute based security and other security for clouds
-    pages = number of people \* 2 maximal 3 people (no images as usual
-    in page number
+    pages = number of people * 2 maximal 3 people (no images as usual
+    in page number. Integrate this in a general overview about cloud, big data and security<
 
-Tutorial.
+Tutorial
 
 :   find frameworks in Python that do this. If they exist to develop a
     tutorial
 
-Swagger.
+Swagger
 
 :   develop a swagger rest service managing the attributes and entities
     in the framework
 
 Alternative A: Project VM based.
 
-:   : showcase this in a project that does this in a cloud framework
+:   showcase this in a project that does this in a cloud framework
     using distributed virtual machines and services. Develop a tool that
     autogenerates services based on a function definition while also
     adding attribute based security.
 
-Alternative B.
+Alternative B. Container based
 
 :   do the same project but instead of using VMs do it in containers.
 
 This project has enormous potential as (a) NIST Is highly interested in
 this. Publication potential of one or two papers. (b) security is hot,
-and (c) cloud is hot
+and (c) cloud is hot.
+
+
+#### Hadoop 3.0
+
+Hadoop was recently updated to Hadoop 3.0. Develop reproducible
+deployment scripts for a variety of infrastructures (container, PI,
+OpenStack, AWS, Azure, google, ...)
+
+Start with docker. 
+
+-   <https://github.com/sequenceiq/hadoop-docker/blob/master/Dockerfile>
+
+Max 3 people can work on this, while deploying it on 3 platforms and
+showcasing it works with a benchmark.
+
+Expand this project to do benchmarking on various
+infrastructures. This project is bets done in a team of 2, do as many
+infrastructures as you can achieve. Keep the benchmark simple. Develop
+cloudmesh commands to interface with it. If time allows develop rest
+services.
