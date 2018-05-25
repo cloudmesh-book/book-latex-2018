@@ -1,55 +1,60 @@
-Project Ideas
-=============
+Project Ideas :o:
+-------------
+
+
+Examples from prior classes are available in the class proceedings listed
+in Section [\[S:p-intro\]](#S:p-intro){reference-type="ref"
+reference="S:p-intro"}.
+
+
 
 For the format and the details about artifacts produced in general for
-projects, please see
-Section [\[s:project-format\]](#s:project-format){reference-type="ref"
+projects, please see Section
+[\[s:project-format\]](#s:project-format){reference-type="ref"
 reference="s:project-format"}. This includes the length and the paper
 format.
 
-The paper format is included in hid-sample project-report (e.g. same as
+
+
+The paper format is included in hid-sample project-report (e.g. same as
 paper):
 
-* <https://github.com/cloudmesh-community/hid-sample/tree/master/project-paper>
-The code and the paper are to be added in your hid folder. YOu will be
-creating lower case directories called `project-paper` and
-`project-code`. You will not check in any data, but instead create
-scripts that fetch the data.
+-   <https://github.com/cloudmesh-community/hid-sample/tree/master/project-paper>
+    The code and the paper are to be added in your hid folder. YOu will
+    be creating lower case directories called `project-paper` and
+    `project-code`. You will not check in any data, but instead create
+    scripts that fetch the data.
 
 For an example directory structure, please see
 
-* <https://github.com/cloudmesh-community/hid-sample>
-Certainly, you can chose from many different topics and we hope you pick
-one that is suitable for you and you enjoy doing. You have the
-opportunity to definitely pick a project that you enjoy doing. However
-it must be related to the course. This course is not about finding the
-best algorithm or copying a project from your AI or other cloud classes
-you have taken at IU. It is about finding a novel project that is
-related to cloud computing, big data and the deployment of the system on
-cloud resources.
+-   <https://github.com/cloudmesh-community/hid-sample> Certainly, you
+    can chose from many different topics and we hope you pick one that
+    is suitable for you and you enjoy doing. You have the opportunity to
+    definitely pick a project that you enjoy doing. However it must be
+    related to the course. This course is not about finding the best
+    algorithm or copying a project from your AI or other cloud classes
+    you have taken at IU. It is about finding a novel project that is
+    related to cloud computing, big data and the deployment of the
+    system on cloud resources.
 
-Project Data Restrictions
--------------------------
+### Project Data Restrictions
 
 On Mar 8th we posted in Piazza, that there are a couple of restrictions
 to the choice of the data set. We will not accept any project using the
 Titanic, Wordcount, or any Kaggle dataset.
 
-Example Projects
-----------------
+### Example Projects
 
 Example projects are available in the Volumes we published and are
 listed in Section [\[S:p-intro\]](#S:p-intro){reference-type="ref"
 reference="S:p-intro"}.
 
-Register your project idea
---------------------------
+### Register your project idea
 
 Please register your project idea here:
 
-* <https://docs.google.com/document/d/14L0guBfWJdRqqf1BoLw41LPg9HU3BqROFZeF43hJF_E>
-Meeting with Gregor
--------------------
+-   <https://docs.google.com/document/d/14L0guBfWJdRqqf1BoLw41LPg9HU3BqROFZeF43hJF_E>
+    Meeting with Gregor -------------------
 
 On March 11th we posted that you need to meet with Gregor to discuss
 your projects. Many students have done this, but we are missing some
@@ -59,8 +64,7 @@ not attend this meeting, please identify an alternative time where we
 will discuss your project in a group setting. Have your project idea
 ready so we can discuss it.
 
-Project type A: NIST Rest services project
-------------------------------------------
+### Project type A: NIST Rest services project
 
 This project idea is the simplest one of the once listed in this section
 as we have extensively discussed it and provided all important
@@ -84,14 +88,13 @@ accounting framework, and so forth.
 In case you have not completed your swagger REST service a portion of
 this project will be used to satisfy that requirement.
 
-Project type B: Raspberry PI projects
--------------------------------------
+### Project type B: Raspberry PI projects
 
 The raspberry PI projects are divided topically by class. While 516
 focusses on map reduce 616 and 524 are focussing on containers.
 Exceptions could be allowed with proper reasoning.
 
-### e516
+#### e516
 
 In this project you will be developing or leveraging form an existing
 tutorial developed as part of the class. You will be focussing on how to
@@ -131,21 +134,20 @@ For this reason the length of the paper may be reduced by one page if
 the set up procedure is excellent, and includes automated deployment
 scripts with minimal input by hand (this requires programming).
 
-### e616 and I524
+#### e616 and I524
 
-In e616 and I524 we have essentially the same requirements as in
-Section [1.6.1](#s:idea-project-pi-spark){reference-type="ref"
+In e616 and I524 we have essentially the same requirements as in Section
+[1.6.1](#s:idea-project-pi-spark){reference-type="ref"
 reference="s:idea-project-pi-spark"}, but replace map, reduce, hadoop,
 and spark with containers, Docker Swarm and Kubernetes. Please remember
 here you will have a cluster with docker swarm or kubernetes, It is not
 sufficient to just install docker on all nodes.
 
-All other requirements are the same as in
-Section [1.6.1](#s:idea-project-pi-spark){reference-type="ref"
+All other requirements are the same as in Section
+[1.6.1](#s:idea-project-pi-spark){reference-type="ref"
 reference="s:idea-project-pi-spark"}.
 
-Project type C: Data related project for Spark or Hadoop
---------------------------------------------------------
+### Project type C: Data related project for Spark or Hadoop
 
 This project requires you to use one cloud IaaS resource such as
 chameleon, Futuresystems Echo, AWS, or Azure.
@@ -155,8 +157,7 @@ conducting based on a data set that you conduct an analysis of the data.
 YOu will be benchmarking the time it costs to set up this environment as
 well as benchmarking how fast the analysis is.
 
-Project type D: Data related project for a kubernetes or swarm cluster
-----------------------------------------------------------------------
+### Project type D: Data related project for a kubernetes or swarm cluster
 
 This task is not for e516 students.
 
@@ -181,8 +182,7 @@ coudl for example look at scikit learn, write 10 use cases, use your
 code generator and create for each of them the rest service. Important
 would be a scalability test.
 
-Project type E: Define your own
--------------------------------
+### Project type E: Define your own
 
 Define your own project and discuss with us in the Monday meeting with
 Gregor. A good example is a student that has chosen grapQL as the major
@@ -190,55 +190,53 @@ infrastructure component. He is developing a contributed chapter for the
 handbook, a tutorial, and a deployment and benchmark of data of his
 choice.
 
-Project Idea Piazza Notes
--------------------------
+### Project Idea Piazza Notes
 
 In addition to the above notes we have selected some postes from piazza
 in which we discussed project related activities. As they are from
 different classes, we posted the content and not just the URL.
 
-### A project idea to create a spark kubernetes cluster
+#### A project idea to create a spark kubernetes cluster
 
 On March 11 we posted in 516:
 
-* <https://piazza.com/class/jbku81aeli95rz?cid=274>
-Tutorial and Project Idea: Reproducible Scalable spark cluster and
-benchmarking. While on the phone with others, I was asked is there a
-tutorial about spark that would get 10 points.
+-   <https://piazza.com/class/jbku81aeli95rz?cid=274> Tutorial and
+    Project Idea: Reproducible Scalable spark cluster and benchmarking.
+    While on the phone with others, I was asked is there a tutorial
+    about spark that would get 10 points.
 
 Here is an example of such a tutorial:
 
-* <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-1/>
-* <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-2/>
-* <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-3/>
-* <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-4/>
-* <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-5/>
-* <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-6/>
-* <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-7/>
-* <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-8/>
-* <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-9/>
-This could naturally be the basis of your project. However you can not
-just paste and copy, you need to write it as a section and not use the
-word tutorial. You need to make meaningful modifications or enhancements
-to it. Such as creating a Dockerfile doing all of this in an elegant
-fashion without any human input other than starting the process. We know
-this is possible and can be done. Then you need a dataset and test your
-deployment on a variety of machines.
+-   <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-1/>
+-   <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-2/>
+-   <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-3/>
+-   <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-4/>
+-   <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-5/>
+-   <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-6/>
+-   <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-7/>
+-   <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-8/>
+-   <http://blog.madhukaraphatak.com/scaling-spark-with-kubernetes-part-9/>
+    This could naturally be the basis of your project. However you can
+    not just paste and copy, you need to write it as a section and not
+    use the word tutorial. You need to make meaningful modifications or
+    enhancements to it. Such as creating a Dockerfile doing all of this
+    in an elegant fashion without any human input other than starting
+    the process. We know this is possible and can be done. Then you need
+    a dataset and test your deployment on a variety of machines.
 
 3 committed people can work on this.
 
-Docker Cluster on PI Video
---------------------------
+### Docker Cluster on PI Video
 
 The following video is pretty interesting as it shows many of the steps
 that are needed to create a docker cluster. This is regardless if you
 use a cluster based on zeros, 3 B, 3B+.
 
-* <https://www.youtube.com/watch?v=qSpfWP-Fgjc>
-Naturally, the video shows how to do things by hand. To bring this to
-the next level, One could, for example, provide a host file with the
-static addresses (or create them) and use it as part of a script to
-modify Vanilla SD cars that contain the vanilla OS on it.
+-   <https://www.youtube.com/watch?v=qSpfWP-Fgjc> Naturally, the video
+    shows how to do things by hand. To bring this to the next level, One
+    could, for example, provide a host file with the static addresses
+    (or create them) and use it as part of a script to modify Vanilla SD
+    cars that contain the vanilla OS on it.
 
 E.g. the tutorial contains many steps that ask to manipulate things by
 hand. This is unnecessary as all the steps can be provided by a script.
@@ -254,8 +252,7 @@ This could become a project. Then you just develop some swagger rest
 services and try to place them on the swarm. Similar things can be done
 with kubernetes.
 
-Hadoop 3.0
-----------
+### Hadoop 3.0
 
 Please note that TAs may already have done this and if so it may no
 longer be elegible. However, it could be extended upon.
@@ -264,14 +261,14 @@ Tutorial and Project Idea: Hadoop on Docker with newer version (a) use
 ubuntu image, (b) use newest version of hadoop, (c) develop docker file
 similar to
 
-* <https://github.com/sequenceiq/hadoop-docker/blob/master/Dockerfile>
-or others you can find, (d) find dataset and benchmark on various
-machines.
+-   <https://github.com/sequenceiq/hadoop-docker/blob/master/Dockerfile>
+    or others you can find, (d) find dataset and benchmark on various
+    machines.
 
 Max 3 people can work on this, while deploying it on 3 platformas and
 showcasing it works with a benchmark.
 
-### Project Cloud Security
+#### Project Cloud Security
 
 On February Feb 27 we posted
 
@@ -280,7 +277,7 @@ and attribute base security. Take a look at the already developed Web
 services to showcase how we develop flask and swagger servers with basic
 auth (needed to understand the attribute based security).
 
-* <https://en.wikipedia.org/wiki/Attribute-based_access_control>
+-   <https://en.wikipedia.org/wiki/Attribute-based_access_control>
 
 This project has three parts and could be used throughout the class for
 all assignments.

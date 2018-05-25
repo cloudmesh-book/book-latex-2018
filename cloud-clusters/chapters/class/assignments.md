@@ -8,6 +8,15 @@ assignments will be clearly posted. In case of questions, we will
 update this document to provide clarifications if needed. We use the
 following terminology:
 
+License:
+
+:   All projects are developed under an open source license such as
+    Apache 2.0 License. You will be required to add a LICENCE.txt file
+    and if you use other software identify how it can be reused in your
+    project. If your project uses different licenses, please add in a
+    README.md file which packages are used and which license these
+    packages have.
+    
 Tutorials:
 
 : Tutorials are written in markdown and include information on a
@@ -29,18 +38,40 @@ Technology Paper:
   to describe and analyses its relationship to the class topic. Be
   mindful about plagiarism. The paper is written in LaTeX and uses
   jabref for bibliography management. It uses the same format as your
-  report paper
+  report paper. The format is discussed in the Section 
+  [Report Format](#report-format).
+
+
+Project:
+
+: We refer with the term project to the major activity that you chose
+  as part of your class. The default case is an implementation project
+  that requires a *project report* and project code. In case you have
+  issues with code development you can also chose a *term paper* as
+  project.
+
 
 Term Paper:
 
-: A term paper is an enhanced topic paper. The difference is in length
-  and depth of coverage. Comparative or review papers can also be term
-  papers. Term papers should have the quality to be publishable either
-  in a workshop or as part of the handbook. Not all classes allow you
-  to do a term paper, but require you to do a project. Please confirm
-  with your class.
+: A term paper is an enhanced topic paper (only available for
+  I523). The difference is in length and depth of
+  coverage. Comparative or review papers can also be term papers. In
+  case you chose the term paper, you or your team will pick a topic
+  relevant for the class.  Term papers should have the quality to be
+  publishable either in a workshop or as part of the handbook. Not all
+  classes allow you to do a term paper, but require you to do a
+  project. Please confirm with your class. For the classes listed here
+  the term paper wil result in a quater reduction in grade for the
+  entire class not just the paper. Remember tables and figures do not
+  count towards the paper length. A term paper has the following
+  length.
 
-Project Paper:
+  -   8 pages, one student in the project
+  -   10 pages, two student in the project
+  -   12 pages, three student in the project
+
+  
+Project Report:
 
 : A project report is an enhanced topic paper that includes not just
   the analysis of a topic, but an actual code, with **benchmark** and
@@ -49,7 +80,14 @@ Project Paper:
   the application. A README is provided that describes in tutorial
   form how others can reproduce your project and run it.  Term papers
   should have the quality to be publishable either in a workshop or as
-  part of the handbook.
+  part of the handbook. The format is discussed in the Section
+  [Report Format](#report-format).  Remember tables and figures do not
+  count towards the paper length. The following length is required:
+
+  -   6 pages, one student in the project
+  -   8 pages, two students in the project
+  -   10 pages, three students in the project
+
 
 Project Code:
 
@@ -61,13 +99,43 @@ Project Code:
   documentation must be uploaded to github.com under the class
   specific github directory.
 
-Project:
+Data:
 
-: We refer with the term project to the major activity that you chose
-  as part of your class. The default case is an implementation project
-  that requires a project report and project code. In case you have
-  issues with code development you can asl o chose a term paper as
-  project.
+:   Data is to be hosted on IUs google drive if needed. If you have
+    larger data, it should be downloaded from the internet. It is in
+    your responsibility to develop a download program. The data **must**
+    not be stored in github. You will be expected to write a python
+    program that downloads the data.
+
+
+
+Work Breakdown:
+
+:   This is an appendix to the document that describes in detail who did
+    what in the project. This section comes in a new page after the
+    references. It does not count towards the page length of the
+    document. It also includes explicit URLs to the git history that
+    documents the statistics to demonstrate not only one student has
+    worked on the project. If you can not provide such a statistic or
+    all checkins have been made by a single student, the project has
+    shown that they have not properly used git. Thus points will be
+    deducted from the project. Furthermore, if we detect that a student
+    has not contributed to a project we may invite the student to give a
+    detailed presentation of the project.
+
+Bibliography:
+
+:   All bibliography has to be provided in a jabref/bibtex file. This is
+    regardless if you use LaTeX or Word. There is **NO EXCEPTION** to
+    this rule. PLease be advised doing references right takes some time
+    so you want to do this early. Please note that exports of Endnote or
+    other bibliography management tools do not lead to properly
+    formatted bibtex files, despite they claiming to do so. You will
+    have to clean them up and we recommend to do it the other way
+    around. Manage your bibliography with jabref, and if you like to use
+    it import them to endnote or other tools. Naturally you may have to
+    do some cleanup to. If you use LaTeX and jabref, you have naturally
+    much less work to do. What you chose is up to you.
 
 ### Due dates
 
@@ -346,8 +414,91 @@ This assignment has the following outcomes
 
 ### Assignment 3 - Project
 
-The project deliverables depend on tha class you take. Please locate
-your class number and read up on the section relevant for your class.
+
+The project deliverables depend on the class you take.  Please be
+aware that the project or term paper constitute to a significant
+portion of your grade of your class grade.  Please locate your class
+number and read up on the section relevant for your class.
+
+Please see our [Terminology](#terminology) Section about basic
+requirements. The Report format is discussed in teh Scientifif Writing
+Section.
+
+Projects do require you to produce code for all classes the following
+applies:
+
+Report Format:
+
+:   All reports will be using the our common format. This format is not
+    the same as the ACM format, so if you use systems such as overleaf
+    or sharelatex, you need to upload it and use it there.
+
+    The format for LaTeX and Word found here:
+
+    * <https://github.com/cloudmesh-community/hid-sample/tree/master/paper>
+
+    There will be **NO EXCEPTION** to this format. In case you are in
+    a team, you can use either github while collaboratively developing
+    the LaTeX document or use MicrosoftOne Drive which allows
+    collaborative editing features. All bibliographical entries must
+    be put into a bibliography manager such as jabref, or Mendeley and
+    exported to bibtex.  This will guarantee that you follow proper
+    citation styles. You can use either ACM or IEEE reference
+    styles. Your final submission will include the bibliography file
+    as a separate document.
+
+    :warning: Documents that do not follow the ACM format and are not
+    accompanied by references managed with jabref or are not spell
+    checked will be returned without review.
+
+
+Code:
+
+:   You must deliver the **source code** in github. The code must be
+    compilable and a TA may try to replicate to run your code. You MUST
+    avoid lengthy install descriptions and everything must be
+    installable from the command line. We will check submission. All
+    team members must be responsible for one or all parts of the
+    project.
+
+    Code repositories are for code, if you have additional libraries
+    that are needed you need to develop a script or use a DevOps
+    framework to install such software. Thus zip files and `.class`,
+    `.o` files are not permissible in the project. Each project must be
+    reproducible with a simple script. An example is:
+
+        git clone ....
+        make install
+        make run
+        make view
+
+    Which would use a simple make file to install, run, and view the
+    results. You are expected to integrate cmd5, which we teach in
+    class. In addition you can use or are expected to us DOCKERFILES,
+    ansible, or shell scripts. It is not permissible to use GUI based
+    DevOps preinstalled frameworks. Everything must be installable and
+    reproducible form the command line.
+
+Cloud Resources:
+
+:   Projects may be executed on your local computer, a cloud or other
+    resources you may have access to. This may include:
+
+    -   chameleoncloud.org
+    -   furturesystems.org dockerswarm
+    -   furturesystems.org kubernetes
+    -   AWS (you will be responsible for charges)
+    -   Azure (you will be responsible for charges)
+    -   virtualbox if you have a powerful computer and like to prototype
+    -   Raspberry PI's 
+    -   other clouds, please confirm with us.
+
+    Access to clouds must be scripted and a cmd5 extension must be
+    developed as part of your project to receive full credit.  You
+    must not just use your local PC as you need to use at least one
+    cloud. If you work in a team each team member nedds to work at
+    least on one cloud.
+
 
 #### Class: E516 or E616
 
@@ -368,7 +519,7 @@ API endpoint and get the expected output in form of a JSON object. UI
 creation is an optional task. This is the overall expectation of the
 project.
 
-### Deliverables
+##### Deliverables
 
 - Find a data set with reasonable size (this may depend on your
   resources and needs to include a benchmark in your paper for
@@ -406,13 +557,13 @@ project.
     * Technologies Used
   * Results
     * Deployment Benchmarks
-    * application Benchmarks
+    * Application Benchmarks
   * (Limitations)
   * Conclusion
   * (Work Breakdown)
 
 
-### Class: i423 i523 or E534 or i524
+#### Class: i423 i523 or E534 or i524
 
 The objective of the project is to define a clear problem statement and
 create a framework to address that problem as it relates to big data
@@ -420,9 +571,23 @@ your project must address the reproducibility of the deployment and
 the application. A dataset must be chosen and you can analyze the
 data. While in i423, i523, the data analysis has more weight, in e523
 and i524 you must also address the deployment. For the later classes
-see also the project requirements of E616
+see also the project requirements of E616.
 
-### Deliverables
+You have plenty of time to make this choice and if you find you
+struggle with programming you may want to consider a term paper
+instead of a project.
+
+In case you chose a project your maximum grade for the entire class
+could be an A+. However, an A+ project must be truly outstanding and
+include an exceptional project report. Such a project and report will
+have the potential quality of being able to be published in a
+conference.
+
+In case you chose a term Paper for I524 your maximum grade for the
+*entire* class will be an A-.
+
+
+##### Deliverables
 
 - Find a data set with reasonable size (this may depend on your
   resources and needs to include a benchmark in your paper for
@@ -460,15 +625,14 @@ see also the project requirements of E616
     * Technologies Used
   * Results
     * Deployment Benchmarks
-    * application Benchmarks
+    * Application Benchmarks
   * (Limitations)
   * Conclusion
   * (Work Breakdown)
 
 
 
-Class: E222
------------
+#### Class: E222
 
 For the final project in this class you need to do the following.
 
@@ -491,7 +655,7 @@ For the final project in this class you need to do the following.
 -   Use Flask Rest API to expose the data to the viewers. So people can
     send a data set and get the outputs as a json object.
 
-### Deliverables
+##### Deliverables
 
 -   Find and clean up data set
 
@@ -521,7 +685,7 @@ For the final project in this class you need to do the following.
     * Technologies Used
   * Results
     * Deployment Benchmarks
-    * application Benchmarks
+    * Application Benchmarks
   * (Limitations)
   * Conclusion
   * (Work Breakdown)

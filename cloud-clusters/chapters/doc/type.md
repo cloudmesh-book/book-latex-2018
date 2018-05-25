@@ -1,5 +1,5 @@
 Communicating Research in Other Ways
-====================================
+------------------------------------
 
 Naturally, writing papers is not the only way to communicate your
 research with others. We find that today we see additional pathways for
@@ -7,15 +7,13 @@ cumminication includine blogs, twitter, facebook, e-mail, Web pages, and
 electronic notebooks. Let us refisit some of them and identify when they
 are helpful.
 
-Blogs
------
+### Blogs
 
 blog:
 
-> noun, a regularly updated website or web page, typically one run by
-> an individual or small group, that is written in an informal or
+> noun, a regularly updated website or web page, typically one run by an
+> individual or small group, that is written in an informal or
 > conversational style.
-
 
 Advantages:
 
@@ -32,8 +30,7 @@ Disadvantages:
 -   often lack of sophisticated track change features
 -   no collaborative editing features
 
-Sphinx
-------
+### Sphinx
 
 Sphinx (<http://www.sphinx-doc.org/>) is a tool that to create
 integrated documentation from a markup language whlie.
@@ -62,10 +59,9 @@ Others:
 -   Doxygen (<http://www.stack.nl/~dimitri/doxygen/>)
 -   MkDocs (<http://www.mkdocs.org/>)
 
-Notebooks
----------
+### Notebooks
 
-### Jupyter
+#### Jupyter
 
 The Jupyter Notebook (<http://jupyter.org/>) is an open-source web
 application allowing users to create and share documents that contain
@@ -89,7 +85,7 @@ Disadvantage:
 -   mark up language is limited
 -   editing in ASCII is complex and Web editing is prefered
 
-### Apache Zeppilin
+#### Apache Zeppilin
 
 A Web-based notebook that enables data-driven, interactive data
 analytics and collaborative documents with SQL, Scala and hadoop. It

@@ -432,6 +432,30 @@ For more information on this topic please see:
 
 * <https://studentaffairs.indiana.edu/student-conduct/misconduct-charges/academic-misconduct.shtml>
 
+### Teamwork
+
+In most cases we allow all assignments to be done in teams of up to
+three team members but not more. However, please confirm with the
+instructor as he may cahnge this. Im portant in case of team work is
+that a team doe not just hand in a project that would be normally done
+by one student. It is obvious that all team members must equally
+contribute and make sure the deliverables are multiplied by the number
+of people in the project.  It will be up to you to determine a team,
+but we recommend that you chose wisely. Naturally if a team member
+does not contribute to the project you need to address this early on.
+Please do not come to us a week before the deadline is due and say a
+team member has not contributed, this is far to late to do any
+adjustment to the team. It is in your responsibility to manage the
+team.  You can build different teams throughout the semester for
+different tasks. Please communicate clearly and timely with your class
+mates. We have unfortunatley very often seen the issue that a team has
+not read the handbook and instead of delivering a superior project or
+document the quality was poor as the both team members did not work
+and assumed the other one would do the work for them naturally it is a
+desastourous plan to have others work for you and instead do little
+work while delegating your tasks and overburden your team members. 
+
+
 ### Exercises
 
 Policy.1

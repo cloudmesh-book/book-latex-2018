@@ -20,6 +20,9 @@ CHAPTER_DOC=\
  ./dest/chapters/doc/plagiarism.md\
  ./dest/chapters/doc/emacs.md\
  ./dest/chapters/doc/markdown.md\
+ ./dest/chapters/doc/report.md\
+ ./dest/chapters/doc/type.md
+
 
 #
 # DRAFTS
@@ -30,16 +33,14 @@ CHAPTER_CLASS=\
  ./dest/chapters/class/fall2018.md\
  ./dest/chapters/class/policy.md\
  ./dest/chapters/class/assignments.md\
+ ./dest/chapters/class/project-ideas.md
 
-
-CHAPTER_DOC_DRAFT=\
- ./dest/chapters/doc/report.md\
- ./dest/chapters/doc/type.md\
- ./dest/chapters/preface/project-ideas.md\
- ./dest/chapters/preface/project.md\
 
 PIAZZA=\
   ./dest/chapters/doc/piazza.md
+
+CHAPTER_DOC_DRAFT=\
+
 
 
 CHAPTER_DRAFT=\
@@ -246,10 +247,10 @@ CHAPTER_OTHER=\
 INDEX=\
   $(CHAPTER_PREFIX)\
   $(CHAPTER_CLASS) \
-  $(CHAPTER_DOC)
+  $(CHAPTER_DOC)\
+	$(CHAPTER_DOC_DRAFT)
 
 Y=\
-	$(CHAPTER_DOC_DRAFT)\
   $(CHAPTER_DRAFT) 
 
 

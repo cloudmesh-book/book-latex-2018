@@ -1,15 +1,17 @@
 Report Format
-=============
+-------------
 
 We provide a uniform **trivial high quality** report format for this
 class that is slightly modified from its original. This was necessary
 as we observed over the years that some students increased their paper
-length while modifying the format or adde empty lines, played with
-font sizes and so on. This is all not necessary and as we use a
-uniform paper format we will detect such cheating attempts.
+length while modifying the format or added empty lines, played with
+font sizes and so on. This is all not necessary and wastes not only
+your time, but also the reviewers time. We just use all the same
+unchanged uniform paper format. As we do such cheating attempts are
+easy to detect.
 
-Thus we have adopted a the following simple **proven** approach
-implemented by hundrets of students successfully. 
+To avoid all this, we have adopted a the following simple **proven**
+approach implemented by hundrets of students successfully.
 
 1.  We provide you with a **high quality** report template format that
     you **must not change**. It is a slight improvement to a template
@@ -19,10 +21,10 @@ implemented by hundrets of students successfully.
     reference management tool and must be provided in addition to the
     document.
 
-3.  If your document does not follow the format or we find that you
-    have modified the template or do not use floating figures (which
-    will be placed automatically at the end of the paper) we will
-    return the document without review and may give a grade reduction.
+3.  If your document does not follow the format or we find that you have
+    modified the template or do not use floating figures (which will be
+    placed automatically at the end of the paper) we will return the
+    document without review and may give a grade reduction.
 
 4.  It is in the students responsibility to use the template format from
     the beginning on.
@@ -30,15 +32,14 @@ implemented by hundrets of students successfully.
 5.  If you treat our template simply as a form that you fill out, you
     will succeed. If you modify it you will not. Keep it simple.
 
-
 The template for the report is available from:
 
-*   <https://github.com/cloudmesh-community/hid-sample/tree/master/paper>
+-   <https://github.com/cloudmesh-community/hid-sample/tree/master/paper>
 
 Copy all files from this directory in the directory where you want to
 write your report in. Make sure you have the **full** version of LaTeX
-installed and can use make. THis can be done on OSX, Linux, and
-Windows via gitbash. When you say
+installed and can use make. THis can be done on OSX, Linux, and Windows
+via gitbash. When you say
 
     make
 
@@ -54,49 +55,51 @@ following files and directories with their files in it
     report.bib
     images
 
-You *MUST NOT** commit your pdf file as we will regenerate it for you
-as part of a class proceedings. If you commit it it will lead to
-conflicts in git and will slow us down, Thus we will deduct points if
-you commit it. Here are some useful tips:
+You **MUST NOT** commit your pdf file as we will regenerate it for you
+as part of a class proceedings. If you commit it, it will lead to
+conflicts in git and will slow us down and we will deduct points if
+you commit it. Here are some useful tips to what is in the directory:
 
 Images
 
-: All images must be placed in an images folder and submitted
-  in your repository with the originals.
+:   All images must be placed in an images folder and submitted in your
+    repository with the originals.
 
 Makefile
 
-: It is in your responsibility that the document can be compiled with
-  make. If your system can not do this, create one that can. Use a
-  virtual machine or containers if you fail to set it up on
-  Windows. As this is a cloud class this part of your class
-  deliverables as it shows to us you can set up such an environment.
-  There will be **NO EXCEPTION** to this. This file must not be modified.
+:   It is in your responsibility that the document can be compiled with
+    make. If your system can not do this, create one that can. Use a
+    virtual machine or containers if you fail to set it up on Windows.
+    As this is a cloud class this part of your class deliverables as it
+    shows to us you can set up such an environment. There will be **NO
+    EXCEPTION** to this. This file must not be modified.
 
 context.tex
 
-: This is your form. Look at it and fill it out with your content. See
-  especially how images and tables are placed and referred to. Although
-  they will in your context.tex file be close to where they should be in
-  our review process we place them on purpose to the end. You will see
-  this when you say make and view the pdf document,
+:   This is your form. Look at it and fill it out with your content. See
+    especially how images and tables are placed and referred to.
+    Although they will in your context.tex file be close to where they
+    should be in our review process we place them on purpose to the end.
+    You will see this when you say make and view the pdf document,
 
 report.tex
 
-: This file must not be modified. 
+:   This file must not be modified.
 
-Leverage parallel editing
--------------------------
+### Parallel Editing
 
-In most cases you will be able to work in groups on class projects. This
-allows you to develop the report collaboratively via
-github.com. Learning how to do this properly is part of the class goals.
+In most cases you will be able to work in groups on class
+projects. This allows you to develop the report collaboratively via
+github.com.  Learning how to do this properly is part of the class
+goals. The rule is commit and pull frequently. The reason we want you
+to use git directly is also to prepare you for parallel code
+development. Thus we do not encourage using of sharelatex and
+overleaf. Instead we recommend you use git directly and communicate
+with each other in case yo work in a team.
 
+### Timemanagement
 
-Timemanagement Tips
--------------------
-
-Obviously taking a class takes time
+Obviously doin a project takes time
 
 1.  It takes time to read the information
 2.  It takes time understand the information
@@ -105,18 +108,16 @@ Obviously taking a class takes time
     the project is due so let me start in 4 weeks ...*. Postponing the
     project till the last moment
 5.  Do not spend significant time on unimportant documentation and
-    setup. Instead spend time to develop scripts that you can than
-    easily document. If you can use for example cloudmesh cmd5
-    commands and scripts that do these things automatically.
+    setup. Instead spend time to develop sophisticated scripts that
+    you can than easily document in possibly one line ;-) If you can
+    use for example cloudmesh cmd5 commands and scripts that help you
+    developing commands semi-automatically.
 
-Report Checklist
-----------------
+### Report Checklist
 
-This partial list may serve as a way to check if you follow the rules
-that we collected based on observation from previous student
-reports. PLease check every item. Some of the items are obvious, while
-others seem to be done repeatedly and are only done because the
-students has not carefully studied this list.
+This partial list may serve as a reminder on how to make sure your
+paper is properly developed. It is based on a collection of issues we
+observed over time done by students developing reports.
 
 1.  Have you written the report in the specified format?
 
@@ -132,8 +133,8 @@ students has not carefully studied this list.
 6.  Have you included all images in native and PDF format in git in the
     images folder?
 
-7.  Have you added the bibliography file that you managed with jabref
-    or emacs
+7.  Have you added the bibliography file that you managed with jabref or
+    emacs
 
 8.  Have you made sure that you removed report.pdf in case you
     accidentally added it to github
@@ -148,13 +149,13 @@ students has not carefully studied this list.
 12. Have you made sure you do not plagiarize?
 
 13. Have you not used phrases such as shown in the Figure below, but
-    instead used as shown in Figure \ref{F:coolfigure} when referring
-    to the figure, and F:coolfigure is set with the label command?
+    instead used as shown in Figure \ref{F:coolfigure} when referring to
+    the figure, and F:coolfigure is set with the label command?
 
 14. Have you capitalized "Figure ...", "Table ..." ?
 
-15. Any figure that is not referred and explained explicitly in the text must be
-    removed.
+15. Any figure that is not referred and explained explicitly in the text
+    must be removed.
 
 16. Are the figure captions bellow the figures and not on top. (Do not
     include the titles of the figures in the figure itself but instead
@@ -169,8 +170,8 @@ students has not carefully studied this list.
     location than you think. Figures are allowed to float.
 
 20. Do avoid copy images from others as this would require you to
-    contact the publisher and ask for permission. Redraw the figure,
-    but use a citation if the figure is not substantially different.
+    contact the publisher and ask for permission. Redraw the figure, but
+    use a citation if the figure is not substantially different.
 
 21. Do not use the word "I" instead use "We" even if you are the sole
     author.
@@ -188,39 +189,37 @@ students has not carefully studied this list.
 25. Check in your current work for the report on a weekly basis to show
     consistent progress.
 
-26. Please use the dedicated report format for class. 
+26. Please use the dedicated report format for class.
 
-27. Do not use the characters & # % in the paper. If
-    you use them you probably need a \ in front of them.
+27. Do not use the characters & \# % in the paper. If you use them you
+    probably need a  in front of them.
 
 28. If you want to say and do not use *&* but use the word *and*.
 
-29. When writing quotes use ``quote'' and not "quote".
+29. When writing quotes use \`\`quote'' and not "quote".
 
-30. **Do not** include a section *Future improvements* as this implies you
-    want an incomplete. Instead use  a section Limitations and discuss
-    them in detail.
+30. **Do not** include a section *Future improvements* as this implies
+    you want an incomplete. Instead use a section Limitations and
+    discuss them in detail.
 
-30. Have another student review your paper and give you feedback.
+31. Have another student review your paper and give you feedback.
 
-31. Do a self check. Do you think this paper is excellent or do you
+32. Do a self check. Do you think this paper is excellent or do you
     think its just good enough? What are the limitations of the paper?
 
-32. When using directory names use only lower case, do not use spaces
-    or underscore in them. Use a dash instead of underscores.
+33. When using directory names use only lower case, do not use spaces or
+    underscore in them. Use a dash instead of underscores.
 
-33. bibtex labels **must not have underscores** in them, instead use
+34. bibtex labels **must not have underscores** in them, instead use
     dashes.
 
-34. Make sure to add your hid as a prefix to the bibtex label.
+35. Make sure to add your hid as a prefix to the bibtex label.
 
-35. howpublished does not contain urls, for that we use a url
-    attribute. IN how published you put a noun in that discribbes
-    what it is. E.g. Webpage, Git repository, ...
+36. howpublished does not contain urls, for that we use a url attribute.
+    IN how published you put a noun in that discribbes what it is. E.g.
+    Webpage, Git repository, ...
 
-
-Exercise
---------
+### Exercise
 
 Report.1:
 
@@ -268,7 +267,6 @@ Report.11:
 
 Report.11:
 
-:   Memorize: When writing quotes use ``quote'' and not "quote". Note
-    these are two quotes let to the one to open and two other quotes right
-    to the enter (US keyboard) to close a quote.
-
+:   Memorize: When writing quotes use \`\`quote'' and not "quote". Note
+    these are two quotes let to the one to open and two other quotes
+    right to the enter (US keyboard) to close a quote.
