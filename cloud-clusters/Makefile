@@ -9,7 +9,6 @@ CHAPTER_PREFIX=\
  ./dest/chapters/preface/update.md\
  ./dest/chapters/preface/preface.md\
  ./dest/chapters/preface/contributors.md\
- ./dest/chapters/preface/contributing.md\
  ./README.md\
  ./dest/chapters/todo.md\
  ./dest/todo.md\
@@ -36,21 +35,15 @@ CHAPTER_CLASS=\
  ./dest/chapters/class/project-ideas.md
 
 
-CHAPTER_PIAZZA=\
-  ./dest/chapters/doc/piazza.md
-
+CHAPTER_SERVICES=\
+  ./dest/chapters/doc/piazza.md\
+ ./dest/chapters/preface/git.md
 
 CHAPTER_DRAFT=\
  ./dest/chapters/SECTION-DRAFT.md\
- ./dest/chapters/preface/g.md\
- ./dest/chapters/preface/git.md\
  ./dest/chapters/preface/grading.md\
- ./dest/chapters/preface/graph-e222.md\
- ./dest/chapters/preface/graph-e516.md\
- ./dest/chapters/preface/graph-e616-a.md\
- ./dest/chapters/preface/graph-e616.md\
  ./dest/chapters/preface/organization.md\
- ./dest/chapters/preface/plan.md\
+ ./dest/chapters/preface/graph-all.md
 
 GRAPHICS=\
  ./dest/chapters/doc/graphviz.md\
@@ -201,6 +194,8 @@ CHAPTER_OTHER=\
  ./dest/chapters/rest/swagger-codegen.md\
  ./dest/chapters/rest/swagger-spec.md\
  ./dest/chapters/rest/swagger.md\
+
+CHAPTER_PYTHON=\
  ./dest/chapters/prg/SECTION-PYTHON.md\
  ./dest/chapters/prg/python.md\
  ./dest/chapters/prg/python-install.md\
@@ -245,15 +240,17 @@ INDEX=\
   $(CHAPTER_PREFIX)\
   $(CHAPTER_CLASS) \
   $(CHAPTER_DOC)\
-  $(CHAPTER_PIAZZA)
+  $(CHAPTER_SERVICES)
 
 
-Y=\
-  $(CHAPTER_DRAFT) 
+INDEX=\
+  $(CHAPTER_DRAFT)\
+  $(CHAPTER_OTHER) 
 
 
 X=\
 	$(CHAPTER_OTHER) \
+	$(CHAPTER_PYTHON) \
   $(CHAPTER_IN) \
   $(CHAPTER_BIGDATA)
 
@@ -263,7 +260,7 @@ FORMAT=--toc --number-sections
 FONTS=--epub-embed-font='fonts/*.ttf'
 BIB=--bibliography dest/references.bib
 CSS=--css=template/epub.css
-RESOURCE=--resource-path=".:chapters/prg:chapters/iot:chapters/container:chapters/os:chapters/mapreduce:chapters/cloud/chameleon:chapters/doc"
+RESOURCE=--resource-path=".:chapters/prg:chapters/iot:chapters/container:chapters/os:chapters/mapreduce:chapters/cloud/chameleon:chapters/doc:chapters/preface"
 FILENAME=vonlaszewski-cloud-cluster
 
 #	pandoc ./chapters/prg/python.md -o dest/chapters/prg/python.md --base-header-level=2
@@ -323,3 +320,6 @@ issues:
 	echo "</div>" >> /tmp/issues.md
 	echo  >> /tmp/issues.md
 	cp /tmp/issues.md chapters/preface/issues.md
+
+dot:
+	dot -Tpng chapters/preface/graph-all.dot -o chapters/preface/images/graph-all.png

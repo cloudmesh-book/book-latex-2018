@@ -4,21 +4,23 @@ Class Git
 This class will use git to manage all assignment submissions. We use the
 publicly available github.com. The class git is hosted at
 
-<https://github.com/orgs/bigdata-i523>
+* <https://github.com/cloudmesh-community>
 
 It is in the responsibility of the student to create a github account
 and make sure that you will be added to the class github within one week
-of joining the class. A TA will be assigned to assist you. Details will
-be posted here and an announcement will be made via a piazza post.
+of joining the class.  Make sure
+to fill out the survey to communicate the github.com username.
+
+Previous github locations include:
+
+* <https://github.com/cloudmesh-community>
+* <https://gitlab.com/cloudmesh_fall2016>
 
 Exercises
 ---------
 
-Github.i523.1:
+Github.1:
 
-:   Create a Github account
+:   Create a Github account and fill out the survey to communicate the
+    account name to us
 
-Github.i523.2:
-
-:   Work with a TA to get added to the github project ((details will be
-    posted here).
