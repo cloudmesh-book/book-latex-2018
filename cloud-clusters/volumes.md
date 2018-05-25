@@ -56,7 +56,7 @@ Vol 3. Cloud Technologies (523, 524)
 
    The ideal length of the technologies should be between 150 - 450 words
 
-Vol 3. Cloud Clusters and DevOps
+Vol 3. Cloud Clusters and DevOps (524, 516, 616)
 
 : In this volume we focus on deploying cloud clusters on a variety of
   platforms including containers virtual machines and possibly also
@@ -107,7 +107,30 @@ Vol 6.a-x. Cloud and Big Data Student projects
   explore this and provide an e
 
 
+Vol 7. Class Handbook - Policies
 
+This volume is at present containing all assignments for all classes
+and includes only the similar portions. It could be split up in
+separate volumes vor each class, but may not be as easy to manage due
+to duplication of content. It may be easier to list the differences.
+
+We will explore to find out if we could script this and have
+
+If statements in the document that are relevant for a particular
+class. Though this existed in latex, markdown does not have this.
+splitting it up in too many small parts may not be helpful as it is
+than too complicated to assemble this information and we may get lost
+or forget things to include. We need to look at this
+
+Vol 8. Big Data Reference Architecture
+
+: This is not the document we submit to nits, but a volume that
+  contains all projects related to the NIST project. We have a
+  substantial number, but not all will be useful for the nist
+  document. This document will help coordinating the community and
+  select projects that will influence the Vol 8 in NIST. We may not
+  make this one vol 8 in this series in order to avoid naming
+  conflicts and confusion.
 
 
 
