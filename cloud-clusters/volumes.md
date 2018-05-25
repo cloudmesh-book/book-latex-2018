@@ -1,9 +1,14 @@
 # Volumes
 
+> Note: In our previous effort Volumes were simply chapters in a big
+> handboog. Other than Vol. 6, which are at this time 3 separate volumes
+> of about 700 pages total.
+
+
 Cloud Computing and Big Data aere recent trends that require
 comprehensive overview but also detailed knowledge about technologies
 and applications. Over the last two years we have collected material
-as part of our educational activities which go well above 2000 pages
+as part of our educational activities which go well above 1700 pages
 in content. Some of the material however is only available in draft
 form while other material is dedicated to class support.
 
