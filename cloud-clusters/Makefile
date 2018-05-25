@@ -36,11 +36,8 @@ CHAPTER_CLASS=\
  ./dest/chapters/class/project-ideas.md
 
 
-PIAZZA=\
+CHAPTER_PIAZZA=\
   ./dest/chapters/doc/piazza.md
-
-CHAPTER_DOC_DRAFT=\
-
 
 
 CHAPTER_DRAFT=\
@@ -248,7 +245,7 @@ INDEX=\
   $(CHAPTER_PREFIX)\
   $(CHAPTER_CLASS) \
   $(CHAPTER_DOC)\
-	$(CHAPTER_DOC_DRAFT)
+  $(CHAPTER_PIAZZA)
 
 
 Y=\
