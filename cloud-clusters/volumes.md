@@ -133,4 +133,6 @@ Vol 8. Big Data Reference Architecture
   conflicts and confusion.
 
 
+Vol 9. Scientific Writing
 
+: Volume describing who to use Latex for Scientific Writing
