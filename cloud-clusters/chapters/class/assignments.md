@@ -141,7 +141,7 @@ Bibliography:
 
 For due dates see the [calendar](#calendar) section.
 
-### Assignment 0 - Communication
+### Assignment 0 - Organization and Communication
 
 In order for us to communicate with you and you being able to use the
 class reources we need you to register with various systems.  THis
@@ -274,7 +274,8 @@ outcomes such as
 
 We expect that if you have difficulties with some of the technologies
 to also consult with external resources that are for example searchable
-with google.
+with google. Using github is mandatory for your project and is a class
+learning objective.
 
 ### Assignment 1 - Technology
 

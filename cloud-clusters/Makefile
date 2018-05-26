@@ -10,9 +10,9 @@ CHAPTER_PREFIX=\
  ./dest/chapters/preface/preface.md\
  ./dest/chapters/preface/contributors.md\
  ./README.md\
- ./dest/chapters/todo.md\
- ./dest/todo.md\
- ./dest/chapters/preface/issues.md
+# ./dest/chapters/todo.md\
+# ./dest/todo.md\
+# ./dest/chapters/preface/issues.md
 
 CHAPTER_DOC=\
  ./dest/chapters/doc/SECTION.md\
@@ -30,8 +30,11 @@ CHAPTER_DOC=\
 CHAPTER_CLASS=\
  ./dest/chapters/class/SECTION.md\
  ./dest/chapters/class/fall2018.md\
+ ./dest/chapters/class/organization.md\
+ ./dest/chapters/class/graph-all.md\
  ./dest/chapters/class/policy.md\
  ./dest/chapters/class/assignments.md\
+ ./dest/chapters/class/grading.md\
  ./dest/chapters/class/project-ideas.md
 
 
@@ -41,9 +44,6 @@ CHAPTER_SERVICES=\
 
 CHAPTER_DRAFT=\
  ./dest/chapters/SECTION-DRAFT.md\
- ./dest/chapters/preface/grading.md\
- ./dest/chapters/preface/organization.md\
- ./dest/chapters/preface/graph-all.md
 
 GRAPHICS=\
  ./dest/chapters/doc/graphviz.md\
@@ -237,15 +237,16 @@ CHAPTER_PYTHON=\
  ./dest/chapters/references.md
 
 INDEX=\
+  $(CHAPTER_DRAFT)\
+  $(CHAPTER_OTHER) 
+
+INDEX=\
   $(CHAPTER_PREFIX)\
   $(CHAPTER_CLASS) \
   $(CHAPTER_DOC)\
   $(CHAPTER_SERVICES)
 
 
-INDEX=\
-  $(CHAPTER_DRAFT)\
-  $(CHAPTER_OTHER) 
 
 
 X=\
@@ -260,7 +261,7 @@ FORMAT=--toc --number-sections
 FONTS=--epub-embed-font='fonts/*.ttf'
 BIB=--bibliography dest/references.bib
 CSS=--css=template/epub.css
-RESOURCE=--resource-path=".:chapters/prg:chapters/iot:chapters/container:chapters/os:chapters/mapreduce:chapters/cloud/chameleon:chapters/doc:chapters/preface"
+RESOURCE=--resource-path=".:chapters/prg:chapters/iot:chapters/container:chapters/os:chapters/mapreduce:chapters/cloud/chameleon:chapters/doc:chapters/preface:chapters/class"
 FILENAME=vonlaszewski-cloud-cluster
 
 #	pandoc ./chapters/prg/python.md -o dest/chapters/prg/python.md --base-header-level=2
@@ -322,4 +323,5 @@ issues:
 	cp /tmp/issues.md chapters/preface/issues.md
 
 dot:
-	dot -Tpng chapters/preface/graph-all.dot -o chapters/preface/images/graph-all.png
+	dot -Tpng chapters/class/graph-all.dot -o chapters/class/images/graph-all.png
+	dot -Tpng chapters/class/graph-course.dot -o chapters/class/images/graph-course.png

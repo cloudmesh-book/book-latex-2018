@@ -74,6 +74,30 @@ Macdown
 :   MacDown is an open source Markdown editor for macOS that is
     available at <https://macdown.uranusjr.com/>
 
+Haropad
+
+: Haropad is a cross platform markdown editor. It taskes donation for
+  its further development. It can be downloaded from
+  <http://pad.haroopress.com/>
+
+Markdown plus
+
+: Markdown with lots of extensions. We are not supporting all of the
+  extensions at this time. We just use mostly regular markdown.
+  It is located at <https://mdp.tylingsoft.com/>. The source code is
+  on gitub <https://github.com/tylingsoft/markdown-plus>. A
+  precompiled version is available for $15. A possible local install
+  could be working as follows (untested)
+
+  ```bash
+  $ git colone https://github.com/tylingsoft/markdown-plus.git
+  $ cd markdown-plus
+  $ brew install yarn
+  $ yarn install
+  $ yarn watch
+  $ open open dist/index.html
+  ```
+
 ### Presentations in Markdown
 
 Please find some links on hwo to use markdown to create slides
@@ -106,4 +130,25 @@ In our example we converted the md file to latex.
 As this document is created with pandoc we encourage you to review our
 Makefile to see how we use some more advanced featuers
 
+
+### Advanced Pandoc
+
+pnadoc can integrate extensions and filters. We have not made yet use
+of them but like to explore them over time.
+
+Packages of interest include:
+
+* Include files <http://pandoc.org/filters.html#include-files>
+* Integration of R <https://github.com/cdupont/r-pandoc>
+* Figure numbers <https://github.com/tomduck/pandoc-fignos>
+* Equation numbers <https://github.com/tomduck/pandoc-eqnos>
+* Table numbers <https://github.com/tomduck/pandoc-tablenos>
+* Cross refs with lots of numbering <https://github.com/lierdakil/pandoc-crossref>
+* section numbering <https://github.com/chdemko/pandoc-numbering>
+* CSV table <https://github.com/baig/pandoc-csv2table>
+* inline CSV table <https://github.com/mb21/pandoc-placetable>
+
+Graphics
+
+* Mermaide <https://github.com/raghur/mermaid-filter>
 
