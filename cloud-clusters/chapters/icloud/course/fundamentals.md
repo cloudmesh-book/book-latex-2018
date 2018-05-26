@@ -28,7 +28,7 @@ Part A
     and priority matrix on Infrastructure Strategies and Compute
     Infrastructure.
 
--   Part J covers **Cloud Software** with HPC-ABDS(High Performance
+-   Part J covers **Cloud Software** with HPC-ABDS (High Performance
     Computing enhanced Apache Big Data Stack) with over 350 software
     packages and how to use each of its 21 layers.
 
@@ -67,7 +67,7 @@ Part A
 
 [:clapper: Part A (14:48)](https://drive.google.com/open?id=16gPOZ7EK6iaac2B-9KbM3OHITqHT8YxG)
 
-[:scroll: Slides Part A (7)](https://drive.google.com/open?id=17_voZxBdqiLicJKzroQ2DzjW4zvp0VYb)
+[:scroll: Slides (7) - Part A](https://drive.google.com/open?id=17_voZxBdqiLicJKzroQ2DzjW4zvp0VYb)
 
 This lecture describes the contents of the
 following 20 parts (B to U).
@@ -75,12 +75,11 @@ following 20 parts (B to U).
 Part B - Defining Clouds I
 -----------------------------------------
 
-[:clapper: Part B - Defining Clouds I (20:22)](https://drive.google.com/open?id=1iGv6GG2b2th_RL3kQX6P04Y0AyuUxQcj)
+[:clapper: Defining Clouds I (20:22) - Part B](https://drive.google.com/open?id=1iGv6GG2b2th_RL3kQX6P04Y0AyuUxQcj)
 
-[:scroll: Slides Part B - Defining Clouds I (13)](https://drive.google.com/open?id=1SJZblEkhjgQBCDaDSiSCaXTLVPx_X8m4)
+[:scroll: Slides (13) Defining Clouds I - Part B](https://drive.google.com/open?id=1SJZblEkhjgQBCDaDSiSCaXTLVPx_X8m4)
 
 **B: Defining Clouds I**
-
 
 -   Basic definition of cloud and two very simple examples of why
     virtualization is important.
@@ -91,12 +90,11 @@ Part B - Defining Clouds I
 Part C - Defining Clouds II
 ------------------------------------------
 
-[:clapper: Part C - Defining Clouds II (20:45)](https://drive.google.com/open?id=1nU9HlqDe_vEZR1MlOq2XibnoHmaygo-H)
+[:clapper: Defining Clouds II (20:45) - Part C](https://drive.google.com/open?id=1nU9HlqDe_vEZR1MlOq2XibnoHmaygo-H)
 
-[:scroll: Slides Part C - Defining Clouds II (11)](https://drive.google.com/open?id=1Thg2yOnKBQKdndgdItpviGw0hhxjY2K2)
+[:scroll: Slides Defining Clouds II (11) -  Part C](https://drive.google.com/open?id=1Thg2yOnKBQKdndgdItpviGw0hhxjY2K2)
 
 **C: Defining Clouds II**
-
 
 -   Service-oriented architectures: Software services as Message-linked
     computing capabilities
@@ -108,9 +106,9 @@ Part C - Defining Clouds II
 Part D - Defining Clouds III
 -------------------------------------------
 
-[:clapper: Part D - Defining Clouds III (9:08)](https://drive.google.com/open?id=1Qayxfwuc_qSeCzaIpHj3-F0N7TONvM5L)
+[:clapper: Defining Clouds III (9:08) - Part D](https://drive.google.com/open?id=1Qayxfwuc_qSeCzaIpHj3-F0N7TONvM5L)
 
-[:scroll: Slides Part D - Defining Clouds III (9)](https://drive.google.com/open?id=1EsHbUn7xdjTrLXmY8HCIhZqLaWeODD_1)
+[:scroll: Slides Defining Clouds III (9) -  Part D](https://drive.google.com/open?id=1EsHbUn7xdjTrLXmY8HCIhZqLaWeODD_1)
 
 **D: Defining Clouds III**
 
@@ -122,12 +120,11 @@ Part D - Defining Clouds III
 Part E - Virtualization
 --------------------------------------
 
-[:clapper: Part E - Virtualization (11:21)](https://drive.google.com/open?id=1EC-eOYuBOV1qMojSg4Mg50doPqjAY0Hr)
+[:clapper: Virtualization (11:21) - Part E](https://drive.google.com/open?id=1EC-eOYuBOV1qMojSg4Mg50doPqjAY0Hr)
 
-[:scroll: Slides Part E - Virtualization (8)](https://drive.google.com/open?id=1K3RzVlfiwZAqwhCPxNEP8Q1JNxyOZhrv)
+[:scroll: Slides Virtualization (8) -  Part E](https://drive.google.com/open?id=1K3RzVlfiwZAqwhCPxNEP8Q1JNxyOZhrv)
 
-**E: Virtualization**
-
+In this section we cover 
 
 -   Virtualization Technologies, Hypervisors and the different
     approaches
@@ -137,12 +134,11 @@ Part E - Virtualization
 Part F - Technology Hypecycle I
 ----------------------------------------------
 
-[:clapper: Part F - Technology Hypecycle I (13:41)](https://drive.google.com/open?id=1_M0HDemFmykAq4iPuQ0MHYIW0kffHuMa)
+[:clapper: Technology Hypecycle I (13:41) - Part F](https://drive.google.com/open?id=1_M0HDemFmykAq4iPuQ0MHYIW0kffHuMa)
 
-[:scroll: Slides Part F - Technology Hypecycle I (11)](https://drive.google.com/open?id=18deLUm2zGlHcHHbyVhecwSf52RHAq9VT)
+[:scroll: Slides Technology Hypecycle I (11) -  Part F](https://drive.google.com/open?id=18deLUm2zGlHcHHbyVhecwSf52RHAq9VT)
 
-**F:Technology Hypecycle I**
-
+In this section we cover  the Technology Hypecycle and focus on 
 
 -   Gartner's Hypecycles and especially that for emerging technologies
     in 2017 and 2016
@@ -156,11 +152,11 @@ Part F - Technology Hypecycle I
 Part G - Technology Hypecycle II
 -----------------------------------------------
 
-[:clapper: Part G - Technology Hypecycle II (16:05)](https://drive.google.com/open?id=19k6os58_OCCsmbusWQ6z6n9hwVmmd163)
+[:clapper: Technology Hypecycle II (16:05) - Part G](https://drive.google.com/open?id=19k6os58_OCCsmbusWQ6z6n9hwVmmd163)
 
-[:scroll: Slides Part G - Technology Hypecycle II (15)](https://drive.google.com/open?id=1ZD-h-dmQgAFROBEI1KMJROTxPVPAJ_P_)
+[:scroll: Slides Technology Hypecycle II (15) -  Part G](https://drive.google.com/open?id=1ZD-h-dmQgAFROBEI1KMJROTxPVPAJ_P_)
 
-**G: Technology Hypecycle II**
+In this section we cover  the Technology Hypecycle and focus on
 
 -   Emerging Technologies hypecycles and Priority matrix at selected
     times 2008-2015
@@ -171,11 +167,12 @@ Part G - Technology Hypecycle II
 Part H - IaaS I
 ------------------------------
 
-[:clapper: Part H - IaaS I (13:22)](https://drive.google.com/open?id=1_lH7ou_UQOMMfdSSQLrqZr8yJZIr7rC0)
+[:clapper: IaaS I (13:22) - Part H](https://drive.google.com/open?id=1_lH7ou_UQOMMfdSSQLrqZr8yJZIr7rC0)
 
-[:scroll: Slides Part H - IaaS I (12)](https://drive.google.com/open?id=1WOlwFtHNvFSaQX9WAXBwO2q1qsvBM6Yd)
+[:scroll: Slides IaaS I (12) -  Part H](https://drive.google.com/open?id=1WOlwFtHNvFSaQX9WAXBwO2q1qsvBM6Yd)
 
-**H: Cloud Infrastructure I**
+In this section we focus on Cloud Infrastructure while covering the
+following topics:
 
 
 -   Comments on trends in the data center and its technologies
@@ -186,11 +183,12 @@ Part H - IaaS I
 Part I - IaaS II
 -------------------------------
 
-[:clapper: Part I - IaaS II (13:13)](https://drive.google.com/open?id=1UwBzSKK-iHYW7aRCS_f4BoXNYxUb476i)
+[:clapper: IaaS II (13:13) - Part I](https://drive.google.com/open?id=1UwBzSKK-iHYW7aRCS_f4BoXNYxUb476i)
 
-[:scroll: Slides Part I - IaaS II (11)](https://drive.google.com/open?id=1_1fL2L-tpjlL7og49XDxH_HLPD6Tupik)
+[:scroll: Slides IaaS II (11) -  Part I](https://drive.google.com/open?id=1_1fL2L-tpjlL7og49XDxH_HLPD6Tupik)
 
-**I: Cloud Infrastructure II**
+In this section we focus on Cloud Infrastructure  while covering the
+following topics:
 
 
 -   Gartner hypecycle and priority matrix on Infrastructure Strategies
@@ -201,11 +199,11 @@ Part I - IaaS II
 Part J - Cloud Software
 --------------------------------------
 
-[:clapper: Part J - Cloud Software (37:56)](https://drive.google.com/open?id=1tasT1lJE_7pwowuk0D68M7rgW1gtv3im)
+[:clapper: Cloud Software (37:56) - Part J](https://drive.google.com/open?id=1tasT1lJE_7pwowuk0D68M7rgW1gtv3im)
 
-[:scroll: Slides Part J - Cloud Software (15)](https://drive.google.com/open?id=1DKshrkb2bMOt5p0H2YDkOZhekAFIx5nJ)
+[:scroll: Slides Cloud Software (15) -  Part J](https://drive.google.com/open?id=1DKshrkb2bMOt5p0H2YDkOZhekAFIx5nJ)
 
-**J: Cloud Software**
+In this section we focus on Cloud Software while covering the following topics:
 
 
 -   HPC-ABDS(High Performance Computing enhanced Apache Big Data Stack)
@@ -221,11 +219,12 @@ Part J - Cloud Software
 Part K - Applications I
 --------------------------------------
 
-[:clapper: Part K - Applications I (11:58)](https://drive.google.com/open?id=1BzpXNqs3Ai_QlSsjxSV6Q3FevZt1BPj-)
+[:clapper: Applications I (11:58) - Part K](https://drive.google.com/open?id=1BzpXNqs3Ai_QlSsjxSV6Q3FevZt1BPj-)
 
-[:scroll: Slides Part K - Applications I (16)](https://drive.google.com/open?id=1dQbzoVwDoqqnwSO8eHmu_WfiU2FVXtLL)
+[:scroll: Slides Applications I (16) -  Part K](https://drive.google.com/open?id=1dQbzoVwDoqqnwSO8eHmu_WfiU2FVXtLL)
 
-**K: Cloud Applications I**
+In this section we focus on Cloud Applications while covering the
+following topics:
 
 
 -   Big Data in Industry/Social media; a lot of best examples have NOT
@@ -237,11 +236,12 @@ Part K - Applications I
 Part L - Applications II
 ---------------------------------------
 
-[:clapper: Part L - Applications II (13:03)](https://drive.google.com/open?id=1pIjcar6SZSelWiR6dv4lhnsmweDarNXR)
+[:clapper: Applications II (13:03) - Part L](https://drive.google.com/open?id=1pIjcar6SZSelWiR6dv4lhnsmweDarNXR)
 
-[:scroll: Slides Part L - Applications II (11)](https://drive.google.com/open?id=10bAckYz455Yd5tqDGpwkMZUmDn9FKl0n)
+[:scroll: Slides Applications II (11) -  Part L](https://drive.google.com/open?id=10bAckYz455Yd5tqDGpwkMZUmDn9FKl0n)
 
-**L: Cloud Applications II**
+In this section we focus on Cloud Applications  while covering the
+following topics:
 
 
 -   Clouds in science where area called cyberinfrastructure;
@@ -251,11 +251,12 @@ Part L - Applications II
 Part M - Applications III
 ----------------------------------------
 
-[:clapper: Part M - Applications III (24:12)](https://drive.google.com/open?id=16rb0zZafTLoYhT638qc4IRorOk5qgRP-)
+[:clapper: Applications III (24:12) - Part M](https://drive.google.com/open?id=16rb0zZafTLoYhT638qc4IRorOk5qgRP-)
 
-[:scroll: Slides Part M - Applications III (14)](https://drive.google.com/open?id=1TPgbfK6PhWjyr3u115Pq4jTPNPo2JU70)
+[:scroll: Slides Applications III (14) -  Part M](https://drive.google.com/open?id=1TPgbfK6PhWjyr3u115Pq4jTPNPo2JU70)
 
-**M: Cloud Applications III**
+In this section we focus on Cloud Applications while covering the
+following topics:
 
 
 -   Characterize Applications using NIST approach
@@ -265,11 +266,12 @@ Part M - Applications III
 Part N - Parallelism
 -----------------------------------
 
-[:clapper: Part N - Parallelism (35:46)](https://drive.google.com/open?id=1apuvCaKlQBZp8FjvqN9It5bJhfXmf1kg)
+[:clapper: Parallelism (35:46) - Part N](https://drive.google.com/open?id=1apuvCaKlQBZp8FjvqN9It5bJhfXmf1kg)
 
-[:scroll: Slides Part N - Parallelism (15)](https://drive.google.com/open?id=1lBmpMry2FXwEjf93EMJPNDpw_G-yUcI1)
+[:scroll: Slides Parallelism (15) -  Part N](https://drive.google.com/open?id=1lBmpMry2FXwEjf93EMJPNDpw_G-yUcI1)
 
-**N: Clouds and Parallel Computing**
+In this section we focus on Clouds and Parallel Computing while covering
+the following topics:
 
 
 -   Parallel Computing in general
@@ -279,11 +281,11 @@ Part N - Parallelism
 Part O - Storage
 -------------------------------
 
-[:clapper: Part O - Storage (19:22)](https://drive.google.com/open?id=1_A51jrlzKYKhQvefXbJPs0J4GiCCQ1et)
+[:clapper: Storage (19:22) - Part O](https://drive.google.com/open?id=1_A51jrlzKYKhQvefXbJPs0J4GiCCQ1et)
 
-[:scroll: Slides Part O - Storage (10)](https://drive.google.com/open?id=1JvIK-J4HUSvexmNKbBV_fdN8xvGBylR2)
+[:scroll: Slides Storage (10) -  Part O](https://drive.google.com/open?id=1JvIK-J4HUSvexmNKbBV_fdN8xvGBylR2)
 
-**O: Cloud Storage**
+In this section we focus on Cloud Storage while covering the following topics:
 
 
 -   Cloud data approaches
@@ -292,11 +294,11 @@ Part O - Storage
 Part P - HPC in the Cloud
 ----------------------------------------
 
-[:clapper: Part P - HPC in the Clou (19:29)](https://drive.google.com/open?id=1u5z9-GY1Hecp8nR47Gxe8506NnhHduF1)
+[:clapper: HPC in the Clou (19:29) - Part P](https://drive.google.com/open?id=1u5z9-GY1Hecp8nR47Gxe8506NnhHduF1)
 
-[:scroll: Slides Part P - HPC in the Clou (8)](https://drive.google.com/open?id=1ECR-m-pgW_7JnNDJ9ZLDYpicRrtxawwF)
+[:scroll: Slides HPC in the Clou (8) -  Part P](https://drive.google.com/open?id=1ECR-m-pgW_7JnNDJ9ZLDYpicRrtxawwF)
 
-**P: HPC and Clouds**
+In this section we focus on HPC and Cloud while covering the following topics:
 
 
 -   The Branscomb Pyramid
@@ -306,11 +308,12 @@ Part P - HPC in the Cloud
 Part Q - Analytics and Simulation
 ------------------------------------------------
 
-[:clapper: Part Q - Analytics and Simulation (16:19)](https://drive.google.com/open?id=1vmtpndTlmtV4DzUtl04_nWo9DCR84mIM)
+[:clapper: Analytics and Simulation (16:19) - Part Q](https://drive.google.com/open?id=1vmtpndTlmtV4DzUtl04_nWo9DCR84mIM)
 
-[:scroll: Slides Part Q - Analytics and Simulation (10)](https://drive.google.com/open?id=1u_rugpZg6m2x0B7r4kifEUxMej71-wMh)
+[:scroll: Slides Analytics and Simulation (10) -  Part Q](https://drive.google.com/open?id=1u_rugpZg6m2x0B7r4kifEUxMej71-wMh)
 
-**Q: Comparison of Data Analytics with Simulation**
+In this section we focus on Comparison of Data Analytics with Simulation
+while covering the following topics:
 
 
 -   Structure of different applications for simulations and Big Data
@@ -320,11 +323,12 @@ Part Q - Analytics and Simulation
 Part R - Jobs
 ----------------------------
 
-[:clapper: Part R - Jobs (4:52)](https://drive.google.com/open?id=1JMNPLdbS81Hfi5P7irDUy7kna35jpU6j)
+[:clapper: Jobs (4:52) - Part R](https://drive.google.com/open?id=1JMNPLdbS81Hfi5P7irDUy7kna35jpU6j)
 
-[:scroll: Slides Part R - Jobs (6)](https://drive.google.com/open?id=1Sev0VF7tDZo4Oxa_ghk6b4YhE4iTPkhE)
+[:scroll: Slides Jobs (6) -  Part R](https://drive.google.com/open?id=1Sev0VF7tDZo4Oxa_ghk6b4YhE4iTPkhE)
 
-**R: Availability of Jobs in different areas**
+In this section we focus on Availability of Jobs in different are
+while covering the following topics:
 
 -   Computer Engineering
 -   Clouds
@@ -334,11 +338,11 @@ Part R - Jobs
 Part S - The Future
 ----------------------------------
 
-[:clapper: Part S - The Future (19:46)](https://drive.google.com/open?id=1kgbrDiDNj0DKYi_ICvOXYeFZ32R1JH2_)
+[:clapper: The Future (19:46) - Part S](https://drive.google.com/open?id=1kgbrDiDNj0DKYi_ICvOXYeFZ32R1JH2_)
 
-[:scroll: Slides Part S - The Future (6)](https://drive.google.com/open?id=1_LdE64DJqSKI7EmMbSsppHMO6KU4q4Sl)
+[:scroll: Slides The Future (6) -  Part S](https://drive.google.com/open?id=1_LdE64DJqSKI7EmMbSsppHMO6KU4q4Sl)
 
-**S: The Future**
+In this section we focus on The Future while covering the following topics:
 
 
 -   Gartner cloud computing hypecycle and priority matrix highlights:
@@ -351,11 +355,11 @@ Part S - The Future
 Part T - Security
 --------------------------------
 
-[:clapper: Part T - Security (11:29)](https://drive.google.com/open?id=1TQsCuR-2C6D_OJeJH818WO5-OBrA8Spo)
+[:clapper: Security (11:29) - Part T](https://drive.google.com/open?id=1TQsCuR-2C6D_OJeJH818WO5-OBrA8Spo)
 
-[:scroll: Slides Part T - Security (13)](https://drive.google.com/open?id=1fVelFbLaUbNXMGS6ENRn4QHLzFitAyUD)
+[:scroll: Slides Security (13) -  Part T](https://drive.google.com/open?id=1fVelFbLaUbNXMGS6ENRn4QHLzFitAyUD)
 
-**T: Security**
+In this section we focus on Security while covering the following topics:
 
 
 -   CIO Perspective
@@ -364,11 +368,11 @@ Part T - Security
 Part U - Fault Tolerance
 ---------------------------------------
 
-[:clapper: Part U - Fault Tolerance (9:10)](https://drive.google.com/open?id=1jRpkdGCT-sQRb6pOGrW-qG58A_HYfr9W)
+[:clapper: Fault Tolerance (9:10) - Part U](https://drive.google.com/open?id=1jRpkdGCT-sQRb6pOGrW-qG58A_HYfr9W)
 
-[:scroll: Slides Part U - Fault Tolerance (5)](https://drive.google.com/open?id=1cR9YLcrtUMKINRFNMbdVre8Ydfa-lvAj)
+[:scroll: Slides Fault Tolerance (5) -  Part U](https://drive.google.com/open?id=1cR9YLcrtUMKINRFNMbdVre8Ydfa-lvAj)
 
-**U: Fault Tolerance**
+In this section we focus on Fault Tolerance while covering the following topics:
 
 
 -   S3 Fault Tolerance
