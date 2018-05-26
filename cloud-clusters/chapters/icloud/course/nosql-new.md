@@ -9,11 +9,11 @@ to NoSQL data storage systems is presented. This discussion includes an
 evolution of data storage systems, limitations with RDBMS in terms of
 scalability and how NoSQL fits into the picture in terms of big data.
 
-[:clapper: Cloud 9:22 RDBMS vs. NoSQL](https://www.youtube.com/watch?v=dJunqER9lb8)
+[:clapper: RDBMS vs. NoSQL (9:22)](https://www.youtube.com/watch?v=dJunqER9lb8)
 
-[:scroll: Cloud Page 1 RDBMS vs. NoSQL](https://drive.google.com/open?id=0B88HKpainTSfaDFNbjNiMm44bnc)
+[:scroll: RDBMS vs. NoSQL (1)](https://drive.google.com/open?id=0B88HKpainTSfaDFNbjNiMm44bnc)
 
-[:scroll: Cloud Page 1 RDBMS vs. NoSQL - pptx](https://drive.google.com/open?id=0B88HKpainTSfNnQ5SEVKTm1tRk0)
+[:scroll: RDBMS vs. NoSQL - pptx (1)](https://drive.google.com/open?id=0B88HKpainTSfNnQ5SEVKTm1tRk0)
 
 
 NoSQL Characteristics
@@ -35,11 +35,11 @@ schema-less categories, instead they can generally be placed in one of
 the three categories being document model, graph model and key-value and
 wide column models.
 
-[:clapper: Cloud 10:31 NoSQL Characteristics](https://www.youtube.com/watch?v=BjtTDiKhqk8)
+[:clapper: NoSQL Characteristics (10:31)](https://www.youtube.com/watch?v=BjtTDiKhqk8)
 
-[:scroll: Cloud Page 11 NoSQL Characteristics](https://drive.google.com/open?id=0B88HKpainTSfaDFNbjNiMm44bnc)
+[:scroll: NoSQL Characteristics (11)](https://drive.google.com/open?id=0B88HKpainTSfaDFNbjNiMm44bnc)
 
-[:scroll: Cloud Page 11 NoSQL Characteristics - pptx](https://drive.google.com/open?id=0B88HKpainTSfNnQ5SEVKTm1tRk0)
+[:scroll: NoSQL Characteristics - pptx (11)](https://drive.google.com/open?id=0B88HKpainTSfNnQ5SEVKTm1tRk0)
 
 
 ### Document Model
@@ -93,11 +93,11 @@ to tablet servers and manages these servers. Memory is conserved by
 making SSTables and memtables compact. BigTable is used in features of
 Google like their search engine and Google Earth.
 
-[:clapper: Cloud 6:55 BigTable](https://www.youtube.com/watch?v=JAlz9AI5I-M)
+[:clapper: 6:55 BigTable](https://www.youtube.com/watch?v=JAlz9AI5I-M)
 
-[:scroll: Cloud Page 28 BigTable](https://drive.google.com/open?id=0B88HKpainTSfaDFNbjNiMm44bnc)
+[:scroll: 28 BigTable](https://drive.google.com/open?id=0B88HKpainTSfaDFNbjNiMm44bnc)
 
-[:scroll: Cloud Page 28 BigTable - pptx](https://drive.google.com/open?id=0B88HKpainTSfNnQ5SEVKTm1tRk0)
+[:scroll: 28 BigTable - pptx](https://drive.google.com/open?id=0B88HKpainTSfNnQ5SEVKTm1tRk0)
 
 
 HBase
@@ -110,11 +110,11 @@ amounts of analytic processing. HBase has a row-column structure similar
 to BigTable as well as master and slave nodes. Its place in the
 architecture of HDFS is shown in a diagram.
 
-[:clapper: Cloud 7:37 HBase](https://www.youtube.com/watch?v=i-ibhuVs-ck)
+[:clapper: HBase (7:37)](https://www.youtube.com/watch?v=i-ibhuVs-ck)
 
-[:scroll: Cloud Page 44 HBase](https://drive.google.com/open?id=0B88HKpainTSfaDFNbjNiMm44bnc)
+[:scroll: HBase (44)](https://drive.google.com/open?id=0B88HKpainTSfaDFNbjNiMm44bnc)
 
-[:scroll: Cloud Page 44 HBase - pptx](https://drive.google.com/open?id=0B88HKpainTSfNnQ5SEVKTm1tRk0)
+[:scroll: HBase - pptx (44)](https://drive.google.com/open?id=0B88HKpainTSfNnQ5SEVKTm1tRk0)
 
 HBase Coding
 ------------
@@ -122,12 +122,12 @@ HBase Coding
 This video gives an overview of the code used in the installation of
 HBase and connecting to it.
 
-[:clapper: Cloud HBase Coding 4:30](https://www.youtube.com/watch?v=KbFMpYRBTtU)
+[:clapper: Coding HBase (4:30)](https://www.youtube.com/watch?v=KbFMpYRBTtU)
 
-[:scroll: Cloud Page 60 HBase Coding](https://drive.google.com/open?id=0B88HKpainTSfaDFNbjNiMm44bnc)
+[:scroll: HBase Coding (60)](https://drive.google.com/open?id=0B88HKpainTSfaDFNbjNiMm44bnc)
 
 
-[:scroll: Cloud Page 60 HBase Coding - pptx](https://drive.google.com/open?id=0B88HKpainTSfNnQ5SEVKTm1tRk0)
+[:scroll: HBase Coding - pptx (60)](https://drive.google.com/open?id=0B88HKpainTSfNnQ5SEVKTm1tRk0)
 
 
 Draft: MongoDB
@@ -157,11 +157,11 @@ of data with numerous subsets, all of which demands specific approaches
 in terms of search queries. There are three stages to this approach:
 query, analysis, and visualization.
 
-[:clapper: Cloud 9:33 Indexing Applications](https://www.youtube.com/watch?v=MxgabfoGH-M)
+[:clapper: Indexing Applications (9:33)](https://www.youtube.com/watch?v=MxgabfoGH-M)
 
-[:scroll: Cloud Page 1 Indexing Applications](https://drive.google.com/open?id=0B88HKpainTSfWUh6dVNHcXloSnc)
+[:scroll: Indexing Applications (1)](https://drive.google.com/open?id=0B88HKpainTSfWUh6dVNHcXloSnc)
 
-[:scroll: Cloud Page 1 Indexing Applications - pptx](https://drive.google.com/open?id=0B88HKpainTSfZkJpLTNIbDJ1dVU)
+[:scroll: Indexing Applications - pptx (1)](https://drive.google.com/open?id=0B88HKpainTSfZkJpLTNIbDJ1dVU)
 
 
 Related Work
@@ -174,11 +174,11 @@ MongoDB. Current indexing strategies have limits; for instance, they
 cannot support range queries or only retrieve Top 'n' most relevant
 topics. Customizability of indexing among NoSQL databases is desirable.
 
-[:clapper: Cloud 5:56 Related Work](https://www.youtube.com/watch?v=NDjAdFSVzxo)
+[:clapper: Related Work (5:56)](https://www.youtube.com/watch?v=NDjAdFSVzxo)
 
-[:scroll: Cloud Page 11 Related Work](https://drive.google.com/open?id=0B88HKpainTSfWUh6dVNHcXloSnc)
+[:scroll: Related Work (11)](https://drive.google.com/open?id=0B88HKpainTSfWUh6dVNHcXloSnc)
 
-[:scroll: Cloud Page 11 Related Work - pptx](https://drive.google.com/open?id=0B88HKpainTSfZkJpLTNIbDJ1dVU)
+[:scroll: Related Work - pptx (11)](https://drive.google.com/open?id=0B88HKpainTSfZkJpLTNIbDJ1dVU)
 
 
 Indexamples
@@ -191,11 +191,11 @@ and additional fields. Index configuration allows for customizability
 through choice of fields, which can be anything from timestamps, text,
 or retweet status.
 
-[:clapper: Cloud 8:35 Indexamples](https://www.youtube.com/watch?v=Ec3VFeTGuo8)
+[:clapper: Indexamples (8:35)](https://www.youtube.com/watch?v=Ec3VFeTGuo8)
 
-[:scroll: Cloud Page 15 Indexamples](https://drive.google.com/open?id=0B88HKpainTSfWUh6dVNHcXloSnc)
+[:scroll: Indexamples (15)](https://drive.google.com/open?id=0B88HKpainTSfWUh6dVNHcXloSnc)
 
-[:scroll: Cloud Page 15 Indexamples - pptx](https://drive.google.com/open?id=0B88HKpainTSfZkJpLTNIbDJ1dVU)
+[:scroll: Indexamples - pptx (15)](https://drive.google.com/open?id=0B88HKpainTSfZkJpLTNIbDJ1dVU)
 
 
 Indexing 101
@@ -214,11 +214,11 @@ query evaluation is made between IndexedHBase and Riak, with Riak being
 more efficient with small data loads but IndexedHBase proving superior
 for large-scale data.
 
-[:clapper: Cloud 9:53 Indexing 101](https://www.youtube.com/watch?v=eKQaLkw-HBU)
+[:clapper: Indexing 101 (9:53)](https://www.youtube.com/watch?v=eKQaLkw-HBU)
 
-[:scroll: Cloud Page 20 Indexing 101](https://drive.google.com/open?id=0B88HKpainTSfWUh6dVNHcXloSnc)
+[:scroll: Indexing 101 (20)](https://drive.google.com/open?id=0B88HKpainTSfWUh6dVNHcXloSnc)
 
-[:scroll: Cloud Page 20 Indexing 101 - pptx](https://drive.google.com/open?id=0B88HKpainTSfZkJpLTNIbDJ1dVU)
+[:scroll: Indexing 101 - pptx (20)](https://drive.google.com/open?id=0B88HKpainTSfZkJpLTNIbDJ1dVU)
 
 
 Social Media Searches
@@ -230,11 +230,11 @@ sparsity of information in tweets, and attempting to arrange streaming
 tweets. Apache Open Stack upgrades Hadoop 2.0 with YARN and a new HDFS.
 A diagram displays an indexing setup for social media data with YARN.
 
-[:clapper: Cloud 6:19 Social Media Searches](https://www.youtube.com/watch?v=a3tcL-Qw9to)
+[:clapper: Social Media Searches (6:19)](https://www.youtube.com/watch?v=a3tcL-Qw9to)
 
-[:scroll: Cloud Page 28 Social Media Searches](https://drive.google.com/open?id=0B88HKpainTSfWUh6dVNHcXloSnc)
+[:scroll: Social Media Searches (28)](https://drive.google.com/open?id=0B88HKpainTSfWUh6dVNHcXloSnc)
 
-[:scroll: Cloud Page 28 Social Media Searches - pptx](https://drive.google.com/open?id=0B88HKpainTSfZkJpLTNIbDJ1dVU)
+[:scroll: Social Media Searches - pptx (28)](https://drive.google.com/open?id=0B88HKpainTSfZkJpLTNIbDJ1dVU)
 
 
 Analysis Algorithms
@@ -247,9 +247,9 @@ present, indices allow for searching only the relevant data. An example
 is given illustrating how this decreases the time needed to search
 hashtags in Twitter.
 
-[:clapper: Cloud 6:57 Analysis Algorithms](https://www.youtube.com/watch?v=MxoMd4mdshE)
+[:clapper: Analysis Algorithms (6:57)](https://www.youtube.com/watch?v=MxoMd4mdshE)
 
-[:scroll: Cloud Page 35 Analysis Algorithms](https://drive.google.com/open?id=0B88HKpainTSfWUh6dVNHcXloSnc)
+[:scroll: Analysis Algorithms (35)](https://drive.google.com/open?id=0B88HKpainTSfWUh6dVNHcXloSnc)
 
-[:scroll: Cloud Page 35 Analysis Algorithms - pptx](https://drive.google.com/open?id=0B88HKpainTSfZkJpLTNIbDJ1dVU)
+[:scroll: Analysis Algorithms - pptx (35)](https://drive.google.com/open?id=0B88HKpainTSfZkJpLTNIbDJ1dVU)
 

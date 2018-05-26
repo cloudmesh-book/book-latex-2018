@@ -138,82 +138,29 @@ Code for Hadoop PageRank You need to complete two files in the provided
 pacakge inside `indiana/cgl/hadoop/pagerank/`: PageRankMap.java and
 PageRankReduce.java. Code snapshots are shown below.
 
-    1 // file : PageRankMap.java 
-    2 package indiana.cgl.hadoop.pagerank ;
-    3
-    4 import j a v a . i o . B u f f e r e dW ri t e r ;
-    5 // seede tail insource code 
-    6
-    7 p u bli c c l a s s PageRankMap e x t e n d s Mapper<LongWritable , Text , LongWritable , Text> {
-    8
-    9 // each map t a s k h a n dl e s one l i n e wi t hi n an a d j a c e n c y ma trix f i l e
-    10 // key : f i l e o f f s e t
-    11 // v al u e : <s o u r c e U rl PageRank#t a r g e t U rl s >
-    12 p u bli c v oid map( LongWritable key , Text value , Context c o n t e x t )
-    13 throws IOException , I n t e r r u p t e d E x c e p ti o n {
-    14
-    15 i n t numUrls = c o n t e x t . g e t C o n fi g u r a ti o n ( ) . g e t I n t ( "numUrls" , 1 ) ;
-    16 S t ri n g l i n e = v al u e . t o S t ri n g ( ) ;
-    17 S t r i n g B u f f e r sb = new S t r i n g B u f f e r ( ) ;
-    18 // i n s t a n c e an o b j e c t t h a t r e c o r d s the i n f o rm a ti o n f o r one webpage
-    19 RankRecord r r d = new RankRecord ( l i n e ) ;
-    20 i n t s o u r c eU rl , t a r g e t U rl ;
-    21 // double rankV alueO fS rcU rl ;
-    22
-    23 i f ( r r d . t a r g e t U r l s L i s t . s i z e ( ) <=0){
-    24 // t h e r e i s no out d e g r e e f o r t h i s webpage ;
-    25 // s c a t t e r i t s rank v al u e t o a l l o t h e r u r l s
-    26 double rankValuePe rU rl = r r d . rankValue / ( double ) numUrls ;
-    27 f o r ( i n t i =0; i<numUrls ; i++){
-    28 c o n t e x t . w ri t e (new LongWritable ( i ) , new Text ( S t ri n g . v alueO f ( rankValuePe rU rl ) ) ) ;
-    29 }
-    30 } e l s e {
-    31 // Write your code h e r e
-    32 } // f o r
-    33 c o n t e x t . w ri t e (new LongWritable ( r r d . s o u r c e U rl ) , new Text ( sb . t o S t ri n g ( ) ) ) ;
-    34 }//map
-    35 }
-    1 // f i l e : PageRankReducer . j a v a
-    2 package i n di a n a . c g l . hadoop . pagerank ;
-    3
-    4 import j a v a . i o . B u f f e r e dW ri t e r ;
-    5 // s e e d e t a i l i n s o u r c e code
-    6
-    7 p u bli c c l a s s PageRankReduce e x t e n d s Reducer<LongWritable , Text , LongWritable , Text>{
-    4
-    8 p u bli c v oid reduce ( LongWritable key , I t e r a b l e <Text> v al u e s ,
-    9 Context c o n t e x t ) throws IOException , I n t e r r u p t e d E x c e p ti o n {
-    10 double sumOfRankValues = 0.0 ;
-    11 S t ri n g t a r g e t U r l s L i s t = "" ;
-    12
-    13 i n t s o u r c e U rl = ( i n t ) key . g e t ( ) ;
-    14 i n t numUrls = c o n t e x t . g e t C o n figura ti o n ( ).g e t I n t ( "numUrls" , 1 ) ;
-    15
-    16 // hi n t : each t u pl e may i n cl u d e rank v al u e t u pl e o r l i n k r e l a t i o n t u pl e
-    17 f o r ( Text v al u e : v al u e s ) {
-    18 S t ri n g [ ] strArray = v al u e . t o S t ri n g ( ) . s p l i t ( "#" ) ;
-    19 // Write your code here
-    20 }
-    21 // c a l c u l a t e u si n g the f o rmula
-    22 sumOfRankValues=0.85*sumOfRankValues+0.15*(1.0)/(double)numUrls;
-    23 c o n t e x t . w ri t e ( key , new Text ( sumOfRankValues+t a r g e t U r l s L i s t ) ) ;
-    24 }
-    25 }
-    Edit
+* <https://github.com/foxjas/Hadoop-PageRank/tree/master/src/indiana/cgl/hadoop/pagerank>
+
+
+Edit and fix the code
+
     The sketch code is stored within the provided VirtualBox image. Use Eclipse or linux text editor vi/vim to
     add your code.
-    1 $ cd / r o o t /MoocHomeworks/HadoopPageRank/
-    2 $ vim s r c / i n di a n a / c g l / hadoop / pagerank /PageRankMap . j a v a
-    3 $ vim s r c / i n di a n a / c g l / hadoop / pagerank /PageRankReduce . j a v a
+    1 $ cd /root/MoocHomeworks/HadoopPageRank/
+    2 $ vim src/indiana/cgl/hadoop/pagerank/PageRankMap.java
+    3 $ vim src/indiana/cgl/hadoop/pagerank/PageReduce.java
     Compile and run your code
-    Use the one-click script compileAndExecHadoopPageRank.sh provided below. Standard error messages such
-    as compile errors, execution errors, etc. will be redirected on the screen. Debug them based on the returned
-    messages.
-    1 $ cd / r o o t /MoocHomeworks/HadoopPageRank/
-    2 # u s a ge : . / compileAndExecHadoopPageRank . sh [ PageRank Input F i l e ] [ Number o f U rl s ] [ Number Of
-    I t e r a t i o n s ]
-    3 $ . / compileAndExecHadoopPageRank . sh PageRankDataGenerator / pagerank5000g50 . i n p u t . 0 5000 1
-    View the result
-    The result is generated as /root/hbaseMoocAntProject/output/project2.txt.
+    
+Use the one-click script compileAndExecHadoopPageRank.sh provided
+below. Standard error messages such as compile errors, execution
+errors, etc. will be redirected on the screen. Debug them based on the
+returned messages.
+
+    1 $ cd /root/MoocHomeworks/HadoopPageRank/
+    2 # usage:./compileAndExecHadoopPageRank.sh [PageRankInputFile] [NumberofUrls] [NumberOfIterations]
+    3 $ ./compileAndExecHadoopPageRank.sh PageRankDataGenerator / pagerank5000g50.input. 0 5000 1
+
+View the result.  The result is generated as
+`/root/hbaseMoocAntProject/output/project2.txt`.
+
     1 $ cd / r o o t /MoocHomeworks/HadoopPageRank/
     2 $ c a t output 

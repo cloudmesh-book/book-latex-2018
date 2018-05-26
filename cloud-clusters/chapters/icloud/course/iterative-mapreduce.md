@@ -9,9 +9,9 @@ etc. This is followed by a look at Google and their initial offering,
 Google search engine. Amount of tasks performed on this engine increased
 considerably over the course of a single decade.
 
-[:clapper: Cloud 9:00 MapReduce Refresher](https://www.youtube.com/watch?v=0TRTdzgC_N0)
+[:clapper: MapReduce Refresher (9:00)](https://www.youtube.com/watch?v=0TRTdzgC_N0)
 
-[:scroll: Cloud Page 1 MapReduce Refresher](https://drive.google.com/open?id=10IDob_Ytec3pLNFjY-aOLjDaC6owXVYw)
+[:scroll: MapReduce Refresher (1)](https://drive.google.com/open?id=10IDob_Ytec3pLNFjY-aOLjDaC6owXVYw)
 
 
 Google Search Engine 1
@@ -25,11 +25,11 @@ differences between index and doc servers are discussed. Cache servers
 save previous query results and can bypass index/doc servers for repeat
 queries.
 
-[:clapper: Cloud 8:04 Google Search Engine 1](https://www.youtube.com/watch?v=S2oT7uMw5Yg)
+[:clapper: Google Search Engine 1 (8:04)](https://www.youtube.com/watch?v=S2oT7uMw5Yg)
 
-[:scroll: Cloud Page 15 Google Search Engine 1](https://drive.google.com/open?id=0B88HKpainTSfYWZ0dDlrNThkVms)
+[:scroll: Google Search Engine 1 (15)](https://drive.google.com/open?id=0B88HKpainTSfYWZ0dDlrNThkVms)
 
-[:scroll: Cloud Page 15 Google Search Engine 1 - pptx](https://drive.google.com/open?id=0B88HKpainTSfcHg4cV8wRzQwU3M
+[:scroll: Google Search Engine 1 - pptx (15)](https://drive.google.com/open?id=0B88HKpainTSfcHg4cV8wRzQwU3M
 )
 
 Google Search Engine 2
@@ -46,11 +46,11 @@ in 2007, among others. Google File System, MapReduce and BigTable are
 key components of Google's current search structure. A discussion of the
 initial Google proposal paper follows.
 
-[:clapper: Cloud 8:32 Google Search Engine 2](https://www.youtube.com/watch?v=pxos3Yt6y6I)
+[:clapper: Google Search Engine 2 (8:32)](https://www.youtube.com/watch?v=pxos3Yt6y6I)
 
-[:scroll: Cloud Page 21 Google Search Engine 2](https://drive.google.com/open?id=0B88HKpainTSfYWZ0dDlrNThkVms)
+[:scroll: Google Search Engine 2 (21)](https://drive.google.com/open?id=0B88HKpainTSfYWZ0dDlrNThkVms)
 
-[:scroll: Cloud Page 21 Google Search Engine 2 - pptx](https://drive.google.com/open?id=0B88HKpainTSfcHg4cV8wRzQwU3M
+[:scroll: Google Search Engine 2 - pptx (21)](https://drive.google.com/open?id=0B88HKpainTSfcHg4cV8wRzQwU3M
 )
 
 Hadoop PageRank
@@ -61,11 +61,11 @@ The PageRank calculation formula is examined. After this comes an
 example of its performance and further mathematical formulae involved in
 its application.
 
-[:clapper: Cloud 7:58 Hadoop PageRank](https://www.youtube.com/watch?v=GCp5OLLOrH0)
+[:clapper: PageRank (7:58) (Hadoop)](https://www.youtube.com/watch?v=GCp5OLLOrH0)
 
-[:scroll: Cloud Page 1 Hadoop PageRank](https://drive.google.com/open?id=0B88HKpainTSfWFpEZGxqSWRTYms)
+[:scroll: PageRank (1) (Hadoop)](https://drive.google.com/open?id=0B88HKpainTSfWFpEZGxqSWRTYms)
 
-[:scroll: Cloud Page 1 Hadoop PageRank - pptx](https://drive.google.com/open?id=0B88HKpainTSfUXB1Z2JPa2FfOXc)
+[:scroll: PageRank - pptx (1) (Hadoop)](https://drive.google.com/open?id=0B88HKpainTSfUXB1Z2JPa2FfOXc)
 
 
 Discussions and ParallelThinking
@@ -83,11 +83,11 @@ a list of related reading. Seven important questions are asked
 concerning parallel computing. 13 'Dwarves' are different methods of
 parallel computing, including MapReduce.
 
-[:clapper: Cloud 11:12 Discussions and ParallelThinking](https://www.youtube.com/watch?v=ISJp7TUzo1s)
+[:clapper: Discussions and ParallelThinking (11:12)](https://www.youtube.com/watch?v=ISJp7TUzo1s)
 
-[:scroll: Cloud Page 10 Discussions and ParallelThinking](https://drive.google.com/open?id=0B88HKpainTSfWFpEZGxqSWRTYms)
+[:scroll: Discussions and ParallelThinking (10)](https://drive.google.com/open?id=0B88HKpainTSfWFpEZGxqSWRTYms)
 
-[:scroll: Cloud Page 10 Discussions and ParallelThinking - pptx](https://drive.google.com/open?id=0B88HKpainTSfUXB1Z
+[:scroll: Discussions and ParallelThinking - pptx (10)](https://drive.google.com/open?id=0B88HKpainTSfUXB1Z
 2JPa2FfOXc)
 
 Hadoop Extensions
@@ -98,9 +98,9 @@ of parallel processing. Twister is an iterative map-reduce framework, as
 are Haloop, Spark and Pregel. A comparison of their features and
 capabilities is included.
 
-[:clapper: Cloud 5:37 Hadoop Extensions](https://www.youtube.com/watch?v=gS7TImRZZ1g)
+[:clapper: Hadoop Extensions (5:37)](https://www.youtube.com/watch?v=gS7TImRZZ1g)
 
-[:scroll: Cloud Page 50 Hadoop Extensions](https://drive.google.com/open?id=10IDob_Ytec3pLNFjY-aOLjDaC6owXVYw)
+[:scroll: Hadoop Extensions (50)](https://drive.google.com/open?id=10IDob_Ytec3pLNFjY-aOLjDaC6owXVYw)
 
 
 Iterative MapReduce Models
@@ -113,11 +113,11 @@ tasks and reduce tasks which aggregate output and allow legacy code.
 Loosely Synchronous is an MPI model used in computation and
 communication of scientific applications.
 
-[:clapper: Cloud 6:46 Iterative MapReduce Models](https://www.youtube.com/watch?v=CXDdWmAWIvk)
+[:clapper: Iterative MapReduce Models (6:46)](https://www.youtube.com/watch?v=CXDdWmAWIvk)
 
-[:scroll: Cloud Page 1 Iterative MapReduce Models](https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms)
+[:scroll: Iterative MapReduce Models (1)](https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms)
 
-[:scroll: Cloud Page 1 Iterative MapReduce Models - pptx](https://drive.google.com/open?id=0B88HKpainTSfM2FjLXRmRVU0
+[:scroll: Iterative MapReduce Models - pptx (1)](https://drive.google.com/open?id=0B88HKpainTSfM2FjLXRmRVU0
 SUU)
 
 Parallel Processes
@@ -134,11 +134,11 @@ I/O and handle intermediate data, task scheduling, and fault tolerance.
 Versions of MapReduce like Hadoop, Dryad and MPI boast different
 features and programming languages.
 
-[:clapper: Cloud 9:44 Parallel Processes](https://www.youtube.com/watch?v=JAYvkIZ8TuE)
+[:clapper: Parallel Processes (9:44)](https://www.youtube.com/watch?v=JAYvkIZ8TuE)
 
-[:scroll: Cloud Page 4 Parallel Processes](https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms)
+[:scroll: Parallel Processes (4)](https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms)
 
-[:scroll: Cloud Page 4 Parallel Processes - pptx](https://drive.google.com/open?id=0B88HKpainTSfM2FjLXRmRVU0SUU)
+[:scroll: Parallel Processes - pptx (4)](https://drive.google.com/open?id=0B88HKpainTSfM2FjLXRmRVU0SUU)
 
 
 Static and Variable Data
@@ -165,11 +165,11 @@ static scheduling. Fault tolerance is reserved for failures that
 terminate running tasks. Static data can then be used to reassign the
 failed iterations. A list of Twister APIs is given.
 
-[:clapper: Cloud 11:01 Static and Variable Data](https://www.youtube.com/watch?v=UJHQ3VvWOTA)
+[:clapper: Static and Variable Data (11:01)](https://www.youtube.com/watch?v=UJHQ3VvWOTA)
 
-[:scroll: Cloud Page 10 Static and Variable Data](https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms)
+[:scroll: Static and Variable Data (10)](https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms)
 
-[:scroll: Cloud Page 10 Static and VariableData - pptx](https://drive.google.com/open?id=0B88HKpainTSfM2FjLXRmRVU0SU
+[:scroll: Static and VariableData - pptx (10)](https://drive.google.com/open?id=0B88HKpainTSfM2FjLXRmRVU0SU
 U)
 
 MapReduce Model Comparison
@@ -183,11 +183,11 @@ PageRank and Multi-dimensional Scaling, and finally Loosely Synchronous
 with Matrix Multiplication Algorithms. In all cases, Twister outperforms
 or is close to the competition.
 
-[:clapper: Cloud 6:56 MapReduce Model Comparison](https://www.youtube.com/watch?v=n7RVGrC-wcs)
+[:clapper: MapReduce Model Comparison (6:56)](https://www.youtube.com/watch?v=n7RVGrC-wcs)
 
-[:scroll: Cloud Page 24 MapReduce Model Comparison](https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms)
+[:scroll: MapReduce Model Comparison (24)](https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms)
 
-[:scroll: Cloud Page 24 MapReduce Model Comparison - pptx](https://drive.google.com/open?id=0B88HKpainTSfM2FjLXRmRVU
+[:scroll: MapReduce Model Comparison - pptx (24)](https://drive.google.com/open?id=0B88HKpainTSfM2FjLXRmRVU
 0SUU)
 
 Twister K-means
@@ -206,11 +206,11 @@ increases, Twister's runtimes get progressively faster. In a final set
 of runs against Hadoop, DryadLINQ, and MPI, Twister outperforms all but
 MPI.
 
-[:clapper: Cloud 7:28 Twister K-means](https://www.youtube.com/watch?v=-G5jlzABo-Y)
+[:clapper: Twister K-means (7:28)](https://www.youtube.com/watch?v=-G5jlzABo-Y)
 
-[:scroll: Cloud Page 34 Twister K-means](https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms)
+[:scroll: Twister K-means (34)](https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms)
 
-[:scroll: Cloud Page 34 Twister K-means - pptx](https://drive.google.com/open?id=0B88HKpainTSfM2FjLXRmRVU0SUU)
+[:scroll: Twister K-means - pptx (34)](https://drive.google.com/open?id=0B88HKpainTSfM2FjLXRmRVU0SUU)
 
 
 Coding and Iterative Alternatives
@@ -221,9 +221,9 @@ MapReduce has many programs designed around its setup, including other
 iterative versions like Haloop, Pregel, and Spark. Twister can extend
 the use of traditional MapReduce to more complex applications.
 
-[:clapper: Cloud 5:14 Coding and Iterative Alternatives](https://www.youtube.com/watch?v=QTCpiwnwjvo)
+[:clapper: Coding and Iterative Alternatives (5:14)](https://www.youtube.com/watch?v=QTCpiwnwjvo)
 
-[:scroll: Cloud Page 43 Coding and Iterative Alternatives](https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms)
+[:scroll: Coding and Iterative Alternatives (43)](https://drive.google.com/open?id=0B88HKpainTSfMFBaNHprbWJwQms)
 
-[:scroll: Cloud Page 43 Coding and Iterative Alternatives - pptx](https://drive.google.com/open?id=0B88HKpainTSfM2Fj
+[:scroll: Coding and Iterative Alternatives - pptx (43)](https://drive.google.com/open?id=0B88HKpainTSfM2Fj
 LXRmRVU0SUU)

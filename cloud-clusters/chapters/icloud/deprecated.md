@@ -1,37 +1,25 @@
-Results
-=======
-
- 
-
-Introduction to Cloud Computing
-===============================
-
-Deprecated
+Deprecated 
 ==========
 
-Applying for FutureSystems Account
-==================================
+## Applying for FutureSystems Account
 
-[:clapper: Cloud 5:32 Applying for FutureSystems Account](https://www.youtube.com/watch?v=98ERlWi3k3U)
+[:clapper: Applying for FutureSystems Account (5:32 )](https://www.youtube.com/watch?v=98ERlWi3k3U)
 
-[:scroll: Cloud Page 1 Cultivating Clouds](https://drive.google.com/open?id=0B88HKpainTSfZENxeUlOcVFUTkU)
+[:scroll: Cultivating Clouds (1)](https://drive.google.com/open?id=0B88HKpainTSfZENxeUlOcVFUTkU)
 
-[:scroll: Cloud Page 1 Cultivating Clouds - pptx](https://drive.google.com/open?id=0B88HKpainTSfcVNHWUJaUDRoYUk)
-
-
-FutureSystems India OpenStack
-=============================
-
-[:clapper: Cloud 10:28 FutureSystems India OpenStack](https://www.youtube.com/watch?v=hyKYTpNmJZc)
-
-[:scroll: Cloud Page 10 FutureSystems India OpenStack](https://drive.google.com/open?id=0B88HKpainTSfZENxeUlOcVFUTkU)
+[:scroll: Cultivating Clouds - pptx (1)](https://drive.google.com/open?id=0B88HKpainTSfcVNHWUJaUDRoYUk)
 
 
-[:scroll: Cloud Page 10 FutureSystems India OpenStack - pptx](https://drive.google.com/open?id=0B88HKpainTSfcVNHWUJaUDRoYUk)
+## FutureSystems India OpenStack
+
+[:clapper: FutureSystems India OpenStack (10:28)](https://www.youtube.com/watch?v=hyKYTpNmJZc)
+
+[:scroll: FutureSystems India OpenStack (10)](https://drive.google.com/open?id=0B88HKpainTSfZENxeUlOcVFUTkU)
+
+[:scroll: FutureSystems India OpenStack - pptx (10)](https://drive.google.com/open?id=0B88HKpainTSfcVNHWUJaUDRoYUk)
 
 
-Starting VMs on FutureSystems
-=============================
+## Starting VMs on FutureSystems
 
-[:clapper: Cloud 6:40 Starting VMs on FutureSystems](https://www.youtube.com/watch?v=RPnhJs4IcfQ)
+[:clapper: Starting VMs on FutureSystems (6:40)](https://www.youtube.com/watch?v=RPnhJs4IcfQ)
 

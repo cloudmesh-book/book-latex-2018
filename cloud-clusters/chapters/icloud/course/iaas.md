@@ -21,11 +21,11 @@ architecture, defined by the layer which the virtual machine monitor
 (VMM) runs on. VM is identical to physical machines and can be saved and
 stored, as well as migrated across hardware.
 
-[:clapper: Cloud 10:16 Growth of Virtual Machines](https://www.youtube.com/watch?v=5oKoAPCXLws)
+[:clapper: Growth of Virtual Machines (10:16)](https://www.youtube.com/watch?v=5oKoAPCXLws)
 
-[:scroll: Cloud Page 28 Growth of Virtual Machines](https://drive.google.com/open?id=0B88HKpainTSfQU1uQmxZWHdWQ1k)
+[:scroll: Growth of Virtual Machines (28)](https://drive.google.com/open?id=0B88HKpainTSfQU1uQmxZWHdWQ1k)
 
-[:scroll: Cloud Page 28 Growth of Virtual Machines - pptx](https://drive.google.com/open?id=0B88HKpainTSfb1ZhWG4zTEg0SVk)
+[:scroll: Growth of Virtual Machines - pptx (28)](https://drive.google.com/open?id=0B88HKpainTSfb1ZhWG4zTEg0SVk)
 
 Implementation Levels
 ---------------------
@@ -38,11 +38,11 @@ creates virtual private servers. CUDA is a high performance computing
 library, not designed for VMs; vCUDA is a virtual layer that allows
 interaction between CUDA and VMs, creating a virtual CUDA library.
 
-[:clapper: Cloud 7:57 Implementation Levels](https://www.youtube.com/watch?v=Le-kv-eAhvg)
+[:clapper: Implementation Levels (7:57)](https://www.youtube.com/watch?v=Le-kv-eAhvg)
 
-[:scroll: Cloud Page 41 Implementation Levels](https://drive.google.com/open?id=0B88HKpainTSfQU1uQmxZWHdWQ1k)
+[:scroll: Implementation Levels (41)](https://drive.google.com/open?id=0B88HKpainTSfQU1uQmxZWHdWQ1k)
 
-[:scroll: Cloud Page 41 Implementation Levels - pptx](https://drive.google.com/open?id=0B88HKpainTSfb1ZhWG4zTEg0SVk)
+[:scroll: Implementation Levels - pptx (41)](https://drive.google.com/open?id=0B88HKpainTSfb1ZhWG4zTEg0SVk)
 
 
 Tools and Mechanisms
@@ -57,11 +57,11 @@ virtualization. Para-virtualization does not need to modify the guest OS
 like full virtualization and works through hypercalls. An example is the
 ESX server from VMware.
 
-[:clapper: Cloud 7:32 Tools and Mechanisms](https://www.youtube.com/watch?v=VYz5rp5HDVE)
+[:clapper: Tools and Mechanisms (7:32)](https://www.youtube.com/watch?v=VYz5rp5HDVE)
 
-[:scroll: Cloud Page 47 Tools and Mechanisms](https://drive.google.com/open?id=0B88HKpainTSfQU1uQmxZWHdWQ1k)
+[:scroll: Tools and Mechanisms (47)](https://drive.google.com/open?id=0B88HKpainTSfQU1uQmxZWHdWQ1k)
 
-[:scroll: Cloud Page 47 Tools and Mechanisms - pptx](https://drive.google.com/open?id=0B88HKpainTSfb1ZhWG4zTEg0SVk)
+[:scroll: Tools and Mechanisms - pptx (47)](https://drive.google.com/open?id=0B88HKpainTSfb1ZhWG4zTEg0SVk)
 
 CPU, Memory & I/O Devices
 -------------------------
@@ -70,16 +70,16 @@ A hybrid approach to virtualization involves offloading some tasks to
 the hardware to reduce overhead. This can be combined with
 para-virtualization for even greater effects. In a guest OS, the VMM
 provides shadow page tables to transfer virtual memory to machine
-memory. An example is shown in the Intel Extended Page Table. A
+memory. An example is shown in the Intel Extended Table. A
 virtualization layer for an I/O device is possible, allowing it to act
 like a physical device and manage host and guest addresses, shown in a
 detailed VMware example.
 
-[:clapper: Cloud 6:41 CPU, Memory \& I/O Devices](https://www.youtube.com/watch?v=I_J4eUUavSY)
+[:clapper: CPU, Memory \& I/O Devices (6:41)](https://www.youtube.com/watch?v=I_J4eUUavSY)
 
-[:scroll: Cloud Page 58 CPU, Memory \& I/O Devices](https://drive.google.com/open?id=0B88HKpainTSfQU1uQmxZWHdWQ1k)
+[:scroll: CPU, Memory \& I/O Devices (58)](https://drive.google.com/open?id=0B88HKpainTSfQU1uQmxZWHdWQ1k)
 
-[:scroll: Cloud Page 58 CPU, Memory \& I/O Devices - pptx](https://drive.google.com/open?id=0B88HKpainTSfb1ZhWG4zTEg0SVk)
+[:scroll: CPU, Memory \& I/O Devices - pptx (58)](https://drive.google.com/open?id=0B88HKpainTSfb1ZhWG4zTEg0SVk)
 
 Clusters and Resource Management
 --------------------------------
@@ -92,10 +92,12 @@ Prepackaged OS can be installed in a virtual cluster. Should a VM fail
 for any reason, its image can be migrated to a new host so work is not
 lost. An example of this is demonstrated with XEN.
 
-[:clapper: Cloud 5:07 Clusters and Resource Management](https://www.youtube.com/watch?v=Mn9pgGtFy4g)
+[:clapper: Clusters and Resource Management (5:07)](https://www.youtube.com/watch?v=Mn9pgGtFy4g)
 
-\slides{Cloud}{Page 66}{Clusters and Resource Management}{https://drive.google.com/open?id=0B88HKpainTSfQU1uQmxZWHdWQ1k}
-\slides{Cloud}{Page 66}{Clusters and Resource Management - pptx}{https://drive.google.com/open?id=0B88HKpainTSfb1ZhWG4zTEg0SVk}
+[:scroll: Clusters and Resource Management (66)](https://drive.google.com/open?id=0B88HKpainTSfQU1uQmxZWHdWQ1k)
+
+[:scroll: Clusters and Resource Management - pptx (66)](https://drive.google.com/open?id=0B88HKpainTSfb1ZhWG4zTEg0SVk)
+
 Data Center Automation
 ----------------------
 
@@ -105,10 +107,12 @@ Nimbus, Eucalyptus, OpenNebula, and vSphere. Eucalyptus is shown in
 greater detail. Trust issues in cloud security are answered in virtual
 machines. Suggested reading material is provided at the end.
 
-[:clapper: Cloud 3:30 Data Center Automation](https://www.youtube.com/watch?v=mvXBRvTwAVg)
+[:clapper: Data Center Automation (3:30)](https://www.youtube.com/watch?v=mvXBRvTwAVg)
 
-\slides{Cloud}{Page 74}{Data Center Automation}{https://drive.google.com/open?id=0B88HKpainTSfQU1uQmxZWHdWQ1k}
-\slides{Cloud}{Page 74}{Data Center Automation - pptx}{https://drive.google.com/open?id=0B88HKpainTSfb1ZhWG4zTEg0SVk}
+[:scroll: Data Center Automation (74)](https://drive.google.com/open?id=0B88HKpainTSfQU1uQmxZWHdWQ1k)
+
+[:scroll: Data Center Automation - pptx (74)](https://drive.google.com/open?id=0B88HKpainTSfb1ZhWG4zTEg0SVk)
+
 Clouds in the Workplace
 -----------------------
 
@@ -121,9 +125,10 @@ Different variations of clouds like IaaS and PaaS are offered by both
 open source and commercial providers. Cloud systems are composed of
 separate elements like Eucalyptus, Xen and VMware.
 
-[:clapper: Cloud 7:13 Clouds in the Workplace](https://www.youtube.com/watch?v=Endt6mWUfEo)
+[:clapper: Clouds in the Workplace (7:13)](https://www.youtube.com/watch?v=Endt6mWUfEo)
 
-\slides{Cloud}{Page 1}{Clouds in the Workplace}{https://drive.google.com/open?id=1kkTi8YXMR7cPR-9nWgnj9UgkXm4rUfHm}
+[:scroll: Clouds in the Workplace (1)](https://drive.google.com/open?id=1kkTi8YXMR7cPR-9nWgnj9UgkXm4rUfHm)
+
 Checklists and Challenges
 -------------------------
 
@@ -142,9 +147,10 @@ environments. However there are distinct advantages clouds potentially
 have to offer: standardized APIs can eliminate lock-in, and encryption
 offers data confidentiality.
 
-[:clapper: Cloud 9:08 Checklists and Challenges](https://www.youtube.com/watch?v=cwtWpZcWuQ0)
+[:clapper: Checklists and Challenges (9:08)](https://www.youtube.com/watch?v=cwtWpZcWuQ0)
 
-\slides{Cloud}{Page 11}{Checklists and Challenges}{https://drive.google.com/open?id=1kkTi8YXMR7cPR-9nWgnj9UgkXm4rUfHm}
+[:scroll: Checklists and Challenges (11)](https://drive.google.com/open?id=1kkTi8YXMR7cPR-9nWgnj9UgkXm4rUfHm)
+
 Data Center Setup
 -----------------
 
@@ -161,9 +167,10 @@ attached to outside connections like InfiniBand. Switches can form an
 array of racks. The distribution of memory across a local, rack, or
 array server in warehouse server setup is listed.
 
-[:clapper: Cloud 7:49 Data Center Setup](https://www.youtube.com/watch?v=zBVtXzqF2ew)
+[:clapper: Data Center Setup (7:49)](https://www.youtube.com/watch?v=zBVtXzqF2ew)
 
-\slides{Cloud}{Page 16}{Data Center Setup}{https://drive.google.com/open?id=1kkTi8YXMR7cPR-9nWgnj9UgkXm4rUfHm}
+[:scroll: Data Center Setup (16)](https://drive.google.com/open?id=1kkTi8YXMR7cPR-9nWgnj9UgkXm4rUfHm)
+
 Cultivating Clouds
 ------------------
 
@@ -180,7 +187,8 @@ ubiquitous in all aspects of the private and public sector. In the
 future clouds must take into account user privacy, data security and
 copyright protection.
 
-[:clapper: Cloud 5:10 Cultivating Clouds](https://www.youtube.com/watch?v=zxoqRdvXM28)
+[:clapper: Cultivating Clouds (5:10)](https://www.youtube.com/watch?v=zxoqRdvXM28)
 
-\slides{Cloud}{Page 15}{Cultivating Clouds}{https://drive.google.com/open?id=1tTiWbi5_elBXmB--wMiCCB-3KtJa50AP}
-\slides{Cloud}{Page 1}{Cultivating Clouds - Conclusions}{https://drive.google.com/open?id=15ofQSh3-BQNzTeycnEgKh5UXqGR3YMiz}
+[:scroll: Cultivating Clouds (15)](https://drive.google.com/open?id=1tTiWbi5_elBXmB--wMiCCB-3KtJa50AP)
+
+[:scroll: Cultivating Clouds - Conclusions (1)](https://drive.google.com/open?id=15ofQSh3-BQNzTeycnEgKh5UXqGR3YMiz)
