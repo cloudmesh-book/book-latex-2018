@@ -131,6 +131,47 @@ As this document is created with pandoc we encourage you to review our
 Makefile to see how we use some more advanced featuers
 
 
+### Mermaid
+
+Mermaide is a graph generation tool that lets you create graphs and
+diagrams with the help of a description language. It includes graphviz
+and UML like diagrams, as well as gantt charts
+
+A markdown plugin for pandoc is available
+
+* Mermaide <https://github.com/raghur/mermaid-filter>
+
+  * [live editor](https://mermaidjs.github.io/mermaid-live-editor/)
+
+Instalation is done with
+
+```bash
+$ npm install --global mermaid-filter
+```
+
+A sequence diagram example is shown next
+
+```
+~~~mermaid
+sequenceDiagram
+Alice->>John: Hello John
+    John-->>Alice: Hallo Allice
+~~~
+```
+
+~~~mermaid
+sequenceDiagram
+    Alice->>John: Hello John
+    John-->>Alice: Hallo Allice
+~~~
+
+A flowchart looks like
+
+~~~mermaid
+graph LR
+    Start --> End
+~~~
+
 ### Advanced Pandoc
 
 pnadoc can integrate extensions and filters. We have not made yet use
@@ -148,7 +189,5 @@ Packages of interest include:
 * CSV table <https://github.com/baig/pandoc-csv2table>
 * inline CSV table <https://github.com/mb21/pandoc-placetable>
 
-Graphics
 
-* Mermaide <https://github.com/raghur/mermaid-filter>
 

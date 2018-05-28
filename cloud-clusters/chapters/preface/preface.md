@@ -1,6 +1,7 @@
 # Preface
 
-This collection of documents will help in creating cloud based clusters
+This collection of documents will help in creating cloud based
+clusters and as part of the classes taught it IU.
 
 
 ## Notation
@@ -45,3 +46,12 @@ Right indent test
 
 First [this ]{style="float:right"}
 
+---
+
+Sequence Diagram Example
+
+~~~mermaid
+sequenceDiagram
+    Alice->>John: Hello John
+    John-->>Alice: Hallo Allice
+~~~

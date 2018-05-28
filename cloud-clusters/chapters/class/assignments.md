@@ -245,14 +245,21 @@ students this is optional. Please refer to your specific class.
 ---
 
 :warning: Please note that we do not provide support for Windows. You
-can certainly use virtualbox and install a newer version of ubuntu on it.
+can certainly use virtualbox and install a newer version of ubuntu on
+it. Another option is to create a bootable USB stick or external HD on
+which you install ubuntu. 
 
 :warning: Windows 10 Home Edition has significant limitations at time
 of writing of this document. For example it does not allow you to use
 containers or proper virtualization. For this reason we recommend that
-you upgrade to Windows 10 pro or education. The education version is
-available for free via IU. Please see IUware and share your experience
-in piazza about your update. Whatever you do, make a backup first.
+you upgrade to Windows 10 pro or education If you like to use
+Windows. The education version is available for free via IU. Please
+see (IUware)[https://iuware.iu.edu/Windows/title/2977] and share your
+experience in piazza about your update. You must use the 64 bit
+version. If your OS doe snot support 64 bit, you need to make sure you
+update to 64 bit. Please consult the Windows documentation on
+this. Whatever you do, make a backup first. It may be easier to boot
+from an external HDD directly into ubuntu. 
 
 :warning: OSX users have typically an easy time as all TAs have access
 to OSX machines. However the version must be the latest version. We do
@@ -286,7 +293,7 @@ tasked to do the following:
 1. You will be downloading and studying the technology abstracts that
    we collected in
 
-   * https://github.com/cloudmesh/technologies/raw/master/vonLaszewski-cloud-echnologies.epub
+   * <https://github.com/cloudmesh/technologies/raw/master/vonLaszewski-cloud-echnologies.epub>
 
 2. You will be writing new or improving existing technology
    abstracts. A technology abstract is not plagiarized, does at most
@@ -297,7 +304,7 @@ tasked to do the following:
    student has a unique list of technologies they work on. To
    coordinate this you will be first inspecting the git issues at
 
-   * https://github.com/cloudmesh/technologies/issues
+   * <https://github.com/cloudmesh/technologies/issues>
 
    For each technology that you will add or improve you will add a new
    issue. You will be using the title 
@@ -320,7 +327,7 @@ tasked to do the following:
    All this is done on first come first serve.
 
    If you work in groups make sure to assign yourself 10
-   technologies * the number of team members in your group. Make sure
+   technologies times the number of team members in your group. Make sure
    all group members are in github listed as assignee. The maximal
    number of group members is 3. In fact for this assignment we
    recommend that you work in groups as this usually increases the
@@ -328,18 +335,20 @@ tasked to do the following:
    someone to review your submission.
 
    The technologies can be easily modified with pull requests that are
-   managed by the TAs. We suggest that you work with your team and
+   managed by the TAs. We suggest that you work with your team and/or
    reviewer before you create the pull request. Each technology has a
    small cloud that when you click on it brings you to the github
    editor so you can create a pull request. Make sure that when
    working in a group you coordinate the contribution and do not
    create conflicts. Conflict resolution will be delegated to the team
-   working on the technology
+   working on the technology.
 
    The epub publication will be updated typically once a day. So
    please check if your change is as expected.
 
-   The entire technology handbook can be https://github.com/cloudmesh/technologies
+   The entire technology handbook can be found at
+
+   * <https://github.com/cloudmesh/technologies>
 
 
 #### Outcomes
@@ -366,12 +375,12 @@ this topic with programs and scripts. Your task will be to improve or
 create a substantial topic of your choice. The topics are included
 in the following ebooks:
 
-* https://github.com/cloudmesh/book/raw/master/cloud-clusters/vonlaszewski-cloud-cluster.epub
+* <https://github.com/cloudmesh/book/raw/master/cloud-clusters/vonlaszewski-cloud-cluster.epub>
 
 The source is located at
 
 
-* https://github.com/cloudmesh/book/tree/master/cloud-clusters
+* <https://github.com/cloudmesh/book/tree/master/cloud-clusters>
 
 You will be identifying an existing chapter or a new one that you will
 improve. Just as in Assignment 0 we will use github issues to
@@ -379,7 +388,7 @@ coordinate this. Note that this is a different github issue so you
 need to make sure you use the correct one for the correct task. For
 this assignment the issues are managed at
 
-* https://github.com/cloudmesh/book/issues
+* <https://github.com/cloudmesh/book/issues>
 
 For chapter that you work on please use the title
 

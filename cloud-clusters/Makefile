@@ -31,7 +31,7 @@ CHAPTER_CLASS=\
  ./dest/chapters/class/SECTION.md\
  ./dest/chapters/class/fall2018.md\
  ./dest/chapters/class/organization.md\
- ./dest/chapters/class/graph-all.md\
+ ./dest/chapters/class/syllabus.md\
  ./dest/chapters/class/policy.md\
  ./dest/chapters/class/assignments.md\
  ./dest/chapters/class/grading.md\
@@ -255,7 +255,7 @@ X=\
   $(CHAPTER_IN) \
   $(CHAPTER_BIGDATA)
 
-MARKDOWN-OPTIONS=-f markdown+smart -f markdown+emoji --indented-code-classes=bash,python,yaml
+MARKDOWN-OPTIONS=-F mermaid-filter -f markdown+smart -f markdown+emoji --indented-code-classes=bash,python,yaml
 CSL=--csl=template/ieee-with-url.csl
 FORMAT=--toc --number-sections
 FONTS=--epub-embed-font='fonts/*.ttf'
