@@ -5,6 +5,10 @@
 # COMPLETED
 #
 
+######################################################################
+# BEGIN BOOK CLASS
+######################################################################
+
 CHAPTER_PREFIX=\
  ./dest/chapters/preface/update.md\
  ./dest/chapters/preface/preface.md\
@@ -22,11 +26,6 @@ CHAPTER_DOC=\
  ./dest/chapters/doc/report.md\
  ./dest/chapters/doc/type.md
 
-
-#
-# DRAFTS
-#
-
 CHAPTER_CLASS=\
  ./dest/chapters/class/SECTION.md\
  ./dest/chapters/class/fall2018.md\
@@ -37,17 +36,31 @@ CHAPTER_CLASS=\
  ./dest/chapters/class/grading.md\
  ./dest/chapters/class/project-ideas.md
 
-
 CHAPTER_SERVICES=\
   ./dest/chapters/doc/piazza.md\
  ./dest/chapters/preface/git.md
 
+BOOK_CLASS=\
+  $(CHAPTER_PREFIX)\
+  $(CHAPTER_CLASS) \
+  $(CHAPTER_DOC)\
+  $(CHAPTER_SERVICES) \
+  $(CHAPTER_REFERENCES)
+
+######################################################################
+# END BOOK CLASS
+######################################################################
+
+
 CHAPTER_DRAFT=\
- ./dest/chapters/SECTION-DRAFT.md\
+ ./dest/chapters/SECTION-DRAFT.md
 
 GRAPHICS=\
- ./dest/chapters/doc/graphviz.md\
+ ./dest/chapters/doc/graphviz.md
 
+ART=\
+ ./dest/chapters/art/sentient.md
+ 
 CHAPTER_IN=\
  ./dest/chapters/in/ansible.md\
  ./dest/chapters/in/assignments.md\
@@ -70,6 +83,10 @@ CHAPTER_IN=\
  ./dest/chapters/in/vis.md\
  ./dest/chapters/in/wordcount.md
 
+######################################################################
+# i523
+######################################################################
+
 CHAPTER_BIGDATA=\
  ./dest/chapters/bigdata/SECTION.md\
  ./dest/chapters/bigdata//algorithms/technology.md\
@@ -85,6 +102,9 @@ CHAPTER_BIGDATA=\
  ./dest/chapters/bigdata//applications/web.md\
  ./dest/chapters/bigdata//applications/health.md\
 
+######################################################################
+# i516
+######################################################################
 
 CHAPTER_OTHER=\
  ./dest/chapters/icloud//course/old-fundamentals.md\
@@ -113,8 +133,16 @@ CHAPTER_OTHER=\
  ./dest/chapters/icloud//syllabus.md\
  ./dest/chapters/icloud//preface.md\
  ./dest/chapters/icloud//deprecated.md\
- ./dest/chapters/icloud//evaluation.md\
- ./dest/chapters/art/sentient.md\
+ ./dest/chapters/icloud//evaluation.md
+
+
+
+
+######################################################################
+# chameleon
+######################################################################
+
+CHAPTER_CHAMELEON=\
  ./dest/chapters/cloud/chameleon/baremetal.md\
  ./dest/chapters/cloud/chameleon/resources.md\
  ./dest/chapters/cloud/chameleon/faq-orig.md\
@@ -128,6 +156,8 @@ CHAPTER_OTHER=\
  ./dest/chapters/cloud/chameleon/horizon.md\
  ./dest/chapters/cloud/chameleon/baremetal.md\
  ./dest/chapters/cloud/chameleon/charge.md\
+
+OLD=\
  ./dest/chapters/cloud/iot.md\
  ./dest/chapters/cloud/nosql.md\
  ./dest/chapters/cloud/assignment/index.md\
@@ -138,6 +168,9 @@ CHAPTER_OTHER=\
  ./dest/chapters/cloud/mapreduce.md\
  ./dest/chapters/cloud/participation/index.md\
  ./dest/chapters/cloud/saas.md\
+
+
+MAPREDUCE=\
  ./dest/chapters/hadoop/hadoop-installation.md\
  ./dest/chapters/mapreduce/hadoop-installation.md\
  ./dest/chapters/mapreduce/hadoop-lectures.md\
@@ -239,15 +272,10 @@ CHAPTER_PYTHON=\
 CHAPTER_REFERNCES=\
  ./dest/chapters/references.md
 
-INDEX=\
-  $(CHAPTER_DRAFT)\
-  $(CHAPTER_OTHER) 
 
 INDEX=\
-  $(CHAPTER_PREFIX)\
-  $(CHAPTER_CLASS) \
-  $(CHAPTER_DOC)\
-  $(CHAPTER_SERVICES) \
+  $(MAPREDUCE)\
+  $(CHAPTER_PYTHON)\
   $(CHAPTER_REFERENCES) \
 
 

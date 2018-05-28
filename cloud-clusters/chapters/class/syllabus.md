@@ -19,12 +19,30 @@ posts on piazza as well as the documents that relate to your
 class. Links to the documents will be added throughout the semester
 once they become available.
 
+---
+
+:warning: please note that chapters may be added or removed throughout
+the semester.
+
+---
+
 ![](images/graph-all.png)
 
 Figure: Common class components
 
-![](images/graph-course.png)
+![](images/graph-e222.png)
 
-Figure: Class specific components
+Figure: Class e222 specific components
+
+
+![](images/graph-i523.png)
+
+Figure: Class i523 specific components
+
+
+![](images/graph-e516.png)
+
+Figure: Class e516 and 616 specific components
+
 
 

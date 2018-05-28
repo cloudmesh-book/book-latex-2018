@@ -167,6 +167,13 @@ sequenceDiagram
 
 A flowchart looks like
 
+```
+~~~mermaid
+graph LR
+    Start --> End
+~~~
+```
+
 ~~~mermaid
 graph LR
     Start --> End
