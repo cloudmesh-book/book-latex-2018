@@ -274,9 +274,18 @@ CHAPTER_REFERNCES=\
 
 
 INDEX=\
-  $(MAPREDUCE)\
-  $(CHAPTER_PYTHON)\
-  $(CHAPTER_REFERENCES) \
+ ./dest/chapters/SECTION-SSH.md\
+ ./dest/chapters/SECTION-PXE.md\
+ ./dest/chapters/SECTION-sdcard.md\
+ ./dest/chapters/SECTION-docker.md\
+ ./dest/chapters/SECTION-docker-swarm.md\
+ ./dest/chapters/SECTION-kubernetes.md\
+ ./dest/chapters/SECTION-hadoop.md\
+ ./dest/chapters/SECTION-yarn.md\
+  ./dest/chapters/SECTION-spark.md\
+ $(MAPREDUCE)\
+ $(CHAPTER_PYTHON)\
+ $(CHAPTER_REFERENCES)
 
 
 
@@ -302,6 +311,15 @@ FILENAME=vonlaszewski-cloud-cluster
 epub: dot refernces todo
 	mkdir -p dest/chapters/prg
 	bin/markup-all.py
+	bin/section.py 1 "Kubernetes" > dest/chapters/SECTION-SSH.md
+	bin/section.py 1 "PXE" > dest/chapters/SECTION-PXE.md
+	bin/section.py 1 "SD Card" > dest/chapters/SECTION-sdcard.md      
+	bin/section.py 1 "Docker" > dest/chapters/SECTION-docker.md
+	bin/section.py 1 "Docker Swarm" > dest/chapters/SECTION-docker-swarm.md  
+	bin/section.py 1 "Kubernetes" > dest/chapters/SECTION-kubernetes.md
+	bin/section.py 1 "Hadoop" > dest/chapters/SECTION-hadoop.md
+	bin/section.py 1 "Yarn" > dest/chapters/SECTION-yarn.md  
+	bin/section.py 1 "Spark" > dest/chapters/SECTION-spark.md        
 	bin/section.py 1 "Big Data Applications" > dest/chapters/bigdata/SECTION.md
 	bin/section.py 1 "Scientifc Writing" > dest/chapters/doc/SECTION.md
 	bin/section.py 1 "Python" > dest/chapters/prg/SECTION-PYTHON.md
