@@ -60,9 +60,10 @@ According to the Web Site it supports the following features:
 
 Links:
 
-*
-<https://www.raspberrypi.org/magpi/clusterhat-review-cluster-hat-kit/>
-{clusterhat on raspberrypi.org}
+* <https://www.raspberrypi.org/magpi/clusterhat-review-cluster-hat-kit/>
+
+clusterhat on raspberrypi.org
+
 Although this setup seems rather appealing, the issue is with obtaining
 Pi Zeros for the regional price of $5. Typically users can only by one
 for that price and must pay shipping. To by more one has to buy a kit
@@ -149,18 +150,15 @@ following links:
 
 * <https://cluster.bitscope.com/solutions>
 
-*
-<https://www.pcper.com/news/General-Tech/BitScope-Unveils-Raspberry-Pi-Cluster-2880-CPU-Cores-LANL-HPC-RD>
+* <https://www.pcper.com/news/General-Tech/BitScope-Unveils-Raspberry-Pi-Cluster-2880-CPU-Cores-LANL-HPC-RD>
 
 * <http://my.bitscope.com/store/>
 
 * <http://my.bitscope.com/store/?p=view\&i=item+7>
 
-*
-<http://www.newark.com/bitscope/bb04b/quattro-pi-board-raspberry-pi/dp/95Y0643>
+* <http://www.newark.com/bitscope/bb04b/quattro-pi-board-raspberry-pi/dp/95Y0643>
 
-*
-<http://linuxgizmos.com/rpi-expansion-boards-support-up-to-40-pi-clusters/>
+* <http://linuxgizmos.com/rpi-expansion-boards-support-up-to-40-pi-clusters/>
 
 ## Build Your Own 5 Node Pi Cluster 
 
@@ -253,31 +251,36 @@ This exercise is not only to learn about the behaviour of the Pi, but
 also about how to coordinate experiments with a large number of
 students.
 
-[\[E:Exercise.Pi.Single.1\]]{#E:Exercise.Pi.Single.1
-label="E:Exercise.Pi.Single.1"} What temperature measurement is missing
-from the table.
+### Exercise
 
-[\[E:.Pi.Single.2\]]{#E:.Pi.Single.2 label="E:.Pi.Single.2"} How would
-you create an experiment under *load*.
+Pi.Single.1
 
-[\[E:.Pi.Single.3\]]{#E:.Pi.Single.3 label="E:.Pi.Single.3"} How would
-you create an experiment to which all students in different classes
-could contribute their values? Can the cloud be used?
+: What temperature measurement is missing from the table.
 
-[\[E:.Pi.Single.4\]]{#E:.Pi.Single.4 label="E:.Pi.Single.4"} Collect the
-information from all class members using cloud services.
+Pi.Single.2
 
-[\[E:.Pi.Single.5\]]{#E:.Pi.Single.5 label="E:.Pi.Single.5"} Identify
-how to use the VPN server so you can use your Laptop instead of a TV or
-computer monitor. Write a tutorial.
+: How would you create an experiment under *load*.
+
+Pi.Single.3
+
+: How would you create an experiment to which all students in
+  different classes could contribute their values? Can the cloud be
+  used?
+
+Pi.Single.4
+
+: Collect the information from all class members using cloud services.
+
+Pi.Single.5
+
+: Identify how to use the VPN server so you can use your Laptop
+instead of a TV or computer monitor. Write a tutorial.
 
 ## Small Pi Cluster
 
 In this set of exercises we will be building a small Raspberry Pi
-cluster. All of you will have to do Exercise
-[\[Exercise.Pi.Cluster.Build\]](#Exercise.Pi.Cluster.Build){reference-type="ref"
-reference="Exercise.Pi.Cluster.Build"}, as well as one of the tasks
-related to Swarm, kubernetes or Spark.
+cluster. All of you will have to do exercise Pi.Cluster.Build as well
+as one of the tasks related to Swarm, kubernetes or Spark.
 
 It is important that you write down all steps very carefully as you are
 expected to use the steps to develop an automated deployment. For your
@@ -287,30 +290,34 @@ find issues and improve deployment tutorials will receive points. TA's
 will also replicate these steps to identify a fair evaluation without
 bias.
 
-[\[E:.Pi.Cluster.Build\]]{#E:.Pi.Cluster.Build
-label="E:.Pi.Cluster.Build"} Build groups of up to 5 people. Make a plan
-on what needs to be done to build the cluster and develop a schedule.
-Include in this plan (a) obtaining the material the hardware build, (b)
-the installation of the operating system (c) the testing of the system
-(d) familiarizing with the OS.
+Pi.Cluster.Build
 
-[\[E:.Pi.Cluster.DockerSwarm\]]{#E:.Pi.Cluster.DockerSwarm
-label="E:.Pi.Cluster.DockerSwarm"} Install a docker Swarm cluster on
-your PI. Develop a tutorial in markdown and mind plagiarism. Contribute
-your tutorial to this document to get acknowledged and credit. Work with
-others in class to coordinate a single tutorial.
+: Build groups of up to 5 people. Make a plan on what needs to be done
+  to build the cluster and develop a schedule.  Include in this plan (a)
+  obtaining the material the hardware build, (b) the installation of the
+  operating system (c) the testing of the system (d) familiarizing with
+  the OS.
 
-[\[E:.Pi.Cluster.Kubernetes\]]{#E:.Pi.Cluster.Kubernetes
-label="E:.Pi.Cluster.Kubernetes"} Install a kubernetes cluster on your
-PI. Develop a tutorial in markdown and mind plagiarism. Contribute your
-tutorial to this document to get acknowledged and credit. Work with
-others in class to coordinate a single tutorial.
+Pi.Cluster.DockerSwarm
 
-[\[E:.Pi.Cluster.Spark\]]{#E:.Pi.Cluster.Spark
-label="E:.Pi.Cluster.Spark"} Install a spark cluster on your PI. Develop
-a tutorial in markdown and mind plagiarism. Contribute your tutorial to
-this document to get acknowledged and credit. Work with others in class
-to coordinate a single tutorial.
+: Install a docker Swarm cluster on your PI. Develop a tutorial in
+  markdown and mind plagiarism. Contribute your tutorial to this
+  document to get acknowledged and credit. Work with others in class to
+  coordinate a single tutorial.
+
+Pi.Cluster.Kubernetes
+
+: Install a kubernetes cluster on your PI. Develop a tutorial in
+  markdown and mind plagiarism. Contribute your tutorial to this
+  document to get acknowledged and credit. Work with others in class to
+  coordinate a single tutorial.
+
+Pi.Cluster.Spark
+
+: Install a spark cluster on your PI. Develop a tutorial in markdown
+  and mind plagiarism. Contribute your tutorial to this document to get
+  acknowledged and credit. Work with others in class to coordinate a
+  single tutorial.
 
 ### Virtual Raspberry Cluster
 
@@ -319,8 +326,7 @@ while for example using virtual box. This requires two steps. First the
 deployment of a virtualized Raspberry PI. The following information may
 be useful for this
 
-*
-<http://dbakevlar.com/2015/08/emulating-a-raspberry-pi-on-virtualbox/>
+* <http://dbakevlar.com/2015/08/emulating-a-raspberry-pi-on-virtualbox/>
 
 The next step includes the deployment of multiple VMs emulating
 Raspberrys. Naturally each should have its own name so you can
