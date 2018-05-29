@@ -233,7 +233,7 @@ CHAPTER_PYTHON=\
  ./dest/chapters/pi/slurm.md\
  ./dest/chapters/pi/setup.md\
  ./dest/chapters/pi/software.md\
- ./dest/chapters/pi/cluster.md\
+ ./dest/chapters/pi/case.md\
  ./dest/chapters/references.md
 
 CHAPTER_REFERNCES=\
@@ -333,3 +333,6 @@ dot:
 	dot -Tpng chapters/class/graph-i523.dot -o chapters/class/images/graph-i523.png
 	dot -Tpng chapters/class/graph-i524.dot -o chapters/class/images/graph-i524.png
 	dot -Tpng chapters/class/graph-e516.dot -o chapters/class/images/graph-e516.png
+
+pi:
+	make -f Makefile.pi
