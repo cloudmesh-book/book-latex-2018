@@ -11,13 +11,22 @@ However we also have many projects done by enthusisats.
 We distinguish two different efforts. First, we often find projects
 that targetthe creation of cases for such clusters and second, we find
 projects that develop software fort these clusters.
-This section will provide an overview of these activities. In a later
-sections we will look at some of these projects in more detail.
+This section will provide an overview of these activities. 
 
 
 ### Cluster Cases
 
 #### Lego
+
+When looking at the placement of the wholes on the Raspbery PI, the
+width between the wholes on the small side seems to be exactly 7 lego
+technic beam wholes appart. This has the advantage that one could
+buidla quick frame form lego pieces such as a 2 * 11 ($0.22) piece +
+2 * a two piece * 4 * 4 ($0.192). The cost is about $0.25 per piece =
+$2.74 per pi. So if we are having 100 pis we end up with $274. However
+we also need still to get screw and lego conectors.
+
+Other ideas include:
 
 * [Images on google](https://www.google.com/search?q=raspberry+pi+case+lego+technic&rlz=1C5CHFA_enUS727US727&tbm=isch&tbo=u&source=univ&sa=X&ved=0ahUKEwjYwYbni6vbAhWJy4MKHaiiCmYQsAQIMw&biw=1648&bih=883)
 

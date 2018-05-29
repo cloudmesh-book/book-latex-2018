@@ -1,3 +1,4 @@
+FILENAME=vonLaszewski-cloud-cluster-pi
 
 # ./dest/chapters/preface-old/spring2018.md\
 
@@ -246,9 +247,9 @@ CHAPTER_PYTHON=\
  ./dest/chapters/references.md
 
 CHAPTER_PI=\
- ./dest/chapters/pi/links.md\
  ./dest/chapters/pi/case.md\
-  ./dest/chapters/login-node.md\
+ ./dest/chapters/pi/links.md\
+ ./dest/chapters/login-node.md\
  ./dest/chapters/raspberry/README.md\
  ./dest/chapters/sd-card.md\
  ./dest/chapters/linux.md\
@@ -303,7 +304,6 @@ FONTS=--epub-embed-font='fonts/*.ttf'
 BIB=--bibliography dest/references.bib
 CSS=--css=template/epub.css
 RESOURCE=--resource-path=".:chapters/prg:chapters/iot:chapters/container:chapters/os:chapters/mapreduce:chapters/cloud/chameleon:chapters/doc:chapters/preface:chapters/class"
-FILENAME=vonlaszewski-cloud-cluster
 
 #	pandoc ./chapters/prg/python.md -o dest/chapters/prg/python.md --base-header-level=2
 
