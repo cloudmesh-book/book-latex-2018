@@ -247,10 +247,11 @@ CHAPTER_PYTHON=\
  ./dest/chapters/references.md
 
 CHAPTER_PI=\
+ ./dest/chapters/pi/contributors.md\
+ ./dest/chapters/pi/board.md\
  ./dest/chapters/pi/case.md\
  ./dest/chapters/pi/links.md\
  ./dest/chapters/login-node.md\
- ./dest/chapters/raspberry/README.md\
  ./dest/chapters/sd-card.md\
  ./dest/chapters/linux.md\
  ./dest/chapters/ssh/ssh.md\
@@ -261,7 +262,6 @@ CHAPTER_PI=\
  ./dest/chapters/modify-pi-image.md\
  ./dest/chapters/pi/pi-passwordreset.md\
  ./dest/chapters/clusters/pxe.md\
- ./dest/chapters/clusters/pi-assemble-cluster.md\
  ./dest/chapters/clusters/pi-configure-cluster.md\
  ./dest/chapters/clusters/pi-docker.md\
  ./dest/chapters/clusters/pi-dockerswarm.md\
