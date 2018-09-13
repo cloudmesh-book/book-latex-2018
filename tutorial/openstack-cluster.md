@@ -71,6 +71,7 @@ To do that, run the following command:
 `openstack flavor list`
 
 Example output:
+
 ```
 (ENV2) spathan@spathan-VirtualBox:~/.cloudmesh/chameleon$ openstack flavor list
 +----+----------------+-------+------+-----------+-------+-----------+
@@ -86,11 +87,13 @@ Example output:
 | 8  | m1.xxxlarge    | 32768 |  160 |         0 |    16 | True      |
 +----+----------------+-------+------+-----------+-------+-----------+
 ```
+
 To check the images available, run the following command:
 
 `openstack image list | grep 'Ubuntu16.04'`
 
 Example output:
+
 ```(ENV2) spathan@spathan-VirtualBox:~/.cloudmesh/chameleon$ openstack image list | grep 'Ubuntu16.04'
 | 1895dc93-7cd8-4b46-a252-4eb55b80859f | CC-Ubuntu16.04                                   | active |
 | 01a6d6d1-e692-4e86-b776-dbb387c64958 | CC-Ubuntu16.04-20160610                          | active |
@@ -105,6 +108,7 @@ Example output:
 
 To check the security groups list, run the following command. We are going to
 use the `default` security group that's already created for us.
+
 ```
 (ENV2) spathan@spathan-VirtualBox:~/.cloudmesh/chameleon$ openstack security group list
 +--------------------------------------+-----------------+--------------------------------+-----------+
@@ -139,6 +143,7 @@ To see the list of instances created, type the following command:
 `nova list` or `openstack server list`
 
 Example output:
+
 ```
 (ENV2) spathan@spathan-VirtualBox:~/.cloudmesh/chameleon$ nova list
 +--------------------------------------+-------------------------------+---------+------------+-------------+----------------------------+
@@ -153,6 +158,7 @@ Example output:
 ```
 
 ## Associating Floating IP
+
 In order to ssh to the instance from your own VM, you need to assign a floating
 IP to the instance. For this we first need to generate floating IPs.
 
@@ -320,22 +326,24 @@ you are able to successfully login to each of these instances and the login from
 one instance to another is also possible. 
 
 ## References
-<https://docs.openstack.org/python-openstackclient/pike/>
 
-<https://docs.openstack.org/mitaka/cli-reference/common/cli_install_openstack_command_line_clients.html#install-the-openstack-client>
+* <https://docs.openstack.org/python-openstackclient/pike/>
 
-<https://docs.openstack.org/mitaka/cli-reference/common/cli_set_environment_variables_using_openstack_rc.html>
+* <https://docs.openstack.org/mitaka/cli-reference/common/cli_install_openstack_command_line_clients.html#install-the-openstack-client>
 
-<https://docs.openstack.org/python-openstackclient/pike/cli/command-objects/floating-ip.html>
+* <https://docs.openstack.org/mitaka/cli-reference/common/cli_set_environment_variables_using_openstack_rc.html>
 
-<https://docs.openstack.org/releasenotes/python-novaclient/queens.html>
+* <https://docs.openstack.org/python-openstackclient/pike/cli/command-objects/floating-ip.html>
 
-<https://www.tecmint.com/create-deploy-and-launch-virtual-machines-in-openstack/>
+* <https://docs.openstack.org/releasenotes/python-novaclient/queens.html>
 
-<https://www.tecmint.com/ssh-passwordless-login-using-ssh-keygen-in-5-easy-steps/>
+* <https://www.tecmint.com/create-deploy-and-launch-virtual-machines-in-openstack/>
+
+* <https://www.tecmint.com/ssh-passwordless-login-using-ssh-keygen-in-5-easy-steps/>
 
 
 ## Running it on Container
+
 git clone the tutorial directory on your machine
 
 Make sure you have your `cc-openrc.sh` file in the same directory as your Dockerfile
@@ -356,6 +364,7 @@ Now you will be able to execute all the openstack commands on container
 and create the cluster as shown above.
 
 Example output:
+
 ```
 (ENV2) spathan@spathan-VirtualBox:~/github/cloudmesh-community/hid-sp18-516/tutorial$ sudo docker run -p 8080:8080 --rm -it openstack-tutorial bash
 root@c41a045021ff:/app# ls
